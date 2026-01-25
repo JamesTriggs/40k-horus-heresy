@@ -933,11 +933,12 @@ const bookData = {
 };
 
 // Generate book cards dynamically
-function generateBookCards(filterLegion = '') {
+function generateBookCards(filterLegion = '', searchQuery = '') {
     const bookDisplay = document.querySelector('.book-display');
     bookDisplay.innerHTML = ''; // Clear existing cards
 
     let displayedCount = 0;
+    const query = searchQuery.toLowerCase().trim();
 
     Object.keys(bookData).forEach((bookKey, index) => {
         const book = bookData[bookKey];
@@ -947,6 +948,19 @@ function generateBookCards(filterLegion = '') {
         // Filter by legion if specified
         if (filterLegion && !book.legions.includes(filterLegion)) {
             return; // Skip this book
+        }
+
+        // Search filter - check title, author, and characters
+        if (query) {
+            const titleMatch = book.title.toLowerCase().includes(query);
+            const authorMatch = book.author.toLowerCase().includes(query);
+
+            // Extract character names from details
+            const charactersMatch = book.details.toLowerCase().includes(query);
+
+            if (!titleMatch && !authorMatch && !charactersMatch) {
+                return; // Skip this book
+            }
         }
 
         displayedCount++;
@@ -976,11 +990,21 @@ function generateBookCards(filterLegion = '') {
     // Update progress counter
     updateProgressCounter();
 
-    // Show filter result count
-    if (filterLegion) {
+    // Show filter/search result info
+    if (filterLegion || query) {
         const filterInfo = document.createElement('div');
         filterInfo.className = 'filter-info';
-        filterInfo.textContent = `Showing ${displayedCount} book${displayedCount !== 1 ? 's' : ''} featuring ${filterLegion}`;
+        let infoText = `Showing ${displayedCount} book${displayedCount !== 1 ? 's' : ''}`;
+
+        if (query && filterLegion) {
+            infoText += ` matching "${searchQuery}" in ${filterLegion}`;
+        } else if (query) {
+            infoText += ` matching "${searchQuery}"`;
+        } else if (filterLegion) {
+            infoText += ` featuring ${filterLegion}`;
+        }
+
+        filterInfo.textContent = infoText;
         bookDisplay.insertBefore(filterInfo, bookDisplay.firstChild);
     }
 }
@@ -1051,9 +1075,10 @@ function showModal(bookKey) {
         markReadBtn.textContent = nowRead ? '✓ MARK UNREAD' : 'MARK AS READ';
         markReadBtn.classList.toggle('read', nowRead);
 
-        // Regenerate cards to update visual state, maintaining current filter
-        const currentFilter = document.getElementById('legionFilter').value;
-        generateBookCards(currentFilter);
+        // Regenerate cards to update visual state, maintaining current filters
+        const currentLegionFilter = document.getElementById('legionFilter').value;
+        const currentSearch = document.getElementById('searchInput').value;
+        generateBookCards(currentLegionFilter, currentSearch);
     });
 
     // Show modal
@@ -1098,18 +1123,41 @@ function populateLegionFilter() {
     filterSelect.appendChild(variousOption);
 }
 
-// Set up filter event listeners
+// Set up filter and search event listeners
 function setupFilterListeners() {
     const filterSelect = document.getElementById('legionFilter');
-    const clearBtn = document.getElementById('clearFilter');
+    const searchInput = document.getElementById('searchInput');
+    const clearSearchBtn = document.getElementById('clearSearch');
+    const clearAllBtn = document.getElementById('clearAllFilters');
 
-    filterSelect.addEventListener('change', (e) => {
-        generateBookCards(e.target.value);
+    // Apply current filters
+    const applyFilters = () => {
+        const legion = filterSelect.value;
+        const search = searchInput.value;
+        generateBookCards(legion, search);
+    };
+
+    // Legion filter change
+    filterSelect.addEventListener('change', applyFilters);
+
+    // Search input with debounce
+    let searchTimeout;
+    searchInput.addEventListener('input', () => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(applyFilters, 300); // Debounce 300ms
     });
 
-    clearBtn.addEventListener('click', () => {
+    // Clear search button
+    clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        applyFilters();
+    });
+
+    // Clear all filters
+    clearAllBtn.addEventListener('click', () => {
         filterSelect.value = '';
-        generateBookCards('');
+        searchInput.value = '';
+        generateBookCards('', '');
     });
 }
 

@@ -195,12 +195,20 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     margin: 1.5rem 0;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.3);
     border-top: 1px solid var(--imperial-gold);
     border-bottom: 1px solid var(--imperial-gold);
+    flex-wrap: wrap;
+}
+
+.search-container,
+.legion-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .filter-label {
@@ -208,6 +216,50 @@ body::before {
     font-size: 0.8rem;
     letter-spacing: 0.15rem;
     font-weight: bold;
+    white-space: nowrap;
+}
+
+.search-input {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: var(--parchment);
+    border: 2px solid var(--imperial-gold);
+    padding: 0.5rem 1rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    border-radius: 2px;
+    min-width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--blood-red);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.6);
+}
+
+.search-input::placeholder {
+    color: var(--parchment);
+    opacity: 0.5;
+}
+
+.clear-search-btn {
+    background: rgba(139, 0, 0, 0.8);
+    color: var(--parchment);
+    border: 2px solid var(--blood-red);
+    padding: 0.5rem 0.75rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.clear-search-btn:hover {
+    background: var(--blood-red);
+    transform: scale(1.1);
 }
 
 .legion-filter {
@@ -819,14 +871,33 @@ body::before {
         padding: 0.75rem;
     }
 
+    .search-container,
+    .legion-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
     .filter-label {
         font-size: 0.7rem;
         letter-spacing: 0.1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .search-input {
+        min-width: 100%;
+        font-size: 0.75rem;
+        padding: 0.6rem;
     }
 
     .legion-filter {
         min-width: 100%;
         font-size: 0.75rem;
+        padding: 0.6rem;
+    }
+
+    .clear-search-btn {
         padding: 0.6rem;
     }
 
@@ -907,6 +978,11 @@ body::before {
 
     .filter-label {
         font-size: 0.65rem;
+    }
+
+    .search-input {
+        font-size: 0.7rem;
+        min-width: 100%;
     }
 
     .legion-filter {

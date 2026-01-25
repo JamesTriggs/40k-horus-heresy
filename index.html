@@ -20,11 +20,18 @@
         </header>
 
         <div class="filter-section">
-            <label for="legionFilter" class="filter-label">FILTER BY LEGION:</label>
-            <select id="legionFilter" class="legion-filter">
-                <option value="">ALL LEGIONS</option>
-            </select>
-            <button id="clearFilter" class="clear-filter-btn">CLEAR FILTER</button>
+            <div class="search-container">
+                <label for="searchInput" class="filter-label">SEARCH:</label>
+                <input type="text" id="searchInput" class="search-input" placeholder="Book title, author, or character name...">
+                <button id="clearSearch" class="clear-search-btn">✕</button>
+            </div>
+            <div class="legion-container">
+                <label for="legionFilter" class="filter-label">FILTER BY LEGION:</label>
+                <select id="legionFilter" class="legion-filter">
+                    <option value="">ALL LEGIONS</option>
+                </select>
+            </div>
+            <button id="clearAllFilters" class="clear-filter-btn">CLEAR ALL</button>
         </div>
 
         <main class="book-display">
