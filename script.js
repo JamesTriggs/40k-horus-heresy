@@ -929,6 +929,330 @@ const bookData = {
             <strong>Status:</strong> The Siege Approaches
         `,
         blurb: `The final anthology before the Siege of Terra begins. These stories depict the last battles before Horus's fleet arrives at the Solar System. Loyalists make desperate final stands to buy Terra more time. The traitor Legions eliminate the last obstacles in their path. Every moment matters, every battle could mean the difference between survival and extinction. The Siege is coming, and the galaxy holds its breath.`
+    },
+    // PRIMARCHS NOVEL SERIES
+    'primarch-roboute-guilliman': {
+        number: 'P1',
+        title: 'ROBOUTE GUILLIMAN: LORD OF ULTRAMAR',
+        author: 'David Annandale',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-guilliman.jpg',
+        legions: ['Ultramarines'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Annandale<br>
+            <strong>Series:</strong> Primarchs Novel Series #1<br>
+            <strong>Legion:</strong> Ultramarines<br>
+            <strong>Primarch:</strong> Roboute Guilliman<br>
+            <strong>Main Characters:</strong> Roboute Guilliman, Tarasha Euten<br>
+            <strong>Timeline:</strong> Pre-Heresy and Heresy Era<br>
+            <strong>Status:</strong> The Avenging Son
+        `,
+        blurb: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance and built the XIII Legion into a perfectly organized war machine. This novel explores Guilliman's character, his vision for humanity, and how his experiences during the Great Crusade prepared him for the trials of the Horus Heresy. The Master of the Five Hundred Worlds must balance his role as warrior and statesman.`
+    },
+    'primarch-leman-russ': {
+        number: 'P2',
+        title: 'LEMAN RUSS: THE GREAT WOLF',
+        author: 'Chris Wraight',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-russ.jpg',
+        legions: ['Space Wolves'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Chris Wraight<br>
+            <strong>Series:</strong> Primarchs Novel Series #2<br>
+            <strong>Legion:</strong> Space Wolves<br>
+            <strong>Primarch:</strong> Leman Russ<br>
+            <strong>Main Characters:</strong> Leman Russ, Bjorn<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Wolf King
+        `,
+        blurb: `Leman Russ, the savage King of Fenris, embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature, his relationship with his brothers, and the burden of being the Emperor's chosen sanction against those who fall from the Imperial Truth. The Great Wolf hunts in the darkness.`
+    },
+    'primarch-magnus': {
+        number: 'P3',
+        title: 'MAGNUS THE RED: MASTER OF PROSPERO',
+        author: 'Graham McNeill',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-magnus.jpg',
+        legions: ['Thousand Sons'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Graham McNeill<br>
+            <strong>Series:</strong> Primarchs Novel Series #3<br>
+            <strong>Legion:</strong> Thousand Sons<br>
+            <strong>Primarch:</strong> Magnus the Red<br>
+            <strong>Main Characters:</strong> Magnus the Red, Ahriman<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Crimson King
+        `,
+        blurb: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment, his experiments with psychic powers, and the events that set him on a collision course with the Emperor's edicts. The most powerful psyker among the Primarchs believes he can master Chaos itself—a fatal hubris that will doom his Legion.`
+    },
+    'primarch-perturabo': {
+        number: 'P4',
+        title: 'PERTURABO: THE HAMMER OF OLYMPIA',
+        author: 'Guy Haley',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-perturabo.jpg',
+        legions: ['Iron Warriors'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Guy Haley<br>
+            <strong>Series:</strong> Primarchs Novel Series #4<br>
+            <strong>Legion:</strong> Iron Warriors<br>
+            <strong>Primarch:</strong> Perturabo<br>
+            <strong>Main Characters:</strong> Perturabo, Calliphone<br>
+            <strong>Timeline:</strong> Great Crusade, Destruction of Olympia<br>
+            <strong>Status:</strong> The Lord of Iron
+        `,
+        blurb: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the events that push him toward Horus's cause. Perturabo's bitterness at being underappreciated, his perfectionism, and his willingness to sacrifice anything for victory make him one of the most tragic Primarchs—a brilliant mind consumed by resentment.`
+    },
+    'primarch-lorgar': {
+        number: 'P5',
+        title: 'LORGAR: BEARER OF THE WORD',
+        author: 'Gav Thorpe',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-lorgar.jpg',
+        legions: ['Word Bearers'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Gav Thorpe<br>
+            <strong>Series:</strong> Primarchs Novel Series #5<br>
+            <strong>Legion:</strong> Word Bearers<br>
+            <strong>Primarch:</strong> Lorgar Aurelian<br>
+            <strong>Main Characters:</strong> Lorgar, Kor Phaeron, Erebus<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Urizen
+        `,
+        blurb: `Lorgar, the most faithful son, spreads the Imperial Truth across the galaxy—but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction, his search for meaning, and his ultimate discovery of the Chaos Gods. The Urizen's journey from devoted son to first heretic is one of the Heresy's most pivotal transformations.`
+    },
+    'primarch-fulgrim': {
+        number: 'P6',
+        title: 'FULGRIM: THE PALATINE PHOENIX',
+        author: 'Josh Reynolds',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-fulgrim.jpg',
+        legions: ['Emperor\'s Children'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Josh Reynolds<br>
+            <strong>Series:</strong> Primarchs Novel Series #6<br>
+            <strong>Legion:</strong> Emperor's Children<br>
+            <strong>Primarch:</strong> Fulgrim<br>
+            <strong>Main Characters:</strong> Fulgrim, Fabius Bile<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Phoenician
+        `,
+        blurb: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence, his pride in his Legion's achievements, and the character flaws that make him vulnerable to Slaanesh's corruption. The quest for perfection becomes a path to damnation for the most beautiful of the Emperor's sons.`
+    },
+    'primarch-ferrus-manus': {
+        number: 'P7',
+        title: 'FERRUS MANUS: THE GORGON OF MEDUSA',
+        author: 'David Guymer',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-ferrus.jpg',
+        legions: ['Iron Hands'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Guymer<br>
+            <strong>Series:</strong> Primarchs Novel Series #7<br>
+            <strong>Legion:</strong> Iron Hands<br>
+            <strong>Primarch:</strong> Ferrus Manus<br>
+            <strong>Main Characters:</strong> Ferrus Manus, Fulgrim<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Gorgon
+        `,
+        blurb: `Ferrus Manus, lord of the Iron Hands, embodies strength and logic. His metal hands grant him power but also represent his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the tragic irony that his inflexibility and inability to see his brother's corruption leads to his death at Isstvan V. The strongest Primarch falls because he cannot adapt.`
+    },
+    'primarch-jaghatai-khan': {
+        number: 'P8',
+        title: 'JAGHATAI KHAN: WARHAWK OF CHOGORIS',
+        author: 'Chris Wraight',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-khan.jpg',
+        legions: ['White Scars'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Chris Wraight<br>
+            <strong>Series:</strong> Primarchs Novel Series #8<br>
+            <strong>Legion:</strong> White Scars<br>
+            <strong>Primarch:</strong> Jaghatai Khan<br>
+            <strong>Main Characters:</strong> Jaghatai Khan, Yesugei<br>
+            <strong>Timeline:</strong> Discovery on Chogoris<br>
+            <strong>Status:</strong> The Warhawk
+        `,
+        blurb: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else. The Warhawk's free spirit and strategic genius make him both invaluable to the Imperium and difficult to control—a warrior who rides where he wills.`
+    },
+    'primarch-vulkan': {
+        number: 'P9',
+        title: 'VULKAN: LORD OF DRAKES',
+        author: 'David Annandale',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-vulkan.jpg',
+        legions: ['Salamanders'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Annandale<br>
+            <strong>Series:</strong> Primarchs Novel Series #9<br>
+            <strong>Legion:</strong> Salamanders<br>
+            <strong>Primarch:</strong> Vulkan<br>
+            <strong>Main Characters:</strong> Vulkan<br>
+            <strong>Timeline:</strong> Nocturne and Great Crusade<br>
+            <strong>Status:</strong> The Lord of Drakes
+        `,
+        blurb: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity rather than just conquering for it, and the events that made the Salamanders the most humanitarian of all Space Marine Legions. Vulkan's compassion and his Perpetual nature set him apart from his brothers.`
+    },
+    'primarch-corax': {
+        number: 'P10',
+        title: 'CORAX: LORD OF SHADOWS',
+        author: 'Guy Haley',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-corax.jpg',
+        legions: ['Raven Guard'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Guy Haley<br>
+            <strong>Series:</strong> Primarchs Novel Series #10<br>
+            <strong>Legion:</strong> Raven Guard<br>
+            <strong>Primarch:</strong> Corvus Corax<br>
+            <strong>Main Characters:</strong> Corvus Corax<br>
+            <strong>Timeline:</strong> Liberation of Lycaeus<br>
+            <strong>Status:</strong> The Deliverer
+        `,
+        blurb: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare and asymmetric combat. This novel explores Corax's hatred of tyrants, his preference for precision strikes over overwhelming force, and how his experiences shaped the Raven Guard's tactics. The Ravenlord operates from the shadows, striking where least expected, disappearing before the enemy can respond.`
+    },
+    'primarch-angron': {
+        number: 'P11',
+        title: 'ANGRON: SLAVE OF NUCERIA',
+        author: 'Ian St. Martin',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-angron.jpg',
+        legions: ['World Eaters'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Ian St. Martin<br>
+            <strong>Series:</strong> Primarchs Novel Series #11<br>
+            <strong>Legion:</strong> World Eaters<br>
+            <strong>Primarch:</strong> Angron<br>
+            <strong>Main Characters:</strong> Angron, Lorgar<br>
+            <strong>Timeline:</strong> Return to Nuceria during Heresy<br>
+            <strong>Status:</strong> The Red Angel
+        `,
+        blurb: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in the gladiator pits. The Butcher's Nails implanted in his brain drive him toward constant rage and violence. This novel explores the tragedy of Angron—a Primarch who could have been noble but was broken before the Emperor found him. His only peace comes through bloodshed, and Lorgar offers him a terrible apotheosis.`
+    },
+    'primarch-konrad-curze': {
+        number: 'P12',
+        title: 'KONRAD CURZE: THE NIGHT HAUNTER',
+        author: 'Guy Haley',
+        timeline: 'Pre-Heresy/Heresy',
+        coverImage: 'images/primarch-curze.jpg',
+        legions: ['Night Lords'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Guy Haley<br>
+            <strong>Series:</strong> Primarchs Novel Series #12<br>
+            <strong>Legion:</strong> Night Lords<br>
+            <strong>Primarch:</strong> Konrad Curze<br>
+            <strong>Main Characters:</strong> Konrad Curze, The Haunter<br>
+            <strong>Timeline:</strong> Various periods<br>
+            <strong>Status:</strong> The Night Haunter
+        `,
+        blurb: `Konrad Curze is cursed with visions of his own death and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness, his belief in fate's inevitability, and his complex relationship with his father. The Night Haunter is judge, jury, and executioner—but he has already seen his own execution and welcomes it.`
+    },
+    'primarch-lion-eljonson': {
+        number: 'P13',
+        title: 'LION EL\'JONSON: LORD OF THE FIRST',
+        author: 'David Guymer',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-lion.jpg',
+        legions: ['Dark Angels'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Guymer<br>
+            <strong>Series:</strong> Primarchs Novel Series #13<br>
+            <strong>Legion:</strong> Dark Angels<br>
+            <strong>Primarch:</strong> Lion El'Jonson<br>
+            <strong>Main Characters:</strong> Lion El'Jonson, Luther<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The First
+        `,
+        blurb: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature and inability to trust create divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that prevents him from seeing the betrayal festering on Caliban. The Lord of the First is supreme in battle but blind to the politics that will split his Legion.`
+    },
+    'primarch-alpharius': {
+        number: 'P14',
+        title: 'ALPHARIUS: HEAD OF THE HYDRA',
+        author: 'Mike Brooks',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-alpharius.jpg',
+        legions: ['Alpha Legion'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Mike Brooks<br>
+            <strong>Series:</strong> Primarchs Novel Series #14<br>
+            <strong>Legion:</strong> Alpha Legion<br>
+            <strong>Primarch:</strong> Alpharius Omegon<br>
+            <strong>Main Characters:</strong> Alpharius Omegon<br>
+            <strong>Timeline:</strong> Discovery and Great Crusade<br>
+            <strong>Status:</strong> The Hydra
+        `,
+        blurb: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep even from each other. The Alpha Legion's methods of infiltration and misdirection are controversial, and this book may be the greatest misdirection of all. Every revelation might be a lie, every truth might be deception. I am Alpharius.`
+    },
+    'primarch-mortarion': {
+        number: 'P15',
+        title: 'MORTARION: THE PALE KING',
+        author: 'David Annandale',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-mortarion.jpg',
+        legions: ['Death Guard'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Annandale<br>
+            <strong>Series:</strong> Primarchs Novel Series #15<br>
+            <strong>Legion:</strong> Death Guard<br>
+            <strong>Primarch:</strong> Mortarion<br>
+            <strong>Main Characters:</strong> Mortarion, Typhon<br>
+            <strong>Timeline:</strong> Barbarus and Great Crusade<br>
+            <strong>Status:</strong> The Reaper
+        `,
+        blurb: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord—the Emperor had to do that. This failure drives Mortarion's resentment. This novel explores his philosophy of endurance, his hatred of tyrants and psykers, and the bitter irony that he will become a slave to Nurgle, the greatest tyrant of all.`
+    },
+    'primarch-rogal-dorn': {
+        number: 'P16',
+        title: 'ROGAL DORN: THE EMPEROR\'S CRUSADER',
+        author: 'Gav Thorpe',
+        timeline: 'Pre-Heresy',
+        coverImage: 'images/primarch-dorn.jpg',
+        legions: ['Imperial Fists'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Gav Thorpe<br>
+            <strong>Series:</strong> Primarchs Novel Series #16<br>
+            <strong>Legion:</strong> Imperial Fists<br>
+            <strong>Primarch:</strong> Rogal Dorn<br>
+            <strong>Main Characters:</strong> Rogal Dorn, Sigismund<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Praetorian
+        `,
+        blurb: `Rogal Dorn is the Emperor's Praetorian, chosen to fortify the Imperial Palace and defend Terra itself. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty. Where other Primarchs might question or interpret orders, Dorn simply obeys. His rigid adherence to truth and honor make him the perfect defender—but also blind him to the subtleties of treachery.`
+    },
+    'primarch-sanguinius': {
+        number: 'P17',
+        title: 'SANGUINIUS: THE GREAT ANGEL',
+        author: 'Chris Wraight',
+        timeline: 'Pre-Heresy/Heresy',
+        coverImage: 'images/primarch-sanguinius.jpg',
+        legions: ['Blood Angels'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Chris Wraight<br>
+            <strong>Series:</strong> Primarchs Novel Series #17<br>
+            <strong>Legion:</strong> Blood Angels<br>
+            <strong>Primarch:</strong> Sanguinius<br>
+            <strong>Main Characters:</strong> Sanguinius, Azkaellon<br>
+            <strong>Timeline:</strong> Imperium Secundus Era<br>
+            <strong>Status:</strong> The Great Angel
+        `,
+        blurb: `Sanguinius, most beloved of the Primarchs, struggles with visions of his own death and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing he will die at Horus's hands but facing that fate with nobility. Sanguinius represents what the Imperium could have been: beauty, wisdom, and martial prowess combined. His sacrifice will echo through ten thousand years.`
     }
 };
 
@@ -939,11 +1263,17 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
 
     let displayedCount = 0;
     const query = searchQuery.toLowerCase().trim();
+    const includePrimarchs = document.getElementById('includePrimarchs')?.checked ?? true;
 
     Object.keys(bookData).forEach((bookKey, index) => {
         const book = bookData[bookKey];
         const chronologicalNumber = index + 1;
         const isRead = readingProgress.isRead(bookKey);
+
+        // Filter out Primarchs series if checkbox unchecked
+        if (!includePrimarchs && book.series === 'primarchs') {
+            return;
+        }
 
         // Filter by legion if specified
         if (filterLegion && !book.legions.includes(filterLegion)) {
@@ -1012,9 +1342,24 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
 function updateProgressCounter() {
     const counter = document.getElementById('progressCounter');
     if (counter) {
-        const read = readingProgress.getCount();
-        const total = readingProgress.getTotalBooks();
-        counter.textContent = `READING PROGRESS: ${read}/${total} BOOKS COMPLETED`;
+        const progress = readingProgress.load();
+        const includePrimarchs = document.getElementById('includePrimarchs')?.checked ?? true;
+
+        // Count main series (54) and primarchs (8)
+        const allBooks = Object.keys(bookData);
+        const mainSeriesBooks = allBooks.filter(key => !bookData[key].series);
+        const primarchsBooks = allBooks.filter(key => bookData[key].series === 'primarchs');
+
+        const totalMain = mainSeriesBooks.length;
+        const totalPrimarchs = primarchsBooks.length;
+        const readMain = mainSeriesBooks.filter(key => progress[key]).length;
+        const readPrimarchs = primarchsBooks.filter(key => progress[key]).length;
+
+        if (includePrimarchs && totalPrimarchs > 0) {
+            counter.textContent = `READING PROGRESS: ${readMain + readPrimarchs}/${totalMain + totalPrimarchs} BOOKS (Main: ${readMain}/${totalMain} | Primarchs: ${readPrimarchs}/${totalPrimarchs})`;
+        } else {
+            counter.textContent = `READING PROGRESS: ${readMain}/${totalMain} BOOKS COMPLETED`;
+        }
     }
 }
 
@@ -1128,6 +1473,7 @@ function setupFilterListeners() {
     const searchInput = document.getElementById('searchInput');
     const clearSearchBtn = document.getElementById('clearSearch');
     const clearAllBtn = document.getElementById('clearAllFilters');
+    const primarchsCheckbox = document.getElementById('includePrimarchs');
 
     // Apply current filters
     const applyFilters = () => {
@@ -1138,6 +1484,9 @@ function setupFilterListeners() {
 
     // Legion filter change
     filterSelect.addEventListener('change', applyFilters);
+
+    // Primarchs series toggle
+    primarchsCheckbox.addEventListener('change', applyFilters);
 
     // Search input with debounce
     let searchTimeout;
@@ -1156,6 +1505,7 @@ function setupFilterListeners() {
     clearAllBtn.addEventListener('click', () => {
         filterSelect.value = '';
         searchInput.value = '';
+        primarchsCheckbox.checked = true;
         generateBookCards('', '');
     });
 }
