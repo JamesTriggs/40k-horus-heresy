@@ -1010,6 +1010,118 @@ body.traitor-theme .allegiance-toggle:hover {
     background: var(--blood-red);
 }
 
+/* Secret Button */
+.secret-button {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(26, 26, 26, 0.8);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    color: rgba(212, 175, 55, 0.5);
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 1500;
+    transition: all 0.3s ease;
+    opacity: 0.3;
+}
+
+.secret-button:hover {
+    opacity: 1;
+    border-color: var(--imperial-gold);
+    color: var(--imperial-gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Secret Modal */
+.secret-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.98);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.secret-modal-overlay.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.secret-modal-content {
+    background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
+    border: 6px solid var(--blood-red);
+    border-radius: 4px;
+    padding: 3rem;
+    max-width: 600px;
+    position: relative;
+    box-shadow:
+        0 0 60px rgba(139, 0, 0, 0.8),
+        inset 0 0 50px rgba(0, 0, 0, 0.9);
+    animation: slideIn 0.4s ease;
+}
+
+.close-secret-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: 2px solid var(--blood-red);
+    color: var(--blood-red);
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-secret-modal:hover {
+    background: var(--blood-red);
+    color: var(--parchment);
+    transform: rotate(90deg);
+}
+
+.secret-message {
+    text-align: center;
+}
+
+.secret-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--blood-red);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.8);
+}
+
+.secret-text {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--imperial-gold);
+    text-shadow:
+        0 0 30px rgba(212, 175, 55, 0.9),
+        0 0 60px rgba(139, 0, 0, 0.6);
+    margin: 3rem 0;
+    letter-spacing: 0.2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.secret-footer {
+    color: var(--blood-red);
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
 /* Character Links */
 .character-link {
     color: var(--warning-amber);
@@ -1519,5 +1631,28 @@ body.traitor-theme .allegiance-toggle:hover {
 
     .character-book-item {
         font-size: 0.75rem;
+    }
+
+    .secret-button {
+        bottom: 0.5rem;
+        left: 0.5rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .secret-modal-content {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .secret-title {
+        font-size: 1.3rem;
+        letter-spacing: 0.15rem;
+    }
+
+    .secret-text {
+        font-size: 2.5rem;
+        margin: 2rem 0;
     }
 }

@@ -2946,9 +2946,46 @@ function initializeAllegiance() {
     }
 }
 
+// Secret Easter Egg
+function initializeSecretButton() {
+    const secretBtn = document.getElementById('secretButton');
+    const secretModal = document.getElementById('secretModalOverlay');
+    const closeSecretBtn = document.getElementById('closeSecretModal');
+
+    secretBtn.addEventListener('click', () => {
+        const password = prompt('Enter clearance code:');
+        if (password === 'nipper') {
+            secretModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } else if (password !== null) {
+            alert('ACCESS DENIED - Invalid clearance code');
+        }
+    });
+
+    closeSecretBtn.addEventListener('click', () => {
+        secretModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    secretModal.addEventListener('click', (e) => {
+        if (e.target === secretModal) {
+            secretModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && secretModal.classList.contains('active')) {
+            secretModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
 // Add glitch effect to title on load
 window.addEventListener('load', () => {
     initializeAllegiance(); // Initialize theme switcher
+    initializeSecretButton(); // Initialize secret Easter egg
     populateLegionFilter(); // Populate filter dropdown
     setupFilterListeners(); // Set up filter events
     generateBookCards(); // Generate all book cards
