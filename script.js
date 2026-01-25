@@ -36,6 +36,7 @@ const bookData = {
         author: 'Mitchel Scanlon',
         timeline: '820-970.M30',
         coverImage: 'images/descent-of-angels.jpg',
+        legions: ['Dark Angels'],
         details: `
             <strong>Author:</strong> Mitchel Scanlon<br>
             <strong>Legion:</strong> Dark Angels<br>
@@ -52,6 +53,7 @@ const bookData = {
         author: 'Aaron Dembski-Bowden',
         timeline: '956.M30',
         coverImage: 'images/the-first-heretic.jpg',
+        legions: ['Word Bearers'],
         details: `
             <strong>Author:</strong> Aaron Dembski-Bowden<br>
             <strong>Legion:</strong> Word Bearers<br>
@@ -68,6 +70,7 @@ const bookData = {
         author: 'Dan Abnett',
         timeline: '001.M31',
         coverImage: 'images/legion.jpg',
+        legions: ['Alpha Legion'],
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Legion:</strong> Alpha Legion<br>
@@ -84,6 +87,7 @@ const bookData = {
         author: 'Dan Abnett',
         timeline: '002-003.M31',
         coverImage: 'images/horus-rising.jpg',
+        legions: ['Sons of Horus', 'Luna Wolves'],
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Legion:</strong> Luna Wolves / Sons of Horus<br>
@@ -100,6 +104,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '004.M31',
         coverImage: 'images/false-gods.jpg',
+        legions: ['Sons of Horus'],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Legion:</strong> Sons of Horus<br>
@@ -116,6 +121,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '001-004.M31',
         coverImage: 'images/a-thousand-sons.jpg',
+        legions: ["Thousand Sons","Space Wolves"],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Legion:</strong> Thousand Sons<br>
@@ -132,6 +138,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '004.M31',
         coverImage: 'images/the-outcast-dead.jpg',
+        legions: ["Various"],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Legion:</strong> Various<br>
@@ -148,6 +155,7 @@ const bookData = {
         author: 'Aaron Dembski-Bowden',
         timeline: '004-014.M31',
         coverImage: 'images/the-master-of-mankind.jpg',
+        legions: ["Custodian Guard","Sisters of Silence"],
         details: `
             <strong>Author:</strong> Aaron Dembski-Bowden<br>
             <strong>Focus:</strong> The Emperor of Mankind<br>
@@ -164,6 +172,7 @@ const bookData = {
         author: 'Ben Counter',
         timeline: '005.M31',
         coverImage: 'images/galaxy-in-flames.jpg',
+        legions: ["Sons of Horus","Emperor's Children","Death Guard","World Eaters"],
         details: `
             <strong>Author:</strong> Ben Counter<br>
             <strong>Legions:</strong> Sons of Horus, Emperor's Children, Death Guard, World Eaters<br>
@@ -180,6 +189,7 @@ const bookData = {
         author: 'Dan Abnett',
         timeline: '004-005.M31',
         coverImage: 'images/prospero-burns.jpg',
+        legions: ["Space Wolves","Thousand Sons"],
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Legion:</strong> Space Wolves<br>
@@ -196,6 +206,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '005.M31',
         coverImage: 'images/mechanicum.jpg',
+        legions: ["Mechanicum"],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Faction:</strong> Adeptus Mechanicus<br>
@@ -212,6 +223,7 @@ const bookData = {
         author: 'James Swallow',
         timeline: '005.M31',
         coverImage: 'images/the-flight-of-the-eisenstein.jpg',
+        legions: ["Death Guard"],
         details: `
             <strong>Author:</strong> James Swallow<br>
             <strong>Legion:</strong> Death Guard<br>
@@ -228,6 +240,7 @@ const bookData = {
         author: 'Mike Lee',
         timeline: '005.M31',
         coverImage: 'images/fallen-angels.jpg',
+        legions: ["Dark Angels"],
         details: `
             <strong>Author:</strong> Mike Lee<br>
             <strong>Legion:</strong> Dark Angels<br>
@@ -244,6 +257,7 @@ const bookData = {
         author: 'James Swallow',
         timeline: '005-006.M31',
         coverImage: 'images/fear-to-tread.jpg',
+        legions: ["Blood Angels"],
         details: `
             <strong>Author:</strong> James Swallow<br>
             <strong>Legion:</strong> Blood Angels<br>
@@ -260,6 +274,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '006.M31',
         coverImage: 'images/fulgrim.jpg',
+        legions: ["Emperor's Children","Iron Hands"],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Legion:</strong> Emperor's Children<br>
@@ -276,6 +291,7 @@ const bookData = {
         author: 'Nick Kyme',
         timeline: '006-007.M31',
         coverImage: 'images/vulkan-lives.jpg',
+        legions: ["Salamanders","Night Lords"],
         details: `
             <strong>Author:</strong> Nick Kyme<br>
             <strong>Legion:</strong> Salamanders<br>
@@ -292,6 +308,7 @@ const bookData = {
         author: 'Gav Thorpe',
         timeline: '007.M31',
         coverImage: 'images/deliverance-lost.jpg',
+        legions: ["Raven Guard","Alpha Legion"],
         details: `
             <strong>Author:</strong> Gav Thorpe<br>
             <strong>Legion:</strong> Raven Guard<br>
@@ -308,6 +325,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '007.M31',
         coverImage: 'images/the-crimson-king.jpg',
+        legions: ["Thousand Sons"],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Legion:</strong> Thousand Sons<br>
@@ -324,6 +342,7 @@ const bookData = {
         author: 'David Annandale',
         timeline: '007.M31',
         coverImage: 'images/the-damnation-of-pythos.jpg',
+        legions: ["Iron Hands","Salamanders","Raven Guard"],
         details: `
             <strong>Author:</strong> David Annandale<br>
             <strong>Legions:</strong> Iron Hands, Salamanders, Raven Guard<br>
@@ -340,6 +359,7 @@ const bookData = {
         author: 'James Swallow',
         timeline: '007.M31',
         coverImage: 'images/nemesis.jpg',
+        legions: ["Officio Assassinorum"],
         details: `
             <strong>Author:</strong> James Swallow<br>
             <strong>Faction:</strong> Officio Assassinorum<br>
@@ -355,6 +375,7 @@ const bookData = {
         author: 'Dan Abnett',
         timeline: '007.M31',
         coverImage: 'images/know-no-fear.jpg',
+        legions: ["Ultramarines","Word Bearers"],
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Legions:</strong> Ultramarines, Word Bearers<br>
@@ -371,6 +392,7 @@ const bookData = {
         author: 'Ben Counter',
         timeline: '007.M31',
         coverImage: 'images/battle-for-the-abyss.jpg',
+        legions: ["Word Bearers","Ultramarines","Space Wolves","World Eaters","Thousand Sons"],
         details: `
             <strong>Author:</strong> Ben Counter<br>
             <strong>Legions:</strong> Word Bearers, Ultramarines, Space Wolves, World Eaters, Thousand Sons<br>
@@ -386,6 +408,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '007.M31',
         coverImage: 'images/angel-exterminatus.jpg',
+        legions: ["Iron Warriors","Emperor's Children"],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Legions:</strong> Iron Warriors, Emperor's Children<br>
@@ -402,6 +425,7 @@ const bookData = {
         author: 'Aaron Dembski-Bowden',
         timeline: '007.M31',
         coverImage: 'images/betrayer.jpg',
+        legions: ["World Eaters","Word Bearers","Ultramarines"],
         details: `
             <strong>Author:</strong> Aaron Dembski-Bowden<br>
             <strong>Legions:</strong> World Eaters, Word Bearers<br>
@@ -418,6 +442,7 @@ const bookData = {
         author: 'Chris Wraight',
         timeline: '007.M31',
         coverImage: 'images/scars.jpg',
+        legions: ["White Scars"],
         details: `
             <strong>Author:</strong> Chris Wraight<br>
             <strong>Legion:</strong> White Scars<br>
@@ -434,6 +459,7 @@ const bookData = {
         author: 'Graham McNeill',
         timeline: '008-009.M31',
         coverImage: 'images/vengeful-spirit.jpg',
+        legions: ["Sons of Horus"],
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Legion:</strong> Sons of Horus<br>
@@ -450,6 +476,7 @@ const bookData = {
         author: 'Dan Abnett',
         timeline: '009.M31',
         coverImage: 'images/the-unremembered-empire.jpg',
+        legions: ["Ultramarines","Dark Angels","Blood Angels"],
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Legions:</strong> Ultramarines, Dark Angels, Blood Angels<br>
@@ -466,6 +493,7 @@ const bookData = {
         author: 'Guy Haley',
         timeline: '009.M31',
         coverImage: 'images/pharos.jpg',
+        legions: ["Ultramarines","Imperial Fists","Night Lords"],
         details: `
             <strong>Author:</strong> Guy Haley<br>
             <strong>Legion:</strong> Ultramarines<br>
@@ -482,6 +510,7 @@ const bookData = {
         author: 'Nick Kyme',
         timeline: '010.M31',
         coverImage: 'images/deathfire.jpg',
+        legions: ["Salamanders"],
         details: `
             <strong>Author:</strong> Nick Kyme<br>
             <strong>Legion:</strong> Salamanders<br>
@@ -498,6 +527,7 @@ const bookData = {
         author: 'John French',
         timeline: '010-012.M31',
         coverImage: 'images/tallarn.jpg',
+        legions: ["Imperial Army","Iron Warriors"],
         details: `
             <strong>Author:</strong> John French<br>
             <strong>Faction:</strong> Imperial Army<br>
@@ -514,6 +544,7 @@ const bookData = {
         author: 'John French',
         timeline: '010.M31',
         coverImage: 'images/praetorian-of-dorn.jpg',
+        legions: ["Imperial Fists","Alpha Legion"],
         details: `
             <strong>Author:</strong> John French<br>
             <strong>Legions:</strong> Imperial Fists, Alpha Legion<br>
@@ -530,6 +561,7 @@ const bookData = {
         author: 'Chris Wraight',
         timeline: '011.M31',
         coverImage: 'images/the-path-of-heaven.jpg',
+        legions: ["White Scars","Death Guard"],
         details: `
             <strong>Author:</strong> Chris Wraight<br>
             <strong>Legion:</strong> White Scars<br>
@@ -546,6 +578,7 @@ const bookData = {
         author: 'Gav Thorpe',
         timeline: '011.M31',
         coverImage: 'images/angels-of-caliban.jpg',
+        legions: ["Dark Angels","Night Lords"],
         details: `
             <strong>Author:</strong> Gav Thorpe<br>
             <strong>Legion:</strong> Dark Angels<br>
@@ -562,6 +595,7 @@ const bookData = {
         author: 'Nick Kyme',
         timeline: '011.M31',
         coverImage: 'images/old-earth.jpg',
+        legions: ["Salamanders"],
         details: `
             <strong>Author:</strong> Nick Kyme<br>
             <strong>Legion:</strong> Salamanders<br>
@@ -578,6 +612,7 @@ const bookData = {
         author: 'David Annandale',
         timeline: '011.M31',
         coverImage: 'images/ruinstorm.jpg',
+        legions: ["Ultramarines","Dark Angels","Blood Angels"],
         details: `
             <strong>Author:</strong> David Annandale<br>
             <strong>Legions:</strong> Ultramarines, Dark Angels, Blood Angels<br>
@@ -594,6 +629,7 @@ const bookData = {
         author: 'Guy Haley',
         timeline: '012.M31',
         coverImage: 'images/wolfsbane.jpg',
+        legions: ["Space Wolves","Sons of Horus"],
         details: `
             <strong>Author:</strong> Guy Haley<br>
             <strong>Legion:</strong> Space Wolves<br>
@@ -610,6 +646,7 @@ const bookData = {
         author: 'Guy Haley',
         timeline: '012.M31',
         coverImage: 'images/titandeath.jpg',
+        legions: ["Collegia Titanica"],
         details: `
             <strong>Author:</strong> Guy Haley<br>
             <strong>Faction:</strong> Collegia Titanica<br>
@@ -626,6 +663,7 @@ const bookData = {
         author: 'John French',
         timeline: '013.M31',
         coverImage: 'images/slaves-to-darkness.jpg',
+        legions: ["Sons of Horus","All Traitor Legions"],
         details: `
             <strong>Author:</strong> John French<br>
             <strong>Faction:</strong> Traitor Legions<br>
@@ -642,6 +680,7 @@ const bookData = {
         author: 'James Swallow',
         timeline: '013.M31',
         coverImage: 'images/the-buried-dagger.jpg',
+        legions: ["Death Guard"],
         details: `
             <strong>Author:</strong> James Swallow<br>
             <strong>Legion:</strong> Death Guard<br>
@@ -658,6 +697,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/tales-of-heresy.jpg',
+        legions: ["Various"],
         details: `
             <strong>Editors:</strong> Lindsey Priestley & Nick Kyme<br>
             <strong>Type:</strong> Short Story Anthology<br>
@@ -673,6 +713,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/age-of-darkness.jpg',
+        legions: ["Various"],
         details: `
             <strong>Editor:</strong> Christian Dunn<br>
             <strong>Type:</strong> Short Story Anthology<br>
@@ -688,6 +729,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/the-primarchs.jpg',
+        legions: ["Various"],
         details: `
             <strong>Editor:</strong> Christian Dunn<br>
             <strong>Type:</strong> Novella Anthology<br>
@@ -703,6 +745,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/shadows-of-treachery.jpg',
+        legions: ["Various"],
         details: `
             <strong>Editors:</strong> Christian Dunn & Nick Kyme<br>
             <strong>Type:</strong> Novella/Story Anthology<br>
@@ -718,6 +761,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: '007-009.M31',
         coverImage: 'images/mark-of-calth.jpg',
+        legions: ["Ultramarines","Word Bearers"],
         details: `
             <strong>Editor:</strong> Laurie Goulding<br>
             <strong>Type:</strong> Short Story Anthology<br>
@@ -734,6 +778,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/legacies-of-betrayal.jpg',
+        legions: ["Various"],
         details: `
             <strong>Type:</strong> Short Story Anthology<br>
             <strong>Main Characters:</strong> Warriors from various Legions dealing with betrayal<br>
@@ -748,6 +793,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/war-without-end.jpg',
+        legions: ["Various"],
         details: `
             <strong>Type:</strong> Short Story Anthology<br>
             <strong>Main Characters:</strong> Various warriors in endless campaigns<br>
@@ -762,6 +808,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/eye-of-terra.jpg',
+        legions: ["Imperial Fists","Various"],
         details: `
             <strong>Type:</strong> Short Story Anthology<br>
             <strong>Focus:</strong> Terra and the Sol System<br>
@@ -777,6 +824,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/the-silent-war.jpg',
+        legions: ["Knights-Errant"],
         details: `
             <strong>Type:</strong> Novella/Story Anthology<br>
             <strong>Focus:</strong> Malcador and the Knights-Errant<br>
@@ -792,6 +840,7 @@ const bookData = {
         author: 'Gav Thorpe',
         timeline: '007-011.M31',
         coverImage: 'images/corax.jpg',
+        legions: ["Raven Guard"],
         details: `
             <strong>Author:</strong> Gav Thorpe<br>
             <strong>Legion:</strong> Raven Guard<br>
@@ -808,6 +857,7 @@ const bookData = {
         author: 'James Swallow',
         timeline: '005-013.M31',
         coverImage: 'images/garro.jpg',
+        legions: ["Knights-Errant","Death Guard"],
         details: `
             <strong>Author:</strong> James Swallow<br>
             <strong>Hero:</strong> Nathaniel Garro<br>
@@ -824,6 +874,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: '006-012.M31',
         coverImage: 'images/shattered-legions.jpg',
+        legions: ["Iron Hands","Salamanders","Raven Guard"],
         details: `
             <strong>Type:</strong> Short Story Anthology<br>
             <strong>Legions:</strong> Iron Hands, Salamanders, Raven Guard<br>
@@ -839,6 +890,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: 'Various',
         coverImage: 'images/the-burden-of-loyalty.jpg',
+        legions: ["Various"],
         details: `
             <strong>Type:</strong> Short Story Anthology<br>
             <strong>Main Characters:</strong> Loyal warriors tested by the Heresy<br>
@@ -853,6 +905,7 @@ const bookData = {
         author: 'Nick Kyme',
         timeline: '006-011.M31',
         coverImage: 'images/born-of-flame.jpg',
+        legions: ["Salamanders"],
         details: `
             <strong>Author:</strong> Nick Kyme<br>
             <strong>Legion:</strong> Salamanders<br>
@@ -868,6 +921,7 @@ const bookData = {
         author: 'Various (Anthology)',
         timeline: '012-013.M31',
         coverImage: 'images/heralds-of-the-siege.jpg',
+        legions: ["Various"],
         details: `
             <strong>Type:</strong> Short Story Anthology<br>
             <strong>Main Characters:</strong> Warriors from both sides preparing for Terra<br>
@@ -879,14 +933,23 @@ const bookData = {
 };
 
 // Generate book cards dynamically
-function generateBookCards() {
+function generateBookCards(filterLegion = '') {
     const bookDisplay = document.querySelector('.book-display');
     bookDisplay.innerHTML = ''; // Clear existing cards
+
+    let displayedCount = 0;
 
     Object.keys(bookData).forEach((bookKey, index) => {
         const book = bookData[bookKey];
         const chronologicalNumber = index + 1;
         const isRead = readingProgress.isRead(bookKey);
+
+        // Filter by legion if specified
+        if (filterLegion && !book.legions.includes(filterLegion)) {
+            return; // Skip this book
+        }
+
+        displayedCount++;
 
         const bookCard = document.createElement('div');
         bookCard.className = 'book-card' + (isRead ? ' book-read' : '');
@@ -912,6 +975,14 @@ function generateBookCards() {
 
     // Update progress counter
     updateProgressCounter();
+
+    // Show filter result count
+    if (filterLegion) {
+        const filterInfo = document.createElement('div');
+        filterInfo.className = 'filter-info';
+        filterInfo.textContent = `Showing ${displayedCount} book${displayedCount !== 1 ? 's' : ''} featuring ${filterLegion}`;
+        bookDisplay.insertBefore(filterInfo, bookDisplay.firstChild);
+    }
 }
 
 // Update reading progress counter
@@ -980,8 +1051,9 @@ function showModal(bookKey) {
         markReadBtn.textContent = nowRead ? '✓ MARK UNREAD' : 'MARK AS READ';
         markReadBtn.classList.toggle('read', nowRead);
 
-        // Regenerate cards to update visual state
-        generateBookCards();
+        // Regenerate cards to update visual state, maintaining current filter
+        const currentFilter = document.getElementById('legionFilter').value;
+        generateBookCards(currentFilter);
     });
 
     // Show modal
@@ -995,8 +1067,56 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
+// Populate legion filter dropdown
+function populateLegionFilter() {
+    const legionSet = new Set();
+
+    Object.values(bookData).forEach(book => {
+        if (book.legions) {
+            book.legions.forEach(legion => {
+                if (legion !== 'Various') {
+                    legionSet.add(legion);
+                }
+            });
+        }
+    });
+
+    const sortedLegions = Array.from(legionSet).sort();
+    const filterSelect = document.getElementById('legionFilter');
+
+    sortedLegions.forEach(legion => {
+        const option = document.createElement('option');
+        option.value = legion;
+        option.textContent = legion;
+        filterSelect.appendChild(option);
+    });
+
+    // Add "Various/Anthologies" option
+    const variousOption = document.createElement('option');
+    variousOption.value = 'Various';
+    variousOption.textContent = 'Various/Anthologies';
+    filterSelect.appendChild(variousOption);
+}
+
+// Set up filter event listeners
+function setupFilterListeners() {
+    const filterSelect = document.getElementById('legionFilter');
+    const clearBtn = document.getElementById('clearFilter');
+
+    filterSelect.addEventListener('change', (e) => {
+        generateBookCards(e.target.value);
+    });
+
+    clearBtn.addEventListener('click', () => {
+        filterSelect.value = '';
+        generateBookCards('');
+    });
+}
+
 // Add glitch effect to title on load
 window.addEventListener('load', () => {
+    populateLegionFilter(); // Populate filter dropdown
+    setupFilterListeners(); // Set up filter events
     generateBookCards(); // Generate all book cards
 
     const mainTitle = document.querySelector('.main-title');
