@@ -245,7 +245,7 @@ body::before {
 }
 
 .allegiance-toggle {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: 1rem;
     background: linear-gradient(135deg, var(--imperial-gold) 0%, #8b7428 100%);
@@ -259,11 +259,11 @@ body::before {
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.4s ease;
-    z-index: 100;
+    z-index: 2000;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     text-shadow: none;
 }
 
