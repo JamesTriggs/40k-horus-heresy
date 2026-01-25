@@ -1178,6 +1178,56 @@ const bookData = {
         blurb: `The final anthology before the Siege of Terra begins. These stories depict the last battles before Horus's fleet arrives at the Solar System. Loyalists make desperate final stands to buy Terra more time. The traitor Legions eliminate the last obstacles in their path. Every moment matters, every battle could mean the difference between survival and extinction. The Siege is coming, and the galaxy holds its breath.`
     },
     // PRIMARCHS NOVEL SERIES
+    'sot-solar-war': {
+        number: 'SoT 1', title: 'THE SOLAR WAR', author: 'John French', timeline: '014.M31', coverImage: 'images/sot-solar-war.jpg', legions: ['Imperial Fists', 'Sons of Horus', 'Iron Warriors'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> John French<br><strong>Series:</strong> Siege of Terra #1<br><strong>Legions:</strong> Imperial Fists, Iron Warriors, Sons of Horus<br><strong>Main Characters:</strong> Rogal Dorn, Ezekyle Abaddon, Perturabo<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The War Comes Home`,
+        blurb: `The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods. The Solar War is fought in the void, with massive fleet battles determining whether the traitors can even reach Terra's surface.`
+    },
+    'sot-lost-and-damned': {
+        number: 'SoT 2', title: 'THE LOST AND THE DAMNED', author: 'Guy Haley', timeline: '014.M31', coverImage: 'images/sot-lost-and-damned.jpg', legions: ['Imperial Fists', 'All Traitor Legions'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Guy Haley<br><strong>Series:</strong> Siege of Terra #2<br><strong>Legions:</strong> Imperial Fists, Traitor Legions<br><strong>Main Characters:</strong> Rogal Dorn, Perturabo, Zenobi<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Noose Tightens`,
+        blurb: `The traitors land on Terra. Billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war. The first walls begin to crack.`
+    },
+    'sot-first-wall': {
+        number: 'SoT 3', title: 'THE FIRST WALL', author: 'Gav Thorpe', timeline: '014.M31', coverImage: 'images/sot-first-wall.jpg', legions: ['Imperial Fists', 'Iron Warriors'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Gav Thorpe<br><strong>Series:</strong> Siege of Terra #3<br><strong>Legions:</strong> Imperial Fists, Iron Warriors<br><strong>Main Characters:</strong> Rogal Dorn, Perturabo, Sigismund<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Siege Intensifies`,
+        blurb: `The Iron Warriors assault the Lion's Gate spaceport. Perturabo's siege engines grind against Dorn's fortifications in the ultimate test of defense versus offense. The battle becomes personal as master siege-breaker faces master fortifier. When the first wall falls, the defenders realize Terra itself may be conquered.`
+    },
+    'sot-saturnine': {
+        number: 'SoT 4', title: 'SATURNINE', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-saturnine.jpg', legions: ['Imperial Fists', 'Sons of Horus', 'Alpha Legion'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #4<br><strong>Legions:</strong> Imperial Fists, Sons of Horus, Alpha Legion<br><strong>Main Characters:</strong> Rogal Dorn, Horus Lupercal, Alpharius Omegon, Sigismund<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Turning Point`,
+        blurb: `The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has anticipated this. In a shocking confrontation, one of the twin Primarchs meets their end. Sigismund duels traitor champions. The Siege's momentum shifts at terrible cost.`
+    },
+    'sot-mortis': {
+        number: 'SoT 5', title: 'MORTIS', author: 'John French', timeline: '014.M31', coverImage: 'images/sot-mortis.jpg', legions: ['Collegia Titanica', 'Death Guard'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> John French<br><strong>Series:</strong> Siege of Terra #5<br><strong>Factions:</strong> Titan Legions, Death Guard<br><strong>Main Characters:</strong> Titan Princeps, Mortarion<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Titan War`,
+        blurb: `The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans and Mortarion's Death Guard. The war becomes existential as the Warp breaches reality. Time itself begins to break down. The defenders fight to keep reality intact.`
+    },
+    'sot-warhawk': {
+        number: 'SoT 6', title: 'WARHAWK', author: 'Chris Wraight', timeline: '014.M31', coverImage: 'images/sot-warhawk.jpg', legions: ['White Scars', 'Death Guard'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Chris Wraight<br><strong>Series:</strong> Siege of Terra #6<br><strong>Legions:</strong> White Scars, Death Guard<br><strong>Main Characters:</strong> Jaghatai Khan, Mortarion<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Khan's Vengeance`,
+        blurb: `Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death. The Khan must defeat Mortarion or Terra falls.`
+    },
+    'sot-echoes-of-eternity': {
+        number: 'SoT 7', title: 'ECHOES OF ETERNITY', author: 'Aaron Dembski-Bowden', timeline: '014.M31', coverImage: 'images/sot-echoes-of-eternity.jpg', legions: ['Blood Angels', 'World Eaters'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Series:</strong> Siege of Terra #7<br><strong>Legions:</strong> Blood Angels, World Eaters<br><strong>Main Characters:</strong> Sanguinius, Angron, Khârn<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Angels and Daemons`,
+        blurb: `The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of his own death. The battle is apocalyptic as Blood Angels succumb to the Black Rage. Sanguinius defeats Angron, banishing him to the Warp, but the victory costs dearly. The Great Angel's wings are broken.`
+    },
+    'sot-end-and-death-vol-1': {
+        number: 'SoT 8a', title: 'THE END AND THE DEATH: VOLUME I', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-1.jpg', legions: ['All Legions'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 1<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> Horus Lupercal, The Emperor, Sanguinius, Rogal Dorn, Garviel Loken<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Endgame Begins`,
+        blurb: `The Siege reaches its climax. Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered across the ship. Loyalist heroes converge for the final battle. Reality warps as Warp and materium collide.`
+    },
+    'sot-end-and-death-vol-2': {
+        number: 'SoT 8b', title: 'THE END AND THE DEATH: VOLUME II', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-2.jpg', legions: ['All Legions'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 2<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> The Emperor, Sanguinius, Horus Lupercal, Garviel Loken, Ollanius Pius<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Angel Falls`,
+        blurb: `Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing he walks to his death. The Great Angel fights valiantly, wounding the Warmaster before falling to his corrupted brother. Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread.`
+    },
+    'sot-end-and-death-vol-3': {
+        number: 'SoT 8c', title: 'THE END AND THE DEATH: VOLUME III', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-3.jpg', legions: ['All Legions'], series: 'siege-of-terra',
+        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 3<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> The Emperor, Horus Lupercal, Ollanius Pius, Garviel Loken<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Father Against Son`,
+        blurb: `The Emperor confronts Horus in the most consequential battle in human history. When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption. He unleashes His full power, destroying Horus utterly—but the assault leaves Him mortally wounded. Dorn finds his father dying. The Heresy ends, but the Imperium is forever changed.`
+    }
     'primarch-roboute-guilliman': {
         number: 'P1',
         title: 'ROBOUTE GUILLIMAN: LORD OF ULTRAMAR',
@@ -1502,56 +1552,6 @@ const bookData = {
         blurb: `Sanguinius, most beloved of the Primarchs, struggles with visions of his own death and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing he will die at Horus's hands but facing that fate with nobility. Sanguinius represents what the Imperium could have been: beauty, wisdom, and martial prowess combined. His sacrifice will echo through ten thousand years.`
     },
     // SIEGE OF TERRA SERIES - The Epic Conclusion
-    'sot-solar-war': {
-        number: 'SoT 1', title: 'THE SOLAR WAR', author: 'John French', timeline: '014.M31', coverImage: 'images/sot-solar-war.jpg', legions: ['Imperial Fists', 'Sons of Horus', 'Iron Warriors'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> John French<br><strong>Series:</strong> Siege of Terra #1<br><strong>Legions:</strong> Imperial Fists, Iron Warriors, Sons of Horus<br><strong>Main Characters:</strong> Rogal Dorn, Ezekyle Abaddon, Perturabo<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The War Comes Home`,
-        blurb: `The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods. The Solar War is fought in the void, with massive fleet battles determining whether the traitors can even reach Terra's surface.`
-    },
-    'sot-lost-and-damned': {
-        number: 'SoT 2', title: 'THE LOST AND THE DAMNED', author: 'Guy Haley', timeline: '014.M31', coverImage: 'images/sot-lost-and-damned.jpg', legions: ['Imperial Fists', 'All Traitor Legions'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Guy Haley<br><strong>Series:</strong> Siege of Terra #2<br><strong>Legions:</strong> Imperial Fists, Traitor Legions<br><strong>Main Characters:</strong> Rogal Dorn, Perturabo, Zenobi<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Noose Tightens`,
-        blurb: `The traitors land on Terra. Billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war. The first walls begin to crack.`
-    },
-    'sot-first-wall': {
-        number: 'SoT 3', title: 'THE FIRST WALL', author: 'Gav Thorpe', timeline: '014.M31', coverImage: 'images/sot-first-wall.jpg', legions: ['Imperial Fists', 'Iron Warriors'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Gav Thorpe<br><strong>Series:</strong> Siege of Terra #3<br><strong>Legions:</strong> Imperial Fists, Iron Warriors<br><strong>Main Characters:</strong> Rogal Dorn, Perturabo, Sigismund<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Siege Intensifies`,
-        blurb: `The Iron Warriors assault the Lion's Gate spaceport. Perturabo's siege engines grind against Dorn's fortifications in the ultimate test of defense versus offense. The battle becomes personal as master siege-breaker faces master fortifier. When the first wall falls, the defenders realize Terra itself may be conquered.`
-    },
-    'sot-saturnine': {
-        number: 'SoT 4', title: 'SATURNINE', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-saturnine.jpg', legions: ['Imperial Fists', 'Sons of Horus', 'Alpha Legion'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #4<br><strong>Legions:</strong> Imperial Fists, Sons of Horus, Alpha Legion<br><strong>Main Characters:</strong> Rogal Dorn, Horus Lupercal, Alpharius Omegon, Sigismund<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Turning Point`,
-        blurb: `The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has anticipated this. In a shocking confrontation, one of the twin Primarchs meets their end. Sigismund duels traitor champions. The Siege's momentum shifts at terrible cost.`
-    },
-    'sot-mortis': {
-        number: 'SoT 5', title: 'MORTIS', author: 'John French', timeline: '014.M31', coverImage: 'images/sot-mortis.jpg', legions: ['Collegia Titanica', 'Death Guard'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> John French<br><strong>Series:</strong> Siege of Terra #5<br><strong>Factions:</strong> Titan Legions, Death Guard<br><strong>Main Characters:</strong> Titan Princeps, Mortarion<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Titan War`,
-        blurb: `The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans and Mortarion's Death Guard. The war becomes existential as the Warp breaches reality. Time itself begins to break down. The defenders fight to keep reality intact.`
-    },
-    'sot-warhawk': {
-        number: 'SoT 6', title: 'WARHAWK', author: 'Chris Wraight', timeline: '014.M31', coverImage: 'images/sot-warhawk.jpg', legions: ['White Scars', 'Death Guard'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Chris Wraight<br><strong>Series:</strong> Siege of Terra #6<br><strong>Legions:</strong> White Scars, Death Guard<br><strong>Main Characters:</strong> Jaghatai Khan, Mortarion<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Khan's Vengeance`,
-        blurb: `Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death. The Khan must defeat Mortarion or Terra falls.`
-    },
-    'sot-echoes-of-eternity': {
-        number: 'SoT 7', title: 'ECHOES OF ETERNITY', author: 'Aaron Dembski-Bowden', timeline: '014.M31', coverImage: 'images/sot-echoes-of-eternity.jpg', legions: ['Blood Angels', 'World Eaters'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Series:</strong> Siege of Terra #7<br><strong>Legions:</strong> Blood Angels, World Eaters<br><strong>Main Characters:</strong> Sanguinius, Angron, Khârn<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Angels and Daemons`,
-        blurb: `The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of his own death. The battle is apocalyptic as Blood Angels succumb to the Black Rage. Sanguinius defeats Angron, banishing him to the Warp, but the victory costs dearly. The Great Angel's wings are broken.`
-    },
-    'sot-end-and-death-vol-1': {
-        number: 'SoT 8a', title: 'THE END AND THE DEATH: VOLUME I', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-1.jpg', legions: ['All Legions'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 1<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> Horus Lupercal, The Emperor, Sanguinius, Rogal Dorn, Garviel Loken<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Endgame Begins`,
-        blurb: `The Siege reaches its climax. Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered across the ship. Loyalist heroes converge for the final battle. Reality warps as Warp and materium collide.`
-    },
-    'sot-end-and-death-vol-2': {
-        number: 'SoT 8b', title: 'THE END AND THE DEATH: VOLUME II', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-2.jpg', legions: ['All Legions'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 2<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> The Emperor, Sanguinius, Horus Lupercal, Garviel Loken, Ollanius Pius<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Angel Falls`,
-        blurb: `Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing he walks to his death. The Great Angel fights valiantly, wounding the Warmaster before falling to his corrupted brother. Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread.`
-    },
-    'sot-end-and-death-vol-3': {
-        number: 'SoT 8c', title: 'THE END AND THE DEATH: VOLUME III', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-3.jpg', legions: ['All Legions'], series: 'siege-of-terra',
-        details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 3<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> The Emperor, Horus Lupercal, Ollanius Pius, Garviel Loken<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Father Against Son`,
-        blurb: `The Emperor confronts Horus in the most consequential battle in human history. When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption. He unleashes His full power, destroying Horus utterly—but the assault leaves Him mortally wounded. Dorn finds his father dying. The Heresy ends, but the Imperium is forever changed.`
-    }
 };
 
 // Sort books based on sort order
