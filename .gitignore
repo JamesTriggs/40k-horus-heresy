@@ -1,8 +1,17 @@
-# Build scripts
+# Build scripts and utilities
 *.sh
 add-covers.js
+add-legions.js
+character-data.js
+character-data-complete.js
 temp-*.js
 temp-*.txt
+
+# Data processing files
+all-characters.txt
+all-characters-data.json
+siege-of-terra-data.txt
+MOBILE-INSTRUCTIONS.txt
 
 # Large standalone file (not needed for GitHub Pages)
 horus-heresy-complete.html
@@ -24,3 +33,6 @@ horus-heresy-complete.html
 
 # Temporary files
 *.tmp
+
+# Agent outputs
+.claude/
