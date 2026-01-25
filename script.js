@@ -950,15 +950,14 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
             return; // Skip this book
         }
 
-        // Search filter - check title, author, and characters
+        // Search filter - check title, author, characters, and blurb
         if (query) {
             const titleMatch = book.title.toLowerCase().includes(query);
             const authorMatch = book.author.toLowerCase().includes(query);
-
-            // Extract character names from details
             const charactersMatch = book.details.toLowerCase().includes(query);
+            const blurbMatch = book.blurb.toLowerCase().includes(query);
 
-            if (!titleMatch && !authorMatch && !charactersMatch) {
+            if (!titleMatch && !authorMatch && !charactersMatch && !blurbMatch) {
                 return; // Skip this book
             }
         }
