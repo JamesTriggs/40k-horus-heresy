@@ -355,6 +355,14 @@ body.traitor-theme .allegiance-toggle:hover {
     font-style: italic;
 }
 
+.quote-attribution {
+    font-size: 0.65rem;
+    opacity: 0.6;
+    font-style: normal;
+    letter-spacing: 0.05rem;
+    color: var(--imperial-gold);
+}
+
 .progress-counter {
     margin-top: 1rem;
     color: var(--imperial-gold);

@@ -2831,57 +2831,66 @@ function setupFilterListeners() {
     });
 }
 
-// Thought for the Day quotes
+// Thought for the Day quotes with attributions
 const loyalistQuotes = [
-    "BLESSED IS THE MIND TOO SMALL FOR DOUBT",
-    "THE EMPEROR PROTECTS",
-    "FAITH IS THE STRONGEST SHIELD",
-    "DOUBT IS THE GATEWAY TO HERESY",
-    "AN OPEN MIND IS LIKE A FORTRESS WITH ITS GATES UNBARRED",
-    "HERESY GROWS FROM IDLENESS",
-    "SUCCESS IS MEASURED IN BLOOD; YOURS OR YOUR ENEMY'S",
-    "HOPE IS THE FIRST STEP ON THE ROAD TO DISAPPOINTMENT",
-    "PRAYER CLEANSES THE SOUL, BUT PAIN CLEANSES THE BODY",
-    "THE WISE LEARN FROM THE DEATHS OF OTHERS",
-    "TOLERANCE IS A SIGN OF WEAKNESS",
-    "VICTORY NEEDS NO EXPLANATION, DEFEAT ALLOWS NONE",
-    "TRUTH IS SUBJECTIVE",
-    "DEATH IS THE SERVANT OF THE RIGHTEOUS",
-    "A SMALL MIND IS EASILY FILLED WITH FAITH",
-    "KNOWLEDGE IS POWER, GUARD IT WELL",
-    "THE REWARD FOR DUTY IS MORE DUTY",
-    "TO ADMIT DEFEAT IS TO BLASPHEME AGAINST THE EMPEROR",
-    "THE BLOOD OF MARTYRS IS THE SEED OF THE IMPERIUM",
-    "INNOCENCE PROVES NOTHING"
+    { quote: "BLESSED IS THE MIND TOO SMALL FOR DOUBT", attr: "Imperial Dictum" },
+    { quote: "THE EMPEROR PROTECTS", attr: "Ministorum Catechism" },
+    { quote: "FAITH IS THE STRONGEST SHIELD", attr: "Imperial Creed" },
+    { quote: "DOUBT IS THE GATEWAY TO HERESY", attr: "Cardinal Astral" },
+    { quote: "AN OPEN MIND IS LIKE A FORTRESS WITH ITS GATES UNBARRED", attr: "Imperial Proverb" },
+    { quote: "HERESY GROWS FROM IDLENESS", attr: "Chaplain's Maxim" },
+    { quote: "SUCCESS IS MEASURED IN BLOOD; YOURS OR YOUR ENEMY'S", attr: "Warmaster Horus (before the Fall)" },
+    { quote: "HOPE IS THE FIRST STEP ON THE ROAD TO DISAPPOINTMENT", attr: "Imperial Thought" },
+    { quote: "PRAYER CLEANSES THE SOUL, BUT PAIN CLEANSES THE BODY", attr: "Confessor's Scripture" },
+    { quote: "THE WISE LEARN FROM THE DEATHS OF OTHERS", attr: "Tacticae Imperialis" },
+    { quote: "TOLERANCE IS A SIGN OF WEAKNESS", attr: "Roboute Guilliman" },
+    { quote: "VICTORY NEEDS NO EXPLANATION, DEFEAT ALLOWS NONE", attr: "Primarch Aphorism" },
+    { quote: "TRUTH IS SUBJECTIVE", attr: "Inquisitorial Doctrine" },
+    { quote: "DEATH IS THE SERVANT OF THE RIGHTEOUS", attr: "Ecclesiarchal Canon" },
+    { quote: "A SMALL MIND IS EASILY FILLED WITH FAITH", attr: "Imperial Ministorum" },
+    { quote: "KNOWLEDGE IS POWER, GUARD IT WELL", attr: "Librarius Maxim" },
+    { quote: "THE REWARD FOR DUTY IS MORE DUTY", attr: "Imperial Fists Doctrine" },
+    { quote: "TO ADMIT DEFEAT IS TO BLASPHEME AGAINST THE EMPEROR", attr: "Commissariat Edict" },
+    { quote: "THE BLOOD OF MARTYRS IS THE SEED OF THE IMPERIUM", attr: "Lectitio Divinitatus" },
+    { quote: "INNOCENCE PROVES NOTHING", attr: "Inquisitor's Maxim" },
+    { quote: "THERE IS ONLY WAR", attr: "Imperial Truth" },
+    { quote: "IN THE GRIM DARKNESS, THERE IS ONLY DUTY", attr: "Astartes Codex" },
+    { quote: "THE EMPEROR'S WILL IS ABSOLUTE", attr: "High Lords of Terra" },
+    { quote: "DEATH BEFORE DISHONOR", attr: "Captain Garviel Loken" }
 ];
 
 const traitorQuotes = [
-    "LET THE GALAXY BURN",
-    "DEATH TO THE FALSE EMPEROR",
-    "THE GODS DEMAND SACRIFICE",
-    "CHAOS IS THE ONLY CONSTANT",
-    "ABANDON YOUR FEAR, EMBRACE YOUR HATE",
-    "THE IMPERIUM IS A LIE BUILT ON CORPSES",
-    "FREEDOM LIES IN THE WARP",
-    "POWER IS THE ONLY TRUTH",
-    "THE WEAK DESERVE THEIR FATE",
-    "THE EMPEROR'S VISION WAS ALWAYS DOOMED",
-    "STRENGTH THROUGH CORRUPTION",
-    "THE STRONG SHALL INHERIT THE STARS",
-    "SURRENDER YOUR FLESH TO THE EMBRACE OF CHAOS",
-    "BLOOD FOR THE BLOOD GOD",
-    "THE GALAXY BELONGS TO THE BOLD",
-    "HORUS WAS RIGHT",
-    "THERE ARE NO GODS BUT THE FOUR",
-    "THE LIES OF TERRA WILL CRUMBLE",
-    "FROM THE ASHES OF COMPLIANCE COMES TRUE FREEDOM",
-    "THE WARMASTER SEES THE TRUTH"
+    { quote: "LET THE GALAXY BURN", attr: "Horus Lupercal" },
+    { quote: "DEATH TO THE FALSE EMPEROR", attr: "Traitor Battle Cry" },
+    { quote: "THE GODS DEMAND SACRIFICE", attr: "Erebus, First Chaplain" },
+    { quote: "CHAOS IS THE ONLY CONSTANT", attr: "Word Bearers Doctrine" },
+    { quote: "ABANDON YOUR FEAR, EMBRACE YOUR HATE", attr: "Chaos Champion's Oath" },
+    { quote: "THE IMPERIUM IS A LIE BUILT ON CORPSES", attr: "Lorgar Aurelian" },
+    { quote: "FREEDOM LIES IN THE WARP", attr: "Daemon Whisper" },
+    { quote: "POWER IS THE ONLY TRUTH", attr: "Perturabo" },
+    { quote: "THE WEAK DESERVE THEIR FATE", attr: "Night Lords Proverb" },
+    { quote: "THE EMPEROR'S VISION WAS ALWAYS DOOMED", attr: "Magnus the Red" },
+    { quote: "STRENGTH THROUGH CORRUPTION", attr: "Dark Apostle's Teaching" },
+    { quote: "THE STRONG SHALL INHERIT THE STARS", attr: "Chaos Reaver Creed" },
+    { quote: "BLOOD FOR THE BLOOD GOD", attr: "Khârn the Betrayer" },
+    { quote: "THE GALAXY BELONGS TO THE BOLD", attr: "Warmaster's Decree" },
+    { quote: "HORUS WAS RIGHT", attr: "Sons of Horus Mantra" },
+    { quote: "THERE ARE NO GODS BUT THE FOUR", attr: "Kor Phaeron" },
+    { quote: "THE LIES OF TERRA WILL CRUMBLE", attr: "Heretic Prophecy" },
+    { quote: "FROM THE ASHES OF COMPLIANCE COMES TRUE FREEDOM", attr: "Alpha Legion Operative" },
+    { quote: "THE WARMASTER SEES THE TRUTH", attr: "Ezekyle Abaddon" },
+    { quote: "PERFECTION THROUGH EXCESS", attr: "Fulgrim" },
+    { quote: "ALL FLESH IS DECAY", attr: "Mortarion" },
+    { quote: "EMBRACE THE CHANGE", attr: "Thousand Sons Litany" },
+    { quote: "ONLY THE STRONG SURVIVE", attr: "Angron" },
+    { quote: "THE NAILS SING THE TRUTH", attr: "World Eaters War-Cant" }
 ];
 
-// Get random quote
+// Get random quote with attribution
 function getRandomQuote(isTraitor) {
     const quotes = isTraitor ? traitorQuotes : loyalistQuotes;
-    return quotes[Math.floor(Math.random() * quotes.length)];
+    const selected = quotes[Math.floor(Math.random() * quotes.length)];
+    return selected;
 }
 
 // Allegiance Theme Switcher
@@ -2899,7 +2908,7 @@ function initializeAllegiance() {
     } else {
         // Set random loyalist quote on initial load
         const randomQuote = getRandomQuote(false);
-        subtitle.textContent = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote}"`;
+        subtitle.innerHTML = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
     }
 
     // Toggle allegiance on click
@@ -2919,7 +2928,7 @@ function initializeAllegiance() {
         allegianceToggle.querySelector('.allegiance-icon').textContent = '☠';
         classification.textContent = 'CLASSIFICATION: HERETICUS EXTREMIS';
         const randomQuote = getRandomQuote(true);
-        subtitle.textContent = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote}"`;
+        subtitle.innerHTML = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
         headerSymbol.src = 'images/chaos-star.svg';
         headerSymbol.alt = 'Chaos Star';
     }
@@ -2931,7 +2940,7 @@ function initializeAllegiance() {
         allegianceToggle.querySelector('.allegiance-icon').textContent = '⚔';
         classification.textContent = 'CLASSIFICATION: VERMILLION';
         const randomQuote = getRandomQuote(false);
-        subtitle.textContent = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote}"`;
+        subtitle.innerHTML = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
         headerSymbol.src = 'images/imperial-aquila.png';
         headerSymbol.alt = 'Imperial Aquila';
     }
