@@ -1,6 +1,6 @@
 # Horus Heresy Dataslate
 
-A grimdark Warhammer 40K themed interactive webpage showcasing the first three books of the Horus Heresy series.
+A grimdark Warhammer 40K themed interactive webpage showcasing all 54 books of the Horus Heresy series in chronological order, with full cover artwork and detailed information.
 
 ## Features
 
@@ -25,6 +25,7 @@ A grimdark Warhammer 40K themed interactive webpage showcasing the first three b
 
 ## Installation & Usage
 
+### Desktop Viewing
 1. Navigate to the project directory:
    ```bash
    cd /Users/jamestriggs/dev/horus-heresy-dataslate
@@ -40,7 +41,24 @@ A grimdark Warhammer 40K themed interactive webpage showcasing the first three b
    http://localhost:8000
    ```
 
-4. Hover over each book to reveal its secrets
+4. Click on any book to reveal its secrets
+
+### Mobile Viewing
+
+**⚠️ IMPORTANT:** The standalone `horus-heresy-complete.html` file may not work on mobile devices due to its size (14.5MB with embedded images).
+
+**For Mobile Devices:**
+1. Extract the `horus-heresy-dashboard.zip` file
+2. Share/AirDrop the ENTIRE extracted folder
+3. Open `index.html` on the mobile device
+
+**Best Option - Host Online (Recommended):**
+Upload the extracted folder to a free hosting service:
+- [Netlify](https://netlify.com) - Drag & drop the folder
+- [GitHub Pages](https://pages.github.com) - Free hosting via Git
+- [Vercel](https://vercel.com) - One-click deployment
+
+Then share the URL - works perfectly on all devices!
 
 ## Project Structure
 
