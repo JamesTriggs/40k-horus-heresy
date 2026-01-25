@@ -16,6 +16,138 @@
     --warning-amber: #ff8c00;
 }
 
+/* Chaos/Traitor Theme Colors */
+body.traitor-theme {
+    --imperial-gold: #cc0000;
+    --blood-red: #660000;
+    --steel-grey: #1a1a1a;
+    --dark-metal: #0d0d0d;
+    --parchment: #d4c4a8;
+    --heresy-green: #2d5016;
+    --warning-amber: #ff0000;
+    --chaos-red: #8b0000;
+    --warp-purple: #6b2d5c;
+    --corruption-green: #3d5c2d;
+    --daemon-black: #0a0a0a;
+}
+
+body.traitor-theme {
+    background: linear-gradient(135deg, #0d0000 0%, #1a0a0a 50%, #0a0000 100%);
+}
+
+body.traitor-theme .dataslate-container {
+    border-color: var(--chaos-red);
+    box-shadow:
+        0 0 30px rgba(139, 0, 0, 0.5),
+        inset 0 0 50px rgba(0, 0, 0, 0.9),
+        0 10px 50px rgba(139, 0, 0, 0.7);
+}
+
+body.traitor-theme .dataslate-header {
+    border-bottom-color: var(--chaos-red);
+}
+
+body.traitor-theme .main-title,
+body.traitor-theme .book-title,
+body.traitor-theme .filter-label {
+    color: var(--chaos-red);
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.9);
+}
+
+body.traitor-theme .classification {
+    color: #ff0000;
+}
+
+body.traitor-theme .book-card {
+    border-color: var(--chaos-red);
+}
+
+body.traitor-theme .book-card:hover {
+    border-color: var(--warp-purple);
+    box-shadow:
+        0 10px 40px rgba(107, 45, 92, 0.5),
+        0 0 30px rgba(139, 0, 0, 0.3);
+}
+
+body.traitor-theme .modal-content {
+    border-color: var(--chaos-red);
+    box-shadow: 0 0 50px rgba(139, 0, 0, 0.8);
+}
+
+body.traitor-theme .modal-header {
+    background: linear-gradient(90deg, #660000 0%, #330000 100%);
+}
+
+body.traitor-theme .chronological-badge {
+    background: rgba(107, 45, 92, 0.9);
+    border-color: var(--chaos-red);
+}
+
+body.traitor-theme .imperial-aquila {
+    filter: drop-shadow(0 0 15px rgba(139, 0, 0, 0.8)) brightness(1) contrast(1.2) hue-rotate(340deg);
+}
+
+body.traitor-theme .dataslate-footer {
+    border-top-color: var(--chaos-red);
+}
+
+body.traitor-theme .timestamp {
+    color: var(--chaos-red);
+}
+
+body.traitor-theme .legion-filter,
+body.traitor-theme .sort-select,
+body.traitor-theme .search-input {
+    border-color: var(--chaos-red);
+}
+
+body.traitor-theme .legion-filter:hover,
+body.traitor-theme .sort-select:hover,
+body.traitor-theme .search-input:focus {
+    border-color: var(--warp-purple);
+    box-shadow: 0 0 10px rgba(107, 45, 92, 0.6);
+}
+
+body.traitor-theme .clear-filter-btn,
+body.traitor-theme .clear-search-btn {
+    background: linear-gradient(135deg, #660000 0%, #330000 100%);
+    border-color: var(--chaos-red);
+}
+
+body.traitor-theme .progress-counter {
+    border-color: var(--chaos-red);
+    background: rgba(139, 0, 0, 0.3);
+}
+
+body.traitor-theme .filter-section {
+    border-top-color: var(--chaos-red);
+    border-bottom-color: var(--chaos-red);
+    background: rgba(10, 0, 0, 0.4);
+}
+
+body.traitor-theme .character-link {
+    color: #ff4444;
+}
+
+body.traitor-theme .character-link:hover {
+    color: var(--warp-purple);
+}
+
+body.traitor-theme .character-modal-content {
+    border-color: var(--chaos-red);
+}
+
+body.traitor-theme .close-modal,
+body.traitor-theme .close-character-modal {
+    border-color: var(--chaos-red);
+    color: var(--chaos-red);
+}
+
+body.traitor-theme .close-modal:hover,
+body.traitor-theme .close-character-modal:hover {
+    background: var(--chaos-red);
+}
+
 body {
     font-family: 'Share Tech Mono', monospace;
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%);
@@ -110,6 +242,54 @@ body::before {
     background-repeat: no-repeat;
     padding: 3rem 2rem 2rem 2rem;
     border-radius: 4px;
+}
+
+.allegiance-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--imperial-gold) 0%, #8b7428 100%);
+    border: 3px solid var(--imperial-gold);
+    color: var(--dark-metal);
+    padding: 0.75rem 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 0.15rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    text-shadow: none;
+}
+
+.allegiance-toggle:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.allegiance-icon {
+    font-size: 1.2rem;
+    transition: transform 0.4s ease;
+}
+
+.allegiance-toggle:hover .allegiance-icon {
+    transform: rotate(180deg);
+}
+
+body.traitor-theme .allegiance-toggle {
+    background: linear-gradient(135deg, #8b0000 0%, #330000 100%);
+    border-color: #ff0000;
+    color: var(--parchment);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.8);
+}
+
+body.traitor-theme .allegiance-toggle:hover {
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.8);
 }
 
 .dataslate-header::before {
@@ -989,10 +1169,23 @@ body::before {
         width: 100%;
     }
 
+    .allegiance-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.08rem;
+    }
+
+    .allegiance-icon {
+        font-size: 1rem;
+    }
+
     .main-title {
         font-size: 1.5rem;
         letter-spacing: 0.15rem;
         margin-bottom: 0.5rem;
+        padding-top: 2.5rem;
     }
 
     .subtitle {
@@ -1187,6 +1380,20 @@ body::before {
 
 /* Extra small devices (phones in portrait) */
 @media (max-width: 480px) {
+    .allegiance-toggle {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.6rem;
+        gap: 0.25rem;
+    }
+
+    .allegiance-text {
+        display: none;
+    }
+
+    .allegiance-icon {
+        font-size: 1.5rem;
+    }
+
     .main-title {
         font-size: 1.2rem;
         letter-spacing: 0.1rem;

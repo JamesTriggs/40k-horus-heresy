@@ -2194,8 +2194,56 @@ function setupFilterListeners() {
     });
 }
 
+// Allegiance Theme Switcher
+function initializeAllegiance() {
+    const allegianceToggle = document.getElementById('allegianceToggle');
+    const allegianceText = document.getElementById('allegianceText');
+    const classification = document.getElementById('classification');
+    const subtitle = document.getElementById('subtitle');
+    const headerSymbol = document.getElementById('headerSymbol');
+
+    // Load saved allegiance
+    const savedAllegiance = localStorage.getItem('allegiance') || 'loyalist';
+    if (savedAllegiance === 'traitor') {
+        switchToTraitor();
+    }
+
+    // Toggle allegiance on click
+    allegianceToggle.addEventListener('click', () => {
+        const currentAllegiance = localStorage.getItem('allegiance') || 'loyalist';
+        if (currentAllegiance === 'loyalist') {
+            switchToTraitor();
+        } else {
+            switchToLoyalist();
+        }
+    });
+
+    function switchToTraitor() {
+        document.body.classList.add('traitor-theme');
+        localStorage.setItem('allegiance', 'traitor');
+        allegianceText.textContent = 'DEATH TO THE FALSE EMPEROR';
+        allegianceToggle.querySelector('.allegiance-icon').textContent = '☠';
+        classification.textContent = 'CLASSIFICATION: HERETICUS EXTREMIS';
+        subtitle.textContent = 'THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "LET THE GALAXY BURN"';
+        headerSymbol.src = 'images/chaos-star.svg';
+        headerSymbol.alt = 'Chaos Star';
+    }
+
+    function switchToLoyalist() {
+        document.body.classList.remove('traitor-theme');
+        localStorage.setItem('allegiance', 'loyalist');
+        allegianceText.textContent = 'FOR THE EMPEROR';
+        allegianceToggle.querySelector('.allegiance-icon').textContent = '⚔';
+        classification.textContent = 'CLASSIFICATION: VERMILLION';
+        subtitle.textContent = 'THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "BLESSED IS THE MIND TOO SMALL FOR DOUBT"';
+        headerSymbol.src = 'images/imperial-aquila.png';
+        headerSymbol.alt = 'Imperial Aquila';
+    }
+}
+
 // Add glitch effect to title on load
 window.addEventListener('load', () => {
+    initializeAllegiance(); // Initialize theme switcher
     populateLegionFilter(); // Populate filter dropdown
     setupFilterListeners(); // Set up filter events
     generateBookCards(); // Generate all book cards
