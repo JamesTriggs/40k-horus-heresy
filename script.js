@@ -229,27 +229,46 @@ const characterData = {
     }
 };
 
-// Reading Progress Tracker
+// Reading Progress Tracker with three states: null, 'reading', 'finished'
 const readingProgress = {
     load: function() {
         const saved = localStorage.getItem('horusHeresyProgress');
-        return saved ? JSON.parse(saved) : {};
+        if (saved) {
+            const data = JSON.parse(saved);
+            // Migrate old boolean format to new status format
+            Object.keys(data).forEach(key => {
+                if (typeof data[key] === 'boolean') {
+                    data[key] = data[key] ? 'finished' : null;
+                }
+            });
+            return data;
+        }
+        return {};
     },
     save: function(progress) {
         localStorage.setItem('horusHeresyProgress', JSON.stringify(progress));
     },
-    toggleRead: function(bookKey) {
+    setStatus: function(bookKey, status) {
         const progress = this.load();
-        progress[bookKey] = !progress[bookKey];
+        progress[bookKey] = status || null;
         this.save(progress);
         return progress[bookKey];
     },
-    isRead: function(bookKey) {
+    getStatus: function(bookKey) {
         const progress = this.load();
-        return !!progress[bookKey];
+        return progress[bookKey] || null;
     },
-    getCount: function() {
+    cycleStatus: function(bookKey) {
+        const current = this.getStatus(bookKey);
+        const cycle = {null: 'reading', 'reading': 'finished', 'finished': null};
+        const newStatus = cycle[current];
+        return this.setStatus(bookKey, newStatus);
+    },
+    getCount: function(status) {
         const progress = this.load();
+        if (status) {
+            return Object.values(progress).filter(v => v === status).length;
+        }
         return Object.values(progress).filter(v => v).length;
     },
     getTotalBooks: function() {
@@ -1535,6 +1554,33 @@ const bookData = {
     }
 };
 
+// Sort books based on sort order
+function getSortedBookKeys(sortOrder) {
+    const keys = Object.keys(bookData);
+
+    switch (sortOrder) {
+        case 'publication':
+            // Extract roman numerals and sort
+            return keys.sort((a, b) => {
+                const numA = bookData[a].number;
+                const numB = bookData[b].number;
+                // Handle special series prefixes
+                if (numA.startsWith('P') && !numB.startsWith('P')) return 1;
+                if (!numA.startsWith('P') && numB.startsWith('P')) return -1;
+                if (numA.startsWith('SoT') && !numB.startsWith('SoT')) return 1;
+                if (!numA.startsWith('SoT') && numB.startsWith('SoT')) return -1;
+                return numA.localeCompare(numB, undefined, {numeric: true});
+            });
+        case 'title':
+            return keys.sort((a, b) => bookData[a].title.localeCompare(bookData[b].title));
+        case 'author':
+            return keys.sort((a, b) => bookData[a].author.localeCompare(bookData[b].author));
+        case 'chronological':
+        default:
+            return keys; // Already in chronological order
+    }
+}
+
 // Generate book cards dynamically
 function generateBookCards(filterLegion = '', searchQuery = '') {
     const bookDisplay = document.querySelector('.book-display');
@@ -1544,11 +1590,14 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
     const query = searchQuery.toLowerCase().trim();
     const includePrimarchs = document.getElementById('includePrimarchs')?.checked ?? true;
     const includeSiegeOfTerra = document.getElementById('includeSiegeOfTerra')?.checked ?? true;
+    const sortOrder = document.getElementById('sortOrder')?.value || 'chronological';
 
-    Object.keys(bookData).forEach((bookKey, index) => {
+    const sortedKeys = getSortedBookKeys(sortOrder);
+
+    sortedKeys.forEach((bookKey, index) => {
         const book = bookData[bookKey];
         const chronologicalNumber = index + 1;
-        const isRead = readingProgress.isRead(bookKey);
+        const status = readingProgress.getStatus(bookKey);
 
         // Filter out Primarchs series if checkbox unchecked
         if (!includePrimarchs && book.series === 'primarchs') {
@@ -1580,14 +1629,22 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
         displayedCount++;
 
         const bookCard = document.createElement('div');
-        bookCard.className = 'book-card' + (isRead ? ' book-read' : '');
+        const statusClass = status ? ` book-${status}` : '';
+        bookCard.className = 'book-card' + statusClass;
         bookCard.setAttribute('data-book', bookKey);
+
+        let statusBadge = '';
+        if (status === 'reading') {
+            statusBadge = '<div class="status-badge status-reading">📖 READING</div>';
+        } else if (status === 'finished') {
+            statusBadge = '<div class="status-badge status-finished">✓ FINISHED</div>';
+        }
 
         bookCard.innerHTML = `
             <div class="book-cover" style="background-image: url('${book.coverImage}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                 <div class="book-number-overlay">${book.number}</div>
                 <div class="chronological-badge">Chrono: ${chronologicalNumber}</div>
-                ${isRead ? '<div class="read-badge">✓ READ</div>' : ''}
+                ${statusBadge}
             </div>
             <div class="book-title">${book.title}</div>
             <div class="book-author">${book.author}</div>
@@ -1640,30 +1697,33 @@ function updateProgressCounter() {
         const totalMain = mainSeriesBooks.length;
         const totalPrimarchs = primarchsBooks.length;
         const totalSiege = siegeBooks.length;
-        const readMain = mainSeriesBooks.filter(key => progress[key]).length;
-        const readPrimarchs = primarchsBooks.filter(key => progress[key]).length;
-        const readSiege = siegeBooks.filter(key => progress[key]).length;
 
-        // Build progress text based on what's included
-        const series = [];
-        let totalRead = readMain;
+        // Count by status
+        const finishedMain = mainSeriesBooks.filter(key => progress[key] === 'finished').length;
+        const readingMain = mainSeriesBooks.filter(key => progress[key] === 'reading').length;
+        const finishedPrimarchs = primarchsBooks.filter(key => progress[key] === 'finished').length;
+        const readingPrimarchs = primarchsBooks.filter(key => progress[key] === 'reading').length;
+        const finishedSiege = siegeBooks.filter(key => progress[key] === 'finished').length;
+        const readingSiege = siegeBooks.filter(key => progress[key] === 'reading').length;
+
+        // Build progress text
         let totalBooks = totalMain;
-
-        series.push(`Main: ${readMain}/${totalMain}`);
+        let totalFinished = finishedMain;
+        let totalReading = readingMain;
 
         if (includePrimarchs && totalPrimarchs > 0) {
-            series.push(`Primarchs: ${readPrimarchs}/${totalPrimarchs}`);
-            totalRead += readPrimarchs;
             totalBooks += totalPrimarchs;
+            totalFinished += finishedPrimarchs;
+            totalReading += readingPrimarchs;
         }
 
         if (includeSiegeOfTerra && totalSiege > 0) {
-            series.push(`Siege: ${readSiege}/${totalSiege}`);
-            totalRead += readSiege;
             totalBooks += totalSiege;
+            totalFinished += finishedSiege;
+            totalReading += readingSiege;
         }
 
-        counter.textContent = `READING PROGRESS: ${totalRead}/${totalBooks} BOOKS (${series.join(' | ')})`;
+        counter.textContent = `PROGRESS: ${totalFinished}/${totalBooks} FINISHED | ${totalReading} READING`;
     }
 }
 
@@ -1719,18 +1779,31 @@ function showModal(bookKey) {
         return;
     }
 
-    const isRead = readingProgress.isRead(bookKey);
+    const status = readingProgress.getStatus(bookKey);
 
     // Populate modal content with clickable character names
     modalTitle.textContent = book.title;
     const clickableDetails = makeCharactersClickable(book.details);
     const clickableBlurb = makeCharactersClickable(book.blurb);
 
+    // Determine button text and class based on status
+    let buttonText, buttonClass;
+    if (!status) {
+        buttonText = 'MARK AS READING';
+        buttonClass = '';
+    } else if (status === 'reading') {
+        buttonText = '📖 MARK AS FINISHED';
+        buttonClass = 'status-reading';
+    } else if (status === 'finished') {
+        buttonText = '✓ CLEAR STATUS';
+        buttonClass = 'status-finished';
+    }
+
     keyDetails.innerHTML = `
         <div class="modal-book-cover">
             <img src="${book.coverImage}" alt="${book.title} Cover" />
-            <button class="mark-read-btn ${isRead ? 'read' : ''}" id="markReadBtn" data-book="${bookKey}">
-                ${isRead ? '✓ MARK UNREAD' : 'MARK AS READ'}
+            <button class="mark-read-btn ${buttonClass}" id="markReadBtn" data-book="${bookKey}">
+                ${buttonText}
             </button>
         </div>
         <div class="book-details-text">
@@ -1739,13 +1812,27 @@ function showModal(bookKey) {
     `;
     blurb.innerHTML = `<p>${clickableBlurb}</p>`;
 
-    // Add event listener for mark as read button
+    // Add event listener for status cycle button
     const markReadBtn = document.getElementById('markReadBtn');
     markReadBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const nowRead = readingProgress.toggleRead(bookKey);
-        markReadBtn.textContent = nowRead ? '✓ MARK UNREAD' : 'MARK AS READ';
-        markReadBtn.classList.toggle('read', nowRead);
+        const newStatus = readingProgress.cycleStatus(bookKey);
+
+        // Update button text and class
+        let newText, newClass;
+        if (!newStatus) {
+            newText = 'MARK AS READING';
+            newClass = '';
+        } else if (newStatus === 'reading') {
+            newText = '📖 MARK AS FINISHED';
+            newClass = 'status-reading';
+        } else if (newStatus === 'finished') {
+            newText = '✓ CLEAR STATUS';
+            newClass = 'status-finished';
+        }
+
+        markReadBtn.textContent = newText;
+        markReadBtn.className = 'mark-read-btn ' + newClass;
 
         // Regenerate cards to update visual state, maintaining current filters
         const currentLegionFilter = document.getElementById('legionFilter').value;
@@ -1927,6 +2014,7 @@ function setupFilterListeners() {
     const clearAllBtn = document.getElementById('clearAllFilters');
     const primarchsCheckbox = document.getElementById('includePrimarchs');
     const siegeCheckbox = document.getElementById('includeSiegeOfTerra');
+    const sortSelect = document.getElementById('sortOrder');
 
     // Apply current filters
     const applyFilters = () => {
@@ -1937,6 +2025,9 @@ function setupFilterListeners() {
 
     // Legion filter change
     filterSelect.addEventListener('change', applyFilters);
+
+    // Sort order change
+    sortSelect.addEventListener('change', applyFilters);
 
     // Primarchs series toggle
     primarchsCheckbox.addEventListener('change', applyFilters);

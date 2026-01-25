@@ -290,7 +290,8 @@ body::before {
     font-weight: bold;
 }
 
-.legion-filter {
+.legion-filter,
+.sort-select {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     color: var(--parchment);
     border: 2px solid var(--imperial-gold);
@@ -305,12 +306,14 @@ body::before {
     transition: all 0.3s ease;
 }
 
-.legion-filter:hover {
+.legion-filter:hover,
+.sort-select:hover {
     border-color: var(--blood-red);
     box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);
 }
 
-.legion-filter:focus {
+.legion-filter:focus,
+.sort-select:focus {
     outline: none;
     border-color: var(--blood-red);
     box-shadow: 0 0 10px rgba(139, 0, 0, 0.6);
@@ -465,28 +468,42 @@ body::before {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.read-badge {
+.status-badge {
     position: absolute;
     top: 8px;
     left: 8px;
-    background: rgba(34, 139, 34, 0.95);
-    color: white;
     padding: 4px 8px;
     font-size: 0.65rem;
     font-weight: bold;
-    border: 1px solid #90EE90;
     border-radius: 2px;
     letter-spacing: 0.05rem;
     z-index: 3;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.book-card.book-read {
+.status-badge.status-reading {
+    background: rgba(0, 123, 255, 0.95);
+    color: white;
+    border: 1px solid #66b3ff;
+}
+
+.status-badge.status-finished {
+    background: rgba(34, 139, 34, 0.95);
+    color: white;
+    border: 1px solid #90EE90;
+}
+
+.book-card.book-reading {
+    border-color: #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+}
+
+.book-card.book-finished {
     opacity: 0.4;
     filter: grayscale(60%);
 }
 
-.book-card.book-read:hover {
+.book-card.book-finished:hover {
     opacity: 0.8;
     filter: grayscale(30%);
 }
@@ -686,13 +703,23 @@ body::before {
     box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
 }
 
-.mark-read-btn.read {
+.mark-read-btn.status-reading {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    border-color: #66b3ff;
+    color: white;
+}
+
+.mark-read-btn.status-reading:hover {
+    background: linear-gradient(135deg, #0096ff 0%, #007bff 100%);
+}
+
+.mark-read-btn.status-finished {
     background: linear-gradient(135deg, #228B22 0%, #1a6b1a 100%);
     border-color: #90EE90;
     color: white;
 }
 
-.mark-read-btn.read:hover {
+.mark-read-btn.status-finished:hover {
     background: linear-gradient(135deg, #2eb82e 0%, #228B22 100%);
 }
 
@@ -998,7 +1025,7 @@ body::before {
         right: 6px;
     }
 
-    .read-badge {
+    .status-badge {
         font-size: 0.55rem;
         padding: 3px 6px;
         top: 6px;
@@ -1070,6 +1097,7 @@ body::before {
 
     .search-container,
     .legion-container,
+    .sort-container,
     .series-toggle-container {
         flex-direction: column;
         width: 100%;
@@ -1099,7 +1127,8 @@ body::before {
         padding: 0.6rem;
     }
 
-    .legion-filter {
+    .legion-filter,
+    .sort-select {
         min-width: 100%;
         font-size: 0.75rem;
         padding: 0.6rem;
@@ -1193,7 +1222,8 @@ body::before {
         min-width: 100%;
     }
 
-    .legion-filter {
+    .legion-filter,
+    .sort-select {
         font-size: 0.7rem;
     }
 
