@@ -3,15 +3,230 @@
 
 // Character Encyclopedia Data
 const characterData = {
-    "horus-lupercal": { name: "Horus Lupercal", image: "images/character-horus-lupercal.jpg", legion: "Luna Wolves / Sons of Horus", role: "Warmaster of the Great Crusade, Primarch", bio: "One of the twenty Primarchs created by the Emperor, Horus was the first to be rediscovered and became the favored son. Initially the loyal commander of the Luna Wolves Legion during the Great Crusade, he rose to Warmaster—second only to the Emperor in power. However, corrupted by Chaos through manipulation, he initiated the devastating Horus Heresy against the Imperium." },
-    "roboute-guilliman": { name: "Roboute Guilliman", image: "images/character-roboute-guilliman.jpg", legion: "Ultramarines", role: "Primarch, Lord Commander", bio: "Roboute Guilliman is the Primarch of the Ultramarines and one of the Emperor's genetic sons. Renowned as both a brilliant military commander and skilled administrator, he authored the Codex Astartes. After being mortally wounded during the Horus Heresy, he was resurrected ten thousand years later to lead humanity's forces once more." },
-    "lion-el-jonson": { name: "Lion El'Jonson", image: "images/character-lion-el-jonson.jpg", legion: "Dark Angels", role: "Primarch", bio: "Lion El'Jonson is the Primarch of the Dark Angels Legion, renowned for strategic brilliance rivaling only Horus. After vanishing for ten thousand years following Caliban's destruction, he has recently returned to aid the Imperium in its darkest hour." },
-    "sanguinius": { name: "Sanguinius", image: "images/character-sanguinius.jpg", legion: "Blood Angels", role: "Primarch, The Great Angel", bio: "Sanguinius was the Primarch of the Blood Angels and one of the most revered figures in the Imperium. Known as 'The Great Angel,' he was celebrated for his nobility, martial prowess, and unwavering loyalty to the Emperor, ultimately sacrificing himself during the Horus Heresy to enable Horus's defeat." },
-    "garviel-loken": { name: "Garviel Loken", image: "images/character-garviel-loken.jpg", legion: "Luna Wolves / Sons of Horus", role: "Captain, Member of the Mournival", bio: "Garviel Loken was a Space Marine Captain of the Luna Wolves who became a member of the Mournival, the advisory council to Warmaster Horus. He witnessed firsthand the corruption of his legion and remained loyal to the Emperor throughout the Horus Heresy, eventually confronting his former primarch during the Siege of Terra." },
-    "nathaniel-garro": { name: "Nathaniel Garro", image: "images/character-nathaniel-garro.jpg", legion: "Death Guard", role: "Battle-Captain, Knights-Errant", bio: "A loyalist Space Marine Captain from the Death Guard Legion who remained faithful to the Emperor during the Horus Heresy. Garro commanded the frigate Eisenstein and successfully escaped the Isstvan system to warn Terra of the betrayal." },
-    "ezekyle-abaddon": { name: "Ezekyle Abaddon", image: "images/character-ezekyle-abaddon.jpg", legion: "Sons of Horus", role: "First Captain, Warmaster of Chaos", bio: "Ezekyle Abaddon is the Warmaster of Chaos and master of the Black Legion. Once the First Captain of the Sons of Horus during the Great Crusade, he became a central figure in the Horus Heresy before leading devastating Black Crusades against the Imperium." },
-    "erebus": { name: "Erebus", image: "images/character-erebus.jpg", legion: "Word Bearers", role: "First Chaplain", bio: "Erebus served as First Chaplain of the Word Bearers and orchestrated the corruption of both Lorgar and Horus to Chaos. The harbinger of the Horus Heresy, he remains a powerful sorcerer and skilled warrior who continues influencing events across the galaxy." },
-    "malcador-the-sigillite": { name: "Malcador the Sigillite", image: "images/character-malcador-the-sigillite.jpg", legion: "Imperium of Man", role: "First Lord of Terra", bio: "Malcador served as First Lord of Terra and the most powerful human psyker after the Emperor himself. A mysterious immortal figure, he was instrumental in founding the Administratum and orchestrated the creation of the Grey Knights during the Horus Heresy." }
+    'horus-lupercal': {
+        name: 'Horus Lupercal',
+        image: 'images/character-horus-lupercal.jpg',
+        legion: 'Luna Wolves / Sons of Horus',
+        role: 'Warmaster of the Great Crusade, Primarch',
+        bio: 'One of the twenty Primarchs created by the Emperor, Horus was the first to be rediscovered and became the favored son. Initially the loyal commander of the Luna Wolves Legion during the Great Crusade, he rose to Warmaster—second only to the Emperor in power. However, corrupted by Chaos through manipulation, he initiated the devastating Horus Heresy against the Imperium.'
+    },
+    'roboute-guilliman': {
+        name: 'Roboute Guilliman',
+        image: 'images/character-roboute-guilliman.jpg',
+        legion: 'Ultramarines',
+        role: 'Primarch, Lord Commander of the Imperium',
+        bio: 'Roboute Guilliman is the Primarch of the Ultramarines Space Marine Legion and one of the Emperor\'s genetic sons. Renowned as both a brilliant military commander and skilled administrator, he authored the Codex Astartes and served as Lord Commander of the Imperium. After being mortally wounded during the Horus Heresy, he was resurrected ten thousand years later to lead humanity\'s forces once more.'
+    },
+    'lion-el-jonson': {
+        name: 'Lion El\'Jonson',
+        image: 'images/character-lion-el-jonson.jpg',
+        legion: 'Dark Angels',
+        role: 'Primarch, Knight Protector of Imperium Nihilus',
+        bio: 'Lion El\'Jonson is the Primarch of the Dark Angels Legion, renowned for strategic brilliance rivaling only Horus. After vanishing for ten thousand years following Caliban\'s destruction, he has recently returned to aid the Imperium in its darkest hour.'
+    },
+    'sanguinius': {
+        name: 'Sanguinius',
+        image: 'images/character-sanguinius.jpg',
+        legion: 'Blood Angels',
+        role: 'Primarch, The Great Angel',
+        bio: 'Sanguinius was the Primarch of the Blood Angels Space Marine Legion and one of the most revered figures in the Imperium. Known as \'The Great Angel,\' he was celebrated for his nobility, martial prowess, and unwavering loyalty to the Emperor, ultimately sacrificing himself during the Horus Heresy to enable Horus\'s defeat.'
+    },
+    'leman-russ': {
+        name: 'Leman Russ',
+        image: 'images/character-leman-russ.jpg',
+        legion: 'Space Wolves',
+        role: 'Primarch, The Wolf King',
+        bio: 'Leman Russ is the Primarch of the Space Wolves Legion and one of the Emperor\'s most formidable warriors. Raised on the ice world Fenris among wolves before joining the Great Crusade, he served as the Emperor\'s executioner and enforcer. After the Horus Heresy, he mysteriously departed into the Eye of Terror, with his ultimate fate remaining unknown to the Imperium.'
+    },
+    'rogal-dorn': {
+        name: 'Rogal Dorn',
+        image: 'images/character-rogal-dorn.jpg',
+        legion: 'Imperial Fists',
+        role: 'Primarch, Praetorian of Terra',
+        bio: 'Rogal Dorn was the Primarch of the Imperial Fists Space Marine Legion and a principal architect of the Imperium\'s defense during the Horus Heresy. \'The Praetorian of Terra\' orchestrated the loyal forces\' resistance and ultimately orchestrated the defense of the Throneworld during the Siege of Terra. His fate after the Heresy remains ambiguous, though he is presumed dead.'
+    },
+    'ferrus-manus': {
+        name: 'Ferrus Manus',
+        image: 'images/character-ferrus-manus.jpg',
+        legion: 'Iron Hands',
+        role: 'Primarch, The Gorgon',
+        bio: 'Ferrus Manus was one of the twenty Primarchs created by the Emperor, leading the Iron Hands Space Marine Legion. During the Great Crusade, he earned the nickname \'the Gorgon\' and became known for his doctrine of ruthless pragmatism. He was ultimately killed by his former brother Fulgrim during the Horus Heresy at Isstvan V.'
+    },
+    'fulgrim': {
+        name: 'Fulgrim',
+        image: 'images/character-fulgrim.jpg',
+        legion: 'Emperor\'s Children',
+        role: 'Primarch, The Phoenician, Daemon Prince of Slaanesh',
+        bio: 'Fulgrim, the Primarch of the Emperor\'s Children, was consumed by his obsession with perfection and corruption by the daemon weapon Silver Blade of Laer. Once a visionary leader who sought to restore civilization and art to his homeworld of Chemos, he became a Daemon Prince of Slaanesh, representing the fall from imperial duty to chaotic indulgence.'
+    },
+    'perturabo': {
+        name: 'Perturabo',
+        image: 'images/character-perturabo.jpg',
+        legion: 'Iron Warriors',
+        role: 'Primarch, Daemon Prince of Chaos Undivided',
+        bio: 'Perturabo is the Primarch of the Iron Warriors who became embittered by marginalization within the Imperium. He sided with Horus during the Heresy and ascended to Daemonhood, establishing himself as a master of siege warfare and a wielder of forbidden technology.'
+    },
+    'angron': {
+        name: 'Angron',
+        image: 'images/character-angron.jpg',
+        legion: 'World Eaters',
+        role: 'Primarch, The Red Angel, Daemon Prince of Khorne',
+        bio: 'Angron is the Primarch of the World Eaters legion who was raised as a gladiator slave on Nuceria with neural implants called the Butcher\'s Nails. He fell to Chaos during the Horus Heresy and became a Daemon Prince devoted to Khorne, transforming into an avatar of uncontrolled rage and bloodlust.'
+    },
+    'mortarion': {
+        name: 'Mortarion',
+        image: 'images/character-mortarion.jpg',
+        legion: 'Death Guard',
+        role: 'Primarch, The Death Lord, Daemon Prince of Nurgle',
+        bio: 'Mortarion was one of the original twenty Primarchs who commanded the Death Guard Legion. He turned to Chaos during the Horus Heresy and became a Daemon Prince of Nurgle, ruling the Plague Planet as a toxic death world.'
+    },
+    'magnus-the-red': {
+        name: 'Magnus the Red',
+        image: 'images/character-magnus-the-red.jpg',
+        legion: 'Thousand Sons',
+        role: 'Primarch, Daemon Prince of Tzeentch',
+        bio: 'Magnus the Red is the Primarch of the Thousand Sons who became a daemon prince of Tzeentch. Once a powerful psyker serving the Imperium, he fell to Chaos after attempting to warn the Emperor about Horus\'s betrayal, inadvertently sabotaging the Emperor\'s secret Webway Project.'
+    },
+    'lorgar-aurelian': {
+        name: 'Lorgar Aurelian',
+        image: 'images/character-lorgar-aurelian.jpg',
+        legion: 'Word Bearers',
+        role: 'Primarch, The Urizen, Daemon Prince of Chaos Undivided',
+        bio: 'Lorgar Aurelian, the Primarch of the Word Bearers Legion, was fiercely religious and prone to fanaticism in his quest for existential meaning. He became the first primarch seduced by Chaos after the Emperor destroyed his perfect city of Monarchia, eventually orchestrating the Horus Heresy and ascending to daemonhood as a Daemon Prince.'
+    },
+    'konrad-curze': {
+        name: 'Konrad Curze',
+        image: 'images/character-konrad-curze.jpg',
+        legion: 'Night Lords',
+        role: 'Primarch, The Night Haunter',
+        bio: 'Konrad Curze, known as the Night Haunter, was one of twenty Primarchs created by the Emperor. Raised on the dark world of Nostramo and tormented by prophetic visions, he became one of the most brutal and unstable Primarchs before ultimately betraying the Emperor and joining Horus during the Horus Heresy.'
+    },
+    'corvus-corax': {
+        name: 'Corvus Corax',
+        image: 'images/character-corvus-corax.jpg',
+        legion: 'Raven Guard',
+        role: 'Primarch, The Ravenlord',
+        bio: 'Corvus Corax is the Primarch of the Raven Guard Space Marine Legion. Raised among enslaved workers on Lycaeus, he became a master of guerrilla warfare and liberation before being appointed by the Emperor. He remained loyal during the Horus Heresy despite catastrophic losses, eventually disappearing into the Eye of Terror.'
+    },
+    'jaghatai-khan': {
+        name: 'Jaghatai Khan',
+        image: 'images/character-jaghatai-khan.jpg',
+        legion: 'White Scars',
+        role: 'Primarch, The Great Khan',
+        bio: 'Jaghatai Khan was the Primarch of the White Scars Space Marine Legion, known for his fierce warrior nature and rapid, mobile tactics. Rising from humble origins on the steppe world of Chogoris, he united warring tribes before pledging himself to the Emperor during the Great Crusade. He remained steadfastly loyal throughout the Horus Heresy, ultimately defeating the traitor Primarch Mortarion during the Siege of Terra.'
+    },
+    'vulkan': {
+        name: 'Vulkan',
+        image: 'images/character-vulkan.jpg',
+        legion: 'Salamanders',
+        role: 'Primarch, The Lord of Drakes',
+        bio: 'One of twenty Primarchs created by the Emperor of Mankind, Vulkan led the Salamanders Legion and inherited the unique ability to regenerate from any injury, making him essentially immortal. Renowned for his craftsmanship and empathy toward humanity, he survived torture during the Horus Heresy and played a crucial role defending Terra before mysteriously departing.'
+    },
+    'alpharius-omegon': {
+        name: 'Alpharius Omegon',
+        image: 'images/character-alpharius-omegon.jpg',
+        legion: 'Alpha Legion',
+        role: 'Primarch, The Last Primarch',
+        bio: 'Alpharius Omegon were twin Primarchs of the Alpha Legion, known as \'The Last Primarch\' or \'Lord of the Serpents.\' They described themselves as one soul inhabiting two bodies and became famous for their mastery of deception, espionage, and unconventional warfare tactics during the Great Crusade and Horus Heresy.'
+    },
+    'garviel-loken': {
+        name: 'Garviel Loken',
+        image: 'images/character-garviel-loken.jpg',
+        legion: 'Luna Wolves / Sons of Horus',
+        role: 'Captain, Member of the Mournival',
+        bio: 'Garviel Loken was a Space Marine Captain of the Luna Wolves who became a member of the Mournival, the advisory council to Warmaster Horus. He witnessed firsthand the corruption of his legion and remained loyal to the Emperor throughout the Horus Heresy, eventually confronting his former primarch during the Siege of Terra.'
+    },
+    'nathaniel-garro': {
+        name: 'Nathaniel Garro',
+        image: 'images/character-nathaniel-garro.jpg',
+        legion: 'Death Guard',
+        role: 'Battle-Captain, Agentia Primus of the Knights-Errant',
+        bio: 'A loyalist Space Marine Captain from the Death Guard Legion who remained faithful to the Emperor during the Horus Heresy. Garro commanded the frigate Eisenstein and successfully escaped the Isstvan system to warn Terra of the betrayal. He later became the first true martyr of the Imperial Creed.'
+    },
+    'ezekyle-abaddon': {
+        name: 'Ezekyle Abaddon',
+        image: 'images/character-ezekyle-abaddon.jpg',
+        legion: 'Sons of Horus / Black Legion',
+        role: 'First Captain, Warmaster of Chaos',
+        bio: 'Ezekyle Abaddon is the Warmaster of Chaos and master of the Black Legion, serving as the successor to Horus Lupercal. Once the First Captain of the Sons of Horus during the Great Crusade, he became a central figure in the Horus Heresy before abandoning the legion to wander the Eye of Terror. He now leads devastating Black Crusades against the Imperium with the goal of expanding the Eye of Terror to consume Terra itself.'
+    },
+    'erebus': {
+        name: 'Erebus',
+        image: 'images/character-erebus.jpg',
+        legion: 'Word Bearers',
+        role: 'First Chaplain, The Hand of Destiny',
+        bio: 'Erebus served as First Chaplain of the Word Bearers and orchestrated the corruption of both Lorgar and Horus to Chaos. The harbinger of the Horus Heresy, instrumental in converting first Lorgar and then Horus to Chaos, he remains a powerful sorcerer and skilled warrior who continues influencing events across the galaxy.'
+    },
+    'kharn': {
+        name: 'Kharn',
+        image: 'images/character-kharn.jpg',
+        legion: 'World Eaters',
+        role: 'Captain, The Betrayer',
+        bio: 'Kharn, known as \'the Betrayer,\' is a Chaos Space Marine champion of Khorne and the greatest of all Khorne\'s champions. Once a loyal captain of the World Eaters Legion, he became a daemonic instrument of slaughter after the Horus Heresy, embodying the god\'s indiscriminate rage and bloodlust.'
+    },
+    'ahriman': {
+        name: 'Ahriman',
+        image: 'images/character-ahriman.jpg',
+        legion: 'Thousand Sons',
+        role: 'Chief Librarian, Sorcerer Lord',
+        bio: 'Ahzek Ahriman is the greatest sorcerer of the Thousand Sons and a master of chaos psychic powers. Once the Chief Librarian and First Captain of his legion, he is now a wanderer cursed to eternally seek understanding of Tzeentch, his patron chaos god.'
+    },
+    'tarik-torgaddon': {
+        name: 'Tarik Torgaddon',
+        image: 'images/character-tarik-torgaddon.jpg',
+        legion: 'Luna Wolves',
+        role: 'Captain, Member of the Mournival',
+        bio: 'Captain of the Luna Wolves 2nd Company and member of the Mournival council advising Primarch Horus. Known for his joking demeanor combined with exceptional martial skill, he remained loyal to the Emperor during the Horus Heresy and died fighting traitor forces at Isstvan III.'
+    },
+    'saul-tarvitz': {
+        name: 'Saul Tarvitz',
+        image: 'images/character-saul-tarvitz.jpg',
+        legion: 'Emperor\'s Children',
+        role: 'Captain of the 10th Company',
+        bio: 'Saul Tarvitz was a Space Marine Captain of the Emperor\'s Children during the Great Crusade who became a symbol of loyalty during the Horus Heresy. Despite serving a Legion that fell to Chaos, he remained devoted to the Imperium and orchestrated a successful defense at Isstvan III against overwhelming traitor forces before his death.'
+    },
+    'argel-tal': {
+        name: 'Argel Tal',
+        image: 'images/character-argel-tal.jpg',
+        legion: 'Word Bearers',
+        role: 'Captain, Crimson Lord of the Gal Vorbak',
+        bio: 'Argel Tal was a Colchisian-born Space Marine who rose to become Captain of the Word Bearers\' 7th Assault Company and later the Crimson Lord of the Gal Vorbak, an elite cadre of daemon-possessed warriors. Initially loyal to the Imperium, he became one of Lorgar\'s most favored sons before his tragic death during the Shadow Crusade, murdered by Erebus to prevent him from tempering Kharn\'s fall to Chaos.'
+    },
+    'kor-phaeron': {
+        name: 'Kor Phaeron',
+        image: 'images/character-kor-phaeron.jpg',
+        legion: 'Word Bearers',
+        role: 'First Captain, The Black Cardinal',
+        bio: 'Kor Phaeron was Lorgar\'s foster father and spiritual mentor on Colchis who became First Captain of the Word Bearers Legion. Along with Erebus, he was instrumental in corrupting the entire legion to Chaos, making him one of the first Astartes to fall to the dark powers during the Horus Heresy.'
+    },
+    'malcador-the-sigillite': {
+        name: 'Malcador the Sigillite',
+        image: 'images/character-malcador-the-sigillite.jpg',
+        legion: 'Imperium of Man',
+        role: 'First Lord of Terra, Grand Master of Assassins',
+        bio: 'Malcador served as First Lord of Terra and the most powerful human psyker after the Emperor himself. A mysterious immortal figure, he was instrumental in founding the Administratum and orchestrated the creation of the Grey Knights during the Horus Heresy.'
+    },
+    'lucius': {
+        name: 'Lucius the Eternal',
+        image: 'images/character-lucius.jpg',
+        legion: 'Emperor\'s Children',
+        role: 'Captain, Champion of Slaanesh',
+        bio: 'Lucius is a legendary Champion of Slaanesh and former Captain of the Emperor\'s Children during the Horus Heresy. After his first death in gladiatorial combat brought him transcendent pleasure, Slaanesh resurrected him with a curse: whenever his killer experiences satisfaction from victory, they transform into him, their essence absorbed into his armor.'
+    },
+    'typhus': {
+        name: 'Typhus',
+        image: 'images/character-typhus.jpg',
+        legion: 'Death Guard',
+        role: 'First Captain, Herald of Nurgle',
+        bio: 'Originally named Calas Typhon, a human-Overlord hybrid from Barbarus who became First Captain of the Death Guard Legion. During the Horus Heresy, he was merged with the daemon Ignatius Grulgor and transformed into Typhus, Herald of Nurgle, becoming a powerful Chaos Space Marine dedicated to spreading plague across the galaxy.'
+    },
+    'sigismund': {
+        name: 'Sigismund',
+        image: 'images/character-sigismund.jpg',
+        legion: 'Imperial Fists',
+        role: 'First Captain, Emperor\'s Champion',
+        bio: 'Sigismund served as First Captain of the Imperial Fists Legion during the Great Crusade and Horus Heresy. He became the Emperor\'s Champion defending Terra during the Siege and subsequently founded the Black Templars Chapter, serving as its first High Marshal for over 10,000 years.'
+    }
 };
 
 // Reading Progress Tracker
@@ -1489,17 +1704,59 @@ function closeModal() {
 function makeCharactersClickable(detailsHTML) {
     let processedHTML = detailsHTML;
 
+    // Name variations to catch different forms (surname only, first name, titles, etc.)
+    const nameVariations = {
+        'ahriman': ['Ahriman', 'Ahzek Ahriman'],
+        'kharn': ['Khârn', 'Kharn'],
+        'typhus': ['Typhus', 'Calas Typhon', 'Typhon'],
+        'lucius': ['Lucius', 'Lucius the Eternal'],
+        'alpharius-omegon': ['Alpharius', 'Omegon', 'Alpharius Omegon'],
+        'lion-el-jonson': ['Lion El\'Jonson'],
+        'jaghatai-khan': ['Jaghatai Khan'],
+        'leman-russ': ['Leman Russ'],
+        'roboute-guilliman': ['Roboute Guilliman', 'Guilliman'],
+        'konrad-curze': ['Konrad Curze'],
+        'corvus-corax': ['Corvus Corax', 'Corax'],
+        'magnus-the-red': ['Magnus the Red', 'Magnus'],
+        'horus-lupercal': ['Horus Lupercal', 'Horus'],
+        'rogal-dorn': ['Rogal Dorn'],
+        'lorgar-aurelian': ['Lorgar Aurelian', 'Lorgar'],
+        'garviel-loken': ['Garviel Loken', 'Loken'],
+        'nathaniel-garro': ['Nathaniel Garro', 'Garro'],
+        'ezekyle-abaddon': ['Ezekyle Abaddon', 'Abaddon'],
+        'erebus': ['Erebus'],
+        'malcador-the-sigillite': ['Malcador the Sigillite', 'Malcador'],
+        'tarik-torgaddon': ['Tarik Torgaddon', 'Torgaddon'],
+        'saul-tarvitz': ['Saul Tarvitz', 'Tarvitz'],
+        'argel-tal': ['Argel Tal'],
+        'kor-phaeron': ['Kor Phaeron'],
+        'sigismund': ['Sigismund'],
+        'sanguinius': ['Sanguinius'],
+        'vulkan': ['Vulkan'],
+        'angron': ['Angron'],
+        'fulgrim': ['Fulgrim'],
+        'ferrus-manus': ['Ferrus Manus'],
+        'perturabo': ['Perturabo'],
+        'mortarion': ['Mortarion']
+    };
+
+    // Track which parts we've already made clickable to avoid nested spans
+    const alreadyLinked = new Set();
+
     // For each character in our database, make their name clickable
     Object.keys(characterData).forEach(charKey => {
         const char = characterData[charKey];
-        const name = char.name;
+        const names = nameVariations[charKey] || [char.name];
 
-        // Create regex to find the character name
-        const regex = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+        names.forEach(name => {
+            // Create regex to find the character name
+            const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(?<!data-character="[^"]*")(?<!<span class="character-link"[^>]*>)\\b${escapedName}\\b(?![^<]*<\\/span>)`, 'gi');
 
-        // Replace with clickable span
-        processedHTML = processedHTML.replace(regex, (match) => {
-            return `<span class="character-link" data-character="${charKey}">${match}</span>`;
+            // Replace with clickable span
+            processedHTML = processedHTML.replace(regex, (match) => {
+                return `<span class="character-link" data-character="${charKey}">${match}</span>`;
+            });
         });
     });
 
