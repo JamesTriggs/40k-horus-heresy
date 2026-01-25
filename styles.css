@@ -290,6 +290,24 @@ body::before {
     font-weight: bold;
 }
 
+.spoiler-toggle .toggle-text {
+    color: var(--warning-amber);
+}
+
+.spoiler-notice {
+    background: rgba(255, 140, 0, 0.2);
+    border: 2px solid var(--warning-amber);
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--warning-amber);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
+
 .legion-filter,
 .sort-select {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);

@@ -292,7 +292,8 @@ const bookData = {
             <strong>Timeline:</strong> Pre-Heresy, Early Great Crusade<br>
             <strong>Status:</strong> Origins of Knightly Order
         `,
-        blurb: `The Dark Angels' homeworld of Caliban burns with conflict long before the Emperor's arrival. Noble orders of knights battle the great beasts that terrorize humanity, with young Lion El'Jonson emerging as the greatest warrior the world has ever known. When the Emperor finally finds his lost son, Caliban is transformed, but seeds of jealousy and resentment are planted that will split the Legion in twain.`
+        blurb: `The Dark Angels' homeworld of Caliban burns with conflict long before the Emperor's arrival. Noble orders of knights battle the great beasts that terrorize humanity, with young Lion El'Jonson emerging as the greatest warrior the world has ever known. When the Emperor finally finds his lost son, Caliban is transformed, but seeds of jealousy and resentment are planted that will split the Legion in twain.`,
+        blurbSafe: `The Dark Angels' homeworld of Caliban is steeped in ancient knightly traditions and plagued by great beasts. Noble orders of knights defend humanity, with young Lion El'Jonson emerging as an exceptional warrior. When the Emperor arrives, Caliban is transformed—but the changes will test the bonds of brotherhood and loyalty.`
     },
     'the-first-heretic': {
         number: 'XIV',
@@ -309,7 +310,8 @@ const bookData = {
             <strong>Timeline:</strong> 956.M30 - Before the Heresy<br>
             <strong>Status:</strong> The First Fall
         `,
-        blurb: `Lorgar and the Word Bearers are humiliated by the Emperor for worshipping him as a god. Crushed by his father's rebuke, Lorgar seeks meaning in the great pilgrimage to Cadia and the Eye of Terror. There, he finds gods who welcome worship—the Ruinous Powers of Chaos. This is the story of the Legion that fell first, spreading the seeds of corruption throughout the Imperium and orchestrating the Warmaster's fall.`
+        blurb: `Lorgar and the Word Bearers are humiliated by the Emperor for worshipping him as a god. Crushed by his father's rebuke, Lorgar seeks meaning in the great pilgrimage to Cadia and the Eye of Terror. There, he finds gods who welcome worship—the Ruinous Powers of Chaos. This is the story of the Legion that fell first, spreading the seeds of corruption throughout the Imperium and orchestrating the Warmaster's fall.`,
+        blurbSafe: `Lorgar and the Word Bearers face the Emperor's wrath for worshipping him as a god. Humiliated and seeking meaning beyond the Imperial Truth, Lorgar embarks on a pilgrimage into the Eye of Terror. What he discovers there will challenge everything the Imperium believes about gods and faith.`
     },
     'legion': {
         number: 'VII',
@@ -326,7 +328,8 @@ const bookData = {
             <strong>Timeline:</strong> 001.M31<br>
             <strong>Status:</strong> Secrets and Lies
         `,
-        blurb: `The Alpha Legion operates in the shadows of the Great Crusade, their methods questioned by all. When they encounter the Cabal, a xenos organization that claims to see the future, the twins Alpharius and Omegon are presented with a terrible choice: let the Imperium burn to deny Chaos, or fight for humanity's survival. Their decision will shape the course of the Heresy, though none will know which side they truly serve.`
+        blurb: `The Alpha Legion operates in the shadows of the Great Crusade, their methods questioned by all. When they encounter the Cabal, a xenos organization that claims to see the future, the twins Alpharius and Omegon are presented with a terrible choice: let the Imperium burn to deny Chaos, or fight for humanity's survival. Their decision will shape the course of the Heresy, though none will know which side they truly serve.`,
+        blurbSafe: `The Alpha Legion operates in shadows, their methods questioned by all who witness them. When they encounter the Cabal, a mysterious xenos organization claiming to see the future, the twins Alpharius and Omegon must make a choice that will shape the coming conflict in ways none can predict.`
     },
     'horus-rising': {
         number: 'I',
@@ -343,7 +346,8 @@ const bookData = {
             <strong>Timeline:</strong> 203rd Year of the Great Crusade<br>
             <strong>Status:</strong> The Fall Begins
         `,
-        blurb: `The Great Crusade is at its zenith. Under the leadership of the brilliant Warmaster Horus, the Imperium's armies are unstoppable. Through Captain Garviel Loken's eyes, we witness the last days of the Imperium's golden age. But when Horus is wounded by the Anathame blade on Davin's moon, a xenos weapon laced with Chaos energies begins corrupting the Warmaster's soul. The architect of humanity's greatest triumph begins his descent into becoming its destroyer.`
+        blurb: `The Great Crusade is at its zenith. Under the leadership of the brilliant Warmaster Horus, the Imperium's armies are unstoppable. Through Captain Garviel Loken's eyes, we witness the last days of the Imperium's golden age. But when Horus is wounded by the Anathame blade on Davin's moon, a xenos weapon laced with Chaos energies begins corrupting the Warmaster's soul. The architect of humanity's greatest triumph begins his descent into becoming its destroyer.`,
+        blurbSafe: `The Great Crusade reaches its zenith under Warmaster Horus, the Emperor's most brilliant son. Captain Garviel Loken witnesses the Imperium's golden age, but when Horus is wounded by a xenos blade on Davin's moon, something begins to change in the Warmaster's soul.`
     },
     'false-gods': {
         number: 'II',
@@ -360,7 +364,8 @@ const bookData = {
             <strong>Timeline:</strong> 004.M31<br>
             <strong>Status:</strong> The Corruption Complete
         `,
-        blurb: `Horus lies dying from the Anathame's wound. In desperation, Erebus convinces the Legion to seek aid from the Serpent Lodge of Davin. In a twisted ritual, Horus's soul is cast into the warp where false visions show him abandoned by the Emperor. When he awakens, Horus is no longer the Emperor's loyal son—he has become the pawn of the Chaos Gods, convinced he must overthrow the Emperor to save humanity. The galaxy will burn for his pride.`
+        blurb: `Horus lies dying from the Anathame's wound. In desperation, Erebus convinces the Legion to seek aid from the Serpent Lodge of Davin. In a twisted ritual, Horus's soul is cast into the warp where false visions show him abandoned by the Emperor. When he awakens, Horus is no longer the Emperor's loyal son—he has become the pawn of the Chaos Gods, convinced he must overthrow the Emperor to save humanity. The galaxy will burn for his pride.`,
+        blurbSafe: `Horus lies dying from the Anathame's wound, and his sons desperately seek aid from the Serpent Lodge of Davin. In a dark ritual, Horus's spirit enters the warp, where he confronts visions that challenge his understanding of the Emperor's plans for humanity.`
     },
     'a-thousand-sons': {
         number: 'XII',
@@ -377,7 +382,8 @@ const bookData = {
             <strong>Timeline:</strong> 001-004.M31<br>
             <strong>Status:</strong> The Crimson King's Folly
         `,
-        blurb: `Magnus the Red, master of psychic powers, foresees Horus's betrayal and uses sorcery to warn the Emperor—shattering the Webway Project and dooming Terra. The Emperor, enraged at this catastrophic breach, unleashes Leman Russ and the Space Wolves upon Prospero. The Thousand Sons, devoted scholars and psykers, are betrayed by their own mutations and the machinations of Tzeentch. Magnus's arrogance costs him everything.`
+        blurb: `Magnus the Red, master of psychic powers, foresees Horus's betrayal and uses sorcery to warn the Emperor—shattering the Webway Project and dooming Terra. The Emperor, enraged at this catastrophic breach, unleashes Leman Russ and the Space Wolves upon Prospero. The Thousand Sons, devoted scholars and psykers, are betrayed by their own mutations and the machinations of Tzeentch. Magnus's arrogance costs him everything.`,
+        blurbSafe: `Magnus the Red, master of psychic powers, attempts to warn the Emperor of a terrible betrayal—but his methods catastrophically damage the Emperor's secret Webway Project. The Emperor unleashes Leman Russ and the Space Wolves upon Prospero, where the Thousand Sons face annihilation for Magnus's hubris.`
     },
     'the-outcast-dead': {
         number: 'XVII',
@@ -394,7 +400,8 @@ const bookData = {
             <strong>Timeline:</strong> 004.M31<br>
             <strong>Status:</strong> Shadows on Terra
         `,
-        blurb: `While the Heresy erupts across the galaxy, Terra writhes with its own conflicts. Renegade Space Marines from various Legions are imprisoned deep beneath the Imperial Palace. When astropath Kai Zulane receives a prophetic vision of the Heresy's outcome, he becomes the most hunted man on Terra. The Outcast Dead must fight through the underhives and face the deadly custodians to deliver a message that could change everything.`
+        blurb: `While the Heresy erupts across the galaxy, Terra writhes with its own conflicts. Renegade Space Marines from various Legions are imprisoned deep beneath the Imperial Palace. When astropath Kai Zulane receives a prophetic vision of the Heresy's outcome, he becomes the most hunted man on Terra. The Outcast Dead must fight through the underhives and face the deadly custodians to deliver a message that could change everything.`,
+        blurbSafe: `Deep beneath the Imperial Palace, renegade Space Marines from various Legions are imprisoned. When astropath Kai Zulane receives a prophetic vision about the Heresy, he becomes hunted by every faction on Terra. The Outcast Dead must fight through the underhives to deliver a message that could change everything.`
     },
     'the-master-of-mankind': {
         number: 'XLI',
@@ -411,7 +418,8 @@ const bookData = {
             <strong>Timeline:</strong> 004-014.M31<br>
             <strong>Status:</strong> The Emperor's Vision Dies
         `,
-        blurb: `Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway, defending humanity's future against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path through the Webway that would free humanity from warp travel. As the Emperor battles with the Custodians and Sisters of Silence against endless daemon hordes, His dream of apotheosis for humanity crumbles. He cannot leave to face Horus, for if the Webway breach is not contained, Terra itself will fall to Chaos.`
+        blurb: `Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway, defending humanity's future against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path through the Webway that would free humanity from warp travel. As the Emperor battles with the Custodians and Sisters of Silence against endless daemon hordes, His dream of apotheosis for humanity crumbles. He cannot leave to face Horus, for if the Webway breach is not contained, Terra itself will fall to Chaos.`,
+        blurbSafe: `Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path that would free humanity from warp travel. As daemon hordes assault the breach, the Emperor cannot leave His post, even as Horus marches on Terra.`
     },
     'galaxy-in-flames': {
         number: 'III',
@@ -428,7 +436,8 @@ const bookData = {
             <strong>Timeline:</strong> Opening Shots of the Horus Heresy<br>
             <strong>Status:</strong> The Betrayal Unleashed
         `,
-        blurb: `The Heresy begins in fire. On the virus-bombed ruins of Isstvan III, brother turns on brother. Horus reveals his treachery, and his first victims are his own sons—loyalist elements of the Traitor Legions. Garviel Loken, Saul Tarvitz, and Nathaniel Garro survive the Life-Eater virus bombardment and mount a desperate last stand. The traitors unleash a second bombardment that reduces the planet to atomic fire. The Age of Darkness has begun.`
+        blurb: `The Heresy begins in fire. On the virus-bombed ruins of Isstvan III, brother turns on brother. Horus reveals his treachery, and his first victims are his own sons—loyalist elements of the Traitor Legions. Garviel Loken, Saul Tarvitz, and Nathaniel Garro survive the Life-Eater virus bombardment and mount a desperate last stand. The traitors unleash a second bombardment that reduces the planet to atomic fire. The Age of Darkness has begun.`,
+        blurbSafe: `On the virus-bombed ruins of Isstvan III, brother turns on brother as Horus reveals his treachery. Loyalist elements of the Traitor Legions mount a desperate last stand. Garviel Loken, Saul Tarvitz, and Nathaniel Garro must survive the ultimate betrayal as the Age of Darkness begins.`
     },
     'prospero-burns': {
         number: 'XV',
@@ -445,7 +454,8 @@ const bookData = {
             <strong>Timeline:</strong> 004-005.M31<br>
             <strong>Status:</strong> The Executioner's Task
         `,
-        blurb: `The Space Wolves are the Emperor's executioners, and Leman Russ has been given his orders: make Magnus answer for his crime. Through the eyes of human observer Kasper Hawser, we see the Wolves descend upon Prospero with fury. But Horus has twisted the Emperor's command—what should have been censure becomes genocide. The Thousand Sons' homeworld burns, and Magnus breaks his own spine teleporting the survivors into the warp. Brother is set against brother, and there is no going back.`
+        blurb: `The Space Wolves are the Emperor's executioners, and Leman Russ has been given his orders: make Magnus answer for his crime. Through the eyes of human observer Kasper Hawser, we see the Wolves descend upon Prospero with fury. But Horus has twisted the Emperor's command—what should have been censure becomes genocide. The Thousand Sons' homeworld burns, and Magnus breaks his own spine teleporting the survivors into the warp. Brother is set against brother, and there is no going back.`,
+        blurbSafe: `The Space Wolves are the Emperor's executioners, and Leman Russ has been ordered to bring Magnus to account. Through the eyes of human observer Kasper Hawser, we witness the Wolves descend upon Prospero with brutal fury—but Horus has twisted the Emperor's command into something far darker.`
     },
     'mechanicum': {
         number: 'IX',
@@ -462,7 +472,8 @@ const bookData = {
             <strong>Timeline:</strong> 005.M31<br>
             <strong>Status:</strong> The Red Planet Burns
         `,
-        blurb: `As Terra reels from Magnus's psychic assault, Mars erupts into civil war. Kelbor-Hal, Fabricator General of Mars, pledges allegiance to Horus, seduced by forbidden technology and dark promises. Loyalist tech-priests fight desperately to prevent the traitors from seizing Mars's ancient weapons. Titan battles Titan in the forge-temples as the Mechanicum tears itself apart. The outcome will determine whether Terra stands or falls when Horus comes.`
+        blurb: `As Terra reels from Magnus's psychic assault, Mars erupts into civil war. Kelbor-Hal, Fabricator General of Mars, pledges allegiance to Horus, seduced by forbidden technology and dark promises. Loyalist tech-priests fight desperately to prevent the traitors from seizing Mars's ancient weapons. Titan battles Titan in the forge-temples as the Mechanicum tears itself apart. The outcome will determine whether Terra stands or falls when Horus comes.`,
+        blurbSafe: `As Terra reels from Magnus's psychic assault, Mars erupts into civil war. Fabricator General Kelbor-Hal is seduced by forbidden technology and dark promises, pledging allegiance to Horus. Loyalist tech-priests fight desperately to prevent the traitors from seizing Mars's ancient weapons as Titan battles Titan.`
     },
     'the-flight-of-the-eisenstein': {
         number: 'IV',
@@ -479,7 +490,8 @@ const bookData = {
             <strong>Timeline:</strong> 005.M31<br>
             <strong>Status:</strong> Warning to Terra
         `,
-        blurb: `Battle-Captain Nathaniel Garro of the Death Guard escapes the betrayal at Isstvan III aboard the damaged frigate Eisenstein. Pursued by traitor vessels and fighting off the first blooms of Nurgle's plague, Garro must reach Terra to warn the Emperor that Horus has turned traitor and half the Legions have fallen with him. His desperate journey marks him as the first of Malcador's Knights-Errant—the warriors who will become the founding members of the Grey Knights.`
+        blurb: `Battle-Captain Nathaniel Garro of the Death Guard escapes the betrayal at Isstvan III aboard the damaged frigate Eisenstein. Pursued by traitor vessels and fighting off the first blooms of Nurgle's plague, Garro must reach Terra to warn the Emperor that Horus has turned traitor and half the Legions have fallen with him. His desperate journey marks him as the first of Malcador's Knights-Errant—the warriors who will become the founding members of the Grey Knights.`,
+        blurbSafe: `Battle-Captain Nathaniel Garro escapes the betrayal at Isstvan III aboard the damaged frigate Eisenstein. Pursued by traitor vessels and fighting off a mysterious plague, Garro must reach Terra to warn the Emperor that Horus has turned traitor and half the Legions have fallen with him.`
     },
     'fallen-angels': {
         number: 'XI',
@@ -496,7 +508,8 @@ const bookData = {
             <strong>Timeline:</strong> 005.M31<br>
             <strong>Status:</strong> Legion Divided
         `,
-        blurb: `As the Heresy spreads, the Dark Angels are divided. Luther, left behind on Caliban while Lion El'Jonson leads the Legion in the Great Crusade, grows bitter with resentment. Chaos whispers to those who feel abandoned, and Caliban's defenders begin to question their loyalty. When the Lion returns, he will find his homeworld has become a fortress of rebellion, setting the stage for a fratricidal conflict that will haunt the Dark Angels forever.`
+        blurb: `As the Heresy spreads, the Dark Angels are divided. Luther, left behind on Caliban while Lion El'Jonson leads the Legion in the Great Crusade, grows bitter with resentment. Chaos whispers to those who feel abandoned, and Caliban's defenders begin to question their loyalty. When the Lion returns, he will find his homeworld has become a fortress of rebellion, setting the stage for a fratricidal conflict that will haunt the Dark Angels forever.`,
+        blurbSafe: `As the Heresy spreads, the Dark Angels are divided between those crusading with the Lion and those stationed on Caliban under Luther's command. Resentment grows among those left behind, and Chaos whispers to those who feel abandoned by their Primarch.`
     },
     'fear-to-tread': {
         number: 'XXI',
@@ -513,7 +526,8 @@ const bookData = {
             <strong>Timeline:</strong> 005-006.M31<br>
             <strong>Status:</strong> The Angels Face Damnation
         `,
-        blurb: `Horus sends his brother Sanguinius into a trap at Signus Prime, where the daemon Ka'Bandha and the forces of Chaos await. The Blood Angels face their worst nightmare as the Black Rage threatens to consume the entire Legion. Sanguinius must battle not only daemons but the cursed flaw in his sons' gene-seed. Though they win through, the Blood Angels are left traumatized and delayed from reaching Terra in time to prevent the Dropsite Massacre.`
+        blurb: `Horus sends his brother Sanguinius into a trap at Signus Prime, where the daemon Ka'Bandha and the forces of Chaos await. The Blood Angels face their worst nightmare as the Black Rage threatens to consume the entire Legion. Sanguinius must battle not only daemons but the cursed flaw in his sons' gene-seed. Though they win through, the Blood Angels are left traumatized and delayed from reaching Terra in time to prevent the Dropsite Massacre.`,
+        blurbSafe: `Horus sends Sanguinius into a trap at Signus Prime, where daemon forces await. The Blood Angels face a nightmare as a dark flaw in their gene-seed threatens to consume the entire Legion. Sanguinius must battle both external daemons and the curse hidden within his sons.`
     },
     'fulgrim': {
         number: 'V',
@@ -530,7 +544,8 @@ const bookData = {
             <strong>Timeline:</strong> 006.M31<br>
             <strong>Status:</strong> The Pursuit of Perfection Becomes Madness
         `,
-        blurb: `The Emperor's Children, devoted to perfection in all things, discover a daemonic blade on a lost world. Fulgrim becomes possessed by the sword's malevolent spirit, and Slaanesh's corruption spreads through the Legion. Their pursuit of excellence becomes twisted into depravity and excess. The climax comes when Fulgrim murders his brother Ferrus Manus of the Iron Hands at Isstvan V, fully embracing damnation. The daemon and Primarch merge, creating a being of terrible beauty and horror.`
+        blurb: `The Emperor's Children, devoted to perfection in all things, discover a daemonic blade on a lost world. Fulgrim becomes possessed by the sword's malevolent spirit, and Slaanesh's corruption spreads through the Legion. Their pursuit of excellence becomes twisted into depravity and excess. The climax comes when Fulgrim murders his brother Ferrus Manus of the Iron Hands at Isstvan V, fully embracing damnation. The daemon and Primarch merge, creating a being of terrible beauty and horror.`,
+        blurbSafe: `The Emperor's Children discover a daemonic blade on a lost world, and Fulgrim becomes possessed by its malevolent spirit. As Slaanesh's corruption spreads through the Legion, their pursuit of perfection twists into depravity and excess, culminating in a tragic confrontation with Ferrus Manus at Isstvan V.`
     },
     'vulkan-lives': {
         number: 'XXVI',
@@ -547,7 +562,8 @@ const bookData = {
             <strong>Timeline:</strong> 006-007.M31<br>
             <strong>Status:</strong> The Perpetual Primarch
         `,
-        blurb: `Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan is a Perpetual—he cannot truly die. Each time Curze kills him, he returns, driving the Night Haunter to madness. Vulkan's resilience and inherent nobility stand in stark contrast to Curze's nihilism. His sons search desperately for their lost Primarch while Vulkan himself endures endless death and rebirth, testing the limits of even a Primarch's sanity.`
+        blurb: `Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan is a Perpetual—he cannot truly die. Each time Curze kills him, he returns, driving the Night Haunter to madness. Vulkan's resilience and inherent nobility stand in stark contrast to Curze's nihilism. His sons search desperately for their lost Primarch while Vulkan himself endures endless death and rebirth, testing the limits of even a Primarch's sanity.`,
+        blurbSafe: `Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan possesses a unique ability—each time Curze kills him, he returns. This endless cycle tests both Primarchs, as Vulkan's resilience confronts Curze's nihilism.`
     },
     'deliverance-lost': {
         number: 'XVIII',
@@ -564,7 +580,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31<br>
             <strong>Status:</strong> Genetic Salvation Corrupted
         `,
-        blurb: `Decimated at Isstvan V, Corvus Corax returns to Deliverance with a handful of survivors. To rebuild his Legion quickly, he recovers gene-tech from the Emperor's laboratories beneath the Himalazian Mountains. But Alpha Legion operatives have infiltrated his ranks, and they sabotage the new gene-seed. The results are horrific—mutated abominations instead of Astartes. Corax is forced to mercy-kill his own sons. The tragedy will haunt him until his eventual disappearance into the Eye of Terror.`
+        blurb: `Decimated at Isstvan V, Corvus Corax returns to Deliverance with a handful of survivors. To rebuild his Legion quickly, he recovers gene-tech from the Emperor's laboratories beneath the Himalazian Mountains. But Alpha Legion operatives have infiltrated his ranks, and they sabotage the new gene-seed. The results are horrific—mutated abominations instead of Astartes. Corax is forced to mercy-kill his own sons. The tragedy will haunt him until his eventual disappearance into the Eye of Terror.`,
+        blurbSafe: `Decimated at Isstvan V, Corvus Corax seeks to rebuild his Legion using gene-tech from the Emperor's laboratories. But Alpha Legion operatives have infiltrated his ranks, threatening to sabotage the Raven Guard's desperate attempt at salvation.`
     },
     'the-crimson-king': {
         number: 'XLIV',
@@ -581,7 +598,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31<br>
             <strong>Status:</strong> Exile in the Warp
         `,
-        blurb: `After the fall of Prospero, Magnus and his Thousand Sons find themselves on the Planet of the Sorcerers within the Eye of Terror. Magnus is broken, fragmented into shards scattered across reality. Ahriman and the Thousand Sons desperately try to restore their Primarch while navigating the deadly politics of Tzeentch's realm. Magnus must accept that his quest for knowledge has damned him and his Legion, and choose whether to serve Horus or chart his own dark path.`
+        blurb: `After the fall of Prospero, Magnus and his Thousand Sons find themselves on the Planet of the Sorcerers within the Eye of Terror. Magnus is broken, fragmented into shards scattered across reality. Ahriman and the Thousand Sons desperately try to restore their Primarch while navigating the deadly politics of Tzeentch's realm. Magnus must accept that his quest for knowledge has damned him and his Legion, and choose whether to serve Horus or chart his own dark path.`,
+        blurbSafe: `After Prospero's fall, Magnus and his Thousand Sons find themselves on the Planet of the Sorcerers within the Eye of Terror. Magnus is broken, his essence fragmented across reality, and Ahriman must navigate the deadly politics of Tzeentch's realm while trying to restore their Primarch.`
     },
     'the-damnation-of-pythos': {
         number: 'XXX',
@@ -598,7 +616,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31<br>
             <strong>Status:</strong> A World Consumed
         `,
-        blurb: `Survivors from the Dropsite Massacre seek refuge on the verdant world of Pythos. But the planet is a trap—a daemonic plot by the Chaos Gods to create a warp rift. Iron Hands, consumed by rage after Ferrus Manus's death, pursue vengeance without wisdom. Salamanders and Raven Guard struggle to maintain their honor while surrounded by death. Pythos becomes a daemon world, and those who sought sanctuary find only damnation. It stands as a grim testament to how Chaos exploits humanity's weaknesses.`
+        blurb: `Survivors from the Dropsite Massacre seek refuge on the verdant world of Pythos. But the planet is a trap—a daemonic plot by the Chaos Gods to create a warp rift. Iron Hands, consumed by rage after Ferrus Manus's death, pursue vengeance without wisdom. Salamanders and Raven Guard struggle to maintain their honor while surrounded by death. Pythos becomes a daemon world, and those who sought sanctuary find only damnation. It stands as a grim testament to how Chaos exploits humanity's weaknesses.`,
+        blurbSafe: `Survivors from the Dropsite Massacre seek refuge on the verdant world of Pythos, but the planet harbors a dark secret. Iron Hands consumed by rage pursue vengeance, while Salamanders and Raven Guard struggle to maintain their honor in a world that may be a trap.`
     },
     'nemesis': {
         number: 'XIII',
@@ -614,7 +633,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31<br>
             <strong>Status:</strong> Shadow War
         `,
-        blurb: `Malcador the Sigillite authorizes a desperate gambit: deploy a team of elite assassins to kill Horus before he can march on Terra. The Execution Force includes operatives from every Assassin Clade, each a master of death. But Horus has his own weapon—a supernatural assassin forged by the Chaos Gods. The shadow war culminates in a deadly game of hunter and hunted, where the galaxy's most lethal killers face off. Even the Emperor's finest may not be enough to stop a Warmaster blessed by the dark gods.`
+        blurb: `Malcador the Sigillite authorizes a desperate gambit: deploy a team of elite assassins to kill Horus before he can march on Terra. The Execution Force includes operatives from every Assassin Clade, each a master of death. But Horus has his own weapon—a supernatural assassin forged by the Chaos Gods. The shadow war culminates in a deadly game of hunter and hunted, where the galaxy's most lethal killers face off. Even the Emperor's finest may not be enough to stop a Warmaster blessed by the dark gods.`,
+        blurbSafe: `Malcador the Sigillite authorizes a desperate gambit: deploy elite assassins to kill Horus before he can march on Terra. But Horus has his own weapon—a supernatural assassin forged by the Chaos Gods. The shadow war culminates in a deadly game of hunter and hunted.`
     },
     'know-no-fear': {
         number: 'XIX',
@@ -631,7 +651,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31 - The Battle of Calth<br>
             <strong>Status:</strong> Betrayal at Calth
         `,
-        blurb: `The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines, proud and unprepared for treachery, are devastated by orbital bombardment and brutal ground assaults. Roboute Guilliman survives being sucked into space, his transhuman physiology barely preserving him. Though the Ultramarines eventually repel the invasion, Calth is left a poisoned, irradiated wreck. The Mark of Calth becomes a scar worn by the Ultramarines forever, a reminder that even the most noble can be caught unprepared by treachery.`
+        blurb: `The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines, proud and unprepared for treachery, are devastated by orbital bombardment and brutal ground assaults. Roboute Guilliman survives being sucked into space, his transhuman physiology barely preserving him. Though the Ultramarines eventually repel the invasion, Calth is left a poisoned, irradiated wreck. The Mark of Calth becomes a scar worn by the Ultramarines forever, a reminder that even the most noble can be caught unprepared by treachery.`,
+        blurbSafe: `The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines face devastating orbital bombardment and brutal ground assaults, unprepared for treachery from those they considered brothers in arms.`
     },
     'battle-for-the-abyss': {
         number: 'VIII',
@@ -647,7 +668,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31<br>
             <strong>Status:</strong> Chase Through the Void
         `,
-        blurb: `The Word Bearers launch the Furious Abyss, a massive warship designed to destroy Macragge and cripple the Ultramarines before the Battle of Calth. A ragtag group of loyalist Space Marines from various Legions—including a World Eater still loyal to the Emperor—pursue the vessel through the warp. They must overcome their differences and stop the Furious Abyss before it reaches Ultramar. In a desperate boarding action, they sabotage the ship, but the cost is high. The mission succeeds, but barely—and Macragge is warned.`
+        blurb: `The Word Bearers launch the Furious Abyss, a massive warship designed to destroy Macragge and cripple the Ultramarines before the Battle of Calth. A ragtag group of loyalist Space Marines from various Legions—including a World Eater still loyal to the Emperor—pursue the vessel through the warp. They must overcome their differences and stop the Furious Abyss before it reaches Ultramar. In a desperate boarding action, they sabotage the ship, but the cost is high. The mission succeeds, but barely—and Macragge is warned.`,
+        blurbSafe: `The Word Bearers launch the Furious Abyss, a massive warship designed to destroy Macragge and cripple the Ultramarines. A ragtag group of loyalist Space Marines from various Legions pursue the vessel through the warp, racing to stop it before it reaches Ultramar.`
     },
     'angel-exterminatus': {
         number: 'XXIII',
@@ -664,7 +686,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31<br>
             <strong>Status:</strong> Dark Alliance
         `,
-        blurb: `Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo, master of siege warfare but always bitter at being overlooked, seeks ancient weapons to use against the Emperor. But Fulgrim has darker plans—he intends to ascend to daemonhood by sacrificing Perturabo. The Iron Warriors Primarch barely escapes the trap, emerging with his paranoia and bitterness magnified. Fulgrim achieves his goal, becoming a daemon prince of Slaanesh. The alliance between the Legions fractures further.`
+        blurb: `Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo, master of siege warfare but always bitter at being overlooked, seeks ancient weapons to use against the Emperor. But Fulgrim has darker plans—he intends to ascend to daemonhood by sacrificing Perturabo. The Iron Warriors Primarch barely escapes the trap, emerging with his paranoia and bitterness magnified. Fulgrim achieves his goal, becoming a daemon prince of Slaanesh. The alliance between the Legions fractures further.`,
+        blurbSafe: `Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo seeks ancient weapons, but Fulgrim has darker plans involving ascension and sacrifice. The alliance between the Iron Warriors and Emperor's Children will be tested in ways neither anticipated.`
     },
     'betrayer': {
         number: 'XXIV',
@@ -681,7 +704,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31 - The Shadow Crusade<br>
             <strong>Status:</strong> Blood for the Blood God
         `,
-        blurb: `Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's Five Hundred Worlds. Angron, driven by the Butcher's Nails implanted in his brain, is dying. Lorgar performs a dark ritual, elevating Angron to become a Daemon Primarch of Khorne at the cost of countless lives. Captain Khârn of the World Eaters witnesses his Legion's complete fall to madness. Guilliman desperately tries to contain the devastation, but the Ultramarines are being bled white across a hundred battlefields.`
+        blurb: `Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's Five Hundred Worlds. Angron, driven by the Butcher's Nails implanted in his brain, is dying. Lorgar performs a dark ritual, elevating Angron to become a Daemon Primarch of Khorne at the cost of countless lives. Captain Khârn of the World Eaters witnesses his Legion's complete fall to madness. Guilliman desperately tries to contain the devastation, but the Ultramarines are being bled white across a hundred battlefields.`,
+        blurbSafe: `Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's worlds. Angron, driven by the Butcher's Nails and dying, becomes the focus of a dark ritual. Captain Khârn witnesses his Legion's descent into madness while Guilliman desperately tries to contain the devastation.`
     },
     'scars': {
         number: 'XXVIII',
@@ -698,7 +722,8 @@ const bookData = {
             <strong>Timeline:</strong> 007.M31<br>
             <strong>Status:</strong> Choosing Sides
         `,
-        blurb: `The White Scars, far from Terra prosecuting the Great Crusade, learn of the Heresy late. Jaghatai Khan, the Warhawk, must decide which side to join. His Legion is divided—some wish to join Horus, others remain loyal. The Khan is close to both Magnus and Horus, but when he learns the truth about the Word Bearers' manipulation and Horus's true allegiance to Chaos, his decision is made. The White Scars will ride for Terra. But first, they must purge the traitors within their own ranks.`
+        blurb: `The White Scars, far from Terra prosecuting the Great Crusade, learn of the Heresy late. Jaghatai Khan, the Warhawk, must decide which side to join. His Legion is divided—some wish to join Horus, others remain loyal. The Khan is close to both Magnus and Horus, but when he learns the truth about the Word Bearers' manipulation and Horus's true allegiance to Chaos, his decision is made. The White Scars will ride for Terra. But first, they must purge the traitors within their own ranks.`,
+        blurbSafe: `The White Scars, far from Terra prosecuting the Great Crusade, learn of the Heresy late. Jaghatai Khan must decide which side to join as his Legion divides between those loyal to the Emperor and those who would follow Horus. The Khan's choice will define the White Scars forever.`
     },
     'vengeful-spirit': {
         number: 'XXIX',
@@ -715,7 +740,8 @@ const bookData = {
             <strong>Timeline:</strong> 008-009.M31<br>
             <strong>Status:</strong> Apotheosis of the Warmaster
         `,
-        blurb: `Horus returns to Molech, a Knight World where he once fought beside the Emperor. He seeks entry to the same warp gate the Emperor used millennia ago to bargain with the Chaos Gods for power. Defended by loyalist Titans and Knights, Molech becomes a slaughterhouse. Horus succeeds in entering the gate and emerges transformed, wielding powers that rival the Emperor Himself. The Warmaster is now truly a match for his father, setting the stage for their final confrontation. But the power comes at a terrible price—Horus is no longer truly human.`
+        blurb: `Horus returns to Molech, a Knight World where he once fought beside the Emperor. He seeks entry to the same warp gate the Emperor used millennia ago to bargain with the Chaos Gods for power. Defended by loyalist Titans and Knights, Molech becomes a slaughterhouse. Horus succeeds in entering the gate and emerges transformed, wielding powers that rival the Emperor Himself. The Warmaster is now truly a match for his father, setting the stage for their final confrontation. But the power comes at a terrible price—Horus is no longer truly human.`,
+        blurbSafe: `Horus returns to Molech, a Knight World where he once fought beside the Emperor. He seeks entry to the same warp gate the Emperor used to bargain with the Chaos Gods. Defended by loyalist forces, Molech becomes a slaughterhouse as Horus pursues ultimate power.`
     },
     'the-unremembered-empire': {
         number: 'XXVII',
@@ -732,7 +758,8 @@ const bookData = {
             <strong>Timeline:</strong> 009.M31<br>
             <strong>Status:</strong> Imperium Secundus
         `,
-        blurb: `Believing Terra has fallen, Roboute Guilliman establishes Imperium Secundus on Macragge, a contingency government to preserve humanity. When Lion El'Jonson and Sanguinius arrive, tensions rise. The Lion questions Guilliman's motives, fearing ambition for the throne. They crown Sanguinius as Emperor instead, but the entire project is based on a lie. When they learn Terra still stands, the Imperium Secundus must end. The three brothers prepare to race to Terra—but the Ruinstorm, a warp storm engineered by Chaos, bars their way.`
+        blurb: `Believing Terra has fallen, Roboute Guilliman establishes Imperium Secundus on Macragge, a contingency government to preserve humanity. When Lion El'Jonson and Sanguinius arrive, tensions rise. The Lion questions Guilliman's motives, fearing ambition for the throne. They crown Sanguinius as Emperor instead, but the entire project is based on a lie. When they learn Terra still stands, the Imperium Secundus must end. The three brothers prepare to race to Terra—but the Ruinstorm, a warp storm engineered by Chaos, bars their way.`,
+        blurbSafe: `Believing Terra has fallen, Roboute Guilliman establishes Imperium Secundus on Macragge. When Lion El'Jonson and Sanguinius arrive, tensions rise as questions of loyalty and ambition threaten to fracture the alliance. The three Primarchs must decide humanity's future.`
     },
     'pharos': {
         number: 'XXXIV',
@@ -749,7 +776,8 @@ const bookData = {
             <strong>Timeline:</strong> 009.M31<br>
             <strong>Status:</strong> Beacon in the Dark
         `,
-        blurb: `The Pharos is an ancient xenos device on the world of Sotha that can pierce even the Ruinstorm's interference. The Night Lords, seeking revenge after defeat, assault Sotha to destroy the beacon and blind the loyalists. Polux of the Imperial Fists and the Ultramarines garrison defend desperately. The Pharos is used at full power to drive off the Night Lords, but the massive energy discharge sends a signal across time and space that will, ten thousand years later, draw the Tyranid Hive Fleets toward the galaxy. One crisis averted seeds another apocalypse.`
+        blurb: `The Pharos is an ancient xenos device on the world of Sotha that can pierce even the Ruinstorm's interference. The Night Lords, seeking revenge after defeat, assault Sotha to destroy the beacon and blind the loyalists. Polux of the Imperial Fists and the Ultramarines garrison defend desperately. The Pharos is used at full power to drive off the Night Lords, but the massive energy discharge sends a signal across time and space that will, ten thousand years later, draw the Tyranid Hive Fleets toward the galaxy. One crisis averted seeds another apocalypse.`,
+        blurbSafe: `The Pharos is an ancient xenos device on Sotha that can pierce even the Ruinstorm's interference. When the Night Lords assault the world to destroy the beacon, Polux of the Imperial Fists and the Ultramarines garrison mount a desperate defense of this vital strategic asset.`
     },
     'deathfire': {
         number: 'XXXII',
@@ -766,7 +794,8 @@ const bookData = {
             <strong>Timeline:</strong> 010.M31<br>
             <strong>Status:</strong> The Quest for the Lost Primarch
         `,
-        blurb: `The Salamanders embark on a desperate quest to find Vulkan and return him to Nocturne. They believe that bringing their Primarch home will restore him and the Legion. The journey is fraught with danger, and they carry Vulkan's seemingly dead body through war-torn space. Along the way, they must overcome traitor forces, navigate warp storms, and face the question of whether their Primarch can ever truly be restored. The Salamanders' determination and loyalty to their father are tested to the limit.`
+        blurb: `The Salamanders embark on a desperate quest to find Vulkan and return him to Nocturne. They believe that bringing their Primarch home will restore him and the Legion. The journey is fraught with danger, and they carry Vulkan's seemingly dead body through war-torn space. Along the way, they must overcome traitor forces, navigate warp storms, and face the question of whether their Primarch can ever truly be restored. The Salamanders' determination and loyalty to their father are tested to the limit.`,
+        blurbSafe: `The Salamanders embark on a desperate quest to find Vulkan and return him to Nocturne, believing that bringing their Primarch home will restore him and the Legion. The journey through war-torn space tests their determination and loyalty to their father.`
     },
     'tallarn': {
         number: 'XLV',
@@ -783,7 +812,8 @@ const bookData = {
             <strong>Timeline:</strong> 010-012.M31<br>
             <strong>Status:</strong> The Largest Tank Battle in History
         `,
-        blurb: `When the Iron Warriors virus-bomb Tallarn to uncover an ancient buried secret, the world becomes a rad-wasteland. But billions of Imperial Guard tankers remain, and they wage the largest armored warfare campaign in galactic history across the poisoned dunes. Thousands of tanks clash in desperate battles while the Iron Warriors dig deeper for their mysterious prize. The war for Tallarn becomes a symbol of mortal humanity's defiance—not superhuman Space Marines, but ordinary soldiers fighting against impossible odds to deny the traitors their victory.`
+        blurb: `When the Iron Warriors virus-bomb Tallarn to uncover an ancient buried secret, the world becomes a rad-wasteland. But billions of Imperial Guard tankers remain, and they wage the largest armored warfare campaign in galactic history across the poisoned dunes. Thousands of tanks clash in desperate battles while the Iron Warriors dig deeper for their mysterious prize. The war for Tallarn becomes a symbol of mortal humanity's defiance—not superhuman Space Marines, but ordinary soldiers fighting against impossible odds to deny the traitors their victory.`,
+        blurbSafe: `When the Iron Warriors virus-bomb Tallarn seeking an ancient buried secret, the world becomes a rad-wasteland. Billions of Imperial Guard tankers wage the largest armored warfare campaign in galactic history, fighting to deny the traitors their prize in brutal tank battles across poisoned dunes.`
     },
     'praetorian-of-dorn': {
         number: 'XXXIX',
@@ -800,7 +830,8 @@ const bookData = {
             <strong>Timeline:</strong> 010.M31<br>
             <strong>Status:</strong> Shadow War for Terra
         `,
-        blurb: `Alpharius launches a covert assault on the Solar System itself, infiltrating with sleeper agents and sabotage cells. Rogal Dorn, master of defense, must uncover and eliminate the Alpha Legion's networks before the Siege of Terra begins. The conflict is as much espionage as warfare, with both Primarchs testing their wits. In a stunning climax, Dorn confronts Alpharius in personal combat and slays him—or does he? With the Alpha Legion, nothing is ever certain. The twin Primarchs' deceptions may run deeper than anyone knows.`
+        blurb: `Alpharius launches a covert assault on the Solar System itself, infiltrating with sleeper agents and sabotage cells. Rogal Dorn, master of defense, must uncover and eliminate the Alpha Legion's networks before the Siege of Terra begins. The conflict is as much espionage as warfare, with both Primarchs testing their wits. In a stunning climax, Dorn confronts Alpharius in personal combat and slays him—or does he? With the Alpha Legion, nothing is ever certain. The twin Primarchs' deceptions may run deeper than anyone knows.`,
+        blurbSafe: `Alpharius launches a covert assault on the Solar System itself, infiltrating with sleeper agents and sabotage cells. Rogal Dorn must uncover and eliminate the Alpha Legion's networks before the Siege of Terra begins in a conflict as much espionage as warfare.`
     },
     'the-path-of-heaven': {
         number: 'XXXVI',
@@ -817,7 +848,8 @@ const bookData = {
             <strong>Timeline:</strong> 011.M31<br>
             <strong>Status:</strong> The Sagyar Mazan's Ride
         `,
-        blurb: `The White Scars race to Terra through the war-torn galaxy, harrying the Death Guard fleet and disrupting traitor supply lines. Jaghatai Khan leads his Legion in a lightning campaign of hit-and-run warfare, buying precious time for Terra's defenses. But the Death Guard, now fully transformed by Nurgle's plague, are relentless. The Khan must also deal with the Sagyar Mazan—those White Scars who sided with the traitors and now seek atonement through death. The chase culminates in a desperate battle in the void.`
+        blurb: `The White Scars race to Terra through the war-torn galaxy, harrying the Death Guard fleet and disrupting traitor supply lines. Jaghatai Khan leads his Legion in a lightning campaign of hit-and-run warfare, buying precious time for Terra's defenses. But the Death Guard, now fully transformed by Nurgle's plague, are relentless. The Khan must also deal with the Sagyar Mazan—those White Scars who sided with the traitors and now seek atonement through death. The chase culminates in a desperate battle in the void.`,
+        blurbSafe: `The White Scars race to Terra through the war-torn galaxy, harrying the Death Guard fleet in a lightning campaign of hit-and-run warfare. Jaghatai Khan must also deal with the Sagyar Mazan—White Scars who sided with traitors and now seek atonement.`
     },
     'angels-of-caliban': {
         number: 'XXXVIII',
@@ -834,7 +866,8 @@ const bookData = {
             <strong>Timeline:</strong> 011.M31<br>
             <strong>Status:</strong> Secrets and Lies
         `,
-        blurb: `The Lion pursues the Night Lords through the Ruinstorm while dark secrets about Caliban's fall spread within the Legion. The Dark Angels are divided between those who know the truth about Luther's rebellion and those kept in ignorance. As the Lion closes in on Konrad Curze, the Dark Angels' internal fractures widen. The hunt for the Night Haunter becomes secondary to the devastating realization that the Dark Angels' homeworld has turned traitor, and half the Legion has fallen with it.`
+        blurb: `The Lion pursues the Night Lords through the Ruinstorm while dark secrets about Caliban's fall spread within the Legion. The Dark Angels are divided between those who know the truth about Luther's rebellion and those kept in ignorance. As the Lion closes in on Konrad Curze, the Dark Angels' internal fractures widen. The hunt for the Night Haunter becomes secondary to the devastating realization that the Dark Angels' homeworld has turned traitor, and half the Legion has fallen with it.`,
+        blurbSafe: `The Lion pursues the Night Lords through the Ruinstorm while dark secrets about Caliban spread within the Legion. As the Lion closes in on Konrad Curze, devastating truths about the Dark Angels' homeworld begin to emerge.`
     },
     'old-earth': {
         number: 'XLVII',
@@ -851,7 +884,8 @@ const bookData = {
             <strong>Timeline:</strong> 011.M31<br>
             <strong>Status:</strong> The Primarch Returns
         `,
-        blurb: `Vulkan finally returns to Terra, restored in mind and spirit. His trials have tested him beyond imagining, but the Primarch of the Salamanders has endured. He brings with him a weapon designed for use against the Traitor forces. Reunited with his Legion, Vulkan prepares for the final defense of Terra. His journey through death and rebirth has given him unique insights, but also left scars that even a Primarch cannot easily heal. The Salamanders welcome their father home, knowing the darkest battles still lie ahead.`
+        blurb: `Vulkan finally returns to Terra, restored in mind and spirit. His trials have tested him beyond imagining, but the Primarch of the Salamanders has endured. He brings with him a weapon designed for use against the Traitor forces. Reunited with his Legion, Vulkan prepares for the final defense of Terra. His journey through death and rebirth has given him unique insights, but also left scars that even a Primarch cannot easily heal. The Salamanders welcome their father home, knowing the darkest battles still lie ahead.`,
+        blurbSafe: `Vulkan returns to Terra, restored after trials that tested him beyond imagining. He brings with him a weapon designed for use against the Traitor forces. Reunited with his Legion, Vulkan prepares for the final defense of Terra.`
     },
     'ruinstorm': {
         number: 'XLVI',
@@ -868,7 +902,8 @@ const bookData = {
             <strong>Timeline:</strong> 011.M31<br>
             <strong>Status:</strong> Breaking the Storm
         `,
-        blurb: `Guilliman, the Lion, and Sanguinius unite to breach the Ruinstorm and reach Terra. Each Primarch must face trials designed to break them—their greatest fears and doubts manifested by the warp. They discover the storm is powered by daemonic engines at Davin and other key locations. To break the storm, they must split up, each taking a separate path to destroy these focal points. Their brotherhood is tested, but ultimately their determination prevails. The Ruinstorm begins to dissipate, opening the way to Terra.`
+        blurb: `Guilliman, the Lion, and Sanguinius unite to breach the Ruinstorm and reach Terra. Each Primarch must face trials designed to break them—their greatest fears and doubts manifested by the warp. They discover the storm is powered by daemonic engines at Davin and other key locations. To break the storm, they must split up, each taking a separate path to destroy these focal points. Their brotherhood is tested, but ultimately their determination prevails. The Ruinstorm begins to dissipate, opening the way to Terra.`,
+        blurbSafe: `Guilliman, the Lion, and Sanguinius unite to breach the Ruinstorm and reach Terra. Each Primarch must face trials designed to break them—their greatest fears and doubts manifested by the warp. To break the storm, they must split up and face separate paths.`
     },
     'wolfsbane': {
         number: 'XLIX',
@@ -885,7 +920,8 @@ const bookData = {
             <strong>Timeline:</strong> 012.M31<br>
             <strong>Status:</strong> The Wolf King's Gambit
         `,
-        blurb: `Leman Russ, filled with guilt over Prospero and driven by prophecy, attempts a desperate assassination strike against Horus. Armed with the spear Gungnir, forged by the Emperor Himself to wound even a Primarch empowered by Chaos, Russ leads his Wolves in a suicidal assault. He fights through the Sons of Horus to face the Warmaster in single combat. Russ wounds Horus gravely, but the Chaos Gods restore their champion. Russ barely escapes with his life, his Legion mauled. The gambit fails, but it proves Horus is not invincible—he can be hurt.`
+        blurb: `Leman Russ, filled with guilt over Prospero and driven by prophecy, attempts a desperate assassination strike against Horus. Armed with the spear Gungnir, forged by the Emperor Himself to wound even a Primarch empowered by Chaos, Russ leads his Wolves in a suicidal assault. He fights through the Sons of Horus to face the Warmaster in single combat. Russ wounds Horus gravely, but the Chaos Gods restore their champion. Russ barely escapes with his life, his Legion mauled. The gambit fails, but it proves Horus is not invincible—he can be hurt.`,
+        blurbSafe: `Leman Russ, driven by prophecy and guilt over Prospero, attempts a desperate assassination strike against Horus. Armed with the Emperor's spear Gungnir, Russ leads his Wolves in a suicidal assault to prove the Warmaster can be wounded.`
     },
     'titandeath': {
         number: 'LIII',
@@ -902,7 +938,8 @@ const bookData = {
             <strong>Timeline:</strong> 012.M31<br>
             <strong>Status:</strong> The Titanic Gate
         `,
-        blurb: `Beta-Garmon, the gateway to the Solar System, becomes the site of the largest Titan battle in the Heresy. Dozens of Titan Legios clash across multiple worlds in the Beta-Garmon cluster. Imperator Titans fall in apocalyptic duels as both sides commit everything to control this strategic chokepoint. The Loyalist Legios fight desperately to delay the traitors' advance, buying Terra precious time to prepare. The battle rages for months, with millions dying beneath the Titans' feet. Though the loyalists eventually retreat, they have bloodied the traitor host and delayed the inevitable siege.`
+        blurb: `Beta-Garmon, the gateway to the Solar System, becomes the site of the largest Titan battle in the Heresy. Dozens of Titan Legios clash across multiple worlds in the Beta-Garmon cluster. Imperator Titans fall in apocalyptic duels as both sides commit everything to control this strategic chokepoint. The Loyalist Legios fight desperately to delay the traitors' advance, buying Terra precious time to prepare. The battle rages for months, with millions dying beneath the Titans' feet. Though the loyalists eventually retreat, they have bloodied the traitor host and delayed the inevitable siege.`,
+        blurbSafe: `Beta-Garmon, the gateway to the Solar System, becomes the site of the largest Titan battle in the Heresy. Dozens of Titan Legios clash across multiple worlds as both sides commit everything to control this strategic chokepoint leading to Terra.`
     },
     'slaves-to-darkness': {
         number: 'LI',
@@ -919,7 +956,8 @@ const bookData = {
             <strong>Timeline:</strong> 013.M31<br>
             <strong>Status:</strong> The Warmaster's Final Corruption
         `,
-        blurb: `Horus lies wounded from Russ's spear, and the Chaos Gods withdraw their favor. The traitor alliance fractures as each Legion pursues its own dark agenda. Horus must prove himself worthy of the Gods' power once more. He purges the last remnants of his humanity, embracing full damnation. The Warmaster finally accepts that he is not using Chaos—he serves it utterly. The Gods restore their champion, now more monster than man. United under Horus's dark will, the traitor fleets finally begin their advance on Terra. The Siege is about to begin.`
+        blurb: `Horus lies wounded from Russ's spear, and the Chaos Gods withdraw their favor. The traitor alliance fractures as each Legion pursues its own dark agenda. Horus must prove himself worthy of the Gods' power once more. He purges the last remnants of his humanity, embracing full damnation. The Warmaster finally accepts that he is not using Chaos—he serves it utterly. The Gods restore their champion, now more monster than man. United under Horus's dark will, the traitor fleets finally begin their advance on Terra. The Siege is about to begin.`,
+        blurbSafe: `Horus lies wounded and the Chaos Gods withdraw their favor. The traitor alliance fractures as each Legion pursues its own dark agenda. Horus must prove himself worthy once more and unite the traitor forces for the final advance on Terra.`
     },
     'the-buried-dagger': {
         number: 'LIV',
@@ -936,7 +974,8 @@ const bookData = {
             <strong>Timeline:</strong> 013.M31<br>
             <strong>Status:</strong> The Final Fall
         `,
-        blurb: `The Death Guard fleet becomes trapped in the warp, where Nurgle's Rot consumes them. Mortarion, who swore never to serve tyrants after his upbringing on Barbarus, watches his sons die in agony. In desperation, he calls out for aid—and Nurgle answers. Mortarion pledges himself to the Plague God to save his Legion. They emerge from the warp transformed into bloated plague carriers, their white armor turned corpse-grey and green. Meanwhile, Malcador continues forging the foundations of the Inquisition and Grey Knights. The stage is set for the final confrontation.`
+        blurb: `The Death Guard fleet becomes trapped in the warp, where Nurgle's Rot consumes them. Mortarion, who swore never to serve tyrants after his upbringing on Barbarus, watches his sons die in agony. In desperation, he calls out for aid—and Nurgle answers. Mortarion pledges himself to the Plague God to save his Legion. They emerge from the warp transformed into bloated plague carriers, their white armor turned corpse-grey and green. Meanwhile, Malcador continues forging the foundations of the Inquisition and Grey Knights. The stage is set for the final confrontation.`,
+        blurbSafe: `The Death Guard fleet becomes trapped in the warp, where Nurgle's plague consumes them. Mortarion, who swore never to serve tyrants, faces a terrible choice as his sons die in agony. Meanwhile, Malcador continues forging the foundations of the Inquisition and Grey Knights.`
     },
     'tales-of-heresy': {
         number: 'X',
@@ -952,7 +991,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods across the Heresy<br>
             <strong>Status:</strong> Multiple Perspectives
         `,
-        blurb: `An anthology of short stories exploring different aspects and moments of the Horus Heresy. Includes tales of individual Space Marines, forgotten battles, and character studies of heroes and villains from across the Legions. These stories illuminate corners of the Heresy not covered in the main novels, from the perspective of mortal humans, minor characters, and warriors on both sides of the conflict.`
+        blurb: `An anthology of short stories exploring different aspects and moments of the Horus Heresy. Includes tales of individual Space Marines, forgotten battles, and character studies of heroes and villains from across the Legions. These stories illuminate corners of the Heresy not covered in the main novels, from the perspective of mortal humans, minor characters, and warriors on both sides of the conflict.`,
+        blurbSafe: `An anthology of short stories exploring different aspects and moments of the Horus Heresy. These tales illuminate corners of the conflict not covered in the main novels, from the perspective of mortal humans, minor characters, and warriors on both sides.`
     },
     'age-of-darkness': {
         number: 'XVI',
@@ -968,7 +1008,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods across the Heresy<br>
             <strong>Status:</strong> Galaxy in Flames
         `,
-        blurb: `An anthology collecting stories that explore the wider impact of the Heresy across the galaxy. While the Primarchs wage their war, countless smaller conflicts rage. These tales show how ordinary people, forgotten warriors, and minor characters experience the Age of Darkness. From desperate last stands to acts of heroism that history will forget, these stories paint a comprehensive picture of a galaxy consumed by civil war.`
+        blurb: `An anthology collecting stories that explore the wider impact of the Heresy across the galaxy. While the Primarchs wage their war, countless smaller conflicts rage. These tales show how ordinary people, forgotten warriors, and minor characters experience the Age of Darkness. From desperate last stands to acts of heroism that history will forget, these stories paint a comprehensive picture of a galaxy consumed by civil war.`,
+        blurbSafe: `An anthology collecting stories that explore the wider impact of the Heresy across the galaxy. While the Primarchs wage their war, countless smaller conflicts rage, showing how ordinary people and forgotten warriors experience the Age of Darkness.`
     },
     'the-primarchs': {
         number: 'XX',
@@ -984,7 +1025,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods<br>
             <strong>Status:</strong> Primarch Chronicles
         `,
-        blurb: `Four novellas focusing on individual Primarchs and pivotal moments in their journey through the Heresy. Includes stories of Fulgrim's fall, Ferrus Manus's iron will, Lion El'Jonson's pursuit of Konrad Curze, and Alpharius's machinations. Each tale provides deep character insight into these godlike beings and the choices that damn or redeem them.`
+        blurb: `Four novellas focusing on individual Primarchs and pivotal moments in their journey through the Heresy. Includes stories of Fulgrim's fall, Ferrus Manus's iron will, Lion El'Jonson's pursuit of Konrad Curze, and Alpharius's machinations. Each tale provides deep character insight into these godlike beings and the choices that damn or redeem them.`,
+        blurbSafe: `Four novellas focusing on individual Primarchs and pivotal moments in their journey through the Heresy. Each tale provides deep character insight into these godlike beings and the choices they face during the conflict.`
     },
     'shadows-of-treachery': {
         number: 'XXII',
@@ -1000,7 +1042,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods of the Heresy<br>
             <strong>Status:</strong> Hidden Betrayals
         `,
-        blurb: `An anthology collecting novellas and short stories about the secret betrayals and shadow conflicts of the Heresy. Includes tales of the Raven Guard's shattered gene-seed, the Imperial Fists preparing Terra's defenses, and the covert operations that shaped the war's outcome. These are the stories of treachery that happened in the dark, away from the grand battlefields.`
+        blurb: `An anthology collecting novellas and short stories about the secret betrayals and shadow conflicts of the Heresy. Includes tales of the Raven Guard's shattered gene-seed, the Imperial Fists preparing Terra's defenses, and the covert operations that shaped the war's outcome. These are the stories of treachery that happened in the dark, away from the grand battlefields.`,
+        blurbSafe: `An anthology collecting novellas and short stories about the secret betrayals and shadow conflicts of the Heresy. These are the stories of treachery that happened in the dark, away from the grand battlefields.`
     },
     'mark-of-calth': {
         number: 'XXV',
@@ -1017,7 +1060,8 @@ const bookData = {
             <strong>Timeline:</strong> 007-009.M31<br>
             <strong>Status:</strong> The Underworld War
         `,
-        blurb: `Stories set during and after the Battle of Calth. After the orbital bombardment, the Ultramarines and Word Bearers continue fighting in Calth's underground arcologies. These tales explore the bitter guerrilla warfare in the dark, as both sides struggle for survival beneath the poisoned surface. The Mark of Calth—the brand of betrayal—burns deep in every Ultramarine's soul.`
+        blurb: `Stories set during and after the Battle of Calth. After the orbital bombardment, the Ultramarines and Word Bearers continue fighting in Calth's underground arcologies. These tales explore the bitter guerrilla warfare in the dark, as both sides struggle for survival beneath the poisoned surface. The Mark of Calth—the brand of betrayal—burns deep in every Ultramarine's soul.`,
+        blurbSafe: `Stories set during and after the Battle of Calth. After the orbital bombardment, the Ultramarines and Word Bearers continue fighting in Calth's underground arcologies in bitter guerrilla warfare beneath the poisoned surface.`
     },
     'legacies-of-betrayal': {
         number: 'XXXI',
@@ -1032,7 +1076,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods of the Heresy<br>
             <strong>Status:</strong> Echoes of Treachery
         `,
-        blurb: `An anthology exploring how the Heresy's betrayals echo through the years and across the galaxy. Stories of warriors dealing with the aftermath of treachery, the weight of broken oaths, and the personal toll of civil war. These tales show that betrayal is not a single act but a wound that never truly heals.`
+        blurb: `An anthology exploring how the Heresy's betrayals echo through the years and across the galaxy. Stories of warriors dealing with the aftermath of treachery, the weight of broken oaths, and the personal toll of civil war. These tales show that betrayal is not a single act but a wound that never truly heals.`,
+        blurbSafe: `An anthology exploring how the Heresy's betrayals echo through the years and across the galaxy. Stories of warriors dealing with the aftermath of treachery, the weight of broken oaths, and the personal toll of civil war.`
     },
     'war-without-end': {
         number: 'XXXIII',
@@ -1047,7 +1092,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods of the Heresy<br>
             <strong>Status:</strong> Endless Conflict
         `,
-        blurb: `Stories depicting the grinding, endless nature of the Heresy. This anthology focuses on campaigns that drag on for years, sieges that never end, and the psychological toll of war without resolution. The Heresy is not just epic battles—it's exhaustion, attrition, and the slow death of hope.`
+        blurb: `Stories depicting the grinding, endless nature of the Heresy. This anthology focuses on campaigns that drag on for years, sieges that never end, and the psychological toll of war without resolution. The Heresy is not just epic battles—it's exhaustion, attrition, and the slow death of hope.`,
+        blurbSafe: `Stories depicting the grinding, endless nature of the Heresy. This anthology focuses on campaigns that drag on for years, sieges that never end, and the psychological toll of war without resolution or hope.`
     },
     'eye-of-terra': {
         number: 'XXXV',
@@ -1063,7 +1109,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods leading to the Siege<br>
             <strong>Status:</strong> Watching from Terra
         `,
-        blurb: `Stories focused on Terra and the Solar System as they prepare for Horus's arrival. These tales explore life on Terra as the Imperium's capital transforms into a fortress, the political machinations in the Imperial Palace, and the billions of ordinary humans who know the enemy is coming but can only wait and hope.`
+        blurb: `Stories focused on Terra and the Solar System as they prepare for Horus's arrival. These tales explore life on Terra as the Imperium's capital transforms into a fortress, the political machinations in the Imperial Palace, and the billions of ordinary humans who know the enemy is coming but can only wait and hope.`,
+        blurbSafe: `Stories focused on Terra and the Solar System as they prepare for Horus's arrival. These tales explore life on Terra as the Imperium's capital transforms into a fortress, with billions knowing the enemy is coming.`
     },
     'the-silent-war': {
         number: 'XXXVII',
@@ -1079,7 +1126,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods of the Heresy<br>
             <strong>Status:</strong> Shadow Operations
         `,
-        blurb: `Chronicles Malcador the Sigillite's secret operations during the Heresy, particularly the formation of the Knights-Errant. These warriors from various Legions are recruited for covert missions that could change the war's outcome. This anthology lays the groundwork for the founding of the Inquisition and the Grey Knights.`
+        blurb: `Chronicles Malcador the Sigillite's secret operations during the Heresy, particularly the formation of the Knights-Errant. These warriors from various Legions are recruited for covert missions that could change the war's outcome. This anthology lays the groundwork for the founding of the Inquisition and the Grey Knights.`,
+        blurbSafe: `Chronicles Malcador the Sigillite's secret operations during the Heresy, particularly the formation of the Knights-Errant. These warriors from various Legions are recruited for covert missions that could change the war's outcome.`
     },
     'corax': {
         number: 'XL',
@@ -1096,7 +1144,8 @@ const bookData = {
             <strong>Timeline:</strong> 007-011.M31<br>
             <strong>Status:</strong> Anthology Collection
         `,
-        blurb: `A collection of novellas and short stories following Corvus Corax through his darkest hours. From the Dropsite Massacre to his gene-seed experiments' horrific failure, this anthology chronicles the Ravenlord's journey through betrayal, loss, and ultimately his quest for vengeance. The stories explore Corax's character and the Raven Guard's desperate struggle to remain relevant in the war while so diminished.`
+        blurb: `A collection of novellas and short stories following Corvus Corax through his darkest hours. From the Dropsite Massacre to his gene-seed experiments' horrific failure, this anthology chronicles the Ravenlord's journey through betrayal, loss, and ultimately his quest for vengeance. The stories explore Corax's character and the Raven Guard's desperate struggle to remain relevant in the war while so diminished.`,
+        blurbSafe: `A collection of novellas and short stories following Corvus Corax through his darkest hours. From the Dropsite Massacre to his desperate experiments, this anthology chronicles the Ravenlord's journey through betrayal, loss, and vengeance.`
     },
     'garro': {
         number: 'XLII',
@@ -1113,7 +1162,8 @@ const bookData = {
             <strong>Timeline:</strong> 005-013.M31<br>
             <strong>Status:</strong> Anthology Collection
         `,
-        blurb: `Chronicles the missions of Nathaniel Garro after his escape from Isstvan III. Now serving Malcador as a Knight-Errant, Garro undertakes dangerous covert operations across the war-torn galaxy. From recruiting other loyalists to hunting traitors, these stories show Garro's transformation from Death Guard Captain to one of the founding members of what will become the Grey Knights.`
+        blurb: `Chronicles the missions of Nathaniel Garro after his escape from Isstvan III. Now serving Malcador as a Knight-Errant, Garro undertakes dangerous covert operations across the war-torn galaxy. From recruiting other loyalists to hunting traitors, these stories show Garro's transformation from Death Guard Captain to one of the founding members of what will become the Grey Knights.`,
+        blurbSafe: `Chronicles the missions of Nathaniel Garro after his escape from Isstvan III. Now serving Malcador as a Knight-Errant, Garro undertakes dangerous covert operations, recruiting other loyalists and hunting traitors across the war-torn galaxy.`
     },
     'shattered-legions': {
         number: 'XLIII',
@@ -1129,7 +1179,8 @@ const bookData = {
             <strong>Timeline:</strong> 006-012.M31<br>
             <strong>Status:</strong> Survivors' War
         `,
-        blurb: `Stories of the survivors from the Dropsite Massacre—the Iron Hands, Salamanders, and Raven Guard who refused to die. Scattered across the galaxy, these shattered Legions wage guerrilla war against the traitors. Consumed by rage or driven by duty, they strike from the shadows, disrupting supply lines and hunting traitor champions. Though broken, they remain the Imperium's vengeance incarnate.`
+        blurb: `Stories of the survivors from the Dropsite Massacre—the Iron Hands, Salamanders, and Raven Guard who refused to die. Scattered across the galaxy, these shattered Legions wage guerrilla war against the traitors. Consumed by rage or driven by duty, they strike from the shadows, disrupting supply lines and hunting traitor champions. Though broken, they remain the Imperium's vengeance incarnate.`,
+        blurbSafe: `Stories of the survivors from the Dropsite Massacre—the Iron Hands, Salamanders, and Raven Guard who refused to die. Scattered across the galaxy, these shattered Legions wage guerrilla war against the traitors.`
     },
     'the-burden-of-loyalty': {
         number: 'XLVIII',
@@ -1144,7 +1195,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods leading to the Siege<br>
             <strong>Status:</strong> The Weight of Duty
         `,
-        blurb: `An anthology exploring the personal cost of loyalty during the Heresy. These stories examine what it means to remain true to one's oaths when everything is falling apart. From Space Marines witnessing their Legions' corruption to mortal soldiers defending worlds that cannot be saved, these are tales of loyalty tested to its limits.`
+        blurb: `An anthology exploring the personal cost of loyalty during the Heresy. These stories examine what it means to remain true to one's oaths when everything is falling apart. From Space Marines witnessing their Legions' corruption to mortal soldiers defending worlds that cannot be saved, these are tales of loyalty tested to its limits.`,
+        blurbSafe: `An anthology exploring the personal cost of loyalty during the Heresy. These stories examine what it means to remain true to one's oaths when everything is falling apart, from Space Marines to mortal soldiers.`
     },
     'born-of-flame': {
         number: 'L',
@@ -1160,7 +1212,8 @@ const bookData = {
             <strong>Timeline:</strong> 006-011.M31<br>
             <strong>Status:</strong> Anthology Collection
         `,
-        blurb: `A collection of Salamanders stories spanning the Heresy. From the Dropsite Massacre's immediate aftermath to the quest to recover Vulkan, these tales chronicle the XVIII Legion's trials. The Salamanders' devotion to their Primarch and their humanitarian values are tested by the war's brutality. Yet even in darkness, they strive to remain protectors of humanity rather than just warriors.`
+        blurb: `A collection of Salamanders stories spanning the Heresy. From the Dropsite Massacre's immediate aftermath to the quest to recover Vulkan, these tales chronicle the XVIII Legion's trials. The Salamanders' devotion to their Primarch and their humanitarian values are tested by the war's brutality. Yet even in darkness, they strive to remain protectors of humanity rather than just warriors.`,
+        blurbSafe: `A collection of Salamanders stories spanning the Heresy. From the Dropsite Massacre's aftermath to the quest to recover Vulkan, these tales chronicle the XVIII Legion's trials and their struggle to remain protectors of humanity.`
     },
     'heralds-of-the-siege': {
         number: 'LII',
@@ -1175,58 +1228,69 @@ const bookData = {
             <strong>Timeline:</strong> 012-013.M31<br>
             <strong>Status:</strong> The Siege Approaches
         `,
-        blurb: `The final anthology before the Siege of Terra begins. These stories depict the last battles before Horus's fleet arrives at the Solar System. Loyalists make desperate final stands to buy Terra more time. The traitor Legions eliminate the last obstacles in their path. Every moment matters, every battle could mean the difference between survival and extinction. The Siege is coming, and the galaxy holds its breath.`
+        blurb: `The final anthology before the Siege of Terra begins. These stories depict the last battles before Horus's fleet arrives at the Solar System. Loyalists make desperate final stands to buy Terra more time. The traitor Legions eliminate the last obstacles in their path. Every moment matters, every battle could mean the difference between survival and extinction. The Siege is coming, and the galaxy holds its breath.`,
+        blurbSafe: `The final anthology before the Siege of Terra begins. These stories depict the last battles before Horus's fleet arrives at the Solar System, as loyalists make desperate stands to buy Terra more time.`
     },
     // PRIMARCHS NOVEL SERIES
     'sot-solar-war': {
         number: 'SoT 1', title: 'THE SOLAR WAR', author: 'John French', timeline: '014.M31', coverImage: 'images/sot-solar-war.jpg', legions: ['Imperial Fists', 'Sons of Horus', 'Iron Warriors'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> John French<br><strong>Series:</strong> Siege of Terra #1<br><strong>Legions:</strong> Imperial Fists, Iron Warriors, Sons of Horus<br><strong>Main Characters:</strong> Rogal Dorn, Ezekyle Abaddon, Perturabo<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The War Comes Home`,
-        blurb: `The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods. The Solar War is fought in the void, with massive fleet battles determining whether the traitors can even reach Terra's surface.`
+        blurb: `The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods. The Solar War is fought in the void, with massive fleet battles determining whether the traitors can even reach Terra's surface.`,
+        blurbSafe: `The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods in massive void battles that will determine if the traitors can even reach Terra's surface.`
     },
     'sot-lost-and-damned': {
         number: 'SoT 2', title: 'THE LOST AND THE DAMNED', author: 'Guy Haley', timeline: '014.M31', coverImage: 'images/sot-lost-and-damned.jpg', legions: ['Imperial Fists', 'All Traitor Legions'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Guy Haley<br><strong>Series:</strong> Siege of Terra #2<br><strong>Legions:</strong> Imperial Fists, Traitor Legions<br><strong>Main Characters:</strong> Rogal Dorn, Perturabo, Zenobi<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Noose Tightens`,
-        blurb: `The traitors land on Terra. Billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war. The first walls begin to crack.`
+        blurb: `The traitors land on Terra. Billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war. The first walls begin to crack.`,
+        blurbSafe: `The traitors land on Terra, and billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war.`
     },
     'sot-first-wall': {
         number: 'SoT 3', title: 'THE FIRST WALL', author: 'Gav Thorpe', timeline: '014.M31', coverImage: 'images/sot-first-wall.jpg', legions: ['Imperial Fists', 'Iron Warriors'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Series:</strong> Siege of Terra #3<br><strong>Legions:</strong> Imperial Fists, Iron Warriors<br><strong>Main Characters:</strong> Rogal Dorn, Perturabo, Sigismund<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Siege Intensifies`,
-        blurb: `The Iron Warriors assault the Lion's Gate spaceport. Perturabo's siege engines grind against Dorn's fortifications in the ultimate test of defense versus offense. The battle becomes personal as master siege-breaker faces master fortifier. When the first wall falls, the defenders realize Terra itself may be conquered.`
+        blurb: `The Iron Warriors assault the Lion's Gate spaceport. Perturabo's siege engines grind against Dorn's fortifications in the ultimate test of defense versus offense. The battle becomes personal as master siege-breaker faces master fortifier. When the first wall falls, the defenders realize Terra itself may be conquered.`,
+        blurbSafe: `The Iron Warriors assault the Lion's Gate spaceport in the ultimate test of defense versus offense. Perturabo's siege engines grind against Dorn's fortifications as master siege-breaker faces master fortifier.`
     },
     'sot-saturnine': {
         number: 'SoT 4', title: 'SATURNINE', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-saturnine.jpg', legions: ['Imperial Fists', 'Sons of Horus', 'Alpha Legion'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #4<br><strong>Legions:</strong> Imperial Fists, Sons of Horus, Alpha Legion<br><strong>Main Characters:</strong> Rogal Dorn, Horus Lupercal, Alpharius Omegon, Sigismund<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Turning Point`,
-        blurb: `The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has anticipated this. In a shocking confrontation, one of the twin Primarchs meets their end. Sigismund duels traitor champions. The Siege's momentum shifts at terrible cost.`
+        blurb: `The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has anticipated this. In a shocking confrontation, one of the twin Primarchs meets their end. Sigismund duels traitor champions. The Siege's momentum shifts at terrible cost.`,
+        blurbSafe: `The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has prepared for this. The Siege's momentum shifts in shocking confrontations and duels.`
     },
     'sot-mortis': {
         number: 'SoT 5', title: 'MORTIS', author: 'John French', timeline: '014.M31', coverImage: 'images/sot-mortis.jpg', legions: ['Collegia Titanica', 'Death Guard'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> John French<br><strong>Series:</strong> Siege of Terra #5<br><strong>Factions:</strong> Titan Legions, Death Guard<br><strong>Main Characters:</strong> Titan Princeps, Mortarion<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Titan War`,
-        blurb: `The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans and Mortarion's Death Guard. The war becomes existential as the Warp breaches reality. Time itself begins to break down. The defenders fight to keep reality intact.`
+        blurb: `The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans and Mortarion's Death Guard. The war becomes existential as the Warp breaches reality. Time itself begins to break down. The defenders fight to keep reality intact.`,
+        blurbSafe: `The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans as the war becomes existential and the Warp breaches reality itself.`
     },
     'sot-warhawk': {
         number: 'SoT 6', title: 'WARHAWK', author: 'Chris Wraight', timeline: '014.M31', coverImage: 'images/sot-warhawk.jpg', legions: ['White Scars', 'Death Guard'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Series:</strong> Siege of Terra #6<br><strong>Legions:</strong> White Scars, Death Guard<br><strong>Main Characters:</strong> Jaghatai Khan, Mortarion<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Khan's Vengeance`,
-        blurb: `Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death. The Khan must defeat Mortarion or Terra falls.`
+        blurb: `Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death. The Khan must defeat Mortarion or Terra falls.`,
+        blurbSafe: `Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death.`
     },
     'sot-echoes-of-eternity': {
         number: 'SoT 7', title: 'ECHOES OF ETERNITY', author: 'Aaron Dembski-Bowden', timeline: '014.M31', coverImage: 'images/sot-echoes-of-eternity.jpg', legions: ['Blood Angels', 'World Eaters'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Series:</strong> Siege of Terra #7<br><strong>Legions:</strong> Blood Angels, World Eaters<br><strong>Main Characters:</strong> Sanguinius, Angron, Khârn<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Angels and Daemons`,
-        blurb: `The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of his own death. The battle is apocalyptic as Blood Angels succumb to the Black Rage. Sanguinius defeats Angron, banishing him to the Warp, but the victory costs dearly. The Great Angel's wings are broken.`
+        blurb: `The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of his own death. The battle is apocalyptic as Blood Angels succumb to the Black Rage. Sanguinius defeats Angron, banishing him to the Warp, but the victory costs dearly. The Great Angel's wings are broken.`,
+        blurbSafe: `The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of what may come. The battle is apocalyptic as Blood Angels face their darkest curse.`
     },
     'sot-end-and-death-vol-1': {
         number: 'SoT 8a', title: 'THE END AND THE DEATH: VOLUME I', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-1.jpg', legions: ['All Legions'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 1<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> Horus Lupercal, The Emperor, Sanguinius, Rogal Dorn, Garviel Loken<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Endgame Begins`,
-        blurb: `The Siege reaches its climax. Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered across the ship. Loyalist heroes converge for the final battle. Reality warps as Warp and materium collide.`
+        blurb: `The Siege reaches its climax. Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered across the ship. Loyalist heroes converge for the final battle. Reality warps as Warp and materium collide.`,
+        blurbSafe: `The Siege reaches its climax as Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered. Loyalist heroes converge for the final battle.`
     },
     'sot-end-and-death-vol-2': {
         number: 'SoT 8b', title: 'THE END AND THE DEATH: VOLUME II', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-2.jpg', legions: ['All Legions'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 2<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> The Emperor, Sanguinius, Horus Lupercal, Garviel Loken, Ollanius Pius<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> The Angel Falls`,
-        blurb: `Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing he walks to his death. The Great Angel fights valiantly, wounding the Warmaster before falling to his corrupted brother. Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread.`
+        blurb: `Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing he walks to his death. The Great Angel fights valiantly, wounding the Warmaster before falling to his corrupted brother. Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread.`,
+        blurbSafe: `Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing what fate may await him. The Great Angel fights valiantly while Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread.`
     },
     'sot-end-and-death-vol-3': {
         number: 'SoT 8c', title: 'THE END AND THE DEATH: VOLUME III', author: 'Dan Abnett', timeline: '014.M31', coverImage: 'images/sot-end-and-death-vol-3.jpg', legions: ['All Legions'], series: 'siege-of-terra',
         details: `<strong>Author:</strong> Dan Abnett<br><strong>Series:</strong> Siege of Terra #8 Part 3<br><strong>Legions:</strong> All Legions<br><strong>Main Characters:</strong> The Emperor, Horus Lupercal, Ollanius Pius, Garviel Loken<br><strong>Timeline:</strong> 014.M31<br><strong>Status:</strong> Father Against Son`,
-        blurb: `The Emperor confronts Horus in the most consequential battle in human history. When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption. He unleashes His full power, destroying Horus utterly—but the assault leaves Him mortally wounded. Dorn finds his father dying. The Heresy ends, but the Imperium is forever changed.`
+        blurb: `The Emperor confronts Horus in the most consequential battle in human history. When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption. He unleashes His full power, destroying Horus utterly—but the assault leaves Him mortally wounded. Dorn finds his father dying. The Heresy ends, but the Imperium is forever changed.`,
+        blurbSafe: `The Emperor confronts Horus in the most consequential battle in human history. When loyalists fall before the Warmaster, the Emperor must decide if his son can be redeemed—and what price victory will demand.`
     },
     'primarch-roboute-guilliman': {
         number: 'P1',
@@ -1245,7 +1309,8 @@ const bookData = {
             <strong>Timeline:</strong> Pre-Heresy and Heresy Era<br>
             <strong>Status:</strong> The Avenging Son
         `,
-        blurb: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance and built the XIII Legion into a perfectly organized war machine. This novel explores Guilliman's character, his vision for humanity, and how his experiences during the Great Crusade prepared him for the trials of the Horus Heresy. The Master of the Five Hundred Worlds must balance his role as warrior and statesman.`
+        blurb: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance and built the XIII Legion into a perfectly organized war machine. This novel explores Guilliman's character, his vision for humanity, and how his experiences during the Great Crusade prepared him for the trials of the Horus Heresy. The Master of the Five Hundred Worlds must balance his role as warrior and statesman.`,
+        blurbSafe: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance. This novel explores Guilliman's vision for humanity, his philosophy of warfare and statecraft, and how the Master of the Five Hundred Worlds balances his roles as warrior and administrator.`
     },
     'primarch-leman-russ': {
         number: 'P2',
@@ -1264,7 +1329,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade Era<br>
             <strong>Status:</strong> The Wolf King
         `,
-        blurb: `Leman Russ, the savage King of Fenris, embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature, his relationship with his brothers, and the burden of being the Emperor's chosen sanction against those who fall from the Imperial Truth. The Great Wolf hunts in the darkness.`
+        blurb: `Leman Russ, the savage King of Fenris, embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature, his relationship with his brothers, and the burden of being the Emperor's chosen sanction against those who fall from the Imperial Truth. The Great Wolf hunts in the darkness.`,
+        blurbSafe: `Leman Russ embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature and the burden of being the Emperor's chosen sanction.`
     },
     'primarch-magnus': {
         number: 'P3',
@@ -1283,7 +1349,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade Era<br>
             <strong>Status:</strong> The Crimson King
         `,
-        blurb: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment, his experiments with psychic powers, and the events that set him on a collision course with the Emperor's edicts. The most powerful psyker among the Primarchs believes he can master Chaos itself—a fatal hubris that will doom his Legion.`
+        blurb: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment, his experiments with psychic powers, and the events that set him on a collision course with the Emperor's edicts. The most powerful psyker among the Primarchs believes he can master Chaos itself—a fatal hubris that will doom his Legion.`,
+        blurbSafe: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment and the events that set him on a collision course with the Emperor's edicts.`
     },
     'primarch-perturabo': {
         number: 'P4',
@@ -1302,7 +1369,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade, Destruction of Olympia<br>
             <strong>Status:</strong> The Lord of Iron
         `,
-        blurb: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the events that push him toward Horus's cause. Perturabo's bitterness at being underappreciated, his perfectionism, and his willingness to sacrifice anything for victory make him one of the most tragic Primarchs—a brilliant mind consumed by resentment.`
+        blurb: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the events that push him toward Horus's cause. Perturabo's bitterness at being underappreciated, his perfectionism, and his willingness to sacrifice anything for victory make him one of the most tragic Primarchs—a brilliant mind consumed by resentment.`,
+        blurbSafe: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the bitterness at being underappreciated that pushes him toward darker paths.`
     },
     'primarch-lorgar': {
         number: 'P5',
@@ -1321,7 +1389,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade Era<br>
             <strong>Status:</strong> The Urizen
         `,
-        blurb: `Lorgar, the most faithful son, spreads the Imperial Truth across the galaxy—but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction, his search for meaning, and his ultimate discovery of the Chaos Gods. The Urizen's journey from devoted son to first heretic is one of the Heresy's most pivotal transformations.`
+        blurb: `Lorgar, the most faithful son, spreads the Imperial Truth across the galaxy—but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction, his search for meaning, and his ultimate discovery of the Chaos Gods. The Urizen's journey from devoted son to first heretic is one of the Heresy's most pivotal transformations.`,
+        blurbSafe: `Lorgar spreads the Imperial Truth across the galaxy, but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction and his search for meaning beyond the Imperial Truth.`
     },
     'primarch-fulgrim': {
         number: 'P6',
@@ -1340,7 +1409,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade Era<br>
             <strong>Status:</strong> The Phoenician
         `,
-        blurb: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence, his pride in his Legion's achievements, and the character flaws that make him vulnerable to Slaanesh's corruption. The quest for perfection becomes a path to damnation for the most beautiful of the Emperor's sons.`
+        blurb: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence, his pride in his Legion's achievements, and the character flaws that make him vulnerable to Slaanesh's corruption. The quest for perfection becomes a path to damnation for the most beautiful of the Emperor's sons.`,
+        blurbSafe: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence and the character flaws that make him vulnerable to corruption.`
     },
     'primarch-ferrus-manus': {
         number: 'P7',
@@ -1359,7 +1429,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade Era<br>
             <strong>Status:</strong> The Gorgon
         `,
-        blurb: `Ferrus Manus, lord of the Iron Hands, embodies strength and logic. His metal hands grant him power but also represent his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the tragic irony that his inflexibility and inability to see his brother's corruption leads to his death at Isstvan V. The strongest Primarch falls because he cannot adapt.`
+        blurb: `Ferrus Manus, lord of the Iron Hands, embodies strength and logic. His metal hands grant him power but also represent his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the tragic irony that his inflexibility and inability to see his brother's corruption leads to his death at Isstvan V. The strongest Primarch falls because he cannot adapt.`,
+        blurbSafe: `Ferrus Manus embodies strength and logic, his metal hands granting power while representing his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the inflexibility that defines him.`
     },
     'primarch-jaghatai-khan': {
         number: 'P8',
@@ -1378,7 +1449,8 @@ const bookData = {
             <strong>Timeline:</strong> Discovery on Chogoris<br>
             <strong>Status:</strong> The Warhawk
         `,
-        blurb: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else. The Warhawk's free spirit and strategic genius make him both invaluable to the Imperium and difficult to control—a warrior who rides where he wills.`
+        blurb: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else. The Warhawk's free spirit and strategic genius make him both invaluable to the Imperium and difficult to control—a warrior who rides where he wills.`,
+        blurbSafe: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else.`
     },
     'primarch-vulkan': {
         number: 'P9',
@@ -1397,7 +1469,8 @@ const bookData = {
             <strong>Timeline:</strong> Nocturne and Great Crusade<br>
             <strong>Status:</strong> The Lord of Drakes
         `,
-        blurb: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity rather than just conquering for it, and the events that made the Salamanders the most humanitarian of all Space Marine Legions. Vulkan's compassion and his Perpetual nature set him apart from his brothers.`
+        blurb: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity rather than just conquering for it, and the events that made the Salamanders the most humanitarian of all Space Marine Legions. Vulkan's compassion and his Perpetual nature set him apart from his brothers.`,
+        blurbSafe: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity, and what made the Salamanders the most humanitarian of all Legions.`
     },
     'primarch-corax': {
         number: 'P10',
@@ -1416,7 +1489,8 @@ const bookData = {
             <strong>Timeline:</strong> Liberation of Lycaeus<br>
             <strong>Status:</strong> The Deliverer
         `,
-        blurb: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare and asymmetric combat. This novel explores Corax's hatred of tyrants, his preference for precision strikes over overwhelming force, and how his experiences shaped the Raven Guard's tactics. The Ravenlord operates from the shadows, striking where least expected, disappearing before the enemy can respond.`
+        blurb: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare and asymmetric combat. This novel explores Corax's hatred of tyrants, his preference for precision strikes over overwhelming force, and how his experiences shaped the Raven Guard's tactics. The Ravenlord operates from the shadows, striking where least expected, disappearing before the enemy can respond.`,
+        blurbSafe: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare. This novel explores Corax's hatred of tyrants, his preference for precision strikes, and how his experiences shaped the Raven Guard's tactics.`
     },
     'primarch-angron': {
         number: 'P11',
@@ -1435,7 +1509,8 @@ const bookData = {
             <strong>Timeline:</strong> Return to Nuceria during Heresy<br>
             <strong>Status:</strong> The Red Angel
         `,
-        blurb: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in the gladiator pits. The Butcher's Nails implanted in his brain drive him toward constant rage and violence. This novel explores the tragedy of Angron—a Primarch who could have been noble but was broken before the Emperor found him. His only peace comes through bloodshed, and Lorgar offers him a terrible apotheosis.`
+        blurb: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in the gladiator pits. The Butcher's Nails implanted in his brain drive him toward constant rage and violence. This novel explores the tragedy of Angron—a Primarch who could have been noble but was broken before the Emperor found him. His only peace comes through bloodshed, and Lorgar offers him a terrible apotheosis.`,
+        blurbSafe: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in gladiator pits. The Butcher's Nails drive him toward constant rage. This novel explores the tragedy of a Primarch broken before the Emperor found him.`
     },
     'primarch-konrad-curze': {
         number: 'P12',
@@ -1454,7 +1529,8 @@ const bookData = {
             <strong>Timeline:</strong> Various periods<br>
             <strong>Status:</strong> The Night Haunter
         `,
-        blurb: `Konrad Curze is cursed with visions of his own death and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness, his belief in fate's inevitability, and his complex relationship with his father. The Night Haunter is judge, jury, and executioner—but he has already seen his own execution and welcomes it.`
+        blurb: `Konrad Curze is cursed with visions of his own death and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness, his belief in fate's inevitability, and his complex relationship with his father. The Night Haunter is judge, jury, and executioner—but he has already seen his own execution and welcomes it.`,
+        blurbSafe: `Konrad Curze is cursed with visions and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness and his belief in fate's inevitability.`
     },
     'primarch-lion-eljonson': {
         number: 'P13',
@@ -1473,7 +1549,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade Era<br>
             <strong>Status:</strong> The First
         `,
-        blurb: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature and inability to trust create divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that prevents him from seeing the betrayal festering on Caliban. The Lord of the First is supreme in battle but blind to the politics that will split his Legion.`
+        blurb: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature and inability to trust create divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that prevents him from seeing the betrayal festering on Caliban. The Lord of the First is supreme in battle but blind to the politics that will split his Legion.`,
+        blurbSafe: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature creates divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that blinds him.`
     },
     'primarch-alpharius': {
         number: 'P14',
@@ -1492,7 +1569,8 @@ const bookData = {
             <strong>Timeline:</strong> Discovery and Great Crusade<br>
             <strong>Status:</strong> The Hydra
         `,
-        blurb: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep even from each other. The Alpha Legion's methods of infiltration and misdirection are controversial, and this book may be the greatest misdirection of all. Every revelation might be a lie, every truth might be deception. I am Alpharius.`
+        blurb: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep even from each other. The Alpha Legion's methods of infiltration and misdirection are controversial, and this book may be the greatest misdirection of all. Every revelation might be a lie, every truth might be deception. I am Alpharius.`,
+        blurbSafe: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep. Every revelation might be a lie, every truth might be deception.`
     },
     'primarch-mortarion': {
         number: 'P15',
@@ -1511,7 +1589,8 @@ const bookData = {
             <strong>Timeline:</strong> Barbarus and Great Crusade<br>
             <strong>Status:</strong> The Reaper
         `,
-        blurb: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord—the Emperor had to do that. This failure drives Mortarion's resentment. This novel explores his philosophy of endurance, his hatred of tyrants and psykers, and the bitter irony that he will become a slave to Nurgle, the greatest tyrant of all.`
+        blurb: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord—the Emperor had to do that. This failure drives Mortarion's resentment. This novel explores his philosophy of endurance, his hatred of tyrants and psykers, and the bitter irony that he will become a slave to Nurgle, the greatest tyrant of all.`,
+        blurbSafe: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord. This failure drives his resentment of tyrants and psykers.`
     },
     'primarch-rogal-dorn': {
         number: 'P16',
@@ -1530,7 +1609,8 @@ const bookData = {
             <strong>Timeline:</strong> Great Crusade Era<br>
             <strong>Status:</strong> The Praetorian
         `,
-        blurb: `Rogal Dorn is the Emperor's Praetorian, chosen to fortify the Imperial Palace and defend Terra itself. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty. Where other Primarchs might question or interpret orders, Dorn simply obeys. His rigid adherence to truth and honor make him the perfect defender—but also blind him to the subtleties of treachery.`
+        blurb: `Rogal Dorn is the Emperor's Praetorian, chosen to fortify the Imperial Palace and defend Terra itself. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty. Where other Primarchs might question or interpret orders, Dorn simply obeys. His rigid adherence to truth and honor make him the perfect defender—but also blind him to the subtleties of treachery.`,
+        blurbSafe: `Rogal Dorn is the Emperor's Praetorian, chosen to fortify Terra and defend the Imperial Palace. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty and truth.`
     },
     'primarch-sanguinius': {
         number: 'P17',
@@ -1549,7 +1629,8 @@ const bookData = {
             <strong>Timeline:</strong> Imperium Secundus Era<br>
             <strong>Status:</strong> The Great Angel
         `,
-        blurb: `Sanguinius, most beloved of the Primarchs, struggles with visions of his own death and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing he will die at Horus's hands but facing that fate with nobility. Sanguinius represents what the Imperium could have been: beauty, wisdom, and martial prowess combined. His sacrifice will echo through ten thousand years.`
+        blurb: `Sanguinius, most beloved of the Primarchs, struggles with visions of his own death and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing he will die at Horus's hands but facing that fate with nobility. Sanguinius represents what the Imperium could have been: beauty, wisdom, and martial prowess combined. His sacrifice will echo through ten thousand years.`,
+        blurbSafe: `Sanguinius struggles with visions and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing what fate may await him but facing it with nobility. Sanguinius represents what the Imperium could have been.`
     },
     // SIEGE OF TERRA SERIES - The Epic Conclusion
 };
@@ -1781,10 +1862,14 @@ function showModal(bookKey) {
 
     const status = readingProgress.getStatus(bookKey);
 
+    // Check spoiler setting
+    const showSpoilers = document.getElementById('showSpoilers')?.checked ?? true;
+    const blurbText = showSpoilers ? book.blurb : (book.blurbSafe || book.blurb);
+
     // Populate modal content with clickable character names
     modalTitle.textContent = book.title;
     const clickableDetails = makeCharactersClickable(book.details);
-    const clickableBlurb = makeCharactersClickable(book.blurb);
+    const clickableBlurb = makeCharactersClickable(blurbText);
 
     // Determine button text and class based on status
     let buttonText, buttonClass;
@@ -1810,7 +1895,9 @@ function showModal(bookKey) {
             ${clickableDetails}
         </div>
     `;
-    blurb.innerHTML = `<p>${clickableBlurb}</p>`;
+
+    const spoilerWarning = !showSpoilers ? '<div class="spoiler-notice">📖 SPOILER-FREE MODE - Major plot points hidden</div>' : '';
+    blurb.innerHTML = spoilerWarning + `<p>${clickableBlurb}</p>`;
 
     // Add event listener for status cycle button
     const markReadBtn = document.getElementById('markReadBtn');
@@ -1852,8 +1939,9 @@ function showModal(bookKey) {
         });
     }, 0);
 
-    // Show modal
+    // Show modal and store current book key
     modalOverlay.classList.add('active');
+    modalOverlay.dataset.currentBook = bookKey;
     document.body.style.overflow = 'hidden';
 }
 
@@ -2015,6 +2103,7 @@ function setupFilterListeners() {
     const primarchsCheckbox = document.getElementById('includePrimarchs');
     const siegeCheckbox = document.getElementById('includeSiegeOfTerra');
     const sortSelect = document.getElementById('sortOrder');
+    const spoilersCheckbox = document.getElementById('showSpoilers');
 
     // Apply current filters
     const applyFilters = () => {
@@ -2034,6 +2123,18 @@ function setupFilterListeners() {
 
     // Siege of Terra series toggle
     siegeCheckbox.addEventListener('change', applyFilters);
+
+    // Spoiler toggle - refresh open modal if any
+    spoilersCheckbox.addEventListener('change', () => {
+        // If a book modal is currently open, refresh it
+        const modalOverlay = document.getElementById('modalOverlay');
+        if (modalOverlay && modalOverlay.classList.contains('active')) {
+            const openBookKey = modalOverlay.dataset.currentBook;
+            if (openBookKey) {
+                showModal(openBookKey);
+            }
+        }
+    });
 
     // Search input with debounce
     let searchTimeout;
