@@ -1517,7 +1517,7 @@ const bookData = {
             <strong>Author:</strong> Nick Kyme<br>
             <strong>Legion:</strong> Salamanders<br>
             <strong>Primarch:</strong> Vulkan<br>
-            <strong>Main Characters:</strong> Vulkan, Numeon, Magnus the Red, Eldrad Ulthran<br>
+            <strong>Main Characters:</strong> Vulkan, Numeon, Magnus the Red, Eldrad Ulthran, John Grammaticus<br>
             <strong>Timeline:</strong> 011.M31<br>
             <strong>Status:</strong> The Primarch Returns
         `,
