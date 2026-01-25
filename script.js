@@ -1691,8 +1691,18 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
         }
 
         // Filter by legion if specified
-        if (filterLegion && !book.legions.includes(filterLegion)) {
-            return; // Skip this book
+        if (filterLegion) {
+            if (filterLegion === '__LOYALIST__') {
+                // Show if book has any loyalist legion
+                const hasLoyalist = book.legions.some(l => loyalistLegions.includes(l));
+                if (!hasLoyalist) return;
+            } else if (filterLegion === '__TRAITOR__') {
+                // Show if book has any traitor legion
+                const hasTraitor = book.legions.some(l => traitorLegions.includes(l));
+                if (!hasTraitor) return;
+            } else if (!book.legions.includes(filterLegion)) {
+                return; // Skip this book
+            }
         }
 
         // Search filter - check title, author, characters, and blurb
@@ -2063,6 +2073,12 @@ function closeCharacterModal() {
     document.body.style.overflow = '';
 }
 
+// Define loyalist vs traitor legions
+const loyalistLegions = ['Ultramarines', 'Imperial Fists', 'Blood Angels', 'Dark Angels', 'Space Wolves',
+    'White Scars', 'Raven Guard', 'Salamanders', 'Iron Hands'];
+const traitorLegions = ['Sons of Horus', 'Luna Wolves', 'Death Guard', 'Emperor\'s Children', 'World Eaters',
+    'Thousand Sons', 'Word Bearers', 'Iron Warriors', 'Night Lords', 'Alpha Legion'];
+
 // Populate legion filter dropdown
 function populateLegionFilter() {
     const legionSet = new Set();
@@ -2070,7 +2086,8 @@ function populateLegionFilter() {
     Object.values(bookData).forEach(book => {
         if (book.legions) {
             book.legions.forEach(legion => {
-                if (legion !== 'Various') {
+                // Skip meta-categories
+                if (legion !== 'Various' && legion !== 'All Legions' && legion !== 'All Traitor Legions') {
                     legionSet.add(legion);
                 }
             });
@@ -2080,6 +2097,24 @@ function populateLegionFilter() {
     const sortedLegions = Array.from(legionSet).sort();
     const filterSelect = document.getElementById('legionFilter');
 
+    // Add meta-filters first
+    const loyalistOption = document.createElement('option');
+    loyalistOption.value = '__LOYALIST__';
+    loyalistOption.textContent = '⚔ ALL LOYALIST LEGIONS';
+    filterSelect.appendChild(loyalistOption);
+
+    const traitorOption = document.createElement('option');
+    traitorOption.value = '__TRAITOR__';
+    traitorOption.textContent = '☠ ALL TRAITOR LEGIONS';
+    filterSelect.appendChild(traitorOption);
+
+    // Add separator
+    const separator = document.createElement('option');
+    separator.disabled = true;
+    separator.textContent = '──────────';
+    filterSelect.appendChild(separator);
+
+    // Add individual legions
     sortedLegions.forEach(legion => {
         const option = document.createElement('option');
         option.value = legion;
