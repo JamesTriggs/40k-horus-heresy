@@ -1079,9 +1079,15 @@ body.traitor-theme .allegiance-toggle:hover {
 
 .character-portrait img {
     width: 200px;
-    height: auto;
+    height: 200px;
+    object-fit: contain;
     border: 3px solid var(--warning-amber);
     box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+    background: #1a1a1a;
+}
+
+.character-portrait img[src*="placeholder"] {
+    opacity: 0.8;
 }
 
 .character-info {
@@ -1170,11 +1176,13 @@ body.traitor-theme .allegiance-toggle:hover {
     }
 
     .allegiance-toggle {
+        position: fixed;
         top: 0.5rem;
         right: 0.5rem;
         padding: 0.5rem 1rem;
         font-size: 0.65rem;
         letter-spacing: 0.08rem;
+        z-index: 1000;
     }
 
     .allegiance-icon {
@@ -1473,11 +1481,16 @@ body.traitor-theme .allegiance-toggle:hover {
 
     .character-portrait img {
         width: 150px;
+        height: 150px;
     }
 
     .character-name {
         font-size: 1.5rem;
         text-align: center;
+    }
+
+    .allegiance-text {
+        font-size: 0.6rem;
     }
 
     .character-role,

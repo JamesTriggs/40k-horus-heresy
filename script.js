@@ -226,6 +226,643 @@ const characterData = {
         legion: 'Imperial Fists',
         role: 'First Captain, Emperor\'s Champion',
         bio: 'Sigismund served as First Captain of the Imperial Fists Legion during the Great Crusade and Horus Heresy. He became the Emperor\'s Champion defending Terra during the Siege and subsequently founded the Black Templars Chapter, serving as its first High Marshal for over 10,000 years.'
+    },
+    'luther': {
+        name: 'Luther',
+        image: 'images/character-placeholder.svg',
+        legion: 'Dark Angels',
+        role: 'Master of Caliban',
+        bio: 'Luther was Lion El\'Jonson\'s mentor and friend on Caliban who led the knightly orders. Left behind to govern Caliban while the Lion led the Crusade, his growing resentment led him to rebellion.'
+    },
+    'cypher': {
+        name: 'Cypher',
+        image: 'images/character-placeholder.svg',
+        legion: 'Fallen Angels',
+        role: 'Lord Cypher',
+        bio: 'The mysterious Lord Cypher is a title held by members of the Fallen Dark Angels. Bearer of the Lion Sword and the Bolt Pistol, his true allegiance remains unknown.'
+    },
+    'nemiel': {
+        name: 'Nemiel',
+        image: 'images/character-placeholder.svg',
+        legion: 'Dark Angels',
+        role: 'Redemptor',
+        bio: 'Nemiel was a Redemptor (Chaplain) of the Dark Angels and cousin to Zahariel. His rigid adherence to the Emperor\'s edicts brought him into conflict with his Legion.'
+    },
+    'zahariel': {
+        name: 'Zahariel',
+        image: 'images/character-placeholder.svg',
+        legion: 'Dark Angels / Fallen',
+        role: 'Librarian, Lord Cypher',
+        bio: 'Zahariel El\'Zurias was a powerful Librarian of the Dark Angels from Caliban. His journey led him to side with Luther during the Fall of Caliban.'
+    },
+    'zahariel-el-zurias': {
+        name: 'Zahariel El Zurias',
+        image: 'images/character-placeholder.svg',
+        legion: 'Dark Angels / Fallen',
+        role: 'Librarian, Lord Cypher',
+        bio: 'Zahariel El\'Zurias was a powerful Librarian of the Dark Angels from Caliban. His journey led him to side with Luther during the Fall of Caliban.'
+    },
+    'bjorn': {
+        name: 'Bjorn',
+        image: 'images/character-placeholder.svg',
+        legion: 'Space Wolves',
+        role: 'Wolf Guard',
+        bio: 'Bjorn served under Leman Russ during the Heresy. He would become the oldest living Space Marine, entombed in a Dreadnought for over ten millennia.'
+    },
+    'bjorn-fell-handed': {
+        name: 'Bjorn Fell-Handed',
+        image: 'images/character-placeholder.svg',
+        legion: 'Space Wolves',
+        role: 'Wolf Guard',
+        bio: 'Bjorn served under Leman Russ during the Heresy. He would become the oldest living Space Marine, entombed in a Dreadnought for over ten millennia.'
+    },
+    'fabius-bile': {
+        name: 'Fabius Bile',
+        image: 'images/character-placeholder.svg',
+        legion: 'Emperor\'s Children',
+        role: 'Chief Apothecary',
+        bio: 'Fabius Bile served as Chief Apothecary of the Emperor\'s Children. His twisted genetic experiments earned him the title Primogenitor.'
+    },
+    'maloghurst': {
+        name: 'Maloghurst',
+        image: 'images/character-placeholder.svg',
+        legion: 'Sons of Horus',
+        role: 'Equerry to Horus',
+        bio: 'Maloghurst the Twisted served as Horus\'s equerry and most trusted advisor, remaining loyal through the Warmaster\'s fall to Chaos.'
+    },
+    'raldoron': {
+        name: 'Raldoron',
+        image: 'images/character-placeholder.svg',
+        legion: 'Blood Angels',
+        role: 'First Captain',
+        bio: 'Raldoron was First Captain of the Blood Angels, one of Sanguinius\'s most trusted warriors throughout the Great Crusade and Heresy.'
+    },
+    'meros': {
+        name: 'Meros',
+        image: 'images/character-placeholder.svg',
+        legion: 'Blood Angels',
+        role: 'Captain',
+        bio: 'Meros was a Blood Angels captain who played a crucial role at Signus Prime, making the ultimate sacrifice to save his Legion.'
+    },
+    'marius-gage': {
+        name: 'Marius Gage',
+        image: 'images/character-placeholder.svg',
+        legion: 'Ultramarines',
+        role: 'Chapter Master',
+        bio: 'Marius Gage served as Guilliman\'s First Captain and later Chapter Master, holding the Ultramarines together through the Battle of Calth.'
+    },
+    'remus-ventanus': {
+        name: 'Remus Ventanus',
+        image: 'images/character-placeholder.svg',
+        legion: 'Ultramarines',
+        role: 'Captain',
+        bio: 'Remus Ventanus, captain of the 4th Company, proved instrumental during the Battle of Calth with his tactical brilliance and leadership.'
+    },
+    'forrix': {
+        name: 'Forrix',
+        image: 'images/character-placeholder.svg',
+        legion: 'Iron Warriors',
+        role: 'Warsmith, Triarch',
+        bio: 'Forrix the Breaker was one of Perturabo\'s Triarchs and the Legion\'s oldest warrior, serving as a voice of brutal pragmatism.'
+    },
+    'kroeger': {
+        name: 'Kroeger',
+        image: 'images/character-placeholder.svg',
+        legion: 'Iron Warriors',
+        role: 'Warsmith',
+        bio: 'Kroeger was a Warsmith known for his vicious nature and skill in siege warfare, leading assaults throughout the Heresy.'
+    },
+    'numeon': {
+        name: 'Numeon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Salamanders',
+        role: 'Captain',
+        bio: 'Artellus Numeon was captain of the Salamanders who led the desperate quest to recover and restore Vulkan.'
+    },
+    'artellus-numeon': {
+        name: 'Artellus Numeon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Salamanders',
+        role: 'Captain',
+        bio: 'Artellus Numeon was captain of the Salamanders who led the desperate quest to recover and restore Vulkan.'
+    },
+    'the-emperor': {
+        name: 'The Emperor',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Emperor of Mankind',
+        bio: 'The Emperor is the immortal ruler and founder of the Imperium, a godlike being of immense psychic power who led humanity through the Great Crusade.'
+    },
+    'john-grammaticus': {
+        name: 'John Grammaticus',
+        image: 'images/character-placeholder.svg',
+        legion: 'Cabal / Perpetual',
+        role: 'Agent, Perpetual',
+        bio: 'John Grammaticus is a Perpetual blessed with the ability to understand any language. He served the Cabal before defecting during the Heresy.'
+    },
+    'julius-kaesoron': {
+        name: 'Julius Kaesoron',
+        image: 'images/character-placeholder.svg',
+        legion: 'Emperor\'s Children',
+        role: 'First Captain',
+        bio: 'Julius Kaesoron was First Captain of the Emperor\'s Children, eventually falling to Slaanesh and ascending to daemon prince.'
+    },
+    'ignatius-grulgor': {
+        name: 'Ignatius Grulgor',
+        image: 'images/character-placeholder.svg',
+        legion: 'Death Guard',
+        role: 'Captain',
+        bio: 'Ignatius Grulgor was Captain of the Death Guard 2nd Company, killed and resurrected by Nurgle as a daemon prince.'
+    },
+    'voyen': {
+        name: 'Voyen',
+        image: 'images/character-placeholder.svg',
+        legion: 'Death Guard',
+        role: 'Battle-Brother',
+        bio: 'Voyen was a loyal Death Guard who helped Garro escape the Isstvan betrayal and warn Terra.'
+    },
+    'tarasha-euten': {
+        name: 'Tarasha Euten',
+        image: 'images/character-placeholder.svg',
+        legion: 'Ultramar',
+        role: 'Chamberlain Principal',
+        bio: 'Tarasha Euten served as Roboute Guilliman\'s adoptive mother and Chamberlain Principal of Macragge.'
+    },
+    'azkaellon': {
+        name: 'Azkaellon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Blood Angels',
+        role: 'Commander of Sanguinary Guard',
+        bio: 'Azkaellon commanded the Sanguinary Guard, Sanguinius\'s elite bodyguard, serving with unwavering devotion.'
+    },
+    'agatone': {
+        name: 'Agatone',
+        image: 'images/character-placeholder.svg',
+        legion: 'Salamanders',
+        role: 'Firedrake',
+        bio: 'Agatone was a member of the elite Firedrakes who accompanied Numeon on the quest to recover Vulkan.'
+    },
+    'branne-nev': {
+        name: 'Branne Nev',
+        image: 'images/character-placeholder.svg',
+        legion: 'Raven Guard',
+        role: 'Commander',
+        bio: 'Branne Nev was a Raven Guard commander who survived the Dropsite Massacre and helped rebuild the Legion.'
+    },
+    'nykona-sharrowkyn': {
+        name: 'Nykona Sharrowkyn',
+        image: 'images/character-placeholder.svg',
+        legion: 'Raven Guard',
+        role: 'Veteran Sergeant',
+        bio: 'Nykona Sharrowkyn was one of the Raven Guard\'s deadliest warriors, a master marksman who famously wounded Fulgrim.'
+    },
+    'archamus': {
+        name: 'Archamus',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperial Fists',
+        role: 'Master of Huscarls',
+        bio: 'Archamus served as Master of the Huscarls, Rogal Dorn\'s elite guard and most trusted advisor.'
+    },
+    'armillus-dynat': {
+        name: 'Armillus Dynat',
+        image: 'images/character-placeholder.svg',
+        legion: 'Alpha Legion',
+        role: 'Harrowmaster',
+        bio: 'Armillus Dynat was a Harrowmaster leading covert Alpha Legion operations with typical deception and misdirection.'
+    },
+    'shiban-khan': {
+        name: 'Shiban Khan',
+        image: 'images/character-placeholder.svg',
+        legion: 'White Scars',
+        role: 'Captain',
+        bio: 'Shiban Khan was one of the White Scars\' most aggressive captains, playing a key role in the Legion\'s choice to remain loyal.'
+    },
+    'torghun-khan': {
+        name: 'Torghun Khan',
+        image: 'images/character-placeholder.svg',
+        legion: 'White Scars',
+        role: 'Captain',
+        bio: 'Torghun Khan briefly sided with Horus before returning to loyalty, reflecting the White Scars\' internal conflict.'
+    },
+    'kasper-hawser': {
+        name: 'Kasper Hawser',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperial Army',
+        role: 'Skjald',
+        bio: 'Kasper Hawser was a remembrancer whose unique perspective provided insight into the Space Wolves and the Prospero campaign.'
+    },
+    'lemuel-gaumon': {
+        name: 'Lemuel Gaumon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Thousand Sons',
+        role: 'Remembrancer',
+        bio: 'Lemuel Gaumon was a remembrancer who witnessed Magnus\'s hubris and Prospero\'s tragic fall.'
+    },
+    'ignace-karkasy': {
+        name: 'Ignace Karkasy',
+        image: 'images/character-placeholder.svg',
+        legion: 'Sons of Horus',
+        role: 'Poet',
+        bio: 'Ignace Karkasy was a poet-remembrancer whose artistic soul recognized the corruption spreading through the Sons of Horus.'
+    },
+    'petronella-vivar': {
+        name: 'Petronella Vivar',
+        image: 'images/character-placeholder.svg',
+        legion: 'Sons of Horus',
+        role: 'Remembrancer',
+        bio: 'Petronella Vivar documented Horus\'s achievements and witnessed the Warmaster\'s transformation firsthand.'
+    },
+    'kai-zulane': {
+        name: 'Kai Zulane',
+        image: 'images/character-placeholder.svg',
+        legion: 'Adeptus Astra Telepathica',
+        role: 'Astropath',
+        bio: 'Kai Zulane received prophetic visions about the Heresy and became hunted across Terra for his dangerous knowledge.'
+    },
+    'cyrene-valantion': {
+        name: 'Cyrene Valantion',
+        image: 'images/character-placeholder.svg',
+        legion: 'Word Bearers',
+        role: 'Blessed Lady',
+        bio: 'Cyrene Valantion became the Blessed Lady of the Word Bearers after being blinded by the Emperor\'s psychic assault.'
+    },
+    'dalia-cythera': {
+        name: 'Dalia Cythera',
+        image: 'images/character-placeholder.svg',
+        legion: 'Mechanicum',
+        role: 'Adept',
+        bio: 'Dalia Cythera was a Mechanicum adept with empathic abilities who became linked to the Dragon of Mars.'
+    },
+    'kelbor-hal': {
+        name: 'Kelbor-Hal',
+        image: 'images/character-placeholder.svg',
+        legion: 'Dark Mechanicum',
+        role: 'Fabricator General',
+        bio: 'Kelbor-Hal betrayed Mars to Horus, his ambition and thirst for forbidden knowledge dooming the Red Planet to civil war.'
+    },
+    'barabas-dantioch': {
+        name: 'Barabas Dantioch',
+        image: 'images/character-placeholder.svg',
+        legion: 'Iron Warriors',
+        role: 'Warsmith',
+        bio: 'Barabas Dantioch remained loyal despite his Legion\'s treachery, defending the Pharos beacon alongside the Ultramarines.'
+    },
+    'alexis-polux': {
+        name: 'Alexis Polux',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperial Fists',
+        role: 'Captain',
+        bio: 'Alexis Polux served with distinction at Phall and Sotha, later becoming Chapter Master of the Crimson Fists.'
+    },
+    'ilya-ravallion': {
+        name: 'Ilya Ravallion',
+        image: 'images/character-placeholder.svg',
+        legion: 'White Scars',
+        role: 'Szu',
+        bio: 'Ilya Ravallion was a logistical officer whose photographic memory and counsel proved invaluable to Jaghatai Khan.'
+    },
+    'yesugei': {
+        name: 'Yesugei',
+        image: 'images/character-placeholder.svg',
+        legion: 'White Scars',
+        role: 'Stormseer',
+        bio: 'Yesugei was chief Stormseer of the White Scars, master of their psychic traditions and spiritual guide.'
+    },
+    'eldrad-ulthran': {
+        name: 'Eldrad Ulthran',
+        image: 'images/character-placeholder.svg',
+        legion: 'Craftworld Ulthwé',
+        role: 'Farseer',
+        bio: 'Eldrad Ulthran, ancient Farseer of Ulthwé, manipulated events from the shadows even during humanity\'s civil war.'
+    },
+    'ra-endymion': {
+        name: 'Ra Endymion',
+        image: 'images/character-placeholder.svg',
+        legion: 'Legio Custodes',
+        role: 'Tribune',
+        bio: 'Ra Endymion was a Custodian Tribune who fought in the Webway War at the Emperor\'s side.'
+    },
+    'diocletian-coros': {
+        name: 'Diocletian Coros',
+        image: 'images/character-placeholder.svg',
+        legion: 'Legio Custodes',
+        role: 'Tribune',
+        bio: 'Diocletian Coros led Custodians in the desperate Webway War beneath the Imperial Palace.'
+    },
+    'arkhan-land': {
+        name: 'Arkhan Land',
+        image: 'images/character-placeholder.svg',
+        legion: 'Mechanicum',
+        role: 'Technoarchaeologist',
+        bio: 'Arkhan Land was a brilliant technoarchaeologist whose rediscovered technologies bore his name for millennia.'
+    },
+    'zephon': {
+        name: 'Zephon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Blood Angels',
+        role: 'Dominion',
+        bio: 'Zephon overcame severe injuries with Arkhan Land\'s help, fighting in both the Webway War and Siege of Terra.'
+    },
+    'ollanius-pius': {
+        name: 'Ollanius Pius',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperial Army',
+        role: 'Perpetual',
+        bio: 'Ollanius Pius was a Perpetual whose final stand before the Emperor became one of the Heresy\'s most legendary moments.'
+    },
+    'amendera-kendel': {
+        name: 'Amendera Kendel',
+        image: 'images/character-placeholder.svg',
+        legion: 'Sisters of Silence',
+        role: 'Oblivion Knight',
+        bio: 'Amendera Kendel joined Malcador\'s Knights-Errant, hunting traitors with the Sisters of Silence.'
+    },
+    'tylos-rubio': {
+        name: 'Tylos Rubio',
+        image: 'images/character-placeholder.svg',
+        legion: 'Ultramarines',
+        role: 'Librarian',
+        bio: 'Tylos Rubio was an Ultramarines Librarian whose psychic gifts proved vital in the Knights-Errant.'
+    },
+    'kabandha': {
+        name: 'Ka\'Bandha',
+        image: 'images/character-placeholder.svg',
+        legion: 'Khorne',
+        role: 'Bloodthirster',
+        bio: 'Ka\'Bandha is an Exalted Bloodthirster who became the Blood Angels\' eternal nemesis after Signus Prime.'
+    },
+    'aun-helwintr': {
+        name: 'Aun Helwintr',
+        image: 'images/character-placeholder.svg',
+        legion: 'Space Wolves',
+        role: 'Priest',
+        bio: 'Aun Helwintr served the Space Wolves as one of their priests during the Great Crusade and Heresy.'
+    },
+    'adept-zeth': {
+        name: 'Adept Zeth',
+        image: 'images/character-placeholder.svg',
+        legion: 'Mechanicum',
+        role: 'Adept',
+        bio: 'Koriel Zeth was a Mechanicum adept who championed progress and innovation during Mars\' civil war.'
+    },
+    'amon': {
+        name: 'Amon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Thousand Sons',
+        role: 'Captain',
+        bio: 'Amon was a captain of the Thousand Sons who served under Ahriman through Prospero and beyond.'
+    },
+    'ignis': {
+        name: 'Ignis',
+        image: 'images/character-placeholder.svg',
+        legion: 'Thousand Sons',
+        role: 'Master of Ruin',
+        bio: 'Ignis was a Thousand Sons sorcerer and member of the Cabal, using numerology to analyze battlefields.'
+    },
+    'calliphone': {
+        name: 'Calliphone',
+        image: 'images/character-placeholder.svg',
+        legion: 'Olympia',
+        role: 'Sister of Perturabo',
+        bio: 'Calliphone was Perturabo\'s beloved adoptive sister on Olympia, one of the few who understood the Primarch\'s tormented soul.'
+    },
+    'agapito': {
+        name: 'Agapito',
+        image: 'images/character-placeholder.svg',
+        legion: 'Raven Guard',
+        role: 'Commander',
+        bio: 'Agapito was a Raven Guard commander who served Corvus Corax through the Legion\'s darkest hours.'
+    },
+    'navar-hef': {
+        name: 'Navar Hef',
+        image: 'images/character-placeholder.svg',
+        legion: 'Raven Guard',
+        role: 'Commander',
+        bio: 'Navar Hef was a veteran commander of the Raven Guard who fought alongside Corax.'
+    },
+    'atticus': {
+        name: 'Atticus',
+        image: 'images/character-placeholder.svg',
+        legion: 'Iron Hands',
+        role: 'Clan Commander',
+        bio: 'Atticus was an Iron Hands commander consumed by rage after Ferrus Manus\'s death.'
+    },
+    'galba': {
+        name: 'Galba',
+        image: 'images/character-placeholder.svg',
+        legion: 'Raven Guard',
+        role: 'Captain',
+        bio: 'Galba was a Raven Guard captain among the survivors who sought refuge on Pythos.'
+    },
+    'cassian-dracos': {
+        name: 'Cassian Dracos',
+        image: 'images/character-placeholder.svg',
+        legion: 'Salamanders',
+        role: 'Chaplain',
+        bio: 'Cassian Dracos was a Salamanders Chaplain who fought on Pythos against daemonic corruption.'
+    },
+    'kaspian-heletine': {
+        name: 'Kaspian Heletine',
+        image: 'images/character-placeholder.svg',
+        legion: 'Salamanders',
+        role: 'Apothecary',
+        bio: 'Kaspian Heletine served as a Salamanders Apothecary during the quest to recover Vulkan.'
+    },
+    'spear': {
+        name: 'Spear',
+        image: 'images/character-placeholder.svg',
+        legion: 'Officio Assassinorum',
+        role: 'Execution Force Leader',
+        bio: 'Spear led the Execution Force assembled to assassinate Horus, commanding operatives from multiple Clades.'
+    },
+    'koyne': {
+        name: 'Koyne',
+        image: 'images/character-placeholder.svg',
+        legion: 'Officio Assassinorum',
+        role: 'Garantine',
+        bio: 'Koyne was a member of the rare Garantine Clade, part of the assassination attempt on the Warmaster.'
+    },
+    'jenniker-soneka': {
+        name: 'Jenniker Soneka',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperial Army',
+        role: 'Geno Five-Two Chiliad',
+        bio: 'Jenniker Soneka commanded elements of the Geno Five-Two Chiliad alongside the Alpha Legion.'
+    },
+    'alivia-sureka': {
+        name: 'Alivia Sureka',
+        image: 'images/character-placeholder.svg',
+        legion: 'Perpetual',
+        role: 'Guardian',
+        bio: 'Alivia Sureka was a Perpetual who guarded secrets on Molech, ultimately aiding in the defense against Horus.'
+    },
+    'bromzi': {
+        name: 'Bromzi',
+        image: 'images/character-placeholder.svg',
+        legion: 'Alpha Legion',
+        role: 'Operative',
+        bio: 'Bronzi was an Alpha Legion operative involved in their covert operations during the Great Crusade.'
+    },
+    'peto': {
+        name: 'Peto',
+        image: 'images/character-placeholder.svg',
+        legion: 'Alpha Legion',
+        role: 'Operative',
+        bio: 'Peto was an Alpha Legion warrior participating in the XX Legion\'s mysterious activities.'
+    },
+    'wyrdmake': {
+        name: 'Wyrdmake',
+        image: 'images/character-placeholder.svg',
+        legion: 'Space Wolves',
+        role: 'Rune Priest',
+        bio: 'Wyrdmake was a Rune Priest of the Space Wolves who served in the campaign against Prospero.'
+    },
+    'cestus': {
+        name: 'Cestus',
+        image: 'images/character-placeholder.svg',
+        legion: 'Ultramarines',
+        role: 'Captain',
+        bio: 'Cestus was an Ultramarines captain who led the pursuit of the Furious Abyss to prevent Macragge\'s destruction.'
+    },
+    'skraal': {
+        name: 'Skraal',
+        image: 'images/character-placeholder.svg',
+        legion: 'World Eaters',
+        role: 'Warrior',
+        bio: 'Skraal was a World Eater who remained loyal to the Emperor, joining the hunt for the Furious Abyss.'
+    },
+    'brynngar': {
+        name: 'Brynngar',
+        image: 'images/character-placeholder.svg',
+        legion: 'Space Wolves',
+        role: 'Wolf Guard',
+        bio: 'Brynngar was a Space Wolves Wolf Guard who joined the mission to stop the Furious Abyss.'
+    },
+    'mhotep': {
+        name: 'Mhotep',
+        image: 'images/character-placeholder.svg',
+        legion: 'Thousand Sons',
+        role: 'Sergeant',
+        bio: 'Mhotep was a Thousand Sons warrior who aided loyalist forces in stopping the Word Bearers\' super-weapon.'
+    },
+    'severian': {
+        name: 'Severian',
+        image: 'images/character-placeholder.svg',
+        legion: 'World Eaters',
+        role: 'Captain',
+        bio: 'Severian was a World Eaters captain imprisoned on Terra who became one of the Outcast Dead.'
+    },
+    'atharva': {
+        name: 'Atharva',
+        image: 'images/character-placeholder.svg',
+        legion: 'Thousand Sons',
+        role: 'Librarian',
+        bio: 'Atharva was a Thousand Sons Librarian imprisoned on Terra, one of the Outcast Dead who escaped.'
+    },
+    'tagore': {
+        name: 'Tagore',
+        image: 'images/character-placeholder.svg',
+        legion: 'World Eaters',
+        role: 'Apothecary',
+        bio: 'Tagore was a World Eaters Apothecary among the Outcast Dead fleeing through Terra\'s underhive.'
+    },
+    'zenobi': {
+        name: 'Zenobi',
+        image: 'images/character-placeholder.svg',
+        legion: 'Terran Civilian',
+        role: 'Citizen',
+        bio: 'Zenobi was a civilian on Terra who experienced the horrors of the Siege as ordinary people were caught in the war.'
+    },
+    'warsmith-krendl': {
+        name: 'Warsmith Krendl',
+        image: 'images/character-placeholder.svg',
+        legion: 'Night Lords',
+        role: 'Warsmith',
+        bio: 'Warsmith Krendl led the Night Lords assault on Sotha to destroy the Pharos beacon.'
+    },
+    'ahzek-ahriman': {
+        name: 'Ahzek Ahriman',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Ahzek Ahriman participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'alpharius': {
+        name: 'Alpharius',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Alpharius participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'bronzi': {
+        name: 'Bronzi',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Bronzi participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'calas-typhon': {
+        name: 'Calas Typhon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Calas Typhon participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'ipluvien-maximal': {
+        name: 'Ipluvien Maximal',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Ipluvien Maximal participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'khârn': {
+        name: 'Khârn',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Khârn participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'lion-eljonson': {
+        name: 'Lion El\'Jonson',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Lion El\'Jonson participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'lorgar': {
+        name: 'Lorgar',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Lorgar participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'malcador': {
+        name: 'Malcador',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Malcador participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'the-haunter': {
+        name: 'The Haunter',
+        image: 'images/character-placeholder.svg',
+        legion: 'Unknown',
+        role: 'Figure of the Heresy',
+        bio: 'The Haunter participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'typhon': {
+        name: 'Typhon',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Typhon participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
+    },
+    'zahariel-elzurias': {
+        name: 'Zahariel El\'Zurias',
+        image: 'images/character-placeholder.svg',
+        legion: 'Imperium of Man',
+        role: 'Warrior of the Great Crusade',
+        bio: 'Zahariel El\'Zurias participated in the events of the Horus Heresy. Full records are incomplete - lost to time or classified by Inquisitorial order.'
     }
 };
 

@@ -1,0 +1,33 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(45)">
+      <rect width="20" height="40" fill="#3c3c3c"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="#1a1a1a"/>
+  
+  <!-- Striped pattern -->
+  <rect width="400" height="400" fill="url(#stripes)"/>
+  
+  <!-- Border -->
+  <rect x="5" y="5" width="390" height="390" fill="none" stroke="#d4af37" stroke-width="4"/>
+  <rect x="10" y="10" width="380" height="380" fill="none" stroke="#d4af37" stroke-width="2"/>
+  
+  <!-- Center panel -->
+  <rect x="80" y="150" width="240" height="100" fill="#2a2a2a" stroke="#d4af37" stroke-width="3"/>
+  
+  <!-- Text -->
+  <text x="200" y="190" font-family="monospace" font-size="24" fill="#d4af37" text-anchor="middle" font-weight="bold">DATA</text>
+  <text x="200" y="220" font-family="monospace" font-size="20" fill="#d4af37" text-anchor="middle" font-weight="bold">REDACTED</text>
+  
+  <!-- Warning symbols -->
+  <text x="50" y="50" font-size="30" fill="#8b0000">⚠</text>
+  <text x="350" y="50" font-size="30" fill="#8b0000">⚠</text>
+  <text x="50" y="370" font-size="30" fill="#8b0000">⚠</text>
+  <text x="350" y="370" font-size="30" fill="#8b0000">⚠</text>
+  
+  <!-- Classification stamp -->
+  <text x="200" y="280" font-family="monospace" font-size="12" fill="#8b0000" text-anchor="middle" opacity="0.7">CLASSIFIED - VERMILLION</text>
+</svg>
