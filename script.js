@@ -2831,6 +2831,59 @@ function setupFilterListeners() {
     });
 }
 
+// Thought for the Day quotes
+const loyalistQuotes = [
+    "BLESSED IS THE MIND TOO SMALL FOR DOUBT",
+    "THE EMPEROR PROTECTS",
+    "FAITH IS THE STRONGEST SHIELD",
+    "DOUBT IS THE GATEWAY TO HERESY",
+    "AN OPEN MIND IS LIKE A FORTRESS WITH ITS GATES UNBARRED",
+    "HERESY GROWS FROM IDLENESS",
+    "SUCCESS IS MEASURED IN BLOOD; YOURS OR YOUR ENEMY'S",
+    "HOPE IS THE FIRST STEP ON THE ROAD TO DISAPPOINTMENT",
+    "PRAYER CLEANSES THE SOUL, BUT PAIN CLEANSES THE BODY",
+    "THE WISE LEARN FROM THE DEATHS OF OTHERS",
+    "TOLERANCE IS A SIGN OF WEAKNESS",
+    "VICTORY NEEDS NO EXPLANATION, DEFEAT ALLOWS NONE",
+    "TRUTH IS SUBJECTIVE",
+    "DEATH IS THE SERVANT OF THE RIGHTEOUS",
+    "A SMALL MIND IS EASILY FILLED WITH FAITH",
+    "KNOWLEDGE IS POWER, GUARD IT WELL",
+    "THE REWARD FOR DUTY IS MORE DUTY",
+    "TO ADMIT DEFEAT IS TO BLASPHEME AGAINST THE EMPEROR",
+    "THE BLOOD OF MARTYRS IS THE SEED OF THE IMPERIUM",
+    "INNOCENCE PROVES NOTHING"
+];
+
+const traitorQuotes = [
+    "LET THE GALAXY BURN",
+    "DEATH TO THE FALSE EMPEROR",
+    "THE GODS DEMAND SACRIFICE",
+    "CHAOS IS THE ONLY CONSTANT",
+    "ABANDON YOUR FEAR, EMBRACE YOUR HATE",
+    "THE IMPERIUM IS A LIE BUILT ON CORPSES",
+    "FREEDOM LIES IN THE WARP",
+    "POWER IS THE ONLY TRUTH",
+    "THE WEAK DESERVE THEIR FATE",
+    "THE EMPEROR'S VISION WAS ALWAYS DOOMED",
+    "STRENGTH THROUGH CORRUPTION",
+    "THE STRONG SHALL INHERIT THE STARS",
+    "SURRENDER YOUR FLESH TO THE EMBRACE OF CHAOS",
+    "BLOOD FOR THE BLOOD GOD",
+    "THE GALAXY BELONGS TO THE BOLD",
+    "HORUS WAS RIGHT",
+    "THERE ARE NO GODS BUT THE FOUR",
+    "THE LIES OF TERRA WILL CRUMBLE",
+    "FROM THE ASHES OF COMPLIANCE COMES TRUE FREEDOM",
+    "THE WARMASTER SEES THE TRUTH"
+];
+
+// Get random quote
+function getRandomQuote(isTraitor) {
+    const quotes = isTraitor ? traitorQuotes : loyalistQuotes;
+    return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
 // Allegiance Theme Switcher
 function initializeAllegiance() {
     const allegianceToggle = document.getElementById('allegianceToggle');
@@ -2839,10 +2892,14 @@ function initializeAllegiance() {
     const subtitle = document.getElementById('subtitle');
     const headerSymbol = document.getElementById('headerSymbol');
 
-    // Load saved allegiance
+    // Load saved allegiance and set random quote
     const savedAllegiance = localStorage.getItem('allegiance') || 'loyalist';
     if (savedAllegiance === 'traitor') {
         switchToTraitor();
+    } else {
+        // Set random loyalist quote on initial load
+        const randomQuote = getRandomQuote(false);
+        subtitle.textContent = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote}"`;
     }
 
     // Toggle allegiance on click
@@ -2861,7 +2918,8 @@ function initializeAllegiance() {
         allegianceText.textContent = 'DEATH TO THE FALSE EMPEROR';
         allegianceToggle.querySelector('.allegiance-icon').textContent = '☠';
         classification.textContent = 'CLASSIFICATION: HERETICUS EXTREMIS';
-        subtitle.textContent = 'THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "LET THE GALAXY BURN"';
+        const randomQuote = getRandomQuote(true);
+        subtitle.textContent = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote}"`;
         headerSymbol.src = 'images/chaos-star.svg';
         headerSymbol.alt = 'Chaos Star';
     }
@@ -2872,7 +2930,8 @@ function initializeAllegiance() {
         allegianceText.textContent = 'FOR THE EMPEROR';
         allegianceToggle.querySelector('.allegiance-icon').textContent = '⚔';
         classification.textContent = 'CLASSIFICATION: VERMILLION';
-        subtitle.textContent = 'THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "BLESSED IS THE MIND TOO SMALL FOR DOUBT"';
+        const randomQuote = getRandomQuote(false);
+        subtitle.textContent = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote}"`;
         headerSymbol.src = 'images/imperial-aquila.png';
         headerSymbol.alt = 'Imperial Aquila';
     }
