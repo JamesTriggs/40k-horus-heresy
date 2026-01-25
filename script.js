@@ -2898,7 +2898,7 @@ function initializeAllegiance() {
     const allegianceToggle = document.getElementById('allegianceToggle');
     const allegianceText = document.getElementById('allegianceText');
     const classification = document.getElementById('classification');
-    const subtitle = document.getElementById('subtitle');
+    const thoughtForTheDay = document.getElementById('thoughtForTheDay');
     const headerSymbol = document.getElementById('headerSymbol');
 
     // Load saved allegiance and set random quote
@@ -2908,7 +2908,7 @@ function initializeAllegiance() {
     } else {
         // Set random loyalist quote on initial load
         const randomQuote = getRandomQuote(false);
-        subtitle.innerHTML = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
+        thoughtForTheDay.innerHTML = `THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
     }
 
     // Toggle allegiance on click
@@ -2928,7 +2928,7 @@ function initializeAllegiance() {
         allegianceToggle.querySelector('.allegiance-icon').textContent = '☠';
         classification.textContent = 'CLASSIFICATION: HERETICUS EXTREMIS';
         const randomQuote = getRandomQuote(true);
-        subtitle.innerHTML = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
+        thoughtForTheDay.innerHTML = `THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
         headerSymbol.src = 'images/chaos-star.svg';
         headerSymbol.alt = 'Chaos Star';
     }
@@ -2940,7 +2940,7 @@ function initializeAllegiance() {
         allegianceToggle.querySelector('.allegiance-icon').textContent = '⚔';
         classification.textContent = 'CLASSIFICATION: VERMILLION';
         const randomQuote = getRandomQuote(false);
-        subtitle.innerHTML = `THE COMPLETE HERESY - CHRONOLOGICAL ORDER - THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
+        thoughtForTheDay.innerHTML = `THOUGHT FOR THE DAY: "${randomQuote.quote}" <span class="quote-attribution">— ${randomQuote.attr}</span>`;
         headerSymbol.src = 'images/imperial-aquila.png';
         headerSymbol.alt = 'Imperial Aquila';
     }
