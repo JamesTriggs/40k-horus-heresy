@@ -321,11 +321,13 @@ body::before {
 }
 
 .book-card.book-read {
-    opacity: 0.7;
+    opacity: 0.4;
+    filter: grayscale(60%);
 }
 
 .book-card.book-read:hover {
-    opacity: 1;
+    opacity: 0.8;
+    filter: grayscale(30%);
 }
 
 .book-spine {
