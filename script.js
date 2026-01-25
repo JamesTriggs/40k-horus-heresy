@@ -1,6 +1,19 @@
 // Complete Horus Heresy Book Data Repository - Chronological Order
 // Ordered by in-universe timeline, not publication order
 
+// Character Encyclopedia Data
+const characterData = {
+    "horus-lupercal": { name: "Horus Lupercal", image: "images/character-horus-lupercal.jpg", legion: "Luna Wolves / Sons of Horus", role: "Warmaster of the Great Crusade, Primarch", bio: "One of the twenty Primarchs created by the Emperor, Horus was the first to be rediscovered and became the favored son. Initially the loyal commander of the Luna Wolves Legion during the Great Crusade, he rose to Warmaster—second only to the Emperor in power. However, corrupted by Chaos through manipulation, he initiated the devastating Horus Heresy against the Imperium." },
+    "roboute-guilliman": { name: "Roboute Guilliman", image: "images/character-roboute-guilliman.jpg", legion: "Ultramarines", role: "Primarch, Lord Commander", bio: "Roboute Guilliman is the Primarch of the Ultramarines and one of the Emperor's genetic sons. Renowned as both a brilliant military commander and skilled administrator, he authored the Codex Astartes. After being mortally wounded during the Horus Heresy, he was resurrected ten thousand years later to lead humanity's forces once more." },
+    "lion-el-jonson": { name: "Lion El'Jonson", image: "images/character-lion-el-jonson.jpg", legion: "Dark Angels", role: "Primarch", bio: "Lion El'Jonson is the Primarch of the Dark Angels Legion, renowned for strategic brilliance rivaling only Horus. After vanishing for ten thousand years following Caliban's destruction, he has recently returned to aid the Imperium in its darkest hour." },
+    "sanguinius": { name: "Sanguinius", image: "images/character-sanguinius.jpg", legion: "Blood Angels", role: "Primarch, The Great Angel", bio: "Sanguinius was the Primarch of the Blood Angels and one of the most revered figures in the Imperium. Known as 'The Great Angel,' he was celebrated for his nobility, martial prowess, and unwavering loyalty to the Emperor, ultimately sacrificing himself during the Horus Heresy to enable Horus's defeat." },
+    "garviel-loken": { name: "Garviel Loken", image: "images/character-garviel-loken.jpg", legion: "Luna Wolves / Sons of Horus", role: "Captain, Member of the Mournival", bio: "Garviel Loken was a Space Marine Captain of the Luna Wolves who became a member of the Mournival, the advisory council to Warmaster Horus. He witnessed firsthand the corruption of his legion and remained loyal to the Emperor throughout the Horus Heresy, eventually confronting his former primarch during the Siege of Terra." },
+    "nathaniel-garro": { name: "Nathaniel Garro", image: "images/character-nathaniel-garro.jpg", legion: "Death Guard", role: "Battle-Captain, Knights-Errant", bio: "A loyalist Space Marine Captain from the Death Guard Legion who remained faithful to the Emperor during the Horus Heresy. Garro commanded the frigate Eisenstein and successfully escaped the Isstvan system to warn Terra of the betrayal." },
+    "ezekyle-abaddon": { name: "Ezekyle Abaddon", image: "images/character-ezekyle-abaddon.jpg", legion: "Sons of Horus", role: "First Captain, Warmaster of Chaos", bio: "Ezekyle Abaddon is the Warmaster of Chaos and master of the Black Legion. Once the First Captain of the Sons of Horus during the Great Crusade, he became a central figure in the Horus Heresy before leading devastating Black Crusades against the Imperium." },
+    "erebus": { name: "Erebus", image: "images/character-erebus.jpg", legion: "Word Bearers", role: "First Chaplain", bio: "Erebus served as First Chaplain of the Word Bearers and orchestrated the corruption of both Lorgar and Horus to Chaos. The harbinger of the Horus Heresy, he remains a powerful sorcerer and skilled warrior who continues influencing events across the galaxy." },
+    "malcador-the-sigillite": { name: "Malcador the Sigillite", image: "images/character-malcador-the-sigillite.jpg", legion: "Imperium of Man", role: "First Lord of Terra", bio: "Malcador served as First Lord of Terra and the most powerful human psyker after the Emperor himself. A mysterious immortal figure, he was instrumental in founding the Administratum and orchestrated the creation of the Grey Knights during the Horus Heresy." }
+};
+
 // Reading Progress Tracker
 const readingProgress = {
     load: function() {
@@ -1380,10 +1393,31 @@ modalOverlay.addEventListener('click', (e) => {
 
 // Keyboard event for ESC key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-        closeModal();
+    const charModal = document.getElementById('characterModalOverlay');
+    if (e.key === 'Escape') {
+        if (charModal && charModal.classList.contains('active')) {
+            closeCharacterModal();
+        } else if (modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
     }
 });
+
+// Character modal close button
+const closeCharModalBtn = document.getElementById('closeCharacterModal');
+const charModalOverlay = document.getElementById('characterModalOverlay');
+
+if (closeCharModalBtn) {
+    closeCharModalBtn.addEventListener('click', closeCharacterModal);
+}
+
+if (charModalOverlay) {
+    charModalOverlay.addEventListener('click', (e) => {
+        if (e.target === charModalOverlay) {
+            closeCharacterModal();
+        }
+    });
+}
 
 // Show modal function
 function showModal(bookKey) {
@@ -1396,8 +1430,11 @@ function showModal(bookKey) {
 
     const isRead = readingProgress.isRead(bookKey);
 
-    // Populate modal content
+    // Populate modal content with clickable character names
     modalTitle.textContent = book.title;
+    const clickableDetails = makeCharactersClickable(book.details);
+    const clickableBlurb = makeCharactersClickable(book.blurb);
+
     keyDetails.innerHTML = `
         <div class="modal-book-cover">
             <img src="${book.coverImage}" alt="${book.title} Cover" />
@@ -1406,10 +1443,10 @@ function showModal(bookKey) {
             </button>
         </div>
         <div class="book-details-text">
-            ${book.details}
+            ${clickableDetails}
         </div>
     `;
-    blurb.innerHTML = `<p>${book.blurb}</p>`;
+    blurb.innerHTML = `<p>${clickableBlurb}</p>`;
 
     // Add event listener for mark as read button
     const markReadBtn = document.getElementById('markReadBtn');
@@ -1425,6 +1462,18 @@ function showModal(bookKey) {
         generateBookCards(currentLegionFilter, currentSearch);
     });
 
+    // Add event listeners for character links
+    setTimeout(() => {
+        document.querySelectorAll('.character-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const charKey = e.target.getAttribute('data-character');
+                showCharacterModal(charKey);
+            });
+        });
+    }, 0);
+
     // Show modal
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -1433,6 +1482,76 @@ function showModal(bookKey) {
 // Close modal function
 function closeModal() {
     modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Make character names clickable
+function makeCharactersClickable(detailsHTML) {
+    let processedHTML = detailsHTML;
+
+    // For each character in our database, make their name clickable
+    Object.keys(characterData).forEach(charKey => {
+        const char = characterData[charKey];
+        const name = char.name;
+
+        // Create regex to find the character name
+        const regex = new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+
+        // Replace with clickable span
+        processedHTML = processedHTML.replace(regex, (match) => {
+            return `<span class="character-link" data-character="${charKey}">${match}</span>`;
+        });
+    });
+
+    return processedHTML;
+}
+
+// Show character modal
+function showCharacterModal(characterKey) {
+    const char = characterData[characterKey];
+
+    if (!char) {
+        console.error('Character not found:', characterKey);
+        return;
+    }
+
+    // Populate character modal
+    document.getElementById('characterImage').src = char.image;
+    document.getElementById('characterImage').alt = char.name;
+    document.getElementById('characterName').textContent = char.name;
+    document.getElementById('characterRole').textContent = char.role;
+    document.getElementById('characterLegion').textContent = char.legion;
+    document.getElementById('characterBio').textContent = char.bio;
+
+    // Find all books this character appears in
+    const books = [];
+    Object.keys(bookData).forEach(bookKey => {
+        const book = bookData[bookKey];
+        const searchText = (book.details + ' ' + book.blurb).toLowerCase();
+        if (searchText.includes(char.name.toLowerCase())) {
+            books.push({
+                key: bookKey,
+                title: book.title,
+                number: book.number
+            });
+        }
+    });
+
+    // Display books list
+    const booksHTML = books.length > 0
+        ? `<div class="appears-in-label">APPEARS IN:</div>` +
+          books.map(b => `<div class="character-book-item">${b.number} - ${b.title}</div>`).join('')
+        : '';
+    document.getElementById('characterBooks').innerHTML = booksHTML;
+
+    // Show modal
+    document.getElementById('characterModalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close character modal
+function closeCharacterModal() {
+    document.getElementById('characterModalOverlay').classList.remove('active');
     document.body.style.overflow = '';
 }
 
