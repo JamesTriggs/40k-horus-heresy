@@ -135,12 +135,9 @@ body::before {
     width: 60px;
     height: 60px;
     margin: 0 auto 1rem;
-    background: var(--imperial-gold);
-    clip-path: polygon(
-        50% 0%, 60% 20%, 80% 20%, 65% 35%, 70% 55%, 50% 45%, 30% 55%, 35% 35%, 20% 20%, 40% 20%
-    );
-    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6)) brightness(1.2) contrast(1.1);
     animation: pulse 3s ease-in-out infinite;
+    display: block;
 }
 
 @keyframes pulse {
