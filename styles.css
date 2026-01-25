@@ -1182,7 +1182,7 @@ body.traitor-theme .allegiance-toggle:hover {
         padding: 0.5rem 1rem;
         font-size: 0.65rem;
         letter-spacing: 0.08rem;
-        z-index: 1000;
+        z-index: 2000;
     }
 
     .allegiance-icon {
