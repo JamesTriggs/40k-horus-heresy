@@ -177,6 +177,20 @@ body::before {
     font-style: italic;
 }
 
+.progress-counter {
+    margin-top: 1rem;
+    color: var(--imperial-gold);
+    font-size: 0.85rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--imperial-gold);
+    border-radius: 2px;
+    display: inline-block;
+}
+
 .book-display {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -288,6 +302,30 @@ body::before {
     letter-spacing: 0.05rem;
     z-index: 3;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.read-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(34, 139, 34, 0.95);
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    border: 1px solid #90EE90;
+    border-radius: 2px;
+    letter-spacing: 0.05rem;
+    z-index: 3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.book-card.book-read {
+    opacity: 0.7;
+}
+
+.book-card.book-read:hover {
+    opacity: 1;
 }
 
 .book-spine {
@@ -452,6 +490,9 @@ body::before {
 
 .modal-book-cover {
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .modal-book-cover img {
@@ -459,6 +500,37 @@ body::before {
     height: auto;
     border: 2px solid var(--imperial-gold);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.mark-read-btn {
+    background: linear-gradient(135deg, var(--imperial-gold) 0%, #8b7428 100%);
+    color: var(--dark-metal);
+    border: 2px solid var(--imperial-gold);
+    padding: 0.75rem 1rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.mark-read-btn:hover {
+    background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
+}
+
+.mark-read-btn.read {
+    background: linear-gradient(135deg, #228B22 0%, #1a6b1a 100%);
+    border-color: #90EE90;
+    color: white;
+}
+
+.mark-read-btn.read:hover {
+    background: linear-gradient(135deg, #2eb82e 0%, #228B22 100%);
 }
 
 .book-details-text {
@@ -596,6 +668,13 @@ body::before {
         right: 6px;
     }
 
+    .read-badge {
+        font-size: 0.55rem;
+        padding: 3px 6px;
+        top: 6px;
+        left: 6px;
+    }
+
     /* Modal improvements for mobile */
     .modal-content {
         width: 95%;
@@ -638,8 +717,19 @@ body::before {
         width: 150px;
     }
 
+    .mark-read-btn {
+        font-size: 0.65rem;
+        padding: 0.6rem 0.8rem;
+    }
+
     .book-details-text {
         width: 100%;
+    }
+
+    .progress-counter {
+        font-size: 0.65rem;
+        letter-spacing: 0.1rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .blurb {
@@ -694,5 +784,16 @@ body::before {
 
     .blurb {
         font-size: 0.85rem;
+    }
+
+    .progress-counter {
+        font-size: 0.6rem;
+        letter-spacing: 0.05rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .read-badge {
+        font-size: 0.5rem;
+        padding: 2px 5px;
     }
 }

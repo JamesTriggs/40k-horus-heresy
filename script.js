@@ -1,6 +1,34 @@
 // Complete Horus Heresy Book Data Repository - Chronological Order
 // Ordered by in-universe timeline, not publication order
 
+// Reading Progress Tracker
+const readingProgress = {
+    load: function() {
+        const saved = localStorage.getItem('horusHeresyProgress');
+        return saved ? JSON.parse(saved) : {};
+    },
+    save: function(progress) {
+        localStorage.setItem('horusHeresyProgress', JSON.stringify(progress));
+    },
+    toggleRead: function(bookKey) {
+        const progress = this.load();
+        progress[bookKey] = !progress[bookKey];
+        this.save(progress);
+        return progress[bookKey];
+    },
+    isRead: function(bookKey) {
+        const progress = this.load();
+        return !!progress[bookKey];
+    },
+    getCount: function() {
+        const progress = this.load();
+        return Object.values(progress).filter(v => v).length;
+    },
+    getTotalBooks: function() {
+        return Object.keys(bookData).length;
+    }
+};
+
 const bookData = {
     'descent-of-angels': {
         number: 'VI',
@@ -858,15 +886,17 @@ function generateBookCards() {
     Object.keys(bookData).forEach((bookKey, index) => {
         const book = bookData[bookKey];
         const chronologicalNumber = index + 1;
+        const isRead = readingProgress.isRead(bookKey);
 
         const bookCard = document.createElement('div');
-        bookCard.className = 'book-card';
+        bookCard.className = 'book-card' + (isRead ? ' book-read' : '');
         bookCard.setAttribute('data-book', bookKey);
 
         bookCard.innerHTML = `
             <div class="book-cover" style="background-image: url('${book.coverImage}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                 <div class="book-number-overlay">${book.number}</div>
                 <div class="chronological-badge">Chrono: ${chronologicalNumber}</div>
+                ${isRead ? '<div class="read-badge">✓ READ</div>' : ''}
             </div>
             <div class="book-title">${book.title}</div>
             <div class="book-author">${book.author}</div>
@@ -879,6 +909,19 @@ function generateBookCards() {
 
         bookDisplay.appendChild(bookCard);
     });
+
+    // Update progress counter
+    updateProgressCounter();
+}
+
+// Update reading progress counter
+function updateProgressCounter() {
+    const counter = document.getElementById('progressCounter');
+    if (counter) {
+        const read = readingProgress.getCount();
+        const total = readingProgress.getTotalBooks();
+        counter.textContent = `READING PROGRESS: ${read}/${total} BOOKS COMPLETED`;
+    }
 }
 
 // Get DOM elements
@@ -912,17 +955,34 @@ function showModal(bookKey) {
         return;
     }
 
+    const isRead = readingProgress.isRead(bookKey);
+
     // Populate modal content
     modalTitle.textContent = book.title;
     keyDetails.innerHTML = `
         <div class="modal-book-cover">
             <img src="${book.coverImage}" alt="${book.title} Cover" />
+            <button class="mark-read-btn ${isRead ? 'read' : ''}" id="markReadBtn" data-book="${bookKey}">
+                ${isRead ? '✓ MARK UNREAD' : 'MARK AS READ'}
+            </button>
         </div>
         <div class="book-details-text">
             ${book.details}
         </div>
     `;
     blurb.innerHTML = `<p>${book.blurb}</p>`;
+
+    // Add event listener for mark as read button
+    const markReadBtn = document.getElementById('markReadBtn');
+    markReadBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const nowRead = readingProgress.toggleRead(bookKey);
+        markReadBtn.textContent = nowRead ? '✓ MARK UNREAD' : 'MARK AS READ';
+        markReadBtn.classList.toggle('read', nowRead);
+
+        // Regenerate cards to update visual state
+        generateBookCards();
+    });
 
     // Show modal
     modalOverlay.classList.add('active');
