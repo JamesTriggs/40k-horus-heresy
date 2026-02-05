@@ -766,6 +766,8 @@ body.traitor-theme .allegiance-toggle:hover {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .servo-skull {
@@ -782,6 +784,55 @@ body.traitor-theme .allegiance-toggle:hover {
     font-size: 0.8rem;
     letter-spacing: 0.2rem;
     color: var(--warning-amber);
+}
+
+/* Floating Ordering Guide Button */
+.ordering-guide-float-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--imperial-gold) 0%, #8b7428 100%);
+    border: 3px solid var(--imperial-gold);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-size: 1.5rem;
+}
+
+.ordering-guide-float-btn:hover {
+    background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
+    transform: scale(1.1) rotate(5deg);
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.9),
+        0 0 40px rgba(212, 175, 55, 0.6);
+}
+
+.ordering-guide-float-btn:active {
+    transform: scale(0.95);
+}
+
+body.traitor-theme .ordering-guide-float-btn {
+    background: linear-gradient(135deg, var(--chaos-red) 0%, #660000 100%);
+    border-color: var(--chaos-red);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(139, 0, 0, 0.4);
+}
+
+body.traitor-theme .ordering-guide-float-btn:hover {
+    background: linear-gradient(135deg, #a00000 0%, #8b0000 100%);
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.9),
+        0 0 40px rgba(139, 0, 0, 0.6);
 }
 
 /* Modal Styles */
@@ -1303,6 +1354,187 @@ body.traitor-theme .allegiance-toggle:hover {
     transform: translateX(5px);
 }
 
+/* Styling for ordering decisions content in modal */
+#orderingModalBody {
+    padding: 2rem;
+    color: var(--parchment);
+    line-height: 1.8;
+}
+
+/* Markdown Content Styling for Ordering Decisions */
+#orderingModalBody h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--imperial-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--imperial-gold);
+}
+
+#orderingModalBody h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--imperial-gold);
+    letter-spacing: 0.15rem;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    margin: 1.5rem 0 1rem 0;
+}
+
+#orderingModalBody h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--warning-amber);
+    letter-spacing: 0.1rem;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+#orderingModalBody h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--parchment);
+    margin: 1rem 0 0.5rem 0;
+}
+
+#orderingModalBody p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+#orderingModalBody ul,
+#orderingModalBody ol {
+    margin: 1rem 0 1rem 2rem;
+    font-size: 0.95rem;
+}
+
+#orderingModalBody li {
+    margin-bottom: 0.5rem;
+}
+
+#orderingModalBody strong {
+    color: var(--imperial-gold);
+    font-weight: bold;
+}
+
+#orderingModalBody em {
+    color: var(--warning-amber);
+    font-style: italic;
+}
+
+#orderingModalBody code {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--imperial-gold);
+    padding: 0.2rem 0.4rem;
+    border-radius: 2px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+}
+
+#orderingModalBody pre {
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 4px solid var(--imperial-gold);
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+#orderingModalBody pre code {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#orderingModalBody table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#orderingModalBody table th {
+    background: linear-gradient(135deg, var(--imperial-gold) 0%, #8b7428 100%);
+    color: var(--dark-metal);
+    padding: 0.75rem;
+    text-align: left;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    border: 2px solid var(--imperial-gold);
+}
+
+body.traitor-theme #orderingModalBody table th {
+    background: linear-gradient(135deg, var(--chaos-red) 0%, #660000 100%);
+    color: var(--parchment);
+    border-color: var(--chaos-red);
+}
+
+#orderingModalBody table td {
+    padding: 0.75rem;
+    border: 1px solid var(--imperial-gold);
+}
+
+body.traitor-theme #orderingModalBody table td {
+    border-color: var(--chaos-red);
+}
+
+#orderingModalBody table tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#orderingModalBody table tr:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+body.traitor-theme #orderingModalBody table tr:hover {
+    background: rgba(139, 0, 0, 0.1);
+}
+
+#orderingModalBody hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--imperial-gold), transparent);
+    margin: 2rem 0;
+}
+
+#orderingModalBody blockquote {
+    border-left: 4px solid var(--warning-amber);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--parchment);
+    background: rgba(255, 140, 0, 0.05);
+}
+
+#orderingModalBody a {
+    color: var(--warning-amber);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+#orderingModalBody a:hover {
+    color: var(--blood-red);
+}
+
+body.traitor-theme #orderingModalBody h1,
+body.traitor-theme #orderingModalBody h2 {
+    color: var(--chaos-red);
+    text-shadow: 0 0 20px rgba(139, 0, 0, 0.8);
+}
+
+body.traitor-theme #orderingModalBody h1 {
+    border-bottom-color: var(--chaos-red);
+}
+
+body.traitor-theme #orderingModalBody strong {
+    color: var(--chaos-red);
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -1522,6 +1754,38 @@ body.traitor-theme .allegiance-toggle:hover {
     .timestamp {
         font-size: 0.7rem;
     }
+
+    .ordering-guide-float-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    #orderingModalBody {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    #orderingModalBody h1 {
+        font-size: 1.5rem;
+    }
+
+    #orderingModalBody h2 {
+        font-size: 1.2rem;
+    }
+
+    #orderingModalBody h3 {
+        font-size: 1rem;
+    }
+
+    #orderingModalBody table {
+        font-size: 0.75rem;
+    }
+
+    #orderingModalBody table th,
+    #orderingModalBody table td {
+        padding: 0.5rem;
+    }
 }
 
 /* Extra small devices (phones in portrait) */
@@ -1642,6 +1906,26 @@ body.traitor-theme .allegiance-toggle:hover {
 
     .character-book-item {
         font-size: 0.75rem;
+    }
+
+    .ordering-guide-float-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+
+    #orderingModalBody h1 {
+        font-size: 1.2rem;
+    }
+
+    #orderingModalBody h2 {
+        font-size: 1rem;
+    }
+
+    #orderingModalBody table {
+        font-size: 0.7rem;
     }
 
     .secret-button {

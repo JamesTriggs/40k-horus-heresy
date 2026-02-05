@@ -78,6 +78,11 @@
     <!-- Secret Button -->
     <button class="secret-button" id="secretButton" title="Classified">🔒</button>
 
+    <!-- Floating Ordering Guide Button -->
+    <button class="ordering-guide-float-btn" id="orderingGuideBtn" title="View Chronological Order Guide">
+        <span class="guide-icon">📜</span>
+    </button>
+
     <!-- Secret Modal -->
     <div class="secret-modal-overlay" id="secretModalOverlay">
         <div class="secret-modal-content">
@@ -124,6 +129,22 @@
             </div>
             <div class="modal-footer">
                 <div class="warning-strip">⚠ HERETICAL CONTENT DETECTED ⚠</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ordering Guide Modal -->
+    <div class="modal-overlay" id="orderingModalOverlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">CHRONOLOGICAL ORDERING DECISIONS</h2>
+                <button class="close-modal" id="closeOrderingModal">✕</button>
+            </div>
+            <div class="modal-body" id="orderingModalBody">
+                <!-- Content will be dynamically loaded from ORDERING_DECISIONS.md -->
+            </div>
+            <div class="modal-footer">
+                <div class="warning-strip">⚠ CHRONOLOGICAL ORDER VERIFIED ⚠</div>
             </div>
         </div>
     </div>
