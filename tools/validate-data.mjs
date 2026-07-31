@@ -28,10 +28,22 @@ const source = readFileSync(join(root, 'script.js'), 'utf8');
 const domBoundary = source.indexOf('const modalOverlay');
 if (domBoundary === -1) fail('Could not find the DOM boundary in script.js');
 
+// A browser stub wide enough for script.js to reach its data definitions
+// without a DOM. It has to cover the top-level event listeners the chart view
+// registers, not just the element lookups.
 const sandbox = {
-    document: { getElementById: () => null, querySelector: () => null },
+    document: {
+        getElementById: () => null,
+        querySelector: () => null,
+        querySelectorAll: () => [],
+        addEventListener: () => {},
+        documentElement: { classList: { toggle: () => {} } },
+        body: { style: {} },
+    },
     localStorage: { getItem: () => null, setItem: () => {} },
     window: { addEventListener: () => {} },
+    requestAnimationFrame: () => {},
+    console,
 };
 const context = createContext(sandbox);
 runInContext(

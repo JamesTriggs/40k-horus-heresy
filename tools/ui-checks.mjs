@@ -416,6 +416,110 @@ await check('faction highlight isolates one storyline and clears again', async (
     if (off !== 0) throw new Error('highlight did not clear');
 });
 
+await check('every wrapped label line fits inside its own node box', async () => {
+    // Share Tech Mono is monospace, so the renderer can measure text exactly and
+    // grow boxes to fit. This asserts the result rather than the intent.
+    const bad = await page.evaluate(() => {
+        const out = [];
+        document.querySelectorAll('.chart-node').forEach((g) => {
+            const shape = g.querySelector('rect:not(.node-bar), ellipse');
+            const text = g.querySelector('text');
+            if (!shape || !text) return;
+            const s = shape.getBBox();
+            text.querySelectorAll('tspan').forEach((ts) => {
+                const t = ts.getBBox();
+                const overW = Math.max(0, (t.x + t.width) - (s.x + s.width), s.x - t.x);
+                const overH = Math.max(0, (t.y + t.height) - (s.y + s.height), s.y - t.y);
+                if (overW > 0.6 || overH > 0.6) out.push(g.getAttribute('aria-label'));
+            });
+        });
+        return out;
+    });
+    if (bad.length) throw new Error(bad.length + ' lines overflow, first: ' + bad[0]);
+});
+
+await check('growing boxes to fit text did not make nodes overlap', async () => {
+    const n = await page.evaluate(() => {
+        const boxes = [...document.querySelectorAll('.chart-node')]
+            .map((g) => g.querySelector('rect:not(.node-bar), ellipse').getBBox());
+        let count = 0;
+        for (let i = 0; i < boxes.length; i++) {
+            for (let j = i + 1; j < boxes.length; j++) {
+                const a = boxes[i], b = boxes[j];
+                const ox = Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x);
+                const oy = Math.min(a.y + a.height, b.y + b.height) - Math.max(a.y, b.y);
+                if (ox > 1 && oy > 1) count++;
+            }
+        }
+        return count;
+    });
+    if (n > 0) throw new Error(n + ' overlapping node pairs');
+});
+
+await check('FIT WIDTH fills the available width exactly', async () => {
+    await page.click('#chartFit');
+    await page.waitForTimeout(350);
+    const r = await page.evaluate(() => ({
+        svgW: Number(document.getElementById('chartSvg').getAttribute('width')),
+        avail: document.getElementById('chartScroll').clientWidth,
+    }));
+    const ratio = r.svgW / r.avail;
+    if (ratio < 0.97 || ratio > 1.01) throw new Error(`svg ${r.svgW} vs available ${r.avail}`);
+});
+
+await check('zoom in and out change the rendered size', async () => {
+    const before = await page.evaluate(() => Number(document.getElementById('chartSvg').getAttribute('width')));
+    await page.click('#chartZoomIn');
+    await page.waitForTimeout(250);
+    const inZoom = await page.evaluate(() => Number(document.getElementById('chartSvg').getAttribute('width')));
+    if (inZoom <= before) throw new Error('zoom in did not grow the chart');
+    await page.click('#chartZoomOut');
+    await page.click('#chartZoomOut');
+    await page.waitForTimeout(250);
+    const outZoom = await page.evaluate(() => Number(document.getElementById('chartSvg').getAttribute('width')));
+    if (outZoom >= inZoom) throw new Error('zoom out did not shrink the chart');
+});
+
+await check('fullscreen enters, re-fits, and exits again', async () => {
+    await page.click('#chartFullscreen');
+    await page.waitForTimeout(700);
+    const inside = await page.evaluate(() => ({
+        el: document.fullscreenElement?.id || null,
+        cls: document.getElementById('chartView').classList.contains('is-fullscreen'),
+        label: document.getElementById('chartFullscreen').textContent.trim(),
+        svgW: Number(document.getElementById('chartSvg').getAttribute('width')),
+        avail: document.getElementById('chartScroll').clientWidth,
+    }));
+    if (inside.el !== 'chartView') throw new Error('fullscreenElement is ' + inside.el);
+    if (!inside.cls) throw new Error('is-fullscreen class not applied');
+    if (inside.label !== 'EXIT FULLSCREEN') throw new Error('button reads ' + inside.label);
+    const ratio = inside.svgW / inside.avail;
+    if (ratio < 0.97 || ratio > 1.01) throw new Error('did not re-fit in fullscreen');
+
+    await page.click('#chartFullscreen');
+    await page.waitForTimeout(700);
+    const after = await page.evaluate(() => ({
+        el: document.fullscreenElement?.id || null,
+        cls: document.getElementById('chartView').classList.contains('is-fullscreen'),
+    }));
+    if (after.el || after.cls) throw new Error('did not exit fullscreen cleanly');
+});
+
+await check('chart opens looking at the entry point, not empty margin', async () => {
+    await page.click('#chartFit');
+    await page.waitForTimeout(300);
+    await page.evaluate(() => scrollChartToEntryPoint());
+    await page.waitForTimeout(300);
+    const visible = await page.evaluate(() => {
+        const sc = document.getElementById('chartScroll');
+        const g = document.querySelector('.chart-node[data-book="horus-rising"]');
+        if (!g) return false;
+        const gb = g.getBoundingClientRect(), sb = sc.getBoundingClientRect();
+        return gb.left >= sb.left - 2 && gb.right <= sb.right + 2;
+    });
+    if (!visible) throw new Error('Horus Rising is not in view');
+});
+
 await check('chart view does not make the page scroll sideways', async () => {
     const o = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     if (o > 1) throw new Error('overflows by ' + o + 'px');
