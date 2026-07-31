@@ -28,7 +28,7 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 
 - **Reading Order** (default). What a newcomer should actually read, grouped into phases with the opening quartet pinned first: *Horus Rising*, *False Gods*, *Galaxy in Flames*, *The Flight of the Eisenstein*. Derived from the prerequisite arrows in Daunt's Horus Heresy Timeline.
 - **Chronological**. Strict in-universe date order, earliest event first. A reference index, not advice: it puts 31 books ahead of *Horus Rising*, one of which is *A Thousand Sons*, so it spoils the main arc for a first-time reader.
-- **Storyline Chart**. The graph itself, 185 entries and 205 prerequisites, with faction highlighting. Node colour is the faction signal, because the source chart reuses vertical bands as the timeline descends and its column extents overlap too heavily to draw as swimlanes.
+- **Storyline Chart**. The graph itself, 185 entries and 205 prerequisites, with zoom, fit-to-width, fullscreen and faction highlighting. Node colour is the faction signal, because the source chart reuses vertical bands as the timeline descends and its column extents overlap too heavily to draw as swimlanes. Node boxes are grown to fit their labels: the font is monospace, so text is measured exactly rather than estimated.
 
 For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 

@@ -2342,3 +2342,264 @@ body.traitor-theme #orderingModalBody strong {
         display: flex;
     }
 }
+
+/* ==========================================================================
+   Storyline chart, restyled
+   The original PDF fills are pastel and neon on white. On a dark ground they
+   read badly and several labels were unreadable, so nodes are now a tint of
+   their faction accent with light text.
+   ========================================================================== */
+
+/* Full bleed. The chart is the one thing on the page that wants every pixel of
+   width, so it escapes the container padding. */
+.chart-view {
+    margin: 1rem -3rem 2rem -3rem;
+}
+
+.chart-toolbar {
+    padding: 0 3rem 0.85rem 3rem;
+}
+
+.chart-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.chart-ctrl {
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: 0.3rem 0.55rem;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 2px;
+    color: var(--imperial-gold);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.chart-ctrl-wide {
+    font-size: 0.62rem;
+    letter-spacing: 0.06rem;
+}
+
+.chart-ctrl:hover {
+    border-color: var(--imperial-gold);
+    background: rgba(212, 175, 55, 0.14);
+}
+
+.chart-ctrl:focus-visible {
+    outline: 2px solid var(--imperial-gold);
+    outline-offset: 2px;
+}
+
+.chart-zoom-label {
+    min-width: 3.2rem;
+    text-align: center;
+    font-size: 0.68rem;
+    opacity: 0.85;
+}
+
+.chart-factions {
+    padding: 0 3rem;
+}
+
+.chart-scroll {
+    max-height: 78vh;
+    padding: 0.75rem 3rem 1.5rem 3rem;
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.05), transparent 60%),
+        rgba(0, 0, 0, 0.28);
+    border-top: 1px solid rgba(212, 175, 55, 0.22);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+}
+
+/* Fullscreen. The host element itself goes fullscreen, so it has to supply its
+   own background and let the scroller take the whole height. */
+.chart-view.is-fullscreen {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(160deg, #101013 0%, #17171b 100%);
+}
+
+.chart-view.is-fullscreen .chart-toolbar,
+.chart-view.is-fullscreen .chart-factions {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.chart-view.is-fullscreen .chart-toolbar {
+    padding-top: 1rem;
+}
+
+.chart-view.is-fullscreen .chart-scroll {
+    flex: 1 1 auto;
+    max-height: none;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.chart-svg {
+    display: block;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+/* Node text. Light on a dark tint, and the size comes from an inline style set
+   by the fitting calculation, so it must not be set here. */
+.chart-svg .chart-node text {
+    fill: #f2eee4;
+    text-anchor: middle;
+    letter-spacing: 0.01em;
+    pointer-events: none;
+    paint-order: stroke;
+    stroke: rgba(0, 0, 0, 0.55);
+    stroke-width: 2.1px;
+    stroke-linejoin: round;
+}
+
+.chart-svg .chart-node rect,
+.chart-svg .chart-node ellipse {
+    stroke-width: 1.1;
+    transition: filter 0.18s ease;
+}
+
+.chart-svg .chart-node .node-bar {
+    stroke: none;
+}
+
+/* Format is carried by shape and edge weight, per the legend. */
+.chart-svg .chart-node.format-novel > rect { stroke-width: 1.9; }
+.chart-svg .chart-node.format-short-story > rect { stroke-width: 0.9; stroke-dasharray: 3 2; }
+.chart-svg .chart-node.format-audio-drama ellipse { stroke-width: 1.6; }
+
+.chart-svg .chart-node.is-linked { cursor: pointer; }
+
+.chart-svg .chart-node.is-linked:hover > rect,
+.chart-svg .chart-node.is-linked:hover > ellipse {
+    filter: brightness(1.5);
+    stroke-width: 2.4;
+}
+
+.chart-svg .chart-node:focus { outline: none; }
+
+.chart-svg .chart-node:focus-visible > rect,
+.chart-svg .chart-node:focus-visible > ellipse {
+    stroke: var(--imperial-gold);
+    stroke-width: 3;
+}
+
+/* Reading progress carries into the chart, so you can see how far through each
+   Legion's storyline you are. */
+.chart-svg .chart-node.is-finished > rect,
+.chart-svg .chart-node.is-finished > ellipse {
+    stroke: #4caf7d;
+    stroke-width: 2.4;
+    stroke-dasharray: none;
+}
+
+.chart-svg .chart-node.is-reading > rect,
+.chart-svg .chart-node.is-reading > ellipse {
+    stroke: #6ba8e0;
+    stroke-width: 2.4;
+    stroke-dasharray: none;
+}
+
+.chart-svg .edge {
+    fill: none;
+    stroke: var(--edge-accent, rgba(232, 220, 196, 0.4));
+    stroke-width: 1;
+    stroke-opacity: 0.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-opacity 0.2s ease;
+}
+
+.chart-svg #arrow path {
+    fill: rgba(232, 220, 196, 0.5);
+}
+
+.chart-svg .chart-node,
+.chart-svg .edge {
+    transition: opacity 0.2s ease, stroke-opacity 0.2s ease;
+}
+
+.chart-svg .chart-node.is-dimmed { opacity: 0.12; }
+.chart-svg .edge.is-dimmed { stroke-opacity: 0.06; }
+
+/* When a faction is highlighted its own edges are brought forward rather than
+   left at the same weight as the dimmed ones. */
+.chart-svg[data-highlight] .edge:not(.is-dimmed) {
+    stroke-opacity: 0.85;
+    stroke-width: 1.5;
+}
+
+.chart-legend .key::before {
+    border-color: rgba(242, 238, 228, 0.75);
+    background: rgba(242, 238, 228, 0.14);
+}
+
+.chart-legend .key-novel::before { border-width: 2px; }
+.chart-legend .key-short::before { border-style: dashed; }
+
+@media (max-width: 768px) {
+    .chart-view { margin-left: -1.5rem; margin-right: -1.5rem; }
+    .chart-toolbar,
+    .chart-factions { padding-left: 1rem; padding-right: 1rem; }
+    .chart-scroll { padding: 0.5rem 1rem 1rem 1rem; max-height: 68vh; }
+    .chart-ctrl-wide { font-size: 0.55rem; }
+    .chart-zoom-label { min-width: 2.6rem; }
+}
+
+/* Chart key disclosure. Always open above the breakpoint, collapsed below it,
+   where the legend plus 15 faction keys pushed the chart off the screen. */
+.chart-key-toggle {
+    display: none;
+}
+
+.chart-key {
+    padding-top: 0.5rem;
+}
+
+.chart-hint {
+    font-size: 0.68rem;
+    opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+    .chart-key-toggle {
+        display: block;
+        width: 100%;
+        margin: 0.6rem 0 0 0;
+        padding: 0.6rem;
+        min-height: 44px;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        border-radius: 2px;
+        color: var(--imperial-gold);
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+    }
+
+    .chart-key-toggle:focus-visible {
+        outline: 3px solid var(--imperial-gold);
+        outline-offset: 2px;
+    }
+
+    .chart-key-toggle::after { content: ' ▾'; }
+    .chart-key-toggle[aria-expanded="true"]::after { content: ' ▴'; }
+
+    .chart-key { display: none; }
+    .chart-key.is-open { display: block; }
+
+    .chart-toolbar-row { gap: 0.5rem; }
+    .chart-hint { font-size: 0.6rem; }
+    .faction-key { max-width: 100%; font-size: 0.58rem; }
+}

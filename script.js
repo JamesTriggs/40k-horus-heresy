@@ -4545,30 +4545,151 @@ function setView(view, { persist = true } = {}) {
     const chartHost = document.getElementById('chartView');
     const grid = document.querySelector('.book-display');
     const filters = document.querySelector('.filter-section');
+    // The mobile disclosure button lives outside .filter-section, so it needs
+    // hiding separately or it sits there controlling nothing.
+    const filterToggle = document.getElementById('filterDisclosure');
 
     if (view === 'chart') {
         if (grid) grid.hidden = true;
         if (filters) filters.hidden = true;
+        if (filterToggle) filterToggle.hidden = true;
         if (chartHost) chartHost.hidden = false;
         renderChartView();
     } else {
         if (chartHost) chartHost.hidden = true;
         if (grid) grid.hidden = false;
         if (filters) filters.hidden = false;
+        if (filterToggle) filterToggle.hidden = false;
         const legion = document.getElementById('legionFilter')?.value || '';
         const search = document.getElementById('searchInput')?.value || '';
         generateBookCards(legion, search);
     }
 }
 
-// The storyline chart. Rendered as SVG from the geometry extracted out of the
-// source PDF, so node positions, colours and lane boundaries are the original
-// ones rather than a re-layout. Edges are drawn as orthogonal connectors
-// because the extraction kept endpoints, not the original polyline routing.
+// The storyline chart.
+//
+// Node positions come from the geometry extracted out of the source PDF, so the
+// layout is Daunt's own rather than a re-flow. Everything else is re-styled: the
+// original fills are pastel and neon on white, which reads badly on a dark
+// ground and leaves several labels unreadable.
+//
+// Faction is carried by colour, not by horizontal position, because the source
+// reuses vertical bands as the timeline descends and its column extents overlap
+// far too much to draw as swimlanes.
+
+// A curated accent per faction, keyed on the original fill so the mapping stays
+// traceable back to the PDF. Chosen for separation at small sizes rather than
+// strict heraldry: Space Wolves and Ultramarines are both canonically blue, so
+// one takes ice and the other cobalt.
+const FACTION_ACCENTS = {
+    '#dae8fc': '#3f9e8c',   // Sons of Horus / Luna Wolves, main Horus arc
+    '#126b96': '#8fb3d9',   // Space Wolves and Thousand Sons, Prospero arc
+    '#1478a8': '#8fb3d9',   // same arc, second blue in the source
+    '#cccccc': '#d9d2c2',   // White Scars
+    '#ff66ff': '#c064c8',   // Emperor's Children
+    '#ccff99': '#b9a05a',   // Iron Warriors, Tallarn arc
+    '#000000': '#79838f',   // Raven Guard
+    '#009900': '#5fb04a',   // Salamanders
+    '#6e3600': '#c0453f',   // Word Bearers / World Eaters, Calth and Betrayer
+    '#cc6600': '#3f6fd8',   // Ultramarines / Imperium Secundus
+    '#003300': '#2b6b52',   // Dark Angels, Thramas Crusade
+    '#e3c800': '#e0b23a',   // Imperial Fists
+    '#ffff33': '#cfd6de',   // Terra / Imperium
+    '#4c0099': '#6f8a6a',   // Death Guard / Garro and the Knights-Errant
+    '#4d4d4d': '#b4653a',   // Mechanicum
+    '#ffffff': '#8b929b',   // no faction colour assigned
+};
+
+const CHART_INK = '#f2eee4';
+const CHART_BASE = [22, 23, 26];
+const FALLBACK_ACCENT = '#8b929b';
+
+function hexToRgb(hex) {
+    const h = String(hex || '').replace('#', '');
+    const full = h.length === 3 ? h.split('').map((c) => c + c).join('') : h;
+    const n = parseInt(full, 16);
+    return Number.isNaN(n) ? [139, 146, 155] : [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+
+// Blend an accent over the dark ground so the fill reads as a tint of the
+// faction rather than a flat pastel block.
+function tint(accent, amount) {
+    const [r, g, b] = hexToRgb(accent);
+    const mix = (c, base) => Math.round(base + (c - base) * amount);
+    return `rgb(${mix(r, CHART_BASE[0])}, ${mix(g, CHART_BASE[1])}, ${mix(b, CHART_BASE[2])})`;
+}
+
+// Share Tech Mono is monospace, so the advance width is a fixed fraction of the
+// font size and text can be measured exactly without rendering it. That is what
+// makes the fitting below reliable rather than approximate.
+const CHAR_ADVANCE = 0.52;
+
+// Wrap to a character budget, breaking over-long words so nothing can overflow.
+function wrapToWidth(text, maxChars) {
+    const words = String(text).split(/\s+/).filter(Boolean);
+    const lines = [];
+    let line = '';
+
+    for (let word of words) {
+        while (word.length > maxChars) {
+            if (line) { lines.push(line); line = ''; }
+            lines.push(word.slice(0, maxChars - 1) + '-');
+            word = word.slice(maxChars - 1);
+        }
+        if (line && (line + ' ' + word).length > maxChars) { lines.push(line); line = word; }
+        else line = line ? line + ' ' + word : word;
+    }
+    if (line) lines.push(line);
+    return lines.length ? lines : [''];
+}
+
+// Lay out one node: wrap its label, then grow the box so the text actually fits.
+// Height growth is preferred over width growth because the lanes are tight
+// horizontally and there is usually vertical room between rows.
+function layoutNode(node) {
+    const FS = 9;
+    const LINE = FS * 1.18;
+    const PAD_X = 5;
+    const PAD_Y = 4;
+    const MIN_W = 62;
+
+    let boxW = Math.max(node.w, MIN_W);
+    let maxChars = Math.max(6, Math.floor((boxW - PAD_X * 2) / (FS * CHAR_ADVANCE)));
+
+    const parts = [node.label];
+    if (node.anthologyBook) parts.push(`(Book ${node.anthologyBook})`);
+
+    let lines = parts.flatMap((part) => wrapToWidth(part, maxChars));
+
+    // If a line still needs more room than the box allows, widen just enough.
+    const longest = Math.max(...lines.map((l) => l.length));
+    const neededW = longest * FS * CHAR_ADVANCE + PAD_X * 2;
+    if (neededW > boxW) {
+        boxW = Math.ceil(neededW);
+        maxChars = Math.max(6, Math.floor((boxW - PAD_X * 2) / (FS * CHAR_ADVANCE)));
+        lines = parts.flatMap((part) => wrapToWidth(part, maxChars));
+    }
+
+    const boxH = Math.max(node.h, lines.length * LINE + PAD_Y * 2);
+
+    return {
+        lines,
+        fontSize: FS,
+        lineHeight: LINE,
+        // Grow about the original centre so the layout stays true to the source.
+        x: node.x + (node.w - boxW) / 2,
+        y: node.y + (node.h - boxH) / 2,
+        w: boxW,
+        h: boxH,
+    };
+}
+
+let chartZoom = 1;
+
 async function renderChartView() {
     const host = document.getElementById('chartView');
     if (!host) return;
-    if (host.dataset.rendered === 'true') return;
+    if (host.dataset.rendered === 'true') { fitChartToWidth(); return; }
 
     host.innerHTML = '<p class="chart-loading">RETRIEVING SCHEMATIC...</p>';
 
@@ -4588,7 +4709,7 @@ async function renderChartView() {
     }
 
     const nodes = chartData.nodes;
-    const byId = new Map(nodes.map((n) => [n.id, n]));
+    const layouts = new Map(nodes.map((n) => [n.id, layoutNode(n)]));
 
     // Match chart nodes to books so a node can open the existing book modal.
     const normalise = (s) => String(s).toLowerCase()
@@ -4600,7 +4721,7 @@ async function renderChartView() {
         wolfhunt: 'wolf hunt',
         'guardian of the order': 'cypher: guardian of order',
         'herald of sangiunius': 'herald of sanguinius',
-        'the devine adoratrice': 'the divine adoratrice'
+        'the devine adoratrice': 'the divine adoratrice',
     };
     const titleToKey = new Map();
     Object.keys(bookData).forEach((key) => {
@@ -4610,45 +4731,64 @@ async function renderChartView() {
     const keyForNode = (node) =>
         titleToKey.get(normalise(ALIASES[node.label.toLowerCase()] ?? node.label)) || null;
 
-    const PAD = 40;
-    const xs = nodes.map((n) => n.x), ys = nodes.map((n) => n.y);
-    const minX = Math.min(...xs) - PAD;
-    const minY = Math.min(...ys) - PAD - 30;
-    const width = Math.max(...nodes.map((n) => n.x + n.w)) - minX + PAD;
-    const height = Math.max(...nodes.map((n) => n.y + n.h)) - minY + PAD;
+    const PAD = 46;
+    const boxes = [...layouts.values()];
+    const minX = Math.min(...boxes.map((b) => b.x)) - PAD;
+    const minY = Math.min(...boxes.map((b) => b.y)) - PAD;
+    const viewW = Math.max(...boxes.map((b) => b.x + b.w)) - minX + PAD;
+    const viewH = Math.max(...boxes.map((b) => b.y + b.h)) - minY + PAD;
 
     const progress = readingProgress.load();
     const svgParts = [];
 
-    // Deliberately no lane bands drawn from column xRange. The extraction notes
-    // that the chart reuses vertical bands as the timeline descends, so the
-    // ranges overlap heavily: "Space Wolves" spans x 20 to 1496 and the
-    // unassigned bucket spans 237 to 2136. Painting those as swimlanes would be
-    // actively misleading. Faction is carried by node colour, which the
-    // extraction records as the reliable signal, and surfaced in the legend.
-
-    // Edges first so nodes paint over them.
+    // Edges first so nodes paint over them. Routed orthogonally with rounded
+    // corners, which reads far more cleanly than straight diagonals at this
+    // density.
     chartData.edges.forEach((edge) => {
-        const a = byId.get(edge.from), b = byId.get(edge.to);
+        const a = layouts.get(edge.from);
+        const b = layouts.get(edge.to);
+        const nodeA = nodes.find((n) => n.id === edge.from);
+        const nodeB = nodes.find((n) => n.id === edge.to);
         if (!a || !b) return;
-        const ax = a.x + a.w / 2, ay = a.y + a.h;
-        const bx = b.x + b.w / 2, by = b.y;
-        const mid = ay + Math.max(12, (by - ay) / 2);
-        const d = Math.abs(ax - bx) < 2
-            ? `M ${ax} ${ay} L ${bx} ${by}`
-            : `M ${ax} ${ay} V ${mid} H ${bx} L ${bx} ${by}`;
+
+        const ax = a.x + a.w / 2;
+        const bx = b.x + b.w / 2;
+        const downwards = (b.y + b.h / 2) >= (a.y + a.h / 2);
+        const ay = downwards ? a.y + a.h : a.y;
+        const by = downwards ? b.y : b.y + b.h;
+        const r = 6;
+
+        let d;
+        if (Math.abs(ax - bx) < 3) {
+            d = `M ${ax} ${ay} L ${bx} ${by}`;
+        } else {
+            const mid = ay + (by - ay) / 2;
+            const sweepX = bx > ax ? 1 : -1;
+            const sweepY = by > ay ? 1 : -1;
+            d = `M ${ax} ${ay} V ${mid - r * sweepY}` +
+                ` Q ${ax} ${mid} ${ax + r * sweepX} ${mid}` +
+                ` H ${bx - r * sweepX}` +
+                ` Q ${bx} ${mid} ${bx} ${mid + r * sweepY}` +
+                ` L ${bx} ${by}`;
+        }
+
+        const accentFrom = FACTION_ACCENTS[(nodeA?.colour || '').toLowerCase()] || FALLBACK_ACCENT;
         svgParts.push(
             `<path class="edge" d="${d}" marker-end="url(#arrow)" ` +
-            `data-from="${escapeHtml(edge.from)}" data-to="${escapeHtml(edge.to)}" />`
+            `data-from="${escapeHtml(edge.from)}" data-to="${escapeHtml(edge.to)}" ` +
+            `data-colour="${escapeHtml(nodeA?.colour || '')}" ` +
+            `style="--edge-accent:${accentFrom}" />`
         );
     });
 
-    // Nodes.
     nodes.forEach((node) => {
+        const box = layouts.get(node.id);
         const key = keyForNode(node);
         const status = key ? progress[key] : null;
-        const label = node.label + (node.anthologyBook ? ` (Book ${node.anthologyBook})` : '');
-        const radius = node.shape === 'ellipse' ? Math.min(node.w, node.h) / 2 : 4;
+        const accent = FACTION_ACCENTS[(node.colour || '').toLowerCase()] || FALLBACK_ACCENT;
+        const isShort = node.format === 'short-story';
+        const fill = tint(accent, isShort ? 0.13 : 0.2);
+
         const classes = [
             'chart-node',
             `format-${node.format || 'unknown'}`,
@@ -4656,39 +4796,67 @@ async function renderChartView() {
             status ? `is-${status}` : '',
         ].filter(Boolean).join(' ');
 
+        const cx = box.x + box.w / 2;
+        const firstDy = -((box.lines.length - 1) * box.lineHeight) / 2 + box.fontSize * 0.34;
+        const label = node.label + (node.anthologyBook ? ` (Book ${node.anthologyBook})` : '');
+
+        const shape = node.format === 'audio-drama'
+            ? `<ellipse cx="${cx}" cy="${box.y + box.h / 2}" rx="${box.w / 2}" ry="${box.h / 2}" ` +
+              `fill="${fill}" stroke="${accent}" />`
+            : `<rect x="${box.x}" y="${box.y}" width="${box.w}" height="${box.h}" ` +
+              `rx="${node.format === 'novella' ? 9 : 3}" fill="${fill}" stroke="${accent}" />`;
+
+        // A left edge bar gives the faction a second, non-colour-only cue and
+        // makes the columns readable when zoomed out.
+        const bar = node.format === 'audio-drama' ? '' :
+            `<rect class="node-bar" x="${box.x}" y="${box.y}" width="2.5" height="${box.h}" ` +
+            `rx="1" fill="${accent}" />`;
+
+        const text = box.lines.map((line, i) =>
+            `<tspan x="${cx}" dy="${i === 0 ? firstDy : box.lineHeight}">${escapeHtml(line)}</tspan>`
+        ).join('');
+
         svgParts.push(
             `<g class="${classes}" ${key ? `data-book="${escapeHtml(key)}"` : ''} ` +
             `data-node="${escapeHtml(node.id)}" data-colour="${escapeHtml(node.colour || '')}" ` +
-            `tabindex="${key ? 0 : -1}" ` +
-            `role="${key ? 'button' : 'presentation'}" ` +
-            `aria-label="${escapeHtml(label)}">` +
-            (node.shape === 'ellipse'
-                ? `<ellipse cx="${node.x + node.w / 2}" cy="${node.y + node.h / 2}" ` +
-                  `rx="${node.w / 2}" ry="${node.h / 2}" fill="${escapeHtml(node.colour || '#333')}" />`
-                : `<rect x="${node.x}" y="${node.y}" width="${node.w}" height="${node.h}" ` +
-                  `rx="${radius}" fill="${escapeHtml(node.colour || '#333')}" />`) +
-            `<text x="${node.x + node.w / 2}" y="${node.y + node.h / 2}">` +
-            wrapLabel(node.label, node.w, node.x + node.w / 2) +
-            `</text>` +
-            (node.anthologyBook
-                ? `<text class="node-book" x="${node.x + node.w / 2}" y="${node.y + node.h - 3}">Book ${node.anthologyBook}</text>`
-                : '') +
+            `tabindex="${key ? 0 : -1}" role="${key ? 'button' : 'presentation'}" ` +
+            `aria-label="${escapeHtml(label)}" style="--node-accent:${accent}">` +
+            shape + bar +
+            // Inline style, not a presentation attribute, so the stylesheet
+            // cannot override the size the fitting calculation depends on.
+            `<text x="${cx}" y="${box.y + box.h / 2}" style="font-size:${box.fontSize}px">${text}</text>` +
             `</g>`
         );
     });
 
-    // One entry per faction, deduplicated because two blues map to the Prospero arc.
+    // One entry per faction, deduplicated because two blues map to one arc.
     const factions = [];
     const seenFaction = new Set();
     for (const [colour, label] of Object.entries(chartData.meta.colourToFaction || {})) {
         if (seenFaction.has(label)) continue;
         seenFaction.add(label);
-        factions.push({ colour, label });
+        factions.push({ colour, label, accent: FACTION_ACCENTS[colour.toLowerCase()] || FALLBACK_ACCENT });
     }
 
     host.innerHTML = `
         <div class="chart-toolbar">
             <div class="chart-toolbar-row">
+                <div class="chart-controls">
+                    <button type="button" class="chart-ctrl" id="chartZoomOut" aria-label="Zoom out">&minus;</button>
+                    <span class="chart-zoom-label" id="chartZoomLabel" aria-live="polite">100%</span>
+                    <button type="button" class="chart-ctrl" id="chartZoomIn" aria-label="Zoom in">+</button>
+                    <button type="button" class="chart-ctrl chart-ctrl-wide" id="chartFit">FIT WIDTH</button>
+                    <button type="button" class="chart-ctrl chart-ctrl-wide" id="chartFullscreen" aria-pressed="false">FULLSCREEN</button>
+                </div>
+                <span class="chart-hint">${nodes.length} entries, ${chartData.edges.length} prerequisites. Drag to pan, tap a book for details.</span>
+            </div>
+
+            <!-- The legend and the 15 faction keys are tall on a phone, so they
+                 collapse behind a disclosure below the breakpoint. -->
+            <button type="button" class="chart-key-toggle" id="chartKeyToggle"
+                    aria-expanded="false" aria-controls="chartKey">KEY &amp; FACTIONS</button>
+
+            <div class="chart-key" id="chartKey">
                 <p class="chart-legend">
                     <span class="key key-novel">Novel</span>
                     <span class="key key-novella">Novella</span>
@@ -4696,25 +4864,24 @@ async function renderChartView() {
                     <span class="key key-audio">Audio drama</span>
                     <span class="key key-arrow">&rarr; read before</span>
                 </p>
-                <p class="chart-hint">${nodes.length} entries, ${chartData.edges.length} prerequisites. Click any book for details.</p>
-            </div>
-            <div class="chart-factions" role="group" aria-label="Highlight a faction">
-                ${factions.map((f) => `
-                    <button type="button" class="faction-key" data-colour="${escapeHtml(f.colour)}"
-                            aria-pressed="false" title="Highlight ${escapeHtml(f.label)}">
-                        <span class="faction-swatch" style="background:${escapeHtml(f.colour)}"></span>
-                        <span class="faction-label">${escapeHtml(f.label)}</span>
-                    </button>`).join('')}
+                <div class="chart-factions" role="group" aria-label="Highlight a faction">
+                    ${factions.map((f) => `
+                        <button type="button" class="faction-key" data-colour="${escapeHtml(f.colour)}"
+                                aria-pressed="false" title="Highlight ${escapeHtml(f.label)}">
+                            <span class="faction-swatch" style="background:${f.accent}"></span>
+                            <span class="faction-label">${escapeHtml(f.label)}</span>
+                        </button>`).join('')}
+                </div>
             </div>
         </div>
-        <div class="chart-scroll">
-            <svg class="chart-svg" viewBox="${minX} ${minY} ${width} ${height}"
-                 width="${width}" height="${height}" role="img"
-                 aria-label="Storyline chart of the Horus Heresy by Legion, with reading prerequisites">
+        <div class="chart-scroll" id="chartScroll">
+            <svg class="chart-svg" id="chartSvg" viewBox="${minX} ${minY} ${viewW} ${viewH}"
+                 data-view-w="${viewW}" data-view-h="${viewH}"
+                 role="img" aria-label="Storyline chart of the Horus Heresy by faction, with reading prerequisites">
                 <defs>
-                    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
-                            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                        <path d="M 0 0 L 10 5 L 0 10 z" />
+                    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5"
+                            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                        <path d="M 0 1 L 9 5 L 0 9 z" />
                     </marker>
                 </defs>
                 ${svgParts.join('\n')}
@@ -4722,56 +4889,139 @@ async function renderChartView() {
         </div>
     `;
 
-    // One delegated listener rather than one per node.
-    const svg = host.querySelector('.chart-svg');
+    const svg = document.getElementById('chartSvg');
+
     const open = (target) => {
         const group = target.closest('.chart-node[data-book]');
         if (group) showModal(group.dataset.book);
     };
     svg.addEventListener('click', (e) => open(e.target));
+    svg.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(e.target); }
+    });
 
     // Highlight one faction at a time. With 185 nodes and 205 crossing edges,
     // following a single Legion's storyline by eye is otherwise very hard.
     host.querySelectorAll('.faction-key').forEach((btn) => {
         btn.addEventListener('click', () => {
-            const active = btn.getAttribute('aria-pressed') === 'true';
+            const wasActive = btn.getAttribute('aria-pressed') === 'true';
             host.querySelectorAll('.faction-key').forEach((b) => b.setAttribute('aria-pressed', 'false'));
-            if (active) {
-                svg.removeAttribute('data-highlight');
-            } else {
+
+            if (wasActive) svg.removeAttribute('data-highlight');
+            else {
                 btn.setAttribute('aria-pressed', 'true');
                 svg.setAttribute('data-highlight', btn.dataset.colour);
             }
+
+            const target = svg.getAttribute('data-highlight');
             svg.querySelectorAll('.chart-node').forEach((g) => {
-                g.classList.toggle('is-dimmed',
-                    svg.hasAttribute('data-highlight') && g.dataset.colour !== svg.getAttribute('data-highlight'));
+                g.classList.toggle('is-dimmed', Boolean(target) && g.dataset.colour !== target);
+            });
+            svg.querySelectorAll('.edge').forEach((e) => {
+                e.classList.toggle('is-dimmed', Boolean(target) && e.dataset.colour !== target);
             });
         });
     });
-    svg.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(e.target); }
+
+    const keyToggle = document.getElementById('chartKeyToggle');
+    const keyPanel = document.getElementById('chartKey');
+    keyToggle.addEventListener('click', () => {
+        const open = keyToggle.getAttribute('aria-expanded') === 'true';
+        keyToggle.setAttribute('aria-expanded', String(!open));
+        keyPanel.classList.toggle('is-open', !open);
+    });
+
+    document.getElementById('chartZoomIn').addEventListener('click', () => setChartZoom(chartZoom * 1.25));
+    document.getElementById('chartZoomOut').addEventListener('click', () => setChartZoom(chartZoom / 1.25));
+    document.getElementById('chartFit').addEventListener('click', () => fitChartToWidth({ exact: true }));
+
+    const fsButton = document.getElementById('chartFullscreen');
+    fsButton.addEventListener('click', () => {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else if (host.requestFullscreen) host.requestFullscreen().catch((err) =>
+            console.warn('Fullscreen was refused:', err));
     });
 
     host.dataset.rendered = 'true';
+    fitChartToWidth();
+    scrollChartToEntryPoint();
 }
 
-// Split a node label across lines so it fits the original box width.
-function wrapLabel(label, boxWidth, centreX) {
-    const perLine = Math.max(8, Math.floor(boxWidth / 4.1));
-    const words = String(label).split(/\s+/);
-    const lines = [];
-    let line = '';
-    for (const word of words) {
-        if (line && (line + ' ' + word).length > perLine) { lines.push(line); line = word; }
-        else line = line ? line + ' ' + word : word;
+// Open the chart looking at Horus Rising. The spine sits in the middle of the
+// drawing, so at anything above fit-width the default scroll position of 0,0
+// shows empty margin instead of the entry point.
+function scrollChartToEntryPoint() {
+    const scroll = document.getElementById('chartScroll');
+    const svg = document.getElementById('chartSvg');
+    if (!scroll || !svg) return;
+
+    const entry = svg.querySelector('.chart-node[data-book="horus-rising"] rect')
+        || svg.querySelector('.chart-node rect');
+    if (!entry) return;
+
+    const nodeBox = entry.getBBox();
+    const scale = Number(svg.getAttribute('width')) / Number(svg.dataset.viewW);
+    const [vbX] = svg.getAttribute('viewBox').split(/\s+/).map(Number);
+
+    const centre = (nodeBox.x + nodeBox.width / 2 - vbX) * scale;
+    scroll.scrollLeft = Math.max(0, centre - scroll.clientWidth / 2);
+    scroll.scrollTop = 0;
+}
+
+// Zoom is applied as an explicit pixel size on the SVG rather than a transform,
+// so the scroll container gets real scrollbars at every zoom level.
+function setChartZoom(zoom) {
+    const svg = document.getElementById('chartSvg');
+    if (!svg) return;
+
+    chartZoom = Math.min(3, Math.max(0.15, zoom));
+    const viewW = Number(svg.dataset.viewW);
+    const viewH = Number(svg.dataset.viewH);
+    svg.setAttribute('width', Math.round(viewW * chartZoom));
+    svg.setAttribute('height', Math.round(viewH * chartZoom));
+
+    const label = document.getElementById('chartZoomLabel');
+    if (label) label.textContent = Math.round(chartZoom * 100) + '%';
+}
+
+// Below this the 9px node labels stop being readable, so an automatic fit is
+// clamped and the chart scrolls sideways inside its own box instead. A phone
+// fitting the full 2210 unit width lands at about 16 percent, which renders the
+// labels at roughly one and a half pixels.
+const CHART_MIN_AUTO_ZOOM = 0.62;
+
+// Fill whatever width is available. `exact` is used by the FIT WIDTH button,
+// where the user has explicitly asked to see the whole thing however small.
+function fitChartToWidth({ exact = false } = {}) {
+    const scroll = document.getElementById('chartScroll');
+    const svg = document.getElementById('chartSvg');
+    if (!scroll || !svg) return;
+
+    const available = scroll.clientWidth - 4;
+    if (available <= 0) return;
+
+    const fitted = available / Number(svg.dataset.viewW);
+    setChartZoom(exact ? fitted : Math.max(fitted, CHART_MIN_AUTO_ZOOM));
+}
+
+// Re-fit when the viewport changes or fullscreen is entered or left.
+window.addEventListener('resize', () => {
+    if (currentView === 'chart') fitChartToWidth();
+});
+
+document.addEventListener('fullscreenchange', () => {
+    const host = document.getElementById('chartView');
+    const button = document.getElementById('chartFullscreen');
+    const inFullscreen = document.fullscreenElement === host;
+    if (button) {
+        button.setAttribute('aria-pressed', String(inFullscreen));
+        button.textContent = inFullscreen ? 'EXIT FULLSCREEN' : 'FULLSCREEN';
     }
-    if (line) lines.push(line);
+    if (host) host.classList.toggle('is-fullscreen', inFullscreen);
+    // Layout settles a frame after the transition, so re-fit on the next tick.
+    requestAnimationFrame(() => { if (currentView === 'chart') fitChartToWidth(); });
+});
 
-    const offset = -((lines.length - 1) * 0.55);
-    return lines
-        .map((text, i) => `<tspan x="${centreX}" dy="${i === 0 ? offset : 1.1}em">${escapeHtml(text)}</tspan>`)
-        .join('');
-}
 
 function initializeViewSwitcher() {
     document.querySelectorAll('.view-btn').forEach((btn) => {
