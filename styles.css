@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+/* Applied by scrollLock while any modal is open. Must be on the scrolling
+   element, which is <html>, not <body>. */
+html.modal-open {
+    overflow: hidden;
+}
+
 :root {
     --imperial-gold: #d4af37;
     --blood-red: #8b0000;
@@ -16,17 +22,21 @@
     --warning-amber: #ff8c00;
 }
 
-/* Chaos/Traitor Theme Colors */
+/* Chaos/Traitor Theme Colors
+   The accent tokens carry TEXT as well as borders, so they must stay legible.
+   Deep reds (--chaos-red, --blood-red) are for borders and fills only. Text
+   uses the ember ramp, which reads as Chaos without dropping to 1.5:1. */
 body.traitor-theme {
-    --imperial-gold: #cc0000;
+    --imperial-gold: #ff6b5a;   /* ember, 5.5:1 on the card surface */
     --blood-red: #660000;
     --steel-grey: #1a1a1a;
     --dark-metal: #0d0d0d;
-    --parchment: #d4c4a8;
+    --parchment: #e0d2bc;
     --heresy-green: #2d5016;
-    --warning-amber: #ff0000;
-    --chaos-red: #8b0000;
-    --warp-purple: #6b2d5c;
+    --warning-amber: #ff9166;   /* 6.5:1 on the panel surface */
+    --chaos-red: #8b0000;       /* borders and fills, never text */
+    --chaos-edge: #c62828;      /* brighter border where more contrast helps */
+    --warp-purple: #a855a0;
     --corruption-green: #3d5c2d;
     --daemon-black: #0a0a0a;
 }
@@ -47,15 +57,17 @@ body.traitor-theme .dataslate-header {
     border-bottom-color: var(--chaos-red);
 }
 
+/* These were var(--chaos-red) at #8b0000, which rendered every book title at
+   1.53:1 against the card. The ember token keeps the Chaos read and is legible. */
 body.traitor-theme .main-title,
 body.traitor-theme .book-title,
 body.traitor-theme .filter-label {
-    color: var(--chaos-red);
-    text-shadow: 0 0 20px rgba(139, 0, 0, 0.9);
+    color: var(--imperial-gold);
+    text-shadow: 0 0 20px rgba(198, 40, 40, 0.7);
 }
 
 body.traitor-theme .classification {
-    color: #ff0000;
+    color: #ff8577;
 }
 
 body.traitor-theme .book-card {
@@ -92,7 +104,7 @@ body.traitor-theme .dataslate-footer {
 }
 
 body.traitor-theme .timestamp {
-    color: var(--chaos-red);
+    color: var(--imperial-gold);
 }
 
 body.traitor-theme .legion-filter,
@@ -139,13 +151,37 @@ body.traitor-theme .character-modal-content {
 
 body.traitor-theme .close-modal,
 body.traitor-theme .close-character-modal {
-    border-color: var(--chaos-red);
-    color: var(--chaos-red);
+    border-color: var(--chaos-edge);
+    color: var(--imperial-gold);
 }
 
 body.traitor-theme .close-modal:hover,
 body.traitor-theme .close-character-modal:hover {
     background: var(--chaos-red);
+}
+
+/* The progress badges were the only accents that never themed. */
+body.traitor-theme .status-badge.status-reading,
+body.traitor-theme .mark-read-btn.status-reading {
+    background: rgba(107, 45, 92, 0.95);
+    border-color: var(--warp-purple);
+    color: #f3e6f1;
+}
+
+body.traitor-theme .status-badge.status-finished,
+body.traitor-theme .mark-read-btn.status-finished {
+    background: rgba(139, 0, 0, 0.95);
+    border-color: var(--chaos-edge);
+    color: #ffe0da;
+}
+
+body.traitor-theme .book-card.book-reading {
+    border-color: var(--warp-purple);
+    box-shadow: 0 0 15px rgba(168, 85, 160, 0.35);
+}
+
+body.traitor-theme .book-card.book-finished {
+    border-color: var(--chaos-edge);
 }
 
 body {
@@ -155,10 +191,13 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* flex-start, not center. Now that the catalogue scrolls with the page the
+       content is taller than the viewport, and centring would clip the top. */
+    align-items: flex-start;
     overflow-x: hidden;
     position: relative;
-    touch-action: pan-y;
+    /* touch-action: pan-y removed. It blocked pinch-zoom on small monospace
+       prose, which fails WCAG 1.4.4. */
 }
 
 body::before {
@@ -219,15 +258,24 @@ body::before {
     opacity: 0.3;
 }
 
+/* Fixed to the viewport, not to the container. While the catalogue lived in a
+   70vh inner scroller the container was roughly viewport-height, so an absolute
+   vignette worked. Now the container is the full page height, and sizing the
+   gradient to it put the transparent centre thousands of pixels down and veiled
+   the whole visible area. */
 .vignette {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 55%, rgba(0, 0, 0, 0.65) 100%);
     pointer-events: none;
     z-index: 9;
+}
+
+/* Same reasoning: keep the scanline overlay pinned to the viewport rather than
+   painting across the entire page height. */
+.scanlines {
+    position: fixed;
+    inset: 0;
 }
 
 .dataslate-header {
@@ -339,11 +387,13 @@ body.traitor-theme .allegiance-toggle:hover {
 }
 
 .classification {
-    color: var(--blood-red);
+    /* Was var(--blood-red) #8b0000 on the dark header, which measured 1.51:1
+       and was effectively invisible. This keeps the alarm-red read at 5.5:1. */
+    color: #ff6b5a;
     font-size: 0.9rem;
     letter-spacing: 0.3rem;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     margin-bottom: 0.5rem;
 }
 
@@ -570,10 +620,9 @@ body.traitor-theme .allegiance-toggle:hover {
     gap: 2rem;
     margin: 2rem 0;
     padding: 1.5rem;
-    max-height: 70vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    /* No max-height and no inner scroller. A 224 item catalogue inside a 70vh
+       nested scroll region swallowed momentum on touch, fought pull-to-refresh,
+       made End and Home behave unexpectedly, and clipped the list when printed. */
 }
 
 .book-card {
@@ -706,13 +755,17 @@ body.traitor-theme .allegiance-toggle:hover {
 
 /* Anthology Label */
 .anthology-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: var(--imperial-gold);
-    letter-spacing: 0.1rem;
+    /* Tighter than the old fixed word, since this now carries volume titles as
+       long as "The Burden of Loyalty" inside a ~200px card. */
+    letter-spacing: 0.04rem;
     margin: 0.25rem 0;
-    opacity: 0.8;
-    font-weight: bold;
+    opacity: 0.85;
     text-align: center;
+    text-transform: uppercase;
+    line-height: 1.35;
+    text-wrap: balance;
 }
 
 .book-card.book-reading {
@@ -720,14 +773,22 @@ body.traitor-theme .allegiance-toggle:hover {
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
 }
 
-.book-card.book-finished {
-    opacity: 0.4;
-    filter: grayscale(60%);
+/* Dim the cover art only. Dimming the whole card also dimmed the "FINISHED"
+   badge and the title to roughly 1.9:1, so the reward for progress was that
+   the card explaining the state became the least readable thing on it. */
+.book-card.book-finished .book-cover {
+    opacity: 0.45;
+    filter: grayscale(70%);
+    transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-.book-card.book-finished:hover {
-    opacity: 0.8;
-    filter: grayscale(30%);
+.book-card.book-finished:hover .book-cover {
+    opacity: 0.85;
+    filter: grayscale(20%);
+}
+
+.book-card.book-finished {
+    border-color: #2e8b57;
 }
 
 .book-spine {
@@ -804,7 +865,8 @@ body.traitor-theme .allegiance-toggle:hover {
         0 4px 15px rgba(0, 0, 0, 0.8),
         0 0 30px rgba(212, 175, 55, 0.4);
     transition: all 0.3s ease;
-    z-index: 1000;
+    /* Below every modal overlay (1000+), or it floats over open dialogs */
+    z-index: 900;
     font-size: 1.5rem;
 }
 
@@ -1073,116 +1135,17 @@ body.traitor-theme .ordering-guide-float-btn:hover {
 }
 
 /* Secret Button */
-.secret-button {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    background: rgba(26, 26, 26, 0.8);
-    border: 2px solid rgba(212, 175, 55, 0.3);
-    color: rgba(212, 175, 55, 0.5);
-    font-size: 1.2rem;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 4px;
-    z-index: 1500;
-    transition: all 0.3s ease;
-    opacity: 0.3;
-}
 
-.secret-button:hover {
-    opacity: 1;
-    border-color: var(--imperial-gold);
-    color: var(--imperial-gold);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
-}
 
 /* Secret Modal */
-.secret-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.98);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 3000;
-}
 
-.secret-modal-overlay.active {
-    display: flex;
-    animation: fadeIn 0.3s ease;
-}
 
-.secret-modal-content {
-    background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
-    border: 6px solid var(--blood-red);
-    border-radius: 4px;
-    padding: 3rem;
-    max-width: 600px;
-    position: relative;
-    box-shadow:
-        0 0 60px rgba(139, 0, 0, 0.8),
-        inset 0 0 50px rgba(0, 0, 0, 0.9);
-    animation: slideIn 0.4s ease;
-}
 
-.close-secret-modal {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: 2px solid var(--blood-red);
-    color: var(--blood-red);
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.close-secret-modal:hover {
-    background: var(--blood-red);
-    color: var(--parchment);
-    transform: rotate(90deg);
-}
 
-.secret-message {
-    text-align: center;
-}
 
-.secret-title {
-    font-family: 'Cinzel', serif;
-    font-size: 2rem;
-    color: var(--blood-red);
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    margin-bottom: 2rem;
-    text-shadow: 0 0 20px rgba(139, 0, 0, 0.8);
-}
 
-.secret-text {
-    font-family: 'Cinzel', serif;
-    font-size: 4rem;
-    font-weight: 900;
-    color: var(--imperial-gold);
-    text-shadow:
-        0 0 30px rgba(212, 175, 55, 0.9),
-        0 0 60px rgba(139, 0, 0, 0.6);
-    margin: 3rem 0;
-    letter-spacing: 0.2rem;
-    animation: pulse 2s ease-in-out infinite;
-}
 
-.secret-footer {
-    color: var(--blood-red);
-    font-size: 0.8rem;
-    letter-spacing: 0.2rem;
-    margin-top: 2rem;
-    opacity: 0.7;
-}
 
 /* Character Links */
 .character-link {
@@ -1522,8 +1485,8 @@ body.traitor-theme #orderingModalBody table tr:hover {
 
 body.traitor-theme #orderingModalBody h1,
 body.traitor-theme #orderingModalBody h2 {
-    color: var(--chaos-red);
-    text-shadow: 0 0 20px rgba(139, 0, 0, 0.8);
+    color: var(--imperial-gold);
+    text-shadow: 0 0 20px rgba(198, 40, 40, 0.6);
 }
 
 body.traitor-theme #orderingModalBody h1 {
@@ -1531,7 +1494,7 @@ body.traitor-theme #orderingModalBody h1 {
 }
 
 body.traitor-theme #orderingModalBody strong {
-    color: var(--chaos-red);
+    color: var(--imperial-gold);
 }
 
 
@@ -1544,6 +1507,28 @@ body.traitor-theme #orderingModalBody strong {
     .dataslate-container {
         padding: 1.5rem;
         width: 100%;
+    }
+
+    /* The header plus the stacked filter bar used to consume the whole
+       viewport, so not one book card was above the fold on a 390px phone. */
+    .dataslate-header {
+        margin-bottom: 1rem;
+        padding: 2rem 1rem 1rem 1rem;
+        background-position: center 30%;
+    }
+
+    .imperial-aquila {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.25rem;
+    }
+
+    .subtitle-quote {
+        display: none;      /* flavour text, not wayfinding */
+    }
+
+    .progress-counter {
+        margin-top: 0.5rem;
     }
 
     .allegiance-toggle {
@@ -1580,10 +1565,7 @@ body.traitor-theme #orderingModalBody strong {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 1rem;
         padding: 1rem;
-        max-height: 65vh;
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
+        margin: 1rem 0;
     }
 
     .book-card {
@@ -1707,10 +1689,32 @@ body.traitor-theme #orderingModalBody strong {
         text-align: center;
     }
 
+    /* Keep the clear button beside the input. Stacking the whole container
+       left it orphaned on its own full-width row below the field. */
+    .search-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            'label label'
+            'input clear';
+        align-items: center;
+    }
+
+    .search-container .filter-label { grid-area: label; }
+    .search-container .search-input { grid-area: input; }
+    .search-container .clear-search-btn { grid-area: clear; }
+
     .search-input {
-        min-width: 100%;
+        min-width: 0;
+        width: 100%;
         font-size: 0.75rem;
         padding: 0.6rem;
+    }
+
+    /* 44px minimum touch target */
+    .clear-search-btn {
+        min-width: 44px;
+        min-height: 44px;
     }
 
     .legion-filter,
@@ -1928,26 +1932,7 @@ body.traitor-theme #orderingModalBody strong {
         font-size: 0.7rem;
     }
 
-    .secret-button {
-        bottom: 0.5rem;
-        left: 0.5rem;
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
 
-    .secret-modal-content {
-        width: 90%;
-        padding: 2rem;
-    }
 
-    .secret-title {
-        font-size: 1.3rem;
-        letter-spacing: 0.15rem;
-    }
 
-    .secret-text {
-        font-size: 2.5rem;
-        margin: 2rem 0;
-    }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horus Heresy Archive - Complete Dataslate</title>
-    <meta name="description" content="Interactive archive of all 81 Horus Heresy books with character encyclopedia, reading tracker, and Imperial/Chaos themes.">
+    <meta name="description" content="Interactive archive of all 224 Horus Heresy novels, novellas and anthology stories in strict in-universe chronological order, with a character encyclopedia, reading tracker and Imperial/Chaos themes.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -24,7 +24,9 @@
             <div class="classification" id="classification">CLASSIFICATION: VERMILLION</div>
             <div class="subtitle-series">THE COMPLETE HERESY - CHRONOLOGICAL ORDER</div>
             <div class="subtitle-quote" id="thoughtForTheDay">THOUGHT FOR THE DAY: "BLESSED IS THE MIND TOO SMALL FOR DOUBT"</div>
-            <div class="progress-counter" id="progressCounter">READING PROGRESS: 0/54 BOOKS COMPLETED</div>
+            <!-- Replaced by updateProgressCounter() on load. Kept empty so a
+                 stale hardcoded total cannot flash before the real one. -->
+            <div class="progress-counter" id="progressCounter" aria-live="polite"></div>
         </header>
 
         <div class="filter-section">
@@ -75,25 +77,12 @@
         </footer>
     </div>
 
-    <!-- Secret Button -->
-    <button class="secret-button" id="secretButton" title="Classified">🔒</button>
 
     <!-- Floating Ordering Guide Button -->
     <button class="ordering-guide-float-btn" id="orderingGuideBtn" title="View Chronological Order Guide">
         <span class="guide-icon">📜</span>
     </button>
 
-    <!-- Secret Modal -->
-    <div class="secret-modal-overlay" id="secretModalOverlay">
-        <div class="secret-modal-content">
-            <button class="close-secret-modal" id="closeSecretModal">✕</button>
-            <div class="secret-message">
-                <h1 class="secret-title">CLASSIFIED INTELLIGENCE</h1>
-                <div class="secret-text">Lyle is Gay</div>
-                <div class="secret-footer">VERMILLION CLEARANCE CONFIRMED</div>
-            </div>
-        </div>
-    </div>
 
     <!-- Character Modal -->
     <div class="character-modal-overlay" id="characterModalOverlay">
