@@ -869,6 +869,53 @@ const characterData = {
 // Reading Progress Tracker with three states: null, 'reading', 'finished'
 const PROGRESS_KEY = 'horusHeresyProgress';
 const SPOILER_KEY = 'horusHeresyShowSpoilers';
+const VIEW_KEY = 'horusHeresyView';
+
+// Three views, because chronological order and reading order are different
+// things and the site used to conflate them.
+//
+//   reading        what a newcomer should actually read, phase-grouped, opening
+//                  quartet pinned first
+//   chronological  in-universe date order, a reference index for people who
+//                  already know the story
+//   chart          the Legion lanes and prerequisite arrows from Daunt's
+//                  Horus Heresy Timeline
+//
+// Strict chronology puts 31 books ahead of Horus Rising, one of which is
+// A Thousand Sons. It is the wrong default and was labelled "story order".
+const VIEWS = {
+    reading: {
+        note: 'Recommended reading order. Chronological order is not a reading order: it would put 31 books, including A Thousand Sons, ahead of Horus Rising and spoil the main arc.',
+    },
+    chronological: {
+        note: 'Strict in-universe date order, earliest event first. This is a reference index, not reading advice. A newcomer should use Reading Order instead.',
+    },
+    chart: {
+        note: 'Storyline chart. Each column is a Legion or faction, arrows mean read this before that. Adapted from Daunt\'s Horus Heresy Timeline v0.9.',
+    },
+};
+
+let currentView = 'reading';
+let readingOrder = null;      // populated from reading-order.json
+let chartData = null;         // populated from daunt-chart.json
+
+function loadView() {
+    try {
+        const saved = localStorage.getItem(VIEW_KEY);
+        if (saved && VIEWS[saved]) return saved;
+    } catch (error) {
+        console.warn('View preference could not be read:', error);
+    }
+    return 'reading';
+}
+
+function saveView(view) {
+    try {
+        localStorage.setItem(VIEW_KEY, view);
+    } catch (error) {
+        console.warn('View preference could not be saved:', error);
+    }
+}
 
 const readingProgress = {
     // Cached in memory. Previously every read hit localStorage and re-parsed
@@ -4254,6 +4301,14 @@ const chronologicalRank = new Map(
     Object.keys(bookData).map((key, index) => [key, index + 1])
 );
 
+// Reading order rank, from reading-order.json. Falls back to chronological if
+// the file could not be fetched, so the grid always renders something.
+function readingRank(key) {
+    if (!readingOrder) return chronologicalRank.get(key);
+    const entry = readingOrder.byKey.get(key);
+    return entry ? entry.rank : Number.MAX_SAFE_INTEGER;
+}
+
 // Sort books based on sort order
 function getSortedBookKeys(sortOrder) {
     const keys = Object.keys(bookData);
@@ -4267,8 +4322,14 @@ function getSortedBookKeys(sortOrder) {
         case 'author':
             return keys.sort((a, b) => bookData[a].author.localeCompare(bookData[b].author));
         case 'chronological':
-        default:
             return keys.sort((a, b) => chronologicalRank.get(a) - chronologicalRank.get(b));
+        case 'reading':
+            return keys.sort((a, b) => readingRank(a) - readingRank(b));
+        case 'view':
+        default:
+            return currentView === 'chronological'
+                ? keys.sort((a, b) => chronologicalRank.get(a) - chronologicalRank.get(b))
+                : keys.sort((a, b) => readingRank(a) - readingRank(b));
     }
 }
 
@@ -4284,6 +4345,13 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
     const sortOrder = document.getElementById('sortOrder')?.value || 'chronological';
 
     const sortedKeys = getSortedBookKeys(sortOrder);
+
+    // Phase headings, but only when the reading view is showing its own order.
+    // Under a title or author sort the phases would be meaningless.
+    const showPhases = currentView === 'reading'
+        && readingOrder
+        && (sortOrder === 'view' || sortOrder === 'reading');
+    let lastPhase = null;
 
     sortedKeys.forEach((bookKey) => {
         const book = bookData[bookKey];
@@ -4330,6 +4398,24 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
         }
 
         displayedCount++;
+
+        if (showPhases) {
+            const entry = readingOrder.byKey.get(bookKey);
+            const phaseId = entry ? entry.phase : null;
+            if (phaseId && phaseId !== lastPhase) {
+                lastPhase = phaseId;
+                const phase = readingOrder.phases.get(phaseId);
+                if (phase) {
+                    const heading = document.createElement('div');
+                    heading.className = 'phase-heading';
+                    heading.innerHTML = `
+                        <h2 class="phase-title">${escapeHtml(phase.title)}</h2>
+                        <p class="phase-blurb">${escapeHtml(phase.blurb)}</p>
+                    `;
+                    bookDisplay.appendChild(heading);
+                }
+            }
+        }
 
         const bookCard = document.createElement('div');
         const statusClass = status ? ` book-${status}` : '';
@@ -4398,6 +4484,313 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
         filterInfo.textContent = infoText;
         bookDisplay.insertBefore(filterInfo, bookDisplay.firstChild);
     }
+}
+
+// Load the derived reading order. Generated by tools/build-reading-order.mjs,
+// fetched rather than inlined so the derivation stays in one place.
+async function loadReadingOrder() {
+    try {
+        const response = await fetch('reading-order.json', { cache: 'no-cache' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const data = await response.json();
+
+        readingOrder = {
+            phases: new Map(data.phases.map((p) => [p.id, p])),
+            byKey: new Map(data.entries.map((e) => [e.bookKey, e])),
+            // Books the phase ordering places ahead of a stated prerequisite.
+            // Surfaced on the card rather than silently reordered.
+            warnings: new Map((data.meta.prerequisiteViolations || [])
+                .map((v) => [v.dependentKey, v])),
+            meta: data.meta,
+        };
+        return true;
+    } catch (error) {
+        // fetch fails on file:// origins. Reading order then falls back to
+        // chronological, which is wrong but not broken, so say so.
+        console.warn('Reading order could not be loaded, falling back to chronological:', error);
+        return false;
+    }
+}
+
+// Switch view, persist it, and re-render.
+function setView(view, { persist = true } = {}) {
+    if (!VIEWS[view]) return;
+    currentView = view;
+    if (persist) saveView(view);
+
+    document.querySelectorAll('.view-btn').forEach((btn) => {
+        const active = btn.dataset.view === view;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', String(active));
+    });
+
+    const subtitle = document.getElementById('subtitleSeries');
+    if (subtitle) {
+        subtitle.textContent = {
+            reading: 'THE COMPLETE HERESY - RECOMMENDED READING ORDER',
+            chronological: 'THE COMPLETE HERESY - IN-UNIVERSE CHRONOLOGY',
+            chart: 'THE COMPLETE HERESY - STORYLINE CHART',
+        }[view];
+    }
+
+    const note = document.getElementById('viewNote');
+    if (note) {
+        let text = VIEWS[view].note;
+        if (view === 'reading' && !readingOrder) {
+            text = 'Reading order data could not be loaded, so this is showing chronological order. Serve the site over HTTP rather than opening the file directly.';
+        }
+        note.textContent = text;
+    }
+
+    const chartHost = document.getElementById('chartView');
+    const grid = document.querySelector('.book-display');
+    const filters = document.querySelector('.filter-section');
+
+    if (view === 'chart') {
+        if (grid) grid.hidden = true;
+        if (filters) filters.hidden = true;
+        if (chartHost) chartHost.hidden = false;
+        renderChartView();
+    } else {
+        if (chartHost) chartHost.hidden = true;
+        if (grid) grid.hidden = false;
+        if (filters) filters.hidden = false;
+        const legion = document.getElementById('legionFilter')?.value || '';
+        const search = document.getElementById('searchInput')?.value || '';
+        generateBookCards(legion, search);
+    }
+}
+
+// The storyline chart. Rendered as SVG from the geometry extracted out of the
+// source PDF, so node positions, colours and lane boundaries are the original
+// ones rather than a re-layout. Edges are drawn as orthogonal connectors
+// because the extraction kept endpoints, not the original polyline routing.
+async function renderChartView() {
+    const host = document.getElementById('chartView');
+    if (!host) return;
+    if (host.dataset.rendered === 'true') return;
+
+    host.innerHTML = '<p class="chart-loading">RETRIEVING SCHEMATIC...</p>';
+
+    if (!chartData) {
+        try {
+            const response = await fetch('daunt-chart.json', { cache: 'no-cache' });
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            chartData = await response.json();
+        } catch (error) {
+            console.error('Storyline chart could not be loaded:', error);
+            host.innerHTML =
+                '<div class="chart-error"><h2>SCHEMATIC UNAVAILABLE</h2>' +
+                '<p>The storyline chart could not be retrieved. If you opened this page ' +
+                'directly from disk, serve it over HTTP instead.</p></div>';
+            return;
+        }
+    }
+
+    const nodes = chartData.nodes;
+    const byId = new Map(nodes.map((n) => [n.id, n]));
+
+    // Match chart nodes to books so a node can open the existing book modal.
+    const normalise = (s) => String(s).toLowerCase()
+        .replace(/^(garro|bjorn):\s*/, '').replace(/[^a-z0-9]+/g, '');
+    const ALIASES = {
+        'thief of revelation': 'thief of revelations',
+        'vulcan lives': 'vulkan lives',
+        'the heart of pharos': 'the heart of the pharos',
+        wolfhunt: 'wolf hunt',
+        'guardian of the order': 'cypher: guardian of order',
+        'herald of sangiunius': 'herald of sanguinius',
+        'the devine adoratrice': 'the divine adoratrice'
+    };
+    const titleToKey = new Map();
+    Object.keys(bookData).forEach((key) => {
+        const n = normalise(bookData[key].title);
+        if (!titleToKey.has(n)) titleToKey.set(n, key);
+    });
+    const keyForNode = (node) =>
+        titleToKey.get(normalise(ALIASES[node.label.toLowerCase()] ?? node.label)) || null;
+
+    const PAD = 40;
+    const xs = nodes.map((n) => n.x), ys = nodes.map((n) => n.y);
+    const minX = Math.min(...xs) - PAD;
+    const minY = Math.min(...ys) - PAD - 30;
+    const width = Math.max(...nodes.map((n) => n.x + n.w)) - minX + PAD;
+    const height = Math.max(...nodes.map((n) => n.y + n.h)) - minY + PAD;
+
+    const progress = readingProgress.load();
+    const svgParts = [];
+
+    // Deliberately no lane bands drawn from column xRange. The extraction notes
+    // that the chart reuses vertical bands as the timeline descends, so the
+    // ranges overlap heavily: "Space Wolves" spans x 20 to 1496 and the
+    // unassigned bucket spans 237 to 2136. Painting those as swimlanes would be
+    // actively misleading. Faction is carried by node colour, which the
+    // extraction records as the reliable signal, and surfaced in the legend.
+
+    // Edges first so nodes paint over them.
+    chartData.edges.forEach((edge) => {
+        const a = byId.get(edge.from), b = byId.get(edge.to);
+        if (!a || !b) return;
+        const ax = a.x + a.w / 2, ay = a.y + a.h;
+        const bx = b.x + b.w / 2, by = b.y;
+        const mid = ay + Math.max(12, (by - ay) / 2);
+        const d = Math.abs(ax - bx) < 2
+            ? `M ${ax} ${ay} L ${bx} ${by}`
+            : `M ${ax} ${ay} V ${mid} H ${bx} L ${bx} ${by}`;
+        svgParts.push(
+            `<path class="edge" d="${d}" marker-end="url(#arrow)" ` +
+            `data-from="${escapeHtml(edge.from)}" data-to="${escapeHtml(edge.to)}" />`
+        );
+    });
+
+    // Nodes.
+    nodes.forEach((node) => {
+        const key = keyForNode(node);
+        const status = key ? progress[key] : null;
+        const label = node.label + (node.anthologyBook ? ` (Book ${node.anthologyBook})` : '');
+        const radius = node.shape === 'ellipse' ? Math.min(node.w, node.h) / 2 : 4;
+        const classes = [
+            'chart-node',
+            `format-${node.format || 'unknown'}`,
+            key ? 'is-linked' : 'is-unlinked',
+            status ? `is-${status}` : '',
+        ].filter(Boolean).join(' ');
+
+        svgParts.push(
+            `<g class="${classes}" ${key ? `data-book="${escapeHtml(key)}"` : ''} ` +
+            `data-node="${escapeHtml(node.id)}" data-colour="${escapeHtml(node.colour || '')}" ` +
+            `tabindex="${key ? 0 : -1}" ` +
+            `role="${key ? 'button' : 'presentation'}" ` +
+            `aria-label="${escapeHtml(label)}">` +
+            (node.shape === 'ellipse'
+                ? `<ellipse cx="${node.x + node.w / 2}" cy="${node.y + node.h / 2}" ` +
+                  `rx="${node.w / 2}" ry="${node.h / 2}" fill="${escapeHtml(node.colour || '#333')}" />`
+                : `<rect x="${node.x}" y="${node.y}" width="${node.w}" height="${node.h}" ` +
+                  `rx="${radius}" fill="${escapeHtml(node.colour || '#333')}" />`) +
+            `<text x="${node.x + node.w / 2}" y="${node.y + node.h / 2}">` +
+            wrapLabel(node.label, node.w, node.x + node.w / 2) +
+            `</text>` +
+            (node.anthologyBook
+                ? `<text class="node-book" x="${node.x + node.w / 2}" y="${node.y + node.h - 3}">Book ${node.anthologyBook}</text>`
+                : '') +
+            `</g>`
+        );
+    });
+
+    // One entry per faction, deduplicated because two blues map to the Prospero arc.
+    const factions = [];
+    const seenFaction = new Set();
+    for (const [colour, label] of Object.entries(chartData.meta.colourToFaction || {})) {
+        if (seenFaction.has(label)) continue;
+        seenFaction.add(label);
+        factions.push({ colour, label });
+    }
+
+    host.innerHTML = `
+        <div class="chart-toolbar">
+            <div class="chart-toolbar-row">
+                <p class="chart-legend">
+                    <span class="key key-novel">Novel</span>
+                    <span class="key key-novella">Novella</span>
+                    <span class="key key-short">Short story</span>
+                    <span class="key key-audio">Audio drama</span>
+                    <span class="key key-arrow">&rarr; read before</span>
+                </p>
+                <p class="chart-hint">${nodes.length} entries, ${chartData.edges.length} prerequisites. Click any book for details.</p>
+            </div>
+            <div class="chart-factions" role="group" aria-label="Highlight a faction">
+                ${factions.map((f) => `
+                    <button type="button" class="faction-key" data-colour="${escapeHtml(f.colour)}"
+                            aria-pressed="false" title="Highlight ${escapeHtml(f.label)}">
+                        <span class="faction-swatch" style="background:${escapeHtml(f.colour)}"></span>
+                        <span class="faction-label">${escapeHtml(f.label)}</span>
+                    </button>`).join('')}
+            </div>
+        </div>
+        <div class="chart-scroll">
+            <svg class="chart-svg" viewBox="${minX} ${minY} ${width} ${height}"
+                 width="${width}" height="${height}" role="img"
+                 aria-label="Storyline chart of the Horus Heresy by Legion, with reading prerequisites">
+                <defs>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+                            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" />
+                    </marker>
+                </defs>
+                ${svgParts.join('\n')}
+            </svg>
+        </div>
+    `;
+
+    // One delegated listener rather than one per node.
+    const svg = host.querySelector('.chart-svg');
+    const open = (target) => {
+        const group = target.closest('.chart-node[data-book]');
+        if (group) showModal(group.dataset.book);
+    };
+    svg.addEventListener('click', (e) => open(e.target));
+
+    // Highlight one faction at a time. With 185 nodes and 205 crossing edges,
+    // following a single Legion's storyline by eye is otherwise very hard.
+    host.querySelectorAll('.faction-key').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const active = btn.getAttribute('aria-pressed') === 'true';
+            host.querySelectorAll('.faction-key').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+            if (active) {
+                svg.removeAttribute('data-highlight');
+            } else {
+                btn.setAttribute('aria-pressed', 'true');
+                svg.setAttribute('data-highlight', btn.dataset.colour);
+            }
+            svg.querySelectorAll('.chart-node').forEach((g) => {
+                g.classList.toggle('is-dimmed',
+                    svg.hasAttribute('data-highlight') && g.dataset.colour !== svg.getAttribute('data-highlight'));
+            });
+        });
+    });
+    svg.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(e.target); }
+    });
+
+    host.dataset.rendered = 'true';
+}
+
+// Split a node label across lines so it fits the original box width.
+function wrapLabel(label, boxWidth, centreX) {
+    const perLine = Math.max(8, Math.floor(boxWidth / 4.1));
+    const words = String(label).split(/\s+/);
+    const lines = [];
+    let line = '';
+    for (const word of words) {
+        if (line && (line + ' ' + word).length > perLine) { lines.push(line); line = word; }
+        else line = line ? line + ' ' + word : word;
+    }
+    if (line) lines.push(line);
+
+    const offset = -((lines.length - 1) * 0.55);
+    return lines
+        .map((text, i) => `<tspan x="${centreX}" dy="${i === 0 ? offset : 1.1}em">${escapeHtml(text)}</tspan>`)
+        .join('');
+}
+
+function initializeViewSwitcher() {
+    document.querySelectorAll('.view-btn').forEach((btn) => {
+        btn.addEventListener('click', () => setView(btn.dataset.view));
+    });
+}
+
+// Collapsible filters on small screens only. The button is display: none above
+// the breakpoint, so the desktop filter bar is unaffected.
+function initializeFilterDisclosure() {
+    const button = document.getElementById('filterDisclosure');
+    const section = document.getElementById('filterSection');
+    if (!button || !section) return;
+
+    button.addEventListener('click', () => {
+        const open = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!open));
+        section.classList.toggle('is-open', !open);
+    });
 }
 
 // Escape text destined for innerHTML. No current field contains <, >, & or ",
@@ -4870,7 +5263,7 @@ function setupFilterListeners() {
         siegeCheckbox.checked = true;
         // Reset the sort too. "Clear all" that left the sort alone made the
         // list look unchanged for no visible reason.
-        sortSelect.value = 'chronological';
+        sortSelect.value = 'view';
         generateBookCards('', '');
     });
 }
@@ -5147,12 +5540,18 @@ function initializeOrderingGuide() {
 }
 
 // Add glitch effect to title on load
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
     initializeAllegiance(); // Initialize theme switcher
     initializeOrderingGuide(); // Initialize ordering guide modal
     populateLegionFilter(); // Populate filter dropdown
     setupFilterListeners(); // Set up filter events
-    generateBookCards(); // Generate all book cards
+    initializeViewSwitcher();
+    initializeFilterDisclosure();
+
+    // Await the reading order before the first render, so a first-time visitor
+    // never sees chronological order flash up as if it were the recommendation.
+    await loadReadingOrder();
+    setView(loadView(), { persist: false });
 
     const mainTitle = document.querySelector('.main-title');
     let glitchCount = 0;

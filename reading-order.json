@@ -1,0 +1,2857 @@
+{
+ "meta": {
+  "purpose": "Recommended reading order, phase-grouped, with the opening quartet pinned first.",
+  "note": "This is NOT chronological order, and it is not a flattening of the chart either. The chart's lanes are parallel storylines, so cross-lane vertical position implies no reading order. Phases are anchored on in-universe date, and the curated order is preserved within each phase.",
+  "derivedBy": "tools/build-reading-order.mjs",
+  "chartSource": "Daunt's Horus Heresy Timeline v0.9",
+  "totals": {
+   "entries": 224,
+   "inChart": 153,
+   "notInChart": 71
+  },
+  "prerequisiteEdgesTotal": 205,
+  "prerequisiteEdgesHonoured": 196,
+  "prerequisiteViolations": [
+   {
+    "prerequisite": "FULGRIM",
+    "prerequisiteKey": "fulgrim",
+    "prerequisiteRank": 42,
+    "dependent": "THE FIRST HERETIC",
+    "dependentKey": "the-first-heretic",
+    "dependentRank": 10
+   },
+   {
+    "prerequisite": "FORGOTTEN SONS",
+    "prerequisiteKey": "age-of-darkness-forgotten-sons",
+    "prerequisiteRank": 112,
+    "dependent": "SCORCHED EARTH",
+    "dependentKey": "flame-scorched-earth",
+    "dependentRank": 61
+   },
+   {
+    "prerequisite": "IMPERFECT",
+    "prerequisiteKey": "war-imperfect",
+    "prerequisiteRank": 138,
+    "dependent": "CHIRURGEON",
+    "dependentKey": "war-chirurgeon",
+    "dependentRank": 54
+   },
+   {
+    "prerequisite": "PRINCE OF CROWS",
+    "prerequisiteKey": "shadows-of-treachery-prince-of-crows",
+    "prerequisiteRank": 132,
+    "dependent": "MASTER OF THE FIRST",
+    "dependentKey": "eye-master-first",
+    "dependentRank": 96
+   },
+   {
+    "prerequisite": "THE LAST REMEMBRANCER",
+    "prerequisiteKey": "age-of-darkness-the-last-remembrancer",
+    "prerequisiteRank": 131,
+    "dependent": "GARRO: OATH OF MOMENT",
+    "dependentKey": "garro-oath-moment",
+    "dependentRank": 103
+   },
+   {
+    "prerequisite": "BURDEN OF DUTY",
+    "prerequisiteKey": "garro-burden-duty",
+    "prerequisiteRank": 147,
+    "dependent": "GARRO: SWORD OF TRUTH",
+    "dependentKey": "garro-sword-truth",
+    "dependentRank": 104
+   },
+   {
+    "prerequisite": "STRATAGEM",
+    "prerequisiteKey": "eye-stratagem",
+    "prerequisiteRank": 142,
+    "dependent": "RED-MARKED",
+    "dependentKey": "eye-red-marked",
+    "dependentRank": 95
+   },
+   {
+    "prerequisite": "HERALD OF SANGUINIUS",
+    "prerequisiteKey": "eye-herald-sanguinius",
+    "prerequisiteRank": 143,
+    "dependent": "SINS OF THE FATHER",
+    "dependentKey": "eye-sins-father",
+    "dependentRank": 19
+   },
+   {
+    "prerequisite": "RIVEN",
+    "prerequisiteKey": "legacies-riven",
+    "prerequisiteRank": 173,
+    "dependent": "THE KEYS OF HEL",
+    "dependentKey": "shattered-keys-hel",
+    "dependentRank": 129
+   }
+  ],
+  "violationNote": "A violation means the phase ordering places a book before something the chart says should precede it. These are surfaced in the interface on the affected book rather than silently reordered.",
+  "chartNodesWithoutBookEntry": 29
+ },
+ "phases": [
+  {
+   "id": "opening",
+   "title": "Start Here",
+   "blurb": "Four books, in this order. They are the entry point to the whole saga, and almost everything else assumes you have read them."
+  },
+  {
+   "id": "before-the-betrayal",
+   "title": "Before the Betrayal",
+   "blurb": "The Great Crusade, the Primarchs found, and the grievances that will become the Heresy."
+  },
+  {
+   "id": "isstvan",
+   "title": "Isstvan and the Drop Site Massacre",
+   "blurb": "The betrayal breaks into the open. Isstvan III, then the ambush at Isstvan V."
+  },
+  {
+   "id": "calth",
+   "title": "Calth and the Shadow Crusade",
+   "blurb": "The war spreads. Ultramar burns and the traitor Legions carve up the east."
+  },
+  {
+   "id": "imperium-secundus",
+   "title": "Imperium Secundus and the Ruinstorm",
+   "blurb": "Cut off behind the warp storm, the loyalist Primarchs build a second Imperium."
+  },
+  {
+   "id": "road-to-terra",
+   "title": "The Road to Terra",
+   "blurb": "Beta-Garmon and the last campaigns before the Warmaster reaches the Throneworld."
+  },
+  {
+   "id": "siege",
+   "title": "The Siege of Terra",
+   "blurb": "The finale. Read these last, and read them in series order."
+  },
+  {
+   "id": "primarchs",
+   "title": "Optional: The Primarchs",
+   "blurb": "Seventeen character studies, one per Primarch. Supplementary background rather than plot, absent from the source chart, and readable any time after the opening four."
+  }
+ ],
+ "entries": [
+  {
+   "bookKey": "horus-rising",
+   "number": "I",
+   "title": "HORUS RISING",
+   "timeline": "002-003.M31",
+   "phase": "opening",
+   "chronoRank": 32,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 1
+  },
+  {
+   "bookKey": "false-gods",
+   "number": "II",
+   "title": "FALSE GODS",
+   "timeline": "004.M31",
+   "phase": "opening",
+   "chronoRank": 35,
+   "inChart": true,
+   "prerequisites": [
+    "horus-rising"
+   ],
+   "rank": 2
+  },
+  {
+   "bookKey": "galaxy-in-flames",
+   "number": "III",
+   "title": "GALAXY IN FLAMES",
+   "timeline": "005.M31",
+   "phase": "opening",
+   "chronoRank": 45,
+   "inChart": true,
+   "prerequisites": [
+    "false-gods"
+   ],
+   "rank": 3
+  },
+  {
+   "bookKey": "the-flight-of-the-eisenstein",
+   "number": "IV",
+   "title": "THE FLIGHT OF THE EISENSTEIN",
+   "timeline": "005.M31",
+   "phase": "opening",
+   "chronoRank": 47,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 4
+  },
+  {
+   "bookKey": "tales-of-heresy-the-last-church",
+   "number": "X.6",
+   "title": "THE LAST CHURCH",
+   "timeline": "730.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 1,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 5
+  },
+  {
+   "bookKey": "mark-of-calth-athame",
+   "number": "XXV.7",
+   "title": "ATHAME",
+   "timeline": "800.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 2,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 6
+  },
+  {
+   "bookKey": "descent-of-angels",
+   "number": "VI",
+   "title": "DESCENT OF ANGELS",
+   "timeline": "820-970.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 3,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 7
+  },
+  {
+   "bookKey": "tales-of-heresy-after-deshea",
+   "number": "X.7",
+   "title": "AFTER DESH'EA",
+   "timeline": "899.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 8,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 8
+  },
+  {
+   "bookKey": "tales-of-heresy-wolf-at-the-door",
+   "number": "X.2",
+   "title": "WOLF AT THE DOOR",
+   "timeline": "950.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 11,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 9
+  },
+  {
+   "bookKey": "the-first-heretic",
+   "number": "XIV",
+   "title": "THE FIRST HERETIC",
+   "timeline": "956.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 13,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 10
+  },
+  {
+   "bookKey": "tales-of-heresy-scions-of-the-storm",
+   "number": "X.3",
+   "title": "SCIONS OF THE STORM",
+   "timeline": "956.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 14,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 11
+  },
+  {
+   "bookKey": "tales-of-heresy-call-of-the-lion",
+   "number": "X.5",
+   "title": "CALL OF THE LION",
+   "timeline": "960.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 16,
+   "inChart": true,
+   "prerequisites": [
+    "descent-of-angels"
+   ],
+   "rank": 12
+  },
+  {
+   "bookKey": "war-divine-adoratrice",
+   "number": "XXXIII.12",
+   "title": "THE DIVINE ADORATRICE",
+   "timeline": "966.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 18,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 13
+  },
+  {
+   "bookKey": "shadows-of-treachery-dark-king",
+   "number": "XXII.2",
+   "title": "THE DARK KING",
+   "timeline": "984.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 20,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 14
+  },
+  {
+   "bookKey": "eye-wolf-ash-fire",
+   "number": "XXXV.1",
+   "title": "THE WOLF OF ASH AND FIRE",
+   "timeline": "999.M30",
+   "phase": "before-the-betrayal",
+   "chronoRank": 22,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 15
+  },
+  {
+   "bookKey": "shadows-of-treachery-death-of-silversmith",
+   "number": "XXII.6",
+   "title": "DEATH OF A SILVERSMITH",
+   "timeline": "000.M31",
+   "phase": "before-the-betrayal",
+   "chronoRank": 24,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 16
+  },
+  {
+   "bookKey": "legion",
+   "number": "VII",
+   "title": "LEGION",
+   "timeline": "001.M31",
+   "phase": "before-the-betrayal",
+   "chronoRank": 26,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 17
+  },
+  {
+   "bookKey": "a-thousand-sons",
+   "number": "XII",
+   "title": "A THOUSAND SONS",
+   "timeline": "001-004.M31",
+   "phase": "before-the-betrayal",
+   "chronoRank": 27,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 18
+  },
+  {
+   "bookKey": "eye-sins-father",
+   "number": "XXXV.12",
+   "title": "SINS OF THE FATHER",
+   "timeline": "001.M31",
+   "phase": "before-the-betrayal",
+   "chronoRank": 30,
+   "inChart": true,
+   "prerequisites": [
+    "eye-herald-sanguinius"
+   ],
+   "rank": 19
+  },
+  {
+   "bookKey": "war-virtues-sons",
+   "number": "XXXIII.16",
+   "title": "VIRTUES OF THE SONS",
+   "timeline": "001.M31",
+   "phase": "before-the-betrayal",
+   "chronoRank": 29,
+   "inChart": true,
+   "prerequisites": [
+    "eye-sins-father"
+   ],
+   "rank": 20
+  },
+  {
+   "bookKey": "flame-promethean-sun",
+   "number": "L.1",
+   "title": "PROMETHEAN SUN",
+   "timeline": "001.M31",
+   "phase": "before-the-betrayal",
+   "chronoRank": 31,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 21
+  },
+  {
+   "bookKey": "the-primarchs-feat-of-iron",
+   "number": "XX.2",
+   "title": "FEAT OF IRON",
+   "timeline": "001.M31",
+   "phase": "before-the-betrayal",
+   "chronoRank": 28,
+   "inChart": true,
+   "prerequisites": [
+    "flame-promethean-sun"
+   ],
+   "rank": 22
+  },
+  {
+   "bookKey": "shadows-of-treachery-kaban-project",
+   "number": "XXII.4",
+   "title": "THE KABAN PROJECT",
+   "timeline": "003-004.M31",
+   "phase": "isstvan",
+   "chronoRank": 34,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 23
+  },
+  {
+   "bookKey": "the-outcast-dead",
+   "number": "XVII",
+   "title": "THE OUTCAST DEAD",
+   "timeline": "004.M31",
+   "phase": "isstvan",
+   "chronoRank": 36,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 24
+  },
+  {
+   "bookKey": "prospero-burns",
+   "number": "XV",
+   "title": "PROSPERO BURNS",
+   "timeline": "004-005.M31",
+   "phase": "isstvan",
+   "chronoRank": 37,
+   "inChart": true,
+   "prerequisites": [
+    "a-thousand-sons"
+   ],
+   "rank": 25
+  },
+  {
+   "bookKey": "age-of-darkness-rebirth",
+   "number": "XVI.5",
+   "title": "REBIRTH",
+   "timeline": "004-005.M31",
+   "phase": "isstvan",
+   "chronoRank": 38,
+   "inChart": true,
+   "prerequisites": [
+    "prospero-burns"
+   ],
+   "rank": 26
+  },
+  {
+   "bookKey": "legacies-serpent",
+   "number": "XXXI.2",
+   "title": "SERPENT",
+   "timeline": "004.M31",
+   "phase": "isstvan",
+   "chronoRank": 39,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 27
+  },
+  {
+   "bookKey": "legacies-hunters-moon",
+   "number": "XXXI.3",
+   "title": "HUNTER'S MOON",
+   "timeline": "004.M31",
+   "phase": "isstvan",
+   "chronoRank": 40,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 28
+  },
+  {
+   "bookKey": "legacies-thief-revelations",
+   "number": "XXXI.12",
+   "title": "THIEF OF REVELATIONS",
+   "timeline": "004.M31",
+   "phase": "isstvan",
+   "chronoRank": 41,
+   "inChart": true,
+   "prerequisites": [
+    "prospero-burns"
+   ],
+   "rank": 29
+  },
+  {
+   "bookKey": "war-howl-hearthworld",
+   "number": "XXXIII.2",
+   "title": "HOWL OF THE HEARTHWORLD",
+   "timeline": "004.M31",
+   "phase": "isstvan",
+   "chronoRank": 43,
+   "inChart": true,
+   "prerequisites": [
+    "prospero-burns"
+   ],
+   "rank": 30
+  },
+  {
+   "bookKey": "burden-thirteenth-wolf",
+   "number": "XLVIII.7",
+   "title": "THE THIRTEENTH WOLF",
+   "timeline": "004-005.M31",
+   "phase": "isstvan",
+   "chronoRank": 44,
+   "inChart": true,
+   "prerequisites": [
+    "prospero-burns"
+   ],
+   "rank": 31
+  },
+  {
+   "bookKey": "mechanicum",
+   "number": "IX",
+   "title": "MECHANICUM",
+   "timeline": "005.M31",
+   "phase": "isstvan",
+   "chronoRank": 46,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 32
+  },
+  {
+   "bookKey": "fallen-angels",
+   "number": "XI",
+   "title": "FALLEN ANGELS",
+   "timeline": "005.M31",
+   "phase": "isstvan",
+   "chronoRank": 48,
+   "inChart": true,
+   "prerequisites": [
+    "tales-of-heresy-call-of-the-lion"
+   ],
+   "rank": 33
+  },
+  {
+   "bookKey": "fear-to-tread",
+   "number": "XXI",
+   "title": "FEAR TO TREAD",
+   "timeline": "005-006.M31",
+   "phase": "isstvan",
+   "chronoRank": 49,
+   "inChart": true,
+   "prerequisites": [
+    "the-first-heretic"
+   ],
+   "rank": 34
+  },
+  {
+   "bookKey": "shadows-of-treachery-lightning-tower",
+   "number": "XXII.3",
+   "title": "THE LIGHTNING TOWER",
+   "timeline": "005-006.M31",
+   "phase": "isstvan",
+   "chronoRank": 50,
+   "inChart": true,
+   "prerequisites": [
+    "shadows-of-treachery-dark-king"
+   ],
+   "rank": 35
+  },
+  {
+   "bookKey": "war-lord-red-sands",
+   "number": "XXXIII.3",
+   "title": "LORD OF THE RED SANDS",
+   "timeline": "005.M31",
+   "phase": "isstvan",
+   "chronoRank": 51,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 36
+  },
+  {
+   "bookKey": "eye-vorax",
+   "number": "XXXV.7",
+   "title": "VORAX",
+   "timeline": "005-006.M31",
+   "phase": "isstvan",
+   "chronoRank": 52,
+   "inChart": true,
+   "prerequisites": [
+    "mechanicum"
+   ],
+   "rank": 37
+  },
+  {
+   "bookKey": "silent-child-night",
+   "number": "XXXVII.2",
+   "title": "CHILD OF NIGHT",
+   "timeline": "005-007.M31",
+   "phase": "isstvan",
+   "chronoRank": 53,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 38
+  },
+  {
+   "bookKey": "silent-wolf-hunt",
+   "number": "XXXVII.7",
+   "title": "WOLF HUNT",
+   "timeline": "005.M31",
+   "phase": "isstvan",
+   "chronoRank": 54,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 39
+  },
+  {
+   "bookKey": "burden-into-exile",
+   "number": "XLVIII.3",
+   "title": "INTO EXILE",
+   "timeline": "005-007.M31",
+   "phase": "isstvan",
+   "chronoRank": 55,
+   "inChart": true,
+   "prerequisites": [
+    "mechanicum"
+   ],
+   "rank": 40
+  },
+  {
+   "bookKey": "burden-cybernetica",
+   "number": "XLVIII.6",
+   "title": "CYBERNETICA",
+   "timeline": "005.M31",
+   "phase": "isstvan",
+   "chronoRank": 56,
+   "inChart": true,
+   "prerequisites": [
+    "mechanicum"
+   ],
+   "rank": 41
+  },
+  {
+   "bookKey": "fulgrim",
+   "number": "V",
+   "title": "FULGRIM",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 57,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 42
+  },
+  {
+   "bookKey": "tales-of-heresy-blood-games",
+   "number": "X.1",
+   "title": "BLOOD GAMES",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 59,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 43
+  },
+  {
+   "bookKey": "tales-of-heresy-the-voice",
+   "number": "X.4",
+   "title": "THE VOICE",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 60,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 44
+  },
+  {
+   "bookKey": "age-of-darkness-iron-within",
+   "number": "XVI.8",
+   "title": "THE IRON WITHIN",
+   "timeline": "006-007.M31",
+   "phase": "isstvan",
+   "chronoRank": 62,
+   "inChart": true,
+   "prerequisites": [
+    "the-primarchs-feat-of-iron"
+   ],
+   "rank": 45
+  },
+  {
+   "bookKey": "the-primarchs-reflection-crackd",
+   "number": "XX.1",
+   "title": "THE REFLECTION CRACK'D",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 63,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 46
+  },
+  {
+   "bookKey": "shadows-of-treachery-ravens-flight",
+   "number": "XXII.5",
+   "title": "RAVEN'S FLIGHT",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 64,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 47
+  },
+  {
+   "bookKey": "age-of-darkness-face-of-treachery",
+   "number": "XVI.6",
+   "title": "THE FACE OF TREACHERY",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 61,
+   "inChart": true,
+   "prerequisites": [
+    "shadows-of-treachery-ravens-flight"
+   ],
+   "rank": 48
+  },
+  {
+   "bookKey": "mark-of-calth-shards-of-erebus",
+   "number": "XXV.1",
+   "title": "THE SHARDS OF EREBUS",
+   "timeline": "006-007.M31",
+   "phase": "isstvan",
+   "chronoRank": 65,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 49
+  },
+  {
+   "bookKey": "legacies-veritas-ferrum",
+   "number": "XXXI.4",
+   "title": "VERITAS FERRUM",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 66,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 50
+  },
+  {
+   "bookKey": "war-sermon-exodus",
+   "number": "XXXIII.1",
+   "title": "SERMON OF EXODUS",
+   "timeline": "004.M31",
+   "phase": "isstvan",
+   "chronoRank": 42,
+   "inChart": true,
+   "prerequisites": [
+    "legacies-veritas-ferrum"
+   ],
+   "rank": 51
+  },
+  {
+   "bookKey": "legacies-strike-fade",
+   "number": "XXXI.6",
+   "title": "STRIKE AND FADE",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 67,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 52
+  },
+  {
+   "bookKey": "war-artefacts",
+   "number": "XXXIII.8",
+   "title": "ARTEFACTS",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 68,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 53
+  },
+  {
+   "bookKey": "war-chirurgeon",
+   "number": "XXXIII.11",
+   "title": "CHIRURGEON",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 69,
+   "inChart": true,
+   "prerequisites": [
+    "war-imperfect"
+   ],
+   "rank": 54
+  },
+  {
+   "bookKey": "eye-aurelian",
+   "number": "XXXV.2",
+   "title": "AURELIAN",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 70,
+   "inChart": true,
+   "prerequisites": [
+    "the-first-heretic"
+   ],
+   "rank": 55
+  },
+  {
+   "bookKey": "eye-massacre",
+   "number": "XXXV.4",
+   "title": "MASSACRE",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 71,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 56
+  },
+  {
+   "bookKey": "eye-final-compliance",
+   "number": "XXXV.16",
+   "title": "THE FINAL COMPLIANCE OF SIXTY-THREE FOURTEEN",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 72,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 57
+  },
+  {
+   "bookKey": "corax-weregeld",
+   "number": "XL.1",
+   "title": "WEREGELD",
+   "timeline": "006-007.M31",
+   "phase": "isstvan",
+   "chronoRank": 73,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 58
+  },
+  {
+   "bookKey": "shattered-immortal-duty",
+   "number": "XLIII.3",
+   "title": "IMMORTAL DUTY",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 74,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 59
+  },
+  {
+   "bookKey": "burden-binary-succession",
+   "number": "XLVIII.2",
+   "title": "THE BINARY SUCCESSION",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 75,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 60
+  },
+  {
+   "bookKey": "flame-scorched-earth",
+   "number": "L.2",
+   "title": "SCORCHED EARTH",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 76,
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-forgotten-sons",
+    "flame-promethean-sun"
+   ],
+   "rank": 61
+  },
+  {
+   "bookKey": "vulkan-lives",
+   "number": "XXVI",
+   "title": "VULKAN LIVES",
+   "timeline": "006-007.M31",
+   "phase": "isstvan",
+   "chronoRank": 58,
+   "inChart": true,
+   "prerequisites": [
+    "flame-scorched-earth"
+   ],
+   "rank": 62
+  },
+  {
+   "bookKey": "flame-sons-of-forge",
+   "number": "L.3",
+   "title": "SONS OF THE FORGE",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 77,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 63
+  },
+  {
+   "bookKey": "flame-artefacts",
+   "number": "L.4",
+   "title": "ARTEFACTS",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 78,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 64
+  },
+  {
+   "bookKey": "flame-immortal-duty-2",
+   "number": "L.5",
+   "title": "IMMORTAL DUTY",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 79,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 65
+  },
+  {
+   "bookKey": "war-phoenician",
+   "number": "XXXIII.9",
+   "title": "THE PHOENICIAN",
+   "timeline": "006.M31",
+   "phase": "isstvan",
+   "chronoRank": 80,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 66
+  },
+  {
+   "bookKey": "deliverance-lost",
+   "number": "XVIII",
+   "title": "DELIVERANCE LOST",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 81,
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-face-of-treachery"
+   ],
+   "rank": 67
+  },
+  {
+   "bookKey": "the-crimson-king",
+   "number": "XLIV",
+   "title": "THE CRIMSON KING",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 82,
+   "inChart": true,
+   "prerequisites": [
+    "prospero-burns"
+   ],
+   "rank": 68
+  },
+  {
+   "bookKey": "the-damnation-of-pythos",
+   "number": "XXX",
+   "title": "THE DAMNATION OF PYTHOS",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 83,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 69
+  },
+  {
+   "bookKey": "nemesis",
+   "number": "XIII",
+   "title": "NEMESIS",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 84,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 70
+  },
+  {
+   "bookKey": "battle-for-the-abyss",
+   "number": "VIII",
+   "title": "BATTLE FOR THE ABYSS",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 86,
+   "inChart": true,
+   "prerequisites": [
+    "the-first-heretic"
+   ],
+   "rank": 71
+  },
+  {
+   "bookKey": "know-no-fear",
+   "number": "XIX",
+   "title": "KNOW NO FEAR",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 85,
+   "inChart": true,
+   "prerequisites": [
+    "legion",
+    "battle-for-the-abyss"
+   ],
+   "rank": 72
+  },
+  {
+   "bookKey": "age-of-darkness-savage-weapons",
+   "number": "XVI.9",
+   "title": "SAVAGE WEAPONS",
+   "timeline": "007-009.M31",
+   "phase": "calth",
+   "chronoRank": 90,
+   "inChart": true,
+   "prerequisites": [
+    "fallen-angels"
+   ],
+   "rank": 73
+  },
+  {
+   "bookKey": "the-primarchs-the-lion",
+   "number": "XX.3",
+   "title": "THE LION",
+   "timeline": "007-009.M31",
+   "phase": "calth",
+   "chronoRank": 91,
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-savage-weapons"
+   ],
+   "rank": 74
+  },
+  {
+   "bookKey": "the-primarchs-serpent-beneath",
+   "number": "XX.4",
+   "title": "THE SERPENT BENEATH",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 92,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 75
+  },
+  {
+   "bookKey": "shadows-of-treachery-crimson-fist",
+   "number": "XXII.1",
+   "title": "THE CRIMSON FIST",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 93,
+   "inChart": true,
+   "prerequisites": [
+    "shadows-of-treachery-lightning-tower"
+   ],
+   "rank": 76
+  },
+  {
+   "bookKey": "mark-of-calth-calth-that-was",
+   "number": "XXV.2",
+   "title": "CALTH THAT WAS",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 94,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 77
+  },
+  {
+   "bookKey": "mark-of-calth-dark-heart",
+   "number": "XXV.3",
+   "title": "DARK HEART",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 95,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 78
+  },
+  {
+   "bookKey": "mark-of-calth-the-traveller",
+   "number": "XXV.4",
+   "title": "THE TRAVELLER",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 96,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 79
+  },
+  {
+   "bookKey": "mark-of-calth-deeper-darkness",
+   "number": "XXV.5",
+   "title": "A DEEPER DARKNESS",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 97,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 80
+  },
+  {
+   "bookKey": "mark-of-calth-underworld-war",
+   "number": "XXV.6",
+   "title": "THE UNDERWORLD WAR",
+   "timeline": "007-009.M31",
+   "phase": "calth",
+   "chronoRank": 98,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 81
+  },
+  {
+   "bookKey": "mark-of-calth-unmarked",
+   "number": "XXV.8",
+   "title": "UNMARKED",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 99,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 82
+  },
+  {
+   "bookKey": "legacies-brotherhood-storm",
+   "number": "XXXI.1",
+   "title": "BROTHERHOOD OF THE STORM",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 100,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 83
+  },
+  {
+   "bookKey": "scars",
+   "number": "XXVIII",
+   "title": "SCARS",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 89,
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-rebirth",
+    "legacies-brotherhood-storm"
+   ],
+   "rank": 84
+  },
+  {
+   "bookKey": "legacies-honour-dead",
+   "number": "XXXI.7",
+   "title": "HONOUR TO THE DEAD",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 101,
+   "inChart": true,
+   "prerequisites": [
+    "know-no-fear"
+   ],
+   "rank": 85
+  },
+  {
+   "bookKey": "legacies-butchers-nails",
+   "number": "XXXI.8",
+   "title": "BUTCHER'S NAILS",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 102,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 86
+  },
+  {
+   "bookKey": "betrayer",
+   "number": "XXIV",
+   "title": "BETRAYER",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 88,
+   "inChart": true,
+   "prerequisites": [
+    "legacies-butchers-nails",
+    "tales-of-heresy-after-deshea",
+    "know-no-fear"
+   ],
+   "rank": 87
+  },
+  {
+   "bookKey": "legacies-kryptos",
+   "number": "XXXI.10",
+   "title": "KRYPTOS",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 103,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 88
+  },
+  {
+   "bookKey": "angel-exterminatus",
+   "number": "XXIII",
+   "title": "ANGEL EXTERMINATUS",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 87,
+   "inChart": true,
+   "prerequisites": [
+    "the-primarchs-reflection-crackd",
+    "legacies-kryptos"
+   ],
+   "rank": 89
+  },
+  {
+   "bookKey": "legacies-wolfs-claw",
+   "number": "XXXI.11",
+   "title": "WOLF'S CLAW",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 104,
+   "inChart": true,
+   "prerequisites": [
+    "war-howl-hearthworld"
+   ],
+   "rank": 90
+  },
+  {
+   "bookKey": "war-allegiance",
+   "number": "XXXIII.20",
+   "title": "ALLEGIANCE",
+   "timeline": "007-009.M31",
+   "phase": "calth",
+   "chronoRank": 105,
+   "inChart": true,
+   "prerequisites": [
+    "scars"
+   ],
+   "rank": 91
+  },
+  {
+   "bookKey": "war-daemonology",
+   "number": "XXXIII.21",
+   "title": "DAEMONOLOGY",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 106,
+   "inChart": true,
+   "prerequisites": [
+    "scars"
+   ],
+   "rank": 92
+  },
+  {
+   "bookKey": "eye-brotherhood-moon",
+   "number": "XXXV.5",
+   "title": "BROTHERHOOD OF THE MOON",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 107,
+   "inChart": true,
+   "prerequisites": [
+    "scars"
+   ],
+   "rank": 93
+  },
+  {
+   "bookKey": "eye-inheritor",
+   "number": "XXXV.6",
+   "title": "INHERITOR",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 108,
+   "inChart": true,
+   "prerequisites": [
+    "betrayer"
+   ],
+   "rank": 94
+  },
+  {
+   "bookKey": "eye-red-marked",
+   "number": "XXXV.9",
+   "title": "RED-MARKED",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 109,
+   "inChart": true,
+   "prerequisites": [
+    "eye-stratagem"
+   ],
+   "rank": 95
+  },
+  {
+   "bookKey": "eye-master-first",
+   "number": "XXXV.10",
+   "title": "MASTER OF THE FIRST",
+   "timeline": "007-009.M31",
+   "phase": "calth",
+   "chronoRank": 110,
+   "inChart": true,
+   "prerequisites": [
+    "shadows-of-treachery-prince-of-crows"
+   ],
+   "rank": 96
+  },
+  {
+   "bookKey": "silent-watcher",
+   "number": "XXXVII.1",
+   "title": "THE WATCHER",
+   "timeline": "007-009.M31",
+   "phase": "calth",
+   "chronoRank": 111,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 97
+  },
+  {
+   "bookKey": "silent-purge",
+   "number": "XXXVII.8",
+   "title": "THE PURGE",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 114,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 98
+  },
+  {
+   "bookKey": "silent-ghosts-speak",
+   "number": "XXXVII.11",
+   "title": "GHOSTS SPEAK NOT",
+   "timeline": "007-009.M31",
+   "phase": "calth",
+   "chronoRank": 115,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 99
+  },
+  {
+   "bookKey": "corax-soulforge",
+   "number": "XL.2",
+   "title": "SOULFORGE",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 116,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 100
+  },
+  {
+   "bookKey": "corax-ravenlord",
+   "number": "XL.3",
+   "title": "RAVENLORD",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 117,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 101
+  },
+  {
+   "bookKey": "corax-shadowmasters",
+   "number": "XL.4",
+   "title": "THE SHADOWMASTERS",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 118,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 102
+  },
+  {
+   "bookKey": "garro-oath-moment",
+   "number": "XLII.1",
+   "title": "GARRO: OATH OF MOMENT",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 119,
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-the-last-remembrancer"
+   ],
+   "rank": 103
+  },
+  {
+   "bookKey": "garro-sword-truth",
+   "number": "XLII.2",
+   "title": "GARRO: SWORD OF TRUTH",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 120,
+   "inChart": true,
+   "prerequisites": [
+    "garro-burden-duty"
+   ],
+   "rank": 104
+  },
+  {
+   "bookKey": "shattered-unforged",
+   "number": "XLIII.2",
+   "title": "UNFORGED",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 121,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 105
+  },
+  {
+   "bookKey": "shattered-grey-talon",
+   "number": "XLIII.4",
+   "title": "GREY TALON",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 122,
+   "inChart": true,
+   "prerequisites": [
+    "war-allegiance"
+   ],
+   "rank": 106
+  },
+  {
+   "bookKey": "burden-perpetual",
+   "number": "XLVIII.1",
+   "title": "PERPETUAL",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 123,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 107
+  },
+  {
+   "bookKey": "burden-ordo-sinister",
+   "number": "XLVIII.4",
+   "title": "ORDO SINISTER",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 124,
+   "inChart": true,
+   "prerequisites": [
+    "burden-binary-succession"
+   ],
+   "rank": 108
+  },
+  {
+   "bookKey": "burden-wolf-king",
+   "number": "XLVIII.8",
+   "title": "THE WOLF KING",
+   "timeline": "007.M31",
+   "phase": "calth",
+   "chronoRank": 125,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 109
+  },
+  {
+   "bookKey": "age-of-darkness-rules-of-engagement",
+   "number": "XVI.1",
+   "title": "RULES OF ENGAGEMENT",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 127,
+   "inChart": true,
+   "prerequisites": [
+    "know-no-fear"
+   ],
+   "rank": 110
+  },
+  {
+   "bookKey": "age-of-darkness-liars-due",
+   "number": "XVI.2",
+   "title": "LIAR'S DUE",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 128,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 111
+  },
+  {
+   "bookKey": "age-of-darkness-forgotten-sons",
+   "number": "XVI.3",
+   "title": "FORGOTTEN SONS",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 129,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim"
+   ],
+   "rank": 112
+  },
+  {
+   "bookKey": "legacies-warmaster",
+   "number": "XXXI.9",
+   "title": "WARMASTER",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 131,
+   "inChart": true,
+   "prerequisites": [
+    "eye-final-compliance",
+    "eye-wolf-ash-fire"
+   ],
+   "rank": 113
+  },
+  {
+   "bookKey": "age-of-darkness-little-horus",
+   "number": "XVI.7",
+   "title": "LITTLE HORUS",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 130,
+   "inChart": true,
+   "prerequisites": [
+    "legacies-warmaster"
+   ],
+   "rank": 114
+  },
+  {
+   "bookKey": "legacies-divine-word",
+   "number": "XXXI.13",
+   "title": "THE DIVINE WORD",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 132,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 115
+  },
+  {
+   "bookKey": "legacies-kharn",
+   "number": "XXXI.15",
+   "title": "KHÂRN: THE EIGHTFOLD PATH",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 133,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 116
+  },
+  {
+   "bookKey": "legacies-cypher",
+   "number": "XXXI.16",
+   "title": "CYPHER: GUARDIAN OF ORDER",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 134,
+   "inChart": true,
+   "prerequisites": [
+    "fallen-angels"
+   ],
+   "rank": 117
+  },
+  {
+   "bookKey": "legacies-heart-conqueror",
+   "number": "XXXI.17",
+   "title": "HEART OF THE CONQUEROR",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 135,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 118
+  },
+  {
+   "bookKey": "war-gunsight",
+   "number": "XXXIII.18",
+   "title": "GUNSIGHT",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 136,
+   "inChart": true,
+   "prerequisites": [
+    "nemesis"
+   ],
+   "rank": 119
+  },
+  {
+   "bookKey": "eye-ironfire",
+   "number": "XXXV.8",
+   "title": "IRONFIRE",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 137,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 120
+  },
+  {
+   "bookKey": "corax-value-fear",
+   "number": "XL.5",
+   "title": "THE VALUE OF FEAR",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 138,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 121
+  },
+  {
+   "bookKey": "corax-raptor",
+   "number": "XL.6",
+   "title": "RAPTOR",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 139,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 122
+  },
+  {
+   "bookKey": "garro-legion-one",
+   "number": "XLII.3",
+   "title": "GARRO: LEGION OF ONE",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 140,
+   "inChart": true,
+   "prerequisites": [
+    "garro-sword-truth"
+   ],
+   "rank": 123
+  },
+  {
+   "bookKey": "silent-luna-mendax",
+   "number": "XXXVII.6",
+   "title": "LUNA MENDAX",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 113,
+   "inChart": true,
+   "prerequisites": [
+    "garro-legion-one"
+   ],
+   "rank": 124
+  },
+  {
+   "bookKey": "silent-grey-angel",
+   "number": "XXXVII.3",
+   "title": "GREY ANGEL",
+   "timeline": "007-008.M31",
+   "phase": "calth",
+   "chronoRank": 112,
+   "inChart": true,
+   "prerequisites": [
+    "silent-luna-mendax"
+   ],
+   "rank": 125
+  },
+  {
+   "bookKey": "vengeful-spirit",
+   "number": "XXIX",
+   "title": "VENGEFUL SPIRIT",
+   "timeline": "008-009.M31",
+   "phase": "calth",
+   "chronoRank": 126,
+   "inChart": true,
+   "prerequisites": [
+    "silent-grey-angel",
+    "war-divine-adoratrice"
+   ],
+   "rank": 126
+  },
+  {
+   "bookKey": "garro-shield-lies",
+   "number": "XLII.4",
+   "title": "GARRO: SHIELD OF LIES",
+   "timeline": "008-009.M31",
+   "phase": "calth",
+   "chronoRank": 141,
+   "inChart": true,
+   "prerequisites": [
+    "silent-luna-mendax"
+   ],
+   "rank": 127
+  },
+  {
+   "bookKey": "shattered-meduson",
+   "number": "XLIII.1",
+   "title": "MEDUSON",
+   "timeline": "008-011.M31",
+   "phase": "calth",
+   "chronoRank": 142,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 128
+  },
+  {
+   "bookKey": "shattered-keys-hel",
+   "number": "XLIII.5",
+   "title": "THE KEYS OF HEL",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 143,
+   "inChart": true,
+   "prerequisites": [
+    "legacies-riven"
+   ],
+   "rank": 129
+  },
+  {
+   "bookKey": "shattered-deeds-endure",
+   "number": "XLIII.7",
+   "title": "DEEDS ENDURE",
+   "timeline": "008.M31",
+   "phase": "calth",
+   "chronoRank": 144,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 130
+  },
+  {
+   "bookKey": "age-of-darkness-the-last-remembrancer",
+   "number": "XVI.4",
+   "title": "THE LAST REMEMBRANCER",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 147,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 131
+  },
+  {
+   "bookKey": "shadows-of-treachery-prince-of-crows",
+   "number": "XXII.7",
+   "title": "PRINCE OF CROWS",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 148,
+   "inChart": true,
+   "prerequisites": [
+    "the-primarchs-the-lion"
+   ],
+   "rank": 132
+  },
+  {
+   "bookKey": "the-unremembered-empire",
+   "number": "XXVII",
+   "title": "THE UNREMEMBERED EMPIRE",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 145,
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-iron-within",
+    "fear-to-tread",
+    "vulkan-lives",
+    "shadows-of-treachery-prince-of-crows"
+   ],
+   "rank": 133
+  },
+  {
+   "bookKey": "legacies-lucius",
+   "number": "XXXI.14",
+   "title": "LUCIUS: THE ETERNAL BLADEMASTER",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 149,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 134
+  },
+  {
+   "bookKey": "legacies-censure",
+   "number": "XXXI.18",
+   "title": "CENSURE",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 150,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 135
+  },
+  {
+   "bookKey": "war-laurel-defiance",
+   "number": "XXXIII.5",
+   "title": "THE LAUREL OF DEFIANCE",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 151,
+   "inChart": true,
+   "prerequisites": [
+    "the-unremembered-empire"
+   ],
+   "rank": 136
+  },
+  {
+   "bookKey": "war-safe-shadowed-place",
+   "number": "XXXIII.6",
+   "title": "A SAFE AND SHADOWED PLACE",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 152,
+   "inChart": true,
+   "prerequisites": [
+    "the-unremembered-empire"
+   ],
+   "rank": 137
+  },
+  {
+   "bookKey": "war-imperfect",
+   "number": "XXXIII.10",
+   "title": "IMPERFECT",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 153,
+   "inChart": true,
+   "prerequisites": [
+    "angel-exterminatus"
+   ],
+   "rank": 138
+  },
+  {
+   "bookKey": "war-wolf-mother",
+   "number": "XXXIII.13",
+   "title": "WOLF MOTHER",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 154,
+   "inChart": true,
+   "prerequisites": [
+    "vengeful-spirit"
+   ],
+   "rank": 139
+  },
+  {
+   "bookKey": "war-harrowing",
+   "number": "XXXIII.15",
+   "title": "THE HARROWING",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 155,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 140
+  },
+  {
+   "bookKey": "war-lions-command",
+   "number": "XXXIII.19",
+   "title": "BY THE LION'S COMMAND",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 157,
+   "inChart": true,
+   "prerequisites": [
+    "the-primarchs-the-lion"
+   ],
+   "rank": 141
+  },
+  {
+   "bookKey": "eye-stratagem",
+   "number": "XXXV.11",
+   "title": "STRATAGEM",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 158,
+   "inChart": true,
+   "prerequisites": [
+    "the-unremembered-empire"
+   ],
+   "rank": 142
+  },
+  {
+   "bookKey": "eye-herald-sanguinius",
+   "number": "XXXV.13",
+   "title": "HERALD OF SANGUINIUS",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 159,
+   "inChart": true,
+   "prerequisites": [
+    "the-unremembered-empire"
+   ],
+   "rank": 143
+  },
+  {
+   "bookKey": "silent-army-one",
+   "number": "XXXVII.9",
+   "title": "ARMY OF ONE",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 160,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 144
+  },
+  {
+   "bookKey": "silent-distant-echoes",
+   "number": "XXXVII.10",
+   "title": "DISTANT ECHOES OF OLD NIGHT",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 161,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 145
+  },
+  {
+   "bookKey": "silent-lost-sons",
+   "number": "XXXVII.12",
+   "title": "LOST SONS",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 162,
+   "inChart": true,
+   "prerequisites": [
+    "garro-oath-moment"
+   ],
+   "rank": 146
+  },
+  {
+   "bookKey": "garro-burden-duty",
+   "number": "XLII.5",
+   "title": "BURDEN OF DUTY",
+   "timeline": "009-010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 163,
+   "inChart": true,
+   "prerequisites": [
+    "garro-oath-moment"
+   ],
+   "rank": 147
+  },
+  {
+   "bookKey": "shattered-the-noose",
+   "number": "XLIII.6",
+   "title": "THE NOOSE",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 164,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 148
+  },
+  {
+   "bookKey": "shattered-unspoken",
+   "number": "XLIII.8",
+   "title": "UNSPOKEN",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 165,
+   "inChart": true,
+   "prerequisites": [
+    "shattered-unforged"
+   ],
+   "rank": 149
+  },
+  {
+   "bookKey": "burden-heart-pharos",
+   "number": "XLVIII.5",
+   "title": "THE HEART OF THE PHAROS",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 166,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 150
+  },
+  {
+   "bookKey": "pharos",
+   "number": "XXXIV",
+   "title": "PHAROS",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 146,
+   "inChart": true,
+   "prerequisites": [
+    "war-safe-shadowed-place",
+    "burden-heart-pharos"
+   ],
+   "rank": 151
+  },
+  {
+   "bookKey": "eye-long-night",
+   "number": "XXXV.3",
+   "title": "THE LONG NIGHT",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 167,
+   "inChart": true,
+   "prerequisites": [
+    "shadows-of-treachery-prince-of-crows"
+   ],
+   "rank": 152
+  },
+  {
+   "bookKey": "deathfire",
+   "number": "XXXII",
+   "title": "DEATHFIRE",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 168,
+   "inChart": true,
+   "prerequisites": [
+    "eye-stratagem"
+   ],
+   "rank": 153
+  },
+  {
+   "bookKey": "praetorian-of-dorn",
+   "number": "XXXIX",
+   "title": "PRAETORIAN OF DORN",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 170,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 154
+  },
+  {
+   "bookKey": "legacies-bjorn",
+   "number": "XXXI.19",
+   "title": "BJORN: LONE WOLF",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 171,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 155
+  },
+  {
+   "bookKey": "war-black-oculus",
+   "number": "XXXIII.4",
+   "title": "BLACK OCULUS",
+   "timeline": "010-011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 172,
+   "inChart": true,
+   "prerequisites": [
+    "angel-exterminatus"
+   ],
+   "rank": 156
+  },
+  {
+   "bookKey": "tallarn",
+   "number": "XLV",
+   "title": "TALLARN",
+   "timeline": "010-012.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 169,
+   "inChart": true,
+   "prerequisites": [
+    "war-black-oculus"
+   ],
+   "rank": 157
+  },
+  {
+   "bookKey": "war-twisted",
+   "number": "XXXIII.7",
+   "title": "TWISTED",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 173,
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-little-horus"
+   ],
+   "rank": 158
+  },
+  {
+   "bookKey": "eye-eagles-talon",
+   "number": "XXXV.14",
+   "title": "THE EAGLE'S TALON",
+   "timeline": "010-011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 174,
+   "inChart": true,
+   "prerequisites": [
+    "tallarn"
+   ],
+   "rank": 159
+  },
+  {
+   "bookKey": "eye-iron-corpses",
+   "number": "XXXV.15",
+   "title": "IRON CORPSES",
+   "timeline": "010-011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 175,
+   "inChart": true,
+   "prerequisites": [
+    "tallarn"
+   ],
+   "rank": 160
+  },
+  {
+   "bookKey": "silent-templar",
+   "number": "XXXVII.4",
+   "title": "TEMPLAR",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 176,
+   "inChart": true,
+   "prerequisites": [
+    "shadows-of-treachery-crimson-fist",
+    "silent-purge"
+   ],
+   "rank": 161
+  },
+  {
+   "bookKey": "silent-patience",
+   "number": "XXXVII.13",
+   "title": "PATIENCE",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 177,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 162
+  },
+  {
+   "bookKey": "silent-sigillite",
+   "number": "XXXVII.14",
+   "title": "THE SIGILLITE",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 178,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 163
+  },
+  {
+   "bookKey": "garro-ashes-fealty",
+   "number": "XLII.6",
+   "title": "GARRO: ASHES OF FEALTY",
+   "timeline": "010-011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 179,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 164
+  },
+  {
+   "bookKey": "shattered-the-either",
+   "number": "XLIII.9",
+   "title": "THE EITHER",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 180,
+   "inChart": true,
+   "prerequisites": [
+    "shattered-grey-talon"
+   ],
+   "rank": 165
+  },
+  {
+   "bookKey": "shattered-hand-elect",
+   "number": "XLIII.10",
+   "title": "THE HAND ELECT",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 181,
+   "inChart": true,
+   "prerequisites": [
+    "shattered-meduson"
+   ],
+   "rank": 166
+  },
+  {
+   "bookKey": "the-master-of-mankind",
+   "number": "XLI",
+   "title": "THE MASTER OF MANKIND",
+   "timeline": "011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 182,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 167
+  },
+  {
+   "bookKey": "the-path-of-heaven",
+   "number": "XXXVI",
+   "title": "THE PATH OF HEAVEN",
+   "timeline": "011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 183,
+   "inChart": true,
+   "prerequisites": [
+    "fulgrim",
+    "shattered-grey-talon",
+    "war-daemonology"
+   ],
+   "rank": 168
+  },
+  {
+   "bookKey": "angels-of-caliban",
+   "number": "XXXVIII",
+   "title": "ANGELS OF CALIBAN",
+   "timeline": "011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 184,
+   "inChart": true,
+   "prerequisites": [
+    "pharos"
+   ],
+   "rank": 169
+  },
+  {
+   "bookKey": "old-earth",
+   "number": "XLVII",
+   "title": "OLD EARTH",
+   "timeline": "011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 185,
+   "inChart": true,
+   "prerequisites": [
+    "deathfire",
+    "shattered-hand-elect"
+   ],
+   "rank": 170
+  },
+  {
+   "bookKey": "ruinstorm",
+   "number": "XLVI",
+   "title": "RUINSTORM",
+   "timeline": "011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 186,
+   "inChart": true,
+   "prerequisites": [
+    "angels-of-caliban"
+   ],
+   "rank": 171
+  },
+  {
+   "bookKey": "war-all-remains",
+   "number": "XXXIII.17",
+   "title": "ALL THAT REMAINS",
+   "timeline": "009.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 156,
+   "inChart": true,
+   "prerequisites": [
+    "ruinstorm"
+   ],
+   "rank": 172
+  },
+  {
+   "bookKey": "legacies-riven",
+   "number": "XXXI.5",
+   "title": "RIVEN",
+   "timeline": "011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 187,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 173
+  },
+  {
+   "bookKey": "garro-vow-faith",
+   "number": "XLII.7",
+   "title": "GARRO: VOW OF FAITH",
+   "timeline": "011-013.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 188,
+   "inChart": true,
+   "prerequisites": [
+    "silent-templar",
+    "garro-shield-lies"
+   ],
+   "rank": 174
+  },
+  {
+   "bookKey": "shattered-seventh-serpent",
+   "number": "XLIII.11",
+   "title": "THE SEVENTH SERPENT",
+   "timeline": "011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 189,
+   "inChart": true,
+   "prerequisites": [
+    "angel-exterminatus",
+    "shattered-the-either"
+   ],
+   "rank": 175
+  },
+  {
+   "bookKey": "wolfsbane",
+   "number": "XLIX",
+   "title": "WOLFSBANE",
+   "timeline": "012.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 190,
+   "inChart": true,
+   "prerequisites": [
+    "ruinstorm"
+   ],
+   "rank": 176
+  },
+  {
+   "bookKey": "titandeath",
+   "number": "LIII",
+   "title": "TITANDEATH",
+   "timeline": "012.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 191,
+   "inChart": true,
+   "prerequisites": [
+    "wolfsbane"
+   ],
+   "rank": 177
+  },
+  {
+   "bookKey": "war-hands-emperor",
+   "number": "XXXIII.14",
+   "title": "HANDS OF THE EMPEROR",
+   "timeline": "012.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 192,
+   "inChart": true,
+   "prerequisites": [
+    "burden-cybernetica"
+   ],
+   "rank": 178
+  },
+  {
+   "bookKey": "silent-gates-terra",
+   "number": "XXXVII.5",
+   "title": "THE GATES OF TERRA",
+   "timeline": "012.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 193,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 179
+  },
+  {
+   "bookKey": "heralds-myriad",
+   "number": "LII.1",
+   "title": "MYRIAD",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 194,
+   "inChart": true,
+   "prerequisites": [
+    "burden-cybernetica"
+   ],
+   "rank": 180
+  },
+  {
+   "bookKey": "heralds-grey-raven",
+   "number": "LII.2",
+   "title": "THE GREY RAVEN",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 195,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 181
+  },
+  {
+   "bookKey": "heralds-valerius",
+   "number": "LII.3",
+   "title": "VALERIUS",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 196,
+   "inChart": true,
+   "prerequisites": [
+    "legacies-divine-word"
+   ],
+   "rank": 182
+  },
+  {
+   "bookKey": "heralds-ember-wolves",
+   "number": "LII.4",
+   "title": "THE EMBER WOLVES",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 197,
+   "inChart": true,
+   "prerequisites": [
+    "betrayer"
+   ],
+   "rank": 183
+  },
+  {
+   "bookKey": "heralds-blackshield",
+   "number": "LII.5",
+   "title": "BLACKSHIELD",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 198,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 184
+  },
+  {
+   "bookKey": "heralds-children-sicarus",
+   "number": "LII.6",
+   "title": "CHILDREN OF SICARUS",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 199,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 185
+  },
+  {
+   "bookKey": "heralds-exocytosis",
+   "number": "LII.7",
+   "title": "EXOCYTOSIS",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 200,
+   "inChart": true,
+   "prerequisites": [
+    "angels-of-caliban"
+   ],
+   "rank": 186
+  },
+  {
+   "bookKey": "heralds-painted-count",
+   "number": "LII.8",
+   "title": "THE PAINTED COUNT",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 201,
+   "inChart": true,
+   "prerequisites": [
+    "pharos"
+   ],
+   "rank": 187
+  },
+  {
+   "bookKey": "heralds-last-son-prospero",
+   "number": "LII.9",
+   "title": "THE LAST SON OF PROSPERO",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 202,
+   "inChart": true,
+   "prerequisites": [
+    "the-path-of-heaven"
+   ],
+   "rank": 188
+  },
+  {
+   "bookKey": "heralds-soul-severed",
+   "number": "LII.10",
+   "title": "THE SOUL, SEVERED",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 203,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 189
+  },
+  {
+   "bookKey": "heralds-dark-compliance",
+   "number": "LII.11",
+   "title": "DARK COMPLIANCE",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 204,
+   "inChart": true,
+   "prerequisites": [
+    "vengeful-spirit"
+   ],
+   "rank": 190
+  },
+  {
+   "bookKey": "heralds-duty-waits",
+   "number": "LII.12",
+   "title": "DUTY WAITS",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 205,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 191
+  },
+  {
+   "bookKey": "heralds-magisterium",
+   "number": "LII.13",
+   "title": "MAGISTERIUM",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 206,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 192
+  },
+  {
+   "bookKey": "heralds-now-peals-midnight",
+   "number": "LII.14",
+   "title": "NOW PEALS MIDNIGHT",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 207,
+   "inChart": true,
+   "prerequisites": [
+    "heralds-duty-waits"
+   ],
+   "rank": 193
+  },
+  {
+   "bookKey": "heralds-dreams-unity",
+   "number": "LII.15",
+   "title": "DREAMS OF UNITY",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 208,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 194
+  },
+  {
+   "bookKey": "heralds-board-is-set",
+   "number": "LII.16",
+   "title": "THE BOARD IS SET",
+   "timeline": "012-013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 209,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 195
+  },
+  {
+   "bookKey": "slaves-to-darkness",
+   "number": "LI",
+   "title": "SLAVES TO DARKNESS",
+   "timeline": "013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 210,
+   "inChart": true,
+   "prerequisites": [
+    "titandeath",
+    "the-crimson-king"
+   ],
+   "rank": 196
+  },
+  {
+   "bookKey": "the-buried-dagger",
+   "number": "LIV",
+   "title": "THE BURIED DAGGER",
+   "timeline": "013.M31",
+   "phase": "road-to-terra",
+   "chronoRank": 211,
+   "inChart": true,
+   "prerequisites": [
+    "slaves-to-darkness",
+    "heralds-last-son-prospero"
+   ],
+   "rank": 197
+  },
+  {
+   "bookKey": "sot-solar-war",
+   "number": "SoT 1",
+   "title": "THE SOLAR WAR",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 212,
+   "inChart": true,
+   "prerequisites": [
+    "the-buried-dagger"
+   ],
+   "rank": 198
+  },
+  {
+   "bookKey": "sot-lost-and-damned",
+   "number": "SoT 2",
+   "title": "THE LOST AND THE DAMNED",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 213,
+   "inChart": true,
+   "prerequisites": [
+    "sot-solar-war"
+   ],
+   "rank": 199
+  },
+  {
+   "bookKey": "sot-first-wall",
+   "number": "SoT 3",
+   "title": "THE FIRST WALL",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 214,
+   "inChart": true,
+   "prerequisites": [
+    "sot-lost-and-damned"
+   ],
+   "rank": 200
+  },
+  {
+   "bookKey": "sot-saturnine",
+   "number": "SoT 4",
+   "title": "SATURNINE",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 215,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 201
+  },
+  {
+   "bookKey": "sot-mortis",
+   "number": "SoT 5",
+   "title": "MORTIS",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 216,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 202
+  },
+  {
+   "bookKey": "sot-warhawk",
+   "number": "SoT 6",
+   "title": "WARHAWK",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 217,
+   "inChart": true,
+   "prerequisites": [
+    "sot-mortis"
+   ],
+   "rank": 203
+  },
+  {
+   "bookKey": "sot-echoes-of-eternity",
+   "number": "SoT 7",
+   "title": "ECHOES OF ETERNITY",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 218,
+   "inChart": true,
+   "prerequisites": [
+    "sot-warhawk"
+   ],
+   "rank": 204
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-1",
+   "number": "SoT 8a",
+   "title": "THE END AND THE DEATH: VOLUME I",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 219,
+   "inChart": true,
+   "prerequisites": [],
+   "rank": 205
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-2",
+   "number": "SoT 8b",
+   "title": "THE END AND THE DEATH: VOLUME II",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 220,
+   "inChart": true,
+   "prerequisites": [
+    "sot-end-and-death-vol-1"
+   ],
+   "rank": 206
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-3",
+   "number": "SoT 8c",
+   "title": "THE END AND THE DEATH: VOLUME III",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 221,
+   "inChart": true,
+   "prerequisites": [
+    "sot-end-and-death-vol-2"
+   ],
+   "rank": 207
+  },
+  {
+   "bookKey": "primarch-vulkan",
+   "number": "P9",
+   "title": "VULKAN: LORD OF DRAKES",
+   "timeline": "845-855.M30",
+   "phase": "primarchs",
+   "chronoRank": 4,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 208
+  },
+  {
+   "bookKey": "primarch-fulgrim",
+   "number": "P6",
+   "title": "FULGRIM: THE PALATINE PHOENIX",
+   "timeline": "850-868.M30",
+   "phase": "primarchs",
+   "chronoRank": 5,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 209
+  },
+  {
+   "bookKey": "primarch-magnus",
+   "number": "P3",
+   "title": "MAGNUS THE RED: MASTER OF PROSPERO",
+   "timeline": "853.M30",
+   "phase": "primarchs",
+   "chronoRank": 6,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 210
+  },
+  {
+   "bookKey": "primarch-ferrus-manus",
+   "number": "P7",
+   "title": "FERRUS MANUS: THE GORGON OF MEDUSA",
+   "timeline": "869.M30",
+   "phase": "primarchs",
+   "chronoRank": 7,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 211
+  },
+  {
+   "bookKey": "primarch-angron",
+   "number": "P11",
+   "title": "ANGRON: SLAVE OF NUCERIA",
+   "timeline": "900-905.M30",
+   "phase": "primarchs",
+   "chronoRank": 9,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 212
+  },
+  {
+   "bookKey": "primarch-mortarion",
+   "number": "P15",
+   "title": "MORTARION: THE PALE KING",
+   "timeline": "930-939.M30",
+   "phase": "primarchs",
+   "chronoRank": 10,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 213
+  },
+  {
+   "bookKey": "primarch-corax",
+   "number": "P10",
+   "title": "CORAX: LORD OF SHADOWS",
+   "timeline": "954.M30",
+   "phase": "primarchs",
+   "chronoRank": 12,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 214
+  },
+  {
+   "bookKey": "primarch-lorgar",
+   "number": "P5",
+   "title": "LORGAR: BEARER OF THE WORD",
+   "timeline": "959-964.M30",
+   "phase": "primarchs",
+   "chronoRank": 15,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 215
+  },
+  {
+   "bookKey": "primarch-roboute-guilliman",
+   "number": "P1",
+   "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
+   "timeline": "964-970.M30",
+   "phase": "primarchs",
+   "chronoRank": 17,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 216
+  },
+  {
+   "bookKey": "primarch-alpharius",
+   "number": "P14",
+   "title": "ALPHARIUS: HEAD OF THE HYDRA",
+   "timeline": "981.M30",
+   "phase": "primarchs",
+   "chronoRank": 19,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 217
+  },
+  {
+   "bookKey": "primarch-lion-eljonson",
+   "number": "P13",
+   "title": "LION EL'JONSON: LORD OF THE FIRST",
+   "timeline": "997.M30",
+   "phase": "primarchs",
+   "chronoRank": 21,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 218
+  },
+  {
+   "bookKey": "primarch-perturabo",
+   "number": "P4",
+   "title": "PERTURABO: THE HAMMER OF OLYMPIA",
+   "timeline": "999.M30",
+   "phase": "primarchs",
+   "chronoRank": 23,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 219
+  },
+  {
+   "bookKey": "primarch-jaghatai-khan",
+   "number": "P8",
+   "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
+   "timeline": "000.M31",
+   "phase": "primarchs",
+   "chronoRank": 25,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 220
+  },
+  {
+   "bookKey": "primarch-sanguinius",
+   "number": "P17",
+   "title": "SANGUINIUS: THE GREAT ANGEL",
+   "timeline": "002-003.M31",
+   "phase": "primarchs",
+   "chronoRank": 33,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 221
+  },
+  {
+   "bookKey": "primarch-rogal-dorn",
+   "number": "P16",
+   "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
+   "timeline": "014.M31",
+   "phase": "primarchs",
+   "chronoRank": 222,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 222
+  },
+  {
+   "bookKey": "primarch-leman-russ",
+   "number": "P2",
+   "title": "LEMAN RUSS: THE GREAT WOLF",
+   "timeline": "015-021.M31",
+   "phase": "primarchs",
+   "chronoRank": 223,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 223
+  },
+  {
+   "bookKey": "primarch-konrad-curze",
+   "number": "P12",
+   "title": "KONRAD CURZE: THE NIGHT HAUNTER",
+   "timeline": "036.M31",
+   "phase": "primarchs",
+   "chronoRank": 224,
+   "inChart": false,
+   "prerequisites": [],
+   "rank": 224
+  }
+ ]
+}

@@ -22,14 +22,38 @@
             <img src="images/imperial-aquila.png" alt="Imperial Aquila" class="imperial-aquila" id="headerSymbol">
             <h1 class="main-title">HORUS HERESY ARCHIVE</h1>
             <div class="classification" id="classification">CLASSIFICATION: VERMILLION</div>
-            <div class="subtitle-series">THE COMPLETE HERESY - CHRONOLOGICAL ORDER</div>
+            <div class="subtitle-series" id="subtitleSeries">THE COMPLETE HERESY</div>
             <div class="subtitle-quote" id="thoughtForTheDay">THOUGHT FOR THE DAY: "BLESSED IS THE MIND TOO SMALL FOR DOUBT"</div>
             <!-- Replaced by updateProgressCounter() on load. Kept empty so a
                  stale hardcoded total cannot flash before the real one. -->
             <div class="progress-counter" id="progressCounter" aria-live="polite"></div>
         </header>
 
-        <div class="filter-section">
+        <nav class="view-switcher" aria-label="View">
+            <button type="button" class="view-btn is-active" id="viewReading" data-view="reading" aria-pressed="true">
+                <span class="view-btn-title">READING ORDER</span>
+                <span class="view-btn-hint">Where to start</span>
+            </button>
+            <button type="button" class="view-btn" id="viewChronological" data-view="chronological" aria-pressed="false">
+                <span class="view-btn-title">CHRONOLOGICAL</span>
+                <span class="view-btn-hint">In-universe timeline</span>
+            </button>
+            <button type="button" class="view-btn" id="viewChart" data-view="chart" aria-pressed="false">
+                <span class="view-btn-title">STORYLINE CHART</span>
+                <span class="view-btn-hint">By Legion, with prerequisites</span>
+            </button>
+        </nav>
+
+        <div class="view-note" id="viewNote"></div>
+
+        <!-- Mobile only. The stacked filter bar is 358px tall on a phone, which
+             pushed the catalogue below the fold on its own. -->
+        <button type="button" class="filter-disclosure" id="filterDisclosure"
+                aria-expanded="false" aria-controls="filterSection">
+            SEARCH &amp; FILTERS
+        </button>
+
+        <div class="filter-section" id="filterSection">
             <div class="search-container">
                 <label for="searchInput" class="filter-label">SEARCH:</label>
                 <input type="text" id="searchInput" class="search-input" placeholder="Book title, author, or character name...">
@@ -44,7 +68,7 @@
             <div class="sort-container">
                 <label for="sortOrder" class="filter-label">SORT BY:</label>
                 <select id="sortOrder" class="sort-select">
-                    <option value="chronological">CHRONOLOGICAL (STORY ORDER)</option>
+                    <option value="view">THIS VIEW'S ORDER</option>
                     <option value="publication">PUBLICATION ORDER</option>
                     <option value="title">TITLE (A-Z)</option>
                     <option value="author">AUTHOR (A-Z)</option>
@@ -70,6 +94,9 @@
         <main class="book-display">
             <!-- Book cards generated dynamically by script.js -->
         </main>
+
+        <!-- Storyline chart view, rendered on demand from daunt-chart.json -->
+        <section class="chart-view" id="chartView" hidden></section>
 
         <footer class="dataslate-footer">
             <div class="servo-skull">⚡</div>
