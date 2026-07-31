@@ -22,6 +22,16 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 
 ## ✨ Features
 
+### 🧭 Three views
+
+**Chronological order and reading order are not the same thing**, and this site used to conflate them, labelling a chronological index as "story order".
+
+- **Reading Order** (default). What a newcomer should actually read, grouped into phases with the opening quartet pinned first: *Horus Rising*, *False Gods*, *Galaxy in Flames*, *The Flight of the Eisenstein*. Derived from the prerequisite arrows in Daunt's Horus Heresy Timeline.
+- **Chronological**. Strict in-universe date order, earliest event first. A reference index, not advice: it puts 31 books ahead of *Horus Rising*, one of which is *A Thousand Sons*, so it spoils the main arc for a first-time reader.
+- **Storyline Chart**. The graph itself, 185 entries and 205 prerequisites, with faction highlighting. Node colour is the faction signal, because the source chart reuses vertical bands as the timeline descends and its column extents overlap too heavily to draw as swimlanes.
+
+For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
+
 ### 📚 Complete Book Collection
 - **224 entries** with official Black Library cover artwork
 - **Chronological ordering** by in-story timeline (730.M30 → 036.M31), strict, with no series held back as an appendix
@@ -115,9 +125,12 @@ Deploy to any static hosting service:
 │   ├── imperial-aquila.png       # Loyalist symbol
 │   └── chaos-star.svg           # Traitor symbol
 ├── ORDERING_DECISIONS.md        # Generated ordering log, fetched by the guide modal
+├── reading-order.json           # Generated reading order, phase-grouped
+├── daunt-chart.json             # Storyline graph: 185 nodes, 205 prerequisites
 ├── tools/
 │   ├── validate-data.mjs        # Data integrity gate, run before committing
 │   ├── generate-ordering-doc.mjs # Regenerates ORDERING_DECISIONS.md from the data
+│   ├── build-reading-order.mjs  # Derives reading-order.json from the chart
 │   ├── ui-checks.mjs            # Browser checks, including contrast and layout
 │   └── proposed-dates.json      # Sourced dates for previously undated entries
 ├── netlify.toml                 # Netlify configuration
@@ -138,8 +151,11 @@ node tools/validate-data.mjs
 # Regenerate the ordering log after changing the order of keys in bookData.
 node tools/generate-ordering-doc.mjs
 
-# Browser checks: ordering, modals, scroll lock, contrast in both themes,
-# mobile layout. Needs Playwright and a local server.
+# Rebuild the recommended reading order after changing dates or the chart.
+node tools/build-reading-order.mjs
+
+# 47 browser checks: the three views, ordering, modals, scroll lock, contrast in
+# both themes, mobile layout. Needs Playwright and a local server.
 npm i -D playwright && npx playwright install chromium-headless-shell
 python3 -m http.server 8899 &
 node tools/ui-checks.mjs

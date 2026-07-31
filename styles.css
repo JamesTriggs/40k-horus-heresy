@@ -1936,3 +1936,409 @@ body.traitor-theme #orderingModalBody strong {
 
 
 }
+
+/* ==========================================================================
+   View switcher: reading order, chronological, storyline chart
+   ========================================================================== */
+
+.view-switcher {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 0 1rem 0;
+    padding: 0 1rem;
+}
+
+.view-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    min-width: 11rem;
+    padding: 0.7rem 1.25rem;
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(212, 175, 55, 0.35);
+    border-radius: 3px;
+    color: var(--parchment);
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.view-btn:hover {
+    border-color: var(--imperial-gold);
+    transform: translateY(-2px);
+}
+
+.view-btn:focus-visible {
+    outline: 3px solid var(--imperial-gold);
+    outline-offset: 3px;
+}
+
+.view-btn.is-active {
+    border-color: var(--imperial-gold);
+    background: rgba(212, 175, 55, 0.14);
+}
+
+.view-btn-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    color: var(--imperial-gold);
+}
+
+/* Not decoration. Each view answers a different question, and the site used to
+   present a reference index as if it were reading advice. */
+.view-btn-hint {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.04rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+.view-note {
+    max-width: 70ch;
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1rem;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Reading order phases
+   ========================================================================== */
+
+.phase-heading {
+    grid-column: 1 / -1;
+    margin: 1.5rem 0 0.25rem 0;
+    padding: 0.85rem 1rem;
+    border-left: 4px solid var(--imperial-gold);
+    background: rgba(212, 175, 55, 0.07);
+}
+
+.phase-heading:first-child {
+    margin-top: 0;
+}
+
+.phase-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.1rem;
+    color: var(--imperial-gold);
+}
+
+.phase-blurb {
+    margin-top: 0.35rem;
+    max-width: 70ch;
+    font-size: 0.78rem;
+    line-height: 1.65;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Storyline chart
+   ========================================================================== */
+
+.chart-view {
+    margin: 1rem 0 2rem 0;
+}
+
+.chart-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 0.5rem 0.85rem 0.5rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.chart-legend .key::before {
+    content: '';
+    display: inline-block;
+    width: 0.85rem;
+    height: 0.6rem;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+    border: 1px solid var(--parchment);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.chart-legend .key-novella::before { border-radius: 0.3rem; }
+.chart-legend .key-short::before { border-radius: 0.15rem; height: 0.45rem; }
+.chart-legend .key-audio::before { border-radius: 50%; width: 0.6rem; height: 0.6rem; }
+.chart-legend .key-arrow::before { display: none; }
+
+.chart-hint {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+/* The chart is far wider than any viewport, so it scrolls inside its own box.
+   The page itself must never scroll horizontally. */
+.chart-scroll {
+    overflow: auto;
+    max-height: 80vh;
+    padding: 1rem 0;
+    overscroll-behavior: contain;
+}
+
+.chart-svg {
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.chart-svg .lane {
+    fill: rgba(255, 255, 255, 0.022);
+}
+
+.chart-svg .lane-alt {
+    fill: rgba(255, 255, 255, 0.052);
+}
+
+.chart-svg .lane-label {
+    fill: var(--imperial-gold);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.chart-svg .edge {
+    fill: none;
+    stroke: rgba(232, 220, 196, 0.42);
+    stroke-width: 1.1;
+}
+
+.chart-svg #arrow path {
+    fill: rgba(232, 220, 196, 0.55);
+}
+
+.chart-svg .chart-node text {
+    fill: #10100e;
+    font-size: 8.5px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+.chart-svg .chart-node .node-book {
+    font-size: 6.5px;
+    opacity: 0.7;
+    dominant-baseline: auto;
+}
+
+.chart-svg .chart-node rect,
+.chart-svg .chart-node ellipse {
+    stroke: rgba(0, 0, 0, 0.55);
+    stroke-width: 0.75;
+}
+
+.chart-svg .chart-node.is-linked { cursor: pointer; }
+
+.chart-svg .chart-node.is-linked:hover rect,
+.chart-svg .chart-node.is-linked:hover ellipse {
+    stroke: var(--imperial-gold);
+    stroke-width: 2;
+}
+
+.chart-svg .chart-node:focus-visible rect,
+.chart-svg .chart-node:focus-visible ellipse {
+    stroke: var(--imperial-gold);
+    stroke-width: 3;
+}
+
+.chart-svg .chart-node:focus { outline: none; }
+
+/* Progress carries across into the chart, so you can see how far you have read
+   through each Legion's storyline. */
+.chart-svg .chart-node.is-finished rect,
+.chart-svg .chart-node.is-finished ellipse {
+    stroke: #2e8b57;
+    stroke-width: 2.5;
+}
+
+.chart-svg .chart-node.is-reading rect,
+.chart-svg .chart-node.is-reading ellipse {
+    stroke: #4a90d9;
+    stroke-width: 2.5;
+}
+
+.chart-loading,
+.chart-error {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.chart-error h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--imperial-gold);
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .view-btn {
+        min-width: 0;
+        flex: 1 1 8rem;
+        padding: 0.6rem 0.75rem;
+    }
+
+    .view-btn-title { font-size: 0.7rem; letter-spacing: 0.06rem; }
+    .view-btn-hint { font-size: 0.55rem; }
+    .chart-scroll { max-height: 70vh; }
+    .phase-title { font-size: 1rem; }
+}
+
+/* The hidden attribute is set on the grid and filter bar when the chart view is
+   active, but the UA rule [hidden] { display: none } loses to the author rules
+   display: grid and display: flex. Without this the chart view rendered
+   underneath a still-visible card grid. */
+[hidden] {
+    display: none !important;
+}
+
+.chart-toolbar-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+/* Faction is carried by node colour, not by horizontal position, because the
+   source chart reuses vertical bands as the timeline descends. */
+.chart-factions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.faction-key {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    max-width: 15rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    border-radius: 2px;
+    color: var(--parchment);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.faction-key:hover { border-color: var(--imperial-gold); }
+
+.faction-key:focus-visible {
+    outline: 2px solid var(--imperial-gold);
+    outline-offset: 2px;
+}
+
+.faction-key[aria-pressed="true"] {
+    border-color: var(--imperial-gold);
+    background: rgba(212, 175, 55, 0.16);
+}
+
+.faction-swatch {
+    flex: 0 0 auto;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.faction-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chart-svg .chart-node.is-dimmed { opacity: 0.16; }
+.chart-svg .chart-node { transition: opacity 0.2s ease; }
+
+/* On a phone the view switcher and its explanatory note pushed the catalogue
+   back below the fold, undoing the earlier mobile fix. Compact both. */
+@media (max-width: 768px) {
+    .view-switcher {
+        gap: 0.4rem;
+        margin-bottom: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .view-note {
+        margin-bottom: 0.75rem;
+        font-size: 0.68rem;
+        line-height: 1.5;
+        max-height: 4.5em;
+        overflow: hidden;
+    }
+
+    .phase-heading {
+        margin: 1rem 0 0.25rem 0;
+        padding: 0.6rem 0.75rem;
+    }
+
+    .phase-blurb { font-size: 0.7rem; }
+}
+
+/* Filters collapse behind a disclosure on small screens. Hidden entirely above
+   the breakpoint, where there is room for the full bar. */
+.filter-disclosure {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .filter-disclosure {
+        display: block;
+        width: calc(100% - 1rem);
+        margin: 0 0.5rem 0.75rem 0.5rem;
+        padding: 0.7rem;
+        min-height: 44px;
+        background: rgba(0, 0, 0, 0.45);
+        border: 2px solid rgba(212, 175, 55, 0.35);
+        border-radius: 3px;
+        color: var(--imperial-gold);
+        font-family: 'Cinzel', serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12rem;
+        cursor: pointer;
+    }
+
+    .filter-disclosure:focus-visible {
+        outline: 3px solid var(--imperial-gold);
+        outline-offset: 3px;
+    }
+
+    .filter-disclosure::after {
+        content: ' ▾';
+    }
+
+    .filter-disclosure[aria-expanded="true"]::after {
+        content: ' ▴';
+    }
+
+    .filter-section {
+        display: none;
+    }
+
+    .filter-section.is-open {
+        display: flex;
+    }
+}

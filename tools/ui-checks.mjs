@@ -53,6 +53,12 @@ await page.waitForTimeout(1300);
 
 console.log('\nOrdering and data');
 
+// These assertions are about the chronological index specifically, so pin the
+// view. The site now defaults to reading order, which is deliberately not
+// chronological.
+await page.click('#viewChronological');
+await page.waitForTimeout(600);
+
 await check('224 cards render', async () => {
     const n = (await page.$$('.book-card')).length;
     if (n !== 224) throw new Error('got ' + n);
@@ -83,7 +89,7 @@ await check('Chrono badge is fixed, not the index of the current sort', async ()
     const badges = await page.$$eval('.chronological-badge', (e) =>
         e.slice(0, 4).map((x) => Number(x.textContent.replace('Chrono: ', ''))));
     if (badges.join(',') === '1,2,3,4') throw new Error('badge is renumbering with the sort');
-    await page.selectOption('#sortOrder', 'chronological');
+    await page.selectOption('#sortOrder', 'view');
     await page.waitForTimeout(400);
 });
 
@@ -247,7 +253,7 @@ await check('CLEAR ALL resets the sort order too', async () => {
     await page.click('#clearAllFilters');
     await page.waitForTimeout(400);
     const v = await page.$eval('#sortOrder', (e) => e.value);
-    if (v !== 'chronological') throw new Error('sort is ' + v);
+    if (v !== 'view') throw new Error('sort is ' + v);
 });
 
 await check('the spoiler preference survives a reload', async () => {
@@ -293,6 +299,136 @@ for (const theme of ['loyalist', 'traitor']) {
 }
 await page.click('#allegianceToggle');
 await page.waitForTimeout(600);
+
+console.log('\nThe three views');
+
+await check('defaults to reading order, not chronological', async () => {
+    const fresh = await newPage({ width: 1440, height: 1000 });
+    await fresh.goto(BASE, { waitUntil: 'load' });
+    await fresh.waitForSelector('.book-card');
+    await fresh.waitForTimeout(900);
+    const active = await fresh.$eval('.view-btn.is-active', (e) => e.dataset.view);
+    await fresh.close();
+    if (active !== 'reading') throw new Error('active view is ' + active);
+});
+
+await check('reading order opens with the four spine books', async () => {
+    await page.click('#viewReading');
+    await page.waitForTimeout(600);
+    const titles = await page.$$eval('.book-card .book-title', (e) => e.slice(0, 4).map((x) => x.textContent));
+    const want = ['HORUS RISING', 'FALSE GODS', 'GALAXY IN FLAMES', 'THE FLIGHT OF THE EISENSTEIN'];
+    if (titles.join('|') !== want.join('|')) throw new Error(titles.join(' | '));
+});
+
+await check('reading order shows phase headings, chronological does not', async () => {
+    const reading = (await page.$$('.phase-title')).length;
+    if (reading < 5) throw new Error('only ' + reading + ' phase headings in reading view');
+    await page.click('#viewChronological');
+    await page.waitForTimeout(600);
+    const chrono = (await page.$$('.phase-title')).length;
+    if (chrono !== 0) throw new Error('phase headings leaked into the chronological view');
+});
+
+await check('chronological opens with the earliest story', async () => {
+    const first = await page.$eval('.book-card .book-title', (e) => e.textContent);
+    if (first !== 'THE LAST CHURCH') throw new Error('first card is ' + first);
+});
+
+await check('the view choice persists across a reload', async () => {
+    await page.reload({ waitUntil: 'load' });
+    await page.waitForSelector('.book-card');
+    await page.waitForTimeout(800);
+    const active = await page.$eval('.view-btn.is-active', (e) => e.dataset.view);
+    if (active !== 'chronological') throw new Error('got ' + active);
+});
+
+await check('chart view hides the grid and filters for real, not just via [hidden]', async () => {
+    await page.click('#viewChart');
+    await page.waitForSelector('.chart-svg', { timeout: 15000 });
+    await page.waitForTimeout(600);
+    const r = await page.evaluate(() => ({
+        grid: getComputedStyle(document.querySelector('.book-display')).display,
+        filters: getComputedStyle(document.querySelector('.filter-section')).display,
+        visibleCards: [...document.querySelectorAll('.book-card')].filter((c) => c.offsetParent !== null).length,
+    }));
+    // [hidden] loses to display: grid and display: flex without an explicit rule
+    if (r.grid !== 'none') throw new Error('card grid still rendering, display: ' + r.grid);
+    if (r.filters !== 'none') throw new Error('filter bar still rendering, display: ' + r.filters);
+    if (r.visibleCards !== 0) throw new Error(r.visibleCards + ' cards visible behind the chart');
+});
+
+await check('chart renders every node and edge', async () => {
+    const r = await page.evaluate(() => ({
+        nodes: document.querySelectorAll('.chart-node').length,
+        edges: document.querySelectorAll('.edge').length,
+        linked: document.querySelectorAll('.chart-node.is-linked').length,
+    }));
+    if (r.nodes !== 185) throw new Error('nodes: ' + r.nodes);
+    if (r.edges !== 205) throw new Error('edges: ' + r.edges);
+    if (r.linked < 140) throw new Error('only ' + r.linked + ' nodes link to a book');
+});
+
+await check('chart draws no position-based lane bands', async () => {
+    // The source chart reuses vertical bands as the timeline descends, so column
+    // xRanges overlap heavily and painting them as swimlanes misleads.
+    const lanes = await page.evaluate(() => document.querySelectorAll('.lane').length);
+    if (lanes !== 0) throw new Error(lanes + ' lane bands drawn');
+});
+
+await check('chart node labels sit inside their own boxes', async () => {
+    const bad = await page.evaluate(() => {
+        let n = 0;
+        document.querySelectorAll('.chart-node').forEach((g) => {
+            const shape = g.querySelector('rect,ellipse');
+            const text = g.querySelector('text');
+            if (!shape || !text) return;
+            const s = shape.getBBox(), t = text.getBBox();
+            const cx = t.x + t.width / 2, cy = t.y + t.height / 2;
+            if (cx < s.x - 4 || cx > s.x + s.width + 4 || cy < s.y - 6 || cy > s.y + s.height + 6) n++;
+        });
+        return n;
+    });
+    if (bad > 0) throw new Error(bad + ' labels outside their node box');
+});
+
+await check('clicking a chart node opens that book', async () => {
+    await page.evaluate(() => document.querySelector('.chart-node.is-linked')
+        .dispatchEvent(new MouseEvent('click', { bubbles: true })));
+    await page.waitForTimeout(500);
+    const open = await page.evaluate(() => document.getElementById('modalOverlay').classList.contains('active'));
+    if (!open) throw new Error('modal did not open');
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(300);
+});
+
+await check('faction highlight isolates one storyline and clears again', async () => {
+    await page.evaluate(() => document.querySelectorAll('.faction-key')[1].click());
+    await page.waitForTimeout(400);
+    const on = await page.evaluate(() => ({
+        dimmed: document.querySelectorAll('.chart-node.is-dimmed').length,
+        lit: document.querySelectorAll('.chart-node:not(.is-dimmed)').length,
+    }));
+    if (!on.dimmed) throw new Error('nothing dimmed');
+    if (!on.lit) throw new Error('everything dimmed');
+    await page.evaluate(() => document.querySelectorAll('.faction-key')[1].click());
+    await page.waitForTimeout(300);
+    const off = await page.evaluate(() => document.querySelectorAll('.chart-node.is-dimmed').length);
+    if (off !== 0) throw new Error('highlight did not clear');
+});
+
+await check('chart view does not make the page scroll sideways', async () => {
+    const o = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    if (o > 1) throw new Error('overflows by ' + o + 'px');
+});
+
+await check('the header subtitle matches the active view', async () => {
+    const chart = await page.$eval('#subtitleSeries', (e) => e.textContent);
+    if (!/STORYLINE CHART/.test(chart)) throw new Error('chart view subtitle: ' + chart);
+    await page.click('#viewReading');
+    await page.waitForTimeout(600);
+    const reading = await page.$eval('#subtitleSeries', (e) => e.textContent);
+    if (!/READING ORDER/.test(reading)) throw new Error('reading view subtitle: ' + reading);
+});
 
 console.log('\nLayout');
 
