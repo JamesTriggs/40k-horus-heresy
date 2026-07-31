@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "purpose": "Researched in-universe Imperial dates for the 21 bookData entries in script.js that cannot currently be sorted chronologically: the 17 'The Primarchs' novels (Pre-Heresy / Pre-Heresy-Heresy placeholders), two 'Various' entries, one unparseable Imperial check-date, and one range-anchored entry that sorts far too early. Every bookKey has been verified to exist in script.js.",
+    "anchorPolicy": "narrative present",
+    "anchorPolicyNotes": "proposedTimeline is the value to sort on. spanCovered is documentary only and is NOT intended for the sort field. Where a book wraps a late frame narrative around earlier flashbacks, proposedTimeline carries the frame date per policy. Two deliberate exceptions are made where the frame is genuinely UNDATED in every source consulted (primarch-magnus, primarch-sanguinius) and one where the coda is set in M41 (primarch-angron): inventing a frame year would breach the no-unsourced-dates rule, so those anchor at their latest sourced date instead. Each such case is called out in anchorReason and readingExperienceFlag.",
+    "sortFieldCaveat": "The existing site sort anchors a NNN-NNN.MNN range at its RANGE START. All proposedTimeline values below are written so that the range start equals the intended sort point. Do not re-derive an anchor from spanCovered.",
+    "generated": "2026-07-31",
+    "classification": "Internal",
+    "keySource": "Keys read directly from const bookData in script.js; all 21 verified present.",
+    "primarySources": [
+      "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+      "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Timeline",
+      "https://wiki.legiodraconis.fr/"
+    ],
+    "toolingNote": "wh40k.lexicanum.com and warhammer40k.fandom.com return HTTP 402 to WebFetch and 403 to curl (Cloudflare). Both are reachable via the https://r.jina.ai/<url> text proxy. Tymell's timeline notes page is the single highest-value source for this project: it carries a per-book block with explicit in-book year arithmetic for most Heresy titles, and the page is itself ordered chronologically, which supplies useful bounds for books it does not date outright."
+  },
+  "entries": [
+    {
+      "bookKey": "primarch-vulkan",
+      "number": "P9",
+      "title": "VULKAN: LORD OF DRAKES",
+      "author": "David Annandale",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "845-855.M30",
+      "spanCovered": "About one year of narrative present, plus one brief backward glance to the 'early stages of the Great Crusade'.",
+      "narrativePresent": "The ork war in the Taras Division, culminating in Vulkan revealing himself and unifying the Terran and Nocturnean halves of the XVIII Legion.",
+      "anchorReason": "No frame narrative. Two parallel contemporaneous strands (Cassian Vaughn's Terran legionaries at Antaeum, and Vulkan's newly trained Nocturneans), so the narrative present is the whole book.",
+      "precision": "span",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Salamanders",
+        "https://wh40k.lexicanum.com/wiki/Cassian_Vaughn",
+        "https://www.trackofwords.com/2018/07/13/rapid-fire-david-annandale-talks-vulkan-lord-of-drakes/"
+      ],
+      "confidence": "low",
+      "readingExperienceFlag": null,
+      "notes": "WEAKEST DATE IN THE SET. No source gives a year. The only sourced bracket is 'post-835.M30, pre-Heresy' (Tymell's own headline). The proposed window is INFERRED by stacking two multi-year gaps onto Vulkan's rediscovery: Lexicanum's Salamanders page says Vulkan 'did not immediately reunite with his forces upon his rediscovery, instead serving alongside the Emperor for several years', and Tymell records from the text that 'Vulkan has been back on Nocturne for years by this point, and prior to that was away for years with the Emperor'. Vulkan's rediscovery is itself contested: 832.M30 (Lexicanum Horus Heresy Timeline) versus 833.M30 (Battle Bunnies, from Forge World). Tymell's page position implies something earlier, 836-840.M30, since he lists this book between Mercy of the Dragon (~835.M30) and Lorgar: Bearer of the Word (841.M30). Accept 845-855.M30 only as a placeholder that puts the book in the right neighbourhood; if the site prefers to be explicit about uncertainty, 836-855.M30 spans both candidate windows. Lexicanum's Taras Division, Antaeum and 27th Expeditionary Fleet pages are all empty stubs. Also worth correcting: this book depicts the UNIFICATION of two pre-existing halves of the XVIII Legion, not the founding of the Salamanders."
+    },
+    {
+      "bookKey": "primarch-fulgrim",
+      "number": "P6",
+      "title": "FULGRIM: THE PALATINE PHOENIX",
+      "author": "Josh Reynolds",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "850-868.M30",
+      "spanCovered": "A single continuous campaign of a few months at most.",
+      "narrativePresent": "The compliance of Byzas (Twenty-Eight One), the 28th Expedition's first world and the Emperor's Children's first solo compliance after breaking away from the Luna Wolves.",
+      "anchorReason": "Single continuous narrative, no frame and no flashback layer.",
+      "precision": "span",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Fulgrim:_The_Palatine_Phoenix_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Byzas",
+        "https://wh40kbookclub.com/primarch-pilgrimage-fulgrim-by-josh-reynolds/"
+      ],
+      "confidence": "medium",
+      "readingExperienceFlag": null,
+      "notes": "INFERRED, no explicit year in any source. Tymell's headline estimate is '29,850s/860s?'. Lower bound from the text via Tymell: the Emperor's Children have fought alongside Horus for 'several decades' before wanting to break away, and Fulgrim was rediscovered 830.M30 (Lexicanum Horus Heresy Timeline), giving ~850.M30. Upper bound: Tymell notes that in Ferrus Manus: The Gorgon of Medusa (firmly dated 869.M30) the Emperor's Children are already 'operating away from Horus, indicating this is after The Palatine Phoenix', giving 868.M30. CONTESTED in-book datum: one line has Pyke think of 'the intervening century since his rediscovery', which taken literally gives ~930.M30. Reject it: it contradicts three separate depicted facts (the Legion is only ~200 strong, its morale has 'only just recovered', and Horus judges it too early for them to go alone). Reported here rather than silently dropped."
+    },
+    {
+      "bookKey": "primarch-magnus",
+      "number": "P3",
+      "title": "MAGNUS THE RED: MASTER OF PROSPERO",
+      "author": "Graham McNeill",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "853.M30",
+      "spanCovered": "853.M30 (the evacuation of Morningstar) wrapped in a prologue and short epilogue on the Planet of the Sorcerers, which is necessarily after the Burning of Prospero (004.M31).",
+      "narrativePresent": "Strictly, the Planet of the Sorcerers frame, post-004.M31. But no source assigns that frame a year.",
+      "anchorReason": "POLICY EXCEPTION. The frame is the narrative present, but it is UNDATED in every source consulted, which say only 'after the fall of Prospero' / 'after his defeat at the hands of Russ'. Rather than invent a frame year, this anchors at 853.M30, the only date the book states, which it states twice (as an absolute year and as the 55th year of the Great Crusade).",
+      "precision": "point",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Magnus_the_Red:_Master_of_Prospero_(Novel)",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wiki.legiodraconis.fr/index.php?title=Magnus_the_Red:_Master_of_Prospero",
+        "https://www.trackofwords.com/2017/05/31/magnus-the-red-master-of-prospero-graham-mcneill/",
+        "https://wh40k.lexicanum.com/wiki/Burning_of_Prospero"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": "Frame is undated. If a frame year is ever sourced, strict policy would move this book to mid-Heresy, away from the Great Crusade material that is 95% of its content. Recommend keeping the 853.M30 anchor even then.",
+      "notes": "Lexicanum states 'During the 55th year of the Great Crusade' and 'Morningstar 853.M30'; 798 + 55 = 853, which also independently confirms the Crusade began 798.M30. The frame: 'Atharva, or a shade of Atharva, appeared to Magnus as he brooded over his defeat at the hands of Russ' on the Planet of the Sorcerers, where Magnus teleported the Thousand Sons at the conclusion of the Burning of Prospero. Hard lower bound for the frame is therefore 004.M31 (Lexicanum's Burning of Prospero infobox reads 734.004-005.M31), but no upper bound and no year is available. Also from the text via Tymell: Magnus is one of 12 primarchs found at this point, he was reunited with the Thousand Sons 13 years earlier (so ~840.M30), and Perturabo with the Iron Warriors 'barely 4 years ago'. Note legiodraconis's reviewer gives 'a little over fifty years after the crusade began' (~848.M30), slightly looser than but consistent with the explicit 853.M30."
+    },
+    {
+      "bookKey": "primarch-ferrus-manus",
+      "number": "P7",
+      "title": "FERRUS MANUS: THE GORGON OF MEDUSA",
+      "author": "David Guymer",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "869.M30",
+      "spanCovered": "869.M30, the Gardinaal campaign only, a single continuous war.",
+      "narrativePresent": "The Fall of the Lords of Gardinaal, fought by the 413rd Expeditionary Fleet.",
+      "anchorReason": "Single continuous narrative, no frame. Medusa appears as thematic reference and as Terran-versus-Medusan tension within the Legion, not as a flashback layer.",
+      "precision": "point",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Fall_of_the_Lords_of_Gardinaal",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Ferrus_Manus:_Gorgon_of_Medusa_(Novel)",
+        "https://www.trackofwords.com/2018/03/31/ferrus-manus-gorgon-of-medusa/"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": null,
+      "notes": "BEST-EVIDENCED DATE IN THE SET. STATED, not inferred. Lexicanum's Fall of the Lords of Gardinaal infobox reads 'Date | 869.M30' and cites BOTH 'The Horus Heresy Book Two - Massacre, pgs. 88-91' AND 'Ferrus Manus: Gorgon of Medusa (Novel), Chapter 3', so the novel itself carries the date. Tymell independently: 'A note in the book says Gardinaal knows defeat in 869, implying this is when the book takes place.' Corroborating in-book detail: Gardinaal was discovered by a rogue trader in 858.M30, and the Fist of Iron is 'a little over forty years out of Luna drydock'. KNOWN INTERNAL INCONSISTENCY, not a reason to change the date: Ferrus speaks of 'the fifteen' primarchs found and names Corax among them, but Corax was one of the last discovered (922.M30 per Lexicanum's timeline, later on other reckonings). The stated year is a better anchor than a character's headcount."
+    },
+    {
+      "bookKey": "primarch-angron",
+      "number": "P11",
+      "title": "ANGRON: SLAVE OF NUCERIA",
+      "author": "Ian St. Martin",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "900-905.M30",
+      "spanCovered": "Angron's slave and gladiator years on Nuceria (before 899.M30) as flashback, the Ghenna Massacre at 900-905.M30 as the main narrative, plus an epilogue set ten thousand years later in M41 showing Kharn's fate.",
+      "narrativePresent": "The Ghenna Massacre (formally the Second Compliance of Ghenna), Great Crusade era.",
+      "anchorReason": "POLICY EXCEPTION. The latest material is an M41 epilogue, so strict narrative-present anchoring would sort a Great Crusade novel ten millennia past the end of the guide. Anchors instead at the Ghenna Massacre, which is the entire substance of the book.",
+      "precision": "span",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Ghenna_Massacre",
+        "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Timeline",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wiki.legiodraconis.fr/index.php?title=Angron:_Slave_of_Nuceria",
+        "https://civilianreader.com/2019/02/22/review-angron-slave-of-nuceria-by-ian-st-martin-black-library/"
+      ],
+      "confidence": "medium",
+      "readingExperienceFlag": "Has an M41 coda (Kharn). Strict narrative-present anchoring is absurd here and has been overridden.",
+      "notes": "CORRECTS A LIKELY ASSUMPTION: this is a Great Crusade novel, and Nuceria's destruction is NOT depicted. That happens in Betrayer (007.M31). Lexicanum's backlink set for this novel contains only Great Crusade pages (Ghenna, Ghenna Massacre, Butcher's Nails, Mago, Vorias, Lhorke, Gahlan Surlak, Delvarus, Oenomaus, Kharn) with no Heresy campaign pages at all. The Nuceria material reaches the reader as flashback, via an archivist trapped in Angron's mind during a psychic 'communion' used to calm the primarch. Lexicanum's Ghenna Massacre infobox gives the year as '???.M30'; Fandom's gives 'Unknown; ca. 900s.M30'; Tymell's headline is 'early 29,900s'. Anchored by Angron's rediscovery plus Tymell's 'some time (but not that long) after Angron is reunited with his legion', with the Butcher's Nails replica not yet working and the Conqueror newly rechristened. CONTESTED rediscovery date: 899.M30 (Lexicanum Horus Heresy Timeline) versus ~905.M30 (Tymell's reading of Betrayer's 'found 100 years before the Heresy') versus 934.M30 (Battle Bunnies). Prefer 899-905.M30; the 934.M30 figure should not be propagated, as it is inconsistent with the other two and with this book's contents. Either preferred reading still puts Ghenna in the early 900s.M30."
+    },
+    {
+      "bookKey": "primarch-mortarion",
+      "number": "P15",
+      "title": "MORTARION: THE PALE KING",
+      "author": "David Annandale",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "930-939.M30",
+      "spanCovered": "The Conquest of Galaspar plus roughly one further year to the Exterminatus of Absyrtus. Brief retrospective references to Barbarus, but no true Barbarus flashback sequences.",
+      "narrativePresent": "Absyrtus, about one year after the fall of Galaspar, with Mortarion recounting the Galaspar campaign to Horus and Sanguinius.",
+      "anchorReason": "Frame exists but is short-range and same-era: the book opens with Mortarion watching Absyrtus burn, then recounts Galaspar in flashback about a year earlier. Both points sit inside the same decade, so the anchor is unaffected.",
+      "precision": "contested",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Conquest_of_Galaspar",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Death_Guard",
+        "https://wiki.legiodraconis.fr/index.php?title=Mortarion:_The_Pale_King",
+        "https://www.blacklibrary.com/the-horus-heresy/featured/ebook-mortarion-the-pale-king-eng-2022.html"
+      ],
+      "confidence": "low",
+      "readingExperienceFlag": null,
+      "notes": "GENUINELY CONTESTED, era is certain but the year is not. Lexicanum's Conquest of Galaspar infobox date field reads simply 'M30', with no year, and describes it as 'the first major independent action taken by Mortarion after taking command of his Legion'. Three competing reckonings for when Mortarion took command: (a) Tymell's book-specific note, 'Mortarion: The Pale King (29,930s?)', citing Daemonology for Mortarion not taking command until approximately 130 years into the Great Crusade, which gives 798 + 130 = 928.M30, and separately noting Mortarion 'was on Terra being taught 70 years before the Heresy, around 937'; (b) Lexicanum's Death Guard page, 'For more then eight decades the Dusk Raiders fought across the Galaxy in the Great Crusade... by failing to reunite with their Primarch', which gives a lower bound of only ~878.M30 and, with Lexicanum's engagement list placing Galaspar ahead of the Emancipation of Drune at 881.M30, an alternative window of 878-881.M30; (c) an official-timeline rediscovery date of 854.M30, which is a rediscovery date and not a taking-command date, and which Tymell reports as 'Official timeline places his discovery in 854'. RECOMMENDATION: 930-939.M30, following Tymell's book-specific reading, because it is derived from Daemonology's explicit '130 years' figure and is corroborated by the independent 'on Terra around 937' datum. Flag as a chronology hotspot. Choosing (b) instead would move this book ahead of Ferrus Manus (869.M30) rather than after Angron (900-905.M30), so the choice does change the reading order."
+    },
+    {
+      "bookKey": "primarch-corax",
+      "number": "P10",
+      "title": "CORAX: LORD OF SHADOWS",
+      "author": "Guy Haley",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "954.M30",
+      "spanCovered": "A few months, with in-book intervals: Saviour's Day is two weeks away at the start, chapter 16 is one week after its bombing, and Corax returns to Kiavahr two months after that.",
+      "narrativePresent": "The Carinae Retribution, the Raven Guard's compliance war against the Carinae Sodality's thousand void-cities, centred on the assault on Zenith-312 and the hunt for Arch-Comptroller Agarth.",
+      "anchorReason": "No frame. Three interleaved contemporaneous strands: a Corax and Guilliman conversation, the Carinae campaign, and a shorter Kiavahr thread.",
+      "precision": "contested",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Carinae_Retribution",
+        "https://wh40k.lexicanum.com/wiki/Raven_Guard",
+        "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Timeline",
+        "https://www.trackofwords.com/2019/02/02/corax-lord-of-shadows-guy-haley/"
+      ],
+      "confidence": "medium",
+      "readingExperienceFlag": null,
+      "notes": "GENUINELY CONTESTED, and the disagreement is entirely downstream of Corax's rediscovery date. The book's own relative anchor is firm: Tymell records that 'Chapter 10 says it is 3 decades since Corax's revolution on Deliverance, and a tech-guild representative speech at the end of the book says it is 32 years since the Emperor came to Deliverance'. So the book sits rediscovery + ~32 years. Reading A: Lexicanum's Horus Heresy Timeline gives '922.M30 Corax is rediscovered on Deliverance', so 922 + 32 = 954.M30. Weak corroboration, Lexicanum's Raven Guard notable-operations list places 'M30 - The Carinae Retribution' before '972.M30 - The Farinatus Extermination'. Reading B: Tymell's own headline is 'approx. 29,970s', reasoning that 'Other works indicate Corax was discovered sometime around 940-950, likely placing this story around 970-980'; Battle Bunnies gives the rediscovery as ~952.M30, which would put the book near 984.M30. RECOMMENDATION: 954.M30, because it combines the book's explicit '32 years' with a published rediscovery date read directly from Lexicanum's timeline, rather than with an inferred rediscovery window. Note the ordering consequence: 954.M30 places this book before Lorgar and Guilliman, whereas 970-980.M30 places it after both. Upper bound in any case is 984.M30, since Tymell notes the Curze and Corax meeting in Konrad Curze: The Night Haunter is 'indicated to be before the Carinaen Sodality event (seen in Corax: Lord of Shadows)' and before Nostramo's destruction in 984.M30. Lexicanum's Carinae Retribution page gives no year at all."
+    },
+    {
+      "bookKey": "primarch-lorgar",
+      "number": "P5",
+      "title": "LORGAR: BEARER OF THE WORD",
+      "author": "Gav Thorpe",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "959-964.M30",
+      "spanCovered": "841-857.M30 on Colchis (the bulk of the book), wrapped in an opening section at 959.M30, two interludes at 963.M30, and an epilogue at 964.M30.",
+      "narrativePresent": "The post-Monarchia frame, running 959.M30 to 964.M30 and ending with the epilogue in 964.M30, in which the Word Bearers work backwards through the worlds they brought to compliance, cleansing them of Emperor-worship.",
+      "anchorReason": "Genuine frame narrative with a dated present. Policy applied: the frame date wins over the 841-857.M30 Colchis flashback body.",
+      "precision": "span",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Word_Bearers",
+        "https://wh40k.lexicanum.com/wiki/Monarchia",
+        "https://www.trackofwords.com/2017/10/11/lorgar-bearer-of-the-word-gav-thorpe/"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": "Anchoring at the frame moves this book about a century later than its body. Judged BENEFICIAL rather than harmful: 959-964.M30 places it immediately around the razing of Monarchia, so it sits next to The First Heretic and Scions of the Storm, which is where its frame material belongs.",
+      "notes": "Well-evidenced on both layers. Tymell, from the text: the opening section is set in 959.M30 (the compliance of 47-9); the first interlude is immediately after Monarchia in 963.M30; the second is the same year, burning items of Emperor-worship on 47-6; the epilogue is 964.M30, by which point they have reached 47-1, the first world claimed after finding Lorgar. The Colchis body is Tymell's INFERENCE from relative 'X years ago' markers anchored to 959.M30, giving Lorgar found by Kor Phaeron in 841, made Bearer of the Word in 847, taking Vharadesh in 851, and finishing his crusade in 857 'just before the Emperor arrives'. That chain is credible because it lands exactly on the independently attested 857.M30, when Lorgar and Colchis were discovered: Lexicanum's Word Bearers page states 'The Emperor and His Great Crusade Principia Imperialis Expeditionary Fleet reached Colchis in 857.M30, less than a local year after Lorgar's final victory over the Covenant.' The book also establishes that Colchisian years are just under five times longer than standard. MINOR CONTESTED POINT, does not affect the anchor: the razing of Monarchia is given as 963.M30 by the Horus Heresy Journal, corroborated by Know No Fear ('Confirms Calth is 44 years after Monarchia, in 29,963'), versus 964.M30 in Book V: Tempest and Lexicanum's Monarchia page. The proposed range brackets both."
+    },
+    {
+      "bookKey": "primarch-roboute-guilliman",
+      "number": "P1",
+      "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
+      "author": "David Annandale",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "964-970.M30",
+      "spanCovered": "964-970.M30 main narrative, plus documentary interludes drawn from Guilliman's own writings, at least one of which is dated 120.M31.",
+      "narrativePresent": "The Battle of Thoas, the Ultramarines and Chapter Nemesis against orks, shortly after the razing of Monarchia.",
+      "anchorReason": "Not a flashback frame. Each of the nine chapters is prefaced by an excerpt from Guilliman's treatises on war, culture and morale. These are documentary epigraphs, not scenes, so they do not establish a later narrative present.",
+      "precision": "span",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Thoas",
+        "https://wh40k.lexicanum.com/wiki/Monarchia",
+        "https://wiki.legiodraconis.fr/index.php?title=Roboute_Guilliman:_Lord_of_Ultramar",
+        "https://shadowhawksshade.wordpress.com/2018/01/06/roboute-guilliman-lord-of-ultramar-by-david-annandale-book-review/"
+      ],
+      "confidence": "medium",
+      "readingExperienceFlag": null,
+      "notes": "Lower bound is solid, the exact year is stated nowhere. Tymell: 'Roboute Guilliman: Lord of Ultramar (post-29,963, pre-Heresy). Takes place some time after Monarchia, as this is referenced. Corax and Angron are also mentioned, so they have been discovered by this point. There is a note included written by Guilliman dated 30,120, indicating he is still active at that point after the Heresy.' Upper bound from Tymell's chronologically ordered page, which places this book after Call of the Lion (967.M30) and before Corax: Lord of Shadows. DO NOT PROPAGATE Lexicanum's figure: its Battle of Thoas infobox reads 'After 903.M30', which contradicts the same article's own prose that the battle was fought 'shortly after the razing of Monarchia'. 903.M30 looks like an editing error substituting Monarchia's COMPLIANCE date for its RAZING date, since Lexicanum's Monarchia page says the city was brought into compliance 103 years before Isstvan V (so ~902.M30) and destroyed 'six decades after being brought into compliance' (so ~962-964.M30). If a single year is wanted, use 967.M30. The 120.M31 epigraph is worth noting as a spoiler risk but must not drive the sort."
+    },
+    {
+      "bookKey": "primarch-alpharius",
+      "number": "P14",
+      "title": "ALPHARIUS: HEAD OF THE HYDRA",
+      "author": "Mike Brooks",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "981.M30",
+      "spanCovered": "Roughly 792/798.M30 to 981.M30. Alpharius found on Terra immediately after the primarchs were scattered, before the Great Crusade began and while the Imperial Palace was unfinished, through to the public revelation of the XX Legion's primarch.",
+      "narrativePresent": "The bookends, in which Omegon boards Horus's battle barge and presents himself as 'Alpharius', making the XX Legion primarch's discovery public. 981.M30.",
+      "anchorReason": "The book starts and ends on the same scene, the 'finding' of Alpharius by Horus late in the Crusade, with the rest told as an in-universe record narrated between those bookends. That reveal is the latest event depicted and is the narrative present.",
+      "precision": "point",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Timeline",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Alpharius_Omegon",
+        "https://wh40k.lexicanum.com/wiki/Alpha_Legion",
+        "https://wiki.legiodraconis.fr/index.php?title=Alpharius:_Head_of_the_Hydra"
+      ],
+      "confidence": "medium-high",
+      "readingExperienceFlag": null,
+      "notes": "CORRECTS THE BRIEF. This book does NOT run into the Heresy proper. It does not reach Isstvan III, Isstvan V, or the Siege, and no Heresy content is cited to it anywhere on Lexicanum. Three independent confirmations. (1) Tymell: 'Alpharius: Head of the Hydra (approximately 29,700s - late 29,900s). Takes the form of a record narrated by Alpharius (and Omegon) himself... Starts and ends with \"Alpharius\" (actually Omegon) being \"found\" by Horus late in the Crusade. Begins properly with Alpharius being discovered on Terra, right after the scattering of the Primarchs, before the Crusade has even begun.' (2) legiodraconis: 'The book culminates with Omegon's presentation to Horus, ending at the point where the Horus Heresy is about to commence. The narrative does not extend into Isstvan or the Heresy itself.' (3) Lexicanum cites this novel only across pre-Heresy chapters (Discovery, The Captain-General, The Sigillite, Lord of the First, Bar'Savor, Hydra Dominatus, Secrets within Secrets, Unforeseen Consequences), the last covering 'Omegon assuming Alpharius role before Horus'. The 981.M30 anchor is well-attested: Lexicanum's Horus Heresy Timeline states '981.M30 Alpharius Omegon officially assumes control of the XXth Legion', corroborated by HH Book II: Massacre, HH Book VII: Inferno and the Horus Heresy Journal. Internal chronology of the body: Horus found three years into the Crusade (~801.M30); Omegon secretly found by Alpharius six years into the Second Rangdan war, in 868.M30; the Second Rangdan conflict ran 862-882.M30; Part Three has the Alpha Legion meeting the Dark Angels at Tigrun III, where they refer to the War Hounds, so before Angron's rediscovery. The body therefore closes ~868-882.M30 and the bookend jumps to 981.M30. THE NARRATING VOICE'S OWN 'NOW' IS UNSOURCED and appears deliberately unspecified by the author, and it is an unreliable narration throughout. Do not date this book to 006.M31."
+    },
+    {
+      "bookKey": "primarch-lion-eljonson",
+      "number": "P13",
+      "title": "LION EL'JONSON: LORD OF THE FIRST",
+      "author": "David Guymer",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "997.M30",
+      "spanCovered": "Mid-August to late 997.M30, with brief character recollections reaching back to 869.M30 (Sar Castis's death) and the late 940s.M30 (Aravain's ascension).",
+      "narrativePresent": "The Northern Fringe Campaign against the Khrave in the Muspel system, Segmentum Obscurus near the Ghoul Stars.",
+      "anchorReason": "Single continuous campaign, no frame. The recollections are character memory, not a flashback layer.",
+      "precision": "point",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Northern_Fringe_Campaign",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Khrave"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": null,
+      "notes": "CLEANEST OF THE LATE PRE-HERESY SET. Lexicanum has a dedicated Northern Fringe Campaign page dated '997.M30' whose ONLY cited source is 'Lion El'Jonson: Lord of the First (Novel), Chapters 1-11', so the whole novel maps onto one dated campaign. Tymell's headline agrees: 'Lion El'Jonson: Lord of the First (August 29,997 - late 29,997)', derived from a series of in-book dated log entries running up to the Dark Angels' arrival ('123 997', '125 997', '129 997', '131 997', all mid-February), with '131 997 was six months ago, putting the Dark Angels' arrival around mid-August 997'. The Ullanor Crusade is running concurrently in its opening phase: Guilliman has broken the ork armadas of the Nalkari subsector and Valdor has slain Goff Dakka on Calgarix, and the 3rd Rangdan Xenocides are 'over but recent'. IMPORTANT: the Ullanor Crusade was multi-year and concluded with the Triumph in 000.M31, so do NOT date this book to 000.M31. The blurb is consistent: 'while the Emperor gathers His mightiest sons for an assault on Ullanor Prime, the Lord of the First instead draws his Legion to the farthest reaches of the known galaxy'."
+    },
+    {
+      "bookKey": "primarch-perturabo",
+      "number": "P4",
+      "title": "PERTURABO: THE HAMMER OF OLYMPIA",
+      "author": "Guy Haley",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "999.M30",
+      "spanCovered": "799.M30 to 000.M31. Childhood and unification flashbacks from 799.M30, cut against a Great Crusade present of 999.M30 running into the decimation of Olympia in 000.M31.",
+      "narrativePresent": "The Sak'trada Deeps campaign against the hrud in 999.M30, running continuously into Perturabo's decimation of Olympia in 000.M31.",
+      "anchorReason": "Not a late frame wrapped around an earlier body. Two interleaved threads, and the Great Crusade thread is itself the present, running continuously 999.M30 to 000.M31. Anchored at the start of that continuous present rather than at its climax, because there is no frame to defer to and the range crosses the millennium boundary, which the NNN-NNN.MNN format cannot express.",
+      "precision": "contested",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Sak%27trada_Deeps_Campaign",
+        "https://wiki.legiodraconis.fr/index.php?title=Perturabo:_The_Hammer_of_Olympia",
+        "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Timeline",
+        "https://shadowhawksshade.wordpress.com/2018/01/22/perturabo-the-hammer-of-olympia-by-guy-haley-book-review/"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": null,
+      "notes": "Main story date is strongly attested. Lexicanum's Sak'trada Deeps Campaign infobox reads 'Date | 999.M30' and cites 'Perturabo: The Hammer of Olympia (Novel), Chapter Eight / Chapters Ten and Eleven / Chapter Twelve' plus 'The Horus Heresy Book Three - Extermination, page 117', adding that 'Perturabo subsequently received news of rebellion on Olympia'. Tymell: 'Main story is set in 29,999, the Iron Warriors battling the hrud... News of Olympia's rebellion reaches Perturabo in 999 and he arrives back there and decimates it in 000.' Flashback chain from legiodraconis and Tymell: Perturabo brought to Lochos 799.M30 aged six, begins unifying Olympia 824.M30, meets the Emperor at Mount Telephus 849.M30 aged 56, Dammekos dies 999.M30 and Olympia rebels. GENUINELY CONTESTED, and the sharpest conflict in the whole set: the date of the Olympia purge. The novel and the Horus Heresy Journal give 000.M31. Forge World and Lexicanum's Horus Heresy Timeline give '004.M31 Perturabo destroys Olympia after a rebellion'. RECOMMEND 000.M31 for the purge, hence a 999.M30 anchor, because it is what the novel depicts, and because it is internally coherent: the Iron Warriors are attested absent from the Ullanor Triumph in 000.M31, and a 004.M31 purge would leave Horus recruiting Perturabo implausibly late relative to Isstvan III in 005.M31. Tymell flags a knock-on inconsistency elsewhere. Treat as a chronology hotspot. Pair with the short story The Emperor's Architect (999.M30), which shows the Olympia revolt beginning and so likely sits at the start of this novel."
+    },
+    {
+      "bookKey": "primarch-jaghatai-khan",
+      "number": "P8",
+      "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
+      "author": "Chris Wraight",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "000.M31",
+      "spanCovered": "879.M30 to 000.M31, about 121 years, as a chronological sequence of discrete dated episodes: Terra 879.M30, Hoadh 881-884.M30, Chogoris 898.M30, Gar-Ban-Gar 906.M30, Baal 908.M30, Ullanor 000.M31.",
+      "narrativePresent": "Ullanor, days after the Triumph, 000.M31.",
+      "anchorReason": "Episodic rather than framed: there is no present-day wrapper, the narrative present simply advances through the book, and its final position is Ullanor at 000.M31. Policy applied to the last episode. The true span crosses the millennium boundary and cannot be expressed as NNN-NNN.MNN, so a point value is required.",
+      "precision": "point",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://www.trackofwords.com/2018/03/17/rapid-fire-chris-wraight-talks-jaghatai-khan-warhawk-of-chogoris/",
+        "https://wh40k.lexicanum.com/wiki/White_Scars",
+        "https://www.trackofwords.com/2018/07/16/jaghatai-khan-warhawk-of-chogoris-chris-wraight/"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": "Anchoring at 000.M31 is judged BENEFICIAL. The final episode ends days after the Ullanor Triumph with Yesugei meeting Ilya and the Scars preparing to depart for Chondax, leading directly into Brotherhood of the Storm and then Scars. 000.M31 places the book exactly there.",
+      "notes": "Wraight confirms the structure: 'It's set across a range of discrete episodes within the duration of the Crusade, from soon after the discovery of the Khan right up to the conquest of Ullanor.' Track of Words: 'several short arcs spanning years of the Great Crusade.' Per-episode dates are stated in-book, recorded by Tymell: opens on Terra in 879.M30 with the Khan recently found and meeting his Legion for the first time as the 15th primarch discovered; jumps to Hoadh nine standard days after its conquest, with the Swordstorm completed three years before Hoadh's fall (881.M30); Lexicanum independently corroborates Hoadh via the White Scars page, 'during the war against the Nephilim on Hoadh in 884.M30, the Legion became known as the White Scars', cited to this novel's chapter 4; then Chogoris 898.M30, Gar-Ban-Gar 906.M30, Baal 908.M30 (Magnus, Sanguinius and Jaghatai discuss the Librarius project), and finally Ullanor 000.M31. CONTESTED discovery date, does not affect the anchor: the novel gives 878/879.M30, while HH Book VIII: Malevolence and Lexicanum's timeline give 865.M30. Prefer the novel's own figure when dating this book, since its later episode dates are internally consistent with it. The book leads up to the Librarius debate but does NOT reach the Council of Nikaea (001.M31). If a within-millennium range is ever needed instead, 879-999.M30 covers everything except the Ullanor episode."
+    },
+    {
+      "bookKey": "primarch-sanguinius",
+      "number": "P17",
+      "title": "SANGUINIUS: THE GREAT ANGEL",
+      "author": "Chris Wraight",
+      "currentTimeline": "Pre-Heresy/Heresy",
+      "proposedTimeline": "002-003.M31",
+      "spanCovered": "002-003.M31 main body, plus a prologue and epilogue set many years (possibly centuries) after the Heresy, on Terra under reconstruction.",
+      "narrativePresent": "The War on Murder against the Megarachnids, late 002.M31 into early 003.M31, narrated in the first person by the remembrancer Avajis Kautenya.",
+      "anchorReason": "POLICY EXCEPTION. The post-Heresy prologue and epilogue are the latest material, but they are UNDATED in every source and are a short coda rather than a frame carrying the book. Anchors at the sourced main narrative instead of inventing a post-Heresy year.",
+      "precision": "span",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Sanguinius:_The_Great_Angel_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Timeline",
+        "https://wh40k.lexicanum.com/wiki/War_on_Murder",
+        "https://wiki.legiodraconis.fr/index.php?title=Sanguinius:_The_Great_Angel"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": "Undated post-Heresy coda deliberately ignored for sorting. Also a mild spoiler risk: the epilogue depends on the reader knowing Sanguinius's fate.",
+      "notes": "CORRECTS THE 'Pre-Heresy/Heresy' TAG, and in an unexpected direction. This is NOT a Heresy-era frame around pre-Heresy flashbacks, and it does NOT reach Signus Prime or the Siege of Terra. Signus is referenced retrospectively in the epilogue only, never depicted. Tymell: 'Sanguinius: The Great Angel (30,002 - 30,003). Takes place after Horus is made Warmaster and after Nikaea. The Blood Angels muster at Baal \"fresh from Nikaea\". At the end of Chapter 8, Sanguinius receives the \"This. World. Is. Murder.\" message, then departs for that world, as seen in Horus Rising. This conflict takes place over six months in late 002 and early 003... The prologue and epilogue take place many years after the Heresy with the Imperial Faith getting properly established.' This makes the book a side-quel to Horus Rising, giving the Blood Angels' view of Murder, so it should sit adjacent to Horus Rising in the order. Anchor framework: Ullanor Triumph 000.M31 and Council of Nikaea 001.M31 (Lexicanum Horus Heresy Timeline). Epilogue: legiodraconis quotes the text as 'Quelques centaines d'annees apres la fin de l'Heresie d'Horus, dans une des plus hautes tours de Terra en reconstruction', where Judita Widera destroys the sole manuscript copy of Kautenya's history during Sanguinala celebrations. One Goodreads reviewer instead says 'a century or so later'. Prefer the legiodraconis reading, which quotes directly and matches an epilogue depicting an established post-Heresy religious order, but either way it lands after 014.M31 and is UNSOURCED at year precision. One in-book error to ignore: Qruze says his legion first saw Sanguinius 59 years before Murder, which is likely a typo for 159, since Sanguinius was rediscovered ~843-844.M30."
+    },
+    {
+      "bookKey": "primarch-rogal-dorn",
+      "number": "P16",
+      "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
+      "author": "Gav Thorpe",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "014.M31",
+      "spanCovered": "About 848-858.M30 for the main campaign, wrapped in a Terra-set bookend at 013-014.M31 on the eve of the Siege.",
+      "narrativePresent": "Terra, the Imperial Palace, shortly before Horus's armada reaches the Sol System. Malcador recounts the campaign to Sigismund and Fafnir Rann to explain why the Emperor chose Dorn and the VII Legion to hold Terra.",
+      "anchorReason": "Genuine frame narrative with a dated present on the eve of the Solar War. Policy applied: the frame date wins over the 848-858.M30 Night Crusade body.",
+      "precision": "span",
+      "sources": [
+        "https://www.blacklibrary.com/the-horus-heresy/hh-prim/ebook-rogal-dorn-the-emperors-crusader-eng-2022.html",
+        "https://wh40k.lexicanum.com/wiki/Occluda_Noctis",
+        "https://wh40k.lexicanum.com/wiki/Night_Crusade",
+        "https://wh40k.lexicanum.com/wiki/Solar_War",
+        "https://wiki.legiodraconis.fr/index.php?title=Rogal_Dorn:_The_Emperor%27s_Crusader",
+        "https://wh40kbookclub.com/primarch-pilgrimage-rogal-dorn-the-emperors-crusader-by-gav-thorpe/"
+      ],
+      "confidence": "medium",
+      "readingExperienceFlag": "FLAGGED AS POTENTIALLY HARMFUL. The Terra material is a thin bookend and roughly 208 pages of the book are a Great Crusade campaign novel. Anchoring at 014.M31 drops it into the middle of the Siege of Terra sequence. Defensible, because the frame is explicitly a 'why Dorn holds Terra' conversation on the eve of the Siege, but if the site wants the body's position instead, use 858.M30. This is the single entry where I would most seriously consider overriding the policy.",
+      "notes": "Tymell's page predates this 2022 book and does not cover it, so the evidence base is thinner than for the rest. Frame: legiodraconis records 'The opening scenes take place on Terra shortly before Horus's fleet arrives during the Horus Heresy. The primary story unfolds 160 years earlier during the Nocturnal Crusade', and a Goodreads reviewer independently describes it as 'bookended to be HH events current at the publish time, just prior to The Siege of Terra'. Lexicanum's Solar War page dates the traitor armada's arrival at Sol to '0000014.M31, the first day of the first month (Primus)', fixing the frame at 013-014.M31. Body: the Black Library blurb says 'As the Great Crusade enters its sixth decade', and legiodraconis gives '60 ans apres le debut de la Grande Croisade', both pointing to ~858.M30. SOURCE ERROR TO REJECT: Lexicanum's Occluda Noctis page says the region 'was conquered in the Great Crusade's 60th decade', which is impossible given Lexicanum's own ~207-year Crusade; treat it as a typo for the 6th decade. Cross-check: 160 years before the 014.M31 frame is 854.M30, inside the proposed window. Key content: the Night Crusade into the Occluda Noctis (the Northern Major Warp Storm), Scathia as the gateway world, the Carrefiefdom, the Damareen Consensus, the Triumvirate of Garl, the Kapikulu Continuum extermination, and an enemy called 'the Unseen', with Dorn, Fulgrim, Horus and Lion El'Jonson all campaigning. Sigismund is a Templar sergeant in the flashback and First Captain in the frame."
+    },
+    {
+      "bookKey": "primarch-leman-russ",
+      "number": "P2",
+      "title": "LEMAN RUSS: THE GREAT WOLF",
+      "author": "Chris Wraight",
+      "currentTimeline": "Pre-Heresy",
+      "proposedTimeline": "015-021.M31",
+      "spanCovered": "870.M30 (the Dulan campaign, the main part of the story) and 015-021.M31 (the post-Heresy frame).",
+      "narrativePresent": "The post-Heresy frame on Fenris, in which Russ narrates the Dulan campaign to a young Blood Claw named Haldor. The Space Wolves are already a Chapter rather than a Legion, and news of the Lion's loss has just reached Fenris.",
+      "anchorReason": "Genuine frame narrative: the first and last chapters bookend the Dulan campaign, and in this book the Great Crusade material is explicitly the flashback. Policy applied: the frame date wins.",
+      "precision": "contested",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Dulan_Campaign",
+        "https://wh40k.lexicanum.com/wiki/Second_Founding",
+        "https://wh40k.lexicanum.com/wiki/Fall_of_Caliban",
+        "https://wh40kbookclub.com/primarch-pilgrimage-leman-russ-the-great-wolf/",
+        "https://www.trackofwords.com/2017/02/25/leman-russ-the-great-wolf-chris-wraight-the-primarchs-book-two/"
+      ],
+      "confidence": "medium",
+      "readingExperienceFlag": "FLAGGED AS HARMFUL. The body of this book is the 870.M30 Dulan campaign, one of the earliest events in the whole guide, and its most famous content is the Russ and Lion duel. Anchoring at the frame exiles it past the end of the Heresy, after every Siege of Terra book. If any entry should be exempted from the policy, this is the strongest candidate alongside primarch-rogal-dorn. The body-anchored alternative is 870.M30.",
+      "notes": "Body date is firmly attested. Lexicanum's Dulan Campaign infobox reads '870.M30'; Tymell records 'Compliance of Dulan (main part of the story) in 870' and separately quotes the Horus Heresy Journal, '870.M30 - Compliance of Dulan, followed by duel between Russ and the Lion'. Tymell's own headline for the book is 'early post-Heresy & 29,870', and Track of Words confirms 'Wraight bookends the Dulan campaign with post-Heresy scenes'. WH40K Book Club notes the frame POV character Haldor is 'a new recruit, one of the first to be born of the chapter and not Legion' and that 'This is one of the few books in the primarch series that begins after the Heresy'. GENUINELY CONTESTED frame year, from two in-book markers that cannot both be exactly right: (a) the Space Wolves are already a Chapter rather than a Legion, which is the Second Founding, dated 021.M31 by Lexicanum; (b) news of the Lion's loss has just reached Fenris, and Lexicanum's Fall of Caliban infobox gives ~015.M31. The proposed range brackets both. If a single year is required, prefer 021.M31, since the Chapter-not-Legion point is stated explicitly in the novel's own dialogue whereas Caliban's date is itself contested. Not Russ's final departure, which is far later: 'In 211.M31 Russ, at a great feast with his Legion in attendance, stood and said: \"In the end I will return.\"'"
+    },
+    {
+      "bookKey": "primarch-konrad-curze",
+      "number": "P12",
+      "title": "KONRAD CURZE: THE NIGHT HAUNTER",
+      "author": "Guy Haley",
+      "currentTimeline": "Pre-Heresy/Heresy",
+      "proposedTimeline": "036.M31",
+      "spanCovered": "Curze's youth on Nostramo before his rediscovery in 896.M30, through Nostramo's destruction in 984.M30 and events around Cheraut, then the recovery of his stasis coffin by the salvage ship Sheldroon in ~032.M31, to his death on Tsagualsa in ~036.M31.",
+      "narrativePresent": "Curze's final hours in his palace on Tsagualsa, awaiting the Callidus assassin M'Shen, during the Great Scouring. He delivers a testimonial recounting his life, absolving himself and blaming the Emperor, intercut with vignettes.",
+      "anchorReason": "Genuine frame narrative with a dated present. Policy applied: the frame date wins. The vignettes are selected and narrated by Curze from within that final wait.",
+      "precision": "contested",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Konrad_Curze",
+        "https://wh40k.lexicanum.com/wiki/Tsagualsa",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://www.grimdarkmagazine.com/review-konrad-curze-the-night-haunter/",
+        "https://www.trackofwords.com/2019/08/03/konrad-curze-the-night-haunter-guy-haley/"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": "FLAGGED. This is post-Heresy, so strict policy sorts it dead last in the guide, after The End and the Death. That is chronologically correct and arguably the right home for a book about Curze's death, but it does mean a Primarchs-series book about a primarch's origins closes the reading order. It is also a total spoiler for Curze's fate. Consider a 'post-Heresy epilogue' grouping rather than a hard last position.",
+      "notes": "CORRECTS THE BRIEF. The Tsagualsa frame is NOT Heresy-era. It is not the Thramas Crusade, and Vulkan is not present. The Tsagualsa parley where Curze strangles the Lion and Corswain stabs Curze is a different story, Savage Weapons in Age of Darkness plus Prince of Crows, and Lexicanum cites those rather than this novel for that scene. Confirmations. Tymell: 'Konrad Curze: The Night Haunter (post-Siege). The \"present\" of the story takes place on Tsagualsa, as Curze awaits his death, post-Heresy. Various past tales are then depicted throughout. The stasis pod containing Curze is recovered in 30,032, plus or minus 2 or 3 years. It then takes him over 20 months to reach Tsagualsa.' Lexicanum's Konrad Curze infobox states 'Death ~036.M31, Tsagualsa', and the article says he 'floated through the void of space for the rest of the Heresy, eventually being discovered by the human salvage ship Sheldroon years after it had ended, approximately in 032.M31', then 'travelled four years to Tsagualsa'. Grimdark Magazine: 'The overarching storyline focuses on Curze's last days, living in emotional exile on the planet Tsagualsa, awaiting the arrival of the Callidus assassin M'Shen.' The book even includes vignettes of the Sheldroon crew's final days. CONTESTED year, from the travel time: Lexicanum's four years gives ~036.M31 and it states 036.M31 outright, whereas Tymell's direct reading of the novel gives 'over 20 months' and hence ~034.M31. Prefer 036.M31 as an explicitly stated date in a preferred source; 032-036.M31 is a valid hedge covering the whole frame arc. Reference points: Curze rediscovered 896.M30, Nostramo destroyed 984.M30. Also note the Corax scene in this book is placed before the Carinae Sodality events of Corax: Lord of Shadows."
+    },
+    {
+      "bookKey": "war-phoenician",
+      "number": "XXXIII.9",
+      "title": "THE PHOENICIAN",
+      "currentTimeline": "566.006.M31",
+      "proposedTimeline": "006.M31",
+      "spanCovered": "006.M31 (July), a single scene.",
+      "narrativePresent": "The duel between Fulgrim and Ferrus Manus at Isstvan V, during the Drop Site Massacre.",
+      "anchorReason": "Single continuous scene, no frame. Confirms the existing value, reduced to the site's parseable form.",
+      "precision": "point",
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Drop_Site_Massacre",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Isstvan_V"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": null,
+      "notes": "NO CANON CHANGE, FORMAT FIX ONLY. The existing '566.006.M31' is a correct full Imperial date: 566 is the year-fraction check number, 006 the year, M31 the millennium. The site's regex only accepts NNN.MNN or NNN-NNN.MNN, so drop the check number to give 006.M31. Both sources agree on the year: Lexicanum states 'The Drop Site Massacre occurred in 006.M31', and Tymell lists 'The Phoenician (July 30,006). Takes place during the duel between Fulgrim and Ferrus Manus, at Isstvan V.' Tymell's July precision also groups it with Massacre, Veritas Ferrum, Immortal Duty and The Underworld War, all July 006.M31, so if the site ever needs intra-year ordering for Isstvan V stories that is the cluster. Per the review document this single entry was the sole cause of all 138 documented ordering inversions, so this is the highest-value fix in the file."
+    },
+    {
+      "bookKey": "burden-wolf-king",
+      "number": "XLVIII.8",
+      "title": "THE WOLF KING",
+      "currentTimeline": "Various",
+      "proposedTimeline": "007.M31",
+      "spanCovered": "007.M31, October, roughly three weeks.",
+      "narrativePresent": "The Space Wolves besieged in the Alaxxes Nebula by the Alpha Legion after the Burning of Prospero, culminating in Gunnar Gunnhilt's sacrifice, Russ's reappearance, and the Dark Angels star fort Chimaera arriving to break the siege.",
+      "anchorReason": "Single continuous narrative. The opening (Blood-Well) sits directly after Wolf's Claw and Part I then jumps back three days, which is a local reordering only, not a frame.",
+      "precision": "point",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_the_Alaxxes_Nebula",
+        "https://wh40k.lexicanum.com/wiki/Wolf_King_(Novella)",
+        "https://www.trackofwords.com/2015/11/29/1398-2/"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": "Ties with SCARS (007.M31). Needs a tie-break placing it AFTER Scars, since it picks up a thread Scars leaves hanging.",
+      "notes": "REFINES THE PRIOR ESTIMATE from 007-008.M31 to a point date of 007.M31. Tymell is unusually precise here: 'Wolf King (October 30,007). Takes place between Scars/Wolf's Claw and Vengeful Spirit... The map included shows two engagements within Alaxxes, after the Alpha Legion initially attack: one at 769007 (early October 007) and another at 805007 (mid-October 007). The second is presumably their last stand, where the Dark Angels arrive to help them.' Those are in-book Imperial date stamps from a map illustration, which is about as hard as this evidence gets. Also from the text: the Dark Angels have held their outpost there for 59 years (948.M30), the Alaxxes Nebula was first discovered by the 6th Expedition in 817.M30, and after the final battle Russ says it will be months before the fleet can fight again and that he is going to Terra. This is fully consistent with the site's existing neighbours, SCARS at 007.M31 and VENGEFUL SPIRIT at 008-009.M31, so 007.M31 requires no other entry to move. Lexicanum's Battle of the Alaxxes Nebula page gives no explicit year, only that it followed the Burning of Prospero (004.M31), so Tymell is the load-bearing source."
+    },
+    {
+      "bookKey": "eye-long-night",
+      "number": "XXXV.3",
+      "title": "THE LONG NIGHT",
+      "currentTimeline": "Various",
+      "proposedTimeline": "009.M31",
+      "spanCovered": "009.M31, after mid-year.",
+      "narrativePresent": "Jago Sevatarion imprisoned in a gaol cell in the heart of Ultramar following his capture by the Dark Angels at the climax of the Thramas Crusade, talking to the ghosts in his head and to a girl who speaks to him in his sleep.",
+      "anchorReason": "Single continuous narrative in one location, no frame.",
+      "precision": "point",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/Thramas_Crusade",
+        "https://wh40k.lexicanum.com/wiki/Jago_Sevatarion",
+        "https://www.trackofwords.com/2014/11/14/the-long-night-aaron-dembski-bowden-audio-drama/"
+      ],
+      "confidence": "high",
+      "readingExperienceFlag": "Ties with PRINCE OF CROWS (009.M31), PHAROS (009.M31), THE UNREMEMBERED EMPIRE (009.M31) and THE HEART OF THE PHAROS (009.M31). Needs a tie-break placing it AFTER Prince of Crows, which it directly continues.",
+      "notes": "CORRECTS THE PRIOR ESTIMATE. The suggested 009-011.M31 upper bound is UNSOURCED and should not be used; nothing found extends this story past 009.M31. Tymell: 'The Long Night (post-mid-30,009). Takes place after Sevatar's capture at the end of Prince of Crows. Altarni is tortured for 7 days after her contact to Sevatar is discovered.' Bounded below by the Thramas Crusade, which Lexicanum dates 007-009.M31, with Curze launching his final attack across half a dozen worlds in the final days of 008.M31, the sector declared perdita by Lion El'Jonson in 009.M31, and Sevatar captured at the crusade's climax with both Curze and Sevatar reported missing in action at its conclusion. The Ultramar setting is consistent with the site's existing 009.M31 cluster. Note this entry is the prose version collected in Eye of Terra; it was first released as an audio drama in October 2014. Under range-start anchoring a 009-011.M31 value would in any case have sorted identically to 009.M31, so the practical change is only to stop implying a two-year span the sources do not support."
+    },
+    {
+      "bookKey": "the-master-of-mankind",
+      "number": "XLI",
+      "title": "THE MASTER OF MANKIND",
+      "currentTimeline": "004-014.M31",
+      "proposedTimeline": "011.M31",
+      "spanCovered": "The novel opens on the scene of Magnus's breach of the wards (004.M31) and the war it caused has been running five years or more by the main action. Lexicanum's chronological list of Black Library settings gives the whole book as 004-014.M31.",
+      "narrativePresent": "Mid to late 011.M31. The climactic phase of the War Within the Webway: the Impossible City falling, the outward tunnels lost, World Eaters, Word Bearers and Sons of Horus fighting alongside the daemons, ending with the Emperor mounting the Golden Throne and sealing the webway gate.",
+      "anchorReason": "The 004.M31 opening is a prologue scene, not the narrative present. Policy applied: the book sorts at the present of its main action and climax, not at the start of the span it covers.",
+      "precision": "contested",
+      "sources": [
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers",
+        "https://wh40k.lexicanum.com/wiki/War_Within_the_Webway",
+        "https://wh40k.lexicanum.com/wiki/Chronological_order_of_settings_of_Black_Library_publications",
+        "https://wh40k.lexicanum.com/wiki/The_Master_of_Mankind_(Novel)"
+      ],
+      "confidence": "medium-high",
+      "readingExperienceFlag": "Resolves the worst placement in the guide. At 004-014.M31 with range-start anchoring this late-Heresy novel sat at position 23, between THE OUTCAST DEAD and PROSPERO BURNS. 011.M31 places it beside THE PATH OF HEAVEN, OLD EARTH and RUINSTORM, which is where it belongs.",
+      "notes": "GENUINELY CONTESTED between 011.M31 and late 009 / early 010.M31, and the two readings rest on different kinds of evidence. Internal evidence points earlier: Tymell records that 'Ra thinks of \"the weariness of the last five years\", implying it's been 5 years since Magnus wrecked the project. That would put this in late 009/early 010', with 'Diocletian confirms it has been \"over five years\" since he felt natural light on his skin' and 'Multiple other references to 5 years'. Lexicanum's War Within the Webway page independently bounds the war at 005-010.M31 and says it 'was waged for the next five years'. Cross-book synchronisation points later, and is decisive here: Tymell continues, 'However, Old Earth last indicates that the end of the book happens at the time Vulkan makes it back to Terra, which is after Praetorian of Dorn and Path of Heaven. This would put Master of Mankind in 011.' Tymell corroborates from Old Earth itself: 'When Vulkan reaches the Impossible City, he sees signs of the battle there, from Master of Mankind. Later, they see the gates to Terra closing and the Emperor's forces withdrawing, indicating this is at the end of Master of Mankind.' RECOMMENDATION: 011.M31, because it is the only value consistent with the site's OWN existing dataset, which already has PRAETORIAN OF DORN at 010.M31, THE PATH OF HEAVEN at 011.M31 and OLD EARTH at 011.M31. Choosing 010.M31 instead would place the novel before the Old Earth scenes that explicitly depict its ending, creating a fresh inversion. Tymell's headline is 'The Master of Mankind (mid-30,011 - late 30,011)'. Two adjacent entries are also constrained by this: Ordo Sinister is 'pre-30,012 ... sometime during the Webway War, so before the end of Master of Mankind', and Tymell notes another story 'Opens soon after the end of Master of Mankind, with the Custodians starting to recover from the Webway War'."
+    }
+  ],
+  "summary": {
+    "scope": "21 entries researched: all 17 The Primarchs novels (P1-P17), the two 'Various' entries, the one unparseable Imperial check-date, and THE MASTER OF MANKIND.",
+    "auditOfRemainingEntries": "Item 5 of the brief is closed. All 224 entries in const bookData were parsed programmatically and checked against /^[0-9]{3}(-[0-9]{3})?\\.M[0-9]{2}$/. Exactly 20 fail: THE PHOENICIAN ('566.006.M31'), THE LONG NIGHT and THE WOLF KING ('Various'), 15 Primarchs books ('Pre-Heresy') and 2 Primarchs books ('Pre-Heresy/Heresy'). Zero entries are missing the timeline field and zero are null or empty. There are NO other placeholders or malformed values anywhere in the dataset. THE MASTER OF MANKIND parses correctly and is included here only because its range-start anchor mis-sorts it.",
+    "confidenceBreakdown": {
+      "high": [
+        "primarch-ferrus-manus (869.M30, stated in the novel and in HH Book Two: Massacre)",
+        "primarch-lion-eljonson (997.M30, Lexicanum campaign page sourced solely to this novel)",
+        "primarch-perturabo (999.M30 main story, stated in Lexicanum infobox citing four chapters)",
+        "primarch-jaghatai-khan (000.M31, per-episode dates stated in-book)",
+        "primarch-lorgar (959-964.M30 frame, cross-checked against the attested 857.M30 discovery)",
+        "primarch-magnus (853.M30, stated twice in-book as absolute year and 55th year of the Crusade)",
+        "primarch-sanguinius (002-003.M31, pinned to the War on Murder and Horus Rising)",
+        "primarch-konrad-curze (post-Heresy era certain, ~036.M31)",
+        "war-phoenician (006.M31, format fix only, no canon change)",
+        "burden-wolf-king (007.M31, in-book map date stamps)",
+        "eye-long-night (009.M31, bounded by the Thramas Crusade)"
+      ],
+      "mediumOrMediumHigh": [
+        "the-master-of-mankind (011.M31, contested but resolved in favour of site-internal consistency)",
+        "primarch-alpharius (981.M30, well-attested endpoint, narrating voice's own 'now' unsourced)",
+        "primarch-roboute-guilliman (964-970.M30, lower bound solid, exact year stated nowhere)",
+        "primarch-leman-russ (frame year contested between 015 and 021.M31)",
+        "primarch-corax (954.M30, contested against 970-980.M30)",
+        "primarch-fulgrim (850-868.M30, inferred from two bracketing constraints)",
+        "primarch-rogal-dorn (014.M31 frame, thinner evidence base as Tymell does not cover this 2022 title)"
+      ],
+      "low": [
+        "primarch-mortarion (930-939.M30, era certain, year contested three ways)",
+        "primarch-vulkan (845-855.M30, no source gives any year at all)"
+      ]
+    },
+    "highConfidenceCount": 11,
+    "mediumConfidenceCount": 7,
+    "lowConfidenceCount": 2,
+    "note": "Counts total 20 of 21 because primarch-angron is medium on year and high on era; it is counted once, under medium.",
+    "genuinelyContested": [
+      {
+        "entry": "primarch-perturabo",
+        "issue": "Date of the Olympia purge: 000.M31 (the novel itself and the Horus Heresy Journal) versus 004.M31 (Forge World and Lexicanum's Horus Heresy Timeline).",
+        "recommendation": "000.M31, hence a 999.M30 anchor. The Iron Warriors are attested absent from the Ullanor Triumph in 000.M31, and a 004.M31 purge leaves Horus recruiting Perturabo implausibly late relative to Isstvan III in 005.M31. Does not change this book's sort position either way."
+      },
+      {
+        "entry": "the-master-of-mankind",
+        "issue": "011.M31 versus late 009 / early 010.M31. Internal evidence (repeated 'five years' references) and Lexicanum's 005-010.M31 bound on the Webway War point earlier; Old Earth's depiction of the novel's ending, after Praetorian of Dorn and Path of Heaven, points to 011.M31.",
+        "recommendation": "011.M31. It is the only value consistent with the site's existing dates for PRAETORIAN OF DORN (010.M31), THE PATH OF HEAVEN (011.M31) and OLD EARTH (011.M31). Picking 010.M31 would create a new inversion against Old Earth."
+      },
+      {
+        "entry": "primarch-corax",
+        "issue": "954.M30 versus 970-980.M30. The book's own '32 years since the Emperor came to Deliverance' is firm, but Corax's rediscovery date is not: 922.M30 (Lexicanum Horus Heresy Timeline) versus ~940-952.M30 (Tymell, Forge World).",
+        "recommendation": "954.M30, from the in-book interval plus a published rediscovery date. This one DOES change the reading order: 954.M30 puts Corax before Lorgar and Guilliman, 970-980.M30 puts it after both."
+      },
+      {
+        "entry": "primarch-mortarion",
+        "issue": "Three-way conflict on when Mortarion took command, which is what dates Galaspar: ~928-937.M30 (Daemonology's '130 years into the Crusade', plus Mortarion on Terra ~937.M30), ~878-881.M30 (Lexicanum's Death Guard 'more then eight decades' plus its engagement list ordering), and a 854.M30 rediscovery date that is not a taking-command date.",
+        "recommendation": "930-939.M30. Weakest-evidenced date in the set after Vulkan. Choosing 878-881.M30 would move the book ahead of Ferrus Manus rather than after Angron."
+      },
+      {
+        "entry": "primarch-leman-russ",
+        "issue": "Frame year: 021.M31 (Space Wolves already a Chapter, so the Second Founding) versus ~015.M31 (news of the Lion's loss just reaching Fenris, per the Fall of Caliban). The two in-book markers are mutually inconsistent.",
+        "recommendation": "Keep the range 015-021.M31, which brackets both. If a single year is required use 021.M31, since the Chapter-not-Legion point is explicit in the novel's dialogue."
+      },
+      {
+        "entry": "primarch-konrad-curze",
+        "issue": "036.M31 (stated outright in Lexicanum's Curze infobox, and derived from 032.M31 recovery plus four years' travel) versus ~034.M31 (Tymell's direct reading of the novel: recovery 032.M31 plus 'over 20 months').",
+        "recommendation": "036.M31. Minor, both land in the same post-Heresy position. 032-036.M31 is a valid hedge."
+      },
+      {
+        "entry": "primarch-fulgrim",
+        "issue": "850-868.M30 versus a literal reading of the in-book line 'the intervening century since his rediscovery', which gives ~930.M30.",
+        "recommendation": "850-868.M30. The 'century' line contradicts three depicted facts about the Legion's size, morale and untested status."
+      },
+      {
+        "entry": "primarch-jaghatai-khan",
+        "issue": "Not a date conflict but a format limit. The true span 879.M30 to 000.M31 crosses the millennium boundary and cannot be expressed as NNN-NNN.MNN.",
+        "recommendation": "Use the point value 000.M31, the narrative present. This also happens to be the ideal reading position, immediately before Brotherhood of the Storm."
+      }
+    ],
+    "couldNotResolve": [
+      {
+        "entry": "primarch-vulkan",
+        "issue": "No source consulted gives any year for VULKAN: LORD OF DRAKES. The only sourced bracket is 'post-835.M30, pre-Heresy'. Lexicanum's Taras Division, Antaeum and 27th Expeditionary Fleet pages are empty stubs and its Salamanders page narrates the events with no date.",
+        "status": "Proposed 845-855.M30 is INFERRED from two stacked multi-year gaps after Vulkan's rediscovery. Treat as a placeholder. 836-855.M30 spans both candidate windows if the site prefers to encode the uncertainty."
+      },
+      {
+        "entry": "primarch-magnus",
+        "issue": "The Planet of the Sorcerers frame is undated. Every source says only 'after the fall of Prospero'. Hard lower bound 004.M31, no upper bound.",
+        "status": "Anchored at 853.M30 instead, per the stated policy exception. Not resolvable without a new source."
+      },
+      {
+        "entry": "primarch-sanguinius",
+        "issue": "The post-Heresy prologue and epilogue are undated at year precision. legiodraconis quotes 'quelques centaines d'annees' after the Heresy; a Goodreads reviewer says 'a century or so'.",
+        "status": "Anchored at 002-003.M31 instead, per the stated policy exception. Only the fact that it is after 014.M31 is sourced."
+      },
+      {
+        "entry": "primarch-alpharius",
+        "issue": "The date at which the in-universe record is being narrated is never given and appears deliberately unspecified. Nothing places the act of narration in the Heresy.",
+        "status": "Anchored at 981.M30, the latest depicted event, which is well attested. The narration's own 'now' remains unknown."
+      }
+    ],
+    "briefPremisesCorrected": [
+      "P14 ALPHARIUS: HEAD OF THE HYDRA does NOT run into the Heresy proper. It ends at the public reveal of the XX Legion primarch to Horus in 981.M30, with no Isstvan or Siege content cited to it anywhere. Confirmed three ways.",
+      "P12 KONRAD CURZE: THE NIGHT HAUNTER does NOT have a Heresy-era Tsagualsa frame. The Tsagualsa frame is Curze's death awaiting the assassin M'Shen, during the Great Scouring at ~036.M31, well after the Siege. The Heresy-era Tsagualsa material the brief may be thinking of is Savage Weapons and Prince of Crows.",
+      "P17 SANGUINIUS: THE GREAT ANGEL is mis-tagged in the opposite direction to what 'Pre-Heresy/Heresy' implies. It is a late Great Crusade novel at 002-003.M31 with a POST-Heresy epilogue, and it never depicts Signus Prime or the Siege.",
+      "THE WOLF KING is 007.M31 (October), a point date, not the estimated 007-008.M31.",
+      "THE LONG NIGHT is 009.M31. The estimated 009-011.M31 upper bound is unsourced.",
+      "The brief's example bookKey 'primarchs-roboute-guilliman' does not exist. The real key is 'primarch-roboute-guilliman', singular. All 21 keys in this file were verified against script.js.",
+      "SANGUINIUS: THE GREAT ANGEL is by Chris Wraight, which the dataset already has correct. Flagged only because an intermediate research step misattributed it to Guy Haley."
+    ],
+    "policyObservation": "Six of the 17 Primarchs books have a narrative present later than the bulk of their content: primarch-leman-russ (post-Heresy), primarch-magnus (post-004.M31, undated), primarch-lorgar (959-964.M30), primarch-konrad-curze (~036.M31), primarch-rogal-dorn (014.M31) and primarch-sanguinius (post-014.M31, undated), plus primarch-angron with an M41 coda. Strict narrative-present anchoring is applied where the frame is dated and is genuinely the book's present. It produces a clearly GOOD result for primarch-lorgar and primarch-jaghatai-khan, a defensible result for primarch-konrad-curze, and a questionable one for primarch-leman-russ and primarch-rogal-dorn, where a thin bookend exiles a Great Crusade campaign novel past the Heresy. Those two are the entries most worth reconsidering; body-anchored alternatives are 870.M30 and 858.M30 respectively."
+  }
+}

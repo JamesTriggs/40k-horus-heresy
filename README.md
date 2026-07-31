@@ -12,9 +12,10 @@
 
 ## 📖 Overview
 
-An immersive, grimdark-themed web application showcasing all **81 books** from the Horus Heresy universe, featuring:
-- 54 Main Horus Heresy novels
-- 17 Primarchs character novels
+An immersive, grimdark-themed web application showcasing all **224 entries** from the Horus Heresy universe, featuring:
+- 39 main Horus Heresy novels
+- 158 individual anthology stories, novellas and audio dramas, across 15 volumes
+- 17 The Primarchs character novels
 - 10 Siege of Terra finale books
 
 Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate aesthetic with full character encyclopedia, reading tracker, and dual Loyalist/Traitor themes.
@@ -22,8 +23,8 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 ## ✨ Features
 
 ### 📚 Complete Book Collection
-- **81 books** with official Black Library cover artwork
-- **Chronological ordering** by in-story timeline (820.M30 → 014.M31)
+- **224 entries** with official Black Library cover artwork
+- **Chronological ordering** by in-story timeline (730.M30 → 036.M31), strict, with no series held back as an appendix
 - **Publication order** sorting option
 - **Full book details**: authors, legions, timelines, character lists, synopses
 - **Spoiler toggle**: Switch between spoiler-free and full summaries
@@ -36,7 +37,7 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 
 ### 📖 Reading Progress Tracker
 - **Three-state system**: Not Started, Reading, Finished
-- **Visual indicators**: Blue badges for reading, green for finished, grayed out completed books
+- **Visual indicators**: themed badges per allegiance, with the cover art dimmed on finished books while the title and badge stay legible
 - **Progress counter**: Shows breakdown across all series
 - **Persistent storage**: Progress saved in browser localStorage
 
@@ -106,20 +107,47 @@ Deploy to any static hosting service:
 40k-horus-heresy/
 ├── index.html                    # Main application
 ├── styles.css                    # All styling and themes
-├── script.js                     # Application logic (2900+ lines)
+├── script.js                     # Data and application logic
 ├── images/                       # Book covers and character portraits
-│   ├── *.jpg                     # 81 book covers
+│   ├── *.jpg                     # 81 cover images shared across 224 entries
 │   ├── character-*.jpg           # 32 character portraits
 │   ├── character-placeholder.svg # Placeholder for minor characters
 │   ├── imperial-aquila.png       # Loyalist symbol
 │   └── chaos-star.svg           # Traitor symbol
-├── lexicanum_characters.json    # Character data source
-├── complete-characters.json     # Full character database
-├── blurbs-safe.json             # Spoiler-free summaries
+├── ORDERING_DECISIONS.md        # Generated ordering log, fetched by the guide modal
+├── tools/
+│   ├── validate-data.mjs        # Data integrity gate, run before committing
+│   ├── generate-ordering-doc.mjs # Regenerates ORDERING_DECISIONS.md from the data
+│   ├── ui-checks.mjs            # Browser checks, including contrast and layout
+│   └── proposed-dates.json      # Sourced dates for previously undated entries
 ├── netlify.toml                 # Netlify configuration
 ├── .gitignore                   # Git ignore rules
 └── README.md                    # This file
 ```
+
+## 🧪 Checks
+
+Two gates, neither of which needs a build step.
+
+```bash
+# Data integrity. Catches duplicated properties inside an entry, sort-key
+# collisions, unparseable series numbers, missing images, and asserts the
+# rendered order matches ORDERING_DECISIONS.md position by position.
+node tools/validate-data.mjs
+
+# Regenerate the ordering log after changing the order of keys in bookData.
+node tools/generate-ordering-doc.mjs
+
+# Browser checks: ordering, modals, scroll lock, contrast in both themes,
+# mobile layout. Needs Playwright and a local server.
+npm i -D playwright && npx playwright install chromium-headless-shell
+python3 -m http.server 8899 &
+node tools/ui-checks.mjs
+```
+
+**Chronological order comes from the order of the keys in `bookData`.** There is
+no per-entry sort field. To move a book, move its entry, then regenerate the
+ordering log and run the validator.
 
 ## 🎨 Design Features
 
@@ -131,10 +159,10 @@ Deploy to any static hosting service:
 - Text: Parchment (#e8dcc4)
 
 **Chaos/Traitor:**
-- Primary: Chaos Red (#cc0000)
-- Accent: Warp Purple (#6b2d5c)
+- Primary: Ember (#ff6b5a) for all text, chosen for legibility
+- Accent: Warp Purple (#a855a0)
 - Background: Daemon Black (#0d0d0d)
-- Emphasis: Corruption Red (#8b0000)
+- Borders and fills only: Chaos Red (#8b0000), never text
 
 ### Typography
 - **Headers**: Cinzel (serif, gothic)
@@ -143,13 +171,12 @@ Deploy to any static hosting service:
 
 ## 📊 Statistics
 
-- **81 books** across 3 series
+- **224 entries** across 4 series groupings
 - **123 characters** in encyclopedia
 - **48 quotes** with attributions
-- **3,010 lines** of JavaScript
-- **1,658 lines** of CSS
-- **130 lines** of HTML
-- **4,798 total lines** of production code
+- **5,174 lines** of JavaScript, of which roughly 86% is data
+- **1,938 lines** of CSS
+- **143 lines** of HTML
 - **All images** from official Lexicanum sources
 
 ## 🔒 Security
@@ -189,10 +216,11 @@ Code and implementation: MIT License (see LICENSE file)
 
 ## 📝 Data Sources
 
-- Book information: Warhammer 40k Lexicanum
-- Cover artwork: Warhammer 40k Lexicanum
-- Character data: Warhammer 40k Lexicanum
-- Lore and synopses: Compiled from official sources
+- Cover artwork and character images: Warhammer 40k Lexicanum
+- Series numbering, titles and authors: Black Library
+- In-universe dates for the main novels: largely follow [Adeptus Ars's chronological guide](https://www.adeptusars.com/features/the-horus-heresy-books-in-chronological-order), which is one community source's editorial judgement rather than settled canon, and it differs from other reputable chronologies on roughly a dozen books
+- Dates for The Primarchs series and previously undated stories: researched per entry, with sources and confidence recorded in `tools/proposed-dates.json`
+- Anthology story summaries and legion tags: **currently unreliable and being rewritten from primary sources**, see the review notes
 
 ---
 

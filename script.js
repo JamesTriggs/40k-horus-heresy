@@ -867,50 +867,117 @@ const characterData = {
 };
 
 // Reading Progress Tracker with three states: null, 'reading', 'finished'
+const PROGRESS_KEY = 'horusHeresyProgress';
+const SPOILER_KEY = 'horusHeresyShowSpoilers';
+
 const readingProgress = {
+    // Cached in memory. Previously every read hit localStorage and re-parsed
+    // the whole payload, which happened 225 times per render.
+    _cache: null,
+    _storageBroken: false,
+
     load: function() {
-        const saved = localStorage.getItem('horusHeresyProgress');
-        if (saved) {
-            const data = JSON.parse(saved);
-            // Migrate old boolean format to new status format
-            Object.keys(data).forEach(key => {
-                if (typeof data[key] === 'boolean') {
-                    data[key] = data[key] ? 'finished' : null;
+        if (this._cache) return this._cache;
+
+        let data = {};
+        try {
+            const saved = localStorage.getItem(PROGRESS_KEY);
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                // Guard against 'null', arrays and primitives, all of which are
+                // valid JSON but would throw on Object.keys or corrupt lookups.
+                if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+                    data = parsed;
                 }
-            });
-            return data;
+            }
+        } catch (error) {
+            // A corrupt value used to throw here and leave the page with zero
+            // book cards and no error visible to the user.
+            console.warn('Reading progress could not be read, starting empty:', error);
+            this._storageBroken = true;
         }
-        return {};
+
+        // Migrate the old boolean format, then persist so it happens once
+        // rather than on every read.
+        let migrated = false;
+        Object.keys(data).forEach(key => {
+            if (typeof data[key] === 'boolean') {
+                data[key] = data[key] ? 'finished' : null;
+                migrated = true;
+            }
+        });
+
+        this._cache = data;
+        if (migrated) this.save(data);
+        return this._cache;
     },
+
     save: function(progress) {
-        localStorage.setItem('horusHeresyProgress', JSON.stringify(progress));
+        this._cache = progress;
+        try {
+            localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+            return true;
+        } catch (error) {
+            // Quota exhausted, or private browsing. The in-memory cache still
+            // works for this session, so say so rather than failing silently.
+            console.warn('Reading progress could not be saved:', error);
+            this._storageBroken = true;
+            return false;
+        }
     },
+
+    isPersistent: function() {
+        this.load();
+        return !this._storageBroken;
+    },
+
     setStatus: function(bookKey, status) {
         const progress = this.load();
         progress[bookKey] = status || null;
         this.save(progress);
         return progress[bookKey];
     },
+
     getStatus: function(bookKey) {
-        const progress = this.load();
-        return progress[bookKey] || null;
+        return this.load()[bookKey] || null;
     },
+
     cycleStatus: function(bookKey) {
-        const current = this.getStatus(bookKey);
         const cycle = {null: 'reading', 'reading': 'finished', 'finished': null};
-        const newStatus = cycle[current];
-        return this.setStatus(bookKey, newStatus);
+        return this.setStatus(bookKey, cycle[this.getStatus(bookKey)]);
     },
+
     getCount: function(status) {
-        const progress = this.load();
-        if (status) {
-            return Object.values(progress).filter(v => v === status).length;
-        }
-        return Object.values(progress).filter(v => v).length;
+        const values = Object.values(this.load());
+        return status
+            ? values.filter(v => v === status).length
+            : values.filter(Boolean).length;
     },
+
     getTotalBooks: function() {
         return Object.keys(bookData).length;
     }
+};
+
+// Modal scroll lock. Every overlay used to set and clear document.body.overflow
+// independently, so closing a nested modal unlocked the page while its parent
+// was still open.
+//
+// The state is derived from the DOM rather than counted, because several modals
+// have three separate close paths (button, backdrop, Escape) and a counter
+// would drift the first time two of them fired for one dismissal.
+const MODAL_SELECTOR = '.modal-overlay.active, .character-modal-overlay.active';
+
+const scrollLock = {
+    sync: function() {
+        const anyOpen = document.querySelector(MODAL_SELECTOR) !== null;
+        // The class goes on <html>, which is the scrolling element. Setting
+        // overflow on <body> alone does not stop the page scrolling.
+        document.documentElement.classList.toggle('modal-open', anyOpen);
+        document.body.style.overflow = anyOpen ? 'hidden' : '';
+    },
+    acquire: function() { this.sync(); },
+    release: function() { this.sync(); }
 };
 
 const bookData = {
@@ -919,11 +986,9 @@ const bookData = {
         title: 'THE LAST CHURCH',
         author: 'Graham McNeill',
         timeline: '730.M30',
-        sortOrder: 0.1,
         coverImage: 'images/tales-of-heresy.jpg',
         legions: ["Emperor"],
         anthology: 'Tales of Heresy',
-        sortOrder: 10.6,
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Type:</strong> Short Story<br>
@@ -939,11 +1004,9 @@ const bookData = {
         title: 'ATHAME',
         author: 'John French',
         timeline: '800.M30',
-        sortOrder: 0.37,
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Various"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.7,
         details: `
             <strong>Author:</strong> John French<br>
             <strong>Type:</strong> Short Story<br>
@@ -971,16 +1034,94 @@ const bookData = {
         blurb: `The Dark Angels' homeworld of Caliban burns with conflict long before the Emperor's arrival. Noble orders of knights battle the great beasts that terrorize humanity, with young Lion El'Jonson emerging as the greatest warrior the world has ever known. When the Emperor finally finds his lost son, Caliban is transformed, but seeds of jealousy and resentment are planted that will split the Legion in twain.`,
         blurbSafe: `The Dark Angels' homeworld of Caliban is steeped in ancient knightly traditions and plagued by great beasts. Noble orders of knights defend humanity, with young Lion El'Jonson emerging as an exceptional warrior. When the Emperor arrives, Caliban is transformed—but the changes will test the bonds of brotherhood and loyalty.`
     },
+    'primarch-vulkan': {
+        number: 'P9',
+        title: 'VULKAN: LORD OF DRAKES',
+        author: 'David Annandale',
+        timeline: '845-855.M30',
+        coverImage: 'images/primarch-vulkan.jpg',
+        legions: ['Salamanders'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Annandale<br>
+            <strong>Series:</strong> Primarchs Novel Series #9<br>
+            <strong>Legion:</strong> Salamanders<br>
+            <strong>Primarch:</strong> Vulkan<br>
+            <strong>Main Characters:</strong> Vulkan<br>
+            <strong>Timeline:</strong> Nocturne and Great Crusade<br>
+            <strong>Status:</strong> The Lord of Drakes
+        `,
+        blurb: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity rather than just conquering for it, and the events that made the Salamanders the most humanitarian of all Space Marine Legions. Vulkan's compassion and his Perpetual nature set him apart from his brothers.`,
+        blurbSafe: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity, and what made the Salamanders the most humanitarian of all Legions.`
+    },
+    'primarch-fulgrim': {
+        number: 'P6',
+        title: 'FULGRIM: THE PALATINE PHOENIX',
+        author: 'Josh Reynolds',
+        timeline: '850-868.M30',
+        coverImage: 'images/primarch-fulgrim.jpg',
+        legions: ['Emperor\'s Children'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Josh Reynolds<br>
+            <strong>Series:</strong> Primarchs Novel Series #6<br>
+            <strong>Legion:</strong> Emperor's Children<br>
+            <strong>Primarch:</strong> Fulgrim<br>
+            <strong>Main Characters:</strong> Fulgrim, Fabius Bile<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Phoenician
+        `,
+        blurb: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence, his pride in his Legion's achievements, and the character flaws that make him vulnerable to Slaanesh's corruption. The quest for perfection becomes a path to damnation for the most beautiful of the Emperor's sons.`,
+        blurbSafe: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence and the character flaws that make him vulnerable to corruption.`
+    },
+    'primarch-magnus': {
+        number: 'P3',
+        title: 'MAGNUS THE RED: MASTER OF PROSPERO',
+        author: 'Graham McNeill',
+        timeline: '853.M30',
+        coverImage: 'images/primarch-magnus.jpg',
+        legions: ['Thousand Sons'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Graham McNeill<br>
+            <strong>Series:</strong> Primarchs Novel Series #3<br>
+            <strong>Legion:</strong> Thousand Sons<br>
+            <strong>Primarch:</strong> Magnus the Red<br>
+            <strong>Main Characters:</strong> Magnus the Red, Ahriman<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Crimson King
+        `,
+        blurb: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment, his experiments with psychic powers, and the events that set him on a collision course with the Emperor's edicts. The most powerful psyker among the Primarchs believes he can master Chaos itself—a fatal hubris that will doom his Legion.`,
+        blurbSafe: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment and the events that set him on a collision course with the Emperor's edicts.`
+    },
+    'primarch-ferrus-manus': {
+        number: 'P7',
+        title: 'FERRUS MANUS: THE GORGON OF MEDUSA',
+        author: 'David Guymer',
+        timeline: '869.M30',
+        coverImage: 'images/primarch-ferrus.jpg',
+        legions: ['Iron Hands'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Guymer<br>
+            <strong>Series:</strong> Primarchs Novel Series #7<br>
+            <strong>Legion:</strong> Iron Hands<br>
+            <strong>Primarch:</strong> Ferrus Manus<br>
+            <strong>Main Characters:</strong> Ferrus Manus, Fulgrim<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Gorgon
+        `,
+        blurb: `Ferrus Manus, lord of the Iron Hands, embodies strength and logic. His metal hands grant him power but also represent his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the tragic irony that his inflexibility and inability to see his brother's corruption leads to his death at Isstvan V. The strongest Primarch falls because he cannot adapt.`,
+        blurbSafe: `Ferrus Manus embodies strength and logic, his metal hands granting power while representing his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the inflexibility that defines him.`
+    },
     'tales-of-heresy-after-deshea': {
         number: 'X.7',
         title: 'AFTER DESH\'EA',
         author: 'Matthew Farrer',
         timeline: '899.M30',
-        sortOrder: 0.2,
         coverImage: 'images/tales-of-heresy.jpg',
         legions: ["World Eaters"],
         anthology: 'Tales of Heresy',
-        sortOrder: 10.7,
         details: `
             <strong>Author:</strong> Matthew Farrer<br>
             <strong>Type:</strong> Short Story<br>
@@ -992,16 +1133,54 @@ const bookData = {
         blurb: `Angron's violent first encounter with his Legion after the Emperor tore him from his homeworld. Khârn and the War Hounds arrive to find their Primarch seething with rage and grief, forced to abandon his gladiator brothers to their deaths. This story explores Angron's tragedy and the seeds of hatred that would doom the XII Legion.`,
         blurbSafe: `The newly discovered Angron meets his Legion for the first time. Still grieving those he left behind on his homeworld, the Primarch's rage threatens to consume both himself and his sons.`
     },
+    'primarch-angron': {
+        number: 'P11',
+        title: 'ANGRON: SLAVE OF NUCERIA',
+        author: 'Ian St. Martin',
+        timeline: '900-905.M30',
+        coverImage: 'images/primarch-angron.jpg',
+        legions: ['World Eaters'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Ian St. Martin<br>
+            <strong>Series:</strong> Primarchs Novel Series #11<br>
+            <strong>Legion:</strong> World Eaters<br>
+            <strong>Primarch:</strong> Angron<br>
+            <strong>Main Characters:</strong> Angron, Lorgar<br>
+            <strong>Timeline:</strong> Return to Nuceria during Heresy<br>
+            <strong>Status:</strong> The Red Angel
+        `,
+        blurb: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in the gladiator pits. The Butcher's Nails implanted in his brain drive him toward constant rage and violence. This novel explores the tragedy of Angron—a Primarch who could have been noble but was broken before the Emperor found him. His only peace comes through bloodshed, and Lorgar offers him a terrible apotheosis.`,
+        blurbSafe: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in gladiator pits. The Butcher's Nails drive him toward constant rage. This novel explores the tragedy of a Primarch broken before the Emperor found him.`
+    },
+    'primarch-mortarion': {
+        number: 'P15',
+        title: 'MORTARION: THE PALE KING',
+        author: 'David Annandale',
+        timeline: '930-939.M30',
+        coverImage: 'images/primarch-mortarion.jpg',
+        legions: ['Death Guard'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Annandale<br>
+            <strong>Series:</strong> Primarchs Novel Series #15<br>
+            <strong>Legion:</strong> Death Guard<br>
+            <strong>Primarch:</strong> Mortarion<br>
+            <strong>Main Characters:</strong> Mortarion, Typhon<br>
+            <strong>Timeline:</strong> Barbarus and Great Crusade<br>
+            <strong>Status:</strong> The Reaper
+        `,
+        blurb: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord—the Emperor had to do that. This failure drives Mortarion's resentment. This novel explores his philosophy of endurance, his hatred of tyrants and psykers, and the bitter irony that he will become a slave to Nurgle, the greatest tyrant of all.`,
+        blurbSafe: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord. This failure drives his resentment of tyrants and psykers.`
+    },
     'tales-of-heresy-wolf-at-the-door': {
         number: 'X.2',
         title: 'WOLF AT THE DOOR',
         author: 'Mike Lee',
         timeline: '950.M30',
-        sortOrder: 0.35,
         coverImage: 'images/tales-of-heresy.jpg',
         legions: ["Space Wolves"],
         anthology: 'Tales of Heresy',
-        sortOrder: 10.2,
         details: `
             <strong>Author:</strong> Mike Lee<br>
             <strong>Type:</strong> Short Story<br>
@@ -1011,6 +1190,26 @@ const bookData = {
         `,
         blurb: `The Space Wolves descend upon a world, bringing the Emperor's justice with fang and claw. This tale explores the VI Legion's role as the Emperor's executioners and the savage fury they unleash in the name of the Imperium.`,
         blurbSafe: `The Space Wolves arrive at a world to deliver the Emperor's judgment, showcasing the savage nature of the VI Legion and their role as the Imperium's executioners.`
+    },
+    'primarch-corax': {
+        number: 'P10',
+        title: 'CORAX: LORD OF SHADOWS',
+        author: 'Guy Haley',
+        timeline: '954.M30',
+        coverImage: 'images/primarch-corax.jpg',
+        legions: ['Raven Guard'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Guy Haley<br>
+            <strong>Series:</strong> Primarchs Novel Series #10<br>
+            <strong>Legion:</strong> Raven Guard<br>
+            <strong>Primarch:</strong> Corvus Corax<br>
+            <strong>Main Characters:</strong> Corvus Corax<br>
+            <strong>Timeline:</strong> Liberation of Lycaeus<br>
+            <strong>Status:</strong> The Deliverer
+        `,
+        blurb: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare and asymmetric combat. This novel explores Corax's hatred of tyrants, his preference for precision strikes over overwhelming force, and how his experiences shaped the Raven Guard's tactics. The Ravenlord operates from the shadows, striking where least expected, disappearing before the enemy can respond.`,
+        blurbSafe: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare. This novel explores Corax's hatred of tyrants, his preference for precision strikes, and how his experiences shaped the Raven Guard's tactics.`
     },
     'the-first-heretic': {
         number: 'XIV',
@@ -1035,11 +1234,9 @@ const bookData = {
         title: 'SCIONS OF THE STORM',
         author: 'Anthony Reynolds',
         timeline: '956.M30',
-        sortOrder: 0.3,
         coverImage: 'images/tales-of-heresy.jpg',
         legions: ["Word Bearers"],
         anthology: 'Tales of Heresy',
-        sortOrder: 10.3,
         details: `
             <strong>Author:</strong> Anthony Reynolds<br>
             <strong>Type:</strong> Short Story<br>
@@ -1050,16 +1247,34 @@ const bookData = {
         blurb: `A Word Bearers tale following the XVII Legion as they spread the dark truth of Chaos across the galaxy. This story delves into the zealous nature of Lorgar's sons and their mission to convert or destroy those who resist the new gods.`,
         blurbSafe: `A Word Bearers squad undertakes a mission that tests their faith and reveals the zealous nature of the XVII Legion during their transformation.`
     },
+    'primarch-lorgar': {
+        number: 'P5',
+        title: 'LORGAR: BEARER OF THE WORD',
+        author: 'Gav Thorpe',
+        timeline: '959-964.M30',
+        coverImage: 'images/primarch-lorgar.jpg',
+        legions: ['Word Bearers'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Gav Thorpe<br>
+            <strong>Series:</strong> Primarchs Novel Series #5<br>
+            <strong>Legion:</strong> Word Bearers<br>
+            <strong>Primarch:</strong> Lorgar Aurelian<br>
+            <strong>Main Characters:</strong> Lorgar, Kor Phaeron, Erebus<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Urizen
+        `,
+        blurb: `Lorgar, the most faithful son, spreads the Imperial Truth across the galaxy—but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction, his search for meaning, and his ultimate discovery of the Chaos Gods. The Urizen's journey from devoted son to first heretic is one of the Heresy's most pivotal transformations.`,
+        blurbSafe: `Lorgar spreads the Imperial Truth across the galaxy, but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction and his search for meaning beyond the Imperial Truth.`
+    },
     'tales-of-heresy-call-of-the-lion': {
         number: 'X.5',
         title: 'CALL OF THE LION',
         author: 'Gav Thorpe',
         timeline: '960.M30',
-        sortOrder: 0.36,
         coverImage: 'images/tales-of-heresy.jpg',
         legions: ["Dark Angels"],
         anthology: 'Tales of Heresy',
-        sortOrder: 10.5,
         details: `
             <strong>Author:</strong> Gav Thorpe<br>
             <strong>Type:</strong> Short Story<br>
@@ -1071,30 +1286,66 @@ const bookData = {
         blurb: `The Dark Angels answer their Primarch's call during the Heresy. This story explores the I Legion's loyalty and their response to the galaxy-spanning civil war, as they navigate the shadows and secrets that have always defined them.`,
         blurbSafe: `Dark Angels warriors respond to their Primarch's summons during the Heresy, showcasing the I Legion's loyalty amid the galaxy's darkest hour.`
     },
+    'primarch-roboute-guilliman': {
+        number: 'P1',
+        title: 'ROBOUTE GUILLIMAN: LORD OF ULTRAMAR',
+        author: 'David Annandale',
+        timeline: '964-970.M30',
+        coverImage: 'images/primarch-guilliman.jpg',
+        legions: ['Ultramarines'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Annandale<br>
+            <strong>Series:</strong> Primarchs Novel Series #1<br>
+            <strong>Legion:</strong> Ultramarines<br>
+            <strong>Primarch:</strong> Roboute Guilliman<br>
+            <strong>Main Characters:</strong> Roboute Guilliman, Tarasha Euten<br>
+            <strong>Timeline:</strong> Pre-Heresy and Heresy Era<br>
+            <strong>Status:</strong> The Avenging Son
+        `,
+        blurb: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance and built the XIII Legion into a perfectly organized war machine. This novel explores Guilliman's character, his vision for humanity, and how his experiences during the Great Crusade prepared him for the trials of the Horus Heresy. The Master of the Five Hundred Worlds must balance his role as warrior and statesman.`,
+        blurbSafe: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance. This novel explores Guilliman's vision for humanity, his philosophy of warfare and statecraft, and how the Master of the Five Hundred Worlds balances his roles as warrior and administrator.`
+    },
     'war-divine-adoratrice': {
         number: 'XXXIII.12',
         title: 'THE DIVINE ADORATRICE',
         author: 'Graham McNeill',
         timeline: '966.M30',
-        sortOrder: 0.4,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Thousand Sons"],
         anthology: 'War Without End',
-        sortOrder: 33.12,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Thousand Sons`,
         blurb: `The Thousand Sons delve deeper into sorcery and forbidden lore.`,
         blurbSafe: `Sorcerers of the XV Legion seek dangerous knowledge.`
+    },
+    'primarch-alpharius': {
+        number: 'P14',
+        title: 'ALPHARIUS: HEAD OF THE HYDRA',
+        author: 'Mike Brooks',
+        timeline: '981.M30',
+        coverImage: 'images/primarch-alpharius.jpg',
+        legions: ['Alpha Legion'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Mike Brooks<br>
+            <strong>Series:</strong> Primarchs Novel Series #14<br>
+            <strong>Legion:</strong> Alpha Legion<br>
+            <strong>Primarch:</strong> Alpharius Omegon<br>
+            <strong>Main Characters:</strong> Alpharius Omegon<br>
+            <strong>Timeline:</strong> Discovery and Great Crusade<br>
+            <strong>Status:</strong> The Hydra
+        `,
+        blurb: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep even from each other. The Alpha Legion's methods of infiltration and misdirection are controversial, and this book may be the greatest misdirection of all. Every revelation might be a lie, every truth might be deception. I am Alpharius.`,
+        blurbSafe: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep. Every revelation might be a lie, every truth might be deception.`
     },
     'shadows-of-treachery-dark-king': {
         number: 'XXII.2',
         title: 'THE DARK KING',
         author: 'Graham McNeill',
         timeline: '984.M30',
-        sortOrder: 0.5,
         coverImage: 'images/shadows-of-treachery.jpg',
         legions: ["Night Lords"],
         anthology: 'Shadows of Treachery',
-        sortOrder: 22.2,
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Type:</strong> Short Story<br>
@@ -1106,30 +1357,66 @@ const bookData = {
         blurb: `Konrad Curze's madness deepens as his prophetic visions consume him. The Night Haunter sees his own death approaching and the damnation of his Legion. This story explores Curze's descent into darkness and his transformation from the Emperor's justice into something far more terrible.`,
         blurbSafe: `Konrad Curze's visions of the future torment him, driving the Night Haunter deeper into madness as he sees his own fate approaching.`
     },
+    'primarch-lion-eljonson': {
+        number: 'P13',
+        title: 'LION EL\'JONSON: LORD OF THE FIRST',
+        author: 'David Guymer',
+        timeline: '997.M30',
+        coverImage: 'images/primarch-lion.jpg',
+        legions: ['Dark Angels'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> David Guymer<br>
+            <strong>Series:</strong> Primarchs Novel Series #13<br>
+            <strong>Legion:</strong> Dark Angels<br>
+            <strong>Primarch:</strong> Lion El'Jonson<br>
+            <strong>Main Characters:</strong> Lion El'Jonson, Luther<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The First
+        `,
+        blurb: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature and inability to trust create divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that prevents him from seeing the betrayal festering on Caliban. The Lord of the First is supreme in battle but blind to the politics that will split his Legion.`,
+        blurbSafe: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature creates divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that blinds him.`
+    },
     'eye-wolf-ash-fire': {
         number: 'XXXV.1',
         title: 'THE WOLF OF ASH AND FIRE',
         author: 'Graham McNeill',
         timeline: '999.M30',
-        sortOrder: 0.38,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Space Wolves"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.1,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Space Wolves`,
         blurb: `A Space Wolves warrior's tale of fire and fury during the Heresy.`,
         blurbSafe: `The VI Legion unleashes savage warfare against the traitors.`
+    },
+    'primarch-perturabo': {
+        number: 'P4',
+        title: 'PERTURABO: THE HAMMER OF OLYMPIA',
+        author: 'Guy Haley',
+        timeline: '999.M30',
+        coverImage: 'images/primarch-perturabo.jpg',
+        legions: ['Iron Warriors'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Guy Haley<br>
+            <strong>Series:</strong> Primarchs Novel Series #4<br>
+            <strong>Legion:</strong> Iron Warriors<br>
+            <strong>Primarch:</strong> Perturabo<br>
+            <strong>Main Characters:</strong> Perturabo, Calliphone<br>
+            <strong>Timeline:</strong> Great Crusade, Destruction of Olympia<br>
+            <strong>Status:</strong> The Lord of Iron
+        `,
+        blurb: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the events that push him toward Horus's cause. Perturabo's bitterness at being underappreciated, his perfectionism, and his willingness to sacrifice anything for victory make him one of the most tragic Primarchs—a brilliant mind consumed by resentment.`,
+        blurbSafe: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the bitterness at being underappreciated that pushes him toward darker paths.`
     },
     'shadows-of-treachery-death-of-silversmith': {
         number: 'XXII.6',
         title: 'DEATH OF A SILVERSMITH',
         author: 'Graham McNeill',
         timeline: '000.M31',
-        sortOrder: 1,
         coverImage: 'images/shadows-of-treachery.jpg',
         legions: ["Various"],
         anthology: 'Shadows of Treachery',
-        sortOrder: 22.6,
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Type:</strong> Short Story<br>
@@ -1138,6 +1425,26 @@ const bookData = {
         `,
         blurb: `A tale of artistry and death during the Heresy. Even in the Age of Darkness, beauty and craftsmanship persist, but they come at a terrible price. This story explores how war destroys not just warriors but the culture and art they once protected.`,
         blurbSafe: `A story exploring how the Heresy destroys not just warriors but the artists and craftsmen whose work once brought beauty to the Imperium.`
+    },
+    'primarch-jaghatai-khan': {
+        number: 'P8',
+        title: 'JAGHATAI KHAN: WARHAWK OF CHOGORIS',
+        author: 'Chris Wraight',
+        timeline: '000.M31',
+        coverImage: 'images/primarch-khan.jpg',
+        legions: ['White Scars'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Chris Wraight<br>
+            <strong>Series:</strong> Primarchs Novel Series #8<br>
+            <strong>Legion:</strong> White Scars<br>
+            <strong>Primarch:</strong> Jaghatai Khan<br>
+            <strong>Main Characters:</strong> Jaghatai Khan, Yesugei<br>
+            <strong>Timeline:</strong> Discovery on Chogoris<br>
+            <strong>Status:</strong> The Warhawk
+        `,
+        blurb: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else. The Warhawk's free spirit and strategic genius make him both invaluable to the Imperium and difficult to control—a warrior who rides where he wills.`,
+        blurbSafe: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else.`
     },
     'legion': {
         number: 'VII',
@@ -1180,11 +1487,9 @@ const bookData = {
         title: 'FEAT OF IRON',
         author: 'Nick Kyme',
         timeline: '001.M31',
-        sortOrder: 1.1,
         coverImage: 'images/the-primarchs.jpg',
         legions: ["Iron Hands"],
         anthology: 'The Primarchs',
-        sortOrder: 20.2,
         details: `
             <strong>Author:</strong> Nick Kyme<br>
             <strong>Type:</strong> Novella<br>
@@ -1201,11 +1506,9 @@ const bookData = {
         title: 'VIRTUES OF THE SONS',
         author: 'Andy Smillie',
         timeline: '001.M31',
-        sortOrder: 1.3,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Blood Angels"],
         anthology: 'War Without End',
-        sortOrder: 33.16,
         details: `<strong>Author:</strong> Andy Smillie<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Blood Angels`,
         blurb: `Blood Angels struggle to maintain their nobility amid the Heresy's brutality.`,
         blurbSafe: `The IX Legion fights to preserve their virtue in a savage war.`
@@ -1215,11 +1518,9 @@ const bookData = {
         title: 'SINS OF THE FATHER',
         author: 'Andy Smillie',
         timeline: '001.M31',
-        sortOrder: 1.4,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Blood Angels"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.12,
         details: `<strong>Author:</strong> Andy Smillie<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Blood Angels`,
         blurb: `Blood Angels bear the weight of their Primarch's curse.`,
         blurbSafe: `The IX Legion struggles with the flaw in their gene-seed.`
@@ -1229,11 +1530,9 @@ const bookData = {
         title: 'PROMETHEAN SUN',
         author: 'Nick Kyme',
         timeline: '001.M31',
-        sortOrder: 1.2,
         coverImage: 'images/born-of-flame.jpg',
         legions: ["Salamanders"],
         anthology: 'Born of Flame',
-        sortOrder: 50.1,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Novella<br><strong>From:</strong> Born of Flame<br><strong>Legion:</strong> Salamanders<br><strong>Primarch:</strong> Vulkan`,
         blurb: `Before the Heresy, Vulkan and his Salamanders face a xenos threat that tests their humanity and martial prowess.`,
         blurbSafe: `The Salamanders face a xenos menace before the galaxy descends into civil war.`
@@ -1256,16 +1555,34 @@ const bookData = {
         blurb: `The Great Crusade is at its zenith. Under the leadership of the brilliant Warmaster Horus, the Imperium's armies are unstoppable. Through Captain Garviel Loken's eyes, we witness the last days of the Imperium's golden age. But when Horus is wounded by the Anathame blade on Davin's moon, a xenos weapon laced with Chaos energies begins corrupting the Warmaster's soul. The architect of humanity's greatest triumph begins his descent into becoming its destroyer.`,
         blurbSafe: `The Great Crusade reaches its zenith under Warmaster Horus, the Emperor's most brilliant son. Captain Garviel Loken witnesses the Imperium's golden age, but when Horus is wounded by a xenos blade on Davin's moon, something begins to change in the Warmaster's soul.`
     },
+    'primarch-sanguinius': {
+        number: 'P17',
+        title: 'SANGUINIUS: THE GREAT ANGEL',
+        author: 'Chris Wraight',
+        timeline: '002-003.M31',
+        coverImage: 'images/primarch-sanguinius.jpg',
+        legions: ['Blood Angels'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Chris Wraight<br>
+            <strong>Series:</strong> Primarchs Novel Series #17<br>
+            <strong>Legion:</strong> Blood Angels<br>
+            <strong>Primarch:</strong> Sanguinius<br>
+            <strong>Main Characters:</strong> Sanguinius, Azkaellon<br>
+            <strong>Timeline:</strong> Imperium Secundus Era<br>
+            <strong>Status:</strong> The Great Angel
+        `,
+        blurb: `Sanguinius, most beloved of the Primarchs, struggles with visions of his own death and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing he will die at Horus's hands but facing that fate with nobility. Sanguinius represents what the Imperium could have been: beauty, wisdom, and martial prowess combined. His sacrifice will echo through ten thousand years.`,
+        blurbSafe: `Sanguinius struggles with visions and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing what fate may await him but facing it with nobility. Sanguinius represents what the Imperium could have been.`
+    },
     'shadows-of-treachery-kaban-project': {
         number: 'XXII.4',
         title: 'THE KABAN PROJECT',
         author: 'Graham McNeill',
         timeline: '003-004.M31',
-        sortOrder: 3,
         coverImage: 'images/shadows-of-treachery.jpg',
         legions: ["Mechanicum"],
         anthology: 'Shadows of Treachery',
-        sortOrder: 22.4,
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Type:</strong> Short Story<br>
@@ -1312,24 +1629,6 @@ const bookData = {
         blurb: `While the Heresy erupts across the galaxy, Terra writhes with its own conflicts. Renegade Space Marines from various Legions are imprisoned deep beneath the Imperial Palace. When astropath Kai Zulane receives a prophetic vision of the Heresy's outcome, he becomes the most hunted man on Terra. The Outcast Dead must fight through the underhives and face the deadly custodians to deliver a message that could change everything.`,
         blurbSafe: `Deep beneath the Imperial Palace, renegade Space Marines from various Legions are imprisoned. When astropath Kai Zulane receives a prophetic vision about the Heresy, he becomes hunted by every faction on Terra. The Outcast Dead must fight through the underhives to deliver a message that could change everything.`
     },
-    'the-master-of-mankind': {
-        number: 'XLI',
-        title: 'THE MASTER OF MANKIND',
-        author: 'Aaron Dembski-Bowden',
-        timeline: '004-014.M31',
-        coverImage: 'images/the-master-of-mankind.jpg',
-        legions: ["Custodian Guard","Sisters of Silence"],
-        details: `
-            <strong>Author:</strong> Aaron Dembski-Bowden<br>
-            <strong>Focus:</strong> The Emperor of Mankind<br>
-            <strong>Location:</strong> The Webway War<br>
-            <strong>Main Characters:</strong> The Emperor, Ra Endymion, Diocletian Coros, Zephon, Arkhan Land<br>
-            <strong>Timeline:</strong> 004-014.M31<br>
-            <strong>Status:</strong> The Emperor's Vision Dies
-        `,
-        blurb: `Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway, defending humanity's future against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path through the Webway that would free humanity from warp travel. As the Emperor battles with the Custodians and Sisters of Silence against endless daemon hordes, His dream of apotheosis for humanity crumbles. He cannot leave to face Horus, for if the Webway breach is not contained, Terra itself will fall to Chaos.`,
-        blurbSafe: `Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path that would free humanity from warp travel. As daemon hordes assault the breach, the Emperor cannot leave His post, even as Horus marches on Terra.`
-    },
     'prospero-burns': {
         number: 'XV',
         title: 'PROSPERO BURNS',
@@ -1353,11 +1652,9 @@ const bookData = {
         title: 'REBIRTH',
         author: 'Chris Wraight',
         timeline: '004-005.M31',
-        sortOrder: 4.1,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Various"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.5,
         details: `
             <strong>Author:</strong> Chris Wraight<br>
             <strong>Type:</strong> Short Story<br>
@@ -1372,11 +1669,9 @@ const bookData = {
         title: 'SERPENT',
         author: 'John French',
         timeline: '004.M31',
-        sortOrder: 4.3,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Alpha Legion"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.2,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Alpha Legion`,
         blurb: `The Alpha Legion weaves its schemes within schemes, operating in the shadows with motives known only to themselves.`,
         blurbSafe: `An Alpha Legion tale of deception and hidden agendas during the Heresy.`
@@ -1386,11 +1681,9 @@ const bookData = {
         title: 'HUNTER\'S MOON',
         author: 'Guy Haley',
         timeline: '004.M31',
-        sortOrder: 4.4,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["White Scars"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.3,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> White Scars`,
         blurb: `A White Scars hunting mission during the Heresy, showcasing the V Legion's swift and deadly warfare style.`,
         blurbSafe: `White Scars warriors conduct a hunt, demonstrating their mastery of fast-strike warfare.`
@@ -1400,11 +1693,9 @@ const bookData = {
         title: 'THIEF OF REVELATIONS',
         author: 'Graham McNeill',
         timeline: '004.M31',
-        sortOrder: 4.6,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Thousand Sons"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.12,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Thousand Sons`,
         blurb: `The Thousand Sons seek forbidden knowledge, stealing secrets that may doom or save them.`,
         blurbSafe: `Thousand Sons sorcerers pursue dangerous knowledge in their quest for understanding.`
@@ -1414,11 +1705,9 @@ const bookData = {
         title: 'SERMON OF EXODUS',
         author: 'David Annandale',
         timeline: '004.M31',
-        sortOrder: 4.7,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Word Bearers"],
         anthology: 'War Without End',
-        sortOrder: 33.1,
         details: `<strong>Author:</strong> David Annandale<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `Word Bearers preach their dark gospel during the endless war.`,
         blurbSafe: `The XVII Legion spreads their corrupted faith across the warzone.`
@@ -1428,11 +1717,9 @@ const bookData = {
         title: 'HOWL OF THE HEARTHWORLD',
         author: 'Aaron Dembski-Bowden',
         timeline: '004.M31',
-        sortOrder: 4.5,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Space Wolves"],
         anthology: 'War Without End',
-        sortOrder: 33.2,
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Space Wolves`,
         blurb: `The Space Wolves defend their homeworld against traitor forces.`,
         blurbSafe: `The VI Legion fights to protect Fenris from the Heresy's touch.`
@@ -1442,11 +1729,9 @@ const bookData = {
         title: 'THE THIRTEENTH WOLF',
         author: 'Gav Thorpe',
         timeline: '004-005.M31',
-        sortOrder: 4.2,
         coverImage: 'images/the-burden-of-loyalty.jpg',
         legions: ["Space Wolves"],
         anthology: 'The Burden of Loyalty',
-        sortOrder: 48.7,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Burden of Loyalty<br><strong>Legion:</strong> Space Wolves`,
         blurb: `A lost Space Wolf seeks his pack during the Heresy's chaos.`,
         blurbSafe: `A warrior of Fenris searches for his brothers in the galaxy's darkest hour.`
@@ -1546,11 +1831,9 @@ const bookData = {
         title: 'THE LIGHTNING TOWER',
         author: 'Dan Abnett',
         timeline: '005-006.M31',
-        sortOrder: 5.5,
         coverImage: 'images/shadows-of-treachery.jpg',
         legions: ["Imperial Palace"],
         anthology: 'Shadows of Treachery',
-        sortOrder: 22.3,
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Type:</strong> Short Story<br>
@@ -1566,11 +1849,9 @@ const bookData = {
         title: 'LORD OF THE RED SANDS',
         author: 'Aaron Dembski-Bowden',
         timeline: '005.M31',
-        sortOrder: 5.1,
         coverImage: 'images/war-without-end.jpg',
         legions: ["World Eaters"],
         anthology: 'War Without End',
-        sortOrder: 33.3,
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Main Characters:</strong> Angron`,
         blurb: `Angron's past as a gladiator slave haunts him as the World Eaters descend into madness.`,
         blurbSafe: `The Red Angel's tragic past is revealed as his Legion embraces bloodshed.`
@@ -1580,11 +1861,9 @@ const bookData = {
         title: 'VORAX',
         author: 'Matthew Farrer',
         timeline: '005-006.M31',
-        sortOrder: 5.6,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Mechanicum"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.7,
         details: `<strong>Author:</strong> Matthew Farrer<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra<br><strong>Faction:</strong> Mechanicum`,
         blurb: `Battle-automata prowl the battlefields of the Heresy.`,
         blurbSafe: `The Mechanicum's war machines hunt in the shadows.`
@@ -1594,11 +1873,9 @@ const bookData = {
         title: 'CHILD OF NIGHT',
         author: 'John French',
         timeline: '005-007.M31',
-        sortOrder: 6.01,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.2,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War<br><strong>Faction:</strong> Knights-Errant`,
         blurb: `A Knight-Errant confronts darkness born from the Heresy.`,
         blurbSafe: `Malcador's agents face the corruption spreading through the Imperium.`
@@ -1608,11 +1885,9 @@ const bookData = {
         title: 'WOLF HUNT',
         author: 'Graham McNeill',
         timeline: '005.M31',
-        sortOrder: 5.3,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Space Wolves"],
         anthology: 'The Silent War',
-        sortOrder: 37.7,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Audio Book<br><strong>From:</strong> The Silent War<br><strong>Legion:</strong> Space Wolves`,
         blurb: `Space Wolves hunt a dangerous quarry through the void.`,
         blurbSafe: `The VI Legion pursues their prey across the stars.`
@@ -1622,11 +1897,9 @@ const bookData = {
         title: 'INTO EXILE',
         author: 'Aaron Dembski-Bowden',
         timeline: '005-007.M31',
-        sortOrder: 5.4,
         coverImage: 'images/the-burden-of-loyalty.jpg',
         legions: ["Word Bearers"],
         anthology: 'The Burden of Loyalty',
-        sortOrder: 48.3,
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Burden of Loyalty<br><strong>Legion:</strong> Word Bearers`,
         blurb: `Word Bearers embrace their exile from the Emperor's light, finding new purpose in darkness.`,
         blurbSafe: `The XVII Legion accepts their damnation and finds strength in corruption.`
@@ -1636,11 +1909,9 @@ const bookData = {
         title: 'CYBERNETICA',
         author: 'Rob Sanders',
         timeline: '005.M31',
-        sortOrder: 5.2,
         coverImage: 'images/the-burden-of-loyalty.jpg',
         legions: ["Mechanicum"],
         anthology: 'The Burden of Loyalty',
-        sortOrder: 48.6,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Burden of Loyalty<br><strong>Faction:</strong> Mechanicum`,
         blurb: `Battle-automata serve their masters in the civil war, unthinking and relentless.`,
         blurbSafe: `The Mechanicum's robots fight without question or mercy.`
@@ -1686,11 +1957,9 @@ const bookData = {
         title: 'BLOOD GAMES',
         author: 'Dan Abnett',
         timeline: '006.M31',
-        sortOrder: 6.9,
         coverImage: 'images/tales-of-heresy.jpg',
         legions: ["Custodian Guard"],
         anthology: 'Tales of Heresy',
-        sortOrder: 10.1,
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Type:</strong> Short Story<br>
@@ -1706,11 +1975,9 @@ const bookData = {
         title: 'THE VOICE',
         author: 'James Swallow',
         timeline: '006.M31',
-        sortOrder: 6.91,
         coverImage: 'images/tales-of-heresy.jpg',
         legions: ["Audio"],
         anthology: 'Tales of Heresy',
-        sortOrder: 10.4,
         details: `
             <strong>Author:</strong> James Swallow<br>
             <strong>Type:</strong> Short Story<br>
@@ -1725,11 +1992,9 @@ const bookData = {
         title: 'THE FACE OF TREACHERY',
         author: 'Gav Thorpe',
         timeline: '006.M31',
-        sortOrder: 6.1,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Various"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.6,
         details: `
             <strong>Author:</strong> Gav Thorpe<br>
             <strong>Type:</strong> Short Story<br>
@@ -1744,11 +2009,9 @@ const bookData = {
         title: 'THE IRON WITHIN',
         author: 'Rob Sanders',
         timeline: '006-007.M31',
-        sortOrder: 6.7,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Iron Warriors"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.8,
         details: `
             <strong>Author:</strong> Rob Sanders<br>
             <strong>Type:</strong> Short Story<br>
@@ -1764,11 +2027,9 @@ const bookData = {
         title: 'THE REFLECTION CRACK\'D',
         author: 'Graham McNeill',
         timeline: '006.M31',
-        sortOrder: 6.92,
         coverImage: 'images/the-primarchs.jpg',
         legions: ["Emperor's Children"],
         anthology: 'The Primarchs',
-        sortOrder: 20.1,
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Type:</strong> Novella<br>
@@ -1785,11 +2046,9 @@ const bookData = {
         title: 'RAVEN\'S FLIGHT',
         author: 'Gav Thorpe',
         timeline: '006.M31',
-        sortOrder: 6.2,
         coverImage: 'images/shadows-of-treachery.jpg',
         legions: ["Raven Guard"],
         anthology: 'Shadows of Treachery',
-        sortOrder: 22.5,
         details: `
             <strong>Author:</strong> Gav Thorpe<br>
             <strong>Type:</strong> Short Story<br>
@@ -1806,11 +2065,9 @@ const bookData = {
         title: 'THE SHARDS OF EREBUS',
         author: 'Guy Haley',
         timeline: '006-007.M31',
-        sortOrder: 6.8,
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Ultramarines", "Word Bearers"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.1,
         details: `
             <strong>Author:</strong> Guy Haley<br>
             <strong>Type:</strong> Short Story<br>
@@ -1826,11 +2083,9 @@ const bookData = {
         title: 'VERITAS FERRUM',
         author: 'David Annandale',
         timeline: '006.M31',
-        sortOrder: 6.93,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Iron Hands"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.4,
         details: `<strong>Author:</strong> David Annandale<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Iron Hands`,
         blurb: `The Iron Hands' philosophy of flesh's weakness is tested in the aftermath of their Primarch's death.`,
         blurbSafe: `Iron Hands warriors grapple with their Legion's doctrine after losing their Primarch at Isstvan.`
@@ -1840,11 +2095,9 @@ const bookData = {
         title: 'STRIKE AND FADE',
         author: 'Guy Haley',
         timeline: '006.M31',
-        sortOrder: 6.94,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Raven Guard"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.6,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Raven Guard`,
         blurb: `Raven Guard survivors employ hit-and-run tactics against superior traitor forces.`,
         blurbSafe: `Shattered Raven Guard warriors use guerrilla warfare tactics in their fight against the traitors.`
@@ -1854,11 +2107,9 @@ const bookData = {
         title: 'ARTEFACTS',
         author: 'Nick Kyme',
         timeline: '006.M31',
-        sortOrder: 6.95,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Salamanders"],
         anthology: 'War Without End',
-        sortOrder: 33.8,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Salamanders`,
         blurb: `Salamanders recover precious relics from the war's devastation.`,
         blurbSafe: `The XVIII Legion seeks to preserve artifacts from destruction.`
@@ -1868,11 +2119,9 @@ const bookData = {
         title: 'CHIRURGEON',
         author: 'Nick Kyme',
         timeline: '006.M31',
-        sortOrder: 7.01,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Emperor's Children"],
         anthology: 'War Without End',
-        sortOrder: 33.11,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Main Characters:</strong> Fabius Bile`,
         blurb: `Fabius Bile conducts his dark experiments on the fallen.`,
         blurbSafe: `The Clonelord's twisted surgeries continue unabated.`
@@ -1882,11 +2131,9 @@ const bookData = {
         title: 'AURELIAN',
         author: 'Aaron Dembski-Bowden',
         timeline: '006.M31',
-        sortOrder: 6.5,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Word Bearers"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.2,
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Novella<br><strong>From:</strong> Eye of Terra<br><strong>Primarch:</strong> Lorgar<br><strong>Main Characters:</strong> Lorgar Aurelian`,
         blurb: `Lorgar's pilgrimage into the Eye of Terror and his transformation into a servant of Chaos. The Urizen seeks the truth about the gods and his place in their grand design.`,
         blurbSafe: `Lorgar journeys into the Eye of Terror, seeking truth about the gods and his destiny.`
@@ -1896,11 +2143,9 @@ const bookData = {
         title: 'MASSACRE',
         author: 'Aaron Dembski-Bowden',
         timeline: '006.M31',
-        sortOrder: 6.3,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Various"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.4,
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra`,
         blurb: `The brutal reality of the Heresy's massacres.`,
         blurbSafe: `A tale of slaughter and betrayal during the civil war.`
@@ -1910,11 +2155,9 @@ const bookData = {
         title: 'THE FINAL COMPLIANCE OF SIXTY-THREE FOURTEEN',
         author: 'Guy Haley',
         timeline: '006.M31',
-        sortOrder: 7.02,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Various"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.16,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra`,
         blurb: `The last compliance action of the Great Crusade before betrayal.`,
         blurbSafe: `A world is brought to compliance as the age of unity ends.`
@@ -1924,11 +2167,9 @@ const bookData = {
         title: 'WEREGELD',
         author: 'Gav Thorpe',
         timeline: '006-007.M31',
-        sortOrder: 6.96,
         coverImage: 'images/corax.jpg',
         legions: ["Raven Guard"],
         anthology: 'Corax',
-        sortOrder: 40.1,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Novella<br><strong>From:</strong> Corax Anthology<br><strong>Legion:</strong> Raven Guard<br><strong>Primarch:</strong> Corvus Corax`,
         blurb: `Corax demands weregeld (blood-price) from the traitors for the slaughter at Isstvan. The Ravenlord's quest for vengeance begins.`,
         blurbSafe: `Corvus Corax seeks blood-price for his fallen sons after the Dropsite Massacre.`
@@ -1938,11 +2179,9 @@ const bookData = {
         title: 'IMMORTAL DUTY',
         author: 'Nick Kyme',
         timeline: '006.M31',
-        sortOrder: 6.97,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Salamanders"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.3,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Salamanders`,
         blurb: `Salamanders survivors honor their duty to protect humanity despite their Legion's shattering.`,
         blurbSafe: `The XVIII Legion maintains their humanitarian values even in defeat.`
@@ -1952,11 +2191,9 @@ const bookData = {
         title: 'THE BINARY SUCCESSION',
         author: 'David Annandale',
         timeline: '006.M31',
-        sortOrder: 7.03,
         coverImage: 'images/the-burden-of-loyalty.jpg',
         legions: ["Mechanicum"],
         anthology: 'The Burden of Loyalty',
-        sortOrder: 48.2,
         details: `<strong>Author:</strong> David Annandale<br><strong>Type:</strong> Novella<br><strong>From:</strong> The Burden of Loyalty<br><strong>Faction:</strong> Mechanicum`,
         blurb: `The Mechanicum's succession of power becomes a battleground during Mars's schism.`,
         blurbSafe: `Political intrigue on Mars mirrors the galaxy's larger civil war.`
@@ -1966,11 +2203,9 @@ const bookData = {
         title: 'SCORCHED EARTH',
         author: 'Nick Kyme',
         timeline: '006.M31',
-        sortOrder: 6.6,
         coverImage: 'images/born-of-flame.jpg',
         legions: ["Salamanders"],
         anthology: 'Born of Flame',
-        sortOrder: 50.2,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Novella<br><strong>From:</strong> Born of Flame<br><strong>Legion:</strong> Salamanders`,
         blurb: `After Isstvan V, Salamanders survivors wage war across scorched worlds, searching for their lost Primarch.`,
         blurbSafe: `The XVIII Legion fights through devastation, seeking Vulkan amid the ruins.`
@@ -1980,11 +2215,9 @@ const bookData = {
         title: 'SONS OF THE FORGE',
         author: 'Nick Kyme',
         timeline: '006.M31',
-        sortOrder: 6.98,
         coverImage: 'images/born-of-flame.jpg',
         legions: ["Salamanders"],
         anthology: 'Born of Flame',
-        sortOrder: 50.3,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Novella<br><strong>From:</strong> Born of Flame<br><strong>Legion:</strong> Salamanders<br><strong>Main Characters:</strong> Numeon`,
         blurb: `Numeon leads the quest to recover Vulkan's body, the Salamanders refusing to believe their Primarch can truly die.`,
         blurbSafe: `The Pyre Guard undertake a desperate mission to recover their fallen Primarch.`
@@ -1994,11 +2227,9 @@ const bookData = {
         title: 'ARTEFACTS',
         author: 'Nick Kyme',
         timeline: '006.M31',
-        sortOrder: 6.95,
         coverImage: 'images/born-of-flame.jpg',
         legions: ["Salamanders"],
         anthology: 'Born of Flame',
-        sortOrder: 50.4,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Born of Flame<br><strong>Legion:</strong> Salamanders`,
         blurb: `Salamanders recover precious relics from the war's devastation.`,
         blurbSafe: `The XVIII Legion seeks to preserve artifacts from destruction.`
@@ -2008,14 +2239,24 @@ const bookData = {
         title: 'IMMORTAL DUTY',
         author: 'Nick Kyme',
         timeline: '006.M31',
-        sortOrder: 6.97,
         coverImage: 'images/born-of-flame.jpg',
         legions: ["Salamanders"],
         anthology: 'Born of Flame',
-        sortOrder: 50.5,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Born of Flame<br><strong>Legion:</strong> Salamanders`,
         blurb: `Salamanders survivors honor their duty to protect humanity despite their Legion's shattering.`,
         blurbSafe: `The XVIII Legion maintains their humanitarian values even in defeat.`
+    },
+    'war-phoenician': {
+        number: 'XXXIII.9',
+        title: 'THE PHOENICIAN',
+        author: 'Nick Kyme',
+        timeline: '006.M31',
+        coverImage: 'images/war-without-end.jpg',
+        legions: ["Emperor's Children"],
+        anthology: 'War Without End',
+        details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Primarch:</strong> Fulgrim`,
+        blurb: `Fulgrim's corruption reaches new depths of depravity.`,
+        blurbSafe: `The Phoenician's fall into darkness continues.`
     },
     'deliverance-lost': {
         number: 'XVIII',
@@ -2182,11 +2423,9 @@ const bookData = {
         title: 'SAVAGE WEAPONS',
         author: 'Aaron Dembski-Bowden',
         timeline: '007-009.M31',
-        sortOrder: 7.08,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Dark Angels", "Night Lords"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.9,
         details: `
             <strong>Author:</strong> Aaron Dembski-Bowden<br>
             <strong>Type:</strong> Short Story<br>
@@ -2203,11 +2442,9 @@ const bookData = {
         title: 'THE LION',
         author: 'Gav Thorpe',
         timeline: '007-009.M31',
-        sortOrder: 7.09,
         coverImage: 'images/the-primarchs.jpg',
         legions: ["Dark Angels"],
         anthology: 'The Primarchs',
-        sortOrder: 20.3,
         details: `
             <strong>Author:</strong> Gav Thorpe<br>
             <strong>Type:</strong> Novella<br>
@@ -2225,11 +2462,9 @@ const bookData = {
         title: 'THE SERPENT BENEATH',
         author: 'Rob Sanders',
         timeline: '007.M31',
-        sortOrder: 7.10,
         coverImage: 'images/the-primarchs.jpg',
         legions: ["Alpha Legion"],
         anthology: 'The Primarchs',
-        sortOrder: 20.4,
         details: `
             <strong>Author:</strong> Rob Sanders<br>
             <strong>Type:</strong> Novella<br>
@@ -2246,11 +2481,9 @@ const bookData = {
         title: 'THE CRIMSON FIST',
         author: 'John French',
         timeline: '007.M31',
-        sortOrder: 7.01,
         coverImage: 'images/shadows-of-treachery.jpg',
         legions: ["Imperial Fists"],
         anthology: 'Shadows of Treachery',
-        sortOrder: 22.1,
         details: `
             <strong>Author:</strong> John French<br>
             <strong>Type:</strong> Novella<br>
@@ -2267,11 +2500,9 @@ const bookData = {
         title: 'CALTH THAT WAS',
         author: 'Graham McNeill',
         timeline: '007.M31',
-        sortOrder: 7.02,
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Ultramarines"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.2,
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Type:</strong> Short Story<br>
@@ -2288,11 +2519,9 @@ const bookData = {
         title: 'DARK HEART',
         author: 'Anthony Reynolds',
         timeline: '007.M31',
-        sortOrder: 7.03,
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Word Bearers"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.3,
         details: `
             <strong>Author:</strong> Anthony Reynolds<br>
             <strong>Type:</strong> Short Story<br>
@@ -2309,11 +2538,9 @@ const bookData = {
         title: 'THE TRAVELLER',
         author: 'David Annandale',
         timeline: '007.M31',
-        sortOrder: 7.04,
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Ultramarines"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.4,
         details: `
             <strong>Author:</strong> David Annandale<br>
             <strong>Type:</strong> Short Story<br>
@@ -2329,11 +2556,9 @@ const bookData = {
         title: 'A DEEPER DARKNESS',
         author: 'Rob Sanders',
         timeline: '007-008.M31',
-        sortOrder: 7.07,
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Ultramarines", "Word Bearers"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.5,
         details: `
             <strong>Author:</strong> Rob Sanders<br>
             <strong>Type:</strong> Short Story<br>
@@ -2352,7 +2577,6 @@ const bookData = {
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Ultramarines", "Word Bearers"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.6,
         details: `
             <strong>Author:</strong> Aaron Dembski-Bowden<br>
             <strong>Type:</strong> Short Story<br>
@@ -2368,11 +2592,9 @@ const bookData = {
         title: 'UNMARKED',
         author: 'Dan Abnett',
         timeline: '007.M31',
-        sortOrder: 7.27,
         coverImage: 'images/mark-of-calth.jpg',
         legions: ["Perpetuals"],
         anthology: 'Mark of Calth',
-        sortOrder: 25.8,
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Type:</strong> Short Story<br>
@@ -2388,11 +2610,9 @@ const bookData = {
         title: 'BROTHERHOOD OF THE STORM',
         author: 'Chris Wraight',
         timeline: '007.M31',
-        sortOrder: 7.17,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["White Scars"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.1,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Novella<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> White Scars<br><strong>Timeline:</strong> During the Heresy`,
         blurb: `The White Scars must choose their allegiance as the Heresy divides the galaxy. The V Legion's isolation has kept them from the conflict, but now they must decide whether to follow Horus or remain loyal to the Emperor.`,
         blurbSafe: `The White Scars face a critical choice as news of the Heresy reaches them, forcing the V Legion to decide their allegiance in the civil war.`
@@ -2402,11 +2622,9 @@ const bookData = {
         title: 'HONOUR TO THE DEAD',
         author: 'Gav Thorpe',
         timeline: '007.M31',
-        sortOrder: 7.18,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Ultramarines"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.7,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Ultramarines`,
         blurb: `Ultramarines honor their fallen brothers while seeking vengeance for betrayal.`,
         blurbSafe: `Ultramarines pay tribute to their dead while pursuing justice for the Word Bearers' treachery.`
@@ -2416,11 +2634,9 @@ const bookData = {
         title: 'BUTCHER\'S NAILS',
         author: 'Aaron Dembski-Bowden',
         timeline: '007-008.M31',
-        sortOrder: 7.28,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["World Eaters"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.8,
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> World Eaters<br><strong>Main Characters:</strong> Angron, Lorgar`,
         blurb: `The tragic bond between Angron and Lorgar, as the Word Bearers Primarch tries to understand the World Eaters' cursed existence with the Butcher's Nails.`,
         blurbSafe: `Lorgar attempts to understand Angron's suffering and the curse of the Butcher's Nails that drives the World Eaters.`
@@ -2430,11 +2646,9 @@ const bookData = {
         title: 'KRYPTOS',
         author: 'Graham McNeill',
         timeline: '007.M31',
-        sortOrder: 7.19,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Mechanicum"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.10,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Faction:</strong> Mechanicum`,
         blurb: `Secrets and forbidden knowledge on Mars during the Mechanicum's civil war.`,
         blurbSafe: `A tale of hidden knowledge and dangerous secrets during Mars's schism.`
@@ -2444,11 +2658,9 @@ const bookData = {
         title: 'WOLF\'S CLAW',
         author: 'Chris Wraight',
         timeline: '007.M31',
-        sortOrder: 7.29,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Space Wolves"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.11,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Space Wolves`,
         blurb: `Space Wolves unleash their savage fury in the Emperor's name during the Heresy.`,
         blurbSafe: `The VI Legion demonstrates their ferocity as they fight for the Emperor against the traitors.`
@@ -2458,11 +2670,9 @@ const bookData = {
         title: 'ALLEGIANCE',
         author: 'Chris Wraight',
         timeline: '007-009.M31',
-        sortOrder: 7.30,
         coverImage: 'images/war-without-end.jpg',
         legions: ["White Scars"],
         anthology: 'War Without End',
-        sortOrder: 33.20,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> White Scars`,
         blurb: `White Scars warriors declare their loyalty in the galaxy's hour of betrayal.`,
         blurbSafe: `The V Legion chooses their side in the civil war.`
@@ -2472,11 +2682,9 @@ const bookData = {
         title: 'DAEMONOLOGY',
         author: 'Chris Wraight',
         timeline: '007.M31',
-        sortOrder: 7.05,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Thousand Sons"],
         anthology: 'War Without End',
-        sortOrder: 33.21,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Thousand Sons`,
         blurb: `The study of daemons leads the Thousand Sons deeper into damnation.`,
         blurbSafe: `Forbidden knowledge of the warp consumes those who seek it.`
@@ -2486,11 +2694,9 @@ const bookData = {
         title: 'BROTHERHOOD OF THE MOON',
         author: 'Chris Wraight',
         timeline: '007.M31',
-        sortOrder: 7.06,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["White Scars"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.5,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> White Scars`,
         blurb: `White Scars brotherhood is tested by the Heresy's divisions.`,
         blurbSafe: `The bonds of the V Legion face strain during the civil war.`
@@ -2500,11 +2706,9 @@ const bookData = {
         title: 'INHERITOR',
         author: 'Gav Thorpe',
         timeline: '007-008.M31',
-        sortOrder: 7.13,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Dark Angels"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.6,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Dark Angels`,
         blurb: `A Dark Angels warrior inherits a burden during the Heresy.`,
         blurbSafe: `The I Legion's secrets weigh heavily on those who bear them.`
@@ -2514,11 +2718,9 @@ const bookData = {
         title: 'RED-MARKED',
         author: 'Nick Kyme',
         timeline: '007.M31',
-        sortOrder: 7.16,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Various"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.9,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra`,
         blurb: `Warriors marked for death fight on despite their fate.`,
         blurbSafe: `Those condemned continue their struggle against destiny.`
@@ -2528,11 +2730,9 @@ const bookData = {
         title: 'MASTER OF THE FIRST',
         author: 'Gav Thorpe',
         timeline: '007-009.M31',
-        sortOrder: 8.20,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Dark Angels"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.10,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Dark Angels`,
         blurb: `The Master of the Deathwing faces the Heresy's challenges.`,
         blurbSafe: `Dark Angels' elite confront betrayal and duty.`
@@ -2542,11 +2742,9 @@ const bookData = {
         title: 'THE WATCHER',
         author: 'CZ Dunn',
         timeline: '007-009.M31',
-        sortOrder: 8.21,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Dark Angels"],
         anthology: 'The Silent War',
-        sortOrder: 37.1,
         details: `<strong>Author:</strong> CZ Dunn<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> The Silent War<br><strong>Legion:</strong> Dark Angels`,
         blurb: `The mysterious Watchers in the Dark observe the Heresy unfold.`,
         blurbSafe: `Ancient guardians witness the galaxy's civil war.`
@@ -2556,11 +2754,9 @@ const bookData = {
         title: 'GREY ANGEL',
         author: 'John French',
         timeline: '007-008.M31',
-        sortOrder: 7.14,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.3,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Audio Book<br><strong>From:</strong> The Silent War<br><strong>Main Characters:</strong> Loken`,
         blurb: `Garviel Loken operates as a Knight-Errant, hunting traitors in the shadows.`,
         blurbSafe: `The former Luna Wolf serves Malcador in secret operations.`
@@ -2570,11 +2766,9 @@ const bookData = {
         title: 'LUNA MENDAX',
         author: 'Graham McNeill',
         timeline: '007-008.M31',
-        sortOrder: 7.15,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Various"],
         anthology: 'The Silent War',
-        sortOrder: 37.6,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War`,
         blurb: `Deception and lies spread across Luna during the Heresy.`,
         blurbSafe: `Terra's moon becomes a battleground of secrets and treachery.`
@@ -2584,11 +2778,9 @@ const bookData = {
         title: 'THE PURGE',
         author: 'Anthony Reynolds',
         timeline: '007-008.M31',
-        sortOrder: 7.12,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Death Guard"],
         anthology: 'The Silent War',
-        sortOrder: 37.8,
         details: `<strong>Author:</strong> Anthony Reynolds<br><strong>Type:</strong> Novella<br><strong>From:</strong> The Silent War<br><strong>Legion:</strong> Death Guard`,
         blurb: `The Death Guard's corruption accelerates as they embrace Nurgle's gifts.`,
         blurbSafe: `The XIV Legion's transformation into plague-bearers continues.`
@@ -2598,11 +2790,9 @@ const bookData = {
         title: 'GHOSTS SPEAK NOT',
         author: 'James Swallow',
         timeline: '007-009.M31',
-        sortOrder: 8.22,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.11,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Garro encounters the silent dead during his missions for Malcador.`,
         blurbSafe: `The Knight-Errant faces ghosts of the past and future.`
@@ -2612,11 +2802,9 @@ const bookData = {
         title: 'SOULFORGE',
         author: 'Gav Thorpe',
         timeline: '007.M31',
-        sortOrder: 7.20,
         coverImage: 'images/corax.jpg',
         legions: ["Raven Guard"],
         anthology: 'Corax',
-        sortOrder: 40.2,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Novella<br><strong>From:</strong> Corax Anthology<br><strong>Legion:</strong> Raven Guard<br><strong>Primarch:</strong> Corvus Corax`,
         blurb: `Corax obtains gene-tech from Terra to rebuild his shattered Legion, forging new warriors to replace the fallen.`,
         blurbSafe: `The Ravenlord attempts to restore his Legion using forbidden gene-technology.`
@@ -2626,11 +2814,9 @@ const bookData = {
         title: 'RAVENLORD',
         author: 'Gav Thorpe',
         timeline: '007-008.M31',
-        sortOrder: 7.21,
         coverImage: 'images/corax.jpg',
         legions: ["Raven Guard"],
         anthology: 'Corax',
-        sortOrder: 40.3,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Novella<br><strong>From:</strong> Corax Anthology<br><strong>Legion:</strong> Raven Guard<br><strong>Primarch:</strong> Corvus Corax`,
         blurb: `The horrific failure of Corax's gene-seed experiments creates monsters. The Ravenlord must destroy his own creations and face his failure.`,
         blurbSafe: `Corax confronts the terrible consequences of his attempts to rebuild the Raven Guard.`
@@ -2640,11 +2826,9 @@ const bookData = {
         title: 'THE SHADOWMASTERS',
         author: 'Gav Thorpe',
         timeline: '007-008.M31',
-        sortOrder: 7.22,
         coverImage: 'images/corax.jpg',
         legions: ["Raven Guard"],
         anthology: 'Corax',
-        sortOrder: 40.4,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Corax Anthology<br><strong>Legion:</strong> Raven Guard`,
         blurb: `The Raven Guard's masters of stealth and shadow warfare strike at the traitors.`,
         blurbSafe: `Elite Raven Guard warriors employ guerrilla tactics against superior forces.`
@@ -2654,11 +2838,9 @@ const bookData = {
         title: 'GARRO: OATH OF MOMENT',
         author: 'James Swallow',
         timeline: '007.M31',
-        sortOrder: 7.23,
         coverImage: 'images/garro.jpg',
         legions: ["Knights-Errant"],
         anthology: 'Garro',
-        sortOrder: 42.1,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Garro<br><strong>Main Characters:</strong> Nathaniel Garro, Malcador`,
         blurb: `Garro swears his oath to Malcador and begins his service as the first Knight-Errant.`,
         blurbSafe: `Nathaniel Garro pledges his loyalty to Malcador and becomes a Knight-Errant.`
@@ -2668,11 +2850,9 @@ const bookData = {
         title: 'GARRO: SWORD OF TRUTH',
         author: 'James Swallow',
         timeline: '007-008.M31',
-        sortOrder: 7.24,
         coverImage: 'images/garro.jpg',
         legions: ["Knights-Errant"],
         anthology: 'Garro',
-        sortOrder: 42.2,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Garro<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Garro seeks truth amid lies as he hunts for loyalists among the traitor Legions.`,
         blurbSafe: `The Knight-Errant searches for loyal warriors trapped in fallen Legions.`
@@ -2682,11 +2862,9 @@ const bookData = {
         title: 'UNFORGED',
         author: 'Guy Haley',
         timeline: '007.M31',
-        sortOrder: 7.25,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Iron Hands"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.2,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Iron Hands`,
         blurb: `Iron Hands struggle with their identity after losing their Primarch and much of their Legion.`,
         blurbSafe: `Survivors of the X Legion grapple with who they are without Ferrus Manus.`
@@ -2696,11 +2874,9 @@ const bookData = {
         title: 'GREY TALON',
         author: 'Chris Wraight',
         timeline: '007.M31',
-        sortOrder: 7.26,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Raven Guard"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.4,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Raven Guard`,
         blurb: `Raven Guard survivors strike from the shadows, their talons still sharp despite their losses.`,
         blurbSafe: `The XIX Legion's remnants prove they remain deadly even shattered.`
@@ -2710,11 +2886,9 @@ const bookData = {
         title: 'PERPETUAL',
         author: 'Dan Abnett',
         timeline: '007.M31',
-        sortOrder: 7.31,
         coverImage: 'images/the-burden-of-loyalty.jpg',
         legions: ["Perpetuals"],
         anthology: 'The Burden of Loyalty',
-        sortOrder: 48.1,
         details: `<strong>Author:</strong> Dan Abnett<br><strong>Type:</strong> Novella<br><strong>From:</strong> The Burden of Loyalty<br><strong>Main Characters:</strong> Oll Persson, John Grammaticus`,
         blurb: `The Perpetuals Oll Persson and John Grammaticus navigate the Heresy, their immortality granting perspective on humanity's civil war.`,
         blurbSafe: `Immortal beings watch humanity tear itself apart, their ancient wisdom unable to prevent the tragedy.`
@@ -2724,14 +2898,24 @@ const bookData = {
         title: 'ORDO SINISTER',
         author: 'John French',
         timeline: '007.M31',
-        sortOrder: 7.11,
         coverImage: 'images/the-burden-of-loyalty.jpg',
         legions: ["Collegia Titanica"],
         anthology: 'The Burden of Loyalty',
-        sortOrder: 48.4,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Burden of Loyalty<br><strong>Faction:</strong> Ordo Sinister`,
         blurb: `The sinister Psi-Titans of the Ordo Sinister emerge to defend Terra.`,
         blurbSafe: `The Emperor's most terrible weapons awaken for the coming siege.`
+    },
+    'burden-wolf-king': {
+        number: 'XLVIII.8',
+        title: 'THE WOLF KING',
+        author: 'Chris Wraight',
+        timeline: '007.M31',
+        coverImage: 'images/the-burden-of-loyalty.jpg',
+        legions: ["Space Wolves"],
+        anthology: 'The Burden of Loyalty',
+        details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Burden of Loyalty<br><strong>Legion:</strong> Space Wolves<br><strong>Primarch:</strong> Leman Russ`,
+        blurb: `Leman Russ leads his Wolves through the Heresy, the Wolf King's fury undiminished.`,
+        blurbSafe: `The Primarch of the VI Legion commands his sons in the war for humanity's soul.`
     },
     'vengeful-spirit': {
         number: 'XXIX',
@@ -2756,11 +2940,9 @@ const bookData = {
         title: 'RULES OF ENGAGEMENT',
         author: 'Graham McNeill',
         timeline: '008.M31',
-        sortOrder: 8.02,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Ultramarines"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.1,
         details: `
             <strong>Author:</strong> Graham McNeill<br>
             <strong>Type:</strong> Short Story<br>
@@ -2776,11 +2958,9 @@ const bookData = {
         title: 'LIAR\'S DUE',
         author: 'James Swallow',
         timeline: '008.M31',
-        sortOrder: 8.03,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Various"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.2,
         details: `
             <strong>Author:</strong> James Swallow<br>
             <strong>Type:</strong> Short Story<br>
@@ -2795,11 +2975,9 @@ const bookData = {
         title: 'FORGOTTEN SONS',
         author: 'Nick Kyme',
         timeline: '008.M31',
-        sortOrder: 8.04,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Salamanders"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.3,
         details: `
             <strong>Author:</strong> Nick Kyme<br>
             <strong>Type:</strong> Short Story<br>
@@ -2815,11 +2993,9 @@ const bookData = {
         title: 'LITTLE HORUS',
         author: 'Dan Abnett',
         timeline: '008.M31',
-        sortOrder: 8.01,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Sons of Horus"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.7,
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Type:</strong> Short Story<br>
@@ -2836,11 +3012,9 @@ const bookData = {
         title: 'WARMASTER',
         author: 'John French',
         timeline: '008.M31',
-        sortOrder: 8.13,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Sons of Horus"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.9,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Sons of Horus`,
         blurb: `A glimpse into Horus's command and the weight of leading the rebellion against the Emperor.`,
         blurbSafe: `An exploration of Horus's role as Warmaster and the burden of leading the rebellion.`
@@ -2850,11 +3024,9 @@ const bookData = {
         title: 'THE DIVINE WORD',
         author: 'Gav Thorpe',
         timeline: '008.M31',
-        sortOrder: 8.14,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Word Bearers"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.13,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Word Bearers`,
         blurb: `Word Bearers spread their dark faith across the galaxy, converting or destroying all who resist.`,
         blurbSafe: `The XVII Legion preaches their corrupted faith, forcing conversion or death upon those they encounter.`
@@ -2864,11 +3036,9 @@ const bookData = {
         title: 'KHÂRN: THE EIGHTFOLD PATH',
         author: 'Anthony Reynolds',
         timeline: '008.M31',
-        sortOrder: 8.15,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["World Eaters"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.15,
         details: `<strong>Author:</strong> Anthony Reynolds<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Main Characters:</strong> Khârn`,
         blurb: `Khârn walks the path to damnation, his descent into bloodlust accelerating as the Heresy rages.`,
         blurbSafe: `Khârn's transformation continues as he descends further into violence and rage.`
@@ -2878,11 +3048,9 @@ const bookData = {
         title: 'CYPHER: GUARDIAN OF ORDER',
         author: 'Gav Thorpe',
         timeline: '008.M31',
-        sortOrder: 8.16,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Dark Angels"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.16,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Main Characters:</strong> Cypher`,
         blurb: `The mysterious warrior who would become Cypher serves the Dark Angels during the Heresy.`,
         blurbSafe: `A Dark Angels warrior serves his Legion during the Heresy, on a path that will lead to legend and mystery.`
@@ -2892,11 +3060,9 @@ const bookData = {
         title: 'HEART OF THE CONQUEROR',
         author: 'Aaron Dembski-Bowden',
         timeline: '008.M31',
-        sortOrder: 8.17,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["World Eaters"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.17,
         details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> World Eaters`,
         blurb: `Aboard the Conqueror, the World Eaters' flagship, the Legion's descent into madness accelerates.`,
         blurbSafe: `Life aboard the World Eaters' flagship reveals the XII Legion's transformation into mindless berserkers.`
@@ -2906,11 +3072,9 @@ const bookData = {
         title: 'GUNSIGHT',
         author: 'James Swallow',
         timeline: '008.M31',
-        sortOrder: 8.18,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Various"],
         anthology: 'War Without End',
-        sortOrder: 33.18,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `A sniper's perspective on the endless war.`,
         blurbSafe: `Through a warrior's gunsight, the war stretches to infinity.`
@@ -2920,11 +3084,9 @@ const bookData = {
         title: 'IRONFIRE',
         author: 'Rob Sanders',
         timeline: '008.M31',
-        sortOrder: 8.19,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Iron Hands"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.8,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Iron Hands`,
         blurb: `Iron Hands warriors unleash their fury after Ferrus's death.`,
         blurbSafe: `The X Legion's rage burns hot in vengeance for their Primarch.`
@@ -2934,11 +3096,9 @@ const bookData = {
         title: 'THE VALUE OF FEAR',
         author: 'Gav Thorpe',
         timeline: '008.M31',
-        sortOrder: 8.06,
         coverImage: 'images/corax.jpg',
         legions: ["Raven Guard"],
         anthology: 'Corax',
-        sortOrder: 40.5,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Corax Anthology<br><strong>Legion:</strong> Raven Guard`,
         blurb: `The Raven Guard learn that fear is a weapon as potent as any blade.`,
         blurbSafe: `The XIX Legion discovers the tactical value of terror and psychological warfare.`
@@ -2948,11 +3108,9 @@ const bookData = {
         title: 'RAPTOR',
         author: 'Gav Thorpe',
         timeline: '008.M31',
-        sortOrder: 8.07,
         coverImage: 'images/corax.jpg',
         legions: ["Raven Guard"],
         anthology: 'Corax',
-        sortOrder: 40.6,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Corax Anthology<br><strong>Legion:</strong> Raven Guard`,
         blurb: `The Raptors, Corax's gene-forged creations, prove their worth before their tragic transformation into monsters.`,
         blurbSafe: `Corax's enhanced warriors fight for the Legion before disaster strikes.`
@@ -2962,11 +3120,9 @@ const bookData = {
         title: 'GARRO: LEGION OF ONE',
         author: 'James Swallow',
         timeline: '008.M31',
-        sortOrder: 8.08,
         coverImage: 'images/garro.jpg',
         legions: ["Knights-Errant"],
         anthology: 'Garro',
-        sortOrder: 42.3,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Garro<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Alone against impossible odds, Garro proves one loyal warrior can make a difference.`,
         blurbSafe: `Garro undertakes a solo mission that tests his resolve and skills.`
@@ -2976,11 +3132,9 @@ const bookData = {
         title: 'GARRO: SHIELD OF LIES',
         author: 'James Swallow',
         timeline: '008-009.M31',
-        sortOrder: 8.09,
         coverImage: 'images/garro.jpg',
         legions: ["Knights-Errant"],
         anthology: 'Garro',
-        sortOrder: 42.4,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Garro<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Deception becomes a shield as Garro navigates the Heresy's web of lies.`,
         blurbSafe: `The Knight-Errant uses deception as a weapon against the traitors.`
@@ -2990,11 +3144,9 @@ const bookData = {
         title: 'MEDUSON',
         author: 'Dan Abnett',
         timeline: '008-011.M31',
-        sortOrder: 8.10,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Iron Hands"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.1,
         details: `<strong>Author:</strong> Dan Abnett<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Iron Hands<br><strong>Main Characters:</strong> Shadrak Meduson`,
         blurb: `Shadrak Meduson leads Iron Hands survivors in brutal strikes against the traitors, becoming a legend among the shattered Legions.`,
         blurbSafe: `An Iron Hands warrior leads survivors in guerrilla warfare, striking fear into the traitors.`
@@ -3004,11 +3156,9 @@ const bookData = {
         title: 'THE KEYS OF HEL',
         author: 'John French',
         timeline: '008.M31',
-        sortOrder: 8.11,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Iron Hands","Salamanders","Raven Guard"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.5,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions`,
         blurb: `The shattered Legions seek the Keys of Hel, a weapon that could turn the tide of war.`,
         blurbSafe: `Survivors from three Legions unite to secure a powerful weapon.`
@@ -3018,11 +3168,9 @@ const bookData = {
         title: 'DEEDS ENDURE',
         author: 'Gav Thorpe',
         timeline: '008.M31',
-        sortOrder: 8.12,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Raven Guard"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.7,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Raven Guard`,
         blurb: `Raven Guard deeds endure beyond death as survivors carry on their fallen brothers' missions.`,
         blurbSafe: `The XIX Legion honors their dead by continuing the fight.`
@@ -3068,11 +3216,9 @@ const bookData = {
         title: 'THE LAST REMEMBRANCER',
         author: 'John French',
         timeline: '009.M31',
-        sortOrder: 9.03,
         coverImage: 'images/age-of-darkness.jpg',
         legions: ["Remembrancers"],
         anthology: 'Age of Darkness',
-        sortOrder: 16.4,
         details: `
             <strong>Author:</strong> John French<br>
             <strong>Type:</strong> Short Story<br>
@@ -3087,11 +3233,9 @@ const bookData = {
         title: 'PRINCE OF CROWS',
         author: 'Aaron Dembski-Bowden',
         timeline: '009.M31',
-        sortOrder: 9.01,
         coverImage: 'images/shadows-of-treachery.jpg',
         legions: ["Night Lords"],
         anthology: 'Shadows of Treachery',
-        sortOrder: 22.7,
         details: `
             <strong>Author:</strong> Aaron Dembski-Bowden<br>
             <strong>Type:</strong> Novella<br>
@@ -3108,11 +3252,9 @@ const bookData = {
         title: 'LUCIUS: THE ETERNAL BLADEMASTER',
         author: 'Graham McNeill',
         timeline: '009.M31',
-        sortOrder: 9.10,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Emperor's Children"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.14,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Main Characters:</strong> Lucius`,
         blurb: `Lucius pursues perfection in swordsmanship, his pride and skill marking him for damnation.`,
         blurbSafe: `The master swordsman Lucius seeks perfection in combat, driven by pride and the pursuit of supremacy.`
@@ -3122,11 +3264,9 @@ const bookData = {
         title: 'CENSURE',
         author: 'Nick Kyme',
         timeline: '009.M31',
-        sortOrder: 9.04,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Salamanders"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.18,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Legion:</strong> Salamanders`,
         blurb: `Salamanders face judgment and condemnation as the Heresy forces hard choices upon them.`,
         blurbSafe: `Salamanders warriors confront difficult decisions and consequences during the civil war.`
@@ -3136,11 +3276,9 @@ const bookData = {
         title: 'THE LAUREL OF DEFIANCE',
         author: 'Guy Haley',
         timeline: '009.M31',
-        sortOrder: 9.07,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Various"],
         anthology: 'War Without End',
-        sortOrder: 33.5,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `Loyalists stand defiant against overwhelming odds.`,
         blurbSafe: `Warriors refuse to yield despite impossible circumstances.`
@@ -3150,11 +3288,9 @@ const bookData = {
         title: 'A SAFE AND SHADOWED PLACE',
         author: 'Guy Haley',
         timeline: '009.M31',
-        sortOrder: 9.08,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Various"],
         anthology: 'War Without End',
-        sortOrder: 33.6,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `No place remains safe as the Heresy consumes the galaxy.`,
         blurbSafe: `Refuge becomes illusion in a galaxy at war.`
@@ -3164,11 +3300,9 @@ const bookData = {
         title: 'IMPERFECT',
         author: 'Nick Kyme',
         timeline: '009.M31',
-        sortOrder: 9.09,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Emperor's Children"],
         anthology: 'War Without End',
-        sortOrder: 33.10,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Emperor's Children`,
         blurb: `The III Legion's obsession with perfection becomes their damnation.`,
         blurbSafe: `The pursuit of perfection leads only to corruption.`
@@ -3178,11 +3312,9 @@ const bookData = {
         title: 'WOLF MOTHER',
         author: 'Graham McNeill',
         timeline: '009.M31',
-        sortOrder: 9.11,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Space Wolves"],
         anthology: 'War Without End',
-        sortOrder: 33.13,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Space Wolves`,
         blurb: `The warriors of Fenris honor their traditions during the civil war.`,
         blurbSafe: `Space Wolves maintain their culture amid galaxy-wide treachery.`
@@ -3192,11 +3324,9 @@ const bookData = {
         title: 'THE HARROWING',
         author: 'Rob Sanders',
         timeline: '009.M31',
-        sortOrder: 9.15,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Various"],
         anthology: 'War Without End',
-        sortOrder: 33.15,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `A harrowing tale of survival in the Heresy's darkest moments.`,
         blurbSafe: `Warriors endure unimaginable horror during the civil war.`
@@ -3206,11 +3336,9 @@ const bookData = {
         title: 'ALL THAT REMAINS',
         author: 'James Swallow',
         timeline: '009.M31',
-        sortOrder: 9.16,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Various"],
         anthology: 'War Without End',
-        sortOrder: 33.17,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `In war's aftermath, only ruins and memories remain.`,
         blurbSafe: `The Heresy leaves only devastation in its wake.`
@@ -3220,11 +3348,9 @@ const bookData = {
         title: 'BY THE LION\'S COMMAND',
         author: 'Gav Thorpe',
         timeline: '009.M31',
-        sortOrder: 9.17,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Dark Angels"],
         anthology: 'War Without End',
-        sortOrder: 33.19,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Legion:</strong> Dark Angels`,
         blurb: `Dark Angels follow their Primarch's orders without question.`,
         blurbSafe: `The I Legion executes the Lion's will with absolute obedience.`
@@ -3234,11 +3360,9 @@ const bookData = {
         title: 'STRATAGEM',
         author: 'Nick Kyme',
         timeline: '009.M31',
-        sortOrder: 9.05,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Various"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.11,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra`,
         blurb: `Tactical genius is tested in the fires of civil war.`,
         blurbSafe: `Strategic minds clash in deadly competition.`
@@ -3248,11 +3372,9 @@ const bookData = {
         title: 'HERALD OF SANGUINIUS',
         author: 'Andy Smillie',
         timeline: '009.M31',
-        sortOrder: 9.06,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Blood Angels"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.13,
         details: `<strong>Author:</strong> Andy Smillie<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Blood Angels`,
         blurb: `A herald carries word from the Great Angel.`,
         blurbSafe: `Messages from Sanguinius guide his sons through darkness.`
@@ -3262,11 +3384,9 @@ const bookData = {
         title: 'ARMY OF ONE',
         author: 'Rob Sanders',
         timeline: '009.M31',
-        sortOrder: 9.18,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.9,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War<br><strong>Faction:</strong> Knights-Errant`,
         blurb: `A lone operative undertakes an impossible mission for Malcador.`,
         blurbSafe: `One warrior against overwhelming odds in the Emperor's name.`
@@ -3276,11 +3396,9 @@ const bookData = {
         title: 'DISTANT ECHOES OF OLD NIGHT',
         author: 'Rob Sanders',
         timeline: '009.M31',
-        sortOrder: 9.19,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.10,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War<br><strong>Faction:</strong> Knights-Errant`,
         blurb: `Ancient horrors from humanity's past resurface during the Heresy.`,
         blurbSafe: `Old Night's terrors return to haunt the Imperium.`
@@ -3290,11 +3408,9 @@ const bookData = {
         title: 'LOST SONS',
         author: 'James Swallow',
         timeline: '009.M31',
-        sortOrder: 9.20,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.12,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Garro seeks lost loyalists from traitor Legions to join the Knights-Errant.`,
         blurbSafe: `The search for loyal sons from fallen Legions continues.`
@@ -3304,11 +3420,9 @@ const bookData = {
         title: 'BURDEN OF DUTY',
         author: 'James Swallow',
         timeline: '009-010.M31',
-        sortOrder: 9.12,
         coverImage: 'images/garro.jpg',
         legions: ["Knights-Errant"],
         anthology: 'Garro',
-        sortOrder: 42.5,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Garro<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Garro bears the heavy burden of duty as Malcador's agent, sacrificing everything for the Emperor's vision.`,
         blurbSafe: `The weight of responsibility tests Garro's resolve and dedication.`
@@ -3318,11 +3432,9 @@ const bookData = {
         title: 'THE NOOSE',
         author: 'David Annandale',
         timeline: '009.M31',
-        sortOrder: 9.13,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Iron Hands"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.6,
         details: `<strong>Author:</strong> David Annandale<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Iron Hands`,
         blurb: `Iron Hands survivors tighten the noose around traitor supply lines.`,
         blurbSafe: `The X Legion disrupts traitor operations through calculated strikes.`
@@ -3332,11 +3444,9 @@ const bookData = {
         title: 'UNSPOKEN',
         author: 'Guy Haley',
         timeline: '009.M31',
-        sortOrder: 9.14,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Iron Hands"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.8,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Iron Hands`,
         blurb: `Unspoken oaths drive Iron Hands survivors to ever more desperate acts of vengeance.`,
         blurbSafe: `The X Legion's rage manifests in increasingly brutal attacks.`
@@ -3346,14 +3456,24 @@ const bookData = {
         title: 'THE HEART OF THE PHAROS',
         author: 'L J Goulding',
         timeline: '009.M31',
-        sortOrder: 9.21,
         coverImage: 'images/the-burden-of-loyalty.jpg',
         legions: ["Ultramarines"],
         anthology: 'The Burden of Loyalty',
-        sortOrder: 48.5,
         details: `<strong>Author:</strong> L J Goulding<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Burden of Loyalty<br><strong>Legion:</strong> Ultramarines`,
         blurb: `The Pharos device's power corrupts those who seek to control it.`,
         blurbSafe: `An ancient xenos device becomes a weapon and a curse.`
+    },
+    'eye-long-night': {
+        number: 'XXXV.3',
+        title: 'THE LONG NIGHT',
+        author: 'Aaron Dembski-Bowden',
+        timeline: '009.M31',
+        coverImage: 'images/eye-of-terra.jpg',
+        legions: ["Night Lords"],
+        anthology: 'Eye of Terra',
+        details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Night Lords`,
+        blurb: `The Night Lords bring terror to their enemies in the darkness.`,
+        blurbSafe: `The VIII Legion wages war through fear and shadow.`
     },
     'deathfire': {
         number: 'XXXII',
@@ -3414,11 +3534,9 @@ const bookData = {
         title: 'BJORN: LONE WOLF',
         author: 'Chris Wraight',
         timeline: '010.M31',
-        sortOrder: 10.6,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Space Wolves"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.19,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal<br><strong>Main Characters:</strong> Bjorn`,
         blurb: `The warrior who would become the Fell-Handed fights during the Heresy, earning his legendary status.`,
         blurbSafe: `A Space Wolves warrior fights alone during the Heresy, beginning his path to becoming a legend.`
@@ -3428,11 +3546,9 @@ const bookData = {
         title: 'BLACK OCULUS',
         author: 'John French',
         timeline: '010-011.M31',
-        sortOrder: 10.7,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Various"],
         anthology: 'War Without End',
-        sortOrder: 33.4,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `A tale of void warfare and dark secrets in the endless conflict.`,
         blurbSafe: `Ships clash in the darkness between stars.`
@@ -3442,11 +3558,9 @@ const bookData = {
         title: 'TWISTED',
         author: 'Guy Haley',
         timeline: '010.M31',
-        sortOrder: 10.8,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Various"],
         anthology: 'War Without End',
-        sortOrder: 33.7,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End`,
         blurb: `Corruption warps warriors and worlds alike.`,
         blurbSafe: `The touch of Chaos twists everything it reaches.`
@@ -3456,11 +3570,9 @@ const bookData = {
         title: 'THE EAGLE\'S TALON',
         author: 'John French',
         timeline: '010-011.M31',
-        sortOrder: 10.1,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Emperor's Children"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.14,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Emperor's Children`,
         blurb: `The III Legion's fall into excess and corruption.`,
         blurbSafe: `Warriors of perfection become slaves to sensation.`
@@ -3470,11 +3582,9 @@ const bookData = {
         title: 'IRON CORPSES',
         author: 'David Annandale',
         timeline: '010-011.M31',
-        sortOrder: 10.2,
         coverImage: 'images/eye-of-terra.jpg',
         legions: ["Iron Hands"],
         anthology: 'Eye of Terra',
-        sortOrder: 35.15,
         details: `<strong>Author:</strong> David Annandale<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Iron Hands`,
         blurb: `The fallen Iron Hands are more machine than man.`,
         blurbSafe: `Cybernetic warriors blur the line between living and dead.`
@@ -3484,11 +3594,9 @@ const bookData = {
         title: 'TEMPLAR',
         author: 'John French',
         timeline: '010.M31',
-        sortOrder: 10.9,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.4,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> The Silent War<br><strong>Main Characters:</strong> Sigismund`,
         blurb: `Sigismund, the Emperor's Champion, faces trials during the Heresy.`,
         blurbSafe: `The greatest warrior of the Imperial Fists confronts his destiny.`
@@ -3498,11 +3606,9 @@ const bookData = {
         title: 'PATIENCE',
         author: 'James Swallow',
         timeline: '010.M31',
-        sortOrder: 10.10,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.13,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Garro learns patience is a virtue when hunting the Emperor's enemies.`,
         blurbSafe: `A Knight-Errant discovers that some prey requires patience to catch.`
@@ -3512,11 +3618,9 @@ const bookData = {
         title: 'THE SIGILLITE',
         author: 'Chris Wraight',
         timeline: '010.M31',
-        sortOrder: 10.11,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Knights-Errant"],
         anthology: 'The Silent War',
-        sortOrder: 37.14,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Audio Book<br><strong>From:</strong> The Silent War<br><strong>Main Characters:</strong> Malcador the Sigillite`,
         blurb: `Malcador the Sigillite orchestrates his shadow war to save the Imperium. The Emperor's right hand works tirelessly to prepare for what must come.`,
         blurbSafe: `Malcador conducts covert operations to preserve the Emperor's vision.`
@@ -3526,11 +3630,9 @@ const bookData = {
         title: 'GARRO: ASHES OF FEALTY',
         author: 'James Swallow',
         timeline: '010-011.M31',
-        sortOrder: 10.3,
         coverImage: 'images/garro.jpg',
         legions: ["Knights-Errant"],
         anthology: 'Garro',
-        sortOrder: 42.6,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Garro<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `From the ashes of his former Legion, Garro's loyalty burns ever brighter.`,
         blurbSafe: `Garro confronts his past as he forges a new future serving Malcador.`
@@ -3540,11 +3642,9 @@ const bookData = {
         title: 'THE EITHER',
         author: 'Graham McNeill',
         timeline: '010.M31',
-        sortOrder: 10.4,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Iron Hands"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.9,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Iron Hands`,
         blurb: `Iron Hands survivors face an impossible choice between duty and vengeance.`,
         blurbSafe: `The X Legion must decide between conflicting loyalties.`
@@ -3554,14 +3654,30 @@ const bookData = {
         title: 'THE HAND ELECT',
         author: 'Chris Wraight',
         timeline: '010.M31',
-        sortOrder: 10.5,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Iron Hands"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.10,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Shattered Legions<br><strong>Legion:</strong> Iron Hands`,
         blurb: `The chosen warriors of the Iron Hands elite continue their mission despite overwhelming losses.`,
         blurbSafe: `Elite Iron Hands survivors press on against impossible odds.`
+    },
+    'the-master-of-mankind': {
+        number: 'XLI',
+        title: 'THE MASTER OF MANKIND',
+        author: 'Aaron Dembski-Bowden',
+        timeline: '011.M31',
+        coverImage: 'images/the-master-of-mankind.jpg',
+        legions: ["Custodian Guard","Sisters of Silence"],
+        details: `
+            <strong>Author:</strong> Aaron Dembski-Bowden<br>
+            <strong>Focus:</strong> The Emperor of Mankind<br>
+            <strong>Location:</strong> The Webway War<br>
+            <strong>Main Characters:</strong> The Emperor, Ra Endymion, Diocletian Coros, Zephon, Arkhan Land<br>
+            <strong>Timeline:</strong> 004-014.M31<br>
+            <strong>Status:</strong> The Emperor's Vision Dies
+        `,
+        blurb: `Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway, defending humanity's future against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path through the Webway that would free humanity from warp travel. As the Emperor battles with the Custodians and Sisters of Silence against endless daemon hordes, His dream of apotheosis for humanity crumbles. He cannot leave to face Horus, for if the Webway breach is not contained, Terra itself will fall to Chaos.`,
+        blurbSafe: `Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path that would free humanity from warp travel. As daemon hordes assault the breach, the Emperor cannot leave His post, even as Horus marches on Terra.`
     },
     'the-path-of-heaven': {
         number: 'XXXVI',
@@ -3640,11 +3756,9 @@ const bookData = {
         title: 'RIVEN',
         author: 'John French',
         timeline: '011.M31',
-        sortOrder: 11.3,
         coverImage: 'images/legacies-of-betrayal.jpg',
         legions: ["Various"],
         anthology: 'Legacies of Betrayal',
-        sortOrder: 31.5,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Legacies of Betrayal`,
         blurb: `A tale of division and broken bonds as the Heresy tears warriors apart.`,
         blurbSafe: `The Heresy's divisions tear apart bonds of brotherhood and loyalty.`
@@ -3654,11 +3768,9 @@ const bookData = {
         title: 'GARRO: VOW OF FAITH',
         author: 'James Swallow',
         timeline: '011-013.M31',
-        sortOrder: 11.1,
         coverImage: 'images/garro.jpg',
         legions: ["Knights-Errant"],
         anthology: 'Garro',
-        sortOrder: 42.7,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Novella<br><strong>From:</strong> Garro<br><strong>Main Characters:</strong> Nathaniel Garro`,
         blurb: `Garro's final vow cements his transformation and his role in founding what will become the Grey Knights and Inquisition.`,
         blurbSafe: `The Knight-Errant makes his final vow, completing his journey from Death Guard to the Emperor's agent.`
@@ -3668,11 +3780,9 @@ const bookData = {
         title: 'THE SEVENTH SERPENT',
         author: 'Graham McNeill',
         timeline: '011.M31',
-        sortOrder: 11.2,
         coverImage: 'images/shattered-legions.jpg',
         legions: ["Alpha Legion","Iron Hands"],
         anthology: 'Shattered Legions',
-        sortOrder: 43.11,
         details: `<strong>Author:</strong> Graham McNeill<br><strong>Type:</strong> Novella<br><strong>From:</strong> Shattered Legions<br><strong>Legions:</strong> Alpha Legion, Iron Hands`,
         blurb: `The Alpha Legion's schemes intersect with the shattered Legions' vengeance, with no one certain of anyone's true allegiance.`,
         blurbSafe: `Alpha Legion machinations complicate the survivors' war of vengeance.`
@@ -3718,11 +3828,9 @@ const bookData = {
         title: 'HANDS OF THE EMPEROR',
         author: 'Rob Sanders',
         timeline: '012.M31',
-        sortOrder: 12.1,
         coverImage: 'images/war-without-end.jpg',
         legions: ["Custodian Guard"],
         anthology: 'War Without End',
-        sortOrder: 33.14,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Faction:</strong> Custodian Guard`,
         blurb: `The Emperor's golden guardians strike against the traitors.`,
         blurbSafe: `Custodians undertake deadly missions in the Emperor's name.`
@@ -3732,11 +3840,9 @@ const bookData = {
         title: 'THE GATES OF TERRA',
         author: 'Nick Kyme',
         timeline: '012.M31',
-        sortOrder: 12.2,
         coverImage: 'images/the-silent-war.jpg',
         legions: ["Imperial Fists"],
         anthology: 'The Silent War',
-        sortOrder: 37.5,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Silent War<br><strong>Legion:</strong> Imperial Fists`,
         blurb: `Defenders prepare Terra's gates for the coming siege.`,
         blurbSafe: `The Throneworld fortifies itself against inevitable attack.`
@@ -3749,7 +3855,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Alpha Legion"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.1,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Alpha Legion`,
         blurb: `The Alpha Legion's myriad schemes converge as the Siege approaches.`,
         blurbSafe: `The XX Legion's countless operations reach critical junctures.`
@@ -3762,7 +3867,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Raven Guard"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.2,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Raven Guard`,
         blurb: `A Raven Guard warrior fights in the shadows before the Siege.`,
         blurbSafe: `The XIX Legion strikes from darkness in the war's final days.`
@@ -3775,7 +3879,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Various"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.3,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Heralds of the Siege`,
         blurb: `A warrior named Valerius faces his destiny as the Siege looms.`,
         blurbSafe: `One man's courage is tested in the war's final moments.`
@@ -3788,7 +3891,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Space Wolves"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.4,
         details: `<strong>Author:</strong> Rob Sanders<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Space Wolves`,
         blurb: `Space Wolves burn with fury as they race toward Terra.`,
         blurbSafe: `The VI Legion's wrath drives them toward the Throneworld.`
@@ -3801,7 +3903,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Blackshields"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.5,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Faction:</strong> Blackshields`,
         blurb: `A warrior without allegiance fights his own war before the Siege.`,
         blurbSafe: `Blackshield Space Marines wage their own battles in the Heresy's final days.`
@@ -3814,7 +3915,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Word Bearers"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.6,
         details: `<strong>Author:</strong> Anthony Reynolds<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Word Bearers`,
         blurb: `Word Bearers from Sicarus march toward Terra to see their dark vision fulfilled.`,
         blurbSafe: `The XVII Legion advances on the Throneworld with dark purpose.`
@@ -3827,7 +3927,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Death Guard"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.7,
         details: `<strong>Author:</strong> James Swallow<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Death Guard`,
         blurb: `The Death Guard's corruption reaches horrific new depths.`,
         blurbSafe: `Nurgle's gifts transform the XIV Legion into plague-bearers.`
@@ -3840,7 +3939,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Blood Angels"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.8,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Blood Angels`,
         blurb: `A Blood Angels noble fights to maintain his Legion's honor.`,
         blurbSafe: `The IX Legion struggles with their nature as the Siege approaches.`
@@ -3853,7 +3951,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Thousand Sons"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.9,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Thousand Sons`,
         blurb: `The last loyal son of Prospero fights for redemption before Terra burns.`,
         blurbSafe: `A Thousand Sons warrior seeks to atone for his Legion's fall.`
@@ -3866,7 +3963,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Various"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.10,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Heralds of the Siege`,
         blurb: `Souls are severed from bodies as the warp's influence grows.`,
         blurbSafe: `Reality frays at the edges as Chaos power intensifies.`
@@ -3879,7 +3975,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Various"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.11,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Heralds of the Siege`,
         blurb: `Worlds are brought to dark compliance by the traitor forces.`,
         blurbSafe: `The traitors force worlds to submit through terror and corruption.`
@@ -3892,7 +3987,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Imperial Fists"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.12,
         details: `<strong>Author:</strong> Guy Haley<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Legion:</strong> Imperial Fists`,
         blurb: `Imperial Fists stand ready on Terra, knowing their duty awaits.`,
         blurbSafe: `The VII Legion prepares to defend humanity's cradle.`
@@ -3905,7 +3999,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Custodian Guard"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.13,
         details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Faction:</strong> Custodian Guard`,
         blurb: `The Custodians prepare for the defense of the Emperor himself.`,
         blurbSafe: `The Emperor's golden guardians ready themselves for the ultimate battle.`
@@ -3918,7 +4011,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Various"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.14,
         details: `<strong>Author:</strong> John French<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege`,
         blurb: `Midnight arrives as the traitor fleet emerges at Terra. The Siege begins.`,
         blurbSafe: `The darkest hour strikes as Horus's forces arrive at the Throneworld.`
@@ -3931,7 +4023,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Various"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.15,
         details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege`,
         blurb: `Dreams of unity die as the Heresy reaches its terrible climax.`,
         blurbSafe: `The Emperor's dream shatters as war comes to Terra.`
@@ -3944,7 +4035,6 @@ const bookData = {
         coverImage: 'images/heralds-of-the-siege.jpg',
         legions: ["Various"],
         anthology: 'Heralds of the Siege',
-        sortOrder: 52.16,
         details: `<strong>Author:</strong> Gav Thorpe<br><strong>Type:</strong> Short Story<br><strong>From:</strong> Heralds of the Siege<br><strong>Main Characters:</strong> The Emperor, Malcador`,
         blurb: `The Emperor and Malcador play a final game as the pieces move into place. The board is set, the Siege begins, and the fate of humanity hangs in the balance.`,
         blurbSafe: `The Emperor and Malcador reflect on the coming battle as the traitors arrive. The endgame begins.`
@@ -4045,351 +4135,11 @@ const bookData = {
         blurb: `The Emperor confronts Horus in the most consequential battle in human history. When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption. He unleashes His full power, destroying Horus utterly—but the assault leaves Him mortally wounded. Dorn finds his father dying. The Heresy ends, but the Imperium is forever changed.`,
         blurbSafe: `The Emperor confronts Horus in the most consequential battle in human history. When loyalists fall before the Warmaster, the Emperor must decide if his son can be redeemed—and what price victory will demand.`
     },
-    'war-phoenician': {
-        number: 'XXXIII.9',
-        title: 'THE PHOENICIAN',
-        author: 'Nick Kyme',
-        timeline: '566.006.M31',
-        sortOrder: 6.4,
-        coverImage: 'images/war-without-end.jpg',
-        legions: ["Emperor's Children"],
-        anthology: 'War Without End',
-        sortOrder: 33.9,
-        details: `<strong>Author:</strong> Nick Kyme<br><strong>Type:</strong> Short Story<br><strong>From:</strong> War Without End<br><strong>Primarch:</strong> Fulgrim`,
-        blurb: `Fulgrim's corruption reaches new depths of depravity.`,
-        blurbSafe: `The Phoenician's fall into darkness continues.`
-    },
-    'eye-long-night': {
-        number: 'XXXV.3',
-        title: 'THE LONG NIGHT',
-        author: 'Aaron Dembski-Bowden',
-        timeline: 'Various',
-        coverImage: 'images/eye-of-terra.jpg',
-        legions: ["Night Lords"],
-        anthology: 'Eye of Terra',
-        sortOrder: 35.3,
-        details: `<strong>Author:</strong> Aaron Dembski-Bowden<br><strong>Type:</strong> Audio Drama<br><strong>From:</strong> Eye of Terra<br><strong>Legion:</strong> Night Lords`,
-        blurb: `The Night Lords bring terror to their enemies in the darkness.`,
-        blurbSafe: `The VIII Legion wages war through fear and shadow.`
-    },
-    'burden-wolf-king': {
-        number: 'XLVIII.8',
-        title: 'THE WOLF KING',
-        author: 'Chris Wraight',
-        timeline: 'Various',
-        coverImage: 'images/the-burden-of-loyalty.jpg',
-        legions: ["Space Wolves"],
-        anthology: 'The Burden of Loyalty',
-        sortOrder: 48.8,
-        details: `<strong>Author:</strong> Chris Wraight<br><strong>Type:</strong> Short Story<br><strong>From:</strong> The Burden of Loyalty<br><strong>Legion:</strong> Space Wolves<br><strong>Primarch:</strong> Leman Russ`,
-        blurb: `Leman Russ leads his Wolves through the Heresy, the Wolf King's fury undiminished.`,
-        blurbSafe: `The Primarch of the VI Legion commands his sons in the war for humanity's soul.`
-    },
-    'primarch-roboute-guilliman': {
-        number: 'P1',
-        title: 'ROBOUTE GUILLIMAN: LORD OF ULTRAMAR',
-        author: 'David Annandale',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-guilliman.jpg',
-        legions: ['Ultramarines'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> David Annandale<br>
-            <strong>Series:</strong> Primarchs Novel Series #1<br>
-            <strong>Legion:</strong> Ultramarines<br>
-            <strong>Primarch:</strong> Roboute Guilliman<br>
-            <strong>Main Characters:</strong> Roboute Guilliman, Tarasha Euten<br>
-            <strong>Timeline:</strong> Pre-Heresy and Heresy Era<br>
-            <strong>Status:</strong> The Avenging Son
-        `,
-        blurb: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance and built the XIII Legion into a perfectly organized war machine. This novel explores Guilliman's character, his vision for humanity, and how his experiences during the Great Crusade prepared him for the trials of the Horus Heresy. The Master of the Five Hundred Worlds must balance his role as warrior and statesman.`,
-        blurbSafe: `Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance. This novel explores Guilliman's vision for humanity, his philosophy of warfare and statecraft, and how the Master of the Five Hundred Worlds balances his roles as warrior and administrator.`
-    },
-    'primarch-leman-russ': {
-        number: 'P2',
-        title: 'LEMAN RUSS: THE GREAT WOLF',
-        author: 'Chris Wraight',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-russ.jpg',
-        legions: ['Space Wolves'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Chris Wraight<br>
-            <strong>Series:</strong> Primarchs Novel Series #2<br>
-            <strong>Legion:</strong> Space Wolves<br>
-            <strong>Primarch:</strong> Leman Russ<br>
-            <strong>Main Characters:</strong> Leman Russ, Bjorn<br>
-            <strong>Timeline:</strong> Great Crusade Era<br>
-            <strong>Status:</strong> The Wolf King
-        `,
-        blurb: `Leman Russ, the savage King of Fenris, embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature, his relationship with his brothers, and the burden of being the Emperor's chosen sanction against those who fall from the Imperial Truth. The Great Wolf hunts in the darkness.`,
-        blurbSafe: `Leman Russ embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature and the burden of being the Emperor's chosen sanction.`
-    },
-    'primarch-magnus': {
-        number: 'P3',
-        title: 'MAGNUS THE RED: MASTER OF PROSPERO',
-        author: 'Graham McNeill',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-magnus.jpg',
-        legions: ['Thousand Sons'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Graham McNeill<br>
-            <strong>Series:</strong> Primarchs Novel Series #3<br>
-            <strong>Legion:</strong> Thousand Sons<br>
-            <strong>Primarch:</strong> Magnus the Red<br>
-            <strong>Main Characters:</strong> Magnus the Red, Ahriman<br>
-            <strong>Timeline:</strong> Great Crusade Era<br>
-            <strong>Status:</strong> The Crimson King
-        `,
-        blurb: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment, his experiments with psychic powers, and the events that set him on a collision course with the Emperor's edicts. The most powerful psyker among the Primarchs believes he can master Chaos itself—a fatal hubris that will doom his Legion.`,
-        blurbSafe: `Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment and the events that set him on a collision course with the Emperor's edicts.`
-    },
-    'primarch-perturabo': {
-        number: 'P4',
-        title: 'PERTURABO: THE HAMMER OF OLYMPIA',
-        author: 'Guy Haley',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-perturabo.jpg',
-        legions: ['Iron Warriors'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Guy Haley<br>
-            <strong>Series:</strong> Primarchs Novel Series #4<br>
-            <strong>Legion:</strong> Iron Warriors<br>
-            <strong>Primarch:</strong> Perturabo<br>
-            <strong>Main Characters:</strong> Perturabo, Calliphone<br>
-            <strong>Timeline:</strong> Great Crusade, Destruction of Olympia<br>
-            <strong>Status:</strong> The Lord of Iron
-        `,
-        blurb: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the events that push him toward Horus's cause. Perturabo's bitterness at being underappreciated, his perfectionism, and his willingness to sacrifice anything for victory make him one of the most tragic Primarchs—a brilliant mind consumed by resentment.`,
-        blurbSafe: `Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the bitterness at being underappreciated that pushes him toward darker paths.`
-    },
-    'primarch-lorgar': {
-        number: 'P5',
-        title: 'LORGAR: BEARER OF THE WORD',
-        author: 'Gav Thorpe',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-lorgar.jpg',
-        legions: ['Word Bearers'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Gav Thorpe<br>
-            <strong>Series:</strong> Primarchs Novel Series #5<br>
-            <strong>Legion:</strong> Word Bearers<br>
-            <strong>Primarch:</strong> Lorgar Aurelian<br>
-            <strong>Main Characters:</strong> Lorgar, Kor Phaeron, Erebus<br>
-            <strong>Timeline:</strong> Great Crusade Era<br>
-            <strong>Status:</strong> The Urizen
-        `,
-        blurb: `Lorgar, the most faithful son, spreads the Imperial Truth across the galaxy—but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction, his search for meaning, and his ultimate discovery of the Chaos Gods. The Urizen's journey from devoted son to first heretic is one of the Heresy's most pivotal transformations.`,
-        blurbSafe: `Lorgar spreads the Imperial Truth across the galaxy, but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction and his search for meaning beyond the Imperial Truth.`
-    },
-    'primarch-fulgrim': {
-        number: 'P6',
-        title: 'FULGRIM: THE PALATINE PHOENIX',
-        author: 'Josh Reynolds',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-fulgrim.jpg',
-        legions: ['Emperor\'s Children'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Josh Reynolds<br>
-            <strong>Series:</strong> Primarchs Novel Series #6<br>
-            <strong>Legion:</strong> Emperor's Children<br>
-            <strong>Primarch:</strong> Fulgrim<br>
-            <strong>Main Characters:</strong> Fulgrim, Fabius Bile<br>
-            <strong>Timeline:</strong> Great Crusade Era<br>
-            <strong>Status:</strong> The Phoenician
-        `,
-        blurb: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence, his pride in his Legion's achievements, and the character flaws that make him vulnerable to Slaanesh's corruption. The quest for perfection becomes a path to damnation for the most beautiful of the Emperor's sons.`,
-        blurbSafe: `Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence and the character flaws that make him vulnerable to corruption.`
-    },
-    'primarch-ferrus-manus': {
-        number: 'P7',
-        title: 'FERRUS MANUS: THE GORGON OF MEDUSA',
-        author: 'David Guymer',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-ferrus.jpg',
-        legions: ['Iron Hands'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> David Guymer<br>
-            <strong>Series:</strong> Primarchs Novel Series #7<br>
-            <strong>Legion:</strong> Iron Hands<br>
-            <strong>Primarch:</strong> Ferrus Manus<br>
-            <strong>Main Characters:</strong> Ferrus Manus, Fulgrim<br>
-            <strong>Timeline:</strong> Great Crusade Era<br>
-            <strong>Status:</strong> The Gorgon
-        `,
-        blurb: `Ferrus Manus, lord of the Iron Hands, embodies strength and logic. His metal hands grant him power but also represent his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the tragic irony that his inflexibility and inability to see his brother's corruption leads to his death at Isstvan V. The strongest Primarch falls because he cannot adapt.`,
-        blurbSafe: `Ferrus Manus embodies strength and logic, his metal hands granting power while representing his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the inflexibility that defines him.`
-    },
-    'primarch-jaghatai-khan': {
-        number: 'P8',
-        title: 'JAGHATAI KHAN: WARHAWK OF CHOGORIS',
-        author: 'Chris Wraight',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-khan.jpg',
-        legions: ['White Scars'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Chris Wraight<br>
-            <strong>Series:</strong> Primarchs Novel Series #8<br>
-            <strong>Legion:</strong> White Scars<br>
-            <strong>Primarch:</strong> Jaghatai Khan<br>
-            <strong>Main Characters:</strong> Jaghatai Khan, Yesugei<br>
-            <strong>Timeline:</strong> Discovery on Chogoris<br>
-            <strong>Status:</strong> The Warhawk
-        `,
-        blurb: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else. The Warhawk's free spirit and strategic genius make him both invaluable to the Imperium and difficult to control—a warrior who rides where he wills.`,
-        blurbSafe: `Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else.`
-    },
-    'primarch-vulkan': {
-        number: 'P9',
-        title: 'VULKAN: LORD OF DRAKES',
-        author: 'David Annandale',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-vulkan.jpg',
-        legions: ['Salamanders'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> David Annandale<br>
-            <strong>Series:</strong> Primarchs Novel Series #9<br>
-            <strong>Legion:</strong> Salamanders<br>
-            <strong>Primarch:</strong> Vulkan<br>
-            <strong>Main Characters:</strong> Vulkan<br>
-            <strong>Timeline:</strong> Nocturne and Great Crusade<br>
-            <strong>Status:</strong> The Lord of Drakes
-        `,
-        blurb: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity rather than just conquering for it, and the events that made the Salamanders the most humanitarian of all Space Marine Legions. Vulkan's compassion and his Perpetual nature set him apart from his brothers.`,
-        blurbSafe: `Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity, and what made the Salamanders the most humanitarian of all Legions.`
-    },
-    'primarch-corax': {
-        number: 'P10',
-        title: 'CORAX: LORD OF SHADOWS',
-        author: 'Guy Haley',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-corax.jpg',
-        legions: ['Raven Guard'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Guy Haley<br>
-            <strong>Series:</strong> Primarchs Novel Series #10<br>
-            <strong>Legion:</strong> Raven Guard<br>
-            <strong>Primarch:</strong> Corvus Corax<br>
-            <strong>Main Characters:</strong> Corvus Corax<br>
-            <strong>Timeline:</strong> Liberation of Lycaeus<br>
-            <strong>Status:</strong> The Deliverer
-        `,
-        blurb: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare and asymmetric combat. This novel explores Corax's hatred of tyrants, his preference for precision strikes over overwhelming force, and how his experiences shaped the Raven Guard's tactics. The Ravenlord operates from the shadows, striking where least expected, disappearing before the enemy can respond.`,
-        blurbSafe: `Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare. This novel explores Corax's hatred of tyrants, his preference for precision strikes, and how his experiences shaped the Raven Guard's tactics.`
-    },
-    'primarch-angron': {
-        number: 'P11',
-        title: 'ANGRON: SLAVE OF NUCERIA',
-        author: 'Ian St. Martin',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-angron.jpg',
-        legions: ['World Eaters'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Ian St. Martin<br>
-            <strong>Series:</strong> Primarchs Novel Series #11<br>
-            <strong>Legion:</strong> World Eaters<br>
-            <strong>Primarch:</strong> Angron<br>
-            <strong>Main Characters:</strong> Angron, Lorgar<br>
-            <strong>Timeline:</strong> Return to Nuceria during Heresy<br>
-            <strong>Status:</strong> The Red Angel
-        `,
-        blurb: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in the gladiator pits. The Butcher's Nails implanted in his brain drive him toward constant rage and violence. This novel explores the tragedy of Angron—a Primarch who could have been noble but was broken before the Emperor found him. His only peace comes through bloodshed, and Lorgar offers him a terrible apotheosis.`,
-        blurbSafe: `Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in gladiator pits. The Butcher's Nails drive him toward constant rage. This novel explores the tragedy of a Primarch broken before the Emperor found him.`
-    },
-    'primarch-konrad-curze': {
-        number: 'P12',
-        title: 'KONRAD CURZE: THE NIGHT HAUNTER',
-        author: 'Guy Haley',
-        timeline: 'Pre-Heresy/Heresy',
-        coverImage: 'images/primarch-curze.jpg',
-        legions: ['Night Lords'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Guy Haley<br>
-            <strong>Series:</strong> Primarchs Novel Series #12<br>
-            <strong>Legion:</strong> Night Lords<br>
-            <strong>Primarch:</strong> Konrad Curze<br>
-            <strong>Main Characters:</strong> Konrad Curze, The Haunter<br>
-            <strong>Timeline:</strong> Various periods<br>
-            <strong>Status:</strong> The Night Haunter
-        `,
-        blurb: `Konrad Curze is cursed with visions of his own death and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness, his belief in fate's inevitability, and his complex relationship with his father. The Night Haunter is judge, jury, and executioner—but he has already seen his own execution and welcomes it.`,
-        blurbSafe: `Konrad Curze is cursed with visions and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness and his belief in fate's inevitability.`
-    },
-    'primarch-lion-eljonson': {
-        number: 'P13',
-        title: 'LION EL\'JONSON: LORD OF THE FIRST',
-        author: 'David Guymer',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-lion.jpg',
-        legions: ['Dark Angels'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> David Guymer<br>
-            <strong>Series:</strong> Primarchs Novel Series #13<br>
-            <strong>Legion:</strong> Dark Angels<br>
-            <strong>Primarch:</strong> Lion El'Jonson<br>
-            <strong>Main Characters:</strong> Lion El'Jonson, Luther<br>
-            <strong>Timeline:</strong> Great Crusade Era<br>
-            <strong>Status:</strong> The First
-        `,
-        blurb: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature and inability to trust create divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that prevents him from seeing the betrayal festering on Caliban. The Lord of the First is supreme in battle but blind to the politics that will split his Legion.`,
-        blurbSafe: `The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature creates divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that blinds him.`
-    },
-    'primarch-alpharius': {
-        number: 'P14',
-        title: 'ALPHARIUS: HEAD OF THE HYDRA',
-        author: 'Mike Brooks',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-alpharius.jpg',
-        legions: ['Alpha Legion'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> Mike Brooks<br>
-            <strong>Series:</strong> Primarchs Novel Series #14<br>
-            <strong>Legion:</strong> Alpha Legion<br>
-            <strong>Primarch:</strong> Alpharius Omegon<br>
-            <strong>Main Characters:</strong> Alpharius Omegon<br>
-            <strong>Timeline:</strong> Discovery and Great Crusade<br>
-            <strong>Status:</strong> The Hydra
-        `,
-        blurb: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep even from each other. The Alpha Legion's methods of infiltration and misdirection are controversial, and this book may be the greatest misdirection of all. Every revelation might be a lie, every truth might be deception. I am Alpharius.`,
-        blurbSafe: `Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep. Every revelation might be a lie, every truth might be deception.`
-    },
-    'primarch-mortarion': {
-        number: 'P15',
-        title: 'MORTARION: THE PALE KING',
-        author: 'David Annandale',
-        timeline: 'Pre-Heresy',
-        coverImage: 'images/primarch-mortarion.jpg',
-        legions: ['Death Guard'],
-        series: 'primarchs',
-        details: `
-            <strong>Author:</strong> David Annandale<br>
-            <strong>Series:</strong> Primarchs Novel Series #15<br>
-            <strong>Legion:</strong> Death Guard<br>
-            <strong>Primarch:</strong> Mortarion<br>
-            <strong>Main Characters:</strong> Mortarion, Typhon<br>
-            <strong>Timeline:</strong> Barbarus and Great Crusade<br>
-            <strong>Status:</strong> The Reaper
-        `,
-        blurb: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord—the Emperor had to do that. This failure drives Mortarion's resentment. This novel explores his philosophy of endurance, his hatred of tyrants and psykers, and the bitter irony that he will become a slave to Nurgle, the greatest tyrant of all.`,
-        blurbSafe: `Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord. This failure drives his resentment of tyrants and psykers.`
-    },
     'primarch-rogal-dorn': {
         number: 'P16',
         title: 'ROGAL DORN: THE EMPEROR\'S CRUSADER',
         author: 'Gav Thorpe',
-        timeline: 'Pre-Heresy',
+        timeline: '014.M31',
         coverImage: 'images/primarch-dorn.jpg',
         legions: ['Imperial Fists'],
         series: 'primarchs',
@@ -4405,31 +4155,56 @@ const bookData = {
         blurb: `Rogal Dorn is the Emperor's Praetorian, chosen to fortify the Imperial Palace and defend Terra itself. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty. Where other Primarchs might question or interpret orders, Dorn simply obeys. His rigid adherence to truth and honor make him the perfect defender—but also blind him to the subtleties of treachery.`,
         blurbSafe: `Rogal Dorn is the Emperor's Praetorian, chosen to fortify Terra and defend the Imperial Palace. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty and truth.`
     },
-    'primarch-sanguinius': {
-        number: 'P17',
-        title: 'SANGUINIUS: THE GREAT ANGEL',
+    'primarch-leman-russ': {
+        number: 'P2',
+        title: 'LEMAN RUSS: THE GREAT WOLF',
         author: 'Chris Wraight',
-        timeline: 'Pre-Heresy/Heresy',
-        coverImage: 'images/primarch-sanguinius.jpg',
-        legions: ['Blood Angels'],
+        timeline: '015-021.M31',
+        coverImage: 'images/primarch-russ.jpg',
+        legions: ['Space Wolves'],
         series: 'primarchs',
         details: `
             <strong>Author:</strong> Chris Wraight<br>
-            <strong>Series:</strong> Primarchs Novel Series #17<br>
-            <strong>Legion:</strong> Blood Angels<br>
-            <strong>Primarch:</strong> Sanguinius<br>
-            <strong>Main Characters:</strong> Sanguinius, Azkaellon<br>
-            <strong>Timeline:</strong> Imperium Secundus Era<br>
-            <strong>Status:</strong> The Great Angel
+            <strong>Series:</strong> Primarchs Novel Series #2<br>
+            <strong>Legion:</strong> Space Wolves<br>
+            <strong>Primarch:</strong> Leman Russ<br>
+            <strong>Main Characters:</strong> Leman Russ, Bjorn<br>
+            <strong>Timeline:</strong> Great Crusade Era<br>
+            <strong>Status:</strong> The Wolf King
         `,
-        blurb: `Sanguinius, most beloved of the Primarchs, struggles with visions of his own death and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing he will die at Horus's hands but facing that fate with nobility. Sanguinius represents what the Imperium could have been: beauty, wisdom, and martial prowess combined. His sacrifice will echo through ten thousand years.`,
-        blurbSafe: `Sanguinius struggles with visions and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing what fate may await him but facing it with nobility. Sanguinius represents what the Imperium could have been.`
+        blurb: `Leman Russ, the savage King of Fenris, embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature, his relationship with his brothers, and the burden of being the Emperor's chosen sanction against those who fall from the Imperial Truth. The Great Wolf hunts in the darkness.`,
+        blurbSafe: `Leman Russ embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature and the burden of being the Emperor's chosen sanction.`
+    },
+    'primarch-konrad-curze': {
+        number: 'P12',
+        title: 'KONRAD CURZE: THE NIGHT HAUNTER',
+        author: 'Guy Haley',
+        timeline: '036.M31',
+        coverImage: 'images/primarch-curze.jpg',
+        legions: ['Night Lords'],
+        series: 'primarchs',
+        details: `
+            <strong>Author:</strong> Guy Haley<br>
+            <strong>Series:</strong> Primarchs Novel Series #12<br>
+            <strong>Legion:</strong> Night Lords<br>
+            <strong>Primarch:</strong> Konrad Curze<br>
+            <strong>Main Characters:</strong> Konrad Curze, The Haunter<br>
+            <strong>Timeline:</strong> Various periods<br>
+            <strong>Status:</strong> The Night Haunter
+        `,
+        blurb: `Konrad Curze is cursed with visions of his own death and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness, his belief in fate's inevitability, and his complex relationship with his father. The Night Haunter is judge, jury, and executioner—but he has already seen his own execution and welcomes it.`,
+        blurbSafe: `Konrad Curze is cursed with visions and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness and his belief in fate's inevitability.`
     }
 };
 
+// Convert a series number into a numeric publication-order key.
+// Returns UNKNOWN_NUMBER for anything unrecognised so bad data sorts last
+// and is visible to the validator rather than silently landing mid-list.
+const UNKNOWN_NUMBER = 999999;
+
 function romanToNumber(roman) {
-    if (!roman) return 999;
-    const romanNum = String(roman).toUpperCase();
+    if (!roman) return UNKNOWN_NUMBER;
+    const romanNum = String(roman).toUpperCase().trim();
     const romanMap = {
         'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5, 'VI': 6, 'VII': 7, 'VIII': 8, 'IX': 9,
         'X': 10, 'XI': 11, 'XII': 12, 'XIII': 13, 'XIV': 14, 'XV': 15, 'XVI': 16, 'XVII': 17,
@@ -4441,23 +4216,43 @@ function romanToNumber(roman) {
         'XLIX': 49, 'L': 50, 'LI': 51, 'LII': 52, 'LIII': 53, 'LIV': 54
     };
 
-    // Handle anthology story numbers like "X.1", "XVI.2"
-    if (romanNum.includes('.')) {
-        return parseFloat(romanNum.replace(/[^0-9.]/g, ''));
+    // Anthology story numbers like "X.6" or "LII.14". The story index is kept
+    // as a scaled component rather than a decimal fraction, because
+    // parseFloat('10.10') === 10.1, which made story 10 collide with story 1.
+    const dotted = romanNum.match(/^([IVXLCDM]+)\.(\d+)$/);
+    if (dotted) {
+        const volume = romanMap[dotted[1]];
+        if (volume === undefined) return UNKNOWN_NUMBER;
+        return volume + parseInt(dotted[2], 10) / 1000;
     }
 
-    // Handle Primarchs series (P1, P2, etc.)
-    if (romanNum.startsWith('P')) {
-        return 100 + parseInt(romanNum.substring(1));
+    // The Primarchs series (P1 to P17)
+    const primarch = romanNum.match(/^P\s*(\d+)$/);
+    if (primarch) {
+        return 100 + parseInt(primarch[1], 10);
     }
 
-    // Handle Siege of Terra series (SoT 1, SoT 2, etc.)
-    if (romanNum.startsWith('SOT')) {
-        return 200 + parseInt(romanNum.match(/\d+/)?.[0] || 0);
+    // Siege of Terra (SoT 1 to SoT 7, plus the three-volume SoT 8a/8b/8c).
+    // The letter suffix must survive, or the whole finale collapses to one key.
+    const sot = romanNum.match(/^SOT\s*(\d+)([A-Z]?)$/);
+    if (sot) {
+        const volume = sot[2] ? (sot[2].charCodeAt(0) - 64) / 100 : 0;
+        return 200 + parseInt(sot[1], 10) + volume;
     }
 
-    return romanMap[romanNum] || 999;
+    return romanMap[romanNum] ?? UNKNOWN_NUMBER;
 }
+
+// The chronological order IS the key insertion order of bookData, which is the
+// curated sequence documented in ORDERING_DECISIONS.md. Derive the rank once.
+//
+// Do not reintroduce a per-entry `sortOrder` field. The previous scheme stored
+// `<volume>.<story>` floats, which could not distinguish story 10 from story 1,
+// and a duplicated property in 139 entries silently shadowed the intended value
+// so that 223 of 224 books rendered in the wrong position.
+const chronologicalRank = new Map(
+    Object.keys(bookData).map((key, index) => [key, index + 1])
+);
 
 // Sort books based on sort order
 function getSortedBookKeys(sortOrder) {
@@ -4465,29 +4260,15 @@ function getSortedBookKeys(sortOrder) {
 
     switch (sortOrder) {
         case 'publication':
-            // Extract roman numerals and sort
-            return keys.sort((a, b) => {
-                const numA = bookData[a].number;
-                const numB = bookData[b].number;
-                // Handle special series prefixes
-                if (numA.startsWith('P') && !numB.startsWith('P')) return 1;
-                if (!numA.startsWith('P') && numB.startsWith('P')) return -1;
-                if (numA.startsWith('SoT') && !numB.startsWith('SoT')) return 1;
-                if (!numA.startsWith('SoT') && numB.startsWith('SoT')) return -1;
-                return numA.localeCompare(numB, undefined, {numeric: true});
-            });
+            return keys.sort((a, b) =>
+                romanToNumber(bookData[a].number) - romanToNumber(bookData[b].number));
         case 'title':
             return keys.sort((a, b) => bookData[a].title.localeCompare(bookData[b].title));
         case 'author':
             return keys.sort((a, b) => bookData[a].author.localeCompare(bookData[b].author));
         case 'chronological':
         default:
-            // Sort by sortOrder field (which includes anthology story order like 10.1, 10.2)
-            return keys.sort((a, b) => {
-                const orderA = bookData[a].sortOrder || romanToNumber(bookData[a].number);
-                const orderB = bookData[b].sortOrder || romanToNumber(bookData[b].number);
-                return orderA - orderB;
-            });
+            return keys.sort((a, b) => chronologicalRank.get(a) - chronologicalRank.get(b));
     }
 }
 
@@ -4504,9 +4285,11 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
 
     const sortedKeys = getSortedBookKeys(sortOrder);
 
-    sortedKeys.forEach((bookKey, index) => {
+    sortedKeys.forEach((bookKey) => {
         const book = bookData[bookKey];
-        const chronologicalNumber = index + 1;
+        // The book's fixed position in the chronology, not its position in the
+        // current view. Sorting by title must not renumber the chronology.
+        const chronologicalNumber = chronologicalRank.get(bookKey);
         const status = readingProgress.getStatus(bookKey);
 
         // Filter out Primarchs series if checkbox unchecked
@@ -4560,21 +4343,25 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
             statusBadge = '<div class="status-badge status-finished">✓ FINISHED</div>';
         }
 
-        // Add anthology label if this is an anthology story
+        // Name the parent volume. Printing the literal word "ANTHOLOGY" threw
+        // away book.anthology, so a card for MYRIAD never told you it lives in
+        // Heralds of the Siege, which is the one fact needed to buy it. Up to 21
+        // entries share a single cover image, so the name is the only way to
+        // tell many of these cards apart.
         let anthologyLabel = '';
         if (book.anthology) {
-            anthologyLabel = '<div class="anthology-label">ANTHOLOGY</div>';
+            anthologyLabel = `<div class="anthology-label">IN: ${escapeHtml(book.anthology)}</div>`;
         }
 
         bookCard.innerHTML = `
-            <div class="book-cover" style="background-image: url('${book.coverImage}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                <div class="book-number-overlay">${book.number}</div>
+            <div class="book-cover" style="background-image: url('${encodeURI(book.coverImage)}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                <div class="book-number-overlay">${escapeHtml(book.number)}</div>
                 <div class="chronological-badge">Chrono: ${chronologicalNumber}</div>
                 ${statusBadge}
             </div>
-            <div class="book-title">${book.title}</div>
+            <div class="book-title">${escapeHtml(book.title)}</div>
             ${anthologyLabel}
-            <div class="book-author">${book.author}</div>
+            <div class="book-author">${escapeHtml(book.author)}</div>
         `;
 
         // Add click event listener
@@ -4594,16 +4381,53 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
         filterInfo.className = 'filter-info';
         let infoText = `Showing ${displayedCount} book${displayedCount !== 1 ? 's' : ''}`;
 
+        // Resolve the internal sentinels, or the UI prints "__LOYALIST__"
+        const legionLabel = {
+            __LOYALIST__: 'the Loyalist Legions',
+            __TRAITOR__: 'the Traitor Legions'
+        }[filterLegion] || filterLegion;
+
         if (query && filterLegion) {
-            infoText += ` matching "${searchQuery}" in ${filterLegion}`;
+            infoText += ` matching "${searchQuery}" in ${legionLabel}`;
         } else if (query) {
             infoText += ` matching "${searchQuery}"`;
         } else if (filterLegion) {
-            infoText += ` featuring ${filterLegion}`;
+            infoText += ` featuring ${legionLabel}`;
         }
 
         filterInfo.textContent = infoText;
         bookDisplay.insertBefore(filterInfo, bookDisplay.firstChild);
+    }
+}
+
+// Escape text destined for innerHTML. No current field contains <, >, & or ",
+// so the card markup is safe by luck of the data rather than by construction.
+// One book title with an ampersand would otherwise break a card.
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+// Reflect a status change on a single card, in place.
+function updateBookCardStatus(bookKey, status) {
+    const card = document.querySelector(`.book-card[data-book="${bookKey}"]`);
+    if (!card) return;   // filtered out of the current view
+
+    card.className = 'book-card' + (status ? ` book-${status}` : '');
+
+    const cover = card.querySelector('.book-cover');
+    if (!cover) return;
+
+    cover.querySelector('.status-badge')?.remove();
+    if (status) {
+        const badge = document.createElement('div');
+        badge.className = `status-badge status-${status}`;
+        badge.textContent = status === 'reading' ? '📖 READING' : '✓ FINISHED';
+        cover.appendChild(badge);
     }
 }
 
@@ -4767,10 +4591,10 @@ function showModal(bookKey) {
         markReadBtn.textContent = newText;
         markReadBtn.className = 'mark-read-btn ' + newClass;
 
-        // Regenerate cards to update visual state, maintaining current filters
-        const currentLegionFilter = document.getElementById('legionFilter').value;
-        const currentSearch = document.getElementById('searchInput').value;
-        generateBookCards(currentLegionFilter, currentSearch);
+        // Update just this card. Rebuilding all 224 reset the scroll position,
+        // so marking book 90 as finished sent you back to book 1.
+        updateBookCardStatus(bookKey, newStatus);
+        updateProgressCounter();
     });
 
     // Add event listeners for character links
@@ -4788,13 +4612,13 @@ function showModal(bookKey) {
     // Show modal and store current book key
     modalOverlay.classList.add('active');
     modalOverlay.dataset.currentBook = bookKey;
-    document.body.style.overflow = 'hidden';
+    scrollLock.acquire();
 }
 
 // Close modal function
 function closeModal() {
     modalOverlay.classList.remove('active');
-    document.body.style.overflow = '';
+    scrollLock.release();
 }
 
 // Make character names clickable
@@ -4900,13 +4724,13 @@ function showCharacterModal(characterKey) {
 
     // Show modal
     document.getElementById('characterModalOverlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
+    scrollLock.acquire();
 }
 
 // Close character modal
 function closeCharacterModal() {
     document.getElementById('characterModalOverlay').classList.remove('active');
-    document.body.style.overflow = '';
+    scrollLock.release();
 }
 
 // Define loyalist vs traitor legions
@@ -4995,8 +4819,26 @@ function setupFilterListeners() {
     // Siege of Terra series toggle
     siegeCheckbox.addEventListener('change', applyFilters);
 
-    // Spoiler toggle - refresh open modal if any
+    // Restore the saved spoiler preference before anything renders. This is a
+    // safety preference, so losing it silently on reload is the worst possible
+    // failure for a reader who deliberately opted out of spoilers.
+    try {
+        const savedSpoilers = localStorage.getItem(SPOILER_KEY);
+        if (savedSpoilers !== null) {
+            spoilersCheckbox.checked = savedSpoilers === 'true';
+        }
+    } catch (error) {
+        console.warn('Spoiler preference could not be read:', error);
+    }
+
+    // Spoiler toggle - persist, then refresh open modal if any
     spoilersCheckbox.addEventListener('change', () => {
+        try {
+            localStorage.setItem(SPOILER_KEY, String(spoilersCheckbox.checked));
+        } catch (error) {
+            console.warn('Spoiler preference could not be saved:', error);
+        }
+
         // If a book modal is currently open, refresh it
         const modalOverlay = document.getElementById('modalOverlay');
         if (modalOverlay && modalOverlay.classList.contains('active')) {
@@ -5026,6 +4868,9 @@ function setupFilterListeners() {
         searchInput.value = '';
         primarchsCheckbox.checked = true;
         siegeCheckbox.checked = true;
+        // Reset the sort too. "Clear all" that left the sort alone made the
+        // list look unchanged for no visible reason.
+        sortSelect.value = 'chronological';
         generateBookCards('', '');
     });
 }
@@ -5145,42 +4990,6 @@ function initializeAllegiance() {
     }
 }
 
-// Secret Easter Egg
-function initializeSecretButton() {
-    const secretBtn = document.getElementById('secretButton');
-    const secretModal = document.getElementById('secretModalOverlay');
-    const closeSecretBtn = document.getElementById('closeSecretModal');
-
-    secretBtn.addEventListener('click', () => {
-        const password = prompt('Enter clearance code:');
-        if (password === 'nipper') {
-            secretModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        } else if (password !== null) {
-            alert('ACCESS DENIED - Invalid clearance code');
-        }
-    });
-
-    closeSecretBtn.addEventListener('click', () => {
-        secretModal.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-
-    secretModal.addEventListener('click', (e) => {
-        if (e.target === secretModal) {
-            secretModal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && secretModal.classList.contains('active')) {
-            secretModal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-}
-
 // Ordering Guide Modal functionality
 function initializeOrderingGuide() {
     const orderingBtn = document.getElementById('orderingGuideBtn');
@@ -5215,12 +5024,24 @@ function initializeOrderingGuide() {
         // Convert horizontal rules
         html = html.replace(/^---$/gim, '<hr>');
 
-        // Convert unordered lists
-        html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
-        html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+        // Convert blockquotes. Consecutive '>' lines become one blockquote.
+        html = html.replace(/(?:^>[ \t]?.*(?:\n|$))+/gm, (block) => {
+            const text = block
+                .replace(/^>[ \t]?/gm, '')
+                .trim()
+                .replace(/\n/g, ' ');
+            return `<blockquote>${text}</blockquote>\n`;
+        });
 
-        // Convert ordered lists (numbered)
-        html = html.replace(/^\d+\.\s+(.*$)/gim, '<li>$1</li>');
+        // Convert lists. Mark each item with its type first, then wrap each run
+        // of adjacent items in a single container, so that ordered and
+        // unordered lists keep their own wrapper instead of sharing one.
+        html = html.replace(/^[-*] +(.*)$/gim, '<li data-list="ul">$1</li>');
+        html = html.replace(/^\d+\. +(.*)$/gim, '<li data-list="ol">$1</li>');
+        html = html.replace(
+            /(?:<li data-list="(ul|ol)">.*<\/li>(?:\n|$))+/g,
+            (run, type) => `<${type}>${run.replace(/ data-list="(?:ul|ol)"/g, '').trim()}</${type}>\n`
+        );
 
         // Convert tables
         const tableRegex = /(\|[^\n]+\|\n)(\|[-:\s|]+\|\n)((\|[^\n]+\|\n)+)/g;
@@ -5255,7 +5076,8 @@ function initializeOrderingGuide() {
             para = para.trim();
             if (!para) return '';
             if (para.startsWith('<h') || para.startsWith('<ul') || para.startsWith('<ol') ||
-                para.startsWith('<table') || para.startsWith('<hr') || para.startsWith('<li>')) {
+                para.startsWith('<table') || para.startsWith('<hr') || para.startsWith('<li>') ||
+                para.startsWith('<blockquote')) {
                 return para;
             }
             return `<p>${para}</p>`;
@@ -5264,110 +5086,54 @@ function initializeOrderingGuide() {
         return html;
     }
 
-    // Load and display markdown content
-    function loadOrderingGuide() {
-        // The ORDERING_DECISIONS.md content (embedded for reliability)
-        const markdownContent = `# Horus Heresy Chronological Ordering Decision Log
+    // Load and display the generated ordering document.
+    // This is fetched rather than embedded, because an embedded copy drifted
+    // from the data until the two disagreed in 212 of 213 places.
+    let cachedGuide = null;
 
-**Last Updated:** 2026-02-05
-**Total Books:** 224
-**Purpose:** Authoritative chronological ordering for all Horus Heresy books and anthology stories.
+    async function loadOrderingGuide() {
+        if (cachedGuide) {
+            orderingModalBody.innerHTML = cachedGuide;
+            return;
+        }
 
----
+        orderingModalBody.innerHTML = '<p>RETRIEVING RECORDS...</p>';
 
-## Overview
-
-This collection contains **224 books** spanning the entire Horus Heresy saga from pre-Heresy origins through the Siege of Terra. Books are ordered by their **in-universe chronological timeline** to provide maximum narrative coherence.
-
-## Ordering Principles
-
-1. **Timeline Date Priority:** Books ordered strictly by in-universe timeline date
-2. **Range Handling:** Multi-year books (e.g., "007-009.M31") placed at range start
-3. **Simultaneous Events:** Main novels first, then anthology stories, then character series
-4. **Pre-Heresy Books:** Placed at end as supplemental origin material
-
----
-
-## Key Chronological Events Reference
-
-| Timeline | Event | Key Books |
-|----------|-------|-----------|
-| 820-970.M30 | Caliban Era | Descent of Angels |
-| 956.M30 | Lorgar Humiliation | The First Heretic |
-| 001.M31 | Council of Nikaea | A Thousand Sons |
-| 002-003.M31 | Horus at Peak | Horus Rising |
-| 004.M31 | Horus Corrupted | False Gods |
-| 005.M31 | Isstvan III | Galaxy in Flames |
-| 004-005.M31 | Burning of Prospero | A Thousand Sons, Prospero Burns |
-| 006.M31 | Isstvan V Massacre | Fulgrim |
-| 007.M31 | Battle of Calth | Know No Fear |
-| 007-008.M31 | Shadow Crusade | Betrayer |
-| 008-009.M31 | Battle of Molech | Vengeful Spirit |
-| 009.M31 | Imperium Secundus | The Unremembered Empire |
-| 012.M31 | Beta-Garmon | Titandeath, Wolfsbane |
-| 014.M31 | Siege of Terra | Solar War through The End and the Death |
-
----
-
-## Complete Chronological Book List
-
-Books are listed in chronological order by in-universe timeline. This archive contains all 224 books arranged to maximize narrative coherence and understanding of the Heresy timeline.
-
-**For the complete detailed list, see the main dataslate archive above.**
-
----
-
-## Anthology Collections
-
-- **Tales of Heresy (X)**: Pre-Heresy and early Heresy stories
-- **Age of Darkness (XVI)**: Mid-Heresy era stories
-- **The Primarchs (XX)**: Primarch-focused novellas
-- **Shadows of Treachery (XXII)**: Various Heresy stories
-- **Mark of Calth (XXV)**: Battle of Calth aftermath
-- **Legacies of Betrayal (XXXI)**: Wide-ranging stories
-- **War Without End (XXXIII)**: Mid-late Heresy battles
-- **Eye of Terra (XXXV)**: Various perspectives
-- **The Silent War (XXXVII)**: Shadow operations
-- **Corax (XL)**: Raven Guard anthology
-- **Garro (XLII)**: Nathaniel Garro series
-- **Shattered Legions (XLIII)**: Isstvan V survivors
-- **The Burden of Loyalty (XLVIII)**: Late Heresy
-- **Born of Flame (L)**: Salamanders anthology
-- **Heralds of the Siege (LII)**: Pre-Siege stories
-
----
-
-## Sources & Research
-
-- [Horus Heresy Timeline - Lexicanum](https://wh40k.lexicanum.com/wiki/Horus_Heresy_Timeline)
-- [Chronological Reading Order - Adeptus Ars](https://www.adeptusars.com/features/the-horus-heresy-books-in-chronological-order)
-- [Complete Reading Order - TL Branson](https://www.tlbranson.com/horus-heresy-reading-order/)
-
-**Last Review:** 2026-02-05
-**Status:** All 224 books verified and ordered chronologically`;
-
-        const htmlContent = parseMarkdown(markdownContent);
-        orderingModalBody.innerHTML = htmlContent;
+        try {
+            const response = await fetch('ORDERING_DECISIONS.md', { cache: 'no-cache' });
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            cachedGuide = parseMarkdown(await response.text());
+            orderingModalBody.innerHTML = cachedGuide;
+        } catch (error) {
+            // fetch fails on file:// origins, so say so rather than showing nothing
+            orderingModalBody.innerHTML =
+                '<h2>RECORDS UNAVAILABLE</h2>' +
+                '<p>The ordering log could not be retrieved. If you opened this page ' +
+                'directly from disk, serve it over HTTP instead, for example ' +
+                '<code>python3 -m http.server</code>.</p>' +
+                '<p>The full log is in <code>ORDERING_DECISIONS.md</code>.</p>';
+            console.error('Failed to load ORDERING_DECISIONS.md:', error);
+        }
     }
 
     // Open modal
     orderingBtn.addEventListener('click', () => {
-        loadOrderingGuide();
+        void loadOrderingGuide();
         orderingModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        scrollLock.acquire();
     });
 
     // Close modal - close button
     closeOrderingBtn.addEventListener('click', () => {
         orderingModal.classList.remove('active');
-        document.body.style.overflow = '';
+        scrollLock.release();
     });
 
     // Close modal - click outside
     orderingModal.addEventListener('click', (e) => {
         if (e.target === orderingModal) {
             orderingModal.classList.remove('active');
-            document.body.style.overflow = '';
+            scrollLock.release();
         }
     });
 
@@ -5375,7 +5141,7 @@ Books are listed in chronological order by in-universe timeline. This archive co
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && orderingModal.classList.contains('active')) {
             orderingModal.classList.remove('active');
-            document.body.style.overflow = '';
+            scrollLock.release();
         }
     });
 }
@@ -5383,7 +5149,6 @@ Books are listed in chronological order by in-universe timeline. This archive co
 // Add glitch effect to title on load
 window.addEventListener('load', () => {
     initializeAllegiance(); // Initialize theme switcher
-    initializeSecretButton(); // Initialize secret Easter egg
     initializeOrderingGuide(); // Initialize ordering guide modal
     populateLegionFilter(); // Populate filter dropdown
     setupFilterListeners(); // Set up filter events
