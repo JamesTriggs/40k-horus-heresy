@@ -1,0 +1,249 @@
+{
+ "batch": "eye-of-terra",
+ "anthologies": [
+  "Eye of Terra"
+ ],
+ "count": 16,
+ "entries": [
+  {
+   "bookKey": "eye-wolf-ash-fire",
+   "number": "XXXV.1",
+   "title": "THE WOLF OF ASH AND FIRE",
+   "author": "Graham McNeill",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "999.M30",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "A Space Wolves warrior's tale of fire and fury during the Heresy.",
+   "currentBlurbSafe": "The VI Legion unleashes savage warfare against the traitors."
+  },
+  {
+   "bookKey": "eye-sins-father",
+   "number": "XXXV.12",
+   "title": "SINS OF THE FATHER",
+   "author": "Andy Smillie",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "001.M31",
+   "currentLegions": [
+    "Blood Angels"
+   ],
+   "currentBlurb": "Blood Angels bear the weight of their Primarch's curse.",
+   "currentBlurbSafe": "The IX Legion struggles with the flaw in their gene-seed."
+  },
+  {
+   "bookKey": "eye-vorax",
+   "number": "XXXV.7",
+   "title": "VORAX",
+   "author": "Matthew Farrer",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "005-006.M31",
+   "currentLegions": [
+    "Mechanicum"
+   ],
+   "currentBlurb": "Battle-automata prowl the battlefields of the Heresy.",
+   "currentBlurbSafe": "The Mechanicum's war machines hunt in the shadows."
+  },
+  {
+   "bookKey": "eye-aurelian",
+   "number": "XXXV.2",
+   "title": "AURELIAN",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Lorgar's pilgrimage into the Eye of Terror and his transformation into a servant of Chaos. The Urizen seeks the truth about the gods and his place in their grand design.",
+   "currentBlurbSafe": "Lorgar journeys into the Eye of Terror, seeking truth about the gods and his destiny."
+  },
+  {
+   "bookKey": "eye-massacre",
+   "number": "XXXV.4",
+   "title": "MASSACRE",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "The brutal reality of the Heresy's massacres.",
+   "currentBlurbSafe": "A tale of slaughter and betrayal during the civil war."
+  },
+  {
+   "bookKey": "eye-final-compliance",
+   "number": "XXXV.16",
+   "title": "THE FINAL COMPLIANCE OF SIXTY-THREE FOURTEEN",
+   "author": "Guy Haley",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "The last compliance action of the Great Crusade before betrayal.",
+   "currentBlurbSafe": "A world is brought to compliance as the age of unity ends."
+  },
+  {
+   "bookKey": "eye-brotherhood-moon",
+   "number": "XXXV.5",
+   "title": "BROTHERHOOD OF THE MOON",
+   "author": "Chris Wraight",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "White Scars"
+   ],
+   "currentBlurb": "White Scars brotherhood is tested by the Heresy's divisions.",
+   "currentBlurbSafe": "The bonds of the V Legion face strain during the civil war."
+  },
+  {
+   "bookKey": "eye-inheritor",
+   "number": "XXXV.6",
+   "title": "INHERITOR",
+   "author": "Gav Thorpe",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "A Dark Angels warrior inherits a burden during the Heresy.",
+   "currentBlurbSafe": "The I Legion's secrets weigh heavily on those who bear them."
+  },
+  {
+   "bookKey": "eye-red-marked",
+   "number": "XXXV.9",
+   "title": "RED-MARKED",
+   "author": "Nick Kyme",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Warriors marked for death fight on despite their fate.",
+   "currentBlurbSafe": "Those condemned continue their struggle against destiny."
+  },
+  {
+   "bookKey": "eye-master-first",
+   "number": "XXXV.10",
+   "title": "MASTER OF THE FIRST",
+   "author": "Gav Thorpe",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "007-009.M31",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "The Master of the Deathwing faces the Heresy's challenges.",
+   "currentBlurbSafe": "Dark Angels' elite confront betrayal and duty."
+  },
+  {
+   "bookKey": "eye-ironfire",
+   "number": "XXXV.8",
+   "title": "IRONFIRE",
+   "author": "Rob Sanders",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "Iron Hands warriors unleash their fury after Ferrus's death.",
+   "currentBlurbSafe": "The X Legion's rage burns hot in vengeance for their Primarch."
+  },
+  {
+   "bookKey": "eye-stratagem",
+   "number": "XXXV.11",
+   "title": "STRATAGEM",
+   "author": "Nick Kyme",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Tactical genius is tested in the fires of civil war.",
+   "currentBlurbSafe": "Strategic minds clash in deadly competition."
+  },
+  {
+   "bookKey": "eye-herald-sanguinius",
+   "number": "XXXV.13",
+   "title": "HERALD OF SANGUINIUS",
+   "author": "Andy Smillie",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Blood Angels"
+   ],
+   "currentBlurb": "A herald carries word from the Great Angel.",
+   "currentBlurbSafe": "Messages from Sanguinius guide his sons through darkness."
+  },
+  {
+   "bookKey": "eye-long-night",
+   "number": "XXXV.3",
+   "title": "THE LONG NIGHT",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Night Lords"
+   ],
+   "currentBlurb": "The Night Lords bring terror to their enemies in the darkness.",
+   "currentBlurbSafe": "The VIII Legion wages war through fear and shadow."
+  },
+  {
+   "bookKey": "eye-eagles-talon",
+   "number": "XXXV.14",
+   "title": "THE EAGLE'S TALON",
+   "author": "John French",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "010-011.M31",
+   "currentLegions": [
+    "Emperor's Children"
+   ],
+   "currentBlurb": "The III Legion's fall into excess and corruption.",
+   "currentBlurbSafe": "Warriors of perfection become slaves to sensation."
+  },
+  {
+   "bookKey": "eye-iron-corpses",
+   "number": "XXXV.15",
+   "title": "IRON CORPSES",
+   "author": "David Annandale",
+   "anthology": "Eye of Terra",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "010-011.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "The fallen Iron Hands are more machine than man.",
+   "currentBlurbSafe": "Cybernetic warriors blur the line between living and dead."
+  }
+ ]
+}

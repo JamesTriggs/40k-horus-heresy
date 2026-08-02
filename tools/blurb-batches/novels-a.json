@@ -1,0 +1,208 @@
+{
+ "batch": "novels-a",
+ "anthologies": null,
+ "count": 13,
+ "entries": [
+  {
+   "bookKey": "descent-of-angels",
+   "number": "VI",
+   "title": "DESCENT OF ANGELS",
+   "author": "Mitchel Scanlon",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "820-970.M30",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "The Dark Angels' homeworld of Caliban burns with conflict long before the Emperor's arrival. Noble orders of knights battle the great beasts that terrorize humanity, with young Lion El'Jonson emerging as the greatest warrior the world has ever known. When the Emperor finally finds his lost son, Caliban is transformed, but seeds of jealousy and resentment are planted that will split the Legion in twain.",
+   "currentBlurbSafe": "The Dark Angels' homeworld of Caliban is steeped in ancient knightly traditions and plagued by great beasts. Noble orders of knights defend humanity, with young Lion El'Jonson emerging as an exceptional warrior. When the Emperor arrives, Caliban is transformed—but the changes will test the bonds of brotherhood and loyalty."
+  },
+  {
+   "bookKey": "the-first-heretic",
+   "number": "XIV",
+   "title": "THE FIRST HERETIC",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "956.M30",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Lorgar and the Word Bearers are humiliated by the Emperor for worshipping him as a god. Crushed by his father's rebuke, Lorgar seeks meaning in the great pilgrimage to Cadia and the Eye of Terror. There, he finds gods who welcome worship—the Ruinous Powers of Chaos. This is the story of the Legion that fell first, spreading the seeds of corruption throughout the Imperium and orchestrating the Warmaster's fall.",
+   "currentBlurbSafe": "Lorgar and the Word Bearers face the Emperor's wrath for worshipping him as a god. Humiliated and seeking meaning beyond the Imperial Truth, Lorgar embarks on a pilgrimage into the Eye of Terror. What he discovers there will challenge everything the Imperium believes about gods and faith."
+  },
+  {
+   "bookKey": "legion",
+   "number": "VII",
+   "title": "LEGION",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "001.M31",
+   "currentLegions": [
+    "Alpha Legion"
+   ],
+   "currentBlurb": "The Alpha Legion operates in the shadows of the Great Crusade, their methods questioned by all. When they encounter the Cabal, a xenos organization that claims to see the future, the twins Alpharius and Omegon are presented with a terrible choice: let the Imperium burn to deny Chaos, or fight for humanity's survival. Their decision will shape the course of the Heresy, though none will know which side they truly serve.",
+   "currentBlurbSafe": "The Alpha Legion operates in shadows, their methods questioned by all who witness them. When they encounter the Cabal, a mysterious xenos organization claiming to see the future, the twins Alpharius and Omegon must make a choice that will shape the coming conflict in ways none can predict."
+  },
+  {
+   "bookKey": "a-thousand-sons",
+   "number": "XII",
+   "title": "A THOUSAND SONS",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "001-004.M31",
+   "currentLegions": [
+    "Thousand Sons",
+    "Space Wolves"
+   ],
+   "currentBlurb": "Magnus the Red, master of psychic powers, foresees Horus's betrayal and uses sorcery to warn the Emperor—shattering the Webway Project and dooming Terra. The Emperor, enraged at this catastrophic breach, unleashes Leman Russ and the Space Wolves upon Prospero. The Thousand Sons, devoted scholars and psykers, are betrayed by their own mutations and the machinations of Tzeentch. Magnus's arrogance costs him everything.",
+   "currentBlurbSafe": "Magnus the Red, master of psychic powers, attempts to warn the Emperor of a terrible betrayal—but his methods catastrophically damage the Emperor's secret Webway Project. The Emperor unleashes Leman Russ and the Space Wolves upon Prospero, where the Thousand Sons face annihilation for Magnus's hubris."
+  },
+  {
+   "bookKey": "horus-rising",
+   "number": "I",
+   "title": "HORUS RISING",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "002-003.M31",
+   "currentLegions": [
+    "Sons of Horus",
+    "Luna Wolves"
+   ],
+   "currentBlurb": "The Great Crusade is at its zenith. Under the leadership of the brilliant Warmaster Horus, the Imperium's armies are unstoppable. Through Captain Garviel Loken's eyes, we witness the last days of the Imperium's golden age. But when Horus is wounded by the Anathame blade on Davin's moon, a xenos weapon laced with Chaos energies begins corrupting the Warmaster's soul. The architect of humanity's greatest triumph begins his descent into becoming its destroyer.",
+   "currentBlurbSafe": "The Great Crusade reaches its zenith under Warmaster Horus, the Emperor's most brilliant son. Captain Garviel Loken witnesses the Imperium's golden age, but when Horus is wounded by a xenos blade on Davin's moon, something begins to change in the Warmaster's soul."
+  },
+  {
+   "bookKey": "false-gods",
+   "number": "II",
+   "title": "FALSE GODS",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "004.M31",
+   "currentLegions": [
+    "Sons of Horus"
+   ],
+   "currentBlurb": "Horus lies dying from the Anathame's wound. In desperation, Erebus convinces the Legion to seek aid from the Serpent Lodge of Davin. In a twisted ritual, Horus's soul is cast into the warp where false visions show him abandoned by the Emperor. When he awakens, Horus is no longer the Emperor's loyal son—he has become the pawn of the Chaos Gods, convinced he must overthrow the Emperor to save humanity. The galaxy will burn for his pride.",
+   "currentBlurbSafe": "Horus lies dying from the Anathame's wound, and his sons desperately seek aid from the Serpent Lodge of Davin. In a dark ritual, Horus's spirit enters the warp, where he confronts visions that challenge his understanding of the Emperor's plans for humanity."
+  },
+  {
+   "bookKey": "the-outcast-dead",
+   "number": "XVII",
+   "title": "THE OUTCAST DEAD",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "004.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "While the Heresy erupts across the galaxy, Terra writhes with its own conflicts. Renegade Space Marines from various Legions are imprisoned deep beneath the Imperial Palace. When astropath Kai Zulane receives a prophetic vision of the Heresy's outcome, he becomes the most hunted man on Terra. The Outcast Dead must fight through the underhives and face the deadly custodians to deliver a message that could change everything.",
+   "currentBlurbSafe": "Deep beneath the Imperial Palace, renegade Space Marines from various Legions are imprisoned. When astropath Kai Zulane receives a prophetic vision about the Heresy, he becomes hunted by every faction on Terra. The Outcast Dead must fight through the underhives to deliver a message that could change everything."
+  },
+  {
+   "bookKey": "prospero-burns",
+   "number": "XV",
+   "title": "PROSPERO BURNS",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "004-005.M31",
+   "currentLegions": [
+    "Space Wolves",
+    "Thousand Sons"
+   ],
+   "currentBlurb": "The Space Wolves are the Emperor's executioners, and Leman Russ has been given his orders: make Magnus answer for his crime. Through the eyes of human observer Kasper Hawser, we see the Wolves descend upon Prospero with fury. But Horus has twisted the Emperor's command—what should have been censure becomes genocide. The Thousand Sons' homeworld burns, and Magnus breaks his own spine teleporting the survivors into the warp. Brother is set against brother, and there is no going back.",
+   "currentBlurbSafe": "The Space Wolves are the Emperor's executioners, and Leman Russ has been ordered to bring Magnus to account. Through the eyes of human observer Kasper Hawser, we witness the Wolves descend upon Prospero with brutal fury—but Horus has twisted the Emperor's command into something far darker."
+  },
+  {
+   "bookKey": "galaxy-in-flames",
+   "number": "III",
+   "title": "GALAXY IN FLAMES",
+   "author": "Ben Counter",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "005.M31",
+   "currentLegions": [
+    "Sons of Horus",
+    "Emperor's Children",
+    "Death Guard",
+    "World Eaters"
+   ],
+   "currentBlurb": "The Heresy begins in fire. On the virus-bombed ruins of Isstvan III, brother turns on brother. Horus reveals his treachery, and his first victims are his own sons—loyalist elements of the Traitor Legions. Garviel Loken, Saul Tarvitz, and Nathaniel Garro survive the Life-Eater virus bombardment and mount a desperate last stand. The traitors unleash a second bombardment that reduces the planet to atomic fire. The Age of Darkness has begun.",
+   "currentBlurbSafe": "On the virus-bombed ruins of Isstvan III, brother turns on brother as Horus reveals his treachery. Loyalist elements of the Traitor Legions mount a desperate last stand. Garviel Loken, Saul Tarvitz, and Nathaniel Garro must survive the ultimate betrayal as the Age of Darkness begins."
+  },
+  {
+   "bookKey": "mechanicum",
+   "number": "IX",
+   "title": "MECHANICUM",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "005.M31",
+   "currentLegions": [
+    "Mechanicum"
+   ],
+   "currentBlurb": "As Terra reels from Magnus's psychic assault, Mars erupts into civil war. Kelbor-Hal, Fabricator General of Mars, pledges allegiance to Horus, seduced by forbidden technology and dark promises. Loyalist tech-priests fight desperately to prevent the traitors from seizing Mars's ancient weapons. Titan battles Titan in the forge-temples as the Mechanicum tears itself apart. The outcome will determine whether Terra stands or falls when Horus comes.",
+   "currentBlurbSafe": "As Terra reels from Magnus's psychic assault, Mars erupts into civil war. Fabricator General Kelbor-Hal is seduced by forbidden technology and dark promises, pledging allegiance to Horus. Loyalist tech-priests fight desperately to prevent the traitors from seizing Mars's ancient weapons as Titan battles Titan."
+  },
+  {
+   "bookKey": "the-flight-of-the-eisenstein",
+   "number": "IV",
+   "title": "THE FLIGHT OF THE EISENSTEIN",
+   "author": "James Swallow",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "005.M31",
+   "currentLegions": [
+    "Death Guard"
+   ],
+   "currentBlurb": "Battle-Captain Nathaniel Garro of the Death Guard escapes the betrayal at Isstvan III aboard the damaged frigate Eisenstein. Pursued by traitor vessels and fighting off the first blooms of Nurgle's plague, Garro must reach Terra to warn the Emperor that Horus has turned traitor and half the Legions have fallen with him. His desperate journey marks him as the first of Malcador's Knights-Errant—the warriors who will become the founding members of the Grey Knights.",
+   "currentBlurbSafe": "Battle-Captain Nathaniel Garro escapes the betrayal at Isstvan III aboard the damaged frigate Eisenstein. Pursued by traitor vessels and fighting off a mysterious plague, Garro must reach Terra to warn the Emperor that Horus has turned traitor and half the Legions have fallen with him."
+  },
+  {
+   "bookKey": "fallen-angels",
+   "number": "XI",
+   "title": "FALLEN ANGELS",
+   "author": "Mike Lee",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "005.M31",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "As the Heresy spreads, the Dark Angels are divided. Luther, left behind on Caliban while Lion El'Jonson leads the Legion in the Great Crusade, grows bitter with resentment. Chaos whispers to those who feel abandoned, and Caliban's defenders begin to question their loyalty. When the Lion returns, he will find his homeworld has become a fortress of rebellion, setting the stage for a fratricidal conflict that will haunt the Dark Angels forever.",
+   "currentBlurbSafe": "As the Heresy spreads, the Dark Angels are divided between those crusading with the Lion and those stationed on Caliban under Luther's command. Resentment grows among those left behind, and Chaos whispers to those who feel abandoned by their Primarch."
+  },
+  {
+   "bookKey": "fear-to-tread",
+   "number": "XXI",
+   "title": "FEAR TO TREAD",
+   "author": "James Swallow",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "005-006.M31",
+   "currentLegions": [
+    "Blood Angels"
+   ],
+   "currentBlurb": "Horus sends his brother Sanguinius into a trap at Signus Prime, where the daemon Ka'Bandha and the forces of Chaos await. The Blood Angels face their worst nightmare as the Black Rage threatens to consume the entire Legion. Sanguinius must battle not only daemons but the cursed flaw in his sons' gene-seed. Though they win through, the Blood Angels are left traumatized and delayed from reaching Terra in time to prevent the Dropsite Massacre.",
+   "currentBlurbSafe": "Horus sends Sanguinius into a trap at Signus Prime, where daemon forces await. The Blood Angels face a nightmare as a dark flaw in their gene-seed threatens to consume the entire Legion. Sanguinius must battle both external daemons and the curse hidden within his sons."
+  }
+ ]
+}

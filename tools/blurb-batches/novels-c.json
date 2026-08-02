@@ -1,0 +1,213 @@
+{
+ "batch": "novels-c",
+ "anthologies": null,
+ "count": 13,
+ "entries": [
+  {
+   "bookKey": "pharos",
+   "number": "XXXIV",
+   "title": "PHAROS",
+   "author": "Guy Haley",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Ultramarines",
+    "Imperial Fists",
+    "Night Lords"
+   ],
+   "currentBlurb": "The Pharos is an ancient xenos device on the world of Sotha that can pierce even the Ruinstorm's interference. The Night Lords, seeking revenge after defeat, assault Sotha to destroy the beacon and blind the loyalists. Polux of the Imperial Fists and the Ultramarines garrison defend desperately. The Pharos is used at full power to drive off the Night Lords, but the massive energy discharge sends a signal across time and space that will, ten thousand years later, draw the Tyranid Hive Fleets toward the galaxy. One crisis averted seeds another apocalypse.",
+   "currentBlurbSafe": "The Pharos is an ancient xenos device on Sotha that can pierce even the Ruinstorm's interference. When the Night Lords assault the world to destroy the beacon, Polux of the Imperial Fists and the Ultramarines garrison mount a desperate defense of this vital strategic asset."
+  },
+  {
+   "bookKey": "deathfire",
+   "number": "XXXII",
+   "title": "DEATHFIRE",
+   "author": "Nick Kyme",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "The Salamanders embark on a desperate quest to find Vulkan and return him to Nocturne. They believe that bringing their Primarch home will restore him and the Legion. The journey is fraught with danger, and they carry Vulkan's seemingly dead body through war-torn space. Along the way, they must overcome traitor forces, navigate warp storms, and face the question of whether their Primarch can ever truly be restored. The Salamanders' determination and loyalty to their father are tested to the limit.",
+   "currentBlurbSafe": "The Salamanders embark on a desperate quest to find Vulkan and return him to Nocturne, believing that bringing their Primarch home will restore him and the Legion. The journey through war-torn space tests their determination and loyalty to their father."
+  },
+  {
+   "bookKey": "tallarn",
+   "number": "XLV",
+   "title": "TALLARN",
+   "author": "John French",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "010-012.M31",
+   "currentLegions": [
+    "Imperial Army",
+    "Iron Warriors"
+   ],
+   "currentBlurb": "When the Iron Warriors virus-bomb Tallarn to uncover an ancient buried secret, the world becomes a rad-wasteland. But billions of Imperial Guard tankers remain, and they wage the largest armored warfare campaign in galactic history across the poisoned dunes. Thousands of tanks clash in desperate battles while the Iron Warriors dig deeper for their mysterious prize. The war for Tallarn becomes a symbol of mortal humanity's defiance—not superhuman Space Marines, but ordinary soldiers fighting against impossible odds to deny the traitors their victory.",
+   "currentBlurbSafe": "When the Iron Warriors virus-bomb Tallarn seeking an ancient buried secret, the world becomes a rad-wasteland. Billions of Imperial Guard tankers wage the largest armored warfare campaign in galactic history, fighting to deny the traitors their prize in brutal tank battles across poisoned dunes."
+  },
+  {
+   "bookKey": "praetorian-of-dorn",
+   "number": "XXXIX",
+   "title": "PRAETORIAN OF DORN",
+   "author": "John French",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Imperial Fists",
+    "Alpha Legion"
+   ],
+   "currentBlurb": "Alpharius launches a covert assault on the Solar System itself, infiltrating with sleeper agents and sabotage cells. Rogal Dorn, master of defense, must uncover and eliminate the Alpha Legion's networks before the Siege of Terra begins. The conflict is as much espionage as warfare, with both Primarchs testing their wits. In a stunning climax, Dorn confronts Alpharius in personal combat and slays him—or does he? With the Alpha Legion, nothing is ever certain. The twin Primarchs' deceptions may run deeper than anyone knows.",
+   "currentBlurbSafe": "Alpharius launches a covert assault on the Solar System itself, infiltrating with sleeper agents and sabotage cells. Rogal Dorn must uncover and eliminate the Alpha Legion's networks before the Siege of Terra begins in a conflict as much espionage as warfare."
+  },
+  {
+   "bookKey": "the-master-of-mankind",
+   "number": "XLI",
+   "title": "THE MASTER OF MANKIND",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "011.M31",
+   "currentLegions": [
+    "Custodian Guard",
+    "Sisters of Silence"
+   ],
+   "currentBlurb": "Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway, defending humanity's future against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path through the Webway that would free humanity from warp travel. As the Emperor battles with the Custodians and Sisters of Silence against endless daemon hordes, His dream of apotheosis for humanity crumbles. He cannot leave to face Horus, for if the Webway breach is not contained, Terra itself will fall to Chaos.",
+   "currentBlurbSafe": "Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work—a human-controlled path that would free humanity from warp travel. As daemon hordes assault the breach, the Emperor cannot leave His post, even as Horus marches on Terra."
+  },
+  {
+   "bookKey": "the-path-of-heaven",
+   "number": "XXXVI",
+   "title": "THE PATH OF HEAVEN",
+   "author": "Chris Wraight",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "011.M31",
+   "currentLegions": [
+    "White Scars",
+    "Death Guard"
+   ],
+   "currentBlurb": "The White Scars race to Terra through the war-torn galaxy, harrying the Death Guard fleet and disrupting traitor supply lines. Jaghatai Khan leads his Legion in a lightning campaign of hit-and-run warfare, buying precious time for Terra's defenses. But the Death Guard, now fully transformed by Nurgle's plague, are relentless. The Khan must also deal with the Sagyar Mazan—those White Scars who sided with the traitors and now seek atonement through death. The chase culminates in a desperate battle in the void.",
+   "currentBlurbSafe": "The White Scars race to Terra through the war-torn galaxy, harrying the Death Guard fleet in a lightning campaign of hit-and-run warfare. Jaghatai Khan must also deal with the Sagyar Mazan—White Scars who sided with traitors and now seek atonement."
+  },
+  {
+   "bookKey": "angels-of-caliban",
+   "number": "XXXVIII",
+   "title": "ANGELS OF CALIBAN",
+   "author": "Gav Thorpe",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "011.M31",
+   "currentLegions": [
+    "Dark Angels",
+    "Night Lords"
+   ],
+   "currentBlurb": "The Lion pursues the Night Lords through the Ruinstorm while dark secrets about Caliban's fall spread within the Legion. The Dark Angels are divided between those who know the truth about Luther's rebellion and those kept in ignorance. As the Lion closes in on Konrad Curze, the Dark Angels' internal fractures widen. The hunt for the Night Haunter becomes secondary to the devastating realization that the Dark Angels' homeworld has turned traitor, and half the Legion has fallen with it.",
+   "currentBlurbSafe": "The Lion pursues the Night Lords through the Ruinstorm while dark secrets about Caliban spread within the Legion. As the Lion closes in on Konrad Curze, devastating truths about the Dark Angels' homeworld begin to emerge."
+  },
+  {
+   "bookKey": "old-earth",
+   "number": "XLVII",
+   "title": "OLD EARTH",
+   "author": "Nick Kyme",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "011.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Vulkan finally returns to Terra, restored in mind and spirit. His trials have tested him beyond imagining, but the Primarch of the Salamanders has endured. He brings with him a weapon designed for use against the Traitor forces. Reunited with his Legion, Vulkan prepares for the final defense of Terra. His journey through death and rebirth has given him unique insights, but also left scars that even a Primarch cannot easily heal. The Salamanders welcome their father home, knowing the darkest battles still lie ahead.",
+   "currentBlurbSafe": "Vulkan returns to Terra, restored after trials that tested him beyond imagining. He brings with him a weapon designed for use against the Traitor forces. Reunited with his Legion, Vulkan prepares for the final defense of Terra."
+  },
+  {
+   "bookKey": "ruinstorm",
+   "number": "XLVI",
+   "title": "RUINSTORM",
+   "author": "David Annandale",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "011.M31",
+   "currentLegions": [
+    "Ultramarines",
+    "Dark Angels",
+    "Blood Angels"
+   ],
+   "currentBlurb": "Guilliman, the Lion, and Sanguinius unite to breach the Ruinstorm and reach Terra. Each Primarch must face trials designed to break them—their greatest fears and doubts manifested by the warp. They discover the storm is powered by daemonic engines at Davin and other key locations. To break the storm, they must split up, each taking a separate path to destroy these focal points. Their brotherhood is tested, but ultimately their determination prevails. The Ruinstorm begins to dissipate, opening the way to Terra.",
+   "currentBlurbSafe": "Guilliman, the Lion, and Sanguinius unite to breach the Ruinstorm and reach Terra. Each Primarch must face trials designed to break them—their greatest fears and doubts manifested by the warp. To break the storm, they must split up and face separate paths."
+  },
+  {
+   "bookKey": "wolfsbane",
+   "number": "XLIX",
+   "title": "WOLFSBANE",
+   "author": "Guy Haley",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "012.M31",
+   "currentLegions": [
+    "Space Wolves",
+    "Sons of Horus"
+   ],
+   "currentBlurb": "Leman Russ, filled with guilt over Prospero and driven by prophecy, attempts a desperate assassination strike against Horus. Armed with the spear Gungnir, forged by the Emperor Himself to wound even a Primarch empowered by Chaos, Russ leads his Wolves in a suicidal assault. He fights through the Sons of Horus to face the Warmaster in single combat. Russ wounds Horus gravely, but the Chaos Gods restore their champion. Russ barely escapes with his life, his Legion mauled. The gambit fails, but it proves Horus is not invincible—he can be hurt.",
+   "currentBlurbSafe": "Leman Russ, driven by prophecy and guilt over Prospero, attempts a desperate assassination strike against Horus. Armed with the Emperor's spear Gungnir, Russ leads his Wolves in a suicidal assault to prove the Warmaster can be wounded."
+  },
+  {
+   "bookKey": "titandeath",
+   "number": "LIII",
+   "title": "TITANDEATH",
+   "author": "Guy Haley",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "012.M31",
+   "currentLegions": [
+    "Collegia Titanica"
+   ],
+   "currentBlurb": "Beta-Garmon, the gateway to the Solar System, becomes the site of the largest Titan battle in the Heresy. Dozens of Titan Legios clash across multiple worlds in the Beta-Garmon cluster. Imperator Titans fall in apocalyptic duels as both sides commit everything to control this strategic chokepoint. The Loyalist Legios fight desperately to delay the traitors' advance, buying Terra precious time to prepare. The battle rages for months, with millions dying beneath the Titans' feet. Though the loyalists eventually retreat, they have bloodied the traitor host and delayed the inevitable siege.",
+   "currentBlurbSafe": "Beta-Garmon, the gateway to the Solar System, becomes the site of the largest Titan battle in the Heresy. Dozens of Titan Legios clash across multiple worlds as both sides commit everything to control this strategic chokepoint leading to Terra."
+  },
+  {
+   "bookKey": "slaves-to-darkness",
+   "number": "LI",
+   "title": "SLAVES TO DARKNESS",
+   "author": "John French",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "013.M31",
+   "currentLegions": [
+    "Sons of Horus",
+    "All Traitor Legions"
+   ],
+   "currentBlurb": "Horus lies wounded from Russ's spear, and the Chaos Gods withdraw their favor. The traitor alliance fractures as each Legion pursues its own dark agenda. Horus must prove himself worthy of the Gods' power once more. He purges the last remnants of his humanity, embracing full damnation. The Warmaster finally accepts that he is not using Chaos—he serves it utterly. The Gods restore their champion, now more monster than man. United under Horus's dark will, the traitor fleets finally begin their advance on Terra. The Siege is about to begin.",
+   "currentBlurbSafe": "Horus lies wounded and the Chaos Gods withdraw their favor. The traitor alliance fractures as each Legion pursues its own dark agenda. Horus must prove himself worthy once more and unite the traitor forces for the final advance on Terra."
+  },
+  {
+   "bookKey": "the-buried-dagger",
+   "number": "LIV",
+   "title": "THE BURIED DAGGER",
+   "author": "James Swallow",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "013.M31",
+   "currentLegions": [
+    "Death Guard"
+   ],
+   "currentBlurb": "The Death Guard fleet becomes trapped in the warp, where Nurgle's Rot consumes them. Mortarion, who swore never to serve tyrants after his upbringing on Barbarus, watches his sons die in agony. In desperation, he calls out for aid—and Nurgle answers. Mortarion pledges himself to the Plague God to save his Legion. They emerge from the warp transformed into bloated plague carriers, their white armor turned corpse-grey and green. Meanwhile, Malcador continues forging the foundations of the Inquisition and Grey Knights. The stage is set for the final confrontation.",
+   "currentBlurbSafe": "The Death Guard fleet becomes trapped in the warp, where Nurgle's plague consumes them. Mortarion, who swore never to serve tyrants, faces a terrible choice as his sons die in agony. Meanwhile, Malcador continues forging the foundations of the Inquisition and Grey Knights."
+  }
+ ]
+}

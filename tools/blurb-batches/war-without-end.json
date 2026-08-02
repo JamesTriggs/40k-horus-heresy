@@ -1,0 +1,324 @@
+{
+ "batch": "war-without-end",
+ "anthologies": [
+  "War Without End"
+ ],
+ "count": 21,
+ "entries": [
+  {
+   "bookKey": "war-divine-adoratrice",
+   "number": "XXXIII.12",
+   "title": "THE DIVINE ADORATRICE",
+   "author": "Graham McNeill",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "966.M30",
+   "currentLegions": [
+    "Thousand Sons"
+   ],
+   "currentBlurb": "The Thousand Sons delve deeper into sorcery and forbidden lore.",
+   "currentBlurbSafe": "Sorcerers of the XV Legion seek dangerous knowledge."
+  },
+  {
+   "bookKey": "war-virtues-sons",
+   "number": "XXXIII.16",
+   "title": "VIRTUES OF THE SONS",
+   "author": "Andy Smillie",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "001.M31",
+   "currentLegions": [
+    "Blood Angels"
+   ],
+   "currentBlurb": "Blood Angels struggle to maintain their nobility amid the Heresy's brutality.",
+   "currentBlurbSafe": "The IX Legion fights to preserve their virtue in a savage war."
+  },
+  {
+   "bookKey": "war-sermon-exodus",
+   "number": "XXXIII.1",
+   "title": "SERMON OF EXODUS",
+   "author": "David Annandale",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "004.M31",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Word Bearers preach their dark gospel during the endless war.",
+   "currentBlurbSafe": "The XVII Legion spreads their corrupted faith across the warzone."
+  },
+  {
+   "bookKey": "war-howl-hearthworld",
+   "number": "XXXIII.2",
+   "title": "HOWL OF THE HEARTHWORLD",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "004.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "The Space Wolves defend their homeworld against traitor forces.",
+   "currentBlurbSafe": "The VI Legion fights to protect Fenris from the Heresy's touch."
+  },
+  {
+   "bookKey": "war-lord-red-sands",
+   "number": "XXXIII.3",
+   "title": "LORD OF THE RED SANDS",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "005.M31",
+   "currentLegions": [
+    "World Eaters"
+   ],
+   "currentBlurb": "Angron's past as a gladiator slave haunts him as the World Eaters descend into madness.",
+   "currentBlurbSafe": "The Red Angel's tragic past is revealed as his Legion embraces bloodshed."
+  },
+  {
+   "bookKey": "war-artefacts",
+   "number": "XXXIII.8",
+   "title": "ARTEFACTS",
+   "author": "Nick Kyme",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Salamanders recover precious relics from the war's devastation.",
+   "currentBlurbSafe": "The XVIII Legion seeks to preserve artifacts from destruction."
+  },
+  {
+   "bookKey": "war-chirurgeon",
+   "number": "XXXIII.11",
+   "title": "CHIRURGEON",
+   "author": "Nick Kyme",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Emperor's Children"
+   ],
+   "currentBlurb": "Fabius Bile conducts his dark experiments on the fallen.",
+   "currentBlurbSafe": "The Clonelord's twisted surgeries continue unabated."
+  },
+  {
+   "bookKey": "war-phoenician",
+   "number": "XXXIII.9",
+   "title": "THE PHOENICIAN",
+   "author": "Nick Kyme",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Emperor's Children"
+   ],
+   "currentBlurb": "Fulgrim's corruption reaches new depths of depravity.",
+   "currentBlurbSafe": "The Phoenician's fall into darkness continues."
+  },
+  {
+   "bookKey": "war-allegiance",
+   "number": "XXXIII.20",
+   "title": "ALLEGIANCE",
+   "author": "Chris Wraight",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007-009.M31",
+   "currentLegions": [
+    "White Scars"
+   ],
+   "currentBlurb": "White Scars warriors declare their loyalty in the galaxy's hour of betrayal.",
+   "currentBlurbSafe": "The V Legion chooses their side in the civil war."
+  },
+  {
+   "bookKey": "war-daemonology",
+   "number": "XXXIII.21",
+   "title": "DAEMONOLOGY",
+   "author": "Chris Wraight",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Thousand Sons"
+   ],
+   "currentBlurb": "The study of daemons leads the Thousand Sons deeper into damnation.",
+   "currentBlurbSafe": "Forbidden knowledge of the warp consumes those who seek it."
+  },
+  {
+   "bookKey": "war-gunsight",
+   "number": "XXXIII.18",
+   "title": "GUNSIGHT",
+   "author": "James Swallow",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "A sniper's perspective on the endless war.",
+   "currentBlurbSafe": "Through a warrior's gunsight, the war stretches to infinity."
+  },
+  {
+   "bookKey": "war-laurel-defiance",
+   "number": "XXXIII.5",
+   "title": "THE LAUREL OF DEFIANCE",
+   "author": "Guy Haley",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Loyalists stand defiant against overwhelming odds.",
+   "currentBlurbSafe": "Warriors refuse to yield despite impossible circumstances."
+  },
+  {
+   "bookKey": "war-safe-shadowed-place",
+   "number": "XXXIII.6",
+   "title": "A SAFE AND SHADOWED PLACE",
+   "author": "Guy Haley",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "No place remains safe as the Heresy consumes the galaxy.",
+   "currentBlurbSafe": "Refuge becomes illusion in a galaxy at war."
+  },
+  {
+   "bookKey": "war-imperfect",
+   "number": "XXXIII.10",
+   "title": "IMPERFECT",
+   "author": "Nick Kyme",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Emperor's Children"
+   ],
+   "currentBlurb": "The III Legion's obsession with perfection becomes their damnation.",
+   "currentBlurbSafe": "The pursuit of perfection leads only to corruption."
+  },
+  {
+   "bookKey": "war-wolf-mother",
+   "number": "XXXIII.13",
+   "title": "WOLF MOTHER",
+   "author": "Graham McNeill",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "The warriors of Fenris honor their traditions during the civil war.",
+   "currentBlurbSafe": "Space Wolves maintain their culture amid galaxy-wide treachery."
+  },
+  {
+   "bookKey": "war-harrowing",
+   "number": "XXXIII.15",
+   "title": "THE HARROWING",
+   "author": "Rob Sanders",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "A harrowing tale of survival in the Heresy's darkest moments.",
+   "currentBlurbSafe": "Warriors endure unimaginable horror during the civil war."
+  },
+  {
+   "bookKey": "war-all-remains",
+   "number": "XXXIII.17",
+   "title": "ALL THAT REMAINS",
+   "author": "James Swallow",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "In war's aftermath, only ruins and memories remain.",
+   "currentBlurbSafe": "The Heresy leaves only devastation in its wake."
+  },
+  {
+   "bookKey": "war-lions-command",
+   "number": "XXXIII.19",
+   "title": "BY THE LION'S COMMAND",
+   "author": "Gav Thorpe",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "Dark Angels follow their Primarch's orders without question.",
+   "currentBlurbSafe": "The I Legion executes the Lion's will with absolute obedience."
+  },
+  {
+   "bookKey": "war-black-oculus",
+   "number": "XXXIII.4",
+   "title": "BLACK OCULUS",
+   "author": "John French",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "010-011.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "A tale of void warfare and dark secrets in the endless conflict.",
+   "currentBlurbSafe": "Ships clash in the darkness between stars."
+  },
+  {
+   "bookKey": "war-twisted",
+   "number": "XXXIII.7",
+   "title": "TWISTED",
+   "author": "Guy Haley",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Corruption warps warriors and worlds alike.",
+   "currentBlurbSafe": "The touch of Chaos twists everything it reaches."
+  },
+  {
+   "bookKey": "war-hands-emperor",
+   "number": "XXXIII.14",
+   "title": "HANDS OF THE EMPEROR",
+   "author": "Rob Sanders",
+   "anthology": "War Without End",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012.M31",
+   "currentLegions": [
+    "Custodian Guard"
+   ],
+   "currentBlurb": "The Emperor's golden guardians strike against the traitors.",
+   "currentBlurbSafe": "Custodians undertake deadly missions in the Emperor's name."
+  }
+ ]
+}

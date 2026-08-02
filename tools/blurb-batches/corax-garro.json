@@ -1,0 +1,205 @@
+{
+ "batch": "corax-garro",
+ "anthologies": [
+  "Corax",
+  "Garro"
+ ],
+ "count": 13,
+ "entries": [
+  {
+   "bookKey": "corax-weregeld",
+   "number": "XL.1",
+   "title": "WEREGELD",
+   "author": "Gav Thorpe",
+   "anthology": "Corax",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "006-007.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "Corax demands weregeld (blood-price) from the traitors for the slaughter at Isstvan. The Ravenlord's quest for vengeance begins.",
+   "currentBlurbSafe": "Corvus Corax seeks blood-price for his fallen sons after the Dropsite Massacre."
+  },
+  {
+   "bookKey": "corax-soulforge",
+   "number": "XL.2",
+   "title": "SOULFORGE",
+   "author": "Gav Thorpe",
+   "anthology": "Corax",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "Corax obtains gene-tech from Terra to rebuild his shattered Legion, forging new warriors to replace the fallen.",
+   "currentBlurbSafe": "The Ravenlord attempts to restore his Legion using forbidden gene-technology."
+  },
+  {
+   "bookKey": "corax-ravenlord",
+   "number": "XL.3",
+   "title": "RAVENLORD",
+   "author": "Gav Thorpe",
+   "anthology": "Corax",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "The horrific failure of Corax's gene-seed experiments creates monsters. The Ravenlord must destroy his own creations and face his failure.",
+   "currentBlurbSafe": "Corax confronts the terrible consequences of his attempts to rebuild the Raven Guard."
+  },
+  {
+   "bookKey": "corax-shadowmasters",
+   "number": "XL.4",
+   "title": "THE SHADOWMASTERS",
+   "author": "Gav Thorpe",
+   "anthology": "Corax",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "The Raven Guard's masters of stealth and shadow warfare strike at the traitors.",
+   "currentBlurbSafe": "Elite Raven Guard warriors employ guerrilla tactics against superior forces."
+  },
+  {
+   "bookKey": "garro-oath-moment",
+   "number": "XLII.1",
+   "title": "GARRO: OATH OF MOMENT",
+   "author": "James Swallow",
+   "anthology": "Garro",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garro swears his oath to Malcador and begins his service as the first Knight-Errant.",
+   "currentBlurbSafe": "Nathaniel Garro pledges his loyalty to Malcador and becomes a Knight-Errant."
+  },
+  {
+   "bookKey": "garro-sword-truth",
+   "number": "XLII.2",
+   "title": "GARRO: SWORD OF TRUTH",
+   "author": "James Swallow",
+   "anthology": "Garro",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garro seeks truth amid lies as he hunts for loyalists among the traitor Legions.",
+   "currentBlurbSafe": "The Knight-Errant searches for loyal warriors trapped in fallen Legions."
+  },
+  {
+   "bookKey": "corax-value-fear",
+   "number": "XL.5",
+   "title": "THE VALUE OF FEAR",
+   "author": "Gav Thorpe",
+   "anthology": "Corax",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "The Raven Guard learn that fear is a weapon as potent as any blade.",
+   "currentBlurbSafe": "The XIX Legion discovers the tactical value of terror and psychological warfare."
+  },
+  {
+   "bookKey": "corax-raptor",
+   "number": "XL.6",
+   "title": "RAPTOR",
+   "author": "Gav Thorpe",
+   "anthology": "Corax",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "The Raptors, Corax's gene-forged creations, prove their worth before their tragic transformation into monsters.",
+   "currentBlurbSafe": "Corax's enhanced warriors fight for the Legion before disaster strikes."
+  },
+  {
+   "bookKey": "garro-legion-one",
+   "number": "XLII.3",
+   "title": "GARRO: LEGION OF ONE",
+   "author": "James Swallow",
+   "anthology": "Garro",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Alone against impossible odds, Garro proves one loyal warrior can make a difference.",
+   "currentBlurbSafe": "Garro undertakes a solo mission that tests his resolve and skills."
+  },
+  {
+   "bookKey": "garro-shield-lies",
+   "number": "XLII.4",
+   "title": "GARRO: SHIELD OF LIES",
+   "author": "James Swallow",
+   "anthology": "Garro",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "008-009.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Deception becomes a shield as Garro navigates the Heresy's web of lies.",
+   "currentBlurbSafe": "The Knight-Errant uses deception as a weapon against the traitors."
+  },
+  {
+   "bookKey": "garro-burden-duty",
+   "number": "XLII.5",
+   "title": "BURDEN OF DUTY",
+   "author": "James Swallow",
+   "anthology": "Garro",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "009-010.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garro bears the heavy burden of duty as Malcador's agent, sacrificing everything for the Emperor's vision.",
+   "currentBlurbSafe": "The weight of responsibility tests Garro's resolve and dedication."
+  },
+  {
+   "bookKey": "garro-ashes-fealty",
+   "number": "XLII.6",
+   "title": "GARRO: ASHES OF FEALTY",
+   "author": "James Swallow",
+   "anthology": "Garro",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "010-011.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "From the ashes of his former Legion, Garro's loyalty burns ever brighter.",
+   "currentBlurbSafe": "Garro confronts his past as he forges a new future serving Malcador."
+  },
+  {
+   "bookKey": "garro-vow-faith",
+   "number": "XLII.7",
+   "title": "GARRO: VOW OF FAITH",
+   "author": "James Swallow",
+   "anthology": "Garro",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "011-013.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garro's final vow cements his transformation and his role in founding what will become the Grey Knights and Inquisition.",
+   "currentBlurbSafe": "The Knight-Errant makes his final vow, completing his journey from Death Guard to the Emperor's agent."
+  }
+ ]
+}

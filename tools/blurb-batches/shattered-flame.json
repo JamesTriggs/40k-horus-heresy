@@ -1,0 +1,253 @@
+{
+ "batch": "shattered-flame",
+ "anthologies": [
+  "Shattered Legions",
+  "Born of Flame"
+ ],
+ "count": 16,
+ "entries": [
+  {
+   "bookKey": "flame-promethean-sun",
+   "number": "L.1",
+   "title": "PROMETHEAN SUN",
+   "author": "Nick Kyme",
+   "anthology": "Born of Flame",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "001.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Before the Heresy, Vulkan and his Salamanders face a xenos threat that tests their humanity and martial prowess.",
+   "currentBlurbSafe": "The Salamanders face a xenos menace before the galaxy descends into civil war."
+  },
+  {
+   "bookKey": "shattered-immortal-duty",
+   "number": "XLIII.3",
+   "title": "IMMORTAL DUTY",
+   "author": "Nick Kyme",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Salamanders survivors honor their duty to protect humanity despite their Legion's shattering.",
+   "currentBlurbSafe": "The XVIII Legion maintains their humanitarian values even in defeat."
+  },
+  {
+   "bookKey": "flame-scorched-earth",
+   "number": "L.2",
+   "title": "SCORCHED EARTH",
+   "author": "Nick Kyme",
+   "anthology": "Born of Flame",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "After Isstvan V, Salamanders survivors wage war across scorched worlds, searching for their lost Primarch.",
+   "currentBlurbSafe": "The XVIII Legion fights through devastation, seeking Vulkan amid the ruins."
+  },
+  {
+   "bookKey": "flame-sons-of-forge",
+   "number": "L.3",
+   "title": "SONS OF THE FORGE",
+   "author": "Nick Kyme",
+   "anthology": "Born of Flame",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Numeon leads the quest to recover Vulkan's body, the Salamanders refusing to believe their Primarch can truly die.",
+   "currentBlurbSafe": "The Pyre Guard undertake a desperate mission to recover their fallen Primarch."
+  },
+  {
+   "bookKey": "flame-artefacts",
+   "number": "L.4",
+   "title": "ARTEFACTS",
+   "author": "Nick Kyme",
+   "anthology": "Born of Flame",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Salamanders recover precious relics from the war's devastation.",
+   "currentBlurbSafe": "The XVIII Legion seeks to preserve artifacts from destruction."
+  },
+  {
+   "bookKey": "flame-immortal-duty-2",
+   "number": "L.5",
+   "title": "IMMORTAL DUTY",
+   "author": "Nick Kyme",
+   "anthology": "Born of Flame",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Salamanders survivors honor their duty to protect humanity despite their Legion's shattering.",
+   "currentBlurbSafe": "The XVIII Legion maintains their humanitarian values even in defeat."
+  },
+  {
+   "bookKey": "shattered-unforged",
+   "number": "XLIII.2",
+   "title": "UNFORGED",
+   "author": "Guy Haley",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "Iron Hands struggle with their identity after losing their Primarch and much of their Legion.",
+   "currentBlurbSafe": "Survivors of the X Legion grapple with who they are without Ferrus Manus."
+  },
+  {
+   "bookKey": "shattered-grey-talon",
+   "number": "XLIII.4",
+   "title": "GREY TALON",
+   "author": "Chris Wraight",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "Raven Guard survivors strike from the shadows, their talons still sharp despite their losses.",
+   "currentBlurbSafe": "The XIX Legion's remnants prove they remain deadly even shattered."
+  },
+  {
+   "bookKey": "shattered-meduson",
+   "number": "XLIII.1",
+   "title": "MEDUSON",
+   "author": "Dan Abnett",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008-011.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "Shadrak Meduson leads Iron Hands survivors in brutal strikes against the traitors, becoming a legend among the shattered Legions.",
+   "currentBlurbSafe": "An Iron Hands warrior leads survivors in guerrilla warfare, striking fear into the traitors."
+  },
+  {
+   "bookKey": "shattered-keys-hel",
+   "number": "XLIII.5",
+   "title": "THE KEYS OF HEL",
+   "author": "John French",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Iron Hands",
+    "Salamanders",
+    "Raven Guard"
+   ],
+   "currentBlurb": "The shattered Legions seek the Keys of Hel, a weapon that could turn the tide of war.",
+   "currentBlurbSafe": "Survivors from three Legions unite to secure a powerful weapon."
+  },
+  {
+   "bookKey": "shattered-deeds-endure",
+   "number": "XLIII.7",
+   "title": "DEEDS ENDURE",
+   "author": "Gav Thorpe",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "Raven Guard deeds endure beyond death as survivors carry on their fallen brothers' missions.",
+   "currentBlurbSafe": "The XIX Legion honors their dead by continuing the fight."
+  },
+  {
+   "bookKey": "shattered-the-noose",
+   "number": "XLIII.6",
+   "title": "THE NOOSE",
+   "author": "David Annandale",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "Iron Hands survivors tighten the noose around traitor supply lines.",
+   "currentBlurbSafe": "The X Legion disrupts traitor operations through calculated strikes."
+  },
+  {
+   "bookKey": "shattered-unspoken",
+   "number": "XLIII.8",
+   "title": "UNSPOKEN",
+   "author": "Guy Haley",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "Unspoken oaths drive Iron Hands survivors to ever more desperate acts of vengeance.",
+   "currentBlurbSafe": "The X Legion's rage manifests in increasingly brutal attacks."
+  },
+  {
+   "bookKey": "shattered-the-either",
+   "number": "XLIII.9",
+   "title": "THE EITHER",
+   "author": "Graham McNeill",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "Iron Hands survivors face an impossible choice between duty and vengeance.",
+   "currentBlurbSafe": "The X Legion must decide between conflicting loyalties."
+  },
+  {
+   "bookKey": "shattered-hand-elect",
+   "number": "XLIII.10",
+   "title": "THE HAND ELECT",
+   "author": "Chris Wraight",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "The chosen warriors of the Iron Hands elite continue their mission despite overwhelming losses.",
+   "currentBlurbSafe": "Elite Iron Hands survivors press on against impossible odds."
+  },
+  {
+   "bookKey": "shattered-seventh-serpent",
+   "number": "XLIII.11",
+   "title": "THE SEVENTH SERPENT",
+   "author": "Graham McNeill",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "011.M31",
+   "currentLegions": [
+    "Alpha Legion",
+    "Iron Hands"
+   ],
+   "currentBlurb": "The Alpha Legion's schemes intersect with the shattered Legions' vengeance, with no one certain of anyone's true allegiance.",
+   "currentBlurbSafe": "Alpha Legion machinations complicate the survivors' war of vengeance."
+  }
+ ]
+}

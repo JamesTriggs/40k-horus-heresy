@@ -1,0 +1,251 @@
+{
+ "batch": "tales-age",
+ "anthologies": [
+  "Tales of Heresy",
+  "Age of Darkness"
+ ],
+ "count": 16,
+ "entries": [
+  {
+   "bookKey": "tales-of-heresy-the-last-church",
+   "number": "X.6",
+   "title": "THE LAST CHURCH",
+   "author": "Graham McNeill",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "730.M30",
+   "currentLegions": [
+    "Emperor"
+   ],
+   "currentBlurb": "Set on Terra before the Great Crusade, the Emperor visits the last church on Earth. In a philosophical debate with the last priest, Uriah, the Emperor reveals his vision for humanity—one without gods or faith. This story explores the Emperor's rejection of religion and the Imperial Truth that would define the Great Crusade, ending with the church's destruction and the priest's death.",
+   "currentBlurbSafe": "Before the Great Crusade begins, a conversation takes place between a wanderer and the last priest on Terra. Their philosophical debate explores faith, reason, and humanity's future among the stars."
+  },
+  {
+   "bookKey": "tales-of-heresy-after-deshea",
+   "number": "X.7",
+   "title": "AFTER DESH'EA",
+   "author": "Matthew Farrer",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "899.M30",
+   "currentLegions": [
+    "World Eaters"
+   ],
+   "currentBlurb": "Angron's violent first encounter with his Legion after the Emperor tore him from his homeworld. Khârn and the War Hounds arrive to find their Primarch seething with rage and grief, forced to abandon his gladiator brothers to their deaths. This story explores Angron's tragedy and the seeds of hatred that would doom the XII Legion.",
+   "currentBlurbSafe": "The newly discovered Angron meets his Legion for the first time. Still grieving those he left behind on his homeworld, the Primarch's rage threatens to consume both himself and his sons."
+  },
+  {
+   "bookKey": "tales-of-heresy-wolf-at-the-door",
+   "number": "X.2",
+   "title": "WOLF AT THE DOOR",
+   "author": "Mike Lee",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "950.M30",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "The Space Wolves descend upon a world, bringing the Emperor's justice with fang and claw. This tale explores the VI Legion's role as the Emperor's executioners and the savage fury they unleash in the name of the Imperium.",
+   "currentBlurbSafe": "The Space Wolves arrive at a world to deliver the Emperor's judgment, showcasing the savage nature of the VI Legion and their role as the Imperium's executioners."
+  },
+  {
+   "bookKey": "tales-of-heresy-scions-of-the-storm",
+   "number": "X.3",
+   "title": "SCIONS OF THE STORM",
+   "author": "Anthony Reynolds",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "956.M30",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "A Word Bearers tale following the XVII Legion as they spread the dark truth of Chaos across the galaxy. This story delves into the zealous nature of Lorgar's sons and their mission to convert or destroy those who resist the new gods.",
+   "currentBlurbSafe": "A Word Bearers squad undertakes a mission that tests their faith and reveals the zealous nature of the XVII Legion during their transformation."
+  },
+  {
+   "bookKey": "tales-of-heresy-call-of-the-lion",
+   "number": "X.5",
+   "title": "CALL OF THE LION",
+   "author": "Gav Thorpe",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "960.M30",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "The Dark Angels answer their Primarch's call during the Heresy. This story explores the I Legion's loyalty and their response to the galaxy-spanning civil war, as they navigate the shadows and secrets that have always defined them.",
+   "currentBlurbSafe": "Dark Angels warriors respond to their Primarch's summons during the Heresy, showcasing the I Legion's loyalty amid the galaxy's darkest hour."
+  },
+  {
+   "bookKey": "age-of-darkness-rebirth",
+   "number": "XVI.5",
+   "title": "REBIRTH",
+   "author": "Chris Wraight",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "004-005.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "A story of transformation and renewal amid the Heresy's devastation. As the old Imperium burns, something new struggles to be born from the ashes—but whether it will be savior or monster remains to be seen.",
+   "currentBlurbSafe": "A tale of transformation during the Heresy, exploring how destruction can lead to rebirth, though what emerges may not be what was hoped for."
+  },
+  {
+   "bookKey": "tales-of-heresy-blood-games",
+   "number": "X.1",
+   "title": "BLOOD GAMES",
+   "author": "Dan Abnett",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Custodian Guard"
+   ],
+   "currentBlurb": "Amon Tauromachian, one of the Emperor's elite Custodian Guard, returns to the Imperial Palace after completing a year-long Blood Game. Tasked with investigating rumors of treason in the hives of Hy Brasil, he must navigate a galaxy at war where half the Imperium's armies are in rebellion.",
+   "currentBlurbSafe": "A Custodian Guard returns to the Imperial Palace after a training exercise and is tasked with investigating rumors of treason, testing his skills in a galaxy consumed by civil war."
+  },
+  {
+   "bookKey": "tales-of-heresy-the-voice",
+   "number": "X.4",
+   "title": "THE VOICE",
+   "author": "James Swallow",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Audio"
+   ],
+   "currentBlurb": "A mysterious story exploring the power of voice and influence during the Heresy. As the galaxy burns, not all weapons are forged of steel—some are crafted from words and whispers that can topple empires.",
+   "currentBlurbSafe": "A tale exploring the power of words and influence during the Heresy, showing that some weapons are more subtle than bolters and blades."
+  },
+  {
+   "bookKey": "age-of-darkness-face-of-treachery",
+   "number": "XVI.6",
+   "title": "THE FACE OF TREACHERY",
+   "author": "Gav Thorpe",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Betrayal wears many faces during the Heresy. This story explores the personal nature of treachery, showing how betrayal cuts deepest when it comes from those closest to us—brothers, friends, and comrades in arms.",
+   "currentBlurbSafe": "A tale examining the personal cost of betrayal, showing how treachery cuts deepest when perpetrated by those we trust most."
+  },
+  {
+   "bookKey": "age-of-darkness-iron-within",
+   "number": "XVI.8",
+   "title": "THE IRON WITHIN",
+   "author": "Rob Sanders",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006-007.M31",
+   "currentLegions": [
+    "Iron Warriors"
+   ],
+   "currentBlurb": "The Iron Warriors prove their cold brutality in a tale of siege warfare and bitter determination. Perturabo's sons demonstrate why they are the masters of attrition warfare, grinding down their enemies with mechanical precision and ruthless efficiency.",
+   "currentBlurbSafe": "The Iron Warriors demonstrate their mastery of siege warfare, showcasing the cold, methodical brutality that defines the IV Legion."
+  },
+  {
+   "bookKey": "age-of-darkness-savage-weapons",
+   "number": "XVI.9",
+   "title": "SAVAGE WEAPONS",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007-009.M31",
+   "currentLegions": [
+    "Dark Angels",
+    "Night Lords"
+   ],
+   "currentBlurb": "Lion El'Jonson hunts Konrad Curze through the darkness. Two Primarchs clash in a brutal confrontation that reveals the savage nature beneath their veneer of civilization. The Lion pursues his mad brother, but Curze's visions of the future make him a quarry unlike any other.",
+   "currentBlurbSafe": "Lion El'Jonson pursues Konrad Curze in a hunt that becomes a brutal clash between two Primarchs, revealing the savage nature both share."
+  },
+  {
+   "bookKey": "age-of-darkness-rules-of-engagement",
+   "number": "XVI.1",
+   "title": "RULES OF ENGAGEMENT",
+   "author": "Graham McNeill",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Ultramarines"
+   ],
+   "currentBlurb": "An Ultramarines story exploring the rigid codes and doctrines that define Guilliman's sons. As the Heresy rages, the XIII Legion must adapt their rules of warfare to face an enemy that knows them intimately—their own traitorous brothers.",
+   "currentBlurbSafe": "An Ultramarines tale examining how the XIII Legion's strict doctrines are tested when facing former brothers in the crucible of civil war."
+  },
+  {
+   "bookKey": "age-of-darkness-liars-due",
+   "number": "XVI.2",
+   "title": "LIAR'S DUE",
+   "author": "James Swallow",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "A tale of deception and truth during the Age of Darkness. In a war where brother fights brother, lies become weapons as deadly as any bolter, and the price of falsehood may be damnation itself.",
+   "currentBlurbSafe": "A story exploring deception and consequence during the Heresy, where lies become weapons and truth is a rare commodity in the darkness."
+  },
+  {
+   "bookKey": "age-of-darkness-forgotten-sons",
+   "number": "XVI.3",
+   "title": "FORGOTTEN SONS",
+   "author": "Nick Kyme",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Salamanders warriors struggle with being forgotten in the galaxy's greatest conflict. Cut off from their Legion and Primarch after Isstvan, these sons of Vulkan must find purpose in a war that has left them behind.",
+   "currentBlurbSafe": "Salamanders warriors, separated from their Legion, seek purpose and meaning while fighting in a war where they feel forgotten and abandoned."
+  },
+  {
+   "bookKey": "age-of-darkness-little-horus",
+   "number": "XVI.7",
+   "title": "LITTLE HORUS",
+   "author": "Dan Abnett",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Sons of Horus"
+   ],
+   "currentBlurb": "Horus Aximand, called 'Little Horus' for his resemblance to the Warmaster, grapples with his role in the rebellion. Once a proud member of the Mournival, he must now reconcile his loyalty to Horus with the horror of what his Legion has become.",
+   "currentBlurbSafe": "Horus Aximand, called Little Horus, struggles with his role in the rebellion and what his Legion has become since Isstvan."
+  },
+  {
+   "bookKey": "age-of-darkness-the-last-remembrancer",
+   "number": "XVI.4",
+   "title": "THE LAST REMEMBRANCER",
+   "author": "John French",
+   "anthology": "Age of Darkness",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Remembrancers"
+   ],
+   "currentBlurb": "The story of a Remembrancer struggling to document the Heresy's horrors. As the Great Crusade's artistic chroniclers are purged, one remains to bear witness to humanity's darkest hour, knowing their testimony may be the last.",
+   "currentBlurbSafe": "A Remembrancer attempts to chronicle the Heresy's events, bearing witness to humanity's civil war while knowing they may be the last to tell the tale."
+  }
+ ]
+}

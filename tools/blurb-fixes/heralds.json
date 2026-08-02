@@ -1,0 +1,331 @@
+{
+  "batch": "heralds",
+  "entries": [
+    {
+      "bookKey": "heralds-myriad",
+      "verdict": "corrected",
+      "title": "MYRIAD",
+      "author": "Rob Sanders",
+      "type": "Short Story",
+      "legions": ["Mechanicum", "Dark Mechanicum", "Collegia Titanica"],
+      "timeline": "006-013.M31",
+      "mainCharacters": ["Kallistra Lennox", "Ramann Synk", "Galahax Zarco", "Omnek-70"],
+      "blurb": "On blockaded Mars, former Collegia Titanica princeps Kallistra Lennox leads a loyalist cell of Titan crew, enginseers and tech-adepts in guerrilla raids against the Dark Mechanicum of Kelbor-Hal. Out in the wastes they recover an uncorrupted Kastelan robot and find it houses the Tabula Myriad, an abominable intelligence from the Dark Age of Technology. Their lexorcist frees it anyway, and it begins turning traitor Titans against their masters.",
+      "blurbSafe": "A ragged loyalist resistance of Titan crew, enginseers and tech-adepts wages a guerrilla war against the Dark Mechanicum on blockaded Mars. Out in the wastes they recover a battle automaton that is not what it appears to be, and must weigh how far they will go to break the stalemate.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Myriad_(Short_Story)",
+        "https://www.trackofwords.com/quick-review-myriad-rob-sanders/",
+        "https://wh40k.lexicanum.com/wiki/Tabula_Myriad",
+        "https://wh40k.lexicanum.com/wiki/Schism_of_Mars"
+      ],
+      "confidence": "high",
+      "notes": "Manifest was badly wrong: no Alpha Legion content at all. This is a Mars/Mechanicum story, a direct sequel to Rob Sanders's novella Cybernetica, released 19 August 2016 as Day 5 of the Summer of Reading. Protagonist is a human ex-princeps, not a Space Marine. Timeline confidence is LOW and is a bracket, not a sourced year: no source gives a date, so the range spans the Imperial blockade of Mars (Lexicanum: Mars blockaded 006-015.M31) up to the eve of the Siege. The blanket 012-013.M31 is certainly wrong for a mid-war Martian insurgency story. Legion names Legio Vendettica etc. appear but the loyalist/traitor axis here is Mechanicum vs Dark Mechanicum."
+    },
+    {
+      "bookKey": "heralds-grey-raven",
+      "verdict": "corrected",
+      "title": "THE GREY RAVEN",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": ["Raven Guard"],
+      "timeline": "012.M31",
+      "mainCharacters": ["Balsar Kurthuri", "Corvus Corax", "Malcador the Sigillite"],
+      "blurb": "Balsar Kurthuri, Chief Librarian of the Raven Guard, is stripped of his rank when Corax disbands the Legion's Librarius for a second time and orders him to Terra to face Malcador's judgement for wielding psychic powers after the Edict of Nikaea. Travelling with the other psykers his primarch no longer trusts, Kurthuri reaches a Sol System braced for invasion and finds his unswerving loyalty repaid with suspicion.",
+      "blurbSafe": "The Raven Guard's Chief Librarian has obeyed every order his primarch ever gave him, including the one that took his powers away and the one that gave them back. Now Corax sends him to Terra to answer to the Sigillite, and a Sol System expecting invasion has little warmth for a returning psyker.",
+      "changed": ["timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Grey_Raven_(Short_Story)",
+        "https://www.trackofwords.com/quick-review-the-grey-raven-gav-thorpe/",
+        "https://wh40k.lexicanum.com/wiki/Balsar_Kurthuri",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Yarant"
+      ],
+      "confidence": "high",
+      "notes": "Legion was already correct, so only dating and content changed. Published 7 December 2016 as Day 7 of Advent 2016; Lexicanum lists Weregeld as the preceding work. Dated 012.M31 because Corax dispatches Kurthuri to Terra at the same juncture that he takes the Legion to the Battle of Yarant, which Lexicanum dates 012.M31. Deliberately did not name the Imperial Fists and Custodes escort (Noriz, Arcatus) in the blurb: Lexicanum attributes that detail to Kurthuri's wider biography rather than unambiguously to this story, so legions is left as Raven Guard only."
+    },
+    {
+      "bookKey": "heralds-valerius",
+      "verdict": "corrected",
+      "title": "VALERIUS",
+      "author": "Gav Thorpe",
+      "type": "Audio Drama",
+      "legions": ["Imperial Army", "Raven Guard"],
+      "timeline": "012-013.M31",
+      "mainCharacters": ["Marcus Valerius", "Corvus Corax"],
+      "blurb": "Vice-Caesari Marcus Valerius of the Therion Cohort has been banished from Corax's sight for preaching that the Emperor is a god. Sent to the great slaughter at Beta-Garmon, he leads his Imperial Army soldiers into a Titan war they cannot win, sustained by the Lectitio Divinitatus and by visions he believes are divine guidance. Every man and woman under his command knows the end is near.",
+      "blurbSafe": "An Imperial Army commander who has come to worship the Emperor as a god is sent to the vast Titan slaughter at Beta-Garmon. His forbidden visions shape every order he gives, and his soldiers must decide how much faith to place in them.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Valerius_(Audio_Drama)",
+        "https://www.trackofwords.com/quick-review-valerius-gav-thorpe/",
+        "https://wh40k.lexicanum.com/wiki/Marcus_Valerius",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Beta-Garmon"
+      ],
+      "confidence": "high",
+      "notes": "Format confirmed as Audio Drama (Day 16 of Advent 2016, performed by Gareth Armstrong, John Banks and others). Protagonist is a mortal Imperial Army officer, not a Space Marine, so 'Various' was replaced with Imperial Army plus Raven Guard, the Therion Cohort being the Raven Guard's attached Army formation and Corax being the one who sends him. Timeline retains 012-013.M31 but this is now genuinely derived rather than blanket: Lexicanum dates the second phase of the Battle of Beta-Garmon to 012-013.M31, and Valerius's banishment follows the Battle of Yarant (012.M31)."
+    },
+    {
+      "bookKey": "heralds-ember-wolves",
+      "verdict": "corrected",
+      "title": "THE EMBER WOLVES",
+      "author": "Rob Sanders",
+      "type": "Short Story",
+      "legions": ["Collegia Titanica", "Legio Audax", "Legio Castigatra"],
+      "timeline": "012-013.M31",
+      "mainCharacters": ["Balthus Voltemand"],
+      "blurb": "On the hive world of Absalom, loyalist Titans flying the banner of the Fabricator General of Terra fight the Warmaster's engines through the ruins. Princeps Balthus Voltemand's six-strong Warhound battle-pack of the Legio Audax, the traitor Titan Legion called the Ember Wolves, stalks and brings down the far larger loyalist Warmonger Tantorus Magnificat of Legio Castigatra with their Ursus Claws. Gathering around their kill, the princeps find the fight is not over.",
+      "blurbSafe": "God-machines go to war in the ruined hives of Absalom, loyalist Titans against the engines of the Warmaster. A pack of traitor Warhounds has been lying in wait, and when it sights prey worthy of the battle-pack it attacks at once.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Ember_Wolves_(Short_Story)",
+        "https://www.trackofwords.com/quick-review-the-ember-wolves-by-rob-sanders/",
+        "https://wh40k.lexicanum.com/wiki/Legio_Castigatra",
+        "https://wh40k.lexicanum.com/wiki/Legio_Audax"
+      ],
+      "confidence": "medium",
+      "notes": "Serious faction error corrected: there are no Space Wolves in this story. The Ember Wolves are the Legio Audax, a TRAITOR Titan Legion long associated with the World Eaters, so the manifest's Space Wolves tag would have flipped this from traitor to loyalist on the site. Released online March 2017 as part of the 'March of the Titans' promotion; format is an e-short, i.e. Short Story, which the manifest already had right. TIMELINE UNRESOLVED: no source gives a year, so the blanket 012-013.M31 is retained as a placeholder rather than as a finding. Note Lexicanum's Legio Audax page files an Absalom engagement under the Great Crusade in M30 where the Audax fight ALONGSIDE Tantorus Magnificat, which is most likely the flashback inside this story rather than its present-day setting; the Legio Castigatra page cites this story for the Heresy-era Battle of Absolom in which Tantorus is destroyed. Princeps Balthus Voltemand is sourced only from the Track of Words review, as Lexicanum has no page for him."
+    },
+    {
+      "bookKey": "heralds-blackshield",
+      "verdict": "corrected",
+      "title": "BLACKSHIELD",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["Death Guard", "Blackshields"],
+      "timeline": "009-011.M31",
+      "mainCharacters": ["Khorak", "Crysos Morturg", "Hesch"],
+      "blurb": "Khorak, an ex-Deathshroud Terminator sergeant who broke from the Death Guard after watching Mortarion embrace sorcery at Molech, is hunted down by unmarked ships and forced to land on the toxic swamp world of Agarvian. He and four surviving legionaries make a stand in a gorge and kill dozens before their pursuers stop firing and their leader steps forward: Crysos Morturg, another fallen son of Barbarus. The parley ends in blood.",
+      "blurbSafe": "A renegade Death Guard sergeant who considers himself the last of the 'true' XIV Legion is run to ground on a toxic swamp world by warriors in crudely painted black armour. Cornered and badly outnumbered, he discovers that the leader of his hunters shares his origins, if not his purpose.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Blackshield_(Short_Story)",
+        "https://www.trackofwords.com/quick-review-blackshield-chris-wraight/",
+        "https://wh40k.lexicanum.com/wiki/Khorak",
+        "https://wh40k.lexicanum.com/wiki/Crysos_Morturg"
+      ],
+      "confidence": "high",
+      "notes": "Manifest tagged this generically as Blackshields; the viewpoint character is in fact a Death Guard, so both factions are now listed. Released 15 August 2016 as Day 1 of the 2016 Summer of Reading. Timeline is a derived bracket, not a quoted year: Khorak defects after the Battle of Molech, which Lexicanum dates 009.M31, and Morturg resolves at the story's end to return to Terra, which places it comfortably before the Siege. Confidence high on content, medium on the exact years."
+    },
+    {
+      "bookKey": "heralds-children-sicarus",
+      "verdict": "corrected",
+      "title": "CHILDREN OF SICARUS",
+      "author": "Anthony Reynolds",
+      "type": "Audio Drama",
+      "legions": ["Word Bearers", "Chaos Daemons"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Kor Phaeron", "Jepeth", "Larazzar"],
+      "blurb": "After the Infidus Imperator is destroyed while duelling Macragge's Honour, Kor Phaeron cuts a hole in reality and escapes to the daemon world of Sicarus with a remnant of Word Bearers. Their new refuge is no sanctuary: the hordes of the Kairic adept Larazzar besiege them until only six legionaries and twelve mortal servants remain. A reincarnating prophet offers salvation through an ancient prophecy, at a price the Black Cardinal will not pay.",
+      "blurbSafe": "Driven out of Ultramar with his flagship destroyed, Kor Phaeron leads his surviving Word Bearers into the Eye of Terror and onto a daemon world that proves anything but safe. Their salvation may lie in the ancient legends of Sicarus, if the Black Cardinal is the one to lead them to it.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Children_of_Sicarus_(Audio_Drama)",
+        "https://www.trackofwords.com/children-of-sicarus-anthony-reynolds/",
+        "https://wh40k.lexicanum.com/wiki/Kor_Phaeron",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Calth"
+      ],
+      "confidence": "medium",
+      "notes": "Manifest had the Legion right but the plot wrong: this is not Word Bearers marching on Terra. It is Kor Phaeron marooned in the Eye of Terror, and it establishes how Sicarus became the Word Bearers' homeworld. Format confirmed Audio Drama, released October 2016, 39 minutes, performed by Gareth Armstrong, John Banks, Tim Bentinck and others. Timeline 007.M31 is derived: Lexicanum dates the Battle of Calth to 007.M31 and this picks up directly from the graphic novel Macragge's Honour, which is the pursuit immediately after Calth. Caveat, and why confidence is medium: the story covers an unspecified stretch of time on Sicarus and Jepeth's prophecy looks forward to the Siege, so the later part may run past 007.M31."
+    },
+    {
+      "bookKey": "heralds-exocytosis",
+      "verdict": "corrected",
+      "title": "EXOCYTOSIS",
+      "author": "James Swallow",
+      "type": "Short Story",
+      "legions": ["Death Guard", "Dark Angels"],
+      "timeline": "012-013.M31",
+      "mainCharacters": ["Calas Typhon", "Luther"],
+      "blurb": "Hounded across the galaxy by the Dark Angels, First Captain Calas Typhon has limped the Death Guard fleet into Segmentum Obscurus and been granted asylum by his old friend Luther of Caliban. Resting in the forests of Zaramund while his ships are repaired, Typhon feels a new corruption working through his flesh and mind, and Luther's Fallen watch their guests closely while laying plans of their own.",
+      "blurbSafe": "A battered Death Guard fleet finds sanctuary in Segmentum Obscurus as the guest of Luther of Caliban, on a world long held as a symbol of brotherhood between the Legions. Waiting there for repairs, the XIV Legion's First Captain begins to suspect something has followed him out of the wider war.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Exocytosis_(Short_Story)",
+        "https://www.trackofwords.com/quick-review-exocytosis-james-swallow/",
+        "https://wh40k.lexicanum.com/wiki/Typhus"
+      ],
+      "confidence": "high",
+      "notes": "Main correction is the missing Dark Angels: this is a two-Legion story, Typhon as guest and Luther's Fallen as wary hosts, and the tension comes from their contrasting outlooks. Published 20 December 2016 as Day 19 of Advent 2016. Timeline retains 012-013.M31 but as a derived value: Lexicanum's Typhus article places the Zaramund asylum immediately before Typhon rejoins Mortarion at the purging of Ynyx, and dates the Fall of the Death Guard to 013-014.M31, so this sits just before that. Note Zaramund is also where Typhon was first converted to Chaos during the Great Crusade, which the title plays on."
+    },
+    {
+      "bookKey": "heralds-painted-count",
+      "verdict": "corrected",
+      "title": "THE PAINTED COUNT",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Night Lords"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Gendor Skraivok", "Shang"],
+      "blurb": "After the failed invasion of Sotha and the dimming of the Pharos, Night Lords captain Gendor Skraivok languishes aboard the VIII Legion flagship Nightfall, unable to rid himself of the daemon-bound blade that has chosen him. Distrusted by his allies and despised by his rivals, he is cast into the labyrinth deep inside the ship by Curze's equerry Shang. Only by accepting the sword's power does he escape, kill Shang and seize the Legion.",
+      "blurbSafe": "Stranded aboard the Night Lords flagship after the disaster at Sotha, a disgraced captain finds he cannot be rid of the daemonic sword that has attached itself to him. Distrusted by his allies and despised by his rivals, he still intends to claw back the leadership of the VIII Legion by fair means or foul.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Painted_Count_(Short_Story)",
+        "https://www.trackofwords.com/2016/12/14/quick-review-the-painted-count-guy-haley/",
+        "https://wh40k.lexicanum.com/wiki/Gendor_Skraivok",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Sotha"
+      ],
+      "confidence": "high",
+      "notes": "Worst faction error in the batch is fixed: there are no Blood Angels here. 'The Painted Count' is Gendor Skraivok's own epithet, earned for his Nostraman noble ancestry and his war paint, and the story is Night Lords aboard the Nightfall, following directly from Guy Haley's novel Pharos and the short story A Safe and Shadowed Place. The manifest's Blood Angels tag would have shown a traitor story under a loyalist filter. Published 13 December 2016 as Day 13 of Advent 2016. Dated 009.M31 from Lexicanum's date for the Battle of Sotha, which this immediately follows. Note the Track of Words review calls him 'Garreth' Skraivok; Lexicanum and the Black Library copy both give Gendor, which is used here."
+    },
+    {
+      "bookKey": "heralds-last-son-prospero",
+      "verdict": "corrected",
+      "title": "THE LAST SON OF PROSPERO",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["Thousand Sons", "White Scars"],
+      "timeline": "012-013.M31",
+      "mainCharacters": ["Revuel Arvida", "Malcador the Sigillite", "Jaghatai Khan"],
+      "blurb": "His body ravaged by the flesh-change after he guided the White Scars fleet home through the warp, Thousand Sons sorcerer Revuel Arvida lies dying deep in the Imperial Dungeon on Terra. Jaghatai Khan demands that Malcador save his ward, but the Sigillite has a design of his own: to bind a lingering shard of Magnus the Red into Arvida and set the result to guard the broken webway gate. What emerges is neither man nor primarch.",
+      "blurbSafe": "The last surviving son of Prospero clings to life on Terra, his body consumed by his Legion's curse after he brought the White Scars through the horrors of the ruinstorm. The Khan demands he be saved whatever the cost, and Malcador the Sigillite agrees, for reasons that are entirely his own.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Last_Son_of_Prospero_(Short_Story)",
+        "https://www.trackofwords.com/quick-reviewthe-last-son-of-prospero/",
+        "https://wh40k.lexicanum.com/wiki/Revuel_Arvida"
+      ],
+      "confidence": "high",
+      "notes": "Not a redemption-in-battle story: it is set on Terra in Malcador's custody and is the origin of Janus, first Supreme Grand Master of the Grey Knights. White Scars added, as the Khan is central and Arvida's whole arc comes out of Scars and The Path of Heaven. Published 24 December 2016 as Day 24 of Advent 2016. Timeline retains 012-013.M31 but as a derived value rather than the blanket: it follows the White Scars' arrival on Terra at the end of The Path of Heaven and precedes the Siege."
+    },
+    {
+      "bookKey": "heralds-soul-severed",
+      "verdict": "corrected",
+      "title": "THE SOUL, SEVERED",
+      "author": "Chris Wraight",
+      "type": "Audio Drama",
+      "legions": ["Emperor's Children"],
+      "timeline": "012.M31",
+      "mainCharacters": ["Eidolon", "Archorian", "Lecus Phodion"],
+      "blurb": "With Fulgrim vanished into daemonhood, Lord Commander Primus Eidolon rules a third of the Emperor's Children and is challenged by Lord Commander Archorian, an able officer who thinks him a prideful usurper and would return the III Legion to its old glory. The two meet above the chem-world of Horvia, where Archorian springs an ambush. Eidolon has prepared a counter-ambush, and looses the Kakophoni on his own brethren.",
+      "blurbSafe": "In their primarch's absence, one lord commander of the Emperor's Children holds a third of the III Legion and another disputes his right to it. Dissent is not acceptable, and Eidolon is willing to set his Kakophoni against warriors who were once his brothers.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Soul,_Severed_(Audio_Drama)",
+        "https://www.trackofwords.com/quick-review-the-soul-severed-chris-wraight/",
+        "https://wh40k.lexicanum.com/wiki/Eidolon_(Emperor%27s_Children)"
+      ],
+      "confidence": "high",
+      "notes": "Manifest had this as 'Various' with a vague warp-and-souls blurb; it is a specific Emperor's Children succession story and the source of Eidolon's title 'the Soul-Severed'. Format confirmed Audio Drama, Day 9 of Advent 2016, 25 minutes. Setting identified as the chem-world Horvia from Lexicanum's Eidolon article, which cites this story for the Archorian confrontation. Timeline 012.M31 is derived by sequence: it falls after the Battle of Catallus and Eidolon's pursuit of the White Scars, and before Fulgrim recalls the Legion in Slaves to Darkness (013.M31)."
+    },
+    {
+      "bookKey": "heralds-dark-compliance",
+      "verdict": "corrected",
+      "title": "DARK COMPLIANCE",
+      "author": "John French",
+      "type": "Audio Drama",
+      "legions": ["Sons of Horus", "Mechanicum"],
+      "timeline": "012.M31",
+      "mainCharacters": ["Horus Lupercal", "Argonis"],
+      "blurb": "As world after world swears to the Warmaster out of fear or malice, the heavily fortified Mechanicum world of Accazzar-Beta refuses. Two fleets engage across the void and Horus makes an example of it. His emissary Argonis of the Sons of Horus then recounts exactly what happened there to another defiant planetary ruler, so that the meaning of a dark compliance is understood without another shot being fired.",
+      "blurbSafe": "Late in the Heresy most worlds swear fealty to Horus rather than face annihilation, and any that consider resistance are given one chance. A Sons of Horus emissary sets out for a wavering ruler precisely what a refusal costs, and how far the Warmaster is willing to go.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Dark_Compliance_(Audio_Drama)",
+        "https://www.trackofwords.com/2017/07/07/dark-compliance-john-french/",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Tallarn"
+      ],
+      "confidence": "medium",
+      "notes": "Format Audio Drama confirmed by Lexicanum (released July 2017, Ramon Tikaram as Horus, Jonathan Keeble as Argonis); Lexicanum notes it was later also printed as prose in this anthology, so if the site distinguishes original format from anthology format the Audio Drama tag is the right one. 'Various' replaced with Sons of Horus plus Mechanicum, Accazzar-Beta being a loyalist Mechanicum forge world. Timeline 012.M31 is derived, not quoted: Track of Words places it after Tallarn (Lexicanum: 010-012.M31) and before the final push on Terra."
+    },
+    {
+      "bookKey": "heralds-duty-waits",
+      "verdict": "corrected",
+      "title": "DUTY WAITS",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Imperial Fists"],
+      "timeline": "013.M31",
+      "mainCharacters": ["Maximus Thane"],
+      "blurb": "The Imperial Palace waits for a war that will not arrive. Since the Alpha Legion infiltrated the Palace the Imperial Fists have doubled their patrols and tightened every defence, and four primarchs stand ready, but boredom and dread erode morale faster than any enemy could. When Captain Maximus Thane's company is ordered to put down a civilian riot, the waiting ends in tragedy of the defenders' own making.",
+      "blurbSafe": "Terra is sealed, the defences are complete and four primarchs stand ready, but Horus does not come. A study of how Space Marines endure the strain of waiting on the walls, and how much harder the mortals beside them find it.",
+      "changed": ["timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Duty_Waits_(Short_Story)",
+        "https://www.trackofwords.com/2017/12/04/quick-review-duty-waits-guy-haley/",
+        "https://wh40k.lexicanum.com/wiki/Maximus_Thane"
+      ],
+      "confidence": "high",
+      "notes": "Legion was already correct; blurb was generic and missed the actual event, which is a civilian riot rather than a battle. Published as Day 4 of the Advent 2017 subscription. Dated 013.M31: it sits after the Alpha Legion infiltration of Praetorian of Dorn and with four primarchs already mustered on Terra, and Lexicanum dates the Siege itself to 014.M31, so this is the year immediately before."
+    },
+    {
+      "bookKey": "heralds-magisterium",
+      "verdict": "corrected",
+      "title": "MAGISTERIUM",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["Custodian Guard", "Imperial Fists"],
+      "timeline": "013.M31",
+      "mainCharacters": ["Samonas", "Constantin Valdor", "Rogal Dorn"],
+      "blurb": "The war in the webway beneath the Imperial Palace is over and the Custodian Guard have been gutted by the daemonic hordes that poured through it. Seen through the survivor Samonas, Constantin Valdor gathers what is left of the Ten Thousand and finds himself in conflict with Rogal Dorn over the defence of Terra, while his memories of Prospero remind him this is not the first primarch he has been set against.",
+      "blurbSafe": "With the fighting beneath the Palace ended and the Emperor's guardians terribly reduced, Constantin Valdor must reckon with the Lord Commander of the Imperium over how Terra will be held. It is not the first time the Emperor's magisterium has found himself pitted against a primarch.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Magisterium_(Short_Story)",
+        "https://www.trackofwords.com/2017/12/07/quick-review-magisterium-chris-wraight/",
+        "https://wh40k.lexicanum.com/wiki/Samonas",
+        "https://wh40k.lexicanum.com/wiki/War_Within_the_Webway"
+      ],
+      "confidence": "high",
+      "notes": "Checked from scratch as instructed. Manifest's 'Custodians prepare to defend the Emperor' was close in flavour but wrong in substance: this is the aftermath of the Webway War, not preparation, and the drama is Valdor versus Dorn plus Prospero flashbacks. Viewpoint character is the Custodian Samonas, who Lexicanum also places at the Unification-era coup, Prospero and the webway. Imperial Fists added for Dorn. Published as Day 7 of the Advent 2017 subscription. Dated 013.M31: after The Master of Mankind and the close of the fighting in the webway, and before the Siege proper, which Lexicanum dates 119014-593014.M31."
+    },
+    {
+      "bookKey": "heralds-now-peals-midnight",
+      "verdict": "corrected",
+      "title": "NOW PEALS MIDNIGHT",
+      "author": "John French",
+      "type": "Short Story",
+      "legions": ["Imperial Fists"],
+      "timeline": "013-014.M31",
+      "mainCharacters": ["Rogal Dorn"],
+      "blurb": "The last quiet hours before the Siege of Terra. Rogal Dorn walks the finished defences of the Imperial Palace and makes his final dispositions while his brother primarchs, his sons and billions of mortals wait for the storm to break. There is no battle in it, only the sun going down on the Throneworld and the sense of inevitability as the Warmaster's armada closes on Sol.",
+      "blurbSafe": "For long years the defenders of Terra have stood sentinel against a foe who never came, and now the waiting is almost over. A quiet, measured portrait of the Imperial Palace and its people as the sun sets on the Throneworld.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Now_Peals_Midnight_(Short_Story)",
+        "https://www.trackofwords.com/2017/12/10/quick-review-now-peals-midnight-john-french/",
+        "https://wh40k.lexicanum.com/wiki/Siege_of_Terra"
+      ],
+      "confidence": "high",
+      "notes": "Manifest said the traitor fleet emerges and the Siege begins; both sources are clear that nothing actually happens, that there is no action at all, and that the story stops on the threshold. Corrected to reflect that. 'Various' narrowed to Imperial Fists, the confirmed focus being Dorn and his sons, though other loyalist forces on Terra feature. Published as part of the Advent 2017 calendar. Dated 013-014.M31 because Lexicanum has Horus's armada reach the Sol System on the first day of Primus, 014.M31, and this ends immediately before that."
+    },
+    {
+      "bookKey": "heralds-dreams-unity",
+      "verdict": "corrected",
+      "title": "DREAMS OF UNITY",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Thunder Warriors", "Custodian Guard", "Alpha Legion"],
+      "timeline": "013.M31",
+      "mainCharacters": ["Dahren Heruk", "Tagiomalchian", "Tarrigata", "Kabe"],
+      "blurb": "Dahren Heruk is one of the last Thunder Warriors, surviving as a pit fighter in The Maw beneath the Imperial Palace while his gene-forged body rots and his mind slides into memories of Ararat, Sibir and the siege of Abyssna. When his ludus is burned and his few remaining brothers are killed, his search for the culprit runs into the Custodian Tagiomalchian, who is hunting a possessed Alpha Legionary and its cultists in the catacombs.",
+      "blurbSafe": "Long after the Emperor's Custodians slaughtered the Thunder Warriors on his orders, a handful still survive in the slums beneath the Imperial Palace, scraping a living as gladiators as their bodies fail them. With the Throneworld bracing for Horus, one of the last of them is drawn into events far larger than the fighting pits, and hunted in turn by one of the Emperor's praetorians.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Dreams_of_Unity_(Short_Story)",
+        "https://www.trackofwords.com/2017/12/13/quick-review-dreams-of-unity-nick-kyme/"
+      ],
+      "confidence": "high",
+      "notes": "IMPORTANT, this partly contradicts the audit note I was given. The brief said the story is largely a Unification Wars flashback featuring Kabe and the siege of Abyssna, with an effective setting in mid-to-late M30. Both sources say otherwise. The present-day frame is the substance of the story: Heruk in The Maw and the Swathe beneath the Outer Palace, the burning of Tarrigata's ludus, and the Custodian Tagiomalchian hunting a possessed Alpha Legionary and eight cultists in the catacombs, explicitly after the Alpha Legion attack on Terra. Kabe is not a flashback character; he dies in a present-day pit fight in the opening scene. Abyssna, Ararat, Sibir and Albia appear as Heruk's hallucinations and memories. The protagonist is Dahren Heruk, not Kabe. Setting therefore dated 013.M31, Terra, immediately pre-Siege, with M30 Unification flashbacks noted here rather than in the timeline field. Published as Day 12 of the Advent 2017 subscription."
+    },
+    {
+      "bookKey": "heralds-board-is-set",
+      "verdict": "corrected",
+      "title": "THE BOARD IS SET",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": ["Emperor", "Custodian Guard"],
+      "timeline": "013.M31",
+      "mainCharacters": ["Malcador the Sigillite", "The Emperor"],
+      "blurb": "Troubled by the approach of the traitor fleets and by the darkness the Emperor holds back beneath the Palace, Malcador the Sigillite goes to commune with him. Over a wargame board the two range across what has happened, what might have been, and the unorthodox strategies that three Space Marine Legions on Terra may yet need. Malcador also weighs the part he himself will have to play.",
+      "blurbSafe": "War on the Throneworld is now inevitable, and Malcador the Sigillite seeks counsel from the Emperor before the fleets arrive. Their conversation over a wargame board is a rare glimpse of the Sigillite with his usual walls down, and it leaves as many questions as answers.",
+      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Board_is_Set_(Short_Story)",
+        "https://www.trackofwords.com/2017/12/24/quick-review-the-board-is-set-gav-thorpe/"
+      ],
+      "confidence": "high",
+      "notes": "This was the closest of the sixteen to being right already, so the blurb needed refining rather than replacing. Corrected the detail that Malcador is the protagonist and the tone is contemplative and deliberately ambiguous, and that the Emperor is on the Golden Throne holding back what lies beneath the Palace rather than sitting across a table as an equal player. 'Various' replaced with Emperor and Custodian Guard; if the site prefers a single tag here, Emperor alone would be defensible. Published as Day 23 of the Advent 2017 calendar. Dated 013.M31 as the year before the Siege, per Lexicanum's dating of the Siege of Terra to 014.M31."
+    }
+  ]
+}

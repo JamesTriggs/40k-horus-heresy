@@ -1,0 +1,333 @@
+{
+  "batch": "shattered-flame",
+  "entries": [
+    {
+      "bookKey": "flame-promethean-sun",
+      "verdict": "corrected",
+      "title": "PROMETHEAN SUN",
+      "author": "Nick Kyme",
+      "type": "Novella",
+      "legions": ["Salamanders", "Iron Hands", "Death Guard"],
+      "timeline": "001.M31",
+      "mainCharacters": ["Vulkan", "Ferrus Manus", "Mortarion"],
+      "blurb": "During the Great Crusade the Imperium moves against One-Five-Four Four, a world held in thrall by the eldar. Ferrus Manus's Iron Hands and Mortarion's Death Guard grind at the xenos in the open, while Vulkan takes the Salamanders into the deepest jungle against monstrous reptilian beasts and alien witchery. Ultimately it falls to Vulkan himself to unpick the sinister eldar design behind the war.",
+      "blurbSafe": "A Great Crusade campaign to prise an eldar-held jungle world out of xenos hands. Three Legions fight it, and it is the Salamanders who are sent into the deadliest ground of all.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Promethean_Sun_(Novella)",
+        "https://40ktimeline.com/books/promethean-sun",
+        "https://wh40k.lexicanum.com/wiki/Shadrak_Meduson"
+      ],
+      "confidence": "high",
+      "notes": "Great Crusade story, not a Heresy one. Set on the world One-Five-Four Four (the same campaign as the novella Feat of Iron, which this database also dates 001.M31, so the existing timeline is consistent and left unchanged). Current legions listed only Salamanders; the Lexicanum cover description explicitly has the Iron Hands under Ferrus Manus and the Death Guard under Mortarion fighting the same war. The eldar are the antagonists but the site has no canonical Aeldari faction value, so they are described in the blurb rather than added to legions. I deliberately did not repeat 40kTimeline's claim that the Emperor walks the campaign, as no primary-sourced page supports it. Type Novella and timeline 001.M31 both confirmed."
+    },
+    {
+      "bookKey": "shattered-immortal-duty",
+      "verdict": "corrected",
+      "title": "IMMORTAL DUTY",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Iron Hands", "World Eaters"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Ahrem Gallikus"],
+      "blurb": "Ahrem Gallikus, a Medusan Immortal of the Iron Hands, stands condemned before his own brothers and is made to account for himself before they kill him. His testimony returns to the void battle above Isstvan V and a boarding action against the traitor warship Retiarius, where he fought the World Eaters and something in him gave way. What he did aboard that ship is what has brought him here.",
+      "blurbSafe": "A disgraced Medusan Immortal of the Iron Hands is called on to give an account of his greatest battle, a boarding action fought in the void above Isstvan V.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Immortal_Duty_(Short_Story)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://purpleheresy.blogspot.com/2015/06/meduson-short-story-collection.html"
+      ],
+      "confidence": "high",
+      "notes": "REPRINT. This is the same story as bookKey flame-immortal-duty-2 (L.5) in this batch; both copies have been given identical corrected text. It also appears in the Meduson and Lupercal's War anthologies. Serious faction error corrected: both database copies said Salamanders, but the story is Iron Hands. The Black Library blurb on Lexicanum names Ahrem Gallikus, a Medusan Immortal and disgraced warrior of the Iron Hands, and both The Heresy Reviewed and PurpleHeresy independently describe it as an Iron Hands versus World Eaters boarding action above Isstvan V told in flashback. Timeline 006.M31 and type Short Story confirmed."
+    },
+    {
+      "bookKey": "flame-scorched-earth",
+      "verdict": "corrected",
+      "title": "SCORCHED EARTH",
+      "author": "Nick Kyme",
+      "type": "Novella",
+      "legions": ["Salamanders", "Iron Hands", "Raven Guard", "Emperor's Children"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Ra'stan", "Usabius"],
+      "blurb": "In the days after the Dropsite Massacre, Salamanders legionaries Ra'stan and Usabius leave the other loyalist survivors behind and strike out into the Urgall Depression to learn what, if anything, remains of Vulkan. Their path crosses those of Iron Hands and Raven Guard survivors, and of the Emperor's Children still working over the battlefield. The search becomes a study in grief, faith and the will to endure.",
+      "blurbSafe": "Two Salamanders defy their fellow survivors and walk back into the killing fields of Isstvan V, determined to find out what became of their primarch.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Scorched_Earth_(Novella)",
+        "https://40ktimeline.com/books/scorched-earth"
+      ],
+      "confidence": "high",
+      "notes": "The current blurb's 'wage war across scorched worlds' was wrong: this is a single, tightly bounded story on the Isstvan V battlefield itself. Named protagonists Ra'stan and Usabius come from the Lexicanum cover description; the added legions come from that page's dramatis personae, which lists Iron Hands (Erasmus Ruuman, Ishmal Sulnar, Tarkan), Raven Guard (Morvax Haukspeer) and Emperor's Children (Lorimarr). Type Novella and timeline 006.M31 confirmed."
+    },
+    {
+      "bookKey": "flame-sons-of-forge",
+      "verdict": "corrected",
+      "title": "SONS OF THE FORGE",
+      "author": "Nick Kyme",
+      "type": "Novella",
+      "legions": ["Salamanders", "Iron Hands", "Sons of Horus", "Mechanicum"],
+      "timeline": "010.M31",
+      "mainCharacters": ["T'kell", "Rahz Obek", "Kastigan Ulok", "Regulus"],
+      "blurb": "Forgefather T'kell was left on Nocturne when Vulkan went to Isstvan, and saved seven of his primarch's greatest weapons from the destruction Vulkan ordered. Once Numeon has brought Vulkan's body home, T'kell gathers the Firedrakes of the Unscarred and sets out to seal the relics in the hidden vault called the Wrought. The Dark Mechanicum adept Regulus, Sons of Horus raiders and Iron Father Kastigan Ulok all want them first.",
+      "blurbSafe": "Charged with a solemn duty by Vulkan himself, the Salamanders' first Forgefather leads a chosen few of the Legion's Firedrakes on a journey to place the last of his primarch's greatest weapons beyond anyone's reach.",
+      "changed": ["timeline", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Sons_of_the_Forge_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/T%27kell",
+        "https://www.trackofwords.com/2017/05/30/sons-of-the-forge-nick-kyme/"
+      ],
+      "confidence": "high",
+      "notes": "The prior audit's flag is confirmed. The protagonist is Forgefather T'kell, not Numeon, and the Black Library blurb reproduced on Lexicanum names T'kell explicitly. Lexicanum's T'kell article, citing Sons of the Forge chapter three, states the journey begins 'when Artellus Numeon returned Vulkan's body to Nocturne', which is the end of Deathfire, so Numeon is dead before the novella's main action. Timeline moved from 006.M31 to 010.M31 to match this database's own dating of Deathfire (010.M31) and Old Earth (011.M31), between which the novella sits. Legions expanded from Salamanders alone using the Lexicanum dramatis personae: Iron Hands (Kastigan Ulok, Ahrem Gallikus), Sons of Horus (Vosto Kurnan) and Dark Mechanicum (Regulus). One Raven Guard warrior, Morikan, also appears but is too minor to list. Note that the Born of Flame cover copy calls this 'the novel Sons of the Forge' while Black Library and Lexicanum both classify it as a novella at 204 pages; Novella retained."
+    },
+    {
+      "bookKey": "flame-artefacts",
+      "verdict": "corrected",
+      "title": "ARTEFACTS",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Salamanders"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Vulkan", "T'kell"],
+      "blurb": "Before leaving for Isstvan V, Vulkan returns to Nocturne and takes his Master of the Forge, T'kell, into the secret vault beneath the fortress-monastery. Shaken by Konrad Curze's murder of Nostramo, and by a conversation with Horus he now reads very differently, Vulkan orders the thousands of unique weapons he has made destroyed rather than risk them. T'kell argues for them, and is named the Legion's first Forgefather.",
+      "blurbSafe": "On the eve of Isstvan V, Vulkan comes home to Nocturne and looks at his personal armoury with new eyes, wondering what his life's work as a weaponsmith would mean in the wrong hands.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Artefacts_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/T%27kell"
+      ],
+      "confidence": "high",
+      "notes": "REPRINT. This story also exists elsewhere in this database as bookKey war-artefacts (XXXIII.8, the War Without End anthology, also dated 006.M31); that copy is outside this batch and should be given this same corrected text. The story additionally appears in Sedition's Gate and Lupercal's War. The current blurb ('recover precious relics from the war's devastation') was a title paraphrase and factually backwards: nothing is recovered, Vulkan orders his armoury destroyed. Lexicanum carries a full scene-by-scene plot summary. Legions left as Salamanders only: Curze and the Night Lords feature heavily but purely in Vulkan's recollection, and adding them would wrongly flip a traitor filter. This is the direct set-up for Sons of the Forge. Type and timeline confirmed."
+    },
+    {
+      "bookKey": "flame-immortal-duty-2",
+      "verdict": "corrected",
+      "title": "IMMORTAL DUTY",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Iron Hands", "World Eaters"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Ahrem Gallikus"],
+      "blurb": "Ahrem Gallikus, a Medusan Immortal of the Iron Hands, stands condemned before his own brothers and is made to account for himself before they kill him. His testimony returns to the void battle above Isstvan V and a boarding action against the traitor warship Retiarius, where he fought the World Eaters and something in him gave way. What he did aboard that ship is what has brought him here.",
+      "blurbSafe": "A disgraced Medusan Immortal of the Iron Hands is called on to give an account of his greatest battle, a boarding action fought in the void above Isstvan V.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Immortal_Duty_(Short_Story)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://purpleheresy.blogspot.com/2015/06/meduson-short-story-collection.html"
+      ],
+      "confidence": "high",
+      "notes": "REPRINT. Identical story to bookKey shattered-immortal-duty (XLIII.3) in this batch; both copies deliberately carry the same corrected text. Also collected in Meduson and Lupercal's War. Same serious correction as the other copy: Salamanders replaced with Iron Hands and World Eaters. Ahrem Gallikus is also listed among the Shattered Legions characters in the Sons of the Forge dramatis personae, which corroborates his Iron Hands identity."
+    },
+    {
+      "bookKey": "shattered-unforged",
+      "verdict": "corrected",
+      "title": "UNFORGED",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Salamanders"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Jo'Phor", "Hae'Phast", "Donak"],
+      "blurb": "Guy Haley returns to the Salamanders resistance cell of his audio drama Strike and Fade, still waging a hopeless guerrilla war in the ruins of Isstvan V long after the massacre ended. A group of untested Salamanders investigates a homing beacon deep in a planetary ravine, hoping it means friendly survivors. The ambush that closes on Jo'Phor and his brothers is sprung by loyalists who never realise who they are killing.",
+      "blurbSafe": "A handful of Salamanders are still fighting a guerrilla war in the ruins of Isstvan V long after the massacre. A homing beacon deep in a ravine promises they may not be alone.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Meduson_(Anthology)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://speculiction.blogspot.com/2024/04/review-of-shattered-legions-ed-by.html",
+        "https://purpleheresy.blogspot.com/2015/06/meduson-short-story-collection.html"
+      ],
+      "confidence": "high",
+      "notes": "Faction corrected from Iron Hands to Salamanders. Lexicanum's Meduson anthology page summarises Unforged as 'an examination of the broken nature of the Salamanders', and three independent reviews agree: The Heresy Reviewed has the Strike and Fade characters ambushed by their own oblivious battle-brothers, Speculiction describes untested Salamanders investigating a homing beacon in a ravine, and PurpleHeresy names the returning cast Jo'Phor, Hae'Phast and the mute Donak. Strike and Fade is itself a Salamanders story (survivors ambushing Night Lords on Isstvan V), so both sides of the friendly-fire incident are Salamanders and no other Legion is listed. Type and timeline unchanged; 007.M31 fits 'long after the Dropsite Massacre'. Directly continued by Unspoken."
+    },
+    {
+      "bookKey": "shattered-grey-talon",
+      "verdict": "corrected",
+      "title": "GREY TALON",
+      "author": "Chris Wraight",
+      "type": "Audio Drama",
+      "legions": ["Iron Hands", "White Scars", "Sons of Horus"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Bion Henricos", "Hibou Khan", "Shadrak Meduson"],
+      "blurb": "The Grey Talon is a captured Sons of Horus destroyer still flying the traitors' colours, commanded by Bion Henricos of the Iron Hands and crewed by disgraced White Scars doing penance under Hibou Khan. Cold towards each other, the two work out how to stalk a traitor ship through the warp and board it. The attack goes badly wrong until Shadrak Meduson's warriors teleport aboard, and Henricos is offered a place in something larger.",
+      "blurbSafe": "A captured traitor warship prowls the void under a loyalist crew, an Iron Hand in command and White Scars penitents in her holds, striking covertly at isolated enemy vessels.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Grey_Talon_(Audio_Drama)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://wh40k.lexicanum.com/wiki/Shadrak_Meduson"
+      ],
+      "confidence": "high",
+      "notes": "Serious faction error corrected. There are no Raven Guard in this story at all; the current entry appears to have guessed from the word 'Talon'. Lexicanum carries a full scene-by-scene plot summary and its Shadrak Meduson article cites the story independently. Correct factions are Iron Hands (Bion Henricos), White Scars (Hibou Khan and the sagyar mazan penitents, following the schism in Scars) and Sons of Horus as the enemy. The ship was originally seized at Isstvan V by Salamanders who renamed her Hesiod, but they had been replaced by the White Scars before the story opens, so Salamanders are not listed. Type Audio Drama confirmed (prose in Meduson 2015, MP3 January 2016); timeline 007.M31 unchanged, consistent with this database's dating of Scars."
+    },
+    {
+      "bookKey": "shattered-meduson",
+      "verdict": "corrected",
+      "title": "MEDUSON",
+      "author": "Dan Abnett",
+      "type": "Short Story",
+      "legions": ["Iron Hands", "Sons of Horus"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Shadrak Meduson", "Jebez Aug", "Amadeus DuCaine", "Tybalt Marr"],
+      "blurb": "Watching the Dropsite Massacre from orbit aboard the Ironside, Clan-Commander Shadrak Meduson loses a hand, his old friend the Legion Master and his primarch in a single day. In the leaderless fleet that follows he argues against the Clan Fathers' retreat into tradition, wanting a mongrel force built from all the survivors. A Sons of Horus trap sprung by Tybalt Marr costs the Iron Hands their Clan Fathers and leaves Meduson warleader.",
+      "blurbSafe": "Among the leaderless Iron Hands who escaped the Dropsite Massacre, one outspoken clan-commander refuses to accept that the Legion should simply rebuild along the old lines.",
+      "changed": ["timeline", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Shadrak_Meduson",
+        "https://wh40k.lexicanum.com/wiki/Meduson_(Anthology)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://www.trackofwords.com/2015/05/25/meduson-black-library-anthology/"
+      ],
+      "confidence": "high",
+      "notes": "The prior audit's flag is confirmed: this is Shadrak Meduson's origin story. Timeline corrected from 008-011.M31 to 006.M31. Lexicanum's Meduson article, citing this story throughout, places all of it in the immediate aftermath of Isstvan V: the boarding of the Ironside, DuCaine's death signal, the Clan Fathers taking collective command, Jebez Aug being made Warleader with Meduson as his Hand Elect, the Sons of Horus ambush that destroys the Crown of Flame, and Meduson finally taking the warleadership and vowing to take Tybalt Marr's head. Sons of Horus added as the antagonist faction. Salamanders and Raven Guard survivors are folded into Clan Sorrgol during the story but are not viewpoint factions, so they are not listed. Type Short Story confirmed."
+    },
+    {
+      "bookKey": "shattered-keys-hel",
+      "verdict": "corrected",
+      "title": "THE KEYS OF HEL",
+      "author": "John French",
+      "type": "Short Story",
+      "legions": ["Iron Hands", "Death Guard"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Crius", "Soter"],
+      "blurb": "A sequel to John French's Riven. Crius, once of the Crusader Host and now a revenant reanimated by the very technologies Ferrus Manus sealed away, fights on with the Iron Hands who have turned the Keys of Hel. With Clan-Father Soter of Clan Kadoran among them, the undead legionaries assault a space station held by the Death Guard. What the Iron Hands are letting themselves become matters more than the battle.",
+      "blurbSafe": "John French returns to the darkest secret of the Iron Hands, the forbidden technologies their primarch locked away, as a strike force moves against a traitor-held void station.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Keys_of_Hel",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://wh40k.lexicanum.com/wiki/Crius",
+        "https://wh40k.lexicanum.com/wiki/Riven_(Short_Story)",
+        "https://purpleheresy.blogspot.com/2015/06/meduson-short-story-collection.html"
+      ],
+      "confidence": "high",
+      "notes": "The prior audit's flag is confirmed as Iron Hands, but the current blurb badly misread the title: the Keys of Hel are not a weapon the Shattered Legions go hunting for, they are seals Ferrus Manus placed on forbidden Dark Age and xenos technologies, and turning them is what some Iron Hands do to themselves. Salamanders and Raven Guard removed; the enemy is the Death Guard, per The Heresy Reviewed's per-story summary. Lexicanum's Keys of Hel article cites this story for cybernetic resurrection, several of the named forbidden technologies, and Soter of Clan Kadoran as a revenant. Crius's return is confirmed by PurpleHeresy and by his own Lexicanum article, which ends Riven with him reanimated. Type and timeline unchanged."
+    },
+    {
+      "bookKey": "shattered-deeds-endure",
+      "verdict": "corrected",
+      "title": "DEEDS ENDURE",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": ["Salamanders", "Iron Hands", "World Eaters"],
+      "timeline": "008.M31",
+      "mainCharacters": [],
+      "blurb": "A joint Salamanders and Iron Hands force, spared the slaughter at Isstvan V, finds a World Eaters facility sitting in the middle of a civilian population. The far larger Iron Hands contingent wants an orbital bombardment and will accept the collateral damage. The Salamanders will not spend mortal lives that way. The argument lays bare how differently the two Legions understand the war, and how close allies can come to blows.",
+      "blurbSafe": "Salamanders and Iron Hands survivors have made common cause against the traitors, until a World Eaters target surrounded by civilians forces them to agree on how it should be attacked.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Meduson_(Anthology)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://purpleheresy.blogspot.com/2015/06/meduson-short-story-collection.html"
+      ],
+      "confidence": "high",
+      "notes": "Serious faction error corrected: there are no Raven Guard in this story. Lexicanum's Meduson anthology page carries the full Black Library blurb, which names Salamanders and Iron Hands who have found common cause and a World Eaters force among a civilian population. The Heresy Reviewed and PurpleHeresy both independently describe the same set-up, PurpleHeresy specifying a World Eaters training facility and the orbital-bombardment argument. No named protagonist could be established from any source, so mainCharacters is left empty rather than invented. Type and timeline unchanged."
+    },
+    {
+      "bookKey": "shattered-the-noose",
+      "verdict": "corrected",
+      "title": "THE NOOSE",
+      "author": "David Annandale",
+      "type": "Short Story",
+      "legions": ["Iron Hands", "Emperor's Children"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Khalybus"],
+      "blurb": "Captain Khalybus of the Iron Hands is being run down through the void by Emperor's Children warships, and answers with a long game of feints, traps and bluffs in which neither commander can be sure who is hunting whom. Annandale sets the X Legion's blunt attrition against the III Legion's preening, increasingly deranged obsession with perfection. Khalybus finally draws his pursuers into an ambush.",
+      "blurbSafe": "An Iron Hands captain is being hunted through the void by Emperor's Children warships, and neither commander can be certain which of them is really closing the trap.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://wh40k.lexicanum.com/wiki/Meduson_(Anthology)",
+        "https://speculiction.blogspot.com/2024/04/review-of-shattered-legions-ed-by.html",
+        "https://www.trackofwords.com/2015/05/25/meduson-black-library-anthology/"
+      ],
+      "confidence": "high",
+      "notes": "The current blurb's 'traitor supply lines' was invented. This is a ship-to-ship duel. Four independent sources agree it is Iron Hands versus Emperor's Children: Lexicanum's one-line summary, Track of Words ('a cat and mouse game of traps and bluffs'), Speculiction and The Heresy Reviewed, the last of which names Captain Khalybus and the closing ambush. Emperor's Children added to legions. Type and timeline unchanged. PurpleHeresy notes the tonal debt to the Iron Hands versus Emperor's Children void war in The Damnation of Pythos, but no source calls it a direct sequel, so that link is not asserted."
+    },
+    {
+      "bookKey": "shattered-unspoken",
+      "verdict": "corrected",
+      "title": "UNSPOKEN",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Salamanders", "Iron Hands", "Alpha Legion"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Donak", "Tarkan", "Ishmal Sulnar"],
+      "blurb": "Narrated in the first person by Donak, the mute Salamander who alone survived the friendly-fire ambush of Unforged, this longer sequel places him in a mixed Iron Hands and Salamanders force alongside Tarkan and Sulnar from Scorched Earth. They assault a traitor-held astropathic relay station and find something stranger waiting: Alpha Legionnaires disguised as Iron Hands, fighting other Alpha Legionnaires who claim to be loyal.",
+      "blurbSafe": "Guy Haley's follow-up to Unforged is narrated by a mute Salamander who has taken his place among a mixed Shattered Legions force as it moves against a traitor-held astropathic relay station.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://purpleheresy.blogspot.com/2015/06/meduson-short-story-collection.html",
+        "https://wh40k.lexicanum.com/wiki/Meduson_(Anthology)",
+        "https://speculiction.blogspot.com/2024/04/review-of-shattered-legions-ed-by.html"
+      ],
+      "confidence": "high",
+      "notes": "The current blurb was pure title paraphrase. Salamanders and Alpha Legion added. Lexicanum records only that Unspoken continues Unforged, which is a Salamanders story; The Heresy Reviewed supplies the mixed Iron Hands and Salamanders force, the mute survivor viewpoint, the astropathic relay station and the Alpha Legion infiltrators; PurpleHeresy independently names the protagonist Donak and confirms Tarkan and Sulnar carry over from Nick Kyme's Scorched Earth; Speculiction independently confirms the first-person Salamander narrator who ends up switching Legions. Type and timeline unchanged."
+    },
+    {
+      "bookKey": "shattered-the-either",
+      "verdict": "corrected",
+      "title": "THE EITHER",
+      "author": "Graham McNeill",
+      "type": "Audio Drama",
+      "legions": ["Sons of Horus", "Iron Hands"],
+      "timeline": "006-009.M31",
+      "mainCharacters": ["Tybalt Marr", "Horus", "Shadrak Meduson"],
+      "blurb": "The Shattered Legions war told from the other side. Tybalt Marr of the Sons of Horus, forever overlooked beside more celebrated captains, retells the void trap that destroyed the Iron Hands Clan Fathers and returns to his Legion boasting that he has killed Shadrak Meduson. On conquered Dwell his triumph curdles when he learns of the attempt on Horus's own life, and hunting Meduson becomes his sole duty.",
+      "blurbSafe": "Graham McNeill turns the Shattered Legions story around and follows a Sons of Horus captain, the least regarded of the Warmaster's officers, as he tries to make a name that will outlast him.",
+      "changed": ["timeline", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Either_(Audio_Drama)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://wh40k.lexicanum.com/wiki/Shadrak_Meduson",
+        "https://www.trackofwords.com/2015/05/25/meduson-black-library-anthology/"
+      ],
+      "confidence": "medium",
+      "notes": "Serious faction error corrected. This is a traitor-viewpoint story: the protagonist is Sons of Horus Captain Tybalt Marr, per the Black Library blurb on Lexicanum, Track of Words and The Heresy Reviewed. Listing it as Iron Hands only would put a Sons of Horus story on the wrong side of a loyalist filter, so Sons of Horus is listed first with Iron Hands retained as the opposing faction. Timeline moved from 010.M31 to 006-009.M31: the story replays the events of Meduson (006.M31) from Marr's perspective and ends on Dwell just after the assassination attempt on Horus, which this database dates via Vengeful Spirit to 008-009.M31, so 010.M31 is too late. Confidence marked medium for the date only; the faction correction is high confidence. Type Audio Drama confirmed."
+    },
+    {
+      "bookKey": "shattered-hand-elect",
+      "verdict": "corrected",
+      "title": "THE HAND ELECT",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["Iron Hands", "Mechanicum"],
+      "timeline": "010.M31",
+      "mainCharacters": ["Jebez Aug", "Shadrak Meduson"],
+      "blurb": "Iron Father Jebez Aug, Hand Elect and second to warleader Shadrak Meduson, carries wounds no Legion apothecary can mend. He travels to a loyalist forge world and puts himself into the hands of the Mechanicum, and the price of being made whole is not paid only in flesh. All the while other Iron Hands are quietly manoeuvring to have Meduson replaced at the head of the Shattered Legions.",
+      "blurbSafe": "Grievously wounded, the second-in-command of the Shattered Legions makes for a loyalist forge world in the hope of being made whole again, while politics stir behind him.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Hand_Elect_(Short_Story)",
+        "https://theheresyreviewed.blogspot.com/2017/11/shattered-legions.html",
+        "https://wh40k.lexicanum.com/wiki/Jebez_Aug",
+        "https://wh40k.lexicanum.com/wiki/Shadrak_Meduson"
+      ],
+      "confidence": "high",
+      "notes": "The current blurb was a generic title paraphrase. The Hand Elect is a specific rank, Meduson's second-in-command, and the story is about one man: Jebez Aug. The Black Library blurb on Lexicanum states it is 'the tale of how Jebez Aug, the Hand Elect of Warleader Shadrak Meduson, sought out the aid of the Mechanicus to restore him of his wounds and what it cost him'; The Heresy Reviewed adds the loyalist forge world and the scheming to replace Meduson. Mechanicum added to legions. Note this story was added only for the 2016 Ultimate Edition of Meduson and Lexicanum files it as 'Hand Elect' without the article, but the Shattered Legions contents page uses 'The Hand Elect', which is kept. Timeline left at 010.M31: Aug's wounds date from Meduson (006.M31) but the internal politicking points forward to the Cult of the Gorgon arc resolved in Old Earth (011.M31), and no source fixes the date, so the existing value was not disturbed."
+    },
+    {
+      "bookKey": "shattered-seventh-serpent",
+      "verdict": "corrected",
+      "title": "THE SEVENTH SERPENT",
+      "author": "Graham McNeill",
+      "type": "Novella",
+      "legions": ["Iron Hands", "Raven Guard", "Salamanders", "Alpha Legion"],
+      "timeline": "011.M31",
+      "mainCharacters": ["Cadmus Tyro", "Wayland", "Nykona Sharrowkyn", "Alpharius"],
+      "blurb": "The battered crew of the Sisypheum, Iron Hands, Raven Guard and Salamanders survivors under Cadmus Tyro, are drawn into a covert assault on a hidden Alpha Legion outpost, an operation apparently orchestrated by Shadrak Meduson himself. Wayland and the Raven Guard shadow-killer Nykona Sharrowkyn go in expecting Alpha Legion deception and find rather more of it than they bargained for: the Meduson leading them is Alpharius wearing his face.",
+      "blurbSafe": "The survivors aboard the Sisypheum are offered a real chance to hurt the traitors, a joint operation against a hidden Alpha Legion outpost. Nothing involving the sons of Alpharius is ever quite what it appears.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.trackofwords.com/the-seventh-serpent-graham-mcneill/",
+        "https://wh40k.lexicanum.com/wiki/Shadrak_Meduson",
+        "https://wh40k.lexicanum.com/wiki/Cadmus_Tyro",
+        "https://www.blacklibrary.com/the-horus-heresy/novels/the-seventh-serpent-ebook.html",
+        "https://speculiction.blogspot.com/2024/04/review-of-shattered-legions-ed-by.html"
+      ],
+      "confidence": "high",
+      "notes": "Raven Guard and Salamanders added: the Sisypheum's crew is a mixed Shattered Legions band, per the Black Library synopsis and Track of Words, which names Wayland and Sharrowkin. Lexicanum's Shadrak Meduson and Cadmus Tyro articles both cite this novella for the key reveal, that Alpharius impersonated Meduson and was exposed by Tyro's force, which is why the blurb states it rather than the softer 'Meduson orchestrated it' framing on the cover copy. Type Novella and timeline 011.M31 both left unchanged: the story follows the Sisypheum's escape from Iydris in Angel Exterminatus but Lexicanum places the impersonation in the post-Dwell period, so anything from roughly 009.M31 to just before Old Earth is defensible and the existing value sits inside that window."
+    }
+  ]
+}

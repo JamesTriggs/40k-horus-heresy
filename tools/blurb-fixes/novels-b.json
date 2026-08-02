@@ -1,0 +1,269 @@
+{
+  "batch": "novels-b",
+  "entries": [
+    {
+      "bookKey": "fulgrim",
+      "verdict": "corrected",
+      "title": "FULGRIM",
+      "author": "Graham McNeill",
+      "type": "Novel",
+      "legions": ["Emperor's Children", "Iron Hands"],
+      "timeline": "005-006.M31",
+      "mainCharacters": ["Fulgrim", "Ferrus Manus", "Lucius", "Eidolon"],
+      "blurb": "The Emperor's Children conquer the Laer temple-world, and Fulgrim carries away a daemon-possessed blade from its shrine. As Slaanesh's influence spreads, the Legion's pursuit of perfection curdles into excess, and at Isstvan V Fulgrim beheads his closest brother, Ferrus Manus of the Iron Hands. Broken by grief, he lets the sword's daemon take his body outright, and his own soul is sealed inside a portrait aboard the Pride of the Emperor.",
+      "blurbSafe": "The Emperor's Children discover a daemonic blade on a lost world, and Fulgrim becomes possessed by its malevolent spirit. As Slaanesh's corruption spreads through the Legion, their pursuit of perfection twists into depravity and excess, culminating in a tragic confrontation with Ferrus Manus at Isstvan V.",
+      "changed": ["blurb", "timeline"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Fulgrim_(Novel)",
+        "https://warhammer40k.fandom.com/wiki/Fulgrim",
+        "https://wh40k.lexicanum.com/wiki/Chronological_order_of_settings_of_Black_Library_publications",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Real error fixed: the old blurb said 'the daemon and Primarch merge, creating a being of terrible beauty and horror'. The Fandom Fulgrim article is explicit that the Greater Daemon is freed from the sword and fully possesses Fulgrim's body, trapping the primarch's consciousness in the portrait hanging in La Fenice aboard the Pride of the Emperor. There is no merger; Fulgrim only reverses the swap later, in The Reflection Crack'd. Date re-anchored from 006.M31 to 005-006.M31 per Lexicanum's chronology page. Note the sources disagree on the start: Lexicanum's footnote says its 005-006 dating is drawn from Parts 4 and 5 only, while Tymell dates the opening Laeran campaign to mid-002.M31. 005-006.M31 covers the Heresy-era bulk without dragging the book four years earlier in a sorted list. blurbSafe verified accurate and left unchanged."
+    },
+    {
+      "bookKey": "vulkan-lives",
+      "verdict": "corrected",
+      "title": "VULKAN LIVES",
+      "author": "Nick Kyme",
+      "type": "Novel",
+      "legions": ["Salamanders", "Night Lords", "Word Bearers"],
+      "timeline": "006-007.M31",
+      "mainCharacters": ["Vulkan", "Konrad Curze", "Artellus Numeon", "John Grammaticus", "Barthusa Narek"],
+      "blurb": "Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan is a Perpetual—he cannot truly die. Each time Curze kills him, he returns, driving the Night Haunter to madness. Vulkan's resilience and inherent nobility stand in stark contrast to Curze's nihilism. His sons search desperately for their lost Primarch while Vulkan himself endures endless death and rebirth, testing the limits of even a Primarch's sanity.",
+      "blurbSafe": "Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan possesses a unique ability—each time Curze kills him, he returns. This endless cycle tests both Primarchs, as Vulkan's resilience confronts Curze's nihilism.",
+      "changed": ["legions"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Vulkan_Lives",
+        "https://warhammer40k.fandom.com/wiki/Vulkan",
+        "https://warhammer40k.fandom.com/wiki/Artellus_Numeon",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Blurb verified and carried through unchanged. Vulkan is held on a Night Lords gaol-hulk, killed repeatedly, and finally escapes the Iron Labyrinth (built for Curze by Perturabo) using the teleporter in Dawnbringer. Only correction needed is the faction list: the entire second strand of the novel follows Artellus Numeon's Isstvan survivors on Traoris against the Word Bearers under Dark Apostle Valdrekk Elias and the huntsman Barthusa Narek, with Erebus appearing in person, so Word Bearers is added. Date 006-007.M31 confirmed: Tymell splits the book into 'late 30,006 and late 30,007', and the Horus Heresy Journal dates Vulkan's capture to 568.006.M31."
+    },
+    {
+      "bookKey": "deliverance-lost",
+      "verdict": "corrected",
+      "title": "DELIVERANCE LOST",
+      "author": "Gav Thorpe",
+      "type": "Novel",
+      "legions": ["Raven Guard", "Alpha Legion"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Corvus Corax", "Omegon", "Branne Nev", "Vincente Sixx"],
+      "blurb": "Three months after the Drop Site Massacre, Corax is lifted off Isstvan V with a fraction of his Legion and wins from the Emperor the secret gene-stock of the Primarch Project. The first accelerated cadre, the Raptors, is a triumph, but Alpha Legion infiltrators taint the remaining gene-tech with a daemon-touched virus. The next two thousand recruits emerge hideously mutated, Omegon escapes with the stolen primarch DNA, and Corax abandons the shortcut for good.",
+      "blurbSafe": "Decimated at Isstvan V, Corvus Corax seeks to rebuild his Legion using gene-tech from the Emperor's laboratories. But Alpha Legion operatives have infiltrated his ranks, threatening to sabotage the Raven Guard's desperate attempt at salvation.",
+      "changed": ["blurb"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Deliverance_Lost",
+        "https://warhammer40k.fandom.com/wiki/Corvus_Corax",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Two real errors fixed. First, 'Corax is forced to mercy-kill his own sons' is wrong: the Fandom Corax article states he declared the mutants were still Raven Guard and vowed to reverse their condition, and the mutants then saved the Legion's original gene-seed at Ravendelve, after which Corax let those able to fight join the Raptor squads. Second, 'the results are horrific, mutated abominations instead of Astartes' understates the sequence: the first 500 Raptors were a success, and only the second cadre of 2,000 mutated after the sabotage. Also removed the forward reference to Corax's later disappearance into the Eye of Terror, which is outside this novel. Timeline kept at 007.M31: Tymell spans the book November 006 to early 008, but the rescue is the prologue and the overwhelming bulk of the narrative present (Terra, the Deliverance rebuild, the Alpha Legion sabotage) falls in 007."
+    },
+    {
+      "bookKey": "the-crimson-king",
+      "verdict": "corrected",
+      "title": "THE CRIMSON KING",
+      "author": "Graham McNeill",
+      "type": "Novel",
+      "legions": ["Thousand Sons"],
+      "timeline": "010.M31",
+      "mainCharacters": ["Magnus the Red", "Ahzek Ahriman", "Amon", "Yasu Nagasena", "Lemuel Gaumon"],
+      "blurb": "Exiled to the Planet of the Sorcerers, Magnus is a hollowed-out thing, his soul shattered into shards flung across reality. Ahriman leads a quest to gather them, raiding the black ship prison of Kamiti Sona and returning to Nikaea and the ashes of Prospero, while Malcador sets his own hunters on the Legion's trail. Magnus is largely made whole by the end, but one last shard of him still lies on Terra.",
+      "blurbSafe": "Exiled to the Planet of the Sorcerers within the Eye of Terror, Magnus is a broken soul whose mind and memories are slipping away into the warp. Ahriman leads the Thousand Sons on a desperate quest to make their primarch whole again, returning to the scenes of the Legion's greatest triumphs and tragedies. Malcador, meanwhile, sets his own agents against them.",
+      "changed": ["timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/The_Crimson_King_(Novel)",
+        "https://www.trackofwords.com/2017/06/02/the-crimson-king-graham-mcneill/",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Biggest date error in the batch: 007.M31 was three years too early. Tymell dates the novel to 30,010, notes Lorgar refers to Horus as reborn (so after Vengeful Spirit), and cites Horus Heresy Book VIII (Malevolence) confirming Ahriman's attack on Kamiti Sona takes place in 010. Re-anchored to 010.M31. Blurb also corrected: the old text framed the book as Legion politics inside Tzeentch's realm, but the story is a galaxy-spanning shard-hunt (Kamiti Sona, Nikaea, Prospero) pursued by warriors Malcador deploys, per Track of Words. Dropped the invented 'choose whether to serve Horus or chart his own dark path' and replaced it with the sourced ending: Magnus is restored except for one shard remaining on Terra."
+    },
+    {
+      "bookKey": "the-damnation-of-pythos",
+      "verdict": "corrected",
+      "title": "THE DAMNATION OF PYTHOS",
+      "author": "David Annandale",
+      "type": "Novel",
+      "legions": ["Iron Hands", "Salamanders", "Raven Guard"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Durun Atticus"],
+      "blurb": "Survivors of the Drop Site Massacre, a company of Iron Hands under Captain Durun Atticus with smaller Salamanders and Raven Guard contingents, make landfall on the death world Pythos and carve a sanctuary out of the jungle for human refugees fleeing the war. The monsters outside the walls are the least of it. Buried beneath Pythos is a gateway to the warp, and the Iron Hands' grief-blinded refusal to see it damns everyone who sheltered there.",
+      "blurbSafe": "Survivors of the Drop Site Massacre from three shattered Legions regroup on an insignificant death world and carve out a refuge for human refugees adrift on the tides of the war. The jungle and its monstrous creatures are dangerous enough, but something far darker is gathering beneath the surface of Pythos.",
+      "changed": ["timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/The_Damnation_of_Pythos_(Novel)",
+        "https://www.trackofwords.com/2014/05/24/the-damnation-of-pythos-david-annandale/",
+        "https://warhammer40k.fandom.com/wiki/Pythos",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "medium",
+      "notes": "Date corrected from 007.M31 to 006.M31: Tymell dates the novel to August 30,006, and its internal references place it a few weeks after Isstvan V, directly following the audio drama Veritas Ferrum. Confidence is medium on the date only because no source gives an end point for the Pythos garrison's stay. Blurb correction: 'Pythos becomes a daemon world' is not supportable. The Fandom Pythos article describes the subterranean warp portal, the Damnation Cache, as dating from the Horus Heresy but remaining sealed until Abaddon reopened it in 959-961.M41, so the world was not left as a permanent daemon world. Reworded to the buried gateway and the doom of the sanctuary. Protagonist and legion mix confirmed by Track of Words: Captain Durun Atticus and the 111th company of Iron Hands plus smaller Raven Guard and Salamanders contingents. Only Atticus is listed under mainCharacters because he is the only name I could confirm from a source in this pass."
+    },
+    {
+      "bookKey": "nemesis",
+      "verdict": "corrected",
+      "title": "NEMESIS",
+      "author": "James Swallow",
+      "type": "Novel",
+      "legions": ["Officio Assassinorum", "Word Bearers"],
+      "timeline": "007-008.M31",
+      "mainCharacters": ["Malcador the Sigillite", "Spear", "Erebus", "Iota"],
+      "blurb": "Malcador the Sigillite, secret Grand Master of the Assassin clades, authorises the first Execution Force: six killers, one from every clade, sent to Dagonet to murder Horus after eight lone assassins have already failed. Unknown to them, Erebus has loosed a weapon of his own, a daemon-bonded pariah called Spear whose real target is the Emperor. The two hunts collide on Dagonet, and the strike on Horus fails with all but one assassin dead.",
+      "blurbSafe": "In the shadows of the Imperial Palace, powerful figures authorise a desperate gambit: an Execution Force drawn from every Assassin clade, sent to end the war by killing Horus before it can spread further. What they cannot know is that another assassin is already abroad, with his sights set on a very different target.",
+      "changed": ["timeline", "blurb", "blurbSafe", "legions"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Nemesis_(Novel)",
+        "https://warhammer40k.fandom.com/wiki/Execution_Force",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Malcador's role is confirmed, not an error: the Fandom Execution Force article names him the secret Grand Master of Assassins who authorised the first Execution Force. The real error was Spear. He is not 'Horus's own weapon' deployed against the Execution Force; he is an escaped Culexus experiment captured and daemon-bonded by Erebus of the Word Bearers, and Erebus tasked him with killing the Emperor. Word Bearers added to the faction list accordingly. Also added the outcome, which the old blurb left hanging: the Dagonet attempt failed and all but one of the assassins were killed. Date widened from 007.M31 to 007-008.M31: Tymell puts the opening at mid-to-late 007 and cites Forge World Horus Heresy Book VI giving the Dagonet assassination as year 008; the Fandom article likewise places the novel about two standard years after Isstvan V."
+    },
+    {
+      "bookKey": "know-no-fear",
+      "verdict": "confirmed",
+      "title": "KNOW NO FEAR",
+      "author": "Dan Abnett",
+      "type": "Novel",
+      "legions": ["Ultramarines", "Word Bearers"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Roboute Guilliman", "Lorgar", "Kor Phaeron", "Remus Ventanus"],
+      "blurb": "The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines, proud and unprepared for treachery, are devastated by orbital bombardment and brutal ground assaults. Roboute Guilliman survives being sucked into space, his transhuman physiology barely preserving him. Though the Ultramarines eventually repel the invasion, Calth is left a poisoned, irradiated wreck. The Mark of Calth becomes a scar worn by the Ultramarines forever, a reminder that even the most noble can be caught unprepared by treachery.",
+      "blurbSafe": "The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines face devastating orbital bombardment and brutal ground assaults, unprepared for treachery from those they considered brothers in arms.",
+      "changed": [],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Know_No_Fear",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Calth",
+        "https://wh40k.lexicanum.com/wiki/Chronological_order_of_settings_of_Black_Library_publications"
+      ],
+      "confidence": "high",
+      "notes": "Everything checks out. Lexicanum's chronology page and its Battle of Calth article both give 007.M31, and Tymell dates the novel to July 30,007. The Lorgar humiliation at Monarchia is dated roughly forty years before the Heresy, so 'decades of resentment' is right. Guilliman being blown into vacuum is accurate: Lorgar's incantation summons daemons that smash into the bridge of the Macragge's Honour and vent it to space. The aftermath is accurate too: the Veridian sun was irreversibly poisoned, Calth's atmosphere permanently stripped, and the population driven into the cavern cities. Carried through unchanged."
+    },
+    {
+      "bookKey": "battle-for-the-abyss",
+      "verdict": "corrected",
+      "title": "BATTLE FOR THE ABYSS",
+      "author": "Ben Counter",
+      "type": "Novel",
+      "legions": ["Word Bearers", "Ultramarines", "Space Wolves", "World Eaters", "Thousand Sons"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Lysimachus Cestus", "Zadkiel", "Skraal", "Brynngar"],
+      "blurb": "The Word Bearers unleash the Furious Abyss, a secretly built battleship meant to devastate Macragge and gut the Ultramarines while Kor Phaeron strikes at Calth. A scratch band of loyalists drawn from several Legions, led by Ultramarines Captain Lysimachus Cestus, pursues it across the warp. They finally board the leviathan and overload its plasma generatorium, destroying it short of Ultramar, but Cestus kills Zadkiel and dies in the wreck.",
+      "blurbSafe": "The Word Bearers launch the Furious Abyss, a massive warship designed to destroy Macragge and cripple the Ultramarines. A ragtag group of loyalist Space Marines from various Legions pursue the vessel through the warp, racing to stop it before it reaches Ultramar.",
+      "changed": ["blurb"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Battle_for_the_Abyss",
+        "https://warhammer40k.fandom.com/wiki/Furious_Abyss",
+        "https://wh40k.lexicanum.com/wiki/Chronological_order_of_settings_of_Black_Library_publications"
+      ],
+      "confidence": "high",
+      "notes": "Date confirmed at 007.M31 by Lexicanum's chronology page; Tymell notes the climax is simultaneous with Kor Phaeron's attack on Calth. Blurb corrected at the end: 'The mission succeeds, but barely, and Macragge is warned' is not what happens. Per the Fandom Furious Abyss article the ship is destroyed en route, before it can put its plan against Macragge into motion, when Cestus, Brynngar and Skraal sabotage the plasma generatorium; Cestus kills Fleet-Captain Zadkiel and dies aboard. Also tightened the target description: the plan was to destroy the moon Formaska and then virus-bomb Macragge behind the debris, not a direct assault. Thousand Sons retained in the faction list from the manifest on the strength of the loyalist band's Thousand Sons member, though the Fandom article names only Ultramarines, Space Wolves and World Eaters."
+    },
+    {
+      "bookKey": "angel-exterminatus",
+      "verdict": "corrected",
+      "title": "ANGEL EXTERMINATUS",
+      "author": "Graham McNeill",
+      "type": "Novel",
+      "legions": ["Iron Warriors", "Emperor's Children", "Iron Hands", "Raven Guard"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Perturabo", "Fulgrim", "Nykona Sharrowkyn", "Sabak Wayland"],
+      "blurb": "Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo, master of siege warfare but always bitter at being overlooked, seeks ancient weapons to use against the Emperor. But Fulgrim has darker plans—he intends to ascend to daemonhood by sacrificing Perturabo. The Iron Warriors Primarch barely escapes the trap, emerging with his paranoia and bitterness magnified. Fulgrim achieves his goal, becoming a daemon prince of Slaanesh. The alliance between the Legions fractures further.",
+      "blurbSafe": "Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo seeks ancient weapons, but Fulgrim has darker plans involving ascension and sacrifice. The alliance between the Iron Warriors and Emperor's Children will be tested in ways neither anticipated.",
+      "changed": ["timeline", "legions"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Angel_Exterminatus_(Novel)",
+        "https://warhammer40k.fandom.com/wiki/Perturabo",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Second big date error: 007.M31 was two years too early. Tymell dates the novel early to mid-30,009 and states the Horus Heresy Journal confirms it begins in early 009 and ends in mid-009; his summary official timeline also gives 'Early 009.M31, Perturabo and Fulgrim join forces to pursue the Angel Exterminatus' and 'Mid-009.M31, Fulgrim ascends to daemonhood'. Re-anchored to 009.M31. Blurb verified accurate in every particular and left unchanged, including the sacrifice: the maugetar stone Fulgrim gifts Perturabo drains his life to fuel the apotheosis, and there is no xenos weapon at all, since Fulgrim intends to become the Angel Exterminatus himself. Legions extended: the Black Library synopsis has the traitors 'pursued by vengeful survivors from Isstvan V', and those are the Shattered Legions crew of the Sisypheum, the Iron Hand Sabak Wayland and the Raven Guard Nykona Sharrowkyn among them."
+    },
+    {
+      "bookKey": "betrayer",
+      "verdict": "confirmed",
+      "title": "BETRAYER",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Novel",
+      "legions": ["World Eaters", "Word Bearers", "Ultramarines"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Angron", "Lorgar", "Khârn", "Roboute Guilliman", "Argel Tal"],
+      "blurb": "Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's Five Hundred Worlds. Angron, driven by the Butcher's Nails implanted in his brain, is dying. Lorgar performs a dark ritual, elevating Angron to become a Daemon Primarch of Khorne at the cost of countless lives. Captain Khârn of the World Eaters witnesses his Legion's complete fall to madness. Guilliman desperately tries to contain the devastation, but the Ultramarines are being bled white across a hundred battlefields.",
+      "blurbSafe": "Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's worlds. Angron, driven by the Butcher's Nails and dying, becomes the focus of a dark ritual. Captain Khârn witnesses his Legion's descent into madness while Guilliman desperately tries to contain the devastation.",
+      "changed": [],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Betrayer",
+        "https://warhammer40k.fandom.com/wiki/Angron",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Accurate as written. Tymell dates the book July to late 30,007 and his official timeline gives 'Shadow Crusade begins, and Angron ascends to daemon princehood' in 007.M31. The Fandom Angron article confirms the Butcher's Nails were killing him at an accelerating rate after Calth, that Lorgar took him back to Nuceria on the pretext of studying the implants, and that Lorgar intended to force his ascension regardless. Khârn's presence and Guilliman's pursuit are both correct. The only thing the blurb leaves out is that the ascension takes place on Nuceria, Angron's homeworld, and that Guilliman confronts them there in person, but nothing stated is wrong, so it is carried through unchanged."
+    },
+    {
+      "bookKey": "scars",
+      "verdict": "corrected",
+      "title": "SCARS",
+      "author": "Chris Wraight",
+      "type": "Novel",
+      "legions": ["White Scars", "Alpha Legion", "Death Guard", "Space Wolves"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Jaghatai Khan", "Shiban Khan", "Hasik Noyan-Khan", "Mortarion", "Revuel Arvida"],
+      "blurb": "Pinned at Chondax by an Alpha Legion blockade and a storm of contradictory astropathic messages, Jaghatai Khan refuses to pick a side until he knows the truth. He breaks out and takes his fleet to Prospero, finds it a burned ruin, and there Mortarion comes to recruit him; the two primarchs duel among the ashes. Meanwhile the Legion's warrior lodges stage a coup for Horus, and the Khan must break his own sons before riding for Terra.",
+      "blurbSafe": "The White Scars, far from Terra prosecuting the Great Crusade, learn of the Heresy late. Jaghatai Khan must decide which side to join as his Legion divides between those loyal to the Emperor and those who would follow Horus. The Khan's choice will define the White Scars forever.",
+      "changed": ["blurb", "legions"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Scars",
+        "https://warhammer40k.fandom.com/wiki/Jaghatai_Khan",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Date confirmed at 007.M31: Tymell dates the novel to February 30,007 and his official timeline places the Alaxxes contact at 108.007.M31. Blurb corrected on the decisive point. The old text said the Khan is swayed 'when he learns the truth about the Word Bearers' manipulation'. The Word Bearers are not in this book. It is the Alpha Legion that blockades Chondax and manipulates the White Scars, per both the Black Library synopsis and the Fandom Jaghatai Khan article, and the Khan's mind is settled at ruined Prospero and in his confrontation with Mortarion, who arrives of his own accord to recruit him and duels him among the ruins of Tizca. Legion list extended to Alpha Legion, Death Guard and Space Wolves, all of whom feature substantially. The internal purge is real: the lodge coup is led by Hasik Noyan-Khan and opposed by Shiban Khan."
+    },
+    {
+      "bookKey": "vengeful-spirit",
+      "verdict": "corrected",
+      "title": "VENGEFUL SPIRIT",
+      "author": "Graham McNeill",
+      "type": "Novel",
+      "legions": ["Sons of Horus", "Death Guard"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Horus", "Garviel Loken", "Mortarion", "Raeven Devine"],
+      "blurb": "Horus returns to Molech, a Knight World he helped bring to compliance beside the Emperor generations earlier, hunting the warp gate his father once used to bargain with the Chaos Gods for power. Titan Legions, Knight houses and a small Ultramarines and Blood Angels garrison make the invasion a slaughterhouse, until House Devine turns traitor. Horus passes through the gate and returns transformed, no longer truly human but a match for the Emperor himself.",
+      "blurbSafe": "Horus returns to Molech, a Knight World where he once fought beside the Emperor. He seeks entry to the same warp gate the Emperor used to bargain with the Chaos Gods. Defended by loyalist forces, Molech becomes a slaughterhouse as Horus pursues ultimate power.",
+      "changed": ["timeline", "legions", "blurb"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Vengeful_Spirit_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Molech",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "Date tightened from 008-009.M31 to 009.M31. Lexicanum's Battle of Molech infobox gives 009.M31, Tymell dates the novel October to November 30,009, and his official timeline entry is 906.009.M31 for Horus leading the attack on Molech. One Forge World-derived list does place Molech in year 008, which is presumably where the 008 start came from, but three sources agree on 009 and the 008 start pulls the book too early. Blurb corrected on one factual point: the Emperor's visit to Molech was not 'millennia ago'. Molech was brought to compliance in 869.M30, roughly 140 years before the battle, with Horus, Fulgrim, the Lion and Jaghatai present. Also added House Devine's betrayal, which decides the campaign. Death Guard added to the faction list: Mortarion and the bulk of the XIV Legion fight the whole campaign alongside the Sons of Horus."
+    },
+    {
+      "bookKey": "the-unremembered-empire",
+      "verdict": "corrected",
+      "title": "THE UNREMEMBERED EMPIRE",
+      "author": "Dan Abnett",
+      "type": "Novel",
+      "legions": ["Ultramarines", "Dark Angels", "Blood Angels", "Night Lords", "Salamanders"],
+      "timeline": "009-010.M31",
+      "mainCharacters": ["Roboute Guilliman", "Lion El'Jonson", "Konrad Curze", "Vulkan", "Sanguinius", "John Grammaticus"],
+      "blurb": "Believing Terra fallen and the Emperor dead, Guilliman raises Imperium Secundus on Macragge behind the Ruinstorm, navigating by the xenos beacon of the Pharos. Lion El'Jonson arrives suspecting his brother of usurpation, a burned and half-mad Vulkan falls out of the sky, and Konrad Curze stalks the city, coming within a blade's length of killing Guilliman. Curze is finally run down, Grammaticus spears Vulkan with the fulgurite, and Sanguinius arrives to be crowned.",
+      "blurbSafe": "Believing Terra has fallen, Roboute Guilliman establishes Imperium Secundus on Macragge. When Lion El'Jonson and Sanguinius arrive, tensions rise as questions of loyalty and ambition threaten to fracture the alliance. The three Primarchs must decide humanity's future.",
+      "changed": ["timeline", "legions", "blurb"],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/The_Unremembered_Empire",
+        "https://warhammer40k.fandom.com/wiki/Imperium_Secundus",
+        "https://warhammer40k.fandom.com/wiki/Vulkan",
+        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+      ],
+      "confidence": "high",
+      "notes": "The back half of the old blurb described events from later books, not this one. Nobody learns that Terra still stands in The Unremembered Empire, the Imperium Secundus is not wound up here (that happens in Ruinstorm, late 011.M31), and there is no race for Terra. What actually happens, per the Fandom Vulkan and Imperium Secundus articles: Vulkan arrives on Macragge after teleporting away from Curze, his mind broken by the fall; Curze reaches Macragge too and comes close to assassinating Guilliman before being defeated; John Grammaticus kills Vulkan with the fulgurite spear on the Cabal's orders; and Sanguinius arrives at the very end to be crowned. Date widened from 009.M31 to 009-010.M31: Tymell dates the book November 30,009 to early 30,010 and notes the Forge World timeline puts Sanguinius's arrival, at the very end, in 010. Legions extended to include the Night Lords (Curze) and Salamanders (Vulkan and the surviving XVIII Legion)."
+    }
+  ]
+}

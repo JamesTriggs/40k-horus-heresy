@@ -1,0 +1,294 @@
+{
+ "batch": "legacies",
+ "anthologies": [
+  "Legacies of Betrayal"
+ ],
+ "count": 19,
+ "entries": [
+  {
+   "bookKey": "legacies-serpent",
+   "number": "XXXI.2",
+   "title": "SERPENT",
+   "author": "John French",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "004.M31",
+   "currentLegions": [
+    "Alpha Legion"
+   ],
+   "currentBlurb": "The Alpha Legion weaves its schemes within schemes, operating in the shadows with motives known only to themselves.",
+   "currentBlurbSafe": "An Alpha Legion tale of deception and hidden agendas during the Heresy."
+  },
+  {
+   "bookKey": "legacies-hunters-moon",
+   "number": "XXXI.3",
+   "title": "HUNTER'S MOON",
+   "author": "Guy Haley",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "004.M31",
+   "currentLegions": [
+    "White Scars"
+   ],
+   "currentBlurb": "A White Scars hunting mission during the Heresy, showcasing the V Legion's swift and deadly warfare style.",
+   "currentBlurbSafe": "White Scars warriors conduct a hunt, demonstrating their mastery of fast-strike warfare."
+  },
+  {
+   "bookKey": "legacies-thief-revelations",
+   "number": "XXXI.12",
+   "title": "THIEF OF REVELATIONS",
+   "author": "Graham McNeill",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "004.M31",
+   "currentLegions": [
+    "Thousand Sons"
+   ],
+   "currentBlurb": "The Thousand Sons seek forbidden knowledge, stealing secrets that may doom or save them.",
+   "currentBlurbSafe": "Thousand Sons sorcerers pursue dangerous knowledge in their quest for understanding."
+  },
+  {
+   "bookKey": "legacies-veritas-ferrum",
+   "number": "XXXI.4",
+   "title": "VERITAS FERRUM",
+   "author": "David Annandale",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "The Iron Hands' philosophy of flesh's weakness is tested in the aftermath of their Primarch's death.",
+   "currentBlurbSafe": "Iron Hands warriors grapple with their Legion's doctrine after losing their Primarch at Isstvan."
+  },
+  {
+   "bookKey": "legacies-strike-fade",
+   "number": "XXXI.6",
+   "title": "STRIKE AND FADE",
+   "author": "Guy Haley",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "Raven Guard survivors employ hit-and-run tactics against superior traitor forces.",
+   "currentBlurbSafe": "Shattered Raven Guard warriors use guerrilla warfare tactics in their fight against the traitors."
+  },
+  {
+   "bookKey": "legacies-brotherhood-storm",
+   "number": "XXXI.1",
+   "title": "BROTHERHOOD OF THE STORM",
+   "author": "Chris Wraight",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "White Scars"
+   ],
+   "currentBlurb": "The White Scars must choose their allegiance as the Heresy divides the galaxy. The V Legion's isolation has kept them from the conflict, but now they must decide whether to follow Horus or remain loyal to the Emperor.",
+   "currentBlurbSafe": "The White Scars face a critical choice as news of the Heresy reaches them, forcing the V Legion to decide their allegiance in the civil war."
+  },
+  {
+   "bookKey": "legacies-honour-dead",
+   "number": "XXXI.7",
+   "title": "HONOUR TO THE DEAD",
+   "author": "Gav Thorpe",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Ultramarines"
+   ],
+   "currentBlurb": "Ultramarines honor their fallen brothers while seeking vengeance for betrayal.",
+   "currentBlurbSafe": "Ultramarines pay tribute to their dead while pursuing justice for the Word Bearers' treachery."
+  },
+  {
+   "bookKey": "legacies-butchers-nails",
+   "number": "XXXI.8",
+   "title": "BUTCHER'S NAILS",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "World Eaters"
+   ],
+   "currentBlurb": "The tragic bond between Angron and Lorgar, as the Word Bearers Primarch tries to understand the World Eaters' cursed existence with the Butcher's Nails.",
+   "currentBlurbSafe": "Lorgar attempts to understand Angron's suffering and the curse of the Butcher's Nails that drives the World Eaters."
+  },
+  {
+   "bookKey": "legacies-kryptos",
+   "number": "XXXI.10",
+   "title": "KRYPTOS",
+   "author": "Graham McNeill",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Mechanicum"
+   ],
+   "currentBlurb": "Secrets and forbidden knowledge on Mars during the Mechanicum's civil war.",
+   "currentBlurbSafe": "A tale of hidden knowledge and dangerous secrets during Mars's schism."
+  },
+  {
+   "bookKey": "legacies-wolfs-claw",
+   "number": "XXXI.11",
+   "title": "WOLF'S CLAW",
+   "author": "Chris Wraight",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "Space Wolves unleash their savage fury in the Emperor's name during the Heresy.",
+   "currentBlurbSafe": "The VI Legion demonstrates their ferocity as they fight for the Emperor against the traitors."
+  },
+  {
+   "bookKey": "legacies-warmaster",
+   "number": "XXXI.9",
+   "title": "WARMASTER",
+   "author": "John French",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Sons of Horus"
+   ],
+   "currentBlurb": "A glimpse into Horus's command and the weight of leading the rebellion against the Emperor.",
+   "currentBlurbSafe": "An exploration of Horus's role as Warmaster and the burden of leading the rebellion."
+  },
+  {
+   "bookKey": "legacies-divine-word",
+   "number": "XXXI.13",
+   "title": "THE DIVINE WORD",
+   "author": "Gav Thorpe",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Word Bearers spread their dark faith across the galaxy, converting or destroying all who resist.",
+   "currentBlurbSafe": "The XVII Legion preaches their corrupted faith, forcing conversion or death upon those they encounter."
+  },
+  {
+   "bookKey": "legacies-kharn",
+   "number": "XXXI.15",
+   "title": "KHÂRN: THE EIGHTFOLD PATH",
+   "author": "Anthony Reynolds",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "World Eaters"
+   ],
+   "currentBlurb": "Khârn walks the path to damnation, his descent into bloodlust accelerating as the Heresy rages.",
+   "currentBlurbSafe": "Khârn's transformation continues as he descends further into violence and rage."
+  },
+  {
+   "bookKey": "legacies-cypher",
+   "number": "XXXI.16",
+   "title": "CYPHER: GUARDIAN OF ORDER",
+   "author": "Gav Thorpe",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "The mysterious warrior who would become Cypher serves the Dark Angels during the Heresy.",
+   "currentBlurbSafe": "A Dark Angels warrior serves his Legion during the Heresy, on a path that will lead to legend and mystery."
+  },
+  {
+   "bookKey": "legacies-heart-conqueror",
+   "number": "XXXI.17",
+   "title": "HEART OF THE CONQUEROR",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "World Eaters"
+   ],
+   "currentBlurb": "Aboard the Conqueror, the World Eaters' flagship, the Legion's descent into madness accelerates.",
+   "currentBlurbSafe": "Life aboard the World Eaters' flagship reveals the XII Legion's transformation into mindless berserkers."
+  },
+  {
+   "bookKey": "legacies-lucius",
+   "number": "XXXI.14",
+   "title": "LUCIUS: THE ETERNAL BLADEMASTER",
+   "author": "Graham McNeill",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Emperor's Children"
+   ],
+   "currentBlurb": "Lucius pursues perfection in swordsmanship, his pride and skill marking him for damnation.",
+   "currentBlurbSafe": "The master swordsman Lucius seeks perfection in combat, driven by pride and the pursuit of supremacy."
+  },
+  {
+   "bookKey": "legacies-censure",
+   "number": "XXXI.18",
+   "title": "CENSURE",
+   "author": "Nick Kyme",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Salamanders face judgment and condemnation as the Heresy forces hard choices upon them.",
+   "currentBlurbSafe": "Salamanders warriors confront difficult decisions and consequences during the civil war."
+  },
+  {
+   "bookKey": "legacies-bjorn",
+   "number": "XXXI.19",
+   "title": "BJORN: LONE WOLF",
+   "author": "Chris Wraight",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "The warrior who would become the Fell-Handed fights during the Heresy, earning his legendary status.",
+   "currentBlurbSafe": "A Space Wolves warrior fights alone during the Heresy, beginning his path to becoming a legend."
+  },
+  {
+   "bookKey": "legacies-riven",
+   "number": "XXXI.5",
+   "title": "RIVEN",
+   "author": "John French",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "011.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "A tale of division and broken bonds as the Heresy tears warriors apart.",
+   "currentBlurbSafe": "The Heresy's divisions tear apart bonds of brotherhood and loyalty."
+  }
+ ]
+}
