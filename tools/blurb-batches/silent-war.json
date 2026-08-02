@@ -15,10 +15,10 @@
    "currentType": "Short Story",
    "currentTimeline": "005-007.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Night Lords"
    ],
-   "currentBlurb": "A Knight-Errant confronts darkness born from the Heresy.",
-   "currentBlurbSafe": "Malcador's agents face the corruption spreading through the Imperium."
+   "currentBlurb": "Fel Zharost, former Chief Librarian of the Night Lords, has hidden in the hive sumps beneath Terra ever since Sevatar and the Edict of Nikaea drove him out of the VIII Legion. An armoured hunter tracks him through the depths while psychic flashbacks lay bare the atrocities he committed in Curze's name. Cornered, Zharost finally learns why he is being pursued, and that his Legion has followed Horus into heresy.",
+   "currentBlurbSafe": "An exiled Night Lords Librarian has spent years buried in the hive sumps beneath Terra, far enough down that the galaxy's civil war has passed him by. Someone in power armour is now hunting him through the dark, and he does not know what he is supposed to have done."
   },
   {
    "bookKey": "silent-wolf-hunt",
@@ -27,13 +27,32 @@
    "author": "Graham McNeill",
    "anthology": "The Silent War",
    "series": null,
-   "currentType": "Audio Book",
+   "currentType": "Audio Drama",
    "currentTimeline": "005.M31",
    "currentLegions": [
-    "Space Wolves"
+    "Luna Wolves",
+    "Imperial Army",
+    "Knights-Errant"
    ],
-   "currentBlurb": "Space Wolves hunt a dangerous quarry through the void.",
-   "currentBlurbSafe": "The VI Legion pursues their prey across the stars."
+   "currentBlurb": "Severian, the last survivor of the Outcast Dead, is loose on Terra and trying to get off the Throneworld as news of the Isstvan V massacre spreads. The former Luna Wolf is tracked through the Petitioner's City by Yasu Nagasena, a patient Imperial hunter backed by the Black Sentinels. Neither man realises that others are watching the chase, and that the real purpose of it only becomes clear once the hunt is over.",
+   "currentBlurbSafe": "A fugitive legionary, sole survivor of the Outcast Dead, moves through the underside of Terra hoping to slip off-world before the net closes. An unhurried Imperial hunter and his Black Sentinel escort are already on his trail."
+  },
+  {
+   "bookKey": "silent-purge",
+   "number": "XXXVII.8",
+   "title": "THE PURGE",
+   "author": "Anthony Reynolds",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "006-008.M31",
+   "currentLegions": [
+    "Word Bearers",
+    "Ultramarines",
+    "Imperial Fists"
+   ],
+   "currentBlurb": "Sor Talgron, captain of the Word Bearers' 34th Company, is recalled from Terra where he has spent years playing the trusted ally to Rogal Dorn. Before he leaves he murders the Terran-born Predicant Volkhar Wreth and has a daemon bound into the corpse. He then takes his company to Percepton Primus in Ultramar, where a 163-day war against the Ultramarines ends with the defenders scouring their own world with phosphex.",
+   "currentBlurbSafe": "A Word Bearers captain has spent the years before the Heresy stationed on Terra, treated as a friend by the Imperial Fists. Recalled to Lorgar's side for the Shadow Crusade, he leads his company into a long and vicious siege against the Ultramarines in Ultramar."
   },
   {
    "bookKey": "silent-watcher",
@@ -45,55 +64,12 @@
    "currentType": "Audio Drama",
    "currentTimeline": "007-009.M31",
    "currentLegions": [
-    "Dark Angels"
+    "Knights-Errant",
+    "Space Wolves",
+    "Night Lords"
    ],
-   "currentBlurb": "The mysterious Watchers in the Dark observe the Heresy unfold.",
-   "currentBlurbSafe": "Ancient guardians witness the galaxy's civil war."
-  },
-  {
-   "bookKey": "silent-grey-angel",
-   "number": "XXXVII.3",
-   "title": "GREY ANGEL",
-   "author": "John French",
-   "anthology": "The Silent War",
-   "series": null,
-   "currentType": "Audio Book",
-   "currentTimeline": "007-008.M31",
-   "currentLegions": [
-    "Knights-Errant"
-   ],
-   "currentBlurb": "Garviel Loken operates as a Knight-Errant, hunting traitors in the shadows.",
-   "currentBlurbSafe": "The former Luna Wolf serves Malcador in secret operations."
-  },
-  {
-   "bookKey": "silent-luna-mendax",
-   "number": "XXXVII.6",
-   "title": "LUNA MENDAX",
-   "author": "Graham McNeill",
-   "anthology": "The Silent War",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "007-008.M31",
-   "currentLegions": [
-    "Various"
-   ],
-   "currentBlurb": "Deception and lies spread across Luna during the Heresy.",
-   "currentBlurbSafe": "Terra's moon becomes a battleground of secrets and treachery."
-  },
-  {
-   "bookKey": "silent-purge",
-   "number": "XXXVII.8",
-   "title": "THE PURGE",
-   "author": "Anthony Reynolds",
-   "anthology": "The Silent War",
-   "series": null,
-   "currentType": "Novella",
-   "currentTimeline": "007-008.M31",
-   "currentLegions": [
-    "Death Guard"
-   ],
-   "currentBlurb": "The Death Guard's corruption accelerates as they embrace Nurgle's gifts.",
-   "currentBlurbSafe": "The XIV Legion's transformation into plague-bearers continues."
+   "currentBlurb": "A shuttle limps back into the Solar System carrying a single broken Space Wolf, the last of a VI Legion watch-pack posted to keep eyes on Konrad Curze and the Night Lords. His account is too fragmented to act on, so Ison, a Knight-Errant and former Legion Librarian, goes into the dying warrior's mind and relives the pack's mission and the traitor attack that destroyed it.",
+   "currentBlurbSafe": "A shuttle returns to the Solar System carrying one gravely wounded Space Wolf from a pack sent to watch over the most unstable of the Emperor's sons. What he says makes little sense, so one of Malcador's Knights-Errant goes looking for the truth inside his head."
   },
   {
    "bookKey": "silent-ghosts-speak",
@@ -105,10 +81,43 @@
    "currentType": "Short Story",
    "currentTimeline": "007-009.M31",
    "currentLegions": [
+    "Knights-Errant",
+    "Sisters of Silence",
+    "Death Guard"
+   ],
+   "currentBlurb": "Amendera Kendel, once a Sister of Silence and now Malcador's Agentia Tertius, is sent into the Proxima system to run down reports that the Warmaster's agents have taken root on Terra's doorstep. For the work she calls on the Seventy, the loyalist Death Guard who fled Isstvan with Nathaniel Garro and have been kept in quarantine on Luna, Helig Gallor among them. What she uncovers is less straightforward than the infiltration she went looking for.",
+   "currentBlurbSafe": "A former Sister of Silence, now one of the Sigillite's senior agents, investigates signs that Horus's people have reached a system close to Terra. To do it she has to draw on the mistrusted loyalist Death Guard who escaped Isstvan III."
+  },
+  {
+   "bookKey": "silent-grey-angel",
+   "number": "XXXVII.3",
+   "title": "GREY ANGEL",
+   "author": "John French",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
+    "Knights-Errant",
+    "Dark Angels"
+   ],
+   "currentBlurb": "On his first assignment as a Knight-Errant, Garviel Loken travels to Caliban with Iacton Qruze to judge whether Luther and the Dark Angels left behind there can still be trusted. Loken lets himself be taken prisoner so he can question Luther face to face while Qruze works deeper into the fortress of Aldurukh. Cypher and a Watcher in the Dark help them get clear, and they leave with more questions than answers.",
+   "currentBlurbSafe": "Two of Malcador's newly recruited Knights-Errant are sent to Caliban to work out where the loyalty of Luther and the Dark Angels left on the home world really lies. Getting close enough to ask means walking into the fortress of Aldurukh on the Order's terms."
+  },
+  {
+   "bookKey": "silent-luna-mendax",
+   "number": "XXXVII.6",
+   "title": "LUNA MENDAX",
+   "author": "Graham McNeill",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "008.M31",
+   "currentLegions": [
     "Knights-Errant"
    ],
-   "currentBlurb": "Garro encounters the silent dead during his missions for Malcador.",
-   "currentBlurbSafe": "The Knight-Errant faces ghosts of the past and future."
+   "currentBlurb": "Back from Caliban and badly frayed, Garviel Loken has withdrawn to an abandoned bio-dome on Luna, tending a garden and picking at the holes in his own memory. There he is visited by Tarik Torgaddon, the friend killed on Isstvan III, who presses him to remember the oath he swore to the Emperor. When Iacton Qruze arrives with a fresh summons from Malcador, Loken takes it.",
+   "currentBlurbSafe": "Withdrawn to a deserted dome on Luna, a former Luna Wolves captain tends a garden and tries to piece himself back together after a mission that went badly. Then he receives a visitor whose presence he cannot account for."
   },
   {
    "bookKey": "silent-army-one",
@@ -120,10 +129,10 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Officio Assassinorum"
    ],
-   "currentBlurb": "A lone operative undertakes an impossible mission for Malcador.",
-   "currentBlurbSafe": "One warrior against overwhelming odds in the Emperor's name."
+   "currentBlurb": "The hive world of Proxima Apocryphis declares for Horus, and Malcador answers by dropping one Eversor assassin onto it. In fragments of memory the killer recalls his life as Ganimus, a drosshill urchin turned gang runner turned pit fighter, before the Clade rebuilt him into a drug-flooded weapon. His target is the planetary Lord-Governor Chravius Blumolotov, the man who once bought him, and he butchers his way up through the hive to reach him.",
+   "currentBlurbSafe": "When a hive world turns to the Warmaster, the Sigillite's answer is not an army but a single man. Told from inside the head of an Officio Assassinorum operative, this very short piece follows his descent to the surface and the memories that made him what he is."
   },
   {
    "bookKey": "silent-distant-echoes",
@@ -135,10 +144,11 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Death Guard",
+    "Imperial Fists"
    ],
-   "currentBlurb": "Ancient horrors from humanity's past resurface during the Heresy.",
-   "currentBlurbSafe": "Old Night's terrors return to haunt the Imperium."
+   "currentBlurb": "Chaplain Morgax Murnau of the Death Guard hunts the survivors of a downed Imperial Fists ship across Algonquis, a forest moon rotting away into swamp. When the VII Legion warriors prove too well dug in to shift, Murnau unleashes his Legion's Destroyers, whose chem and rad weapons strip the ground bare. The whole thing is steeped in the rot and decay that will one day swallow the XIV Legion entirely.",
+   "currentBlurbSafe": "A Death Guard Chaplain pursues a small force of Imperial Fists across a decaying forest moon. When his quarry keeps eluding him, he reaches for one of the XIV Legion's most feared and least discriminating assets."
   },
   {
    "bookKey": "silent-lost-sons",
@@ -148,12 +158,13 @@
    "anthology": "The Silent War",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "009.M31",
+   "currentTimeline": "010-011.M31",
    "currentLegions": [
+    "Blood Angels",
     "Knights-Errant"
    ],
-   "currentBlurb": "Garro seeks lost loyalists from traitor Legions to join the Knights-Errant.",
-   "currentBlurbSafe": "The search for loyal sons from fallen Legions continues."
+   "currentBlurb": "Warden Arkad and nineteen Blood Angels were left to hold Baal while Sanguinius took the Legion to Signus. Five years on and blinded by the Ruinstorm, they receive Tylos Rubio, a Knight-Errant carrying the Sigillite's black scroll: the IX Legion is presumed dead and is to be struck from the rolls, its remnants folded into Malcador's new order. Arkad refuses, and readies a suicidal run to find his primarch or kill Horus.",
+   "currentBlurbSafe": "Twenty Blood Angels were left behind to keep watch over Baal while their primarch took the Legion to Signus, and the Ruinstorm has kept them blind ever since. An agent of the Sigillite arrives with orders from Terra that they never expected to hear."
   },
   {
    "bookKey": "silent-templar",
@@ -165,10 +176,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "010.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Imperial Fists",
+    "Word Bearers"
    ],
-   "currentBlurb": "Sigismund, the Emperor's Champion, faces trials during the Heresy.",
-   "currentBlurbSafe": "The greatest warrior of the Imperial Fists confronts his destiny."
+   "currentBlurb": "Sigismund, First Captain of the Imperial Fists, leads an assault on a comet-shrine consecrated to Unity that a band of Word Bearers has seized as a stepping stone back towards the Solar System. The killing is cut through with duels and conversations he keeps returning to, and with the doubt he carries about the oath that chains his sword to his arm. Whether his skill at arms or that doubt wins out is the point of the piece.",
+   "currentBlurbSafe": "The Imperial Fists' First Captain takes a strike force against Word Bearers who have taken a shrine on the approaches to the Solar System. Between the fighting, he turns over the duels, conversations and doubts that have made him what he is."
   },
   {
    "bookKey": "silent-patience",
@@ -180,10 +192,11 @@
    "currentType": "Short Story",
    "currentTimeline": "010.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard"
    ],
-   "currentBlurb": "Garro learns patience is a virtue when hunting the Emperor's enemies.",
-   "currentBlurbSafe": "A Knight-Errant discovers that some prey requires patience to catch."
+   "currentBlurb": "Helig Gallor, once a Death Guard under Nathaniel Garro and now a Knight-Errant, leads troops of Malcador's Chosen across the bombarded surface of Nolec Trinus in search of his old battle-captain. Garro has gone ahead alone to face a daemon and his vox has gone quiet. Gallor finds him alive but unable to speak through a wrecked helm, and the two have to work out between them how to stop the thing regenerating.",
+   "currentBlurbSafe": "A former Death Guard legionary, now serving Malcador, picks his way across a shelled-out world looking for the commander he once followed, who pressed on alone and then went silent. He is also hoping to find some footing with the others from his old Legion."
   },
   {
    "bookKey": "silent-sigillite",
@@ -192,13 +205,13 @@
    "author": "Chris Wraight",
    "anthology": "The Silent War",
    "series": null,
-   "currentType": "Audio Book",
+   "currentType": "Audio Drama",
    "currentTimeline": "010.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Imperial Army"
    ],
-   "currentBlurb": "Malcador the Sigillite orchestrates his shadow war to save the Imperium. The Emperor's right hand works tirelessly to prepare for what must come.",
-   "currentBlurbSafe": "Malcador conducts covert operations to preserve the Emperor's vision."
+   "currentBlurb": "Khalid Hassan, an Imperial Army captain of the Fourth Clandestine Orta, returns to the Imperial Palace after a secret mission into the wastelands of Gyptus that went badly wrong. Expecting to answer for the failure, he is instead walked through the Palace to an audience with Malcador himself. As Hassan recounts the operation in flashback, the Sigillite is quietly weighing him for something else, with the Emperor conspicuously absent throughout.",
+   "currentBlurbSafe": "An Imperial Army officer comes back to the Palace from a disastrous covert operation in the Gyptus wastes, braced for punishment. Instead he is brought before Malcador the Sigillite, regent of a Terra whose Emperor is nowhere to be seen."
   },
   {
    "bookKey": "silent-gates-terra",
@@ -210,10 +223,11 @@
    "currentType": "Short Story",
    "currentTimeline": "012.M31",
    "currentLegions": [
+    "Ultramarines",
     "Imperial Fists"
    ],
-   "currentBlurb": "Defenders prepare Terra's gates for the coming siege.",
-   "currentBlurbSafe": "The Throneworld fortifies itself against inevitable attack."
+   "currentBlurb": "Captain Arcadese of the Ultramarines, heavily augmented and increasingly certain his Legion has abandoned him, holds an orbital bastion in the Ardent Reef as the Vengeful Spirit arrives and World Eaters and daemons board. The siege is not real. It is a scenario driven into his mind by Librarians working for Malcador and Rogal Dorn, conditioning loyalist officers for an assault on Terra that has not yet come.",
+   "currentBlurbSafe": "An augmented Ultramarines captain defends a bastion in the Ardent Reef against the Warmaster's vanguard, nagged by the feeling that his own Legion has left him to it. Framing the battle is a conversation between Malcador and Rogal Dorn about what they are willing to do to win the war."
   }
  ]
 }

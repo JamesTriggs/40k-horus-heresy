@@ -1,11 +1,11 @@
 {
  "generated": "2026-08-02",
  "totals": {
-  "entries": 224,
+  "entries": 228,
   "researched": 224,
-  "applied": 1,
+  "applied": 0,
   "unresolved": 0,
-  "untouched": 0
+  "untouched": 4
  },
  "entries": [
   {
@@ -102,7 +102,7 @@
     "https://www.trackofwords.com/2016/08/07/quick-review-the-heart-of-the-pharos-l-j-goulding/",
     "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
    ],
-   "notes": "The prior audit was right that this concerns the Pharos on Sotha, but the current blurb's 'corrupts those who seek to control it' is invention. Type corrected from Short Story to Audio Drama (38 minutes, February 2016, originally announced as 'The Dark Between the Stars'). Timeline 009.M31 and faction Ultramarines both confirmed, it sits between THE UNREMEMBERED EMPIRE and PHAROS. Barabas Dantioch features, but Iron Warriors was deliberately not added to legions because he is a loyalist and the tag would wrongly trip the traitor filter."
+   "notes": "The prior audit was right that this concerns the Pharos on Sotha, but the current blurb's 'corrupts those who seek to control it' is invention. Type corrected from Short Story to Audio Drama (38 minutes, February 2016, originally announced as 'The Dark Between the Stars'). Timeline 009.M31 and faction Ultramarines both confirmed, it sits between THE UNREMEMBERED EMPIRE and PHAROS. Barabas Dantioch features, but Iron Warriors was deliberately not added to legions because he is a loyalist and the tag would wrongly trip the traitor filter. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
   },
   {
    "bookKey": "corax-weregeld",
@@ -1348,7 +1348,7 @@
     "https://www.trackofwords.com/roboute-guilliman-lord-of-ultramar-david-annandale-the-primarchs-book-one/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "Old blurb was generic filler and never named the actual story. The book is the Battle of Thoas against orks, not a life-of-Guilliman overview, and Track of Words explicitly says it is not an origin story. The treatise excerpts are documentary epigraphs, not scenes, so they do not shift the narrative present. Timeline unchanged. Fandom's infobox calls this a Novella (240pp hardback) while Lexicanum and reviewers call it a novel; type set to Novel for consistency with the series, see batch note."
+   "notes": "Old blurb was generic filler and never named the actual story. The book is the Battle of Thoas against orks, not a life-of-Guilliman overview, and Track of Words explicitly says it is not an origin story. The treatise excerpts are documentary epigraphs, not scenes, so they do not shift the narrative present. Timeline unchanged. Fandom's infobox calls this a Novella (240pp hardback) while Lexicanum and reviewers call it a novel; type set to Novel for consistency with the series, see batch note. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-leman-russ",
@@ -1360,7 +1360,7 @@
     "https://www.trackofwords.com/leman-russ-the-great-wolf-chris-wraight-the-primarchs-book-two/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "Old blurb named no plot at all. Structure confirmed twice: Track of Words says 'Wraight bookends the Dulan campaign with post-Heresy scenes', Tymell records the opening chapter as post-Heresy with the Space Wolves already a Chapter, and the closing section with news of the Lion's loss just reaching Fenris. Dark Angels added to legions because the Lion and his Legion are co-leads. Timeline left at the frame value 015-021.M31 per the existing dataset, though note the body of the book is the 870.M30 Dulan campaign, so the entry sorts a very long way from its content. Not a date change, just a flag."
+   "notes": "Old blurb named no plot at all. Structure confirmed twice: Track of Words says 'Wraight bookends the Dulan campaign with post-Heresy scenes', Tymell records the opening chapter as post-Heresy with the Space Wolves already a Chapter, and the closing section with news of the Lion's loss just reaching Fenris. Dark Angels added to legions because the Lion and his Legion are co-leads. Timeline left at the frame value 015-021.M31 per the existing dataset, though note the body of the book is the 870.M30 Dulan campaign, so the entry sorts a very long way from its content. Not a date change, just a flag. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-magnus",
@@ -1372,7 +1372,7 @@
     "https://www.trackofwords.com/2017/05/31/magnus-the-red-master-of-prospero-graham-mcneill/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Magnus roaming the galaxy after forbidden knowledge and colliding with the Emperor's edicts, which is A Thousand Sons, not this book. This is a rescue mission on Morningstar shared with Perturabo. Iron Warriors added to legions: Perturabo and Forrix are co-leads. Frame confirmed by Tymell ('Opens sometime after the fall of Prospero, flashback to the evacuation of Morningstar in 29,853'). Timeline unchanged at 853.M30, which the book states twice; the frame remains undated in every source."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Magnus roaming the galaxy after forbidden knowledge and colliding with the Emperor's edicts, which is A Thousand Sons, not this book. This is a rescue mission on Morningstar shared with Perturabo. Iron Warriors added to legions: Perturabo and Forrix are co-leads. Frame confirmed by Tymell ('Opens sometime after the fall of Prospero, flashback to the evacuation of Morningstar in 29,853'). Timeline unchanged at 853.M30, which the book states twice; the frame remains undated in every source. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-perturabo",
@@ -1384,7 +1384,7 @@
     "https://www.trackofwords.com/2017/07/26/perturabo-hammer-of-olympia-guy-haley/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "Old blurb was roughly right about Olympia but omitted the hrud campaign entirely, which is half the book, and asserted 'his relationship with his adopted sister' as the novel's subject. Track of Words describes the split as Perturabo's early years versus the hrud campaign, with Dantioch and the legionary Fortreidon as the other viewpoints, so the sister claim is not sourced and has been dropped in favour of 'adoptive home world' and 'adoptive family', which are. Timeline unchanged at 999.M30; note the purge of Olympia at the end is dated 000.M31 by the novel and the Horus Heresy Journal but 004.M31 by Forge World, an existing known conflict."
+   "notes": "Old blurb was roughly right about Olympia but omitted the hrud campaign entirely, which is half the book, and asserted 'his relationship with his adopted sister' as the novel's subject. Track of Words describes the split as Perturabo's early years versus the hrud campaign, with Dantioch and the legionary Fortreidon as the other viewpoints, so the sister claim is not sourced and has been dropped in favour of 'adoptive home world' and 'adoptive family', which are. Timeline unchanged at 999.M30; note the purge of Olympia at the end is dated 000.M31 by the novel and the Horus Heresy Journal but 004.M31 by Forge World, an existing known conflict. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-lorgar",
@@ -1396,7 +1396,7 @@
     "https://www.trackofwords.com/2017/10/11/lorgar-bearer-of-the-word-gav-thorpe/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it said the book examines Lorgar's crisis of faith after Monarchia and his discovery of the Chaos Gods. That is The First Heretic. Track of Words is explicit that the body is Colchis before the Emperor, 'barring a few post-Monarchia interludes', and that it is 'probably not the book for anyone wanting to see the Word Bearers in action'. Timeline unchanged at 959-964.M30, which is the frame value; the Colchis body runs roughly 841-857.M30. Kept the Monarchia interludes out of blurbSafe as they are a humiliation reveal."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it said the book examines Lorgar's crisis of faith after Monarchia and his discovery of the Chaos Gods. That is The First Heretic. Track of Words is explicit that the body is Colchis before the Emperor, 'barring a few post-Monarchia interludes', and that it is 'probably not the book for anyone wanting to see the Word Bearers in action'. Timeline unchanged at 959-964.M30, which is the frame value; the Colchis body runs roughly 841-857.M30. Kept the Monarchia interludes out of blurbSafe as they are a humiliation reveal. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-fulgrim",
@@ -1408,7 +1408,7 @@
     "https://www.trackofwords.com/2018/01/22/fulgrim-the-palatine-phoenix-josh-reynolds/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "Old blurb described the Legion's rebuilding from near-extinction and Fulgrim's fall to Slaanesh, neither of which is the plot; the rebuilding is background and the fall is Fulgrim (Book V). This is the III Legion's first solo compliance, on Byzas / Twenty-Eight One. Fabius appears as an early-stage apothecary, confirmed by Track of Words. Timeline unchanged at 850-868.M30, which remains inferred rather than stated: Tymell's estimate is '29,850s/860s?' and the in-book line about 'the intervening century since his rediscovery' contradicts the depicted state of the Legion."
+   "notes": "Old blurb described the Legion's rebuilding from near-extinction and Fulgrim's fall to Slaanesh, neither of which is the plot; the rebuilding is background and the fall is Fulgrim (Book V). This is the III Legion's first solo compliance, on Byzas / Twenty-Eight One. Fabius appears as an early-stage apothecary, confirmed by Track of Words. Timeline unchanged at 850-868.M30, which remains inferred rather than stated: Tymell's estimate is '29,850s/860s?' and the in-book line about 'the intervening century since his rediscovery' contradicts the depicted state of the Legion. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-ferrus-manus",
@@ -1420,7 +1420,7 @@
     "https://www.trackofwords.com/2018/03/31/ferrus-manus-gorgon-of-medusa/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS ERROR REMOVED: the old blurb ended by saying his inflexibility 'leads to his death at Isstvan V'. The novel does not depict Isstvan V, and that is a major spoiler for a newcomer. The actual subject is the Fall of the Lords of Gardinaal. Emperor's Children added to legions: the III Legion contingent is a significant presence and a deliberate foil. Timeline unchanged at 869.M30, the best-evidenced date in this batch, cited by Lexicanum to the novel's own chapter 3 and to Horus Heresy Book Two."
+   "notes": "SERIOUS ERROR REMOVED: the old blurb ended by saying his inflexibility 'leads to his death at Isstvan V'. The novel does not depict Isstvan V, and that is a major spoiler for a newcomer. The actual subject is the Fall of the Lords of Gardinaal. Emperor's Children added to legions: the III Legion contingent is a significant presence and a deliberate foil. Timeline unchanged at 869.M30, the best-evidenced date in this batch, cited by Lexicanum to the novel's own chapter 3 and to Horus Heresy Book Two. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-jaghatai-khan",
@@ -1432,7 +1432,7 @@
     "https://www.trackofwords.com/2018/07/16/jaghatai-khan-warhawk-of-chogoris-chris-wraight/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Khan's early years on the steppes and his unification of Chogoris. The novel opens with him already found and meeting his Legion on Terra, and the Chogoris episode is one dated stop in the middle. Structure confirmed twice: Track of Words ('several short arcs spanning years of the Great Crusade') and Tymell's per-episode dates (Terra 879, Hoadh 881-884, Chogoris 898, Gar-Ban-Gar 906, Baal 908, Ullanor 000.M31). Timeline unchanged at 000.M31, the last episode. Note the Fandom page title misspells Chogoris as 'Chorgoris'. The book leads up to the Librarius debate but does not reach Nikaea."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Khan's early years on the steppes and his unification of Chogoris. The novel opens with him already found and meeting his Legion on Terra, and the Chogoris episode is one dated stop in the middle. Structure confirmed twice: Track of Words ('several short arcs spanning years of the Great Crusade') and Tymell's per-episode dates (Terra 879, Hoadh 881-884, Chogoris 898, Gar-Ban-Gar 906, Baal 908, Ullanor 000.M31). Timeline unchanged at 000.M31, the last episode. Note the Fandom page title misspells Chogoris as 'Chorgoris'. The book leads up to the Librarius debate but does not reach Nikaea. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-vulkan",
@@ -1444,7 +1444,7 @@
     "https://www.trackofwords.com/2018/07/13/rapid-fire-david-annandale-talks-vulkan-lord-of-drakes/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Vulkan's discovery on Nocturne, his humanitarian philosophy and his Perpetual nature. None of that is the plot, and Vulkan has already been found and been away with the Emperor for years when the book opens. Annandale's own elevator pitch to Track of Words: 'This is the origin story of the Salamanders... currently two separate Legions, Nocturnean and Terran, who have never met.' Timeline unchanged at 845-855.M30, but flagging that this remains the weakest date in the batch: no source gives a year and the only firm bracket is post-835.M30, pre-Heresy."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Vulkan's discovery on Nocturne, his humanitarian philosophy and his Perpetual nature. None of that is the plot, and Vulkan has already been found and been away with the Emperor for years when the book opens. Annandale's own elevator pitch to Track of Words: 'This is the origin story of the Salamanders... currently two separate Legions, Nocturnean and Terran, who have never met.' Timeline unchanged at 845-855.M30, but flagging that this remains the weakest date in the batch: no source gives a year and the only firm bracket is post-835.M30, pre-Heresy. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-corax",
@@ -1456,7 +1456,7 @@
     "https://www.trackofwords.com/2019/02/02/corax-lord-of-shadows-guy-haley/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the slave rebellion on Lycaeus before the Emperor found him. Track of Words is explicit that 'Corax's origin story has already been told' elsewhere and that this book instead examines justice versus vengeance during the Carinae compliance. Timeline unchanged at 954.M30, but note this is genuinely contested: the book's own '32 years since the Emperor came to Deliverance' is firm, while the rediscovery date it hangs off is not. Tymell prefers approximately 970s.M30, which would move this after Lorgar and Guilliman rather than before them."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the slave rebellion on Lycaeus before the Emperor found him. Track of Words is explicit that 'Corax's origin story has already been told' elsewhere and that this book instead examines justice versus vengeance during the Carinae compliance. Timeline unchanged at 954.M30, but note this is genuinely contested: the book's own '32 years since the Emperor came to Deliverance' is firm, while the rediscovery date it hangs off is not. Tymell prefers approximately 970s.M30, which would move this after Lorgar and Guilliman rather than before them. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-angron",
@@ -1468,7 +1468,7 @@
     "https://www.trackofwords.com/2019/02/25/angron-slave-of-nuceria-ian-st-martin/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "WORST ERROR IN THE BATCH. The old blurb said 'Angron returns to Nuceria during the Heresy' and that 'Lorgar offers him a terrible apotheosis'. Both are Betrayer, not this book. This is a Great Crusade novel set at Ghenna; Nuceria appears only as flashback and is not destroyed. Confirmed by Track of Words (Ghenna-era 'present' following Mago, 'past' showing Angron as a youth on Nuceria) and by Tymell ('Takes place at Ghenna, some time... after Angron is reunited with his legion'). Timeline unchanged at 900-905.M30. Note the book has an M41 coda following Kharn, which the dataset deliberately ignores for sorting. Fandom's page title pluralises the title as 'Slaves of Nuceria'; the correct title is the singular 'Slave of Nuceria', which the same page's infobox uses."
+   "notes": "WORST ERROR IN THE BATCH. The old blurb said 'Angron returns to Nuceria during the Heresy' and that 'Lorgar offers him a terrible apotheosis'. Both are Betrayer, not this book. This is a Great Crusade novel set at Ghenna; Nuceria appears only as flashback and is not destroyed. Confirmed by Track of Words (Ghenna-era 'present' following Mago, 'past' showing Angron as a youth on Nuceria) and by Tymell ('Takes place at Ghenna, some time... after Angron is reunited with his legion'). Timeline unchanged at 900-905.M30. Note the book has an M41 coda following Kharn, which the dataset deliberately ignores for sorting. Fandom's page title pluralises the title as 'Slaves of Nuceria'; the correct title is the singular 'Slave of Nuceria', which the same page's infobox uses. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-konrad-curze",
@@ -1480,7 +1480,7 @@
     "https://www.trackofwords.com/2019/08/03/konrad-curze-the-night-haunter-guy-haley/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "Confirms the earlier finding: the frame is post-Heresy, not Heresy-era. Track of Words says Curze spends 'the final hours of his life' in a story 'long after the Heresy has ended', and Tymell independently places the present on Tsagualsa as Curze awaits his death, with the stasis pod recovered around 032.M31. Timeline unchanged at 036.M31. The Callidus assassin M'Shen is reported as present in the frame by secondary sources but I could not confirm her by name from a primary or first-hand source, so she is left out of mainCharacters and out of the blurb. blurbSafe deliberately omits the death frame, since the whole book is a spoiler for Curze's fate."
+   "notes": "Confirms the earlier finding: the frame is post-Heresy, not Heresy-era. Track of Words says Curze spends 'the final hours of his life' in a story 'long after the Heresy has ended', and Tymell independently places the present on Tsagualsa as Curze awaits his death, with the stasis pod recovered around 032.M31. Timeline unchanged at 036.M31. The Callidus assassin M'Shen is reported as present in the frame by secondary sources but I could not confirm her by name from a primary or first-hand source, so she is left out of mainCharacters and out of the blurb. blurbSafe deliberately omits the death frame, since the whole book is a spoiler for Curze's fate. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-lion-eljonson",
@@ -1492,7 +1492,7 @@
     "https://www.trackofwords.com/2020/02/28/rapid-fire-david-guymer-talks-lion-eljonson-lord-of-the-first/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Lion's relationship with Luther and 'the betrayal festering on Caliban'. Neither Luther nor Caliban is the subject; that is Descent of Angels and Fallen Angels. This is the Northern Fringe Campaign against a xenos foe in the Muspel system. Guymer names the other viewpoints in his Track of Words interview: the Techmarine Duriel, the Librarian Aravain and the remembrancer Savine, and confirms the Ullanor Crusade is raging as the story opens. Timeline unchanged at 997.M30, the cleanest date in this batch. Do not move it to 000.M31 just because Ullanor is mentioned; Ullanor was multi-year and the Triumph is later."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Lion's relationship with Luther and 'the betrayal festering on Caliban'. Neither Luther nor Caliban is the subject; that is Descent of Angels and Fallen Angels. This is the Northern Fringe Campaign against a xenos foe in the Muspel system. Guymer names the other viewpoints in his Track of Words interview: the Techmarine Duriel, the Librarian Aravain and the remembrancer Savine, and confirms the Ullanor Crusade is raging as the story opens. Timeline unchanged at 997.M30, the cleanest date in this batch. Do not move it to 000.M31 just because Ullanor is mentioned; Ullanor was multi-year and the Triumph is later. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-alpharius",
@@ -1504,7 +1504,7 @@
     "https://www.trackofwords.com/2021/01/12/rapid-fire-mike-brooks-talks-alpharius-head-of-the-hyrda/",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "Confirms the earlier finding: the book does NOT run into the Heresy. Tymell: 'Starts and ends with \"Alpharius\" (actually Omegon) being \"found\" by Horus late in the Crusade. Begins properly with Alpharius being discovered on Terra, right after the scattering of the Primarchs, before the Crusade has even begun.' Mike Brooks confirms to Track of Words that it is 'a first-person account of the Primarch of the Alpha Legion' and that he is 'of course the ultimate unreliable narrator'. Timeline unchanged at 981.M30. The old blurb was thematically defensible but described 'twin Primarchs' as the premise, which pre-empts a reveal, and gave no actual scope."
+   "notes": "Confirms the earlier finding: the book does NOT run into the Heresy. Tymell: 'Starts and ends with \"Alpharius\" (actually Omegon) being \"found\" by Horus late in the Crusade. Begins properly with Alpharius being discovered on Terra, right after the scattering of the Primarchs, before the Crusade has even begun.' Mike Brooks confirms to Track of Words that it is 'a first-person account of the Primarch of the Alpha Legion' and that he is 'of course the ultimate unreliable narrator'. Timeline unchanged at 981.M30. The old blurb was thematically defensible but described 'twin Primarchs' as the premise, which pre-empts a reveal, and gave no actual scope. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-mortarion",
@@ -1516,7 +1516,7 @@
     "https://wh40k.lexicanum.com/wiki/Conquest_of_Galaspar",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Barbarus, the necromantic overlords and Mortarion's future servitude to Nurgle. The book is the Conquest of Galaspar; Barbarus appears only as motivation. Confirmed by the official Black Library synopsis on Lexicanum and by Lexicanum's Conquest of Galaspar article, which cites chapters 3, 4, 9 and 11 of this novel, and by Tymell ('Covers the conquest of Galaspar, the Death Guard's first after Mortarion takes command'). CAUTION on one point carried in tools/proposed-dates.json: it describes a frame set on Absyrtus about a year after Galaspar. I could not confirm that. Lexicanum's Absyrtus article sources the Absyrtus campaign entirely to a different story, The Verdict of the Scythe in Scions of the Emperor, and cites this novel nowhere. I have therefore kept Absyrtus out of the blurb. It does not affect the date either way. Timeline unchanged at 930-939.M30, which remains genuinely contested: Lexicanum's Galaspar infobox gives only 'M30'."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Barbarus, the necromantic overlords and Mortarion's future servitude to Nurgle. The book is the Conquest of Galaspar; Barbarus appears only as motivation. Confirmed by the official Black Library synopsis on Lexicanum and by Lexicanum's Conquest of Galaspar article, which cites chapters 3, 4, 9 and 11 of this novel, and by Tymell ('Covers the conquest of Galaspar, the Death Guard's first after Mortarion takes command'). CAUTION on one point carried in tools/proposed-dates.json: it describes a frame set on Absyrtus about a year after Galaspar. I could not confirm that. Lexicanum's Absyrtus article sources the Absyrtus campaign entirely to a different story, The Verdict of the Scythe in Scions of the Emperor, and cites this novel nowhere. I have therefore kept Absyrtus out of the blurb. It does not affect the date either way. Timeline unchanged at 930-939.M30, which remains genuinely contested: Lexicanum's Galaspar infobox gives only 'M30'. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-rogal-dorn",
@@ -1527,7 +1527,7 @@
     "https://wh40k.lexicanum.com/wiki/Rogal_Dorn:_The_Emperor%27s_Crusader_(Novel)",
     "https://www.trackofwords.com/2022/11/08/short-and-sweet-november-2022/"
    ],
-   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Dorn as Praetorian fortifying the Imperial Palace, which is his Siege-era role, not this book. The body is the Night Crusade into the Occluda Noctis. Track of Words confirms 'Set quite early on in the Great Crusade... a campaign in which a full four Legions and their Primarchs were tasked with bringing the light of Compliance to the darkness of the Occluda Noctis... taking in not just Dorn but also Horus, Fulgrim and the Lion', told 'through the eyes of both his Legion and the Remembrancer Order', with Sigismund and Fafnir Rann among the viewpoints. Luna Wolves, Emperor's Children and Dark Angels added to legions on that basis. Timeline unchanged at 014.M31, the Terra frame, but flagging that roughly 208 pages are a Great Crusade campaign around 848-858.M30, so this entry currently sorts into the middle of the Siege sequence. Track of Words does not mention the Terra frame; it is attested by legiodraconis and by reviewer accounts recorded in tools/proposed-dates.json, hence medium confidence on that one element."
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Dorn as Praetorian fortifying the Imperial Palace, which is his Siege-era role, not this book. The body is the Night Crusade into the Occluda Noctis. Track of Words confirms 'Set quite early on in the Great Crusade... a campaign in which a full four Legions and their Primarchs were tasked with bringing the light of Compliance to the darkness of the Occluda Noctis... taking in not just Dorn but also Horus, Fulgrim and the Lion', told 'through the eyes of both his Legion and the Remembrancer Order', with Sigismund and Fafnir Rann among the viewpoints. Luna Wolves, Emperor's Children and Dark Angels added to legions on that basis. Timeline unchanged at 014.M31, the Terra frame, but flagging that roughly 208 pages are a Great Crusade campaign around 848-858.M30, so this entry currently sorts into the middle of the Siege sequence. Track of Words does not mention the Terra frame; it is attested by legiodraconis and by reviewer accounts recorded in tools/proposed-dates.json, hence medium confidence on that one element. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "primarch-sanguinius",
@@ -1538,7 +1538,7 @@
     "https://wh40k.lexicanum.com/wiki/Sanguinius:_The_Great_Angel_(Novel)",
     "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
    ],
-   "notes": "Confirms the earlier finding: this is late Great Crusade, and it never depicts Signus Prime or the Siege of Terra. SERIOUS CONTENT ERROR in the old blurb, which described visions of his own death, the gene-flaw and dying at Horus's hands. None of that is the book, and it spoils the character comprehensively for a newcomer. The official Black Library synopsis on Lexicanum confirms the discredited-remembrancer framing; Tymell confirms the muster at Baal 'fresh from Nikaea', the 'This. World. Is. Murder.' hand-off into Horus Rising, the six-month span across late 002 and early 003.M31, and the post-Heresy prologue and epilogue. Timeline unchanged at 002-003.M31. The remembrancer narrator is named as Avajis Kautenya in tools/proposed-dates.json but I could not confirm the name from an independent source, so it is omitted from mainCharacters. Confidence medium only because Track of Words never reviewed this one and Lexicanum carries the publisher blurb rather than a plot summary."
+   "notes": "Confirms the earlier finding: this is late Great Crusade, and it never depicts Signus Prime or the Siege of Terra. SERIOUS CONTENT ERROR in the old blurb, which described visions of his own death, the gene-flaw and dying at Horus's hands. None of that is the book, and it spoils the character comprehensively for a newcomer. The official Black Library synopsis on Lexicanum confirms the discredited-remembrancer framing; Tymell confirms the muster at Baal 'fresh from Nikaea', the 'This. World. Is. Murder.' hand-off into Horus Rising, the six-month span across late 002 and early 003.M31, and the post-Heresy prologue and epilogue. Timeline unchanged at 002-003.M31. The remembrancer narrator is named as Avajis Kautenya in tools/proposed-dates.json but I could not confirm the name from an independent source, so it is omitted from mainCharacters. Confidence medium only because Track of Words never reviewed this one and Lexicanum carries the publisher blurb rather than a plot summary. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
   },
   {
    "bookKey": "mark-of-calth-athame",
@@ -1982,7 +1982,7 @@
     "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
     "https://www.trackofwords.com/2019/10/12/the-lost-and-the-damned-guy-haley/"
    ],
-   "notes": "Original blurb was broadly right on theme but vague on mechanics. Track of Words confirms the aegis shield is the barrier Horus must first break, that conscript Katsuhiro is the human throughline, and that the cast includes Dorn, Sanguinius, the Khan, Malcador, Valdor, Raldoron, Thane, Abaddon, Zardu Layak, the Night Lords and Legio Solaria. Official synopsis names Mortarion's plague weapons and Angron's fury. Replaced the vague 'All Traitor Legions' with the specific legions the sources evidence. The original line 'daemon engines and corrupted Titans pour onto the Throneworld' was dropped as unsupported emphasis; the title refers to the mortal levies Horus throws at the guns."
+   "notes": "Original blurb was broadly right on theme but vague on mechanics. Track of Words confirms the aegis shield is the barrier Horus must first break, that conscript Katsuhiro is the human throughline, and that the cast includes Dorn, Sanguinius, the Khan, Malcador, Valdor, Raldoron, Thane, Abaddon, Zardu Layak, the Night Lords and Legio Solaria. Official synopsis names Mortarion's plague weapons and Angron's fury. Replaced the vague 'All Traitor Legions' with the specific legions the sources evidence. The original line 'daemon engines and corrupted Titans pour onto the Throneworld' was dropped as unsupported emphasis; the title refers to the mortal levies Horus throws at the guns. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
   },
   {
    "bookKey": "sot-first-wall",
@@ -2007,7 +2007,7 @@
     "https://warhammer40k.fandom.com/wiki/Battle_of_Pluto",
     "https://warhammer40k.fandom.com/wiki/Horus_Heresy_Chronology"
    ],
-   "notes": "Two genuine factual errors fixed. First, the original called the Saturnine gambit 'Horus's desperate strike at the Saturnine Wall'. It is Dorn's gambit, not Horus's: the official synopsis states 'Dorn simply cannot defend everything' and the Track of Words review describes Dorn facing impossible questions of compromise and sacrifice as he searches for a strategy to tip his battle of wills with Perturabo. Second, the original claimed 'one of the twin Primarchs meets their end' here. Alpharius was slain by Rogal Dorn at the Battle of Pluto in 010.M31, four years earlier, in the events of Praetorian of Dorn, per both the Battle of Pluto page and the Horus Heresy Chronology. That claim was both wrong and a false spoiler, so it is gone. Legions: swapped Alpha Legion for Iron Warriors, as Perturabo is the confirmed opposing commander and I could find no source for an Alpha Legion role in this volume."
+   "notes": "Two genuine factual errors fixed. First, the original called the Saturnine gambit 'Horus's desperate strike at the Saturnine Wall'. It is Dorn's gambit, not Horus's: the official synopsis states 'Dorn simply cannot defend everything' and the Track of Words review describes Dorn facing impossible questions of compromise and sacrifice as he searches for a strategy to tip his battle of wills with Perturabo. Second, the original claimed 'one of the twin Primarchs meets their end' here. Alpharius was slain by Rogal Dorn at the Battle of Pluto in 010.M31, four years earlier, in the events of Praetorian of Dorn, per both the Battle of Pluto page and the Horus Heresy Chronology. That claim was both wrong and a false spoiler, so it is gone. Legions: swapped Alpha Legion for Iron Warriors, as Perturabo is the confirmed opposing commander and I could find no source for an Alpha Legion role in this volume. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
   },
   {
    "bookKey": "sot-mortis",
@@ -2019,7 +2019,7 @@
     "https://warhammer40k.fandom.com/wiki/Legio_Ignatum",
     "https://www.trackofwords.com/black-library/black-library-reviews/black-library-the-horus-heresy-series/"
    ],
-   "notes": "Three corrections. The original placed the Titan battles 'across Terra's wastelands'; the official synopsis is specific that the clash is at the Mercury Wall, Legio Mortis against Legio Ignatum. The original listed Death Guard as a featured faction and named Mortarion; neither appears in the official synopsis and I found no source for a Death Guard role here, so Death Guard is replaced with the two named Titan Legios. The original claim 'Time itself begins to break down' is unsupported and was dropped; the actual metaphysical thread is the false-paradise dreams and the search for a way to turn back the Warp's influence. Legio Ignatum's Fandom page independently confirms it as the loyalist Titan Legion defending the Palace and the sworn rival of Legio Mortis. Confidence is medium rather than high only because mainCharacters could not be sourced beyond Horus: no source I could reach names the individual princeps viewpoint characters, so the list is deliberately minimal rather than invented."
+   "notes": "Three corrections. The original placed the Titan battles 'across Terra's wastelands'; the official synopsis is specific that the clash is at the Mercury Wall, Legio Mortis against Legio Ignatum. The original listed Death Guard as a featured faction and named Mortarion; neither appears in the official synopsis and I found no source for a Death Guard role here, so Death Guard is replaced with the two named Titan Legios. The original claim 'Time itself begins to break down' is unsupported and was dropped; the actual metaphysical thread is the false-paradise dreams and the search for a way to turn back the Warp's influence. Legio Ignatum's Fandom page independently confirms it as the loyalist Titan Legion defending the Palace and the sworn rival of Legio Mortis. Confidence is medium rather than high only because mainCharacters could not be sourced beyond Horus: no source I could reach names the individual princeps viewpoint characters, so the list is deliberately minimal rather than invented. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
   },
   {
    "bookKey": "sot-warhawk",
@@ -2030,7 +2030,7 @@
     "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
     "https://www.trackofwords.com/2022/10/13/short-and-sweet-october-2022/"
    ],
-   "notes": "The original framed the book purely as a Khan versus Mortarion duel and asserted 'The Khan must defeat Mortarion or Terra falls'. The official synopsis is explicit that the objective is the liberation of the Lion's Gate space port, with Mortarion as the enemy standing in the way, so the objective is now stated. Added the two arcs the official synopsis names and the original omitted: the black sword forged from spite (Sigismund, hence Imperial Fists added to legions) and the saint and sinner released into the ruins. Track of Words independently confirms this as the culmination of the White Scars versus Death Guard arc and names Ilya Ravallion as a key viewpoint. Softened the safe summary, which previously announced the duel outright as 'the ultimate duel between speed and endurance'; it now describes the mission and the stakes without promising the confrontation or its result. Also removed the em dash present in the original."
+   "notes": "The original framed the book purely as a Khan versus Mortarion duel and asserted 'The Khan must defeat Mortarion or Terra falls'. The official synopsis is explicit that the objective is the liberation of the Lion's Gate space port, with Mortarion as the enemy standing in the way, so the objective is now stated. Added the two arcs the official synopsis names and the original omitted: the black sword forged from spite (Sigismund, hence Imperial Fists added to legions) and the saint and sinner released into the ruins. Track of Words independently confirms this as the culmination of the White Scars versus Death Guard arc and names Ilya Ravallion as a key viewpoint. Softened the safe summary, which previously announced the duel outright as 'the ultimate duel between speed and endurance'; it now describes the mission and the stakes without promising the confrontation or its result. Also removed the em dash present in the original. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
   },
   {
    "bookKey": "sot-echoes-of-eternity",
@@ -2219,7 +2219,7 @@
     "https://www.trackofwords.com/2017/01/12/quick-review-patience-james-swallow/",
     "https://wh40k.lexicanum.com/wiki/Patience_(Short_Story)"
    ],
-   "notes": "The manifest blurb was a paraphrase of the title. The protagonist is Helig Gallor, not Garro, and the story is a micro-short set on Nolec Trinus. Track of Words and Lexicanum agree on Gallor searching for Garro; Lexicanum supplies the world's name and the daemon that regenerates from blood and corpses. Legions tag of Knights-Errant is correct and unchanged. Both leads are ex-Death Guard, but they act as Knights-Errant here, so I did not add the XIV Legion and trip the traitor filter."
+   "notes": "The manifest blurb was a paraphrase of the title. The protagonist is Helig Gallor, not Garro, and the story is a micro-short set on Nolec Trinus. Track of Words and Lexicanum agree on Gallor searching for Garro; Lexicanum supplies the world's name and the daemon that regenerates from blood and corpses. Legions tag of Knights-Errant is correct and unchanged. Both leads are ex-Death Guard, but they act as Knights-Errant here, so I did not add the XIV Legion and trip the traitor filter. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
   },
   {
    "bookKey": "silent-sigillite",

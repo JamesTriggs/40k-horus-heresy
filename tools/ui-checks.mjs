@@ -39,8 +39,20 @@ const rgb = (css) => css.match(/\d+/g).slice(0, 3).map(Number);
 const browser = await chromium.launch();
 const errors = [];
 
-const newPage = async (viewport) => {
+// The first-run panel is modal, so every other check has to start past it.
+// Seeding the flag before navigation is closer to a returning visitor than
+// clicking through, and it keeps the panel's own behaviour testable in a
+// clean context below.
+const SEEN_FLAGS = `
+    try {
+        localStorage.setItem('horusHeresySeenWelcome', '1');
+        localStorage.setItem('horusHeresySeenSaveHint', '1');
+    } catch (e) {}
+`;
+
+const newPage = async (viewport, { firstRun = false } = {}) => {
     const page = await browser.newPage({ viewport });
+    if (!firstRun) await page.addInitScript(SEEN_FLAGS);
     page.on('pageerror', (e) => errors.push('PAGEERROR: ' + e.message));
     page.on('console', (m) => { if (m.type() === 'error') errors.push('CONSOLE: ' + m.text()); });
     return page;
@@ -612,6 +624,7 @@ await check('a progress code round-trips through a separate browser profile', as
 
     // A fresh context has its own localStorage, which is the point.
     const context = await browser.newContext();
+    await context.addInitScript(SEEN_FLAGS);
     const target = await context.newPage();
     await target.goto(BASE, { waitUntil: 'load' });
     await target.waitForSelector('.book-card');
@@ -635,6 +648,97 @@ await check('a code from a different dataset is refused, not misapplied', async 
 await check('junk input is rejected cleanly', async () => {
     const r = await page.evaluate(() => importProgressCode('not a code'));
     if (r.ok) throw new Error('junk accepted');
+});
+
+console.log('\nOnboarding');
+
+await check('a first visit explains that progress is saved locally', async () => {
+    const context = await browser.newContext();
+    const first = await context.newPage();
+    await first.goto(BASE, { waitUntil: 'load' });
+    await first.waitForSelector('.book-card');
+    await first.waitForTimeout(1200);
+
+    const shown = await first.evaluate(() =>
+        document.getElementById('welcomeOverlay').classList.contains('active'));
+    if (!shown) throw new Error('the first-run panel did not appear');
+
+    const text = await first.$eval('#welcomeOverlay', (e) => e.innerText);
+    if (!/saved in this browser/i.test(text)) throw new Error('does not say progress is local');
+    if (!/erase/i.test(text)) throw new Error('does not warn that clearing data erases it');
+    if (!/⇄/.test(text)) throw new Error('does not point at the sync control');
+
+    await first.click('#welcomeBegin');
+    await first.waitForTimeout(400);
+    await first.reload({ waitUntil: 'load' });
+    await first.waitForSelector('.book-card');
+    await first.waitForTimeout(900);
+    const again = await first.evaluate(() =>
+        document.getElementById('welcomeOverlay').classList.contains('active'));
+    await context.close();
+    if (again) throw new Error('it reappeared on the second visit');
+});
+
+await check('marking a first book warns that progress is browser-only', async () => {
+    const context = await browser.newContext();
+    const page2 = await context.newPage();
+    await page2.goto(BASE, { waitUntil: 'load' });
+    await page2.waitForSelector('.book-card');
+    await page2.waitForTimeout(1200);
+    await page2.evaluate(() => document.getElementById('welcomeBegin').click());
+    await page2.waitForTimeout(400);
+
+    await page2.evaluate(() => document.querySelectorAll('.book-card')[2].click());
+    await page2.waitForTimeout(400);
+    await page2.evaluate(() => document.getElementById('markReadBtn').click());
+    await page2.waitForTimeout(700);
+
+    const toast = await page2.evaluate(() => {
+        const el = document.getElementById('progressToast');
+        return { visible: !el.hidden && el.classList.contains('is-visible'), text: el.innerText };
+    });
+    if (!toast.visible) throw new Error('no save hint appeared');
+    if (!/this browser only/i.test(toast.text)) throw new Error('hint text: ' + toast.text);
+
+    // It must not nag on every subsequent change.
+    await page2.evaluate(() => document.getElementById('toastDismiss').click());
+    await page2.waitForTimeout(500);
+    await page2.keyboard.press('Escape');
+    await page2.waitForTimeout(300);
+    await page2.evaluate(() => document.querySelectorAll('.book-card')[6].click());
+    await page2.waitForTimeout(400);
+    await page2.evaluate(() => document.getElementById('markReadBtn').click());
+    await page2.waitForTimeout(600);
+    const repeated = await page2.evaluate(() =>
+        document.getElementById('progressToast').classList.contains('is-visible'));
+    await context.close();
+    if (repeated) throw new Error('the hint repeated on a later change');
+});
+
+await check('the progress counter carries a persistent sync affordance', async () => {
+    const text = await page.$eval('#progressHint', (e) => e.innerText.replace(/\n/g, ' '));
+    if (!/this browser/i.test(text)) throw new Error('hint reads: ' + text);
+    await page.evaluate(() => document.getElementById('progressHint').click());
+    await page.waitForTimeout(500);
+    const open = await page.evaluate(() =>
+        document.getElementById('syncModalOverlay').classList.contains('active'));
+    if (!open) throw new Error('it does not open the sync panel');
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(300);
+});
+
+await check('a sync link is not blocked by the first-run panel', async () => {
+    // Someone arriving on a restore link came to restore, not to read an intro.
+    const context = await browser.newContext();
+    const linked = await context.newPage();
+    linked.on('dialog', (d) => d.accept());
+    await linked.goto(BASE + '#s=HH2-badbadb-AAAA', { waitUntil: 'load' });
+    await linked.waitForSelector('.book-card');
+    await linked.waitForTimeout(1300);
+    const blocked = await linked.evaluate(() =>
+        document.getElementById('welcomeOverlay').classList.contains('active'));
+    await context.close();
+    if (blocked) throw new Error('the panel got in the way of a restore');
 });
 
 console.log('\nLayout');

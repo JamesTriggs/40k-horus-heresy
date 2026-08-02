@@ -18,8 +18,8 @@
    "currentLegions": [
     "Emperor"
    ],
-   "currentBlurb": "Set on Terra before the Great Crusade, the Emperor visits the last church on Earth. In a philosophical debate with the last priest, Uriah, the Emperor reveals his vision for humanity—one without gods or faith. This story explores the Emperor's rejection of religion and the Imperial Truth that would define the Great Crusade, ending with the church's destruction and the priest's death.",
-   "currentBlurbSafe": "Before the Great Crusade begins, a conversation takes place between a wanderer and the last priest on Terra. Their philosophical debate explores faith, reason, and humanity's future among the stars."
+   "currentBlurb": "On Terra in the closing years of the Unification Wars, a stranger calling himself Revelation walks into the Church of the Lightning Stone, the last place of worship left on the planet, and spends the night arguing theology with its priest, Uriah Olathaire. The visitor is the Emperor, and he reveals that the vision which made Uriah a believer was his own psychic handiwork. Offered his life if he recants, Uriah chooses to burn with his church.",
+   "currentBlurbSafe": "In the last years of the Unification Wars, the sole surviving church on Terra receives a night-time visitor who calls himself Revelation. Over a shared bottle of wine the two men argue faith, reason and what humanity should become once it reaches the stars."
   },
   {
    "bookKey": "tales-of-heresy-after-deshea",
@@ -33,8 +33,8 @@
    "currentLegions": [
     "World Eaters"
    ],
-   "currentBlurb": "Angron's violent first encounter with his Legion after the Emperor tore him from his homeworld. Khârn and the War Hounds arrive to find their Primarch seething with rage and grief, forced to abandon his gladiator brothers to their deaths. This story explores Angron's tragedy and the seeds of hatred that would doom the XII Legion.",
-   "currentBlurbSafe": "The newly discovered Angron meets his Legion for the first time. Still grieving those he left behind on his homeworld, the Primarch's rage threatens to consume both himself and his sons."
+   "currentBlurb": "Aboard the War Hounds' flagship, the newly recovered Angron is shut in a darkened hold, maddened with grief at having been torn away from the slave army he meant to die beside on Desh'ea. One by one his captains go in to greet their primarch and are killed for it. Eighth Captain Khârn goes in unarmed, refuses to fight back and takes a beating until Angron will talk, and the Legion takes a new name from his dead gladiator army: the World Eaters.",
+   "currentBlurbSafe": "The XII Legion has just been reunited with its primarch, and Angron is not grateful. Shut in a darkened chamber aboard the War Hounds' flagship, he is still raging over the comrades he was torn away from, and someone has to walk in there and talk to him."
   },
   {
    "bookKey": "tales-of-heresy-wolf-at-the-door",
@@ -46,25 +46,11 @@
    "currentType": "Short Story",
    "currentTimeline": "950.M30",
    "currentLegions": [
-    "Space Wolves"
+    "Space Wolves",
+    "Dark Eldar"
    ],
-   "currentBlurb": "The Space Wolves descend upon a world, bringing the Emperor's justice with fang and claw. This tale explores the VI Legion's role as the Emperor's executioners and the savage fury they unleash in the name of the Imperium.",
-   "currentBlurbSafe": "The Space Wolves arrive at a world to deliver the Emperor's judgment, showcasing the savage nature of the VI Legion and their role as the Imperium's executioners."
-  },
-  {
-   "bookKey": "tales-of-heresy-scions-of-the-storm",
-   "number": "X.3",
-   "title": "SCIONS OF THE STORM",
-   "author": "Anthony Reynolds",
-   "anthology": "Tales of Heresy",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "956.M30",
-   "currentLegions": [
-    "Word Bearers"
-   ],
-   "currentBlurb": "A Word Bearers tale following the XVII Legion as they spread the dark truth of Chaos across the galaxy. This story delves into the zealous nature of Lorgar's sons and their mission to convert or destroy those who resist the new gods.",
-   "currentBlurbSafe": "A Word Bearers squad undertakes a mission that tests their faith and reveals the zealous nature of the XVII Legion during their transformation."
+   "currentBlurb": "Wolf Lord Bulveye's 13th Great Company, sailing with the 954th Expedition, finds the human colony of Antimon in the Lammas subsector, a world long hidden by warp storms and farmed for tribute by the Dark Eldar Kabal of the Shrieking Heart. When the raiders return the Space Wolves' ships are destroyed and the pack is marooned, fighting a guerrilla campaign until Bulveye kills Archon Darragh Shakkar. A relief fleet drives the raiders off, but Antimon's governor refuses Imperial allegiance and Bulveye destroys the world regardless.",
+   "currentBlurbSafe": "A Space Wolves force under Wolf Lord Bulveye discovers a long-lost human colony in the Lammas subsector, a world that has survived its isolation only by paying a terrible tribute to Dark Eldar raiders. Driving the raiders off turns out to be far easier than bringing the colony into the Imperium."
   },
   {
    "bookKey": "tales-of-heresy-call-of-the-lion",
@@ -78,8 +64,23 @@
    "currentLegions": [
     "Dark Angels"
    ],
-   "currentBlurb": "The Dark Angels answer their Primarch's call during the Heresy. This story explores the I Legion's loyalty and their response to the galaxy-spanning civil war, as they navigate the shadows and secrets that have always defined them.",
-   "currentBlurbSafe": "Dark Angels warriors respond to their Primarch's summons during the Heresy, showcasing the I Legion's loyalty amid the galaxy's darkest hour."
+   "currentBlurb": "Deep in the Great Crusade, Terran-born Chapter Commander Merir Astelan has spent five years bringing worlds to compliance by negotiation when the Calibanite Chapter Commander Belath arrives with reinforcements and a preference for conquest. Over Byzanthis, an advanced but politically fractured world, their methods collide: Belath stations warships above every capital, the Committee of Nations responds by taking hostages, and the talks collapse into executions and orbital bombardment. The feud seeds Astelan's later reassignment to Caliban.",
+   "currentBlurbSafe": "Two Dark Angels commanders, one raised on Terra and one on Caliban, meet over Byzanthis, a technologically advanced world split between six squabbling nation states. One wants a negotiated compliance and the other wants a conquest, and the rift inside the Legion matters as much as the enemy in front of it."
+  },
+  {
+   "bookKey": "tales-of-heresy-scions-of-the-storm",
+   "number": "X.3",
+   "title": "SCIONS OF THE STORM",
+   "author": "Anthony Reynolds",
+   "anthology": "Tales of Heresy",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "962-965.M30",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Captain Sor Talgron of the Word Bearers 34th Company leads the assault on Forty-Seven Sixteen, an isolated human world whose crystalline soldiers fight back with lightning. Battling into the capital, Talgron finds the population are not heathens at all but devout worshippers of the Emperor, and Kor Phaeron and Erebus order them massacred anyway. Talgron realises his Legion's masters have already turned against Terra, and puts his faith in Lorgar rather than the Emperor.",
+   "currentBlurbSafe": "Sor Talgron, captain of the Word Bearers 34th Company, leads a compliance assault on a long-isolated human world defended by crystal soldiers that hurl lightning. What his warriors find inside the enemy capital forces him to question the orders coming down from his own Legion's command."
   },
   {
    "bookKey": "age-of-darkness-rebirth",
@@ -91,10 +92,11 @@
    "currentType": "Short Story",
    "currentTimeline": "004-005.M31",
    "currentLegions": [
-    "Various"
+    "Thousand Sons",
+    "World Eaters"
    ],
-   "currentBlurb": "A story of transformation and renewal amid the Heresy's devastation. As the old Imperium burns, something new struggles to be born from the ashes—but whether it will be savior or monster remains to be seen.",
-   "currentBlurbSafe": "A tale of transformation during the Heresy, exploring how destruction can lead to rebirth, though what emerges may not be what was hoped for."
+   "currentBlurb": "Captain Menes Kalliston of the Thousand Sons returns against orders to the ruins of Tizca after the Burning of Prospero and is captured. His interrogator, whom he slowly realises is Khârn of the World Eaters rather than a Space Wolf, wants the Moon Wolf pendant Magnus used to reach Horus. Kalliston offers to use his powers to still the Butcher's Nails, Khârn hesitates, then the rage wins and he beats Kalliston to death. Elsewhere in the ruins, Sergeant Revuel Arvida foresees his way out alive.",
+   "currentBlurbSafe": "In the ashes of Tizca, after the invaders have moved on, a Thousand Sons captain comes back to a world that no longer exists and finds he is not alone in the ruins. His captor wants something Magnus the Red left behind, and is willing to take the city apart to get it."
   },
   {
    "bookKey": "tales-of-heresy-blood-games",
@@ -106,10 +108,11 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Custodian Guard"
+    "Custodian Guard",
+    "Imperial Fists"
    ],
-   "currentBlurb": "Amon Tauromachian, one of the Emperor's elite Custodian Guard, returns to the Imperial Palace after completing a year-long Blood Game. Tasked with investigating rumors of treason in the hives of Hy Brasil, he must navigate a galaxy at war where half the Imperium's armies are in rebellion.",
-   "currentBlurbSafe": "A Custodian Guard returns to the Imperial Palace after a training exercise and is tasked with investigating rumors of treason, testing his skills in a galaxy consumed by civil war."
+   "currentBlurb": "Custodian Amon Tauromachian completes a Blood Game, the Custodian Guard's standing exercise in defeating the Imperial Palace's own defences, and is handed a real assignment: gather evidence that Pherom Sichar, ruler of the continental realm of Hy Brasil, is passing information to Horus. With Terra on a war footing and Rogal Dorn fortifying the Palace, Amon's investigation unravels a layered piece of espionage in which the suspected traitor turns out to have been working for the Imperium all along.",
+   "currentBlurbSafe": "Amon Tauromachian of the Custodian Guard has just finished a Blood Game, the exercise in which Custodians try to breach the Imperial Palace's security so it can be improved. His reward is a genuine treason hunt among Terra's own rulers, at the worst possible moment for the Imperium."
   },
   {
    "bookKey": "tales-of-heresy-the-voice",
@@ -121,10 +124,10 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Audio"
+    "Sisters of Silence"
    ],
-   "currentBlurb": "A mysterious story exploring the power of voice and influence during the Heresy. As the galaxy burns, not all weapons are forged of steel—some are crafted from words and whispers that can topple empires.",
-   "currentBlurbSafe": "A tale exploring the power of words and influence during the Heresy, showing that some weapons are more subtle than bolters and blades."
+   "currentBlurb": "The Black Ship Validus vanishes into the warp and is later found derelict. Oblivion Knight Amendera Kendel of the Sisters of Silence boards her with the novice Leilani Mollitas and discovers the psykers in the holds have been freed and fused into one gestalt mind, which claims to be Mollitas herself, sent back from the future with a warning that could stop the coming war. A rival Oblivion Knight, Emrilia Herkaaze, kills Mollitas and destroys the entity, then breaks her vow of silence to admit she follows the Lectitio Divinitatus.",
+   "currentBlurbSafe": "A Black Ship carrying a cargo of captured psykers is lost in the warp and later recovered adrift. Amendera Kendel of the Sisters of Silence leads the boarding party into its holds, and what is waiting there has a message for her rather than a fight."
   },
   {
    "bookKey": "age-of-darkness-face-of-treachery",
@@ -136,10 +139,13 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Various"
+    "Raven Guard",
+    "Alpha Legion",
+    "World Eaters",
+    "Imperial Army"
    ],
-   "currentBlurb": "Betrayal wears many faces during the Heresy. This story explores the personal nature of treachery, showing how betrayal cuts deepest when it comes from those closest to us—brothers, friends, and comrades in arms.",
-   "currentBlurbSafe": "A tale examining the personal cost of betrayal, showing how treachery cuts deepest when perpetrated by those we trust most."
+   "currentBlurb": "Picking up from the audio drama Raven's Flight, Commander Branne brings a Raven Guard relief fleet, with Imperial Army officer Marcus Valerius, back to Isstvan V to lift Corax and the survivors of the Dropsite Massacre off the black sand. Their path through the traitor blockade opens when the World Eaters commander Delerax is murdered by his own second in command, who is really an Alpha Legion infiltrator wearing a dead man's face. Corax escapes and sets course for Terra, and the story leads directly into Deliverance Lost.",
+   "currentBlurbSafe": "In the immediate aftermath of the Dropsite Massacre, a Raven Guard relief force races to Isstvan V to pull Corax and any survivors out from under the guns of the traitor fleet. Whether they get through rests on one warrior aboard a rebel ship who is not who he appears to be."
   },
   {
    "bookKey": "age-of-darkness-iron-within",
@@ -151,10 +157,12 @@
    "currentType": "Short Story",
    "currentTimeline": "006-007.M31",
    "currentLegions": [
-    "Iron Warriors"
+    "Iron Warriors",
+    "Ultramarines",
+    "Imperial Army"
    ],
-   "currentBlurb": "The Iron Warriors prove their cold brutality in a tale of siege warfare and bitter determination. Perturabo's sons demonstrate why they are the masters of attrition warfare, grinding down their enemies with mechanical precision and ruthless efficiency.",
-   "currentBlurbSafe": "The Iron Warriors demonstrate their mastery of siege warfare, showcasing the cold, methodical brutality that defines the IV Legion."
+   "currentBlurb": "Warsmith Barabas Dantioch was left on the dead world of Lesser Damantyne, crippled by a hrud ambush and holding the Schadenhold, a fortress the Iron Warriors themselves carved into a vast cavern. When Perturabo declares for Horus, Dantioch refuses to follow, and with the Ultramarines champion Tauro Nicodemus, a Dreadnought and an Imperial Army garrison he holds the Schadenhold for a year against a besieging Iron Warriors host under Warsmith Idriss Krendl, finally bringing the fortress down on his attackers.",
+   "currentBlurbSafe": "On the lifeless world of Lesser Damantyne, a disgraced and disfigured Warsmith commands a fortress his own Legion built. When the Iron Warriors come back to Damantyne he has to decide what his oath was really to, and then hold a siege nobody expects him to survive."
   },
   {
    "bookKey": "age-of-darkness-savage-weapons",
@@ -169,8 +177,8 @@
     "Dark Angels",
     "Night Lords"
    ],
-   "currentBlurb": "Lion El'Jonson hunts Konrad Curze through the darkness. Two Primarchs clash in a brutal confrontation that reveals the savage nature beneath their veneer of civilization. The Lion pursues his mad brother, but Curze's visions of the future make him a quarry unlike any other.",
-   "currentBlurbSafe": "Lion El'Jonson pursues Konrad Curze in a hunt that becomes a brutal clash between two Primarchs, revealing the savage nature both share."
+   "currentBlurb": "Two years into the Thramas Crusade, with the Dark Angels and Night Lords grinding each other down across the sector, Konrad Curze calls Lion El'Jonson to a parlay on the abandoned world of Tsagualsa. Each primarch brings champions, Corswain and Alajos against Sevatar and Sheng. Curze goads the Lion into striking first and the meeting collapses into a savage brawl between primarchs and their chosen warriors, breaking off unresolved as reinforcements arrive from both fleets.",
+   "currentBlurbSafe": "The Dark Angels and the Night Lords have been tearing at each other across the Thramas sector for two years when Konrad Curze proposes a face-to-face meeting with Lion El'Jonson on a barren world. Each primarch is to bring only a handful of warriors, and neither believes a word the other says."
   },
   {
    "bookKey": "age-of-darkness-rules-of-engagement",
@@ -184,8 +192,8 @@
    "currentLegions": [
     "Ultramarines"
    ],
-   "currentBlurb": "An Ultramarines story exploring the rigid codes and doctrines that define Guilliman's sons. As the Heresy rages, the XIII Legion must adapt their rules of warfare to face an enemy that knows them intimately—their own traitorous brothers.",
-   "currentBlurbSafe": "An Ultramarines tale examining how the XIII Legion's strict doctrines are tested when facing former brothers in the crucible of civil war."
+   "currentBlurb": "Captain Remus Ventanus of the Ultramarines 4th Company fights a run of increasingly desperate campaigns across the worlds of Ultramar, on Talassar, Prandium, Quintarn and Macragge, against Death Guard, World Eaters and Salamanders. Each engagement is fought under a different doctrine and each goes wrong in a different way. The reveal is that they are live rehearsals staged by Roboute Guilliman to stress-test the battlefield doctrine he is writing, the Codex Astartes, and to prepare for an Imperium in which Terra may already be lost.",
+   "currentBlurbSafe": "Remus Ventanus and the Ultramarines 4th Company are thrown into one battle after another across the worlds of Ultramar, each against a different Legion and each fought to a different set of tactical rules. Guilliman is watching closely, and the pattern behind the fighting is the real subject of the story."
   },
   {
    "bookKey": "age-of-darkness-liars-due",
@@ -197,10 +205,10 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Various"
+    "Alpha Legion"
    ],
-   "currentBlurb": "A tale of deception and truth during the Age of Darkness. In a war where brother fights brother, lies become weapons as deadly as any bolter, and the price of falsehood may be damnation itself.",
-   "currentBlurbSafe": "A story exploring deception and consequence during the Heresy, where lies become weapons and truth is a rare commodity in the darkness."
+   "currentBlurb": "On the agricultural backwater of Virger-Mos II, a quiet, helpful lodger called Mendacs has been living in Town 44 for eight weeks. Then word arrives that Horus has killed the Emperor and now rules the galaxy. Over roughly a day the town turns on itself, neighbours shoot neighbours, and the boy Leon Kyyter works out that Mendacs is an Alpha Legion operative who has taken a world without a shot being fired by his Legion.",
+   "currentBlurbSafe": "Virger-Mos II is a farming world so remote that news arrives slowly and cannot easily be checked. When word comes that the Emperor is dead and Horus has won, the people of Town 44 have only each other, and one very helpful outsider, to help them work out what to believe."
   },
   {
    "bookKey": "age-of-darkness-forgotten-sons",
@@ -212,10 +220,12 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Salamanders"
+    "Salamanders",
+    "Ultramarines",
+    "Iron Warriors"
    ],
-   "currentBlurb": "Salamanders warriors struggle with being forgotten in the galaxy's greatest conflict. Cut off from their Legion and Primarch after Isstvan, these sons of Vulkan must find purpose in a war that has left them behind.",
-   "currentBlurbSafe": "Salamanders warriors, separated from their Legion, seek purpose and meaning while fighting in a war where they feel forgotten and abandoned."
+   "currentBlurb": "Captain Heka'tan of the Salamanders and Captain Arcadese of the Ultramarines are sent with the iterator Ortane Vorkellen to Bastion, a non-aligned world first brought to compliance by the Iron Warriors, to argue the Emperor's case against the Warmaster's envoy. Two separate traitor plots run against them, a lacrymole shapeshifter working the negotiations and an Iron Warrior seeding the crust with atomics. The marines unpick the conspiracy but cannot save Bastion, and Heka'tan dies saving the rival ambassador as they flee the dying world.",
+   "currentBlurbSafe": "A Salamander and an Ultramarine, both carrying the losses their Legions have already taken, are sent as ambassadors to a neutral world that must choose between the Emperor and Horus. Neither is a diplomat, and they are not the only interested parties working the room."
   },
   {
    "bookKey": "age-of-darkness-little-horus",
@@ -227,10 +237,12 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Sons of Horus"
+    "Sons of Horus",
+    "Iron Hands",
+    "White Scars"
    ],
-   "currentBlurb": "Horus Aximand, called 'Little Horus' for his resemblance to the Warmaster, grapples with his role in the rebellion. Once a proud member of the Mournival, he must now reconcile his loyalty to Horus with the horror of what his Legion has become.",
-   "currentBlurbSafe": "Horus Aximand, called Little Horus, struggles with his role in the rebellion and what his Legion has become since Isstvan."
+   "currentBlurb": "Horus Aximand leads the Sons of Horus assault on Dwell against a loyalist force built around Shadrak Meduson's Iron Hands and White Scars under Hibou Khan, all the while stalked in his sleep by a figure he cannot place. The fighting turns, and a White Scars blade takes off the front of his helm and his face with it. Lying unconscious while the medicae reattach it, Aximand finally recognises the man in the dream: Garviel Loken.",
+   "currentBlurbSafe": "Horus Aximand, the Mournival captain they call Little Horus, takes the Sons of Horus to the world of Dwell to break a loyalist remnant that refuses to stay broken. He has not slept well since Isstvan III, and there is someone in his dreams he cannot put a name to."
   },
   {
    "bookKey": "age-of-darkness-the-last-remembrancer",
@@ -242,10 +254,12 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Remembrancers"
+    "Imperial Fists",
+    "Remembrancers",
+    "Knights-Errant"
    ],
-   "currentBlurb": "The story of a Remembrancer struggling to document the Heresy's horrors. As the Great Crusade's artistic chroniclers are purged, one remains to bear witness to humanity's darkest hour, knowing their testimony may be the last.",
-   "currentBlurbSafe": "A Remembrancer attempts to chronicle the Heresy's events, bearing witness to humanity's civil war while knowing they may be the last to tell the tale."
+   "currentBlurb": "A traitor ship enters the Solar System to deliver one passenger: Solomon Voss, the most celebrated remembrancer of the Great Crusade, who has spent the war at Horus's side. In a cell beneath the Imperial Palace, Rogal Dorn and Iacton Qruze, now a Knight-Errant in Malcador's service, question him. Voss tells Dorn the Imperium's ideals are already ashes running through his hands, and Dorn, refusing to let that testimony survive, kills him himself.",
+   "currentBlurbSafe": "Horus sends a single man back to Terra: Solomon Voss, the Great Crusade's most famous chronicler, who has seen everything the Warmaster has done since. Rogal Dorn must decide what to do with a witness whose account no one in the Imperium can afford to hear."
   }
  ]
 }

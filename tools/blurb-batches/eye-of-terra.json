@@ -15,10 +15,11 @@
    "currentType": "Short Story",
    "currentTimeline": "999.M30",
    "currentLegions": [
-    "Space Wolves"
+    "Luna Wolves",
+    "Orks"
    ],
-   "currentBlurb": "A Space Wolves warrior's tale of fire and fury during the Heresy.",
-   "currentBlurbSafe": "The VI Legion unleashes savage warfare against the traitors."
+   "currentBlurb": "Two centuries into the Great Crusade and shortly before the Ullanor campaign, Horus Lupercal leads the Luna Wolves against the ork-held planetoid of Gorro. The Emperor joins the assault in person, fighting beside his favoured son for the first time in a very long while. Framed by Horus's exchanges with the Mournival, it is a portrait of the XVI Legion and its primarch at their loyal height.",
+   "currentBlurbSafe": "Shortly before Ullanor, Horus Lupercal takes the Luna Wolves to war against the orks of Gorro, and the Emperor himself takes the field alongside them. A glimpse of the XVI Legion, its primarch and the Mournival during the Great Crusade."
   },
   {
    "bookKey": "eye-sins-father",
@@ -27,13 +28,13 @@
    "author": "Andy Smillie",
    "anthology": "Eye of Terra",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "001.M31",
    "currentLegions": [
     "Blood Angels"
    ],
-   "currentBlurb": "Blood Angels bear the weight of their Primarch's curse.",
-   "currentBlurbSafe": "The IX Legion struggles with the flaw in their gene-seed."
+   "currentBlurb": "Azkaellon and Nassir Amit, two of Sanguinius's most favoured sons, face one another in the Blood Angels' ritual duel known as the Tempest of Angels. The contest measures temperament as much as skill, setting Azkaellon's disciplined control against Amit's ferocity. Each comes away having learned something uncomfortable about the other's virtues and about his own weaknesses. Black Library frames it as the prequel to Virtues of the Sons.",
+   "currentBlurbSafe": "Two of Sanguinius's favoured warriors, Azkaellon and Nassir Amit, meet in the Blood Angels' ritual duel called the Tempest of Angels. A short, character-driven piece about what the IX Legion's finest see in one another."
   },
   {
    "bookKey": "eye-vorax",
@@ -45,10 +46,11 @@
    "currentType": "Short Story",
    "currentTimeline": "005-006.M31",
    "currentLegions": [
-    "Mechanicum"
+    "Dark Mechanicum",
+    "Imperial Fists"
    ],
-   "currentBlurb": "Battle-automata prowl the battlefields of the Heresy.",
-   "currentBlurbSafe": "The Mechanicum's war machines hunt in the shadows."
+   "currentBlurb": "Mars is broken and the Ring of Iron is the last contested outpost still in Dark Mechanicum hands, a shattered halo of forges and shipyards with an Imperial Fists blockade closing around the planet. Rogue priests and adepts survive in its depths. Matthew Farrer's story turns on a reversal of hunter and hunted as those holdouts encounter something they had not counted on.",
+   "currentBlurbSafe": "In the wreckage of the Ring of Iron above Mars, holdouts of the Dark Mechanicum shelter in the depths while the Imperial Fists blockade the planet. Deep in the machinery, the roles of hunter and hunted are not what they appear."
   },
   {
    "bookKey": "eye-aurelian",
@@ -60,10 +62,11 @@
    "currentType": "Novella",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Word Bearers"
+    "Word Bearers",
+    "Chaos Daemons"
    ],
-   "currentBlurb": "Lorgar's pilgrimage into the Eye of Terror and his transformation into a servant of Chaos. The Urizen seeks the truth about the gods and his place in their grand design.",
-   "currentBlurbSafe": "Lorgar journeys into the Eye of Terror, seeking truth about the gods and his destiny."
+   "currentBlurb": "Four days after the Drop Site Massacre, Lorgar assaults the daemon-possessed Fulgrim in front of the assembled traitor primarchs, then recounts to Magnus the pilgrimage he made into the Eye of Terror forty-three years earlier. Guided by the daemon Ingethel, the Word Bearers primarch walked dead worlds and a ruined craftworld, was tested by a champion of Khorne, and was shown visions of Calth, Terra and his Legion's damnation.",
+   "currentBlurbSafe": "Aaron Dembski-Bowden's novella follows Lorgar of the Word Bearers on the pilgrimage into the Eye of Terror that shaped him, guided by a daemon through dead worlds and impossible visions. It is framed by a gathering of the traitor primarchs in the aftermath of Isstvan V."
   },
   {
    "bookKey": "eye-massacre",
@@ -75,10 +78,10 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Various"
+    "Night Lords"
    ],
-   "currentBlurb": "The brutal reality of the Heresy's massacres.",
-   "currentBlurbSafe": "A tale of slaughter and betrayal during the civil war."
+   "currentBlurb": "Talos and First Claw of the Night Lords' 10th Company muster for the drop site massacre on Isstvan V, fighting once more alongside Konrad Curze, a primarch the VIII Legion has campaigned without for years. Told as a series of vignettes, it carries the squad through the slaughter of the loyalist Legions and stands as the direct prequel to Dembski-Bowden's Night Lords trilogy.",
+   "currentBlurbSafe": "The Night Lords of First Claw muster for Isstvan V, reunited with a primarch they have fought without for many years. A short prequel introducing Talos and his squad from the Night Lords trilogy."
   },
   {
    "bookKey": "eye-final-compliance",
@@ -90,10 +93,10 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Various"
+    "Sons of Horus"
    ],
-   "currentBlurb": "The last compliance action of the Great Crusade before betrayal.",
-   "currentBlurbSafe": "A world is brought to compliance as the age of unity ends."
+   "currentBlurb": "With the Heresy under way, emissaries of the XVI Legion return to worlds brought into compliance during the Great Crusade and demand they swear their oaths again, this time to the Warmaster rather than to the Emperor and with the Imperial Truth declared a lie. On Sixty-Three Fourteen the population must answer while the Sons of Horus stand at battle readiness above them, and a grim decision follows.",
+   "currentBlurbSafe": "Worlds that swore compliance to Horus during the Great Crusade are asked to renew their oaths now that he has turned against the Emperor. On Sixty-Three Fourteen the Sons of Horus wait at battle readiness for the answer."
   },
   {
    "bookKey": "eye-brotherhood-moon",
@@ -107,8 +110,8 @@
    "currentLegions": [
     "White Scars"
    ],
-   "currentBlurb": "White Scars brotherhood is tested by the Heresy's divisions.",
-   "currentBlurbSafe": "The bonds of the V Legion face strain during the civil war."
+   "currentBlurb": "In the aftermath of the Terran lodge rebellion inside the V Legion, Torghun Khan is brought before his accusers and his primarch to explain himself. Jaghatai Khan has ordered the hearing, and Torghun must account for how far he went and whether his conduct amounts to outright heresy. Chris Wraight's story runs alongside the events of the novel Scars.",
+   "currentBlurbSafe": "After the rebellion within the White Scars, the Terran legionary Torghun Khan is put on trial before Jaghatai Khan and made to account for his part in it. A companion piece to Chris Wraight's Scars."
   },
   {
    "bookKey": "eye-inheritor",
@@ -120,10 +123,12 @@
    "currentType": "Short Story",
    "currentTimeline": "007-008.M31",
    "currentLegions": [
-    "Dark Angels"
+    "Word Bearers",
+    "World Eaters",
+    "Ultramarines"
    ],
-   "currentBlurb": "A Dark Angels warrior inherits a burden during the Heresy.",
-   "currentBlurbSafe": "The I Legion's secrets weigh heavily on those who bear them."
+   "currentBlurb": "Torquill Eliphas of the Word Bearers, the legionary who will later be known as the Inheritor, pursues his own designs on Kronus deep inside Ultramar. Fighting as part of Lorgar's Shadow Crusade and supported by World Eaters berserkers, he wars on the Ultramarines, but his real objective is the Templum Daemonarchia, a structure raised to harness the power of the warp.",
+   "currentBlurbSafe": "During Lorgar's Shadow Crusade, the Word Bearer Torquill Eliphas leads an assault on the world of Kronus in Ultramar with World Eaters at his side. Killing Ultramarines is not the whole of what he wants from the place."
   },
   {
    "bookKey": "eye-red-marked",
@@ -135,10 +140,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Various"
+    "Ultramarines",
+    "Word Bearers"
    ],
-   "currentBlurb": "Warriors marked for death fight on despite their fate.",
-   "currentBlurbSafe": "Those condemned continue their struggle against destiny."
+   "currentBlurb": "Sergeant Aeonid Thiel, still wearing the red mark of censure, is stranded on the Ultramar garrison world of Oran on his way back to Macragge. Traitor warband activity is rising, listening posts have fallen silent, and his warnings about gaps in the defences only irritate his superiors. With a handful of rogue veterans he sets out to find the truth behind something called the Nightfane.",
+   "currentBlurbSafe": "Held up on the garrison world of Oran, the censured Ultramarines sergeant Aeonid Thiel notices traitor activity rising and outposts going quiet. He gathers a few veterans to investigate what is stirring on the borders of Ultramar."
   },
   {
    "bookKey": "eye-master-first",
@@ -152,8 +158,8 @@
    "currentLegions": [
     "Dark Angels"
    ],
-   "currentBlurb": "The Master of the Deathwing faces the Heresy's challenges.",
-   "currentBlurbSafe": "Dark Angels' elite confront betrayal and duty."
+   "currentBlurb": "On Caliban, with the I Legion scattered and bled by the Thramas Crusade, Luther tightens his grip and a group of Dark Angels officers plot armed rebellion against him. Former Chapter Master Merir Astelan agrees to lead a bloodless coup, seizing the communications relays to reach Terra and the Lion. Instead he betrays the conspirators to Luther and helps crush them, keeping his own ambitions for another day.",
+   "currentBlurbSafe": "With the Dark Angels scattered by the Thramas Crusade, Luther consolidates power on Caliban and officers of the First begin to conspire against him. Merir Astelan is asked to lead them, and he has his own view of what the Legion needs."
   },
   {
    "bookKey": "eye-ironfire",
@@ -165,10 +171,10 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Iron Warriors"
    ],
-   "currentBlurb": "Iron Hands warriors unleash their fury after Ferrus's death.",
-   "currentBlurbSafe": "The X Legion's rage burns hot in vengeance for their Primarch."
+   "currentBlurb": "Warsmith Idriss Krendl of the Iron Warriors, broken and disgraced by his failure at the Schadenhold, means to buy his way back into Perturabo's favour. Commanding two enormous siege guns taken from the forge world Diamat, he tests a new siege-breaking doctrine, the Ironfire protocol, against the Great Selenic Palace on Euphorus, spending subordinates and allies freely to prove the method works.",
+   "currentBlurbSafe": "Disgraced after the fall of the Schadenhold, the Iron Warriors warsmith Idriss Krendl sets out to prove a new siege doctrine and win back his primarch's regard. He brings two colossal guns to bear on the Great Selenic Palace of Euphorus."
   },
   {
    "bookKey": "eye-stratagem",
@@ -180,10 +186,10 @@
    "currentType": "Audio Drama",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Various"
+    "Ultramarines"
    ],
-   "currentBlurb": "Tactical genius is tested in the fires of civil war.",
-   "currentBlurbSafe": "Strategic minds clash in deadly competition."
+   "currentBlurb": "Back from Calth and the Underworld War, Sergeant Aeonid Thiel is summoned before Roboute Guilliman himself. Traitor warbands left behind by the Shadow Crusade are picking at the fragile peace of Imperium Secundus, and the primarch wants the censured sergeant's mind on the problem. A new order of battle for the Ultramarines has to be written, and Thiel is the man asked to help write it.",
+   "currentBlurbSafe": "Returned from Calth, Aeonid Thiel is called before Roboute Guilliman while traitor warbands gnaw at the edges of Imperium Secundus. The primarch has a use for a legionary who thinks about war differently."
   },
   {
    "bookKey": "eye-herald-sanguinius",
@@ -197,8 +203,8 @@
    "currentLegions": [
     "Blood Angels"
    ],
-   "currentBlurb": "A herald carries word from the Great Angel.",
-   "currentBlurbSafe": "Messages from Sanguinius guide his sons through darkness."
+   "currentBlurb": "Sanguinius has taken the throne of Imperium Secundus, and the danger to him is no longer only outside the realm. Commander Azkaellon and the Sanguinary Guard, sworn to keep the Great Angel alive, are driven to desperate measures to shield their primarch from betrayal within his own new empire.",
+   "currentBlurbSafe": "Newly seated on the throne of Imperium Secundus, Sanguinius faces threats from inside his own realm. Azkaellon and the Sanguinary Guard must decide how far they will go to keep him safe."
   },
   {
    "bookKey": "eye-long-night",
@@ -210,10 +216,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Night Lords"
+    "Night Lords",
+    "Dark Angels"
    ],
-   "currentBlurb": "The Night Lords bring terror to their enemies in the darkness.",
-   "currentBlurbSafe": "The VIII Legion wages war through fear and shadow."
+   "currentBlurb": "Captured at the close of the Thramas Crusade, Night Lords First Captain Jago Sevatarion is held prisoner aboard the Dark Angels flagship Invincible Reason, in agony from psychic powers he believes are killing him. A young astropath named Altani reaches out to ease his pain and is savagely punished for it by the Master of the Choir. Sevatar escapes during a prisoner transfer and takes his own kind of justice.",
+   "currentBlurbSafe": "The Night Lords First Captain Sevatar sits in a Dark Angels cell after the Thramas Crusade, tormented by newly woken psychic powers. An astropath aboard the ship makes contact with him, which neither of them is supposed to do."
   },
   {
    "bookKey": "eye-eagles-talon",
@@ -225,10 +232,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "010-011.M31",
    "currentLegions": [
-    "Emperor's Children"
+    "Imperial Fists",
+    "Iron Warriors"
    ],
-   "currentBlurb": "The III Legion's fall into excess and corruption.",
-   "currentBlurbSafe": "Warriors of perfection become slaves to sensation."
+   "currentBlurb": "Deep into the armoured war on Tallarn, three Imperial Fists reconnaissance squads infiltrate an Iron Warriors macro-transporter to stop it landing reinforcements on the poisoned surface. The account is assembled from seven recovered vox transmissions. Secondary objectives fall, then the mission unravels as the legionaries are overrun, and Theophon fires the charges anyway, destroying himself, the ship and, in effect, the battle for the planet.",
+   "currentBlurbSafe": "As the tank war on Tallarn grinds on, Imperial Fists recon squads board an Iron Warriors macro-transporter to keep its cargo off the surface. Their mission is reconstructed entirely from the vox traffic they left behind."
   },
   {
    "bookKey": "eye-iron-corpses",
@@ -240,10 +248,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "010-011.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Iron Warriors",
+    "Collegia Titanica"
    ],
-   "currentBlurb": "The fallen Iron Hands are more machine than man.",
-   "currentBlurbSafe": "Cybernetic warriors blur the line between living and dead."
+   "currentBlurb": "After the macro-transporter Eagle's Talon comes down on Tallarn, Iron Warriors Warsmith Koparnos is left alone on the poisoned southern continent among the wreckage of dead god-machines. Dying of virus contamination, he finds a Warlord Titan, Ostentio Contritio, that still has power in it, and takes it by force, wiring its loyalist princeps Benwrath directly into the machine until she is barely distinguishable from it.",
+   "currentBlurbSafe": "Stranded on Tallarn's poisoned southern continent amid the wreckage of dead god-machines, an Iron Warriors warsmith finds one Titan that still has power in it. Getting it moving will demand something no princeps would ever agree to."
   }
  ]
 }

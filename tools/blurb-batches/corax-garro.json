@@ -7,23 +7,8 @@
  "count": 13,
  "entries": [
   {
-   "bookKey": "corax-weregeld",
-   "number": "XL.1",
-   "title": "WEREGELD",
-   "author": "Gav Thorpe",
-   "anthology": "Corax",
-   "series": null,
-   "currentType": "Novella",
-   "currentTimeline": "006-007.M31",
-   "currentLegions": [
-    "Raven Guard"
-   ],
-   "currentBlurb": "Corax demands weregeld (blood-price) from the traitors for the slaughter at Isstvan. The Ravenlord's quest for vengeance begins.",
-   "currentBlurbSafe": "Corvus Corax seeks blood-price for his fallen sons after the Dropsite Massacre."
-  },
-  {
    "bookKey": "corax-soulforge",
-   "number": "XL.2",
+   "number": "XL.1",
    "title": "SOULFORGE",
    "author": "Gav Thorpe",
    "anthology": "Corax",
@@ -31,10 +16,12 @@
    "currentType": "Novella",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Raven Guard"
+    "Raven Guard",
+    "Word Bearers",
+    "Mechanicum"
    ],
-   "currentBlurb": "Corax obtains gene-tech from Terra to rebuild his shattered Legion, forging new warriors to replace the fallen.",
-   "currentBlurbSafe": "The Ravenlord attempts to restore his Legion using forbidden gene-technology."
+   "currentBlurb": "Fighting a shadow war after the Dropsite Massacre, Corax's Raven Guard board a stricken Word Bearers vessel and find proof of an alliance between the traitors and the Mechanicum forge world of Constanix II, which is turning out terrifying new war machines. Corax takes the Legion to the forge world in a hit-and-run campaign, infiltrates the Mechanicum priesthood to win allies, and meets the first daemon engines of the Dark Mechanicum. Commander Agapito's unspent rage over Isstvan tests his primarch's methods throughout.",
+   "currentBlurbSafe": "The surviving Raven Guard remain defiant after Isstvan V, and evidence recovered behind enemy lines points to a pact between the Word Bearers and a Mechanicum forge world supplying dreadful new war machines. Corvus Corax judges the threat too great to ignore."
   },
   {
    "bookKey": "corax-ravenlord",
@@ -48,23 +35,23 @@
    "currentLegions": [
     "Raven Guard"
    ],
-   "currentBlurb": "The horrific failure of Corax's gene-seed experiments creates monsters. The Ravenlord must destroy his own creations and face his failure.",
-   "currentBlurbSafe": "Corax confronts the terrible consequences of his attempts to rebuild the Raven Guard."
+   "currentBlurb": "Corax and the remnants of his Legion now wage a war of liberation, freeing worlds held down by traitor forces, gathering followers and disrupting the Warmaster's influence wherever they can. An unexpected reunion with another survivor of Isstvan V leads the Raven Guard to the prison colony of Carandiru, and to an assault that makes them confront the ghosts of their own uprising on Deliverance. Corax must rally warriors still weighed down by the massacre and by the disaster at Ravendelve.",
+   "currentBlurbSafe": "Corax's diminished Legion fights a very different kind of war, liberating oppressed worlds and drawing recruits to the Raven Guard banner. A chance reunion with a fellow survivor of Isstvan V sets them on course for a prison colony and for their own past."
   },
   {
    "bookKey": "corax-shadowmasters",
-   "number": "XL.4",
+   "number": "XL.2",
    "title": "THE SHADOWMASTERS",
    "author": "Gav Thorpe",
    "anthology": "Corax",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "007-008.M31",
+   "currentTimeline": "007.M31",
    "currentLegions": [
     "Raven Guard"
    ],
-   "currentBlurb": "The Raven Guard's masters of stealth and shadow warfare strike at the traitors.",
-   "currentBlurbSafe": "Elite Raven Guard warriors employ guerrilla tactics against superior forces."
+   "currentBlurb": "The Mor Deythan stand apart from the rest of the Raven Guard, so secretive that many deny they exist at all. Sharing their primarch's gift for becoming one with the shadows, Sergeant Chamell leads his self-styled Shadowmasters behind enemy lines to sow fear and confusion in support of a wider Legion assault. The piece revisits an engagement from Corax: Soulforge from the perspective of the warriors who made it possible.",
+   "currentBlurbSafe": "The Mor Deythan are the Raven Guard's most secretive cadre, warriors who share Corax's ability to slip through any battlefield unseen and unheard. This short piece follows one sergeant and his squad working far behind enemy lines."
   },
   {
    "bookKey": "garro-oath-moment",
@@ -76,10 +63,13 @@
    "currentType": "Audio Drama",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard",
+    "Ultramarines",
+    "Word Bearers"
    ],
-   "currentBlurb": "Garro swears his oath to Malcador and begins his service as the first Knight-Errant.",
-   "currentBlurbSafe": "Nathaniel Garro pledges his loyalty to Malcador and becomes a Knight-Errant."
+   "currentBlurb": "Newly returned to Terra after the flight of the Eisenstein, Nathaniel Garro is given a secret mission by Malcador the Sigillite and sent to a warzone where the Ultramarines are supposedly fighting greenskins. He arrives at Calth in the middle of the Word Bearers' betrayal, fights alongside the XIII Legion's 21st Company defending the approaches to Numinus, and only then reveals his real objective: to demand an oath of moment from Tylos Rubio, a Codicier silenced by the Edict of Nikaea.",
+   "currentBlurbSafe": "Having proved his loyalty aboard the Eisenstein, Nathaniel Garro accepts an assignment from Malcador the Sigillite that sends him back among the stars to an Ultramarines warzone. What the Sigillite actually wants from him there is not what Garro has been told."
   },
   {
    "bookKey": "garro-sword-truth",
@@ -91,14 +81,19 @@
    "currentType": "Audio Drama",
    "currentTimeline": "007-008.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard",
+    "Ultramarines",
+    "World Eaters",
+    "Emperor's Children",
+    "White Scars"
    ],
-   "currentBlurb": "Garro seeks truth amid lies as he hunts for loyalists among the traitor Legions.",
-   "currentBlurbSafe": "The Knight-Errant searches for loyal warriors trapped in fallen Legions."
+   "currentBlurb": "Back from Calth and operating out of the Somnus Citadel on Luna, Garro is sent with Tylos Rubio and a Custodian to intercept a ragged flotilla of legionaries loitering at the edge of the Solar System. Boarding the World Eaters warship Daggerline, he meets captains of the World Eaters, Emperor's Children and White Scars, all claiming to be loyalists in flight from Isstvan. Falsified orders point to a conspiracy, and Garro must look beneath the obvious to tell friend from foe.",
+   "currentBlurbSafe": "Returning from one battlefield to find another mission waiting, Nathaniel Garro is sent to assess a ragged fleet of legionaries from several Legions gathered near Terra. Their presence alarms the loyalist defenders, and their word alone will not settle whether they are friends or foes."
   },
   {
    "bookKey": "corax-value-fear",
-   "number": "XL.5",
+   "number": "XL.4",
    "title": "THE VALUE OF FEAR",
    "author": "Gav Thorpe",
    "anthology": "Corax",
@@ -106,14 +101,16 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Raven Guard"
+    "Raven Guard",
+    "Night Lords",
+    "Alpha Legion"
    ],
-   "currentBlurb": "The Raven Guard learn that fear is a weapon as potent as any blade.",
-   "currentBlurbSafe": "The XIX Legion discovers the tactical value of terror and psychological warfare."
+   "currentBlurb": "Corax's Raven Guard are gathering leaderless loyalists to their banner wherever they find them. In the industrial nightmare of an underhive, Sergeant Ashel's squad fights beside the unlikeliest of allies, a loyal Night Lord, to put down an Alpha Legion-fomented rebellion. Watching his counterpart work, Ashel is unsettled by how effectively terror achieves what the XIX Legion's own shadow tactics do not. A very short 2014 Advent Calendar piece.",
+   "currentBlurbSafe": "The Raven Guard are drawing every leaderless loyalist they can find to Corax's banner. Deep in an underhive, one of their sergeants receives a lesson in terror tactics from the most unlikely of allies."
   },
   {
    "bookKey": "corax-raptor",
-   "number": "XL.6",
+   "number": "XL.5",
    "title": "RAPTOR",
    "author": "Gav Thorpe",
    "anthology": "Corax",
@@ -121,10 +118,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Raven Guard"
+    "Raven Guard",
+    "Space Wolves"
    ],
-   "currentBlurb": "The Raptors, Corax's gene-forged creations, prove their worth before their tragic transformation into monsters.",
-   "currentBlurbSafe": "Corax's enhanced warriors fight for the Legion before disaster strikes."
+   "currentBlurb": "After Isstvan V, Corax sanctioned an accelerated implantation process to make new Raven Guard, and his enemies subverted it in secret. Horrendously mutated but unwavering, the Raptors still stand ready to serve. When a watch-pack of Space Wolves legionaries arrives unannounced, Lieutenant Navar Hef must greet these warlike kinsmen, endure their scrutiny of his malformed brothers, and decide whether the Wolves are hiding flaws of their own.",
+   "currentBlurbSafe": "The Raptors are Corax's newest legionaries, products of a rushed gene-seed process and viewed with suspicion by almost everyone. When Space Wolves arrive without warning, one Raptor lieutenant is left to host warriors who have come to take their measure."
   },
   {
    "bookKey": "garro-legion-one",
@@ -136,10 +134,14 @@
    "currentType": "Audio Drama",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard",
+    "Ultramarines",
+    "World Eaters",
+    "Sons of Horus"
    ],
-   "currentBlurb": "Alone against impossible odds, Garro proves one loyal warrior can make a difference.",
-   "currentBlurbSafe": "Garro undertakes a solo mission that tests his resolve and skills."
+   "currentBlurb": "Almost a year after the betrayal, Garro sets foot on the ruin of Isstvan III with fellow Knights-Errant Tylos Rubio and Macer Varren, hunting a feral survivor the loyalists call Cerberus who strikes at friend and foe alike. Beset by the horrors left on the dead world, the three are nearly killed by Cerberus himself. Garro holds him off and urges him to remember who he truly is: Garviel Loken, once captain of the Luna Wolves.",
+   "currentBlurbSafe": "Nathaniel Garro and two fellow Knights-Errant walk the ruins of the world where the Heresy began, searching for a lone survivor who has been killing indiscriminately ever since. What they find there matters far beyond one lost warrior."
   },
   {
    "bookKey": "garro-shield-lies",
@@ -151,10 +153,12 @@
    "currentType": "Audio Drama",
    "currentTimeline": "008-009.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard",
+    "Mechanicum"
    ],
-   "currentBlurb": "Deception becomes a shield as Garro navigates the Heresy's web of lies.",
-   "currentBlurbSafe": "The Knight-Errant uses deception as a weapon against the traitors."
+   "currentBlurb": "Katanoh Tallery, a humble Administratum adept on the orbital plate Riga, uncovers evidence of a conspiracy inside the monolithic bureaucracy and flees into the shadows, hunted by Mechanicum automata. She falls instead into the hands of the Knight-Errant Nathaniel Garro, who must weigh whether she is a threat or a witness while the two of them evade her pursuers. For Garro it opens a personal quest to find his own place in the war.",
+   "currentBlurbSafe": "For most people on Terra the war exists only as rumour, until a junior Administratum adept stumbles on evidence of a conspiracy reaching into the heart of the Imperium's bureaucracy. Running for her life, she finds herself at the mercy of the mysterious Knight-Errant Nathaniel Garro."
   },
   {
    "bookKey": "garro-burden-duty",
@@ -166,10 +170,12 @@
    "currentType": "Audio Drama",
    "currentTimeline": "009-010.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard",
+    "Imperial Fists"
    ],
-   "currentBlurb": "Garro bears the heavy burden of duty as Malcador's agent, sacrificing everything for the Emperor's vision.",
-   "currentBlurbSafe": "The weight of responsibility tests Garro's resolve and dedication."
+   "currentBlurb": "While the Knights-Errant fight a quiet war in the Imperium's dark places, Garro uses a false identity and a single-person craft to infiltrate the Imperial Fists' star fort Phalanx, armed only with his power sword. He makes for the Seclusium, the sealed chamber where Rogal Dorn has confined his Legion's Librarians since the Edict of Nikaea, intending to recruit the psyker Massak for Malcador. The imprisoned Librarians, locked in from outside, turn on him.",
+   "currentBlurbSafe": "The Knights-Errant move quietly in places others cannot reach. Malcador's next errand takes Nathaniel Garro aboard the Imperial Fists' mighty star fort Phalanx, seeking one more kindred soul for his growing band of warriors."
   },
   {
    "bookKey": "garro-ashes-fealty",
@@ -181,10 +187,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "010-011.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard"
    ],
-   "currentBlurb": "From the ashes of his former Legion, Garro's loyalty burns ever brighter.",
-   "currentBlurbSafe": "Garro confronts his past as he forges a new future serving Malcador."
+   "currentBlurb": "Meric Voyen, once an Apothecary of the XIV Legion and one of the Eisenstein's survivors, returns bearing a deadly cargo into the Solar System: his research towards a cure for the plague consuming their former brothers. Garro, who knows too well how readily the warp corrupts, must decide whether any good can come of Voyen's work or whether it is already too late to act. Two old comrades clash over single-minded science and hard pragmatism.",
+   "currentBlurbSafe": "An old comrade from the Eisenstein reappears in the Solar System, carrying dangerous cargo and a purpose he will not be talked out of. Garro must judge what to do about a former brother's work before the warp's influence settles the question for him."
   },
   {
    "bookKey": "garro-vow-faith",
@@ -196,10 +203,30 @@
    "currentType": "Novella",
    "currentTimeline": "011-013.M31",
    "currentLegions": [
-    "Knights-Errant"
+    "Knights-Errant",
+    "Death Guard"
    ],
-   "currentBlurb": "Garro's final vow cements his transformation and his role in founding what will become the Grey Knights and Inquisition.",
-   "currentBlurbSafe": "The Knight-Errant makes his final vow, completing his journey from Death Guard to the Emperor's agent."
+   "currentBlurb": "Beset by doubt about Malcador and about his own place in the war, Garro sets aside his duties as the Sigillite's Agentia Primus and searches Terra for Euphrati Keeler, the Living Saint who once saved his life and set him on his path. He spends most of the story out of armour and without authority, while the Warmaster's agents hunt Keeler too, knowing her death would wound the Throneworld's spirit as surely as any assault.",
+   "currentBlurbSafe": "Filled with doubts about the war and his place in it, Nathaniel Garro abandons his duties and goes looking for the woman who once saved his life. His search takes him across more of Terra than he has ever seen."
+  },
+  {
+   "bookKey": "corax-weregeld",
+   "number": "XL.6",
+   "title": "WEREGELD",
+   "author": "Gav Thorpe",
+   "anthology": "Corax",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "013.M31",
+   "currentLegions": [
+    "Raven Guard",
+    "Space Wolves",
+    "Sons of Horus",
+    "Thousand Sons",
+    "Alpha Legion"
+   ],
+   "currentBlurb": "Corax leads the Raven Guard to Yarant III, breaking a traitor blockade to reach the Space Wolves, who are making a last stand under Ezekyle Abaddon's Sons of Horus, Thousand Sons and Alpha Legion while Leman Russ lies comatose. Learning that Marcus Valerius's visions have steered him for years, Corax breaks, sends the Raptors and most of his Legion clear, and leads a suicidal charge alongside Bjorn. He survives, parts from the Wolves and vows to fight Horus from the shadows.",
+   "currentBlurbSafe": "Corvus Corax takes the Raven Guard to the aid of the Space Wolves, besieged on a distant world by a traitor host under Ezekyle Abaddon. Concluding Gav Thorpe's Raven Guard arc, it forces Corax to reckon with everything his shadow war has cost him."
   }
  ]
 }

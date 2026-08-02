@@ -8,13 +8,10 @@
 // a duplicated property is legal syntax and silently wins. That is how 223 of
 // 224 books came to render in the wrong order without anything failing.
 
-import { readFileSync } from 'node:fs';
-import { createContext, runInContext } from 'node:vm';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
-import { existsSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { loadFromScript, repoRoot as root } from './load-data.mjs';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const errors = [];
 const warnings = [];
 
@@ -28,31 +25,8 @@ const source = readFileSync(join(root, 'script.js'), 'utf8');
 const domBoundary = source.indexOf('const modalOverlay');
 if (domBoundary === -1) fail('Could not find the DOM boundary in script.js');
 
-// A browser stub wide enough for script.js to reach its data definitions
-// without a DOM. It has to cover the top-level event listeners the chart view
-// registers, not just the element lookups.
-const sandbox = {
-    document: {
-        getElementById: () => null,
-        querySelector: () => null,
-        querySelectorAll: () => [],
-        addEventListener: () => {},
-        documentElement: { classList: { toggle: () => {} } },
-        body: { style: {} },
-    },
-    localStorage: { getItem: () => null, setItem: () => {} },
-    window: { addEventListener: () => {} },
-    requestAnimationFrame: () => {},
-    console,
-};
-const context = createContext(sandbox);
-runInContext(
-    source.slice(0, domBoundary) +
-        '\n;globalThis.__exports = { bookData, characterData, getSortedBookKeys, romanToNumber, chronologicalRank };',
-    context
-);
 const { bookData, characterData, getSortedBookKeys, romanToNumber, chronologicalRank } =
-    context.__exports;
+    loadFromScript(['bookData', 'characterData', 'getSortedBookKeys', 'romanToNumber', 'chronologicalRank']);
 
 const bookKeys = Object.keys(bookData);
 const bookEntries = Object.entries(bookData);

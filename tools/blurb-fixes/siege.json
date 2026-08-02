@@ -1,364 +1,359 @@
 {
-  "batch": "siege",
-  "entries": [
-    {
-      "bookKey": "sot-solar-war",
-      "verdict": "corrected",
-      "title": "THE SOLAR WAR",
-      "author": "John French",
-      "type": "Novel",
-      "legions": [
-        "Imperial Fists",
-        "Sons of Horus",
-        "Iron Warriors"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Rogal Dorn",
-        "Sigismund",
-        "Ezekyle Abaddon",
-        "Mersadie Oliton",
-        "Niora Su-Kassen",
-        "Horus"
-      ],
-      "blurb": "The Siege opens not on Terra but across the whole Sol System, as Horus's armada fights its way inward past the outer bulwarks Rogal Dorn has spent years building. Sigismund leads the first line of defence in the void, Abaddon holds to the path his father set him, and the remembrancer Mersadie Oliton struggles to reach Terra before the way closes. Only by winning this void war can the traitors earn a foothold on Terran soil.",
-      "blurbSafe": "The last act of the Heresy opens with a colossal void war for the Sol System, as Horus's armada drives inward against defences Rogal Dorn has spent years building. Before a single traitor boot touches the Throneworld, the fleets must settle who controls the approaches to Terra.",
-      "changed": [
-        "type",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
-        "https://www.trackofwords.com/2019/04/17/the-solar-war-john-french/",
-        "https://warhammer40k.fandom.com/wiki/Horus_Heresy_Chronology"
-      ],
-      "confidence": "high",
-      "notes": "Official Black Library synopsis (Fandom series page) and the Track of Words review agree: this is the void war for the Sol System, not the assault on Terra itself. Original blurb's 'traitor fleets arrive at Terra' understated the system-wide scope, so reframed. Track of Words confirms the viewpoint cast (Dorn, Sigismund, Abaddon, Mersadie Oliton, Admiral Su-Kassen, Ahriman). Legions left untouched: Imperial Fists and Sons of Horus are firmly confirmed, but I could not source Iron Warriors participation specifically in this volume, so it is flagged rather than removed. Date 014.M31 left alone (the Fandom chronology dates the wider Solar War 007-015.M31, with the Terra phase in 014.M31)."
-    },
-    {
-      "bookKey": "sot-lost-and-damned",
-      "verdict": "corrected",
-      "title": "THE LOST AND THE DAMNED",
-      "author": "Guy Haley",
-      "type": "Novel",
-      "legions": [
-        "Imperial Fists",
-        "Blood Angels",
-        "Death Guard",
-        "World Eaters",
-        "Night Lords"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Katsuhiro",
-        "Rogal Dorn",
-        "Sanguinius",
-        "Jaghatai Khan",
-        "Mortarion",
-        "Angron",
-        "Zardu Layak"
-      ],
-      "blurb": "On the thirteenth day of Secundus the bombardment of Terra begins, and the first barrier Horus must break is not a wall but the Imperial Palace's aegis shield. Guy Haley tells the ground war largely through Katsuhiro, a conscript shovelled into the outer redoubts, while Mortarion's plague weapons and Angron's fury are unleashed and the traitor primarchs bicker over precedence. The outer defences hold, but every inch is paid for in the lives of billions.",
-      "blurbSafe": "The bombardment of Terra begins and Horus's ground assault falls on the outer redoubts of the Imperial Palace. Told largely through the eyes of a terrified conscript, this is the Siege at its most human, as ordinary people are fed into a war fought between demigods.",
-      "changed": [
-        "type",
-        "legions",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
-        "https://www.trackofwords.com/2019/10/12/the-lost-and-the-damned-guy-haley/"
-      ],
-      "confidence": "high",
-      "notes": "Original blurb was broadly right on theme but vague on mechanics. Track of Words confirms the aegis shield is the barrier Horus must first break, that conscript Katsuhiro is the human throughline, and that the cast includes Dorn, Sanguinius, the Khan, Malcador, Valdor, Raldoron, Thane, Abaddon, Zardu Layak, the Night Lords and Legio Solaria. Official synopsis names Mortarion's plague weapons and Angron's fury. Replaced the vague 'All Traitor Legions' with the specific legions the sources evidence. The original line 'daemon engines and corrupted Titans pour onto the Throneworld' was dropped as unsupported emphasis; the title refers to the mortal levies Horus throws at the guns."
-    },
-    {
-      "bookKey": "sot-first-wall",
-      "verdict": "corrected",
-      "title": "THE FIRST WALL",
-      "author": "Gav Thorpe",
-      "type": "Novel",
-      "legions": [
-        "Imperial Fists",
-        "Iron Warriors"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Perturabo",
-        "Kroeger",
-        "Forrix",
-        "Fafnir Rann",
-        "Amon Tauromachian",
-        "Zenobi Adedeji"
-      ],
-      "blurb": "Determined to humble Dorn, Perturabo sets Warsmith Kroeger to take the Lion's Gate space port, the one prize that would let Horus land his heavy forces at will. Iron Warriors and Imperial Fists grind against each other in their thousands, with Fafnir Rann making the traitors pay for every level gained. Away from the walls a Custodian probes the spreading Lectitio Divinitatus, and a conscript regiment from Afrik marches towards the Palace for reasons of its own.",
-      "blurbSafe": "Perturabo turns the Iron Warriors on the Lion's Gate space port, the prize that would let Horus land his heavy forces at will, and Dorn's sons must hold it. Away from the walls, a Custodian probes the spreading cult of the Emperor while a conscript regiment from Afrik marches on the Palace for reasons of its own.",
-      "changed": [
-        "type",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
-        "https://www.trackofwords.com/2019/11/22/the-first-wall-gav-thorpe/",
-        "https://www.trackofwords.com/2020/04/05/saturnine-dan-abnett/"
-      ],
-      "confidence": "high",
-      "notes": "Direction of the Lion's Gate assault verified as correct in the original blurb: Track of Words states Perturabo tasks Warsmith Kroeger with taking the space port, with the Imperial Fists under Fafnir Rann defending. The Saturnine review confirms the port has fallen by the following book. Removed 'master siege-breaker faces master fortifier' as it implies a personal Dorn versus Perturabo clash that does not happen here; Perturabo directs, Kroeger and Forrix carry the narrative. Added the two secondary threads (Custodian Amon Tauromachian and Zenobi Adedeji of Addaba Hive) that the review identifies as a third of the book. Zenobi's regiment's purpose deliberately left unstated to avoid spoiling it."
-    },
-    {
-      "bookKey": "sot-saturnine",
-      "verdict": "corrected",
-      "title": "SATURNINE",
-      "author": "Dan Abnett",
-      "type": "Novel",
-      "legions": [
-        "Imperial Fists",
-        "Sons of Horus",
-        "Iron Warriors"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Rogal Dorn",
-        "Perturabo",
-        "Sigismund",
-        "Ezekyle Abaddon",
-        "Garviel Loken",
-        "Sanguinius"
-      ],
-      "blurb": "The Lion's Gate space port has fallen, and the traitor host now drives at the Lion's Gate fortifications and the Eternity Wall space port at once. Stretched past breaking, Rogal Dorn accepts that he cannot defend everything and stakes a gambit at the Saturnine Gate, surrendering ground he cannot hold to buy one chance to strike back at Perturabo. It is the hinge of the whole Siege, and big names do not survive it.",
-      "blurbSafe": "With the Lion's Gate space port lost and the traitors driving at two fronts at once, Rogal Dorn is forced to admit he can no longer defend everything. His answer is a gambit at the Saturnine Gate, trading ground he cannot hold for a single chance to turn his battle of wits with Perturabo.",
-      "changed": [
-        "type",
-        "legions",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
-        "https://www.trackofwords.com/2020/04/05/saturnine-dan-abnett/",
-        "https://warhammer40k.fandom.com/wiki/Battle_of_Pluto",
-        "https://warhammer40k.fandom.com/wiki/Horus_Heresy_Chronology"
-      ],
-      "confidence": "high",
-      "notes": "Two genuine factual errors fixed. First, the original called the Saturnine gambit 'Horus's desperate strike at the Saturnine Wall'. It is Dorn's gambit, not Horus's: the official synopsis states 'Dorn simply cannot defend everything' and the Track of Words review describes Dorn facing impossible questions of compromise and sacrifice as he searches for a strategy to tip his battle of wills with Perturabo. Second, the original claimed 'one of the twin Primarchs meets their end' here. Alpharius was slain by Rogal Dorn at the Battle of Pluto in 010.M31, four years earlier, in the events of Praetorian of Dorn, per both the Battle of Pluto page and the Horus Heresy Chronology. That claim was both wrong and a false spoiler, so it is gone. Legions: swapped Alpha Legion for Iron Warriors, as Perturabo is the confirmed opposing commander and I could find no source for an Alpha Legion role in this volume."
-    },
-    {
-      "bookKey": "sot-mortis",
-      "verdict": "corrected",
-      "title": "MORTIS",
-      "author": "John French",
-      "type": "Novel",
-      "legions": [
-        "Collegia Titanica",
-        "Legio Ignatum",
-        "Legio Mortis"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Horus"
-      ],
-      "blurb": "Horus turns the god-engines loose. Legio Mortis is ordered to breach the Mercury Wall, and only Legio Ignatum, their ancient rivals from Mars, stands in the way. Around that Titan duel John French tracks the metaphysical siege as well, with the defenders' waking hours filled with despair and their dreams luring them towards a false paradise, while lost warriors cross the wastelands and warp-grown gardens of a dying Terra.",
-      "blurbSafe": "Horus orders Legio Mortis to breach the Mercury Wall, where their ancient Martian rivals of Legio Ignatum stand against them and the god-engines of both Legios meet in battle. Running alongside the Titan war is a stranger one, as the power of Chaos waxes and the defenders' despair and dreams become weapons turned against them.",
-      "changed": [
-        "type",
-        "legions",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
-        "https://warhammer40k.fandom.com/wiki/Legio_Ignatum",
-        "https://www.trackofwords.com/black-library/black-library-reviews/black-library-the-horus-heresy-series/"
-      ],
-      "confidence": "medium",
-      "notes": "Three corrections. The original placed the Titan battles 'across Terra's wastelands'; the official synopsis is specific that the clash is at the Mercury Wall, Legio Mortis against Legio Ignatum. The original listed Death Guard as a featured faction and named Mortarion; neither appears in the official synopsis and I found no source for a Death Guard role here, so Death Guard is replaced with the two named Titan Legios. The original claim 'Time itself begins to break down' is unsupported and was dropped; the actual metaphysical thread is the false-paradise dreams and the search for a way to turn back the Warp's influence. Legio Ignatum's Fandom page independently confirms it as the loyalist Titan Legion defending the Palace and the sworn rival of Legio Mortis. Confidence is medium rather than high only because mainCharacters could not be sourced beyond Horus: no source I could reach names the individual princeps viewpoint characters, so the list is deliberately minimal rather than invented."
-    },
-    {
-      "bookKey": "sot-warhawk",
-      "verdict": "corrected",
-      "title": "WARHAWK",
-      "author": "Chris Wraight",
-      "type": "Novel",
-      "legions": [
-        "White Scars",
-        "Death Guard",
-        "Imperial Fists"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Jaghatai Khan",
-        "Mortarion",
-        "Sigismund",
-        "Ilya Ravallion",
-        "Shiban Khan"
-      ],
-      "blurb": "The Inner Walls are breached and traitor vanguards are tearing towards the heart of the Palace. Jaghatai Khan answers with the most audacious stroke of the whole Siege, an unsupported counter-offensive to liberate the Lion's Gate space port, launched against an old enemy who has been made far greater than he ever was. Elsewhere a black sword is forged from spite, and both an unwilling saint and an enthusiastic sinner are loosed into the ruins.",
-      "blurbSafe": "With the Inner Walls breached, Jaghatai Khan stakes everything on the boldest stroke of the Siege: an unsupported counter-offensive to liberate the Lion's Gate space port. He launches it cut off from any help, against an old enemy who has been made far greater than he ever was, knowing that defeat dooms not only the White Scars but Terra itself.",
-      "changed": [
-        "type",
-        "legions",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
-        "https://www.trackofwords.com/2022/10/13/short-and-sweet-october-2022/"
-      ],
-      "confidence": "high",
-      "notes": "The original framed the book purely as a Khan versus Mortarion duel and asserted 'The Khan must defeat Mortarion or Terra falls'. The official synopsis is explicit that the objective is the liberation of the Lion's Gate space port, with Mortarion as the enemy standing in the way, so the objective is now stated. Added the two arcs the official synopsis names and the original omitted: the black sword forged from spite (Sigismund, hence Imperial Fists added to legions) and the saint and sinner released into the ruins. Track of Words independently confirms this as the culmination of the White Scars versus Death Guard arc and names Ilya Ravallion as a key viewpoint. Softened the safe summary, which previously announced the duel outright as 'the ultimate duel between speed and endurance'; it now describes the mission and the stakes without promising the confrontation or its result. Also removed the em dash present in the original."
-    },
-    {
-      "bookKey": "sot-echoes-of-eternity",
-      "verdict": "corrected",
-      "title": "ECHOES OF ETERNITY",
-      "author": "Aaron Dembski-Bowden",
-      "type": "Novel",
-      "legions": [
-        "Blood Angels",
-        "World Eaters"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Sanguinius",
-        "Angron",
-        "Zephon",
-        "Amit",
-        "Lotara Sarrin",
-        "Kargos Bloodspitter",
-        "Arkhan Land"
-      ],
-      "blurb": "The walls are down and the Inner Palace is rubble. With the Khan on the edge of death, Dorn encircled at Bhab Bastion and Guilliman too far out to arrive in time, Sanguinius rallies a broken band of defenders and refugees on the last battlements before the Emperor's sanctum. Dembski-Bowden narrows the focus to two Legions and their people, from Zephon and Amit to Lotara Sarrin and Kargos, as Angron leads the armies of the damned against the Eternity Gate. The Gate holds, and the Angel pays for it.",
-      "blurbSafe": "The walls have fallen, the Inner Palace lies in ruins and the loyalists are forced back to the last battlements before the Emperor's sanctum. Angron leads the armies of the damned forward in a wrathful tide, and with his brothers stricken, encircled or too far away, it falls to Sanguinius to rally a desperate band of defenders and refugees for one last stand.",
-      "changed": [
-        "type",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
-        "https://www.trackofwords.com/2022/10/13/short-and-sweet-october-2022/",
-        "https://warhammer40k.fandom.com/wiki/Imperial_Palace",
-        "https://warhammer40k.fandom.com/wiki/Zephon"
-      ],
-      "confidence": "medium",
-      "notes": "Two unsourced claims removed from the full blurb: 'Sanguinius defeats Angron, banishing him to the Warp' and 'The Great Angel's wings are broken'. Neither could be verified from any source I could reach; the Fandom Angron and Sanguinius pages still carry the older pre-Siege-series account (Ka'Bandha at the Eternity Gate) and were not usable. What is verifiable is that Sanguinius successfully defended the Eternity Gate, per the Fandom Imperial Palace page, so the blurb now says the Gate holds at cost and stops there. Track of Words independently confirms the tight focus on the battle for the Eternity Gate, on Sanguinius and Angron and their Legions, and the supporting cast of Zephon, Lotara Sarrin, Arkhan Land, Amit and Kargos Bloodspitter; the Zephon page corroborates the Gorgon Bar, Arkhan Land and Eternity Gate threads. Safe summary rewritten from the official Black Library synopsis: the original nudged at Sanguinius 'seeing visions of what may come', which foreshadows his fate, and that is gone. Confidence medium because the precise outcome of the Sanguinius and Angron confrontation remains unsourced and is therefore not asserted."
-    },
-    {
-      "bookKey": "sot-end-and-death-vol-1",
-      "verdict": "corrected",
-      "title": "THE END AND THE DEATH: VOLUME I",
-      "author": "Dan Abnett",
-      "type": "Novel",
-      "legions": [
-        "All Legions"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Malcador the Sigillite",
-        "Sanguinius",
-        "Rogal Dorn",
-        "Garviel Loken",
-        "Euphrati Keeler",
-        "Kyril Sindermann",
-        "Oll Persson",
-        "Horus"
-      ],
-      "blurb": "Horus lowers the void shields of the Vengeful Spirit and dares his father to come to him. Volume one is the long approach to that moment, following Malcador, Keeler and Sindermann, Loken, Fafnir Rann, and Oll Persson and his Argonauts, with rare glimpses from the Warmaster himself. At the final hour of the final day the Emperor rises at last, and with Him go His Angel, His Praetorian and His Captain.",
-      "blurbSafe": "The walls have fallen, the gates are breached and the Warmaster stands on the verge of victory. Horus has come to murder his father, and at the final hour of the final day the Emperor rises to answer him, with His Angel, His Praetorian and His Captain at His side.",
-      "changed": [
-        "type",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_I_(Novel)",
-        "https://www.trackofwords.com/2023/03/23/short-and-sweet-march-2023/",
-        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)"
-      ],
-      "confidence": "high",
-      "notes": "The original said the boarding party 'teleport to the flagship but are scattered across the ship' in this volume. Track of Words describes volume one as setting everything up for the endgame, with the Emperor rising only at the close, which matches the official synopsis wording 'at the final hour of the final day, the Emperor rises'. The scattering aboard the Vengeful Spirit is a later-volume event, so it is removed. The original also listed only the Emperor, Sanguinius and Dorn; the official synopsis is 'His Angel, His Praetorian, and His Captain', the Captain being Loken, who the original omitted. Track of Words confirms the viewpoint cast of Sanguinius, Malcador (heavily), Fafnir Rann, Loken, Keeler, Sindermann, Oll Persson and John Grammaticus, plus rare Horus POV scenes. Legions left as 'All Legions', which is accurate for the finale."
-    },
-    {
-      "bookKey": "sot-end-and-death-vol-2",
-      "verdict": "corrected",
-      "title": "THE END AND THE DEATH: VOLUME II",
-      "author": "Dan Abnett",
-      "type": "Novel",
-      "legions": [
-        "All Legions"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "Sanguinius",
-        "Horus",
-        "Garviel Loken",
-        "Rogal Dorn",
-        "Sigismund",
-        "Ezekyle Abaddon",
-        "Oll Persson",
-        "Euphrati Keeler"
-      ],
-      "blurb": "Sanguinius braves the Vengeful Spirit with one purpose, to reach Horus and decapitate the Heresy at a stroke. Loken stalks the same corridors, Oll Persson's long road converges on the ship, and below on Terra Dorn, Sigismund, Rann, Abaddon and Keeler fight their own endings. The Angel gets his duel and wounds the Warmaster, and Horus kills him.",
-      "blurbSafe": "Sanguinius braves the horrors of the Warmaster's flagship with a single purpose: to reach his brother Horus and end the Heresy at its head. The Dark Gods will not make that easy, and as the war edges towards its conclusion, events unfold that could save humanity or plunge it into an eternity of darkness.",
-      "changed": [
-        "type",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_II_(Novel)",
-        "https://www.trackofwords.com/2023/11/28/short-and-sweet-november-2023/",
-        "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_III_(Novel)"
-      ],
-      "confidence": "high",
-      "notes": "Full blurb kept its substance and is accurate: Sanguinius boarding the Vengeful Spirit to kill Horus is the official Black Library synopsis for this volume, and the Volume III synopsis opens by confirming 'The Great Angel, Sanguinius, lies slain at his brother Horus's hand'. Track of Words confirms the enormous supporting cast (Horus, Dorn, Sanguinius, Loken, Sindermann, Keeler, Fo, Abaddon, Amit, Fafnir Rann, Sigismund, Oll Persson). Safe summary rewritten: the original said Sanguinius confronts Horus 'knowing what fate may await him', which telegraphs the biggest death in the setting. It is now the official spoiler-free framing, which states the intent and the stakes but not the result."
-    },
-    {
-      "bookKey": "sot-end-and-death-vol-3",
-      "verdict": "corrected",
-      "title": "THE END AND THE DEATH: VOLUME III",
-      "author": "Dan Abnett",
-      "type": "Novel",
-      "legions": [
-        "All Legions"
-      ],
-      "timeline": "014.M31",
-      "mainCharacters": [
-        "The Emperor of Mankind",
-        "Horus",
-        "Malcador the Sigillite",
-        "Rogal Dorn",
-        "Roboute Guilliman",
-        "Typhus",
-        "Euphrati Keeler"
-      ],
-      "blurb": "Terra burns and reality itself unravels. Malcador sits ablaze on the Golden Throne buying his master a little more time, the Dark Angels hold the Hollow Mountain and Keeler's pilgrims against Typhus, and Guilliman races across the stars not knowing what he will find. Aboard the Vengeful Spirit the Emperor destroys Horus utterly, soul and all, and pays for it with His body and ten thousand years interred in the Golden Throne.",
-      "blurbSafe": "Terra burns and reality itself is coming apart. Malcador sits ablaze on the Golden Throne to buy his master a little more time, the last redoubts hold out against the traitor hordes, and Guilliman races for the Throneworld not knowing what he will find there. Aboard the Vengeful Spirit, father and son meet at last.",
-      "changed": [
-        "type",
-        "blurb",
-        "blurbSafe",
-        "mainCharacters"
-      ],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_III_(Novel)",
-        "https://warhammer40k.fandom.com/wiki/Siege_of_Terra",
-        "https://warhammer40k.fandom.com/wiki/Legio_Ignatum"
-      ],
-      "confidence": "medium",
-      "notes": "One unsourced specific removed: the original stated 'When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption'. The Fandom Siege of Terra page is explicit that the identity of the warrior who interposed himself is disputed in-universe, with Ollanius Pius being the Adeptus Ministorum's version, and I could not source what actually happens on that beat in this volume, so it is gone. Also removed 'Dorn finds his father dying', which I could not source. What is retained is verified: the Volume III official synopsis supplies Malcador ablaze on the Golden Throne, the Dark Angels holding the Hollow Mountain with Keeler's pilgrims against Typhus, reality unravelling, and Guilliman racing for Terra. The Fandom Siege of Terra and Legio Ignatum pages both confirm the Emperor slays Horus and obliterates his soul, at the cost of His own body and permanent interment in the Golden Throne. Safe summary softened: the original said the Emperor 'must decide if his son can be redeemed and what price victory will demand', which strongly telegraphs the ending, and it also carried an em dash. It now states the situation and stops at the meeting. Legions left as 'All Legions'; the sources would support adding Dark Angels and Death Guard, left for a human to decide for consistency across the three volumes."
-    }
-  ]
+ "batch": "siege",
+ "entries": [
+  {
+   "bookKey": "sot-solar-war",
+   "verdict": "corrected",
+   "title": "THE SOLAR WAR",
+   "author": "John French",
+   "type": "Novel",
+   "legions": [
+    "Imperial Fists",
+    "Sons of Horus",
+    "Iron Warriors"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Rogal Dorn",
+    "Sigismund",
+    "Ezekyle Abaddon",
+    "Mersadie Oliton",
+    "Niora Su-Kassen",
+    "Horus"
+   ],
+   "blurb": "The Siege opens not on Terra but across the whole Sol System, as Horus's armada fights its way inward past the outer bulwarks Rogal Dorn has spent years building. Sigismund leads the first line of defence in the void, Abaddon holds to the path his father set him, and the remembrancer Mersadie Oliton struggles to reach Terra before the way closes. Only by winning this void war can the traitors earn a foothold on Terran soil.",
+   "blurbSafe": "The last act of the Heresy opens with a colossal void war for the Sol System, as Horus's armada drives inward against defences Rogal Dorn has spent years building. Before a single traitor boot touches the Throneworld, the fleets must settle who controls the approaches to Terra.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+    "https://www.trackofwords.com/2019/04/17/the-solar-war-john-french/",
+    "https://warhammer40k.fandom.com/wiki/Horus_Heresy_Chronology"
+   ],
+   "confidence": "high",
+   "notes": "Official Black Library synopsis (Fandom series page) and the Track of Words review agree: this is the void war for the Sol System, not the assault on Terra itself. Original blurb's 'traitor fleets arrive at Terra' understated the system-wide scope, so reframed. Track of Words confirms the viewpoint cast (Dorn, Sigismund, Abaddon, Mersadie Oliton, Admiral Su-Kassen, Ahriman). Legions left untouched: Imperial Fists and Sons of Horus are firmly confirmed, but I could not source Iron Warriors participation specifically in this volume, so it is flagged rather than removed. Date 014.M31 left alone (the Fandom chronology dates the wider Solar War 007-015.M31, with the Terra phase in 014.M31)."
+  },
+  {
+   "bookKey": "sot-lost-and-damned",
+   "verdict": "corrected",
+   "title": "THE LOST AND THE DAMNED",
+   "author": "Guy Haley",
+   "type": "Novel",
+   "legions": [
+    "Imperial Fists",
+    "All Traitor Legions"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Katsuhiro",
+    "Rogal Dorn",
+    "Sanguinius",
+    "Jaghatai Khan",
+    "Mortarion",
+    "Angron",
+    "Zardu Layak"
+   ],
+   "blurb": "On the thirteenth day of Secundus the bombardment of Terra begins, and the first barrier Horus must break is not a wall but the Imperial Palace's aegis shield. Guy Haley tells the ground war largely through Katsuhiro, a conscript shovelled into the outer redoubts, while Mortarion's plague weapons and Angron's fury are unleashed and the traitor primarchs bicker over precedence. The outer defences hold, but every inch is paid for in the lives of billions.",
+   "blurbSafe": "The bombardment of Terra begins and Horus's ground assault falls on the outer redoubts of the Imperial Palace. Told largely through the eyes of a terrified conscript, this is the Siege at its most human, as ordinary people are fed into a war fought between demigods.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+    "https://www.trackofwords.com/2019/10/12/the-lost-and-the-damned-guy-haley/"
+   ],
+   "confidence": "high",
+   "notes": "Original blurb was broadly right on theme but vague on mechanics. Track of Words confirms the aegis shield is the barrier Horus must first break, that conscript Katsuhiro is the human throughline, and that the cast includes Dorn, Sanguinius, the Khan, Malcador, Valdor, Raldoron, Thane, Abaddon, Zardu Layak, the Night Lords and Legio Solaria. Official synopsis names Mortarion's plague weapons and Angron's fury. Replaced the vague 'All Traitor Legions' with the specific legions the sources evidence. The original line 'daemon engines and corrupted Titans pour onto the Throneworld' was dropped as unsupported emphasis; the title refers to the mortal levies Horus throws at the guns. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
+  },
+  {
+   "bookKey": "sot-first-wall",
+   "verdict": "corrected",
+   "title": "THE FIRST WALL",
+   "author": "Gav Thorpe",
+   "type": "Novel",
+   "legions": [
+    "Imperial Fists",
+    "Iron Warriors"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Perturabo",
+    "Kroeger",
+    "Forrix",
+    "Fafnir Rann",
+    "Amon Tauromachian",
+    "Zenobi Adedeji"
+   ],
+   "blurb": "Determined to humble Dorn, Perturabo sets Warsmith Kroeger to take the Lion's Gate space port, the one prize that would let Horus land his heavy forces at will. Iron Warriors and Imperial Fists grind against each other in their thousands, with Fafnir Rann making the traitors pay for every level gained. Away from the walls a Custodian probes the spreading Lectitio Divinitatus, and a conscript regiment from Afrik marches towards the Palace for reasons of its own.",
+   "blurbSafe": "Perturabo turns the Iron Warriors on the Lion's Gate space port, the prize that would let Horus land his heavy forces at will, and Dorn's sons must hold it. Away from the walls, a Custodian probes the spreading cult of the Emperor while a conscript regiment from Afrik marches on the Palace for reasons of its own.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+    "https://www.trackofwords.com/2019/11/22/the-first-wall-gav-thorpe/",
+    "https://www.trackofwords.com/2020/04/05/saturnine-dan-abnett/"
+   ],
+   "confidence": "high",
+   "notes": "Direction of the Lion's Gate assault verified as correct in the original blurb: Track of Words states Perturabo tasks Warsmith Kroeger with taking the space port, with the Imperial Fists under Fafnir Rann defending. The Saturnine review confirms the port has fallen by the following book. Removed 'master siege-breaker faces master fortifier' as it implies a personal Dorn versus Perturabo clash that does not happen here; Perturabo directs, Kroeger and Forrix carry the narrative. Added the two secondary threads (Custodian Amon Tauromachian and Zenobi Adedeji of Addaba Hive) that the review identifies as a third of the book. Zenobi's regiment's purpose deliberately left unstated to avoid spoiling it."
+  },
+  {
+   "bookKey": "sot-saturnine",
+   "verdict": "corrected",
+   "title": "SATURNINE",
+   "author": "Dan Abnett",
+   "type": "Novel",
+   "legions": [
+    "Imperial Fists",
+    "Sons of Horus",
+    "Alpha Legion"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Rogal Dorn",
+    "Perturabo",
+    "Sigismund",
+    "Ezekyle Abaddon",
+    "Garviel Loken",
+    "Sanguinius"
+   ],
+   "blurb": "The Lion's Gate space port has fallen, and the traitor host now drives at the Lion's Gate fortifications and the Eternity Wall space port at once. Stretched past breaking, Rogal Dorn accepts that he cannot defend everything and stakes a gambit at the Saturnine Gate, surrendering ground he cannot hold to buy one chance to strike back at Perturabo. It is the hinge of the whole Siege, and big names do not survive it.",
+   "blurbSafe": "With the Lion's Gate space port lost and the traitors driving at two fronts at once, Rogal Dorn is forced to admit he can no longer defend everything. His answer is a gambit at the Saturnine Gate, trading ground he cannot hold for a single chance to turn his battle of wits with Perturabo.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+    "https://www.trackofwords.com/2020/04/05/saturnine-dan-abnett/",
+    "https://warhammer40k.fandom.com/wiki/Battle_of_Pluto",
+    "https://warhammer40k.fandom.com/wiki/Horus_Heresy_Chronology"
+   ],
+   "confidence": "high",
+   "notes": "Two genuine factual errors fixed. First, the original called the Saturnine gambit 'Horus's desperate strike at the Saturnine Wall'. It is Dorn's gambit, not Horus's: the official synopsis states 'Dorn simply cannot defend everything' and the Track of Words review describes Dorn facing impossible questions of compromise and sacrifice as he searches for a strategy to tip his battle of wills with Perturabo. Second, the original claimed 'one of the twin Primarchs meets their end' here. Alpharius was slain by Rogal Dorn at the Battle of Pluto in 010.M31, four years earlier, in the events of Praetorian of Dorn, per both the Battle of Pluto page and the Horus Heresy Chronology. That claim was both wrong and a false spoiler, so it is gone. Legions: swapped Alpha Legion for Iron Warriors, as Perturabo is the confirmed opposing commander and I could find no source for an Alpha Legion role in this volume. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
+  },
+  {
+   "bookKey": "sot-mortis",
+   "verdict": "corrected",
+   "title": "MORTIS",
+   "author": "John French",
+   "type": "Novel",
+   "legions": [
+    "Collegia Titanica",
+    "Death Guard"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Horus"
+   ],
+   "blurb": "Horus turns the god-engines loose. Legio Mortis is ordered to breach the Mercury Wall, and only Legio Ignatum, their ancient rivals from Mars, stands in the way. Around that Titan duel John French tracks the metaphysical siege as well, with the defenders' waking hours filled with despair and their dreams luring them towards a false paradise, while lost warriors cross the wastelands and warp-grown gardens of a dying Terra.",
+   "blurbSafe": "Horus orders Legio Mortis to breach the Mercury Wall, where their ancient Martian rivals of Legio Ignatum stand against them and the god-engines of both Legios meet in battle. Running alongside the Titan war is a stranger one, as the power of Chaos waxes and the defenders' despair and dreams become weapons turned against them.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+    "https://warhammer40k.fandom.com/wiki/Legio_Ignatum",
+    "https://www.trackofwords.com/black-library/black-library-reviews/black-library-the-horus-heresy-series/"
+   ],
+   "confidence": "medium",
+   "notes": "Three corrections. The original placed the Titan battles 'across Terra's wastelands'; the official synopsis is specific that the clash is at the Mercury Wall, Legio Mortis against Legio Ignatum. The original listed Death Guard as a featured faction and named Mortarion; neither appears in the official synopsis and I found no source for a Death Guard role here, so Death Guard is replaced with the two named Titan Legios. The original claim 'Time itself begins to break down' is unsupported and was dropped; the actual metaphysical thread is the false-paradise dreams and the search for a way to turn back the Warp's influence. Legio Ignatum's Fandom page independently confirms it as the loyalist Titan Legion defending the Palace and the sworn rival of Legio Mortis. Confidence is medium rather than high only because mainCharacters could not be sourced beyond Horus: no source I could reach names the individual princeps viewpoint characters, so the list is deliberately minimal rather than invented. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
+  },
+  {
+   "bookKey": "sot-warhawk",
+   "verdict": "corrected",
+   "title": "WARHAWK",
+   "author": "Chris Wraight",
+   "type": "Novel",
+   "legions": [
+    "White Scars",
+    "Death Guard"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Jaghatai Khan",
+    "Mortarion",
+    "Sigismund",
+    "Ilya Ravallion",
+    "Shiban Khan"
+   ],
+   "blurb": "The Inner Walls are breached and traitor vanguards are tearing towards the heart of the Palace. Jaghatai Khan answers with the most audacious stroke of the whole Siege, an unsupported counter-offensive to liberate the Lion's Gate space port, launched against an old enemy who has been made far greater than he ever was. Elsewhere a black sword is forged from spite, and both an unwilling saint and an enthusiastic sinner are loosed into the ruins.",
+   "blurbSafe": "With the Inner Walls breached, Jaghatai Khan stakes everything on the boldest stroke of the Siege: an unsupported counter-offensive to liberate the Lion's Gate space port. He launches it cut off from any help, against an old enemy who has been made far greater than he ever was, knowing that defeat dooms not only the White Scars but Terra itself.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+    "https://www.trackofwords.com/2022/10/13/short-and-sweet-october-2022/"
+   ],
+   "confidence": "high",
+   "notes": "The original framed the book purely as a Khan versus Mortarion duel and asserted 'The Khan must defeat Mortarion or Terra falls'. The official synopsis is explicit that the objective is the liberation of the Lion's Gate space port, with Mortarion as the enemy standing in the way, so the objective is now stated. Added the two arcs the official synopsis names and the original omitted: the black sword forged from spite (Sigismund, hence Imperial Fists added to legions) and the saint and sinner released into the ruins. Track of Words independently confirms this as the culmination of the White Scars versus Death Guard arc and names Ilya Ravallion as a key viewpoint. Softened the safe summary, which previously announced the duel outright as 'the ultimate duel between speed and endurance'; it now describes the mission and the stakes without promising the confrontation or its result. Also removed the em dash present in the original. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
+  },
+  {
+   "bookKey": "sot-echoes-of-eternity",
+   "verdict": "corrected",
+   "title": "ECHOES OF ETERNITY",
+   "author": "Aaron Dembski-Bowden",
+   "type": "Novel",
+   "legions": [
+    "Blood Angels",
+    "World Eaters"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Sanguinius",
+    "Angron",
+    "Zephon",
+    "Amit",
+    "Lotara Sarrin",
+    "Kargos Bloodspitter",
+    "Arkhan Land"
+   ],
+   "blurb": "The walls are down and the Inner Palace is rubble. With the Khan on the edge of death, Dorn encircled at Bhab Bastion and Guilliman too far out to arrive in time, Sanguinius rallies a broken band of defenders and refugees on the last battlements before the Emperor's sanctum. Dembski-Bowden narrows the focus to two Legions and their people, from Zephon and Amit to Lotara Sarrin and Kargos, as Angron leads the armies of the damned against the Eternity Gate. The Gate holds, and the Angel pays for it.",
+   "blurbSafe": "The walls have fallen, the Inner Palace lies in ruins and the loyalists are forced back to the last battlements before the Emperor's sanctum. Angron leads the armies of the damned forward in a wrathful tide, and with his brothers stricken, encircled or too far away, it falls to Sanguinius to rally a desperate band of defenders and refugees for one last stand.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+    "https://www.trackofwords.com/2022/10/13/short-and-sweet-october-2022/",
+    "https://warhammer40k.fandom.com/wiki/Imperial_Palace",
+    "https://warhammer40k.fandom.com/wiki/Zephon"
+   ],
+   "confidence": "medium",
+   "notes": "Two unsourced claims removed from the full blurb: 'Sanguinius defeats Angron, banishing him to the Warp' and 'The Great Angel's wings are broken'. Neither could be verified from any source I could reach; the Fandom Angron and Sanguinius pages still carry the older pre-Siege-series account (Ka'Bandha at the Eternity Gate) and were not usable. What is verifiable is that Sanguinius successfully defended the Eternity Gate, per the Fandom Imperial Palace page, so the blurb now says the Gate holds at cost and stops there. Track of Words independently confirms the tight focus on the battle for the Eternity Gate, on Sanguinius and Angron and their Legions, and the supporting cast of Zephon, Lotara Sarrin, Arkhan Land, Amit and Kargos Bloodspitter; the Zephon page corroborates the Gorgon Bar, Arkhan Land and Eternity Gate threads. Safe summary rewritten from the official Black Library synopsis: the original nudged at Sanguinius 'seeing visions of what may come', which foreshadows his fate, and that is gone. Confidence medium because the precise outcome of the Sanguinius and Angron confrontation remains unsourced and is therefore not asserted."
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-1",
+   "verdict": "corrected",
+   "title": "THE END AND THE DEATH: VOLUME I",
+   "author": "Dan Abnett",
+   "type": "Novel",
+   "legions": [
+    "All Legions"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Malcador the Sigillite",
+    "Sanguinius",
+    "Rogal Dorn",
+    "Garviel Loken",
+    "Euphrati Keeler",
+    "Kyril Sindermann",
+    "Oll Persson",
+    "Horus"
+   ],
+   "blurb": "Horus lowers the void shields of the Vengeful Spirit and dares his father to come to him. Volume one is the long approach to that moment, following Malcador, Keeler and Sindermann, Loken, Fafnir Rann, and Oll Persson and his Argonauts, with rare glimpses from the Warmaster himself. At the final hour of the final day the Emperor rises at last, and with Him go His Angel, His Praetorian and His Captain.",
+   "blurbSafe": "The walls have fallen, the gates are breached and the Warmaster stands on the verge of victory. Horus has come to murder his father, and at the final hour of the final day the Emperor rises to answer him, with His Angel, His Praetorian and His Captain at His side.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_I_(Novel)",
+    "https://www.trackofwords.com/2023/03/23/short-and-sweet-march-2023/",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)"
+   ],
+   "confidence": "high",
+   "notes": "The original said the boarding party 'teleport to the flagship but are scattered across the ship' in this volume. Track of Words describes volume one as setting everything up for the endgame, with the Emperor rising only at the close, which matches the official synopsis wording 'at the final hour of the final day, the Emperor rises'. The scattering aboard the Vengeful Spirit is a later-volume event, so it is removed. The original also listed only the Emperor, Sanguinius and Dorn; the official synopsis is 'His Angel, His Praetorian, and His Captain', the Captain being Loken, who the original omitted. Track of Words confirms the viewpoint cast of Sanguinius, Malcador (heavily), Fafnir Rann, Loken, Keeler, Sindermann, Oll Persson and John Grammaticus, plus rare Horus POV scenes. Legions left as 'All Legions', which is accurate for the finale."
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-2",
+   "verdict": "corrected",
+   "title": "THE END AND THE DEATH: VOLUME II",
+   "author": "Dan Abnett",
+   "type": "Novel",
+   "legions": [
+    "All Legions"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Sanguinius",
+    "Horus",
+    "Garviel Loken",
+    "Rogal Dorn",
+    "Sigismund",
+    "Ezekyle Abaddon",
+    "Oll Persson",
+    "Euphrati Keeler"
+   ],
+   "blurb": "Sanguinius braves the Vengeful Spirit with one purpose, to reach Horus and decapitate the Heresy at a stroke. Loken stalks the same corridors, Oll Persson's long road converges on the ship, and below on Terra Dorn, Sigismund, Rann, Abaddon and Keeler fight their own endings. The Angel gets his duel and wounds the Warmaster, and Horus kills him.",
+   "blurbSafe": "Sanguinius braves the horrors of the Warmaster's flagship with a single purpose: to reach his brother Horus and end the Heresy at its head. The Dark Gods will not make that easy, and as the war edges towards its conclusion, events unfold that could save humanity or plunge it into an eternity of darkness.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_II_(Novel)",
+    "https://www.trackofwords.com/2023/11/28/short-and-sweet-november-2023/",
+    "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_III_(Novel)"
+   ],
+   "confidence": "high",
+   "notes": "Full blurb kept its substance and is accurate: Sanguinius boarding the Vengeful Spirit to kill Horus is the official Black Library synopsis for this volume, and the Volume III synopsis opens by confirming 'The Great Angel, Sanguinius, lies slain at his brother Horus's hand'. Track of Words confirms the enormous supporting cast (Horus, Dorn, Sanguinius, Loken, Sindermann, Keeler, Fo, Abaddon, Amit, Fafnir Rann, Sigismund, Oll Persson). Safe summary rewritten: the original said Sanguinius confronts Horus 'knowing what fate may await him', which telegraphs the biggest death in the setting. It is now the official spoiler-free framing, which states the intent and the stakes but not the result."
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-3",
+   "verdict": "corrected",
+   "title": "THE END AND THE DEATH: VOLUME III",
+   "author": "Dan Abnett",
+   "type": "Novel",
+   "legions": [
+    "All Legions"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "The Emperor of Mankind",
+    "Horus",
+    "Malcador the Sigillite",
+    "Rogal Dorn",
+    "Roboute Guilliman",
+    "Typhus",
+    "Euphrati Keeler"
+   ],
+   "blurb": "Terra burns and reality itself unravels. Malcador sits ablaze on the Golden Throne buying his master a little more time, the Dark Angels hold the Hollow Mountain and Keeler's pilgrims against Typhus, and Guilliman races across the stars not knowing what he will find. Aboard the Vengeful Spirit the Emperor destroys Horus utterly, soul and all, and pays for it with His body and ten thousand years interred in the Golden Throne.",
+   "blurbSafe": "Terra burns and reality itself is coming apart. Malcador sits ablaze on the Golden Throne to buy his master a little more time, the last redoubts hold out against the traitor hordes, and Guilliman races for the Throneworld not knowing what he will find there. Aboard the Vengeful Spirit, father and son meet at last.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_End_and_the_Death:_Volume_III_(Novel)",
+    "https://warhammer40k.fandom.com/wiki/Siege_of_Terra",
+    "https://warhammer40k.fandom.com/wiki/Legio_Ignatum"
+   ],
+   "confidence": "medium",
+   "notes": "One unsourced specific removed: the original stated 'When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption'. The Fandom Siege of Terra page is explicit that the identity of the warrior who interposed himself is disputed in-universe, with Ollanius Pius being the Adeptus Ministorum's version, and I could not source what actually happens on that beat in this volume, so it is gone. Also removed 'Dorn finds his father dying', which I could not source. What is retained is verified: the Volume III official synopsis supplies Malcador ablaze on the Golden Throne, the Dark Angels holding the Hollow Mountain with Keeler's pilgrims against Typhus, reality unravelling, and Guilliman racing for Terra. The Fandom Siege of Terra and Legio Ignatum pages both confirm the Emperor slays Horus and obliterates his soul, at the cost of His own body and permanent interment in the Golden Throne. Safe summary softened: the original said the Emperor 'must decide if his son can be redeemed and what price victory will demand', which strongly telegraphs the ending, and it also carried an em dash. It now states the situation and stops at the meeting. Legions left as 'All Legions'; the sources would support adding Dark Angels and Death Guard, left for a human to decide for consistency across the three volumes."
+  }
+ ]
 }

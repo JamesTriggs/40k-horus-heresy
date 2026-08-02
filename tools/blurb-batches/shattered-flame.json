@@ -16,10 +16,12 @@
    "currentType": "Novella",
    "currentTimeline": "001.M31",
    "currentLegions": [
-    "Salamanders"
+    "Salamanders",
+    "Iron Hands",
+    "Death Guard"
    ],
-   "currentBlurb": "Before the Heresy, Vulkan and his Salamanders face a xenos threat that tests their humanity and martial prowess.",
-   "currentBlurbSafe": "The Salamanders face a xenos menace before the galaxy descends into civil war."
+   "currentBlurb": "During the Great Crusade the Imperium moves against One-Five-Four Four, a world held in thrall by the eldar. Ferrus Manus's Iron Hands and Mortarion's Death Guard grind at the xenos in the open, while Vulkan takes the Salamanders into the deepest jungle against monstrous reptilian beasts and alien witchery. Ultimately it falls to Vulkan himself to unpick the sinister eldar design behind the war.",
+   "currentBlurbSafe": "A Great Crusade campaign to prise an eldar-held jungle world out of xenos hands. Three Legions fight it, and it is the Salamanders who are sent into the deadliest ground of all."
   },
   {
    "bookKey": "shattered-immortal-duty",
@@ -31,10 +33,11 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Salamanders"
+    "Iron Hands",
+    "World Eaters"
    ],
-   "currentBlurb": "Salamanders survivors honor their duty to protect humanity despite their Legion's shattering.",
-   "currentBlurbSafe": "The XVIII Legion maintains their humanitarian values even in defeat."
+   "currentBlurb": "Ahrem Gallikus, a Medusan Immortal of the Iron Hands, stands condemned before his own brothers and is made to account for himself before they kill him. His testimony returns to the void battle above Isstvan V and a boarding action against the traitor warship Retiarius, where he fought the World Eaters and something in him gave way. What he did aboard that ship is what has brought him here.",
+   "currentBlurbSafe": "A disgraced Medusan Immortal of the Iron Hands is called on to give an account of his greatest battle, a boarding action fought in the void above Isstvan V."
   },
   {
    "bookKey": "flame-scorched-earth",
@@ -46,25 +49,13 @@
    "currentType": "Novella",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Salamanders"
+    "Salamanders",
+    "Iron Hands",
+    "Raven Guard",
+    "Emperor's Children"
    ],
-   "currentBlurb": "After Isstvan V, Salamanders survivors wage war across scorched worlds, searching for their lost Primarch.",
-   "currentBlurbSafe": "The XVIII Legion fights through devastation, seeking Vulkan amid the ruins."
-  },
-  {
-   "bookKey": "flame-sons-of-forge",
-   "number": "L.3",
-   "title": "SONS OF THE FORGE",
-   "author": "Nick Kyme",
-   "anthology": "Born of Flame",
-   "series": null,
-   "currentType": "Novella",
-   "currentTimeline": "006.M31",
-   "currentLegions": [
-    "Salamanders"
-   ],
-   "currentBlurb": "Numeon leads the quest to recover Vulkan's body, the Salamanders refusing to believe their Primarch can truly die.",
-   "currentBlurbSafe": "The Pyre Guard undertake a desperate mission to recover their fallen Primarch."
+   "currentBlurb": "In the days after the Dropsite Massacre, Salamanders legionaries Ra'stan and Usabius leave the other loyalist survivors behind and strike out into the Urgall Depression to learn what, if anything, remains of Vulkan. Their path crosses those of Iron Hands and Raven Guard survivors, and of the Emperor's Children still working over the battlefield. The search becomes a study in grief, faith and the will to endure.",
+   "currentBlurbSafe": "Two Salamanders defy their fellow survivors and walk back into the killing fields of Isstvan V, determined to find out what became of their primarch."
   },
   {
    "bookKey": "flame-artefacts",
@@ -78,8 +69,8 @@
    "currentLegions": [
     "Salamanders"
    ],
-   "currentBlurb": "Salamanders recover precious relics from the war's devastation.",
-   "currentBlurbSafe": "The XVIII Legion seeks to preserve artifacts from destruction."
+   "currentBlurb": "Before leaving for Isstvan V, Vulkan returns to Nocturne and takes his Master of the Forge, T'kell, into the secret vault beneath the fortress-monastery. Shaken by Konrad Curze's murder of Nostramo, and by a conversation with Horus he now reads very differently, Vulkan orders the thousands of unique weapons he has made destroyed rather than risk them. T'kell argues for them, and is named the Legion's first Forgefather.",
+   "currentBlurbSafe": "On the eve of Isstvan V, Vulkan comes home to Nocturne and looks at his personal armoury with new eyes, wondering what his life's work as a weaponsmith would mean in the wrong hands."
   },
   {
    "bookKey": "flame-immortal-duty-2",
@@ -91,10 +82,43 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Salamanders"
+    "Iron Hands",
+    "World Eaters"
    ],
-   "currentBlurb": "Salamanders survivors honor their duty to protect humanity despite their Legion's shattering.",
-   "currentBlurbSafe": "The XVIII Legion maintains their humanitarian values even in defeat."
+   "currentBlurb": "Ahrem Gallikus, a Medusan Immortal of the Iron Hands, stands condemned before his own brothers and is made to account for himself before they kill him. His testimony returns to the void battle above Isstvan V and a boarding action against the traitor warship Retiarius, where he fought the World Eaters and something in him gave way. What he did aboard that ship is what has brought him here.",
+   "currentBlurbSafe": "A disgraced Medusan Immortal of the Iron Hands is called on to give an account of his greatest battle, a boarding action fought in the void above Isstvan V."
+  },
+  {
+   "bookKey": "shattered-meduson",
+   "number": "XLIII.1",
+   "title": "MEDUSON",
+   "author": "Dan Abnett",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Iron Hands",
+    "Sons of Horus"
+   ],
+   "currentBlurb": "Watching the Dropsite Massacre from orbit aboard the Ironside, Clan-Commander Shadrak Meduson loses a hand, his old friend the Legion Master and his primarch in a single day. In the leaderless fleet that follows he argues against the Clan Fathers' retreat into tradition, wanting a mongrel force built from all the survivors. A Sons of Horus trap sprung by Tybalt Marr costs the Iron Hands their Clan Fathers and leaves Meduson warleader.",
+   "currentBlurbSafe": "Among the leaderless Iron Hands who escaped the Dropsite Massacre, one outspoken clan-commander refuses to accept that the Legion should simply rebuild along the old lines."
+  },
+  {
+   "bookKey": "shattered-the-either",
+   "number": "XLIII.9",
+   "title": "THE EITHER",
+   "author": "Graham McNeill",
+   "anthology": "Shattered Legions",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "006-009.M31",
+   "currentLegions": [
+    "Sons of Horus",
+    "Iron Hands"
+   ],
+   "currentBlurb": "The Shattered Legions war told from the other side. Tybalt Marr of the Sons of Horus, forever overlooked beside more celebrated captains, retells the void trap that destroyed the Iron Hands Clan Fathers and returns to his Legion boasting that he has killed Shadrak Meduson. On conquered Dwell his triumph curdles when he learns of the attempt on Horus's own life, and hunting Meduson becomes his sole duty.",
+   "currentBlurbSafe": "Graham McNeill turns the Shattered Legions story around and follows a Sons of Horus captain, the least regarded of the Warmaster's officers, as he tries to make a name that will outlast him."
   },
   {
    "bookKey": "shattered-unforged",
@@ -106,10 +130,10 @@
    "currentType": "Short Story",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Salamanders"
    ],
-   "currentBlurb": "Iron Hands struggle with their identity after losing their Primarch and much of their Legion.",
-   "currentBlurbSafe": "Survivors of the X Legion grapple with who they are without Ferrus Manus."
+   "currentBlurb": "Guy Haley returns to the Salamanders resistance cell of his audio drama Strike and Fade, still waging a hopeless guerrilla war in the ruins of Isstvan V long after the massacre ended. A group of untested Salamanders investigates a homing beacon deep in a planetary ravine, hoping it means friendly survivors. The ambush that closes on Jo'Phor and his brothers is sprung by loyalists who never realise who they are killing.",
+   "currentBlurbSafe": "A handful of Salamanders are still fighting a guerrilla war in the ruins of Isstvan V long after the massacre. A homing beacon deep in a ravine promises they may not be alone."
   },
   {
    "bookKey": "shattered-grey-talon",
@@ -121,25 +145,12 @@
    "currentType": "Audio Drama",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Raven Guard"
+    "Iron Hands",
+    "White Scars",
+    "Sons of Horus"
    ],
-   "currentBlurb": "Raven Guard survivors strike from the shadows, their talons still sharp despite their losses.",
-   "currentBlurbSafe": "The XIX Legion's remnants prove they remain deadly even shattered."
-  },
-  {
-   "bookKey": "shattered-meduson",
-   "number": "XLIII.1",
-   "title": "MEDUSON",
-   "author": "Dan Abnett",
-   "anthology": "Shattered Legions",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "008-011.M31",
-   "currentLegions": [
-    "Iron Hands"
-   ],
-   "currentBlurb": "Shadrak Meduson leads Iron Hands survivors in brutal strikes against the traitors, becoming a legend among the shattered Legions.",
-   "currentBlurbSafe": "An Iron Hands warrior leads survivors in guerrilla warfare, striking fear into the traitors."
+   "currentBlurb": "The Grey Talon is a captured Sons of Horus destroyer still flying the traitors' colours, commanded by Bion Henricos of the Iron Hands and crewed by disgraced White Scars doing penance under Hibou Khan. Cold towards each other, the two work out how to stalk a traitor ship through the warp and board it. The attack goes badly wrong until Shadrak Meduson's warriors teleport aboard, and Henricos is offered a place in something larger.",
+   "currentBlurbSafe": "A captured traitor warship prowls the void under a loyalist crew, an Iron Hand in command and White Scars penitents in her holds, striking covertly at isolated enemy vessels."
   },
   {
    "bookKey": "shattered-keys-hel",
@@ -152,11 +163,10 @@
    "currentTimeline": "008.M31",
    "currentLegions": [
     "Iron Hands",
-    "Salamanders",
-    "Raven Guard"
+    "Death Guard"
    ],
-   "currentBlurb": "The shattered Legions seek the Keys of Hel, a weapon that could turn the tide of war.",
-   "currentBlurbSafe": "Survivors from three Legions unite to secure a powerful weapon."
+   "currentBlurb": "A sequel to John French's Riven. Crius, once of the Crusader Host and now a revenant reanimated by the very technologies Ferrus Manus sealed away, fights on with the Iron Hands who have turned the Keys of Hel. With Clan-Father Soter of Clan Kadoran among them, the undead legionaries assault a space station held by the Death Guard. What the Iron Hands are letting themselves become matters more than the battle.",
+   "currentBlurbSafe": "John French returns to the darkest secret of the Iron Hands, the forbidden technologies their primarch locked away, as a strike force moves against a traitor-held void station."
   },
   {
    "bookKey": "shattered-deeds-endure",
@@ -168,10 +178,12 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Raven Guard"
+    "Salamanders",
+    "Iron Hands",
+    "World Eaters"
    ],
-   "currentBlurb": "Raven Guard deeds endure beyond death as survivors carry on their fallen brothers' missions.",
-   "currentBlurbSafe": "The XIX Legion honors their dead by continuing the fight."
+   "currentBlurb": "A joint Salamanders and Iron Hands force, spared the slaughter at Isstvan V, finds a World Eaters facility sitting in the middle of a civilian population. The far larger Iron Hands contingent wants an orbital bombardment and will accept the collateral damage. The Salamanders will not spend mortal lives that way. The argument lays bare how differently the two Legions understand the war, and how close allies can come to blows.",
+   "currentBlurbSafe": "Salamanders and Iron Hands survivors have made common cause against the traitors, until a World Eaters target surrounded by civilians forces them to agree on how it should be attacked."
   },
   {
    "bookKey": "shattered-the-noose",
@@ -183,10 +195,11 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Iron Hands",
+    "Emperor's Children"
    ],
-   "currentBlurb": "Iron Hands survivors tighten the noose around traitor supply lines.",
-   "currentBlurbSafe": "The X Legion disrupts traitor operations through calculated strikes."
+   "currentBlurb": "Captain Khalybus of the Iron Hands is being run down through the void by Emperor's Children warships, and answers with a long game of feints, traps and bluffs in which neither commander can be sure who is hunting whom. Annandale sets the X Legion's blunt attrition against the III Legion's preening, increasingly deranged obsession with perfection. Khalybus finally draws his pursuers into an ambush.",
+   "currentBlurbSafe": "An Iron Hands captain is being hunted through the void by Emperor's Children warships, and neither commander can be certain which of them is really closing the trap."
   },
   {
    "bookKey": "shattered-unspoken",
@@ -198,25 +211,30 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Salamanders",
+    "Iron Hands",
+    "Alpha Legion"
    ],
-   "currentBlurb": "Unspoken oaths drive Iron Hands survivors to ever more desperate acts of vengeance.",
-   "currentBlurbSafe": "The X Legion's rage manifests in increasingly brutal attacks."
+   "currentBlurb": "Narrated in the first person by Donak, the mute Salamander who alone survived the friendly-fire ambush of Unforged, this longer sequel places him in a mixed Iron Hands and Salamanders force alongside Tarkan and Sulnar from Scorched Earth. They assault a traitor-held astropathic relay station and find something stranger waiting: Alpha Legionnaires disguised as Iron Hands, fighting other Alpha Legionnaires who claim to be loyal.",
+   "currentBlurbSafe": "Guy Haley's follow-up to Unforged is narrated by a mute Salamander who has taken his place among a mixed Shattered Legions force as it moves against a traitor-held astropathic relay station."
   },
   {
-   "bookKey": "shattered-the-either",
-   "number": "XLIII.9",
-   "title": "THE EITHER",
-   "author": "Graham McNeill",
-   "anthology": "Shattered Legions",
+   "bookKey": "flame-sons-of-forge",
+   "number": "L.3",
+   "title": "SONS OF THE FORGE",
+   "author": "Nick Kyme",
+   "anthology": "Born of Flame",
    "series": null,
-   "currentType": "Audio Drama",
+   "currentType": "Novella",
    "currentTimeline": "010.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Salamanders",
+    "Iron Hands",
+    "Sons of Horus",
+    "Mechanicum"
    ],
-   "currentBlurb": "Iron Hands survivors face an impossible choice between duty and vengeance.",
-   "currentBlurbSafe": "The X Legion must decide between conflicting loyalties."
+   "currentBlurb": "Forgefather T'kell was left on Nocturne when Vulkan went to Isstvan, and saved seven of his primarch's greatest weapons from the destruction Vulkan ordered. Once Numeon has brought Vulkan's body home, T'kell gathers the Firedrakes of the Unscarred and sets out to seal the relics in the hidden vault called the Wrought. The Dark Mechanicum adept Regulus, Sons of Horus raiders and Iron Father Kastigan Ulok all want them first.",
+   "currentBlurbSafe": "Charged with a solemn duty by Vulkan himself, the Salamanders' first Forgefather leads a chosen few of the Legion's Firedrakes on a journey to place the last of his primarch's greatest weapons beyond anyone's reach."
   },
   {
    "bookKey": "shattered-hand-elect",
@@ -228,10 +246,11 @@
    "currentType": "Short Story",
    "currentTimeline": "010.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Iron Hands",
+    "Mechanicum"
    ],
-   "currentBlurb": "The chosen warriors of the Iron Hands elite continue their mission despite overwhelming losses.",
-   "currentBlurbSafe": "Elite Iron Hands survivors press on against impossible odds."
+   "currentBlurb": "Iron Father Jebez Aug, Hand Elect and second to warleader Shadrak Meduson, carries wounds no Legion apothecary can mend. He travels to a loyalist forge world and puts himself into the hands of the Mechanicum, and the price of being made whole is not paid only in flesh. All the while other Iron Hands are quietly manoeuvring to have Meduson replaced at the head of the Shattered Legions.",
+   "currentBlurbSafe": "Grievously wounded, the second-in-command of the Shattered Legions makes for a loyalist forge world in the hope of being made whole again, while politics stir behind him."
   },
   {
    "bookKey": "shattered-seventh-serpent",
@@ -243,11 +262,13 @@
    "currentType": "Novella",
    "currentTimeline": "011.M31",
    "currentLegions": [
-    "Alpha Legion",
-    "Iron Hands"
+    "Iron Hands",
+    "Raven Guard",
+    "Salamanders",
+    "Alpha Legion"
    ],
-   "currentBlurb": "The Alpha Legion's schemes intersect with the shattered Legions' vengeance, with no one certain of anyone's true allegiance.",
-   "currentBlurbSafe": "Alpha Legion machinations complicate the survivors' war of vengeance."
+   "currentBlurb": "The battered crew of the Sisypheum, Iron Hands, Raven Guard and Salamanders survivors under Cadmus Tyro, are drawn into a covert assault on a hidden Alpha Legion outpost, an operation apparently orchestrated by Shadrak Meduson himself. Wayland and the Raven Guard shadow-killer Nykona Sharrowkyn go in expecting Alpha Legion deception and find rather more of it than they bargained for: the Meduson leading them is Alpharius wearing his face.",
+   "currentBlurbSafe": "The survivors aboard the Sisypheum are offered a real chance to hurt the traitors, a joint operation against a hidden Alpha Legion outpost. Nothing involving the sons of Alpharius is ever quite what it appears."
   }
  ]
 }

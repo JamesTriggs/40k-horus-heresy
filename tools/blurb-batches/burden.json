@@ -12,13 +12,14 @@
    "author": "Gav Thorpe",
    "anthology": "The Burden of Loyalty",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "004-005.M31",
    "currentLegions": [
-    "Space Wolves"
+    "Space Wolves",
+    "Thousand Sons"
    ],
-   "currentBlurb": "A lost Space Wolf seeks his pack during the Heresy's chaos.",
-   "currentBlurbSafe": "A warrior of Fenris searches for his brothers in the galaxy's darkest hour."
+   "currentBlurb": "Set during the razing of Prospero, Gav Thorpe's audio drama follows Wolf Lord Bulveye and the Space Wolves' Thirteenth Great Company as they storm the librarium temple of the Thousand Sons Librarian Izzakar Orr. Orr escapes through a hidden webway gate and the Wolves give chase into the Portal Maze, blundering through unwarded gateways and scattering. Bulveye kills Orr, but his warriors are left lost in the webway for ten thousand years.",
+   "currentBlurbSafe": "During the burning of Prospero, Wolf Lord Bulveye's Great Company batters its way into a Thousand Sons library defended by a stubborn Librarian. The pursuit carries the Fenrisians off Prospero entirely and into an alien maze of portals, where ferocity counts for very little."
   },
   {
    "bookKey": "burden-into-exile",
@@ -28,12 +29,13 @@
    "anthology": "The Burden of Loyalty",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "005-007.M31",
+   "currentTimeline": "005-006.M31",
    "currentLegions": [
-    "Word Bearers"
+    "Mechanicum",
+    "Imperial Fists"
    ],
-   "currentBlurb": "Word Bearers embrace their exile from the Emperor's light, finding new purpose in darkness.",
-   "currentBlurbSafe": "The XVII Legion accepts their damnation and finds strength in corruption."
+   "currentBlurb": "As the Dark Mechanicum seize Mars, the technoarchaeologist Arkhan Land, finder of lost Dark Age treasures, becomes a target for hunters sent to capture or kill him. An Imperial Fists squad under Nicanor is sent to lift him off the burning red planet while a pursuer closes in behind them. Told in reverse, the story strips away Land's arrogance to reveal the frightened man beneath and sets up his exile on Terra.",
+   "currentBlurbSafe": "Mars is aflame and one of the Imperium's most valuable minds is a prize both sides want. Space Marines arrive to carry the technoarchaeologist Arkhan Land clear, though he has his own reasons to be wary of his apparent rescuers."
   },
   {
    "bookKey": "burden-cybernetica",
@@ -42,28 +44,15 @@
    "author": "Rob Sanders",
    "anthology": "The Burden of Loyalty",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Novella",
    "currentTimeline": "005.M31",
    "currentLegions": [
-    "Mechanicum"
+    "Mechanicum",
+    "Raven Guard",
+    "Imperial Fists"
    ],
-   "currentBlurb": "Battle-automata serve their masters in the civil war, unthinking and relentless.",
-   "currentBlurbSafe": "The Mechanicum's robots fight without question or mercy."
-  },
-  {
-   "bookKey": "burden-binary-succession",
-   "number": "XLVIII.2",
-   "title": "THE BINARY SUCCESSION",
-   "author": "David Annandale",
-   "anthology": "The Burden of Loyalty",
-   "series": null,
-   "currentType": "Novella",
-   "currentTimeline": "006.M31",
-   "currentLegions": [
-    "Mechanicum"
-   ],
-   "currentBlurb": "The Mechanicum's succession of power becomes a battleground during Mars's schism.",
-   "currentBlurbSafe": "Political intrigue on Mars mirrors the galaxy's larger civil war."
+   "currentBlurb": "Rob Sanders returns to the Schism of Mars through the Carrion, a Raven Guard maimed so badly that his Legion sent him to the red planet to train as a Techmarine. He watches the forge world turn on itself, then he and a handful of fellow Techmarines fight clear through waves of corrupted skitarii. His testimony reaches Terra, where Rogal Dorn and Malcador weigh a final solution, the extermination of all life on Mars.",
+   "currentBlurbSafe": "A grievously wounded Raven Guard, sent away from his Legion to train as a Techmarine on Mars, is on the red planet when the Mechanicum begins to tear itself apart. What he lives through there will shape how Terra chooses to deal with a forge world that has slipped its leash."
   },
   {
    "bookKey": "burden-perpetual",
@@ -72,13 +61,61 @@
    "author": "Dan Abnett",
    "anthology": "The Burden of Loyalty",
    "series": null,
-   "currentType": "Novella",
+   "currentType": "Audio Drama",
    "currentTimeline": "007.M31",
    "currentLegions": [
     "Perpetuals"
    ],
-   "currentBlurb": "The Perpetuals Oll Persson and John Grammaticus navigate the Heresy, their immortality granting perspective on humanity's civil war.",
-   "currentBlurbSafe": "Immortal beings watch humanity tear itself apart, their ancient wisdom unable to prevent the tragedy."
+   "currentBlurb": "Dan Abnett's short audio drama picks up from UNMARKED, with Oll Persson leading his small band of Calth refugees along the backways of time and space towards Terra. The road ends abruptly at a city perched on the edge of oblivion, with no way onward and enemies closing in. Reflective rather than action driven, it deepens the mystery of what the Perpetuals are without giving any firm answers.",
+   "currentBlurbSafe": "Oll Persson, the undying man who walked away from Calth, is still shepherding his handful of survivors through time and space towards Terra. Their journey stalls in a strange place at the edge of everything, and whatever is hunting them has not given up."
+  },
+  {
+   "bookKey": "burden-wolf-king",
+   "number": "XLVIII.8",
+   "title": "THE WOLF KING",
+   "author": "Chris Wraight",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Space Wolves",
+    "Alpha Legion",
+    "Dark Angels"
+   ],
+   "currentBlurb": "Bridging SCARS and VENGEFUL SPIRIT, Wraight's novella finds the Space Wolves still bleeding from the razing of Prospero and run to ground in the Alaxxes Nebula by the Alpha Legion fleet. Jaghatai Khan refuses to come, and a demoralised Leman Russ shuts himself away, leaving First Captain Gunnar Gunnhilt to fight the breakout and young Bjorn to talk his primarch back from despair. Gunnhilt dies buying time, and a Dark Angels fleet hidden in the nebula finally turns the battle.",
+   "currentBlurbSafe": "Battered by Prospero and cornered in a corrosive nebula by an Alpha Legion fleet, the Space Wolves call on a brother Legion for aid. With his ships trapped and supplies failing, Leman Russ must work out what the Emperor's executioner is actually for."
+  },
+  {
+   "bookKey": "burden-heart-pharos",
+   "number": "XLVIII.5",
+   "title": "THE HEART OF THE PHAROS",
+   "author": "L J Goulding",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Ultramarines",
+    "Iron Warriors"
+   ],
+   "currentBlurb": "Laurie Goulding's audio drama is effectively chapter zero of Guy Haley's PHAROS. On Sotha, the Ultramarines Scouts Oberdeii and Tebecai of the 199th Company are sent down into the tunnels beneath Mount Pharos, because the masters of Ultramar understand almost nothing about the xenos beacon on which Imperium Secundus now depends. What the two find in the dark is never fully explained to them, and it haunts them afterwards.",
+   "currentBlurbSafe": "The beacon on Sotha keeps Imperium Secundus alive, yet nobody in Ultramar truly grasps how it works or what dangers it holds. Two young Ultramarines Scouts are sent into the tunnels beneath the mountain to find out, with Warsmith Dantioch overseeing the descent."
+  },
+  {
+   "bookKey": "burden-binary-succession",
+   "number": "XLVIII.2",
+   "title": "THE BINARY SUCCESSION",
+   "author": "David Annandale",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "010-011.M31",
+   "currentLegions": [
+    "Mechanicum"
+   ],
+   "currentBlurb": "David Annandale's audio drama plays out in council chambers on Terra rather than on a battlefield. Ambassador Vethorel speaks for Fabricator General Zagreus Kane, whose title is still claimed by the traitor Kelbor-Hal on Mars, leaving the Mechanicum's standing in the Imperium unresolved while the High Lords bicker. Vethorel works through obstruction, xenophobia and Martian infighting to force a new alliance before Horus reaches the Throneworld.",
+   "currentBlurbSafe": "With Kelbor-Hal still holding Mars, the Mechanicum's envoy to Terra must argue her masters' case before a Council of Terra paralysed by bureaucracy and suspicion. This is a story of committee rooms and cold politics rather than war, set as the Warmaster draws nearer."
   },
   {
    "bookKey": "burden-ordo-sinister",
@@ -88,42 +125,12 @@
    "anthology": "The Burden of Loyalty",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "007.M31",
+   "currentTimeline": "011.M31",
    "currentLegions": [
     "Collegia Titanica"
    ],
-   "currentBlurb": "The sinister Psi-Titans of the Ordo Sinister emerge to defend Terra.",
-   "currentBlurbSafe": "The Emperor's most terrible weapons awaken for the coming siege."
-  },
-  {
-   "bookKey": "burden-wolf-king",
-   "number": "XLVIII.8",
-   "title": "THE WOLF KING",
-   "author": "Chris Wraight",
-   "anthology": "The Burden of Loyalty",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "007.M31",
-   "currentLegions": [
-    "Space Wolves"
-   ],
-   "currentBlurb": "Leman Russ leads his Wolves through the Heresy, the Wolf King's fury undiminished.",
-   "currentBlurbSafe": "The Primarch of the VI Legion commands his sons in the war for humanity's soul."
-  },
-  {
-   "bookKey": "burden-heart-pharos",
-   "number": "XLVIII.5",
-   "title": "THE HEART OF THE PHAROS",
-   "author": "L J Goulding",
-   "anthology": "The Burden of Loyalty",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "009.M31",
-   "currentLegions": [
-    "Ultramarines"
-   ],
-   "currentBlurb": "The Pharos device's power corrupts those who seek to control it.",
-   "currentBlurbSafe": "An ancient xenos device becomes a weapon and a curse."
+   "currentBlurb": "John French follows Prefect Hydragyrum, who commands the Psi-Titan Borealis Thoon, one of the Ordo Sinister god-machines driven by a bound psychic mind. Deep inside the webway, where Magnus the Red's blunder has torn open the Emperor's wards, the single Titan holds back an entire daemonic incursion. Flashbacks interleaved with the battle reveal the disturbing process by which a man is made fit to operate such a weapon.",
+   "currentBlurbSafe": "Inside the webway the Emperor's protective wards have been breached and daemons are pouring through. One of the Imperium's least discussed war machines, a Psi-Titan of the Ordo Sinister, is committed to hold the line, and its commander's account shows what operating such a weapon costs."
   }
  ]
 }

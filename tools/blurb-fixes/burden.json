@@ -1,165 +1,252 @@
 {
-  "batch": "burden",
-  "entries": [
-    {
-      "bookKey": "burden-thirteenth-wolf",
-      "verdict": "corrected",
-      "title": "THE THIRTEENTH WOLF",
-      "author": "Gav Thorpe",
-      "type": "Audio Drama",
-      "legions": ["Space Wolves", "Thousand Sons"],
-      "timeline": "004-005.M31",
-      "mainCharacters": ["Bulveye", "Izzakar Orr"],
-      "blurb": "Set during the razing of Prospero, Gav Thorpe's audio drama follows Wolf Lord Bulveye and the Space Wolves' Thirteenth Great Company as they storm the librarium temple of the Thousand Sons Librarian Izzakar Orr. Orr escapes through a hidden webway gate and the Wolves give chase into the Portal Maze, blundering through unwarded gateways and scattering. Bulveye kills Orr, but his warriors are left lost in the webway for ten thousand years.",
-      "blurbSafe": "During the burning of Prospero, Wolf Lord Bulveye's Great Company batters its way into a Thousand Sons library defended by a stubborn Librarian. The pursuit carries the Fenrisians off Prospero entirely and into an alien maze of portals, where ferocity counts for very little.",
-      "changed": ["type", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Thirteenth_Wolf_(Audio_Drama)",
-        "https://warhammer40k.fandom.com/wiki/Izzakar_Orr",
-        "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
-      ],
-      "confidence": "high",
-      "notes": "Current blurb was a generic guess from the title. Originally a 68 minute Black Library audio drama, November 2016, so type corrected from Short Story to Audio Drama. Thousand Sons added as a featured faction (traitor Legion, and a genuine change to the faction filter). Editor Laurie Goulding places it 'immediately after A Thousand Sons'. Timeline left at 004-005.M31 to match PROSPERO BURNS, though the Battle of Prospero itself is dated 734.004.M31, so 004.M31 would be slightly more precise."
-    },
-    {
-      "bookKey": "burden-into-exile",
-      "verdict": "corrected",
-      "title": "INTO EXILE",
-      "author": "Aaron Dembski-Bowden",
-      "type": "Short Story",
-      "legions": ["Mechanicum", "Imperial Fists"],
-      "timeline": "005-006.M31",
-      "mainCharacters": ["Arkhan Land", "Nicanor"],
-      "blurb": "As the Dark Mechanicum seize Mars, the technoarchaeologist Arkhan Land, finder of lost Dark Age treasures, becomes a target for hunters sent to capture or kill him. An Imperial Fists squad under Nicanor is sent to lift him off the burning red planet while a pursuer closes in behind them. Told in reverse, the story strips away Land's arrogance to reveal the frightened man beneath and sets up his exile on Terra.",
-      "blurbSafe": "Mars is aflame and one of the Imperium's most valuable minds is a prize both sides want. Space Marines arrive to carry the technoarchaeologist Arkhan Land clear, though he has his own reasons to be wary of his apparent rescuers.",
-      "changed": ["legions", "timeline", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Into_Exile_(Short_Story)",
-        "https://www.trackofwords.com/2016/12/04/quick-review-into-exile-aaron-dembski-bowden/",
-        "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
-      ],
-      "confidence": "high",
-      "notes": "The prior audit was right. This has nothing to do with the Word Bearers. Legions corrected from Word Bearers (traitor) to Mechanicum and Imperial Fists (loyalist), which flips the loyalist/traitor filter. Type Short Story confirmed (Black Library Advent Calendar 2016, day three). Timeline narrowed from 005-007.M31 to 005-006.M31, the span of the Schism of Mars, since Goulding places it 'immediately after Mechanicum'. It is a prequel to THE MASTER OF MANKIND and leads into the webway arc."
-    },
-    {
-      "bookKey": "burden-cybernetica",
-      "verdict": "corrected",
-      "title": "CYBERNETICA",
-      "author": "Rob Sanders",
-      "type": "Novella",
-      "legions": ["Mechanicum", "Raven Guard", "Imperial Fists"],
-      "timeline": "005.M31",
-      "mainCharacters": ["The Carrion", "Rogal Dorn", "Malcador the Sigillite"],
-      "blurb": "Rob Sanders returns to the Schism of Mars through the Carrion, a Raven Guard maimed so badly that his Legion sent him to the red planet to train as a Techmarine. He watches the forge world turn on itself, then he and a handful of fellow Techmarines fight clear through waves of corrupted skitarii. His testimony reaches Terra, where Rogal Dorn and Malcador weigh a final solution, the extermination of all life on Mars.",
-      "blurbSafe": "A grievously wounded Raven Guard, sent away from his Legion to train as a Techmarine on Mars, is on the red planet when the Mechanicum begins to tear itself apart. What he lives through there will shape how Terra chooses to deal with a forge world that has slipped its leash.",
-      "changed": ["type", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Cybernetica_(Novella)",
-        "https://www.trackofwords.com/2015/08/16/cybernetica-rob-sanders/",
-        "https://warhammer40k.fandom.com/wiki/Schism_of_Mars"
-      ],
-      "confidence": "high",
-      "notes": "Not a story about battle-automata as the current blurb assumed. Originally a 128 page limited edition novella, December 2015, so type corrected from Short Story to Novella. Raven Guard and Imperial Fists added alongside Mechanicum, both loyalist, so no traitor flip. Timeline 005.M31 kept and confirmed, the Schism of Mars runs 005-006.M31 and the Terra framing scenes sit at the later end of that."
-    },
-    {
-      "bookKey": "burden-binary-succession",
-      "verdict": "corrected",
-      "title": "THE BINARY SUCCESSION",
-      "author": "David Annandale",
-      "type": "Audio Drama",
-      "legions": ["Mechanicum"],
-      "timeline": "010-011.M31",
-      "mainCharacters": ["Vethorel", "Zagreus Kane", "Kelbor-Hal"],
-      "blurb": "David Annandale's audio drama plays out in council chambers on Terra rather than on a battlefield. Ambassador Vethorel speaks for Fabricator General Zagreus Kane, whose title is still claimed by the traitor Kelbor-Hal on Mars, leaving the Mechanicum's standing in the Imperium unresolved while the High Lords bicker. Vethorel works through obstruction, xenophobia and Martian infighting to force a new alliance before Horus reaches the Throneworld.",
-      "blurbSafe": "With Kelbor-Hal still holding Mars, the Mechanicum's envoy to Terra must argue her masters' case before a Council of Terra paralysed by bureaucracy and suspicion. This is a story of committee rooms and cold politics rather than war, set as the Warmaster draws nearer.",
-      "changed": ["type", "timeline", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Binary_Succession_(Audio_Drama)",
-        "https://www.trackofwords.com/2017/02/28/the-binary-succession-david-annandale/",
-        "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
-      ],
-      "confidence": "medium",
-      "notes": "Type corrected from Novella to Audio Drama (75 minutes, nine voice actors, March 2017). Legions Mechanicum confirmed. The big change is the date. Goulding places it 'soon before The Master of Mankind', which this database dates 011.M31, so 006.M31 is far too early. Set to 010-011.M31, flagged medium confidence because no source gives an exact Imperial date. Track of Words also notes Goulding's later story THE LAST COUNCIL sits between this and THE SOLAR WAR, which supports a late placement. The current blurb wrongly implies fighting on Mars, the action is political and set on Terra."
-    },
-    {
-      "bookKey": "burden-perpetual",
-      "verdict": "corrected",
-      "title": "PERPETUAL",
-      "author": "Dan Abnett",
-      "type": "Audio Drama",
-      "legions": ["Perpetuals"],
-      "timeline": "007.M31",
-      "mainCharacters": ["Oll Persson"],
-      "blurb": "Dan Abnett's short audio drama picks up from UNMARKED, with Oll Persson leading his small band of Calth refugees along the backways of time and space towards Terra. The road ends abruptly at a city perched on the edge of oblivion, with no way onward and enemies closing in. Reflective rather than action driven, it deepens the mystery of what the Perpetuals are without giving any firm answers.",
-      "blurbSafe": "Oll Persson, the undying man who walked away from Calth, is still shepherding his handful of survivors through time and space towards Terra. Their journey stalls in a strange place at the edge of everything, and whatever is hunting them has not given up.",
-      "changed": ["type", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Perpetual_(Audio_Drama)",
-        "https://www.trackofwords.com/2016/12/01/quick-review-perpetual-dan-abnett/",
-        "https://warhammer40k.fandom.com/wiki/Unmarked_(Anthology_Short_Story)"
-      ],
-      "confidence": "high",
-      "notes": "Type corrected from Novella to Audio Drama (27 minutes, Advent Calendar 2016 day one). Timeline 007.M31 and faction Perpetuals both confirmed, Goulding places it after MARK OF CALTH. Main characters trimmed: the site currently lists John Grammaticus, but neither the Black Library synopsis nor the Track of Words review places him with Oll's band here, and the wiki has Grammaticus held elsewhere by Prytanis during this period. Removing him is medium confidence, the rest is high."
-    },
-    {
-      "bookKey": "burden-ordo-sinister",
-      "verdict": "corrected",
-      "title": "ORDO SINISTER",
-      "author": "John French",
-      "type": "Short Story",
-      "legions": ["Collegia Titanica"],
-      "timeline": "011.M31",
-      "mainCharacters": ["Prefect Hydragyrum"],
-      "blurb": "John French follows Prefect Hydragyrum, who commands the Psi-Titan Borealis Thoon, one of the Ordo Sinister god-machines driven by a bound psychic mind. Deep inside the webway, where Magnus the Red's blunder has torn open the Emperor's wards, the single Titan holds back an entire daemonic incursion. Flashbacks interleaved with the battle reveal the disturbing process by which a man is made fit to operate such a weapon.",
-      "blurbSafe": "Inside the webway the Emperor's protective wards have been breached and daemons are pouring through. One of the Imperium's least discussed war machines, a Psi-Titan of the Ordo Sinister, is committed to hold the line, and its commander's account shows what operating such a weapon costs.",
-      "changed": ["timeline", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Ordo_Sinister_(Short_Story)",
-        "https://www.trackofwords.com/2017/02/27/quick-review-ordo-sinister-john-french/",
-        "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
-      ],
-      "confidence": "medium",
-      "notes": "Type Short Story confirmed (digital only, February 2017). Faction Collegia Titanica confirmed. The current blurb is wrong in substance: this is the War Within the Webway, not the defence of Terra or the coming Siege, and it is one Titan rather than 'the Psi-Titans' plural. Timeline moved from 007.M31 to 011.M31 because Goulding places it 'immediately before The Master of Mankind', which this database dates 011.M31. Medium confidence on the exact date as no source gives an Imperial dating."
-    },
-    {
-      "bookKey": "burden-wolf-king",
-      "verdict": "corrected",
-      "title": "THE WOLF KING",
-      "author": "Chris Wraight",
-      "type": "Novella",
-      "legions": ["Space Wolves", "Alpha Legion", "Dark Angels"],
-      "timeline": "007.M31",
-      "mainCharacters": ["Leman Russ", "Bjorn", "Gunnar Gunnhilt", "Kva"],
-      "blurb": "Bridging SCARS and VENGEFUL SPIRIT, Wraight's novella finds the Space Wolves still bleeding from the razing of Prospero and run to ground in the Alaxxes Nebula by the Alpha Legion fleet. Jaghatai Khan refuses to come, and a demoralised Leman Russ shuts himself away, leaving First Captain Gunnar Gunnhilt to fight the breakout and young Bjorn to talk his primarch back from despair. Gunnhilt dies buying time, and a Dark Angels fleet hidden in the nebula finally turns the battle.",
-      "blurbSafe": "Battered by Prospero and cornered in a corrosive nebula by an Alpha Legion fleet, the Space Wolves call on a brother Legion for aid. With his ships trapped and supplies failing, Leman Russ must work out what the Emperor's executioner is actually for.",
-      "changed": ["type", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Wolf_King",
-        "https://warhammer40k.fandom.com/wiki/Battle_of_the_Alaxxes_Nebula",
-        "https://www.trackofwords.com/2015/11/29/1398-2/"
-      ],
-      "confidence": "high",
-      "notes": "The prior audit was right on all counts. Type corrected from Short Story to Novella (128 page limited edition, October 2015). Alpha Legion added, which puts a traitor Legion on this entry for the first time, plus Dark Angels for the contingent that intervenes. Timeline 007.M31 confirmed by the Battle of the Alaxxes Nebula, so the audit's 'roughly 007.M31' matches what is already recorded. Black Library titles the novella 'Wolf King' without the definite article, the site title was left as is to avoid breaking keys."
-    },
-    {
-      "bookKey": "burden-heart-pharos",
-      "verdict": "corrected",
-      "title": "THE HEART OF THE PHAROS",
-      "author": "L J Goulding",
-      "type": "Audio Drama",
-      "legions": ["Ultramarines"],
-      "timeline": "009.M31",
-      "mainCharacters": ["Oberdeii", "Tebecai", "Barabas Dantioch"],
-      "blurb": "Laurie Goulding's audio drama is effectively chapter zero of Guy Haley's PHAROS. On Sotha, the Ultramarines Scouts Oberdeii and Tebecai of the 199th Company are sent down into the tunnels beneath Mount Pharos, because the masters of Ultramar understand almost nothing about the xenos beacon on which Imperium Secundus now depends. What the two find in the dark is never fully explained to them, and it haunts them afterwards.",
-      "blurbSafe": "The beacon on Sotha keeps Imperium Secundus alive, yet nobody in Ultramar truly grasps how it works or what dangers it holds. Two young Ultramarines Scouts are sent into the tunnels beneath the mountain to find out, with Warsmith Dantioch overseeing the descent.",
-      "changed": ["type", "blurb", "blurbSafe"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/The_Heart_of_the_Pharos_(Audio_Drama)",
-        "https://www.trackofwords.com/2016/08/07/quick-review-the-heart-of-the-pharos-l-j-goulding/",
-        "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
-      ],
-      "confidence": "high",
-      "notes": "The prior audit was right that this concerns the Pharos on Sotha, but the current blurb's 'corrupts those who seek to control it' is invention. Type corrected from Short Story to Audio Drama (38 minutes, February 2016, originally announced as 'The Dark Between the Stars'). Timeline 009.M31 and faction Ultramarines both confirmed, it sits between THE UNREMEMBERED EMPIRE and PHAROS. Barabas Dantioch features, but Iron Warriors was deliberately not added to legions because he is a loyalist and the tag would wrongly trip the traitor filter."
-    }
-  ]
+ "batch": "burden",
+ "entries": [
+  {
+   "bookKey": "burden-thirteenth-wolf",
+   "verdict": "corrected",
+   "title": "THE THIRTEENTH WOLF",
+   "author": "Gav Thorpe",
+   "type": "Audio Drama",
+   "legions": [
+    "Space Wolves",
+    "Thousand Sons"
+   ],
+   "timeline": "004-005.M31",
+   "mainCharacters": [
+    "Bulveye",
+    "Izzakar Orr"
+   ],
+   "blurb": "Set during the razing of Prospero, Gav Thorpe's audio drama follows Wolf Lord Bulveye and the Space Wolves' Thirteenth Great Company as they storm the librarium temple of the Thousand Sons Librarian Izzakar Orr. Orr escapes through a hidden webway gate and the Wolves give chase into the Portal Maze, blundering through unwarded gateways and scattering. Bulveye kills Orr, but his warriors are left lost in the webway for ten thousand years.",
+   "blurbSafe": "During the burning of Prospero, Wolf Lord Bulveye's Great Company batters its way into a Thousand Sons library defended by a stubborn Librarian. The pursuit carries the Fenrisians off Prospero entirely and into an alien maze of portals, where ferocity counts for very little.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Thirteenth_Wolf_(Audio_Drama)",
+    "https://warhammer40k.fandom.com/wiki/Izzakar_Orr",
+    "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
+   ],
+   "confidence": "high",
+   "notes": "Current blurb was a generic guess from the title. Originally a 68 minute Black Library audio drama, November 2016, so type corrected from Short Story to Audio Drama. Thousand Sons added as a featured faction (traitor Legion, and a genuine change to the faction filter). Editor Laurie Goulding places it 'immediately after A Thousand Sons'. Timeline left at 004-005.M31 to match PROSPERO BURNS, though the Battle of Prospero itself is dated 734.004.M31, so 004.M31 would be slightly more precise."
+  },
+  {
+   "bookKey": "burden-into-exile",
+   "verdict": "corrected",
+   "title": "INTO EXILE",
+   "author": "Aaron Dembski-Bowden",
+   "type": "Short Story",
+   "legions": [
+    "Mechanicum",
+    "Imperial Fists"
+   ],
+   "timeline": "005-006.M31",
+   "mainCharacters": [
+    "Arkhan Land",
+    "Nicanor"
+   ],
+   "blurb": "As the Dark Mechanicum seize Mars, the technoarchaeologist Arkhan Land, finder of lost Dark Age treasures, becomes a target for hunters sent to capture or kill him. An Imperial Fists squad under Nicanor is sent to lift him off the burning red planet while a pursuer closes in behind them. Told in reverse, the story strips away Land's arrogance to reveal the frightened man beneath and sets up his exile on Terra.",
+   "blurbSafe": "Mars is aflame and one of the Imperium's most valuable minds is a prize both sides want. Space Marines arrive to carry the technoarchaeologist Arkhan Land clear, though he has his own reasons to be wary of his apparent rescuers.",
+   "changed": [
+    "legions",
+    "timeline",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Into_Exile_(Short_Story)",
+    "https://www.trackofwords.com/2016/12/04/quick-review-into-exile-aaron-dembski-bowden/",
+    "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
+   ],
+   "confidence": "high",
+   "notes": "The prior audit was right. This has nothing to do with the Word Bearers. Legions corrected from Word Bearers (traitor) to Mechanicum and Imperial Fists (loyalist), which flips the loyalist/traitor filter. Type Short Story confirmed (Black Library Advent Calendar 2016, day three). Timeline narrowed from 005-007.M31 to 005-006.M31, the span of the Schism of Mars, since Goulding places it 'immediately after Mechanicum'. It is a prequel to THE MASTER OF MANKIND and leads into the webway arc."
+  },
+  {
+   "bookKey": "burden-cybernetica",
+   "verdict": "corrected",
+   "title": "CYBERNETICA",
+   "author": "Rob Sanders",
+   "type": "Novella",
+   "legions": [
+    "Mechanicum",
+    "Raven Guard",
+    "Imperial Fists"
+   ],
+   "timeline": "005.M31",
+   "mainCharacters": [
+    "The Carrion",
+    "Rogal Dorn",
+    "Malcador the Sigillite"
+   ],
+   "blurb": "Rob Sanders returns to the Schism of Mars through the Carrion, a Raven Guard maimed so badly that his Legion sent him to the red planet to train as a Techmarine. He watches the forge world turn on itself, then he and a handful of fellow Techmarines fight clear through waves of corrupted skitarii. His testimony reaches Terra, where Rogal Dorn and Malcador weigh a final solution, the extermination of all life on Mars.",
+   "blurbSafe": "A grievously wounded Raven Guard, sent away from his Legion to train as a Techmarine on Mars, is on the red planet when the Mechanicum begins to tear itself apart. What he lives through there will shape how Terra chooses to deal with a forge world that has slipped its leash.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Cybernetica_(Novella)",
+    "https://www.trackofwords.com/2015/08/16/cybernetica-rob-sanders/",
+    "https://warhammer40k.fandom.com/wiki/Schism_of_Mars"
+   ],
+   "confidence": "high",
+   "notes": "Not a story about battle-automata as the current blurb assumed. Originally a 128 page limited edition novella, December 2015, so type corrected from Short Story to Novella. Raven Guard and Imperial Fists added alongside Mechanicum, both loyalist, so no traitor flip. Timeline 005.M31 kept and confirmed, the Schism of Mars runs 005-006.M31 and the Terra framing scenes sit at the later end of that."
+  },
+  {
+   "bookKey": "burden-binary-succession",
+   "verdict": "corrected",
+   "title": "THE BINARY SUCCESSION",
+   "author": "David Annandale",
+   "type": "Audio Drama",
+   "legions": [
+    "Mechanicum"
+   ],
+   "timeline": "010-011.M31",
+   "mainCharacters": [
+    "Vethorel",
+    "Zagreus Kane",
+    "Kelbor-Hal"
+   ],
+   "blurb": "David Annandale's audio drama plays out in council chambers on Terra rather than on a battlefield. Ambassador Vethorel speaks for Fabricator General Zagreus Kane, whose title is still claimed by the traitor Kelbor-Hal on Mars, leaving the Mechanicum's standing in the Imperium unresolved while the High Lords bicker. Vethorel works through obstruction, xenophobia and Martian infighting to force a new alliance before Horus reaches the Throneworld.",
+   "blurbSafe": "With Kelbor-Hal still holding Mars, the Mechanicum's envoy to Terra must argue her masters' case before a Council of Terra paralysed by bureaucracy and suspicion. This is a story of committee rooms and cold politics rather than war, set as the Warmaster draws nearer.",
+   "changed": [
+    "type",
+    "timeline",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Binary_Succession_(Audio_Drama)",
+    "https://www.trackofwords.com/2017/02/28/the-binary-succession-david-annandale/",
+    "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
+   ],
+   "confidence": "medium",
+   "notes": "Type corrected from Novella to Audio Drama (75 minutes, nine voice actors, March 2017). Legions Mechanicum confirmed. The big change is the date. Goulding places it 'soon before The Master of Mankind', which this database dates 011.M31, so 006.M31 is far too early. Set to 010-011.M31, flagged medium confidence because no source gives an exact Imperial date. Track of Words also notes Goulding's later story THE LAST COUNCIL sits between this and THE SOLAR WAR, which supports a late placement. The current blurb wrongly implies fighting on Mars, the action is political and set on Terra."
+  },
+  {
+   "bookKey": "burden-perpetual",
+   "verdict": "corrected",
+   "title": "PERPETUAL",
+   "author": "Dan Abnett",
+   "type": "Audio Drama",
+   "legions": [
+    "Perpetuals"
+   ],
+   "timeline": "007.M31",
+   "mainCharacters": [
+    "Oll Persson"
+   ],
+   "blurb": "Dan Abnett's short audio drama picks up from UNMARKED, with Oll Persson leading his small band of Calth refugees along the backways of time and space towards Terra. The road ends abruptly at a city perched on the edge of oblivion, with no way onward and enemies closing in. Reflective rather than action driven, it deepens the mystery of what the Perpetuals are without giving any firm answers.",
+   "blurbSafe": "Oll Persson, the undying man who walked away from Calth, is still shepherding his handful of survivors through time and space towards Terra. Their journey stalls in a strange place at the edge of everything, and whatever is hunting them has not given up.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Perpetual_(Audio_Drama)",
+    "https://www.trackofwords.com/2016/12/01/quick-review-perpetual-dan-abnett/",
+    "https://warhammer40k.fandom.com/wiki/Unmarked_(Anthology_Short_Story)"
+   ],
+   "confidence": "high",
+   "notes": "Type corrected from Novella to Audio Drama (27 minutes, Advent Calendar 2016 day one). Timeline 007.M31 and faction Perpetuals both confirmed, Goulding places it after MARK OF CALTH. Main characters trimmed: the site currently lists John Grammaticus, but neither the Black Library synopsis nor the Track of Words review places him with Oll's band here, and the wiki has Grammaticus held elsewhere by Prytanis during this period. Removing him is medium confidence, the rest is high."
+  },
+  {
+   "bookKey": "burden-ordo-sinister",
+   "verdict": "corrected",
+   "title": "ORDO SINISTER",
+   "author": "John French",
+   "type": "Short Story",
+   "legions": [
+    "Collegia Titanica"
+   ],
+   "timeline": "011.M31",
+   "mainCharacters": [
+    "Prefect Hydragyrum"
+   ],
+   "blurb": "John French follows Prefect Hydragyrum, who commands the Psi-Titan Borealis Thoon, one of the Ordo Sinister god-machines driven by a bound psychic mind. Deep inside the webway, where Magnus the Red's blunder has torn open the Emperor's wards, the single Titan holds back an entire daemonic incursion. Flashbacks interleaved with the battle reveal the disturbing process by which a man is made fit to operate such a weapon.",
+   "blurbSafe": "Inside the webway the Emperor's protective wards have been breached and daemons are pouring through. One of the Imperium's least discussed war machines, a Psi-Titan of the Ordo Sinister, is committed to hold the line, and its commander's account shows what operating such a weapon costs.",
+   "changed": [
+    "timeline",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Ordo_Sinister_(Short_Story)",
+    "https://www.trackofwords.com/2017/02/27/quick-review-ordo-sinister-john-french/",
+    "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
+   ],
+   "confidence": "medium",
+   "notes": "Type Short Story confirmed (digital only, February 2017). Faction Collegia Titanica confirmed. The current blurb is wrong in substance: this is the War Within the Webway, not the defence of Terra or the coming Siege, and it is one Titan rather than 'the Psi-Titans' plural. Timeline moved from 007.M31 to 011.M31 because Goulding places it 'immediately before The Master of Mankind', which this database dates 011.M31. Medium confidence on the exact date as no source gives an Imperial dating."
+  },
+  {
+   "bookKey": "burden-wolf-king",
+   "verdict": "corrected",
+   "title": "THE WOLF KING",
+   "author": "Chris Wraight",
+   "type": "Novella",
+   "legions": [
+    "Space Wolves",
+    "Alpha Legion",
+    "Dark Angels"
+   ],
+   "timeline": "007.M31",
+   "mainCharacters": [
+    "Leman Russ",
+    "Bjorn",
+    "Gunnar Gunnhilt",
+    "Kva"
+   ],
+   "blurb": "Bridging SCARS and VENGEFUL SPIRIT, Wraight's novella finds the Space Wolves still bleeding from the razing of Prospero and run to ground in the Alaxxes Nebula by the Alpha Legion fleet. Jaghatai Khan refuses to come, and a demoralised Leman Russ shuts himself away, leaving First Captain Gunnar Gunnhilt to fight the breakout and young Bjorn to talk his primarch back from despair. Gunnhilt dies buying time, and a Dark Angels fleet hidden in the nebula finally turns the battle.",
+   "blurbSafe": "Battered by Prospero and cornered in a corrosive nebula by an Alpha Legion fleet, the Space Wolves call on a brother Legion for aid. With his ships trapped and supplies failing, Leman Russ must work out what the Emperor's executioner is actually for.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Wolf_King",
+    "https://warhammer40k.fandom.com/wiki/Battle_of_the_Alaxxes_Nebula",
+    "https://www.trackofwords.com/2015/11/29/1398-2/"
+   ],
+   "confidence": "high",
+   "notes": "The prior audit was right on all counts. Type corrected from Short Story to Novella (128 page limited edition, October 2015). Alpha Legion added, which puts a traitor Legion on this entry for the first time, plus Dark Angels for the contingent that intervenes. Timeline 007.M31 confirmed by the Battle of the Alaxxes Nebula, so the audit's 'roughly 007.M31' matches what is already recorded. Black Library titles the novella 'Wolf King' without the definite article, the site title was left as is to avoid breaking keys."
+  },
+  {
+   "bookKey": "burden-heart-pharos",
+   "verdict": "corrected",
+   "title": "THE HEART OF THE PHAROS",
+   "author": "L J Goulding",
+   "type": "Audio Drama",
+   "legions": [
+    "Ultramarines",
+    "Iron Warriors"
+   ],
+   "timeline": "009.M31",
+   "mainCharacters": [
+    "Oberdeii",
+    "Tebecai",
+    "Barabas Dantioch"
+   ],
+   "blurb": "Laurie Goulding's audio drama is effectively chapter zero of Guy Haley's PHAROS. On Sotha, the Ultramarines Scouts Oberdeii and Tebecai of the 199th Company are sent down into the tunnels beneath Mount Pharos, because the masters of Ultramar understand almost nothing about the xenos beacon on which Imperium Secundus now depends. What the two find in the dark is never fully explained to them, and it haunts them afterwards.",
+   "blurbSafe": "The beacon on Sotha keeps Imperium Secundus alive, yet nobody in Ultramar truly grasps how it works or what dangers it holds. Two young Ultramarines Scouts are sent into the tunnels beneath the mountain to find out, with Warsmith Dantioch overseeing the descent.",
+   "changed": [
+    "type",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Heart_of_the_Pharos_(Audio_Drama)",
+    "https://www.trackofwords.com/2016/08/07/quick-review-the-heart-of-the-pharos-l-j-goulding/",
+    "https://www.trackofwords.com/2018/02/02/rapid-fire-laurie-goulding-talks-the-burden-of-loyalty/"
+   ],
+   "confidence": "high",
+   "notes": "The prior audit was right that this concerns the Pharos on Sotha, but the current blurb's 'corrupts those who seek to control it' is invention. Type corrected from Short Story to Audio Drama (38 minutes, February 2016, originally announced as 'The Dark Between the Stars'). Timeline 009.M31 and faction Ultramarines both confirmed, it sits between THE UNREMEMBERED EMPIRE and PHAROS. Barabas Dantioch features, but Iron Warriors was deliberately not added to legions because he is a loyalist and the tag would wrongly trip the traitor filter. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
+  }
+ ]
 }

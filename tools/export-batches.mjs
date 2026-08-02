@@ -2,21 +2,11 @@
 // Splits bookData into research batches and writes a manifest per batch.
 // Run: node tools/export-batches.mjs
 
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { createContext, runInContext } from 'node:vm';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import { writeFileSync, mkdirSync } from 'node:fs';
+import { join } from 'node:path';
+import { loadFromScript, repoRoot as root } from './load-data.mjs';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const src = readFileSync(join(root, 'script.js'), 'utf8');
-const ctx = createContext({
-    document: { getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
-        addEventListener: () => {}, documentElement: { classList: { toggle: () => {} } }, body: { style: {} } },
-    localStorage: { getItem: () => null, setItem: () => {} },
-    window: { addEventListener: () => {} }, requestAnimationFrame: () => {}, console,
-});
-runInContext(src.slice(0, src.indexOf('const modalOverlay')) + '\n;globalThis.__b = bookData;', ctx);
-const bookData = ctx.__b;
+const { bookData } = loadFromScript(['bookData']);
 
 const typeOf = (d) => (/<strong>Type:<\/strong>\s*([^<]+)/.exec(d || '')?.[1] || '').trim();
 

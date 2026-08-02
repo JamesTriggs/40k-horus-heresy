@@ -1,281 +1,434 @@
 {
-  "batch": "silent-war",
-  "entries": [
-    {
-      "bookKey": "silent-child-night",
-      "verdict": "corrected",
-      "title": "CHILD OF NIGHT",
-      "author": "John French",
-      "type": "Short Story",
-      "legions": ["Night Lords"],
-      "timeline": "005-007.M31",
-      "mainCharacters": ["Fel Zharost", "Sevatar", "Calliope"],
-      "blurb": "Fel Zharost, former Chief Librarian of the Night Lords, has hidden in the hive sumps beneath Terra ever since Sevatar and the Edict of Nikaea drove him out of the VIII Legion. An armoured hunter tracks him through the depths while psychic flashbacks lay bare the atrocities he committed in Curze's name. Cornered, Zharost finally learns why he is being pursued, and that his Legion has followed Horus into heresy.",
-      "blurbSafe": "An exiled Night Lords Librarian has spent years buried in the hive sumps beneath Terra, far enough down that the galaxy's civil war has passed him by. Someone in power armour is now hunting him through the dark, and he does not know what he is supposed to have done.",
-      "changed": ["legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2015/02/02/quick-review-child-of-night-john-french/",
-        "https://wh40k.lexicanum.com/wiki/Child_of_Night_(Short_Story)",
-        "https://lordsamperlibrary.blogspot.com/2022/05/child-of-night-horus-heresy-john-french.html"
-      ],
-      "confidence": "high",
-      "notes": "Manifest legion tag of Knights-Errant was wrong: this is a Night Lords story with no Knights-Errant named in any source. The hunter stalking Zharost is unnamed in Lexicanum's summary, so I have not attributed him to a faction. In-universe date could not be verified from any source; manifest value left as is, though the story must post-date the VIII Legion's open treachery."
-    },
-    {
-      "bookKey": "silent-wolf-hunt",
-      "verdict": "corrected",
-      "title": "WOLF HUNT",
-      "author": "Graham McNeill",
-      "type": "Audio Drama",
-      "legions": ["Luna Wolves", "Imperial Army", "Knights-Errant"],
-      "timeline": "005.M31",
-      "mainCharacters": ["Severian", "Yasu Nagasena"],
-      "blurb": "Severian, the last survivor of the Outcast Dead, is loose on Terra and trying to get off the Throneworld as news of the Isstvan V massacre spreads. The former Luna Wolf is tracked through the Petitioner's City by Yasu Nagasena, a patient Imperial hunter backed by the Black Sentinels. Neither man realises that others are watching the chase, and that the real purpose of it only becomes clear once the hunt is over.",
-      "blurbSafe": "A fugitive legionary, sole survivor of the Outcast Dead, moves through the underside of Terra hoping to slip off-world before the net closes. An unhurried Imperial hunter and his Black Sentinel escort are already on his trail.",
-      "changed": ["type", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://graham-mcneill.com/wolf-hunt/",
-        "https://warhammer40k.fandom.com/wiki/Wolf_Hunt_(Audio_Drama)",
-        "https://grimdarkarchive.com/book/wolf-hunt-2013/"
-      ],
-      "confidence": "high",
-      "notes": "Nothing to do with the Space Wolves. It is the direct sequel to The Outcast Dead and follows Severian of the Luna Wolves being hunted on Terra by Yasu Nagasena. Legion tag change flips this from loyalist (Space Wolves) to traitor (Luna Wolves) on the site filter, which is correct for the Legion featured even though Severian himself is an outcast later recruited by Malcador. Knights-Errant retained for the unseen third party directing the hunt. Type: the author's own site, the Warhammer 40k Wiki and Grimdark Archive all call it a full-cast audio drama (1h15, cast of performers). Lexicanum's page is titled 'Audio Book', which is probably where the manifest value came from."
-    },
-    {
-      "bookKey": "silent-watcher",
-      "verdict": "corrected",
-      "title": "THE WATCHER",
-      "author": "CZ Dunn",
-      "type": "Audio Drama",
-      "legions": ["Knights-Errant", "Space Wolves", "Night Lords"],
-      "timeline": "007-009.M31",
-      "mainCharacters": ["Ison", "Konrad Curze"],
-      "blurb": "A shuttle limps back into the Solar System carrying a single broken Space Wolf, the last of a VI Legion watch-pack posted to keep eyes on Konrad Curze and the Night Lords. His account is too fragmented to act on, so Ison, a Knight-Errant and former Legion Librarian, goes into the dying warrior's mind and relives the pack's mission and the traitor attack that destroyed it.",
-      "blurbSafe": "A shuttle returns to the Solar System carrying one gravely wounded Space Wolf from a pack sent to watch over the most unstable of the Emperor's sons. What he says makes little sense, so one of Malcador's Knights-Errant goes looking for the truth inside his head.",
-      "changed": ["legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2014/12/24/quick-review-the-watcher-cz-dunn/",
-        "https://wh40k.lexicanum.com/wiki/The_Watcher_(Audio_Drama)",
-        "https://www.goodreads.com/book/show/29364097.The_Watcher"
-      ],
-      "confidence": "high",
-      "notes": "The prior audit was right. No Dark Angels and no Watchers in the Dark. Lexicanum names the Knight-Errant as Ison, a former Legion Librarian; the Black Library blurb describes the story as revealing what happened to those sent to watch over the Night Haunter, and the Goodreads entry names the Space Wolves watch-pack sent to watch the Night Lords. Legion change removes a loyalist Legion that never appears and adds a traitor Legion that does. In-universe date not verifiable; manifest value retained."
-    },
-    {
-      "bookKey": "silent-grey-angel",
-      "verdict": "corrected",
-      "title": "GREY ANGEL",
-      "author": "John French",
-      "type": "Audio Drama",
-      "legions": ["Knights-Errant", "Dark Angels"],
-      "timeline": "008.M31",
-      "mainCharacters": ["Garviel Loken", "Iacton Qruze", "Luther", "Cypher"],
-      "blurb": "On his first assignment as a Knight-Errant, Garviel Loken travels to Caliban with Iacton Qruze to judge whether Luther and the Dark Angels left behind there can still be trusted. Loken lets himself be taken prisoner so he can question Luther face to face while Qruze works deeper into the fortress of Aldurukh. Cypher and a Watcher in the Dark help them get clear, and they leave with more questions than answers.",
-      "blurbSafe": "Two of Malcador's newly recruited Knights-Errant are sent to Caliban to work out where the loyalty of Luther and the Dark Angels left on the home world really lies. Getting close enough to ask means walking into the fortress of Aldurukh on the Order's terms.",
-      "changed": ["type", "timeline", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2016/01/29/quick-review-grey-angel-john-french/",
-        "https://wh40k.lexicanum.com/wiki/Grey_Angel_(Audio_Book)",
-        "https://purpleheresy.blogspot.com/search?q=Grey+Angel"
-      ],
-      "confidence": "high",
-      "notes": "Manifest blurb was generic. Concrete plot confirmed by three sources: Loken and Qruze on Caliban, captured by Luther, aided out by Cypher and a Watcher in the Dark. Dark Angels added to legions (loyalist, so no traitor-filter flip). Type corrected to Audio Drama: it was released on CD as an audio drama alongside Swallow's Burden of Duty, per Track of Words and purpleheresy; Lexicanum's page title says Audio Book. Timeline narrowed to 008.M31 because this is Loken's first Knight-Errant mission, after Garro: Legion of One (008.M31 in this dataset) and before Luna Mendax and Vengeful Spirit (008-009.M31)."
-    },
-    {
-      "bookKey": "silent-luna-mendax",
-      "verdict": "corrected",
-      "title": "LUNA MENDAX",
-      "author": "Graham McNeill",
-      "type": "Short Story",
-      "legions": ["Knights-Errant"],
-      "timeline": "008.M31",
-      "mainCharacters": ["Garviel Loken", "Tarik Torgaddon", "Iacton Qruze"],
-      "blurb": "Back from Caliban and badly frayed, Garviel Loken has withdrawn to an abandoned bio-dome on Luna, tending a garden and picking at the holes in his own memory. There he is visited by Tarik Torgaddon, the friend killed on Isstvan III, who presses him to remember the oath he swore to the Emperor. When Iacton Qruze arrives with a fresh summons from Malcador, Loken takes it.",
-      "blurbSafe": "Withdrawn to a deserted dome on Luna, a former Luna Wolves captain tends a garden and tries to piece himself back together after a mission that went badly. Then he receives a visitor whose presence he cannot account for.",
-      "changed": ["timeline", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2016/01/26/quick-review-luna-mendax-graham-mcneill/",
-        "https://wh40k.lexicanum.com/wiki/Luna_Mendax_(Short_Story)",
-        "https://purpleheresy.blogspot.com/search?q=Luna+Mendax"
-      ],
-      "confidence": "high",
-      "notes": "The prior audit was right: this is Loken's recovery on Luna, not deception spreading across Luna. Lexicanum explicitly describes the visitor as the spirit of Tarik Torgaddon, slain months earlier on Isstvan III, and the story ending with Qruze bringing Malcador's summons. Legions changed from Various to Knights-Errant. Timeline narrowed to 008.M31, placing it after Grey Angel and immediately before Vengeful Spirit (008-009.M31 in this dataset)."
-    },
-    {
-      "bookKey": "silent-purge",
-      "verdict": "corrected",
-      "title": "THE PURGE",
-      "author": "Anthony Reynolds",
-      "type": "Novella",
-      "legions": ["Word Bearers", "Ultramarines", "Imperial Fists"],
-      "timeline": "006-008.M31",
-      "mainCharacters": ["Sor Talgron", "Rogal Dorn", "Aecus Decimus", "Jarulek"],
-      "blurb": "Sor Talgron, captain of the Word Bearers' 34th Company, is recalled from Terra where he has spent years playing the trusted ally to Rogal Dorn. Before he leaves he murders the Terran-born Predicant Volkhar Wreth and has a daemon bound into the corpse. He then takes his company to Percepton Primus in Ultramar, where a 163-day war against the Ultramarines ends with the defenders scouring their own world with phosphex.",
-      "blurbSafe": "A Word Bearers captain has spent the years before the Heresy stationed on Terra, treated as a friend by the Imperial Fists. Recalled to Lorgar's side for the Shadow Crusade, he leads his company into a long and vicious siege against the Ultramarines in Ultramar.",
-      "changed": ["timeline", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2014/08/07/the-purge-anthony-reynolds/",
-        "https://wh40k.lexicanum.com/wiki/The_Purge_(Novella)"
-      ],
-      "confidence": "high",
-      "notes": "Not a Death Guard story at all. It is Anthony Reynolds' Word Bearers novella following Sor Talgron, with a Terra strand featuring Rogal Dorn and an Ultramar strand against the Ultramarines' 17th Chapter. Legion tag stays traitor-side but changes traitor Legion. Timeline widened to 006-008.M31 on Lexicanum's in-universe dates: 132006.M31 for Talgron's arrival at the Imperial Palace and 454008.M31 for the end of the Percepton Primus campaign. Custodian Guard (Tiber Acanthus) and Nathaniel Garro also appear but only in passing, so I left them off the faction list."
-    },
-    {
-      "bookKey": "silent-ghosts-speak",
-      "verdict": "corrected",
-      "title": "GHOSTS SPEAK NOT",
-      "author": "James Swallow",
-      "type": "Short Story",
-      "legions": ["Knights-Errant", "Sisters of Silence", "Death Guard"],
-      "timeline": "007-009.M31",
-      "mainCharacters": ["Amendera Kendel", "Helig Gallor", "Nathaniel Garro"],
-      "blurb": "Amendera Kendel, once a Sister of Silence and now Malcador's Agentia Tertius, is sent into the Proxima system to run down reports that the Warmaster's agents have taken root on Terra's doorstep. For the work she calls on the Seventy, the loyalist Death Guard who fled Isstvan with Nathaniel Garro and have been kept in quarantine on Luna, Helig Gallor among them. What she uncovers is less straightforward than the infiltration she went looking for.",
-      "blurbSafe": "A former Sister of Silence, now one of the Sigillite's senior agents, investigates signs that Horus's people have reached a system close to Terra. To do it she has to draw on the mistrusted loyalist Death Guard who escaped Isstvan III.",
-      "changed": ["legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2017/01/11/quick-review-ghosts-speak-not-james-swallow/",
-        "https://wh40k.lexicanum.com/wiki/Ghosts_Speak_Not_(Short_Story)"
-      ],
-      "confidence": "high",
-      "notes": "Not a Garro story. The protagonist is Amendera Kendel, former Sister of Silence and Malcador's Agentia Tertius. Track of Words places it in the Proxima system; Lexicanum confirms Kendel recruiting Helig Gallor from the Seventy. Caution on the site filter: the Death Guard here are the loyalist Eisenstein survivors, so a crude traitor-filter will mark this entry traitor-side when the XIV Legion warriors in it are loyal."
-    },
-    {
-      "bookKey": "silent-army-one",
-      "verdict": "corrected",
-      "title": "ARMY OF ONE",
-      "author": "Rob Sanders",
-      "type": "Short Story",
-      "legions": ["Officio Assassinorum"],
-      "timeline": "009.M31",
-      "mainCharacters": ["Ganimus", "Malcador the Sigillite", "Chravius Blumolotov"],
-      "blurb": "The hive world of Proxima Apocryphis declares for Horus, and Malcador answers by dropping one Eversor assassin onto it. In fragments of memory the killer recalls his life as Ganimus, a drosshill urchin turned gang runner turned pit fighter, before the Clade rebuilt him into a drug-flooded weapon. His target is the planetary Lord-Governor Chravius Blumolotov, the man who once bought him, and he butchers his way up through the hive to reach him.",
-      "blurbSafe": "When a hive world turns to the Warmaster, the Sigillite's answer is not an army but a single man. Told from inside the head of an Officio Assassinorum operative, this very short piece follows his descent to the surface and the memories that made him what he is.",
-      "changed": ["legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://raw.githubusercontent.com/Forrest1777/WH40k_LORE/main/Army%20of%20One%20-%20Rob%20Sanders.txt",
-        "https://www.trackofwords.com/2015/02/18/quick-review-army-of-one-rob-sanders/",
-        "https://wh40k.lexicanum.com/wiki/Army_of_One_(Short_Story)"
-      ],
-      "confidence": "high",
-      "notes": "Verified against the full text of the story itself, which is roughly 1,000 words. Not a Knights-Errant story: the protagonist is an Eversor Assassin of the Officio Assassinorum, named Ganimus by Malcador. Track of Words tags it Officio Assassinorum and the Black Library blurb describes Malcador despatching a living weapon to Proxima Apocryphis. In-universe date not stated anywhere; manifest value retained."
-    },
-    {
-      "bookKey": "silent-distant-echoes",
-      "verdict": "corrected",
-      "title": "DISTANT ECHOES OF OLD NIGHT",
-      "author": "Rob Sanders",
-      "type": "Short Story",
-      "legions": ["Death Guard", "Imperial Fists"],
-      "timeline": "009.M31",
-      "mainCharacters": ["Morgax Murnau"],
-      "blurb": "Chaplain Morgax Murnau of the Death Guard hunts the survivors of a downed Imperial Fists ship across Algonquis, a forest moon rotting away into swamp. When the VII Legion warriors prove too well dug in to shift, Murnau unleashes his Legion's Destroyers, whose chem and rad weapons strip the ground bare. The whole thing is steeped in the rot and decay that will one day swallow the XIV Legion entirely.",
-      "blurbSafe": "A Death Guard Chaplain pursues a small force of Imperial Fists across a decaying forest moon. When his quarry keeps eluding him, he reaches for one of the XIV Legion's most feared and least discriminating assets.",
-      "changed": ["legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2015/02/10/quick-review-distant-echoes-of-old-night-rob-sanders/",
-        "https://wh40k.lexicanum.com/wiki/Distant_Echoes_of_Old_Night_(Short_Story)",
-        "https://purpleheresy.blogspot.com/search?q=Distant+Echoes"
-      ],
-      "confidence": "high",
-      "notes": "Nothing to do with Old Night or ancient horrors resurfacing, and no Knights-Errant. It is a Death Guard versus Imperial Fists skirmish story led by Chaplain Morgax Murnau with a Destroyer squad. Track of Words and Lexicanum both give the same core, purpleheresy adds the moon's name, Algonquis. Legion change flips this entry from a neutral Knights-Errant tag to traitor-side (Death Guard) plus loyalist Imperial Fists. In-universe date not sourced; manifest value retained."
-    },
-    {
-      "bookKey": "silent-lost-sons",
-      "verdict": "corrected",
-      "title": "LOST SONS",
-      "author": "James Swallow",
-      "type": "Short Story",
-      "legions": ["Blood Angels", "Knights-Errant"],
-      "timeline": "010-011.M31",
-      "mainCharacters": ["Warden Arkad", "Tylos Rubio"],
-      "blurb": "Warden Arkad and nineteen Blood Angels were left to hold Baal while Sanguinius took the Legion to Signus. Five years on and blinded by the Ruinstorm, they receive Tylos Rubio, a Knight-Errant carrying the Sigillite's black scroll: the IX Legion is presumed dead and is to be struck from the rolls, its remnants folded into Malcador's new order. Arkad refuses, and readies a suicidal run to find his primarch or kill Horus.",
-      "blurbSafe": "Twenty Blood Angels were left behind to keep watch over Baal while their primarch took the Legion to Signus, and the Ruinstorm has kept them blind ever since. An agent of the Sigillite arrives with orders from Terra that they never expected to hear.",
-      "changed": ["timeline", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2015/02/05/quick-review-lost-sons-james-swallow/",
-        "https://wh40k.lexicanum.com/wiki/Lost_Sons_(Short_Story)",
-        "https://purpleheresy.blogspot.com/search?q=Lost+Sons"
-      ],
-      "confidence": "medium",
-      "notes": "Not Garro recruiting from traitor Legions. It is the Blood Angels garrison left on Baal, told through Warden Arkad, visited by the Knight-Errant Tylos Rubio. All three sources agree. Timeline: Lexicanum and purpleheresy both put the story roughly five years after the Legion departed for Signus, which in this dataset (Fear to Tread at 005-006.M31) works out at about 010-011.M31 rather than the manifest's 009.M31. Confidence medium on that date only, since it is derived rather than quoted."
-    },
-    {
-      "bookKey": "silent-templar",
-      "verdict": "corrected",
-      "title": "TEMPLAR",
-      "author": "John French",
-      "type": "Audio Drama",
-      "legions": ["Imperial Fists", "Word Bearers"],
-      "timeline": "010.M31",
-      "mainCharacters": ["Sigismund"],
-      "blurb": "Sigismund, First Captain of the Imperial Fists, leads an assault on a comet-shrine consecrated to Unity that a band of Word Bearers has seized as a stepping stone back towards the Solar System. The killing is cut through with duels and conversations he keeps returning to, and with the doubt he carries about the oath that chains his sword to his arm. Whether his skill at arms or that doubt wins out is the point of the piece.",
-      "blurbSafe": "The Imperial Fists' First Captain takes a strike force against Word Bearers who have taken a shrine on the approaches to the Solar System. Between the fighting, he turns over the duels, conversations and doubts that have made him what he is.",
-      "changed": ["legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2015/02/27/templar-john-french-audio-drama/",
-        "https://wh40k.lexicanum.com/wiki/Templar_(Audio_Drama)"
-      ],
-      "confidence": "high",
-      "notes": "The manifest blurb was roughly right about Sigismund but the legion tag said Knights-Errant, which is wrong and hides a traitor Legion. Lexicanum gives the setting as a comet-shrine dedicated to Unity, with Word Bearers trying to work their way back into the Solar System; Track of Words confirms the mission to cleanse a Word Bearers enclave. Sigismund is not the Emperor's Champion at this point, he is First Captain. In-universe date not sourced; manifest value retained, though Track of Words describes the piece as showing him early in the Heresy."
-    },
-    {
-      "bookKey": "silent-patience",
-      "verdict": "corrected",
-      "title": "PATIENCE",
-      "author": "James Swallow",
-      "type": "Short Story",
-      "legions": ["Knights-Errant"],
-      "timeline": "010.M31",
-      "mainCharacters": ["Helig Gallor", "Nathaniel Garro"],
-      "blurb": "Helig Gallor, once a Death Guard under Nathaniel Garro and now a Knight-Errant, leads troops of Malcador's Chosen across the bombarded surface of Nolec Trinus in search of his old battle-captain. Garro has gone ahead alone to face a daemon and his vox has gone quiet. Gallor finds him alive but unable to speak through a wrecked helm, and the two have to work out between them how to stop the thing regenerating.",
-      "blurbSafe": "A former Death Guard legionary, now serving Malcador, picks his way across a shelled-out world looking for the commander he once followed, who pressed on alone and then went silent. He is also hoping to find some footing with the others from his old Legion.",
-      "changed": ["blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2017/01/12/quick-review-patience-james-swallow/",
-        "https://wh40k.lexicanum.com/wiki/Patience_(Short_Story)"
-      ],
-      "confidence": "high",
-      "notes": "The manifest blurb was a paraphrase of the title. The protagonist is Helig Gallor, not Garro, and the story is a micro-short set on Nolec Trinus. Track of Words and Lexicanum agree on Gallor searching for Garro; Lexicanum supplies the world's name and the daemon that regenerates from blood and corpses. Legions tag of Knights-Errant is correct and unchanged. Both leads are ex-Death Guard, but they act as Knights-Errant here, so I did not add the XIV Legion and trip the traitor filter."
-    },
-    {
-      "bookKey": "silent-sigillite",
-      "verdict": "corrected",
-      "title": "THE SIGILLITE",
-      "author": "Chris Wraight",
-      "type": "Audio Drama",
-      "legions": ["Imperial Army"],
-      "timeline": "010.M31",
-      "mainCharacters": ["Khalid Hassan", "Malcador the Sigillite"],
-      "blurb": "Khalid Hassan, an Imperial Army captain of the Fourth Clandestine Orta, returns to the Imperial Palace after a secret mission into the wastelands of Gyptus that went badly wrong. Expecting to answer for the failure, he is instead walked through the Palace to an audience with Malcador himself. As Hassan recounts the operation in flashback, the Sigillite is quietly weighing him for something else, with the Emperor conspicuously absent throughout.",
-      "blurbSafe": "An Imperial Army officer comes back to the Palace from a disastrous covert operation in the Gyptus wastes, braced for punishment. Instead he is brought before Malcador the Sigillite, regent of a Terra whose Emperor is nowhere to be seen.",
-      "changed": ["type", "legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2016/01/28/quick-review-the-sigillite-chris-wraight/",
-        "https://wh40k.lexicanum.com/wiki/The_Sigillite_(Audio_Book)",
-        "https://warhammer40k.fandom.com/wiki/The_Sigillite_(Audio_Drama)"
-      ],
-      "confidence": "medium",
-      "notes": "Despite the title this is not a story about Malcador orchestrating a shadow war. It is a baseline human viewpoint story: Track of Words and the Black Library blurb both name Captain Khalid Hassan of the Fourth Clandestine Orta, returning from Gyptus to be debriefed by Malcador, with no Astartes protagonist. Lexicanum's page body names the officer 'Hasani Sabbyat', which conflicts with two other sources, so I went with Khalid Hassan; worth a second look if precision on the name matters. Legions changed from Knights-Errant (none appear) to Imperial Army. Type corrected to Audio Drama: Lexicanum's own page text calls it an original audio drama with three credited performers, even though the page is titled Audio Book. In-universe date not sourced; manifest value retained."
-    },
-    {
-      "bookKey": "silent-gates-terra",
-      "verdict": "corrected",
-      "title": "THE GATES OF TERRA",
-      "author": "Nick Kyme",
-      "type": "Short Story",
-      "legions": ["Ultramarines", "Imperial Fists"],
-      "timeline": "012.M31",
-      "mainCharacters": ["Arcadese", "Malcador the Sigillite", "Rogal Dorn"],
-      "blurb": "Captain Arcadese of the Ultramarines, heavily augmented and increasingly certain his Legion has abandoned him, holds an orbital bastion in the Ardent Reef as the Vengeful Spirit arrives and World Eaters and daemons board. The siege is not real. It is a scenario driven into his mind by Librarians working for Malcador and Rogal Dorn, conditioning loyalist officers for an assault on Terra that has not yet come.",
-      "blurbSafe": "An augmented Ultramarines captain defends a bastion in the Ardent Reef against the Warmaster's vanguard, nagged by the feeling that his own Legion has left him to it. Framing the battle is a conversation between Malcador and Rogal Dorn about what they are willing to do to win the war.",
-      "changed": ["legions", "blurb", "blurbSafe"],
-      "sources": [
-        "https://www.trackofwords.com/2015/02/08/quick-review-the-gates-of-terra-nick-kyme/",
-        "https://purpleheresy.blogspot.com/search?q=Gates+of+Terra",
-        "https://wh40k.lexicanum.com/wiki/The_Gates_of_Terra_(Short_Story)"
-      ],
-      "confidence": "medium",
-      "notes": "Not Imperial Fists fortifying the Throneworld. The viewpoint character is Captain Arcadese of the Ultramarines, previously seen in Forgotten Sons, holding the Ardent Reef. Lexicanum repeats the deliberately misleading cover blurb about Horus's final assault; purpleheresy gives the actual twist, that the battle is a psychically implanted simulation run by Malcador's and Dorn's Librarians as battle-conditioning before the real Siege, which Track of Words corroborates in describing the story as ambiguous and about how far loyalist commanders will go. Confidence medium because only one source states the twist outright. In-universe date not sourced; manifest value retained, and it is at least consistent with the story sitting before the Siege."
-    }
-  ]
+ "batch": "silent-war",
+ "entries": [
+  {
+   "bookKey": "silent-child-night",
+   "verdict": "corrected",
+   "title": "CHILD OF NIGHT",
+   "author": "John French",
+   "type": "Short Story",
+   "legions": [
+    "Night Lords"
+   ],
+   "timeline": "005-007.M31",
+   "mainCharacters": [
+    "Fel Zharost",
+    "Sevatar",
+    "Calliope"
+   ],
+   "blurb": "Fel Zharost, former Chief Librarian of the Night Lords, has hidden in the hive sumps beneath Terra ever since Sevatar and the Edict of Nikaea drove him out of the VIII Legion. An armoured hunter tracks him through the depths while psychic flashbacks lay bare the atrocities he committed in Curze's name. Cornered, Zharost finally learns why he is being pursued, and that his Legion has followed Horus into heresy.",
+   "blurbSafe": "An exiled Night Lords Librarian has spent years buried in the hive sumps beneath Terra, far enough down that the galaxy's civil war has passed him by. Someone in power armour is now hunting him through the dark, and he does not know what he is supposed to have done.",
+   "changed": [
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2015/02/02/quick-review-child-of-night-john-french/",
+    "https://wh40k.lexicanum.com/wiki/Child_of_Night_(Short_Story)",
+    "https://lordsamperlibrary.blogspot.com/2022/05/child-of-night-horus-heresy-john-french.html"
+   ],
+   "confidence": "high",
+   "notes": "Manifest legion tag of Knights-Errant was wrong: this is a Night Lords story with no Knights-Errant named in any source. The hunter stalking Zharost is unnamed in Lexicanum's summary, so I have not attributed him to a faction. In-universe date could not be verified from any source; manifest value left as is, though the story must post-date the VIII Legion's open treachery."
+  },
+  {
+   "bookKey": "silent-wolf-hunt",
+   "verdict": "corrected",
+   "title": "WOLF HUNT",
+   "author": "Graham McNeill",
+   "type": "Audio Drama",
+   "legions": [
+    "Luna Wolves",
+    "Imperial Army",
+    "Knights-Errant"
+   ],
+   "timeline": "005.M31",
+   "mainCharacters": [
+    "Severian",
+    "Yasu Nagasena"
+   ],
+   "blurb": "Severian, the last survivor of the Outcast Dead, is loose on Terra and trying to get off the Throneworld as news of the Isstvan V massacre spreads. The former Luna Wolf is tracked through the Petitioner's City by Yasu Nagasena, a patient Imperial hunter backed by the Black Sentinels. Neither man realises that others are watching the chase, and that the real purpose of it only becomes clear once the hunt is over.",
+   "blurbSafe": "A fugitive legionary, sole survivor of the Outcast Dead, moves through the underside of Terra hoping to slip off-world before the net closes. An unhurried Imperial hunter and his Black Sentinel escort are already on his trail.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://graham-mcneill.com/wolf-hunt/",
+    "https://warhammer40k.fandom.com/wiki/Wolf_Hunt_(Audio_Drama)",
+    "https://grimdarkarchive.com/book/wolf-hunt-2013/"
+   ],
+   "confidence": "high",
+   "notes": "Nothing to do with the Space Wolves. It is the direct sequel to The Outcast Dead and follows Severian of the Luna Wolves being hunted on Terra by Yasu Nagasena. Legion tag change flips this from loyalist (Space Wolves) to traitor (Luna Wolves) on the site filter, which is correct for the Legion featured even though Severian himself is an outcast later recruited by Malcador. Knights-Errant retained for the unseen third party directing the hunt. Type: the author's own site, the Warhammer 40k Wiki and Grimdark Archive all call it a full-cast audio drama (1h15, cast of performers). Lexicanum's page is titled 'Audio Book', which is probably where the manifest value came from."
+  },
+  {
+   "bookKey": "silent-watcher",
+   "verdict": "corrected",
+   "title": "THE WATCHER",
+   "author": "CZ Dunn",
+   "type": "Audio Drama",
+   "legions": [
+    "Knights-Errant",
+    "Space Wolves",
+    "Night Lords"
+   ],
+   "timeline": "007-009.M31",
+   "mainCharacters": [
+    "Ison",
+    "Konrad Curze"
+   ],
+   "blurb": "A shuttle limps back into the Solar System carrying a single broken Space Wolf, the last of a VI Legion watch-pack posted to keep eyes on Konrad Curze and the Night Lords. His account is too fragmented to act on, so Ison, a Knight-Errant and former Legion Librarian, goes into the dying warrior's mind and relives the pack's mission and the traitor attack that destroyed it.",
+   "blurbSafe": "A shuttle returns to the Solar System carrying one gravely wounded Space Wolf from a pack sent to watch over the most unstable of the Emperor's sons. What he says makes little sense, so one of Malcador's Knights-Errant goes looking for the truth inside his head.",
+   "changed": [
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2014/12/24/quick-review-the-watcher-cz-dunn/",
+    "https://wh40k.lexicanum.com/wiki/The_Watcher_(Audio_Drama)",
+    "https://www.goodreads.com/book/show/29364097.The_Watcher"
+   ],
+   "confidence": "high",
+   "notes": "The prior audit was right. No Dark Angels and no Watchers in the Dark. Lexicanum names the Knight-Errant as Ison, a former Legion Librarian; the Black Library blurb describes the story as revealing what happened to those sent to watch over the Night Haunter, and the Goodreads entry names the Space Wolves watch-pack sent to watch the Night Lords. Legion change removes a loyalist Legion that never appears and adds a traitor Legion that does. In-universe date not verifiable; manifest value retained."
+  },
+  {
+   "bookKey": "silent-grey-angel",
+   "verdict": "corrected",
+   "title": "GREY ANGEL",
+   "author": "John French",
+   "type": "Audio Drama",
+   "legions": [
+    "Knights-Errant",
+    "Dark Angels"
+   ],
+   "timeline": "008.M31",
+   "mainCharacters": [
+    "Garviel Loken",
+    "Iacton Qruze",
+    "Luther",
+    "Cypher"
+   ],
+   "blurb": "On his first assignment as a Knight-Errant, Garviel Loken travels to Caliban with Iacton Qruze to judge whether Luther and the Dark Angels left behind there can still be trusted. Loken lets himself be taken prisoner so he can question Luther face to face while Qruze works deeper into the fortress of Aldurukh. Cypher and a Watcher in the Dark help them get clear, and they leave with more questions than answers.",
+   "blurbSafe": "Two of Malcador's newly recruited Knights-Errant are sent to Caliban to work out where the loyalty of Luther and the Dark Angels left on the home world really lies. Getting close enough to ask means walking into the fortress of Aldurukh on the Order's terms.",
+   "changed": [
+    "type",
+    "timeline",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2016/01/29/quick-review-grey-angel-john-french/",
+    "https://wh40k.lexicanum.com/wiki/Grey_Angel_(Audio_Book)",
+    "https://purpleheresy.blogspot.com/search?q=Grey+Angel"
+   ],
+   "confidence": "high",
+   "notes": "Manifest blurb was generic. Concrete plot confirmed by three sources: Loken and Qruze on Caliban, captured by Luther, aided out by Cypher and a Watcher in the Dark. Dark Angels added to legions (loyalist, so no traitor-filter flip). Type corrected to Audio Drama: it was released on CD as an audio drama alongside Swallow's Burden of Duty, per Track of Words and purpleheresy; Lexicanum's page title says Audio Book. Timeline narrowed to 008.M31 because this is Loken's first Knight-Errant mission, after Garro: Legion of One (008.M31 in this dataset) and before Luna Mendax and Vengeful Spirit (008-009.M31)."
+  },
+  {
+   "bookKey": "silent-luna-mendax",
+   "verdict": "corrected",
+   "title": "LUNA MENDAX",
+   "author": "Graham McNeill",
+   "type": "Short Story",
+   "legions": [
+    "Knights-Errant"
+   ],
+   "timeline": "008.M31",
+   "mainCharacters": [
+    "Garviel Loken",
+    "Tarik Torgaddon",
+    "Iacton Qruze"
+   ],
+   "blurb": "Back from Caliban and badly frayed, Garviel Loken has withdrawn to an abandoned bio-dome on Luna, tending a garden and picking at the holes in his own memory. There he is visited by Tarik Torgaddon, the friend killed on Isstvan III, who presses him to remember the oath he swore to the Emperor. When Iacton Qruze arrives with a fresh summons from Malcador, Loken takes it.",
+   "blurbSafe": "Withdrawn to a deserted dome on Luna, a former Luna Wolves captain tends a garden and tries to piece himself back together after a mission that went badly. Then he receives a visitor whose presence he cannot account for.",
+   "changed": [
+    "timeline",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2016/01/26/quick-review-luna-mendax-graham-mcneill/",
+    "https://wh40k.lexicanum.com/wiki/Luna_Mendax_(Short_Story)",
+    "https://purpleheresy.blogspot.com/search?q=Luna+Mendax"
+   ],
+   "confidence": "high",
+   "notes": "The prior audit was right: this is Loken's recovery on Luna, not deception spreading across Luna. Lexicanum explicitly describes the visitor as the spirit of Tarik Torgaddon, slain months earlier on Isstvan III, and the story ending with Qruze bringing Malcador's summons. Legions changed from Various to Knights-Errant. Timeline narrowed to 008.M31, placing it after Grey Angel and immediately before Vengeful Spirit (008-009.M31 in this dataset)."
+  },
+  {
+   "bookKey": "silent-purge",
+   "verdict": "corrected",
+   "title": "THE PURGE",
+   "author": "Anthony Reynolds",
+   "type": "Novella",
+   "legions": [
+    "Word Bearers",
+    "Ultramarines",
+    "Imperial Fists"
+   ],
+   "timeline": "006-008.M31",
+   "mainCharacters": [
+    "Sor Talgron",
+    "Rogal Dorn",
+    "Aecus Decimus",
+    "Jarulek"
+   ],
+   "blurb": "Sor Talgron, captain of the Word Bearers' 34th Company, is recalled from Terra where he has spent years playing the trusted ally to Rogal Dorn. Before he leaves he murders the Terran-born Predicant Volkhar Wreth and has a daemon bound into the corpse. He then takes his company to Percepton Primus in Ultramar, where a 163-day war against the Ultramarines ends with the defenders scouring their own world with phosphex.",
+   "blurbSafe": "A Word Bearers captain has spent the years before the Heresy stationed on Terra, treated as a friend by the Imperial Fists. Recalled to Lorgar's side for the Shadow Crusade, he leads his company into a long and vicious siege against the Ultramarines in Ultramar.",
+   "changed": [
+    "timeline",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2014/08/07/the-purge-anthony-reynolds/",
+    "https://wh40k.lexicanum.com/wiki/The_Purge_(Novella)"
+   ],
+   "confidence": "high",
+   "notes": "Not a Death Guard story at all. It is Anthony Reynolds' Word Bearers novella following Sor Talgron, with a Terra strand featuring Rogal Dorn and an Ultramar strand against the Ultramarines' 17th Chapter. Legion tag stays traitor-side but changes traitor Legion. Timeline widened to 006-008.M31 on Lexicanum's in-universe dates: 132006.M31 for Talgron's arrival at the Imperial Palace and 454008.M31 for the end of the Percepton Primus campaign. Custodian Guard (Tiber Acanthus) and Nathaniel Garro also appear but only in passing, so I left them off the faction list."
+  },
+  {
+   "bookKey": "silent-ghosts-speak",
+   "verdict": "corrected",
+   "title": "GHOSTS SPEAK NOT",
+   "author": "James Swallow",
+   "type": "Short Story",
+   "legions": [
+    "Knights-Errant",
+    "Sisters of Silence",
+    "Death Guard"
+   ],
+   "timeline": "007-009.M31",
+   "mainCharacters": [
+    "Amendera Kendel",
+    "Helig Gallor",
+    "Nathaniel Garro"
+   ],
+   "blurb": "Amendera Kendel, once a Sister of Silence and now Malcador's Agentia Tertius, is sent into the Proxima system to run down reports that the Warmaster's agents have taken root on Terra's doorstep. For the work she calls on the Seventy, the loyalist Death Guard who fled Isstvan with Nathaniel Garro and have been kept in quarantine on Luna, Helig Gallor among them. What she uncovers is less straightforward than the infiltration she went looking for.",
+   "blurbSafe": "A former Sister of Silence, now one of the Sigillite's senior agents, investigates signs that Horus's people have reached a system close to Terra. To do it she has to draw on the mistrusted loyalist Death Guard who escaped Isstvan III.",
+   "changed": [
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2017/01/11/quick-review-ghosts-speak-not-james-swallow/",
+    "https://wh40k.lexicanum.com/wiki/Ghosts_Speak_Not_(Short_Story)"
+   ],
+   "confidence": "high",
+   "notes": "Not a Garro story. The protagonist is Amendera Kendel, former Sister of Silence and Malcador's Agentia Tertius. Track of Words places it in the Proxima system; Lexicanum confirms Kendel recruiting Helig Gallor from the Seventy. Caution on the site filter: the Death Guard here are the loyalist Eisenstein survivors, so a crude traitor-filter will mark this entry traitor-side when the XIV Legion warriors in it are loyal."
+  },
+  {
+   "bookKey": "silent-army-one",
+   "verdict": "corrected",
+   "title": "ARMY OF ONE",
+   "author": "Rob Sanders",
+   "type": "Short Story",
+   "legions": [
+    "Officio Assassinorum"
+   ],
+   "timeline": "009.M31",
+   "mainCharacters": [
+    "Ganimus",
+    "Malcador the Sigillite",
+    "Chravius Blumolotov"
+   ],
+   "blurb": "The hive world of Proxima Apocryphis declares for Horus, and Malcador answers by dropping one Eversor assassin onto it. In fragments of memory the killer recalls his life as Ganimus, a drosshill urchin turned gang runner turned pit fighter, before the Clade rebuilt him into a drug-flooded weapon. His target is the planetary Lord-Governor Chravius Blumolotov, the man who once bought him, and he butchers his way up through the hive to reach him.",
+   "blurbSafe": "When a hive world turns to the Warmaster, the Sigillite's answer is not an army but a single man. Told from inside the head of an Officio Assassinorum operative, this very short piece follows his descent to the surface and the memories that made him what he is.",
+   "changed": [
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://raw.githubusercontent.com/Forrest1777/WH40k_LORE/main/Army%20of%20One%20-%20Rob%20Sanders.txt",
+    "https://www.trackofwords.com/2015/02/18/quick-review-army-of-one-rob-sanders/",
+    "https://wh40k.lexicanum.com/wiki/Army_of_One_(Short_Story)"
+   ],
+   "confidence": "high",
+   "notes": "Verified against the full text of the story itself, which is roughly 1,000 words. Not a Knights-Errant story: the protagonist is an Eversor Assassin of the Officio Assassinorum, named Ganimus by Malcador. Track of Words tags it Officio Assassinorum and the Black Library blurb describes Malcador despatching a living weapon to Proxima Apocryphis. In-universe date not stated anywhere; manifest value retained."
+  },
+  {
+   "bookKey": "silent-distant-echoes",
+   "verdict": "corrected",
+   "title": "DISTANT ECHOES OF OLD NIGHT",
+   "author": "Rob Sanders",
+   "type": "Short Story",
+   "legions": [
+    "Death Guard",
+    "Imperial Fists"
+   ],
+   "timeline": "009.M31",
+   "mainCharacters": [
+    "Morgax Murnau"
+   ],
+   "blurb": "Chaplain Morgax Murnau of the Death Guard hunts the survivors of a downed Imperial Fists ship across Algonquis, a forest moon rotting away into swamp. When the VII Legion warriors prove too well dug in to shift, Murnau unleashes his Legion's Destroyers, whose chem and rad weapons strip the ground bare. The whole thing is steeped in the rot and decay that will one day swallow the XIV Legion entirely.",
+   "blurbSafe": "A Death Guard Chaplain pursues a small force of Imperial Fists across a decaying forest moon. When his quarry keeps eluding him, he reaches for one of the XIV Legion's most feared and least discriminating assets.",
+   "changed": [
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2015/02/10/quick-review-distant-echoes-of-old-night-rob-sanders/",
+    "https://wh40k.lexicanum.com/wiki/Distant_Echoes_of_Old_Night_(Short_Story)",
+    "https://purpleheresy.blogspot.com/search?q=Distant+Echoes"
+   ],
+   "confidence": "high",
+   "notes": "Nothing to do with Old Night or ancient horrors resurfacing, and no Knights-Errant. It is a Death Guard versus Imperial Fists skirmish story led by Chaplain Morgax Murnau with a Destroyer squad. Track of Words and Lexicanum both give the same core, purpleheresy adds the moon's name, Algonquis. Legion change flips this entry from a neutral Knights-Errant tag to traitor-side (Death Guard) plus loyalist Imperial Fists. In-universe date not sourced; manifest value retained."
+  },
+  {
+   "bookKey": "silent-lost-sons",
+   "verdict": "corrected",
+   "title": "LOST SONS",
+   "author": "James Swallow",
+   "type": "Short Story",
+   "legions": [
+    "Blood Angels",
+    "Knights-Errant"
+   ],
+   "timeline": "010-011.M31",
+   "mainCharacters": [
+    "Warden Arkad",
+    "Tylos Rubio"
+   ],
+   "blurb": "Warden Arkad and nineteen Blood Angels were left to hold Baal while Sanguinius took the Legion to Signus. Five years on and blinded by the Ruinstorm, they receive Tylos Rubio, a Knight-Errant carrying the Sigillite's black scroll: the IX Legion is presumed dead and is to be struck from the rolls, its remnants folded into Malcador's new order. Arkad refuses, and readies a suicidal run to find his primarch or kill Horus.",
+   "blurbSafe": "Twenty Blood Angels were left behind to keep watch over Baal while their primarch took the Legion to Signus, and the Ruinstorm has kept them blind ever since. An agent of the Sigillite arrives with orders from Terra that they never expected to hear.",
+   "changed": [
+    "timeline",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2015/02/05/quick-review-lost-sons-james-swallow/",
+    "https://wh40k.lexicanum.com/wiki/Lost_Sons_(Short_Story)",
+    "https://purpleheresy.blogspot.com/search?q=Lost+Sons"
+   ],
+   "confidence": "medium",
+   "notes": "Not Garro recruiting from traitor Legions. It is the Blood Angels garrison left on Baal, told through Warden Arkad, visited by the Knight-Errant Tylos Rubio. All three sources agree. Timeline: Lexicanum and purpleheresy both put the story roughly five years after the Legion departed for Signus, which in this dataset (Fear to Tread at 005-006.M31) works out at about 010-011.M31 rather than the manifest's 009.M31. Confidence medium on that date only, since it is derived rather than quoted."
+  },
+  {
+   "bookKey": "silent-templar",
+   "verdict": "corrected",
+   "title": "TEMPLAR",
+   "author": "John French",
+   "type": "Audio Drama",
+   "legions": [
+    "Imperial Fists",
+    "Word Bearers"
+   ],
+   "timeline": "010.M31",
+   "mainCharacters": [
+    "Sigismund"
+   ],
+   "blurb": "Sigismund, First Captain of the Imperial Fists, leads an assault on a comet-shrine consecrated to Unity that a band of Word Bearers has seized as a stepping stone back towards the Solar System. The killing is cut through with duels and conversations he keeps returning to, and with the doubt he carries about the oath that chains his sword to his arm. Whether his skill at arms or that doubt wins out is the point of the piece.",
+   "blurbSafe": "The Imperial Fists' First Captain takes a strike force against Word Bearers who have taken a shrine on the approaches to the Solar System. Between the fighting, he turns over the duels, conversations and doubts that have made him what he is.",
+   "changed": [
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2015/02/27/templar-john-french-audio-drama/",
+    "https://wh40k.lexicanum.com/wiki/Templar_(Audio_Drama)"
+   ],
+   "confidence": "high",
+   "notes": "The manifest blurb was roughly right about Sigismund but the legion tag said Knights-Errant, which is wrong and hides a traitor Legion. Lexicanum gives the setting as a comet-shrine dedicated to Unity, with Word Bearers trying to work their way back into the Solar System; Track of Words confirms the mission to cleanse a Word Bearers enclave. Sigismund is not the Emperor's Champion at this point, he is First Captain. In-universe date not sourced; manifest value retained, though Track of Words describes the piece as showing him early in the Heresy."
+  },
+  {
+   "bookKey": "silent-patience",
+   "verdict": "corrected",
+   "title": "PATIENCE",
+   "author": "James Swallow",
+   "type": "Short Story",
+   "legions": [
+    "Knights-Errant",
+    "Death Guard"
+   ],
+   "timeline": "010.M31",
+   "mainCharacters": [
+    "Helig Gallor",
+    "Nathaniel Garro"
+   ],
+   "blurb": "Helig Gallor, once a Death Guard under Nathaniel Garro and now a Knight-Errant, leads troops of Malcador's Chosen across the bombarded surface of Nolec Trinus in search of his old battle-captain. Garro has gone ahead alone to face a daemon and his vox has gone quiet. Gallor finds him alive but unable to speak through a wrecked helm, and the two have to work out between them how to stop the thing regenerating.",
+   "blurbSafe": "A former Death Guard legionary, now serving Malcador, picks his way across a shelled-out world looking for the commander he once followed, who pressed on alone and then went silent. He is also hoping to find some footing with the others from his old Legion.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2017/01/12/quick-review-patience-james-swallow/",
+    "https://wh40k.lexicanum.com/wiki/Patience_(Short_Story)"
+   ],
+   "confidence": "high",
+   "notes": "The manifest blurb was a paraphrase of the title. The protagonist is Helig Gallor, not Garro, and the story is a micro-short set on Nolec Trinus. Track of Words and Lexicanum agree on Gallor searching for Garro; Lexicanum supplies the world's name and the daemon that regenerates from blood and corpses. Legions tag of Knights-Errant is correct and unchanged. Both leads are ex-Death Guard, but they act as Knights-Errant here, so I did not add the XIV Legion and trip the traitor filter. Faction list reconciled with the live data after the allegiance override was added, so a correct tag no longer has to be withheld to protect the filter."
+  },
+  {
+   "bookKey": "silent-sigillite",
+   "verdict": "corrected",
+   "title": "THE SIGILLITE",
+   "author": "Chris Wraight",
+   "type": "Audio Drama",
+   "legions": [
+    "Imperial Army"
+   ],
+   "timeline": "010.M31",
+   "mainCharacters": [
+    "Khalid Hassan",
+    "Malcador the Sigillite"
+   ],
+   "blurb": "Khalid Hassan, an Imperial Army captain of the Fourth Clandestine Orta, returns to the Imperial Palace after a secret mission into the wastelands of Gyptus that went badly wrong. Expecting to answer for the failure, he is instead walked through the Palace to an audience with Malcador himself. As Hassan recounts the operation in flashback, the Sigillite is quietly weighing him for something else, with the Emperor conspicuously absent throughout.",
+   "blurbSafe": "An Imperial Army officer comes back to the Palace from a disastrous covert operation in the Gyptus wastes, braced for punishment. Instead he is brought before Malcador the Sigillite, regent of a Terra whose Emperor is nowhere to be seen.",
+   "changed": [
+    "type",
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2016/01/28/quick-review-the-sigillite-chris-wraight/",
+    "https://wh40k.lexicanum.com/wiki/The_Sigillite_(Audio_Book)",
+    "https://warhammer40k.fandom.com/wiki/The_Sigillite_(Audio_Drama)"
+   ],
+   "confidence": "medium",
+   "notes": "Despite the title this is not a story about Malcador orchestrating a shadow war. It is a baseline human viewpoint story: Track of Words and the Black Library blurb both name Captain Khalid Hassan of the Fourth Clandestine Orta, returning from Gyptus to be debriefed by Malcador, with no Astartes protagonist. Lexicanum's page body names the officer 'Hasani Sabbyat', which conflicts with two other sources, so I went with Khalid Hassan; worth a second look if precision on the name matters. Legions changed from Knights-Errant (none appear) to Imperial Army. Type corrected to Audio Drama: Lexicanum's own page text calls it an original audio drama with three credited performers, even though the page is titled Audio Book. In-universe date not sourced; manifest value retained."
+  },
+  {
+   "bookKey": "silent-gates-terra",
+   "verdict": "corrected",
+   "title": "THE GATES OF TERRA",
+   "author": "Nick Kyme",
+   "type": "Short Story",
+   "legions": [
+    "Ultramarines",
+    "Imperial Fists"
+   ],
+   "timeline": "012.M31",
+   "mainCharacters": [
+    "Arcadese",
+    "Malcador the Sigillite",
+    "Rogal Dorn"
+   ],
+   "blurb": "Captain Arcadese of the Ultramarines, heavily augmented and increasingly certain his Legion has abandoned him, holds an orbital bastion in the Ardent Reef as the Vengeful Spirit arrives and World Eaters and daemons board. The siege is not real. It is a scenario driven into his mind by Librarians working for Malcador and Rogal Dorn, conditioning loyalist officers for an assault on Terra that has not yet come.",
+   "blurbSafe": "An augmented Ultramarines captain defends a bastion in the Ardent Reef against the Warmaster's vanguard, nagged by the feeling that his own Legion has left him to it. Framing the battle is a conversation between Malcador and Rogal Dorn about what they are willing to do to win the war.",
+   "changed": [
+    "legions",
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://www.trackofwords.com/2015/02/08/quick-review-the-gates-of-terra-nick-kyme/",
+    "https://purpleheresy.blogspot.com/search?q=Gates+of+Terra",
+    "https://wh40k.lexicanum.com/wiki/The_Gates_of_Terra_(Short_Story)"
+   ],
+   "confidence": "medium",
+   "notes": "Not Imperial Fists fortifying the Throneworld. The viewpoint character is Captain Arcadese of the Ultramarines, previously seen in Forgotten Sons, holding the Ardent Reef. Lexicanum repeats the deliberately misleading cover blurb about Horus's final assault; purpleheresy gives the actual twist, that the battle is a psychically implanted simulation run by Malcador's and Dorn's Librarians as battle-conditioning before the real Siege, which Track of Words corroborates in describing the story as ambiguous and about how far loyalist commanders will go. Confidence medium because only one source states the twist outright. In-universe date not sourced; manifest value retained, and it is at least consistent with the story sitting before the Siege."
+  }
+ ]
 }
