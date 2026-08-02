@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horus Heresy Archive - Complete Dataslate</title>
     <meta name="description" content="Interactive archive of all 228 Horus Heresy novels, novellas and anthology stories in strict in-universe chronological order, with a character encyclopedia, reading tracker and Imperial/Chaos themes.">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- favicon.png was a 313 KB 700x700 image, byte-identical to the aquila,
+         served for a 32px slot and again as the touch icon. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -57,7 +59,7 @@
             <div class="search-container">
                 <label for="searchInput" class="filter-label">SEARCH:</label>
                 <input type="text" id="searchInput" class="search-input" placeholder="Book title, author, or character name...">
-                <button id="clearSearch" class="clear-search-btn">✕</button>
+                <button id="clearSearch" class="clear-search-btn" aria-label="Clear search">✕</button>
             </div>
             <div class="legion-container">
                 <label for="legionFilter" class="filter-label">FILTER BY LEGION:</label>
@@ -91,7 +93,7 @@
             <button id="clearAllFilters" class="clear-filter-btn">CLEAR ALL</button>
         </div>
 
-        <main class="book-display">
+        <main class="book-display" aria-label="Book catalogue">
             <!-- Book cards generated dynamically by script.js -->
         </main>
 
@@ -105,6 +107,50 @@
     </div>
 
 
+    <!-- Progress sync. No server and no account: the reading log is packed
+         into a short code you carry to another device. -->
+    <button class="sync-float-btn" id="syncBtn" title="Sync reading progress to another device"
+            aria-label="Sync reading progress to another device">
+        <span aria-hidden="true">⇄</span>
+    </button>
+
+    <div class="modal-overlay" id="syncModalOverlay" role="dialog" aria-modal="true" aria-labelledby="syncModalTitle">
+        <div class="modal-content sync-modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="syncModalTitle">PROGRESS SYNC</h2>
+                <button class="close-modal" id="closeSyncModal" aria-label="Close sync">✕</button>
+            </div>
+            <div class="modal-body">
+                <p class="sync-intro" id="syncSummary"></p>
+
+                <h3 class="sync-heading">Carry your progress to another device</h3>
+                <label class="sync-label" for="syncCode">Your progress code</label>
+                <div class="sync-row">
+                    <input type="text" id="syncCode" class="sync-input" readonly data-autofocus>
+                    <button type="button" class="sync-action" id="copyCodeBtn">COPY</button>
+                </div>
+
+                <label class="sync-label" for="syncLink">Or open this link on the other device</label>
+                <div class="sync-row">
+                    <input type="text" id="syncLink" class="sync-input" readonly>
+                    <button type="button" class="sync-action" id="copyLinkBtn">COPY</button>
+                </div>
+
+                <div class="sync-divider"></div>
+
+                <h3 class="sync-heading">Restore from a code</h3>
+                <label class="sync-label" for="syncPaste">Paste a progress code</label>
+                <div class="sync-row">
+                    <input type="text" id="syncPaste" class="sync-input" placeholder="HH2-...">
+                    <button type="button" class="sync-action" id="restoreBtn">RESTORE</button>
+                </div>
+
+                <p class="sync-status" id="syncStatus" role="status" aria-live="polite"></p>
+                <p class="sync-note">Nothing is uploaded anywhere. The code is your reading log, encoded. Restoring replaces the progress on this device.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating Ordering Guide Button -->
     <button class="ordering-guide-float-btn" id="orderingGuideBtn" title="View Chronological Order Guide">
         <span class="guide-icon">📜</span>
@@ -112,9 +158,9 @@
 
 
     <!-- Character Modal -->
-    <div class="character-modal-overlay" id="characterModalOverlay">
+    <div class="character-modal-overlay" id="characterModalOverlay" role="dialog" aria-modal="true" aria-labelledby="characterName">
         <div class="character-modal-content">
-            <button class="close-character-modal" id="closeCharacterModal">✕</button>
+            <button class="close-character-modal" id="closeCharacterModal" aria-label="Close character details">✕</button>
             <div class="character-modal-body">
                 <div class="character-portrait">
                     <img id="characterImage" src="" alt="">
@@ -132,11 +178,11 @@
     </div>
 
     <!-- Modal Structure -->
-    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title" id="modalTitle"></h2>
-                <button class="close-modal" id="closeModal">✕</button>
+                <button class="close-modal" id="closeModal" aria-label="Close book details">✕</button>
             </div>
             <div class="modal-body">
                 <div class="key-details" id="keyDetails"></div>
@@ -150,11 +196,11 @@
     </div>
 
     <!-- Ordering Guide Modal -->
-    <div class="modal-overlay" id="orderingModalOverlay">
+    <div class="modal-overlay" id="orderingModalOverlay" role="dialog" aria-modal="true" aria-labelledby="orderingModalTitle">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">CHRONOLOGICAL ORDERING DECISIONS</h2>
-                <button class="close-modal" id="closeOrderingModal">✕</button>
+                <h2 class="modal-title" id="orderingModalTitle">CHRONOLOGICAL ORDERING DECISIONS</h2>
+                <button class="close-modal" id="closeOrderingModal" aria-label="Close ordering guide">✕</button>
             </div>
             <div class="modal-body" id="orderingModalBody">
                 <!-- Content will be dynamically loaded from ORDERING_DECISIONS.md -->

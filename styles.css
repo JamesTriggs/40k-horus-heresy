@@ -284,7 +284,7 @@ body::before {
     padding-bottom: 2rem;
     border-bottom: 2px solid var(--imperial-gold);
     position: relative;
-    background-image: url('images/horus-vs-emperor.jpg');
+    background-image: url('images/opt/horus-vs-emperor.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -671,6 +671,17 @@ body.traitor-theme .allegiance-toggle:hover {
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     background-color: #1a1a1a;
+}
+
+/* The cover is now a real img rather than a CSS background, so it has to be
+   told to fill its aspect-ratio box. */
+.book-cover-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .book-cover::after {
@@ -2602,4 +2613,184 @@ body.traitor-theme #orderingModalBody strong {
     .chart-toolbar-row { gap: 0.5rem; }
     .chart-hint { font-size: 0.6rem; }
     .faction-key { max-width: 100%; font-size: 0.58rem; }
+}
+
+/* ==========================================================================
+   Keyboard accessibility
+   Cards and character names are now real buttons, so they need their button
+   defaults stripped and a visible focus ring restored. The previous CSS set
+   outline: none on inputs and gave buttons no focus styling at all, which
+   made the focused state less visible than the unfocused one.
+   ========================================================================== */
+
+.book-card {
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+.character-link {
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid var(--imperial-gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.book-card:focus-visible {
+    outline: 3px solid var(--imperial-gold);
+    outline-offset: 4px;
+}
+
+/* These previously removed the outline and replaced it with a border colour
+   at 1.43:1, which is less visible than no focus state at all. */
+.search-input:focus-visible,
+.legion-filter:focus-visible,
+.sort-select:focus-visible {
+    outline: 3px solid var(--imperial-gold);
+    outline-offset: 2px;
+}
+
+/* Respect a reduced-motion preference. Four animations ran indefinitely,
+   including a warning strip that blinked with no way to stop it. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   Progress sync
+   ========================================================================== */
+
+.sync-float-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--imperial-gold) 0%, #8b7428 100%);
+    border: 3px solid var(--imperial-gold);
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 900;   /* below every modal overlay, as with the other float button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sync-float-btn:hover { transform: translateY(-3px) scale(1.05); }
+
+.sync-float-btn:focus-visible {
+    outline: 3px solid var(--parchment);
+    outline-offset: 3px;
+}
+
+body.traitor-theme .sync-float-btn {
+    background: linear-gradient(135deg, #8b0000 0%, #330000 100%);
+    border-color: var(--chaos-edge);
+    color: var(--parchment);
+}
+
+.sync-modal { max-width: 640px; }
+
+.sync-intro {
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--imperial-gold);
+}
+
+.sync-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08rem;
+    color: var(--imperial-gold);
+    margin-bottom: 0.75rem;
+}
+
+.sync-label {
+    display: block;
+    margin: 0.85rem 0 0.3rem 0;
+    font-size: 0.68rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.sync-row { display: flex; gap: 0.5rem; }
+
+.sync-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.6rem;
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(212, 175, 55, 0.35);
+    border-radius: 2px;
+    color: var(--parchment);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.72rem;
+    text-overflow: ellipsis;
+}
+
+.sync-action {
+    flex: 0 0 auto;
+    min-width: 5.5rem;
+    min-height: 44px;
+    padding: 0 0.75rem;
+    background: linear-gradient(135deg, var(--imperial-gold) 0%, #8b7428 100%);
+    border: 2px solid var(--imperial-gold);
+    border-radius: 2px;
+    color: #14140f;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08rem;
+    cursor: pointer;
+}
+
+.sync-action:hover { filter: brightness(1.12); }
+
+.sync-divider {
+    height: 1px;
+    margin: 1.75rem 0 1.25rem 0;
+    background: linear-gradient(90deg, transparent, var(--imperial-gold), transparent);
+    opacity: 0.5;
+}
+
+.sync-status {
+    min-height: 1.4em;
+    margin-top: 0.85rem;
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.sync-status.is-ok { color: #6fcf97; }
+.sync-status.is-error { color: #ff8577; }
+
+.sync-note {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .sync-float-btn { width: 48px; height: 48px; bottom: 1rem; left: 1rem; font-size: 1.2rem; }
+    .sync-row { flex-wrap: wrap; }
+    .sync-action { width: 100%; }
 }

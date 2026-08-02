@@ -1006,6 +1006,99 @@ const readingProgress = {
     }
 };
 
+// ---------------------------------------------------------------------------
+// Cross-device progress sync, with no server and no account.
+//
+// The site is a static page, so there is nothing to sync through. Instead the
+// whole reading log is packed into a short code you can carry to another
+// device by hand or as a link. Two bits per book over the alphabetically
+// sorted key list gives 228 books in 57 bytes, about 76 base64 characters.
+//
+// Sorted alphabetically rather than by the displayed order, so re-sorting the
+// chronology does not invalidate anyone's code. A short fingerprint of the key
+// list is embedded, and a code from a different dataset is refused rather than
+// silently decoded against shifted indices, which would corrupt the log.
+// ---------------------------------------------------------------------------
+
+const SYNC_PREFIX = 'HH2';
+const SYNC_STATES = [null, 'reading', 'finished'];
+
+function syncKeyList() {
+    return Object.keys(bookData).slice().sort();
+}
+
+// A cheap, stable fingerprint. Not security, just a guard against decoding a
+// code against a book list it was not written for.
+function syncFingerprint(keys) {
+    let h = 0x811c9dc5;
+    for (const ch of keys.join('|')) {
+        h ^= ch.charCodeAt(0);
+        h = Math.imul(h, 0x01000193) >>> 0;
+    }
+    return h.toString(36).padStart(7, '0').slice(0, 7);
+}
+
+const toBase64Url = (bytes) =>
+    btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+
+const fromBase64Url = (text) => {
+    const padded = text.replace(/-/g, '+').replace(/_/g, '/');
+    const binary = atob(padded + '='.repeat((4 - (padded.length % 4)) % 4));
+    return Uint8Array.from(binary, (c) => c.charCodeAt(0));
+};
+
+function exportProgressCode() {
+    const keys = syncKeyList();
+    const progress = readingProgress.load();
+    const bytes = new Uint8Array(Math.ceil(keys.length / 4));
+
+    keys.forEach((key, i) => {
+        const state = SYNC_STATES.indexOf(progress[key] || null);
+        if (state > 0) bytes[i >> 2] |= state << ((i % 4) * 2);
+    });
+
+    return `${SYNC_PREFIX}-${syncFingerprint(keys)}-${toBase64Url(bytes)}`;
+}
+
+// Returns { ok, applied, reason }. Never partially applies.
+function importProgressCode(code) {
+    const cleaned = String(code || '').trim().replace(/\s+/g, '');
+    const parts = cleaned.split('-');
+
+    if (parts.length !== 3 || parts[0] !== SYNC_PREFIX) {
+        return { ok: false, reason: 'That does not look like a progress code.' };
+    }
+
+    const keys = syncKeyList();
+    if (parts[1] !== syncFingerprint(keys)) {
+        return {
+            ok: false,
+            reason: 'That code was made from a different version of the archive. ' +
+                    'Reload both devices so they hold the same books, then export again.',
+        };
+    }
+
+    let bytes;
+    try {
+        bytes = fromBase64Url(parts[2]);
+    } catch (error) {
+        return { ok: false, reason: 'That code is damaged or incomplete.' };
+    }
+    if (bytes.length !== Math.ceil(keys.length / 4)) {
+        return { ok: false, reason: 'That code is the wrong length for this archive.' };
+    }
+
+    const restored = {};
+    let applied = 0;
+    keys.forEach((key, i) => {
+        const state = SYNC_STATES[(bytes[i >> 2] >> ((i % 4) * 2)) & 0b11];
+        if (state) { restored[key] = state; applied++; }
+    });
+
+    readingProgress.save(restored);
+    return { ok: true, applied };
+}
+
 // Modal scroll lock. Every overlay used to set and clear document.body.overflow
 // independently, so closing a nested modal unlocked the page while its parent
 // was still open.
@@ -1013,11 +1106,71 @@ const readingProgress = {
 // The state is derived from the DOM rather than counted, because several modals
 // have three separate close paths (button, backdrop, Escape) and a counter
 // would drift the first time two of them fired for one dismissal.
-const MODAL_SELECTOR = '.modal-overlay.active, .character-modal-overlay.active';
+const MODAL_SELECTOR = '.modal-overlay.active, .character-modal-overlay.active, .sync-modal-overlay.active';
+
+// Focus management for modals.
+//
+// Previously nothing called .focus() anywhere: opening a dialog left focus on
+// the page behind it, Tab walked straight out of the modal into content the
+// user could not see, and closing never returned focus to what opened it.
+const focusManager = {
+    _stack: [],
+
+    _focusable(container) {
+        return [...container.querySelectorAll(
+            'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea, [tabindex]:not([tabindex="-1"])'
+        )].filter((el) => el.offsetParent !== null || el === document.activeElement);
+    },
+
+    trap(container) {
+        this._stack.push({ container, returnTo: document.activeElement });
+
+        const first = container.querySelector('[data-autofocus]') || this._focusable(container)[0];
+        if (first) first.focus();
+
+        container._trapHandler = (event) => {
+            if (event.key !== 'Tab') return;
+            const items = this._focusable(container);
+            if (!items.length) return;
+            const firstItem = items[0];
+            const lastItem = items[items.length - 1];
+
+            if (event.shiftKey && document.activeElement === firstItem) {
+                event.preventDefault();
+                lastItem.focus();
+            } else if (!event.shiftKey && document.activeElement === lastItem) {
+                event.preventDefault();
+                firstItem.focus();
+            }
+        };
+        container.addEventListener('keydown', container._trapHandler);
+    },
+
+    release(container) {
+        if (container && container._trapHandler) {
+            container.removeEventListener('keydown', container._trapHandler);
+            delete container._trapHandler;
+        }
+        const entry = this._stack.pop();
+
+        // Clear the background's inert state before restoring focus. The
+        // trigger lives inside that container, and an inert element cannot
+        // take focus, so restoring first silently did nothing.
+        scrollLock.sync();
+
+        if (entry && entry.returnTo && document.contains(entry.returnTo)) {
+            entry.returnTo.focus();
+        }
+    }
+};
 
 const scrollLock = {
     sync: function() {
         const anyOpen = document.querySelector(MODAL_SELECTOR) !== null;
+        // Content behind an open dialog must be hidden from assistive tech too,
+        // or a screen reader can still walk into it.
+        const shell = document.querySelector('.dataslate-container');
+        if (shell) shell.toggleAttribute('inert', anyOpen);
         // The class goes on <html>, which is the scrolling element. Setting
         // overflow on <body> alone does not stop the page scrolling.
         document.documentElement.classList.toggle('modal-open', anyOpen);
@@ -5354,10 +5507,15 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
             }
         }
 
-        const bookCard = document.createElement('div');
+        // A button, not a div. The catalogue was the site's primary interaction
+        // and could not be reached or activated without a mouse.
+        const bookCard = document.createElement('button');
+        bookCard.type = 'button';
         const statusClass = status ? ` book-${status}` : '';
         bookCard.className = 'book-card' + statusClass;
         bookCard.setAttribute('data-book', bookKey);
+        bookCard.setAttribute('aria-label',
+            `${book.title} by ${book.author}${status ? ', ' + status : ''}`);
 
         let statusBadge = '';
         if (status === 'reading') {
@@ -5376,8 +5534,13 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
             anthologyLabel = `<div class="anthology-label">IN: ${escapeHtml(book.anthology)}</div>`;
         }
 
+        // A real img, not a CSS background: backgrounds cannot be lazy-loaded,
+        // carry no alt text and are invisible to assistive technology.
         bookCard.innerHTML = `
-            <div class="book-cover" style="background-image: url('${encodeURI(book.coverImage)}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="book-cover">
+                <img class="book-cover-img" src="${encodeURI(optimisedImage(book.coverImage))}"
+                     alt="Cover of ${escapeHtml(book.title)}"
+                     loading="lazy" decoding="async" width="315" height="508">
                 <div class="book-number-overlay">${escapeHtml(book.number)}</div>
                 <div class="chronological-badge">Chrono: ${chronologicalNumber}</div>
                 ${statusBadge}
@@ -5960,6 +6123,108 @@ document.addEventListener('fullscreenchange', () => {
 });
 
 
+function initializeSyncPanel() {
+    const button = document.getElementById('syncBtn');
+    const overlay = document.getElementById('syncModalOverlay');
+    if (!button || !overlay) return;
+
+    const codeField = document.getElementById('syncCode');
+    const linkField = document.getElementById('syncLink');
+    const pasteField = document.getElementById('syncPaste');
+    const status = document.getElementById('syncStatus');
+    const summary = document.getElementById('syncSummary');
+
+    const say = (message, kind) => {
+        status.textContent = message;
+        status.className = 'sync-status' + (kind ? ' is-' + kind : '');
+    };
+
+    const refresh = () => {
+        const code = exportProgressCode();
+        codeField.value = code;
+        linkField.value = `${location.origin}${location.pathname}#s=${code}`;
+        const counts = readingProgress.load();
+        const finished = Object.values(counts).filter((v) => v === 'finished').length;
+        const reading = Object.values(counts).filter((v) => v === 'reading').length;
+        summary.textContent = `${finished} finished, ${reading} reading, out of ${Object.keys(bookData).length} entries.`;
+    };
+
+    const copy = async (field, btn) => {
+        field.select();
+        try {
+            await navigator.clipboard.writeText(field.value);
+        } catch (error) {
+            document.execCommand('copy');   // older browsers and non-secure origins
+        }
+        const original = btn.textContent;
+        btn.textContent = 'COPIED';
+        setTimeout(() => { btn.textContent = original; }, 1400);
+    };
+
+    const open = () => {
+        refresh();
+        say('');
+        pasteField.value = '';
+        overlay.classList.add('active');
+        scrollLock.acquire();
+        focusManager.trap(overlay);
+    };
+
+    const close = () => {
+        overlay.classList.remove('active');
+        focusManager.release(overlay);
+        scrollLock.release();
+    };
+
+    button.addEventListener('click', open);
+    document.getElementById('closeSyncModal').addEventListener('click', close);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) close();
+    });
+
+    document.getElementById('copyCodeBtn').addEventListener('click', (e) => copy(codeField, e.currentTarget));
+    document.getElementById('copyLinkBtn').addEventListener('click', (e) => copy(linkField, e.currentTarget));
+
+    document.getElementById('restoreBtn').addEventListener('click', () => {
+        const result = importProgressCode(pasteField.value);
+        if (!result.ok) { say(result.reason, 'error'); return; }
+        say(`Restored ${result.applied} book${result.applied === 1 ? '' : 's'}.`, 'ok');
+        refresh();
+        rerenderCurrentView();
+    });
+
+    // A sync link lands here. Ask first, because restoring replaces whatever
+    // this device already has.
+    const fromUrl = /[#&]s=([^&]+)/.exec(location.hash);
+    if (fromUrl) {
+        history.replaceState(null, '', location.pathname + location.search);
+        const existing = Object.values(readingProgress.load()).filter(Boolean).length;
+        const proceed = existing === 0 || confirm(
+            `This link carries reading progress. Restoring will replace the ${existing} book(s) already marked on this device. Continue?`);
+        if (proceed) {
+            const result = importProgressCode(decodeURIComponent(fromUrl[1]));
+            open();
+            say(result.ok ? `Restored ${result.applied} books from the link.` : result.reason,
+                result.ok ? 'ok' : 'error');
+            if (result.ok) { refresh(); rerenderCurrentView(); }
+        }
+    }
+}
+
+// Re-render whichever view is showing, after progress changes wholesale.
+function rerenderCurrentView() {
+    if (currentView === 'chart') {
+        const host = document.getElementById('chartView');
+        if (host) { host.dataset.rendered = 'false'; renderChartView(); }
+    } else {
+        const legion = document.getElementById('legionFilter')?.value || '';
+        const search = document.getElementById('searchInput')?.value || '';
+        generateBookCards(legion, search);
+    }
+    updateProgressCounter();
+}
+
 function initializeViewSwitcher() {
     document.querySelectorAll('.view-btn').forEach((btn) => {
         btn.addEventListener('click', () => setView(btn.dataset.view));
@@ -5978,6 +6243,16 @@ function initializeFilterDisclosure() {
         button.setAttribute('aria-expanded', String(!open));
         section.classList.toggle('is-open', !open);
     });
+}
+
+// Map a source image to its web-sized WebP derivative, generated by
+// tools/optimise-images.mjs. The originals are full-resolution wiki downloads
+// and were costing 18.1 MB on first paint. SVGs are already tiny and are
+// passed straight through.
+function optimisedImage(path) {
+    if (!path) return 'images/cover-placeholder.svg';
+    if (path.endsWith('.svg')) return path;
+    return 'images/opt/' + path.replace(/^images\//, '').replace(/\.(jpe?g|png)$/i, '.webp');
 }
 
 // Escape text destined for innerHTML. No current field contains <, >, & or ",
@@ -6136,7 +6411,9 @@ function showModal(bookKey) {
 
     keyDetails.innerHTML = `
         <div class="modal-book-cover">
-            <img src="${book.coverImage}" alt="${book.title} Cover" />
+            <img src="${encodeURI(optimisedImage(book.coverImage))}"
+                 alt="Cover of ${escapeHtml(book.title)}"
+                 decoding="async" width="315" height="508" />
             <button class="mark-read-btn ${buttonClass}" id="markReadBtn" data-book="${bookKey}">
                 ${buttonText}
             </button>
@@ -6191,6 +6468,7 @@ function showModal(bookKey) {
 
     // Show modal and store current book key
     modalOverlay.classList.add('active');
+    focusManager.trap(modalOverlay);
     modalOverlay.dataset.currentBook = bookKey;
     scrollLock.acquire();
 }
@@ -6198,6 +6476,7 @@ function showModal(bookKey) {
 // Close modal function
 function closeModal() {
     modalOverlay.classList.remove('active');
+    focusManager.release(modalOverlay);
     scrollLock.release();
 }
 
@@ -6252,11 +6531,11 @@ function makeCharactersClickable(detailsHTML) {
         names.forEach(name => {
             // Create regex to find the character name
             const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const regex = new RegExp(`(?<!data-character="[^"]*")(?<!<span class="character-link"[^>]*>)\\b${escapedName}\\b(?![^<]*<\\/span>)`, 'gi');
+            const regex = new RegExp(`(?<!data-character="[^"]*")(?<!<button type="button" class="character-link"[^>]*>)\\b${escapedName}\\b(?![^<]*<\\/span>)`, 'gi');
 
             // Replace with clickable span
             processedHTML = processedHTML.replace(regex, (match) => {
-                return `<span class="character-link" data-character="${charKey}">${match}</span>`;
+                return `<button type="button" class="character-link" data-character="${charKey}">${match}</button>`;
             });
         });
     });
@@ -6274,8 +6553,10 @@ function showCharacterModal(characterKey) {
     }
 
     // Populate character modal
-    document.getElementById('characterImage').src = char.image;
-    document.getElementById('characterImage').alt = char.name;
+    document.getElementById('characterImage').src = optimisedImage(char.image);
+    document.getElementById('characterImage').alt = char.name
+        ? `Portrait of ${char.name}` : '';
+    document.getElementById('characterImage').decoding = 'async';
     document.getElementById('characterName').textContent = char.name;
     document.getElementById('characterRole').textContent = char.role;
     document.getElementById('characterLegion').textContent = char.legion;
@@ -6303,13 +6584,16 @@ function showCharacterModal(characterKey) {
     document.getElementById('characterBooks').innerHTML = booksHTML;
 
     // Show modal
-    document.getElementById('characterModalOverlay').classList.add('active');
+    const charOverlay = document.getElementById('characterModalOverlay');
+    charOverlay.classList.add('active');
+    focusManager.trap(charOverlay);
     scrollLock.acquire();
 }
 
 // Close character modal
 function closeCharacterModal() {
     document.getElementById('characterModalOverlay').classList.remove('active');
+    focusManager.release(document.getElementById('characterModalOverlay'));
     scrollLock.release();
 }
 
@@ -6772,12 +7056,14 @@ function initializeOrderingGuide() {
     orderingBtn.addEventListener('click', () => {
         void loadOrderingGuide();
         orderingModal.classList.add('active');
+        focusManager.trap(orderingModal);
         scrollLock.acquire();
     });
 
     // Close modal - close button
     closeOrderingBtn.addEventListener('click', () => {
         orderingModal.classList.remove('active');
+        focusManager.release(orderingModal);
         scrollLock.release();
     });
 
@@ -6785,6 +7071,7 @@ function initializeOrderingGuide() {
     orderingModal.addEventListener('click', (e) => {
         if (e.target === orderingModal) {
             orderingModal.classList.remove('active');
+            focusManager.release(orderingModal);
             scrollLock.release();
         }
     });
@@ -6793,6 +7080,7 @@ function initializeOrderingGuide() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && orderingModal.classList.contains('active')) {
             orderingModal.classList.remove('active');
+            focusManager.release(orderingModal);
             scrollLock.release();
         }
     });
@@ -6806,6 +7094,7 @@ window.addEventListener('load', async () => {
     setupFilterListeners(); // Set up filter events
     initializeViewSwitcher();
     initializeFilterDisclosure();
+    initializeSyncPanel();
 
     // Await the reading order before the first render, so a first-time visitor
     // never sees chronological order flash up as if it were the recommendation.
