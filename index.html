@@ -29,6 +29,10 @@
             <!-- Replaced by updateProgressCounter() on load. Kept empty so a
                  stale hardcoded total cannot flash before the real one. -->
             <div class="progress-counter" id="progressCounter" aria-live="polite"></div>
+            <button type="button" class="progress-hint" id="progressHint">
+                <span class="progress-hint-text">Saved in this browser only</span>
+                <span class="progress-hint-action">Sync to another device ⇄</span>
+            </button>
         </header>
 
         <nav class="view-switcher" aria-label="View">
@@ -107,6 +111,40 @@
     </div>
 
 
+    <!-- Shown once, on a first visit. Deliberately short: the earlier review
+         found an interstitial standing between a visitor and the archive is
+         worse than no onboarding at all. -->
+    <div class="modal-overlay welcome-overlay" id="welcomeOverlay" role="dialog"
+         aria-modal="true" aria-labelledby="welcomeTitle">
+        <div class="modal-content welcome-modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="welcomeTitle">FIRST ACCESS</h2>
+                <button class="close-modal" id="closeWelcome" aria-label="Close">✕</button>
+            </div>
+            <div class="modal-body">
+                <p class="welcome-lede">Two hundred and twenty-eight books. Here is what you need to know.</p>
+
+                <dl class="welcome-list">
+                    <dt>Three views</dt>
+                    <dd><strong>Reading Order</strong> is where to start. <strong>Chronological</strong> is when things happened, which is not the same thing. <strong>Storyline Chart</strong> shows each Legion's thread and what to read first.</dd>
+
+                    <dt>Track what you have read</dt>
+                    <dd>Open any book and press <em>Mark as reading</em>. Press again for finished.</dd>
+
+                    <dt>Your progress is saved in this browser</dt>
+                    <dd>There is no account and nothing is uploaded. That also means clearing your browser data will erase it, and it will not appear on your phone by itself. The <strong>⇄</strong> button gives you a short code, or a link, that carries your progress to another device.</dd>
+
+                    <dt>Reading for the first time?</dt>
+                    <dd>Turn off <em>Show spoilers</em> before you browse. It swaps every summary for a spoiler-free one.</dd>
+                </dl>
+
+                <div class="welcome-actions">
+                    <button type="button" class="sync-action" id="welcomeBegin" data-autofocus>BEGIN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Progress sync. No server and no account: the reading log is packed
          into a short code you carry to another device. -->
     <button class="sync-float-btn" id="syncBtn" title="Sync reading progress to another device"
@@ -148,6 +186,19 @@
                 <p class="sync-status" id="syncStatus" role="status" aria-live="polite"></p>
                 <p class="sync-note">Nothing is uploaded anywhere. The code is your reading log, encoded. Restoring replaces the progress on this device.</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Fired once, the first time a book is marked. The teachable moment for
+         "this is saved locally" is when there is finally something to lose. -->
+    <div class="progress-toast" id="progressToast" role="status" aria-live="polite" hidden>
+        <div class="progress-toast-body">
+            <strong>Progress saved</strong>
+            <p>Stored in this browser only. Clearing your browsing data will erase it.</p>
+        </div>
+        <div class="progress-toast-actions">
+            <button type="button" class="sync-action" id="toastSync">SYNC ⇄</button>
+            <button type="button" class="progress-toast-dismiss" id="toastDismiss" aria-label="Dismiss">✕</button>
         </div>
     </div>
 

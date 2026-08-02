@@ -12,11 +12,9 @@
 // this exercise is that a plausible invention is worse than a known gap.
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
-import { createContext, runInContext } from 'node:vm';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import { join } from 'node:path';
+import { loadFromScript, repoRoot as root } from './load-data.mjs';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fixesDir = join(root, 'tools', 'blurb-fixes');
 const dryRun = process.argv.includes('--dry-run');
 
@@ -28,12 +26,10 @@ const VALID_TYPES = new Set([
 const VALID_VERDICTS = new Set(['corrected', 'confirmed', 'unresolved']);
 const VALID_CONFIDENCE = new Set(['high', 'medium', 'low']);
 
-// Phrases that should never appear in a spoiler-free summary. Not exhaustive,
-// but it catches the failure mode where "safe" text still reveals the outcome.
-//
-// Matched on word boundaries, not as substrings. A naive substring match reads
-// "dies" inside "bodies", which is the same defect this project already found
-// in the site's own character matcher, where "Amon" matched "among".
+// Phrases that should never appear in a spoiler-free summary. Matched on word
+// boundaries, not as substrings: a naive match reads "dies" inside "bodies",
+// which is the same defect this project already found in the site's own
+// character matcher, where "Amon" matched "among".
 const SPOILER_PHRASES = [
     'dies', 'died', 'death of', 'is killed', 'killed by', 'murders', 'murdered by',
     'betrays', 'betrayed by', 'turns traitor', 'falls to chaos', 'becomes a daemon',
@@ -43,26 +39,16 @@ const SPOILER_PHRASES = [
 const findSpoilers = (text) => SPOILER_PHRASES.filter((phrase) =>
     new RegExp(`\\b${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(text));
 
+const escapeTemplate = (s) => String(s).replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
+const escapeSingle = (s) => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+
 if (!existsSync(fixesDir)) {
     console.error('No tools/blurb-fixes directory. Nothing to apply.');
     process.exit(1);
 }
 
-// ---------------------------------------------------------------------------
-// Load the current data
-// ---------------------------------------------------------------------------
 const source = readFileSync(join(root, 'script.js'), 'utf8');
-const ctx = createContext({
-    document: { getElementById: () => null, querySelector: () => null, querySelectorAll: () => [],
-        addEventListener: () => {}, documentElement: { classList: { toggle: () => {} } }, body: { style: {} } },
-    localStorage: { getItem: () => null, setItem: () => {} },
-    window: { addEventListener: () => {} }, requestAnimationFrame: () => {}, console,
-});
-runInContext(source.slice(0, source.indexOf('const modalOverlay')) + '\n;globalThis.__b = bookData;', ctx);
-const bookData = ctx.__b;
-
-const escapeTemplate = (s) => String(s).replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
-const escapeSingle = (s) => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+const { bookData } = loadFromScript(['bookData']);
 
 // ---------------------------------------------------------------------------
 // Collect and validate
@@ -89,6 +75,13 @@ for (const file of files) {
     }
     if (!Array.isArray(parsed.entries)) {
         errors.push(`${file}: missing an entries array`);
+        continue;
+    }
+    // Files describing books that did not exist yet use `proposedKey` and were
+    // inserted by hand, so this corrections pipeline has nothing to do with
+    // them. Kept in the directory as the provenance record.
+    if (parsed.newEntries) {
+        console.log(`  skipping ${file}: new entries, applied separately`);
         continue;
     }
 

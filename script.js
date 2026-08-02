@@ -1106,7 +1106,7 @@ function importProgressCode(code) {
 // The state is derived from the DOM rather than counted, because several modals
 // have three separate close paths (button, backdrop, Escape) and a counter
 // would drift the first time two of them fired for one dismissal.
-const MODAL_SELECTOR = '.modal-overlay.active, .character-modal-overlay.active, .sync-modal-overlay.active';
+const MODAL_SELECTOR = '.modal-overlay.active, .character-modal-overlay.active';
 
 // Focus management for modals.
 //
@@ -4176,7 +4176,7 @@ const bookData = {
             <strong>Author:</strong> L J Goulding<br>
             <strong>Type:</strong> Audio Drama<br>
             <strong>From:</strong> The Burden of Loyalty Anthology<br>
-            <strong>Legion:</strong> Ultramarines<br>
+            <strong>Legion:</strong> Ultramarines, Iron Warriors<br>
             <strong>Main Characters:</strong> Oberdeii, Tebecai, Barabas Dantioch<br>
             <strong>Timeline:</strong> 009.M31
         `,
@@ -4491,7 +4491,7 @@ const bookData = {
             <strong>Author:</strong> James Swallow<br>
             <strong>Type:</strong> Short Story<br>
             <strong>From:</strong> The Silent War Anthology<br>
-            <strong>Legion:</strong> Knights-Errant<br>
+            <strong>Legion:</strong> Knights-Errant, Death Guard<br>
             <strong>Main Characters:</strong> Helig Gallor, Nathaniel Garro<br>
             <strong>Timeline:</strong> 010.M31
         `,
@@ -5123,7 +5123,7 @@ const bookData = {
         details: `
             <strong>Author:</strong> Guy Haley<br>
             <strong>Type:</strong> Novel<br>
-            <strong>Legion:</strong> Imperial Fists, Blood Angels, Death Guard, World Eaters, Night Lords<br>
+            <strong>Legion:</strong> Imperial Fists, All Traitor Legions<br>
             <strong>Main Characters:</strong> Katsuhiro, Rogal Dorn, Sanguinius, Jaghatai Khan, Mortarion, Angron, Zardu Layak<br>
             <strong>Timeline:</strong> 014.M31
         `,
@@ -5147,7 +5147,7 @@ const bookData = {
         details: `
             <strong>Author:</strong> Dan Abnett<br>
             <strong>Type:</strong> Novel<br>
-            <strong>Legion:</strong> Imperial Fists, Sons of Horus, Iron Warriors<br>
+            <strong>Legion:</strong> Imperial Fists, Sons of Horus, Alpha Legion<br>
             <strong>Main Characters:</strong> Rogal Dorn, Perturabo, Sigismund, Ezekyle Abaddon, Garviel Loken, Sanguinius<br>
             <strong>Timeline:</strong> 014.M31
         `,
@@ -5177,7 +5177,7 @@ const bookData = {
         details: `
             <strong>Author:</strong> John French<br>
             <strong>Type:</strong> Novel<br>
-            <strong>Legion:</strong> Collegia Titanica, Legio Ignatum, Legio Mortis<br>
+            <strong>Legion:</strong> Collegia Titanica, Death Guard<br>
             <strong>Main Characters:</strong> Horus<br>
             <strong>Timeline:</strong> 014.M31
         `,
@@ -5189,7 +5189,7 @@ const bookData = {
         details: `
             <strong>Author:</strong> Chris Wraight<br>
             <strong>Type:</strong> Novel<br>
-            <strong>Legion:</strong> White Scars, Death Guard, Imperial Fists<br>
+            <strong>Legion:</strong> White Scars, Death Guard<br>
             <strong>Main Characters:</strong> Jaghatai Khan, Mortarion, Sigismund, Ilya Ravallion, Shiban Khan<br>
             <strong>Timeline:</strong> 014.M31
         `,
@@ -6196,7 +6196,7 @@ function initializeSyncPanel() {
 
     // A sync link lands here. Ask first, because restoring replaces whatever
     // this device already has.
-    const fromUrl = /[#&]s=([^&]+)/.exec(location.hash);
+    const fromUrl = /[#&]s=([^&]+)/.exec(location.hash);   // still present at this point
     if (fromUrl) {
         history.replaceState(null, '', location.pathname + location.search);
         const existing = Object.values(readingProgress.load()).filter(Boolean).length;
@@ -6223,6 +6223,86 @@ function rerenderCurrentView() {
         generateBookCards(legion, search);
     }
     updateProgressCounter();
+}
+
+// Captured once, at parse time. The sync panel strips the hash with
+// replaceState as soon as it initialises, so anything checking location.hash
+// later sees a clean URL and cannot tell a restore link from a normal visit.
+const ARRIVED_WITH_SYNC_CODE = /[#&]s=/.test(location.hash);
+
+const WELCOME_KEY = 'horusHeresySeenWelcome';
+const TOAST_KEY = 'horusHeresySeenSaveHint';
+
+const flag = {
+    get(key) {
+        try { return localStorage.getItem(key) === '1'; } catch (e) { return false; }
+    },
+    set(key) {
+        try { localStorage.setItem(key, '1'); } catch (e) { /* private browsing */ }
+    },
+};
+
+// Shown once. Deliberately not a blocking tour: one panel, one button out.
+function initializeWelcome() {
+    const overlay = document.getElementById('welcomeOverlay');
+    if (!overlay) return;
+
+    const dismiss = () => {
+        overlay.classList.remove('active');
+        focusManager.release(overlay);
+        scrollLock.release();
+        flag.set(WELCOME_KEY);
+    };
+
+    document.getElementById('closeWelcome').addEventListener('click', dismiss);
+    document.getElementById('welcomeBegin').addEventListener('click', dismiss);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) dismiss(); });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) dismiss();
+    });
+
+    // Someone arriving on a sync link has come to restore progress, not to read
+    // an introduction, so stay out of the way.
+    const hasProgress = Object.values(readingProgress.load()).some(Boolean);
+
+    if (!flag.get(WELCOME_KEY) && !ARRIVED_WITH_SYNC_CODE && !hasProgress) {
+        overlay.classList.add('active');
+        scrollLock.acquire();
+        focusManager.trap(overlay);
+    } else if (!flag.get(WELCOME_KEY)) {
+        // Returning user with existing progress: do not show it later either.
+        flag.set(WELCOME_KEY);
+    }
+}
+
+// The one-time save hint. Called after a status change.
+function maybeShowSaveHint() {
+    if (flag.get(TOAST_KEY)) return;
+    const toast = document.getElementById('progressToast');
+    if (!toast) return;
+
+    flag.set(TOAST_KEY);
+    toast.hidden = false;
+    requestAnimationFrame(() => toast.classList.add('is-visible'));
+
+    const hide = () => {
+        toast.classList.remove('is-visible');
+        setTimeout(() => { toast.hidden = true; }, 300);
+    };
+    document.getElementById('toastDismiss').addEventListener('click', hide, { once: true });
+    document.getElementById('toastSync').addEventListener('click', () => {
+        hide();
+        document.getElementById('syncBtn')?.click();
+    }, { once: true });
+
+    // Long enough to read, and it never returns.
+    setTimeout(hide, 12000);
+}
+
+function initializeProgressHint() {
+    const hint = document.getElementById('progressHint');
+    if (!hint) return;
+    hint.addEventListener('click', () => document.getElementById('syncBtn')?.click());
 }
 
 function initializeViewSwitcher() {
@@ -6452,6 +6532,7 @@ function showModal(bookKey) {
         // so marking book 90 as finished sent you back to book 1.
         updateBookCardStatus(bookKey, newStatus);
         updateProgressCounter();
+        if (newStatus) maybeShowSaveHint();
     });
 
     // Add event listeners for character links
@@ -7095,6 +7176,8 @@ window.addEventListener('load', async () => {
     initializeViewSwitcher();
     initializeFilterDisclosure();
     initializeSyncPanel();
+    initializeProgressHint();
+    initializeWelcome();
 
     // Await the reading order before the first render, so a first-time visitor
     // never sees chronological order flash up as if it were the recommendation.

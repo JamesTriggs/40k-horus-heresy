@@ -1,343 +1,536 @@
 {
-  "batch": "primarchs",
-  "entries": [
-    {
-      "bookKey": "primarch-roboute-guilliman",
-      "verdict": "corrected",
-      "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
-      "author": "David Annandale",
-      "type": "Novel",
-      "legions": ["Ultramarines"],
-      "timeline": "964-970.M30",
-      "mainCharacters": ["Roboute Guilliman", "Marius Gage"],
-      "blurb": "Deliberately not an origin story. Guilliman leads the XIII Legion against the last remnants of an ork empire on Thoas, determined to honour the vanished human civilisation that built the world, while quietly reshuffling parts of his own Legion. The war refuses to behave, testing his doctrine that precision and adaptability beat brute force. Each chapter opens with an excerpt from Guilliman's own treatises on war and culture.",
-      "blurbSafe": "Guilliman takes the XIII Legion to the ork-held world of Thoas, set on honouring the civilisation that once lived there. It is a study of the Master of Ultramar as both planner and warrior, his doctrine of precision and adaptability tested by a war that will not go to plan.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Roboute_Guilliman_-_Lord_of_Ultramar_(Novella)",
-        "https://www.trackofwords.com/roboute-guilliman-lord-of-ultramar-david-annandale-the-primarchs-book-one/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "Old blurb was generic filler and never named the actual story. The book is the Battle of Thoas against orks, not a life-of-Guilliman overview, and Track of Words explicitly says it is not an origin story. The treatise excerpts are documentary epigraphs, not scenes, so they do not shift the narrative present. Timeline unchanged. Fandom's infobox calls this a Novella (240pp hardback) while Lexicanum and reviewers call it a novel; type set to Novel for consistency with the series, see batch note."
-    },
-    {
-      "bookKey": "primarch-leman-russ",
-      "verdict": "corrected",
-      "title": "LEMAN RUSS: THE GREAT WOLF",
-      "author": "Chris Wraight",
-      "type": "Novel",
-      "legions": ["Space Wolves", "Dark Angels"],
-      "timeline": "015-021.M31",
-      "mainCharacters": ["Leman Russ", "Lion El'Jonson", "Jorin Bloodhowl"],
-      "blurb": "At the height of the Great Crusade the VI Legion grinds the technologically capable human empire of Dulan towards compliance, with Russ sworn to kill the tyrant Durath himself and the Lion counselling caution. Much of the book follows Jorin Bloodhowl, Jarl of the 13th Company, and a secret the Wolves are hiding from the Dark Angels. Wraight bookends it with post-Heresy scenes on Fenris, where Russ recounts the campaign to a young Blood Claw.",
-      "blurbSafe": "The VI Legion fight to bring the defiant human empire of Dulan to compliance, with the Dark Angels alongside them and Russ pledged to strike down the tyrant Durath personally. This is the origin of the famous rivalry between the Wolf and the Lion, and a look at the secrets, honour and brotherhood beneath the Space Wolves' barbarian reputation.",
-      "changed": ["blurb", "blurbSafe", "type", "legions", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Leman_Russ_-_The_Great_Wolf_(Novella)",
-        "https://www.trackofwords.com/leman-russ-the-great-wolf-chris-wraight-the-primarchs-book-two/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "Old blurb named no plot at all. Structure confirmed twice: Track of Words says 'Wraight bookends the Dulan campaign with post-Heresy scenes', Tymell records the opening chapter as post-Heresy with the Space Wolves already a Chapter, and the closing section with news of the Lion's loss just reaching Fenris. Dark Angels added to legions because the Lion and his Legion are co-leads. Timeline left at the frame value 015-021.M31 per the existing dataset, though note the body of the book is the 870.M30 Dulan campaign, so the entry sorts a very long way from its content. Not a date change, just a flag."
-    },
-    {
-      "bookKey": "primarch-magnus",
-      "verdict": "corrected",
-      "title": "MAGNUS THE RED: MASTER OF PROSPERO",
-      "author": "Graham McNeill",
-      "type": "Novel",
-      "legions": ["Thousand Sons", "Iron Warriors"],
-      "timeline": "853.M30",
-      "mainCharacters": ["Magnus the Red", "Perturabo", "Ahriman", "Atharva", "Forrix"],
-      "blurb": "In the 55th year of the Great Crusade the world of Morningstar is tearing itself apart, and Magnus and Perturabo bring the Thousand Sons and Iron Warriors together to evacuate it. Perturabo handles the logistics while Magnus hunts for the cause, and the heart of the book is the genuine affection between the two brothers and the friendship growing between Ahriman and Forrix. A prologue and epilogue show Magnus brooding on the Planet of the Sorcerers long afterwards.",
-      "blurbSafe": "On the doomed world of Morningstar, Magnus and his brother Perturabo bring their Legions together for a rescue rather than a conquest. Seen through his own eyes and those of his sons, it catches the Crimson King at a hopeful moment, a complicated man of good intentions, restless curiosity and no small hubris.",
-      "changed": ["blurb", "blurbSafe", "type", "legions", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Magnus_the_Red_-_Master_of_Prospero_(Novella)",
-        "https://www.trackofwords.com/2017/05/31/magnus-the-red-master-of-prospero-graham-mcneill/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Magnus roaming the galaxy after forbidden knowledge and colliding with the Emperor's edicts, which is A Thousand Sons, not this book. This is a rescue mission on Morningstar shared with Perturabo. Iron Warriors added to legions: Perturabo and Forrix are co-leads. Frame confirmed by Tymell ('Opens sometime after the fall of Prospero, flashback to the evacuation of Morningstar in 29,853'). Timeline unchanged at 853.M30, which the book states twice; the frame remains undated in every source."
-    },
-    {
-      "bookKey": "primarch-perturabo",
-      "verdict": "corrected",
-      "title": "PERTURABO: THE HAMMER OF OLYMPIA",
-      "author": "Guy Haley",
-      "type": "Novel",
-      "legions": ["Iron Warriors"],
-      "timeline": "999.M30",
-      "mainCharacters": ["Perturabo", "Dantioch", "Fortreidon"],
-      "blurb": "Two interleaved threads: Perturabo's boyhood and rise among the fractious city states of Olympia, and the Iron Warriors' grinding late-Crusade campaign against the time-warping hrud, seen through Warsmith Dantioch and a newly inducted legionary. When word reaches him of turmoil on his adoptive home world, Perturabo abandons the xenos war to deal with it himself. A bleak, honest study of how a prodigy's resentment and self-pity took root, and what that cost his Legion.",
-      "blurbSafe": "Cutting between Perturabo's prodigious youth on Olympia and the Iron Warriors' brutal campaign against the xenos hrud, this is the origin story of the most bitter of the Emperor's sons. When trouble stirs on his adoptive home world, he turns his Legion around to answer it. A bleak look at how a genius came to feel so thanklessly used.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Perturabo_-_The_Hammer_of_Olympia_(Novella)",
-        "https://www.trackofwords.com/2017/07/26/perturabo-hammer-of-olympia-guy-haley/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "Old blurb was roughly right about Olympia but omitted the hrud campaign entirely, which is half the book, and asserted 'his relationship with his adopted sister' as the novel's subject. Track of Words describes the split as Perturabo's early years versus the hrud campaign, with Dantioch and the legionary Fortreidon as the other viewpoints, so the sister claim is not sourced and has been dropped in favour of 'adoptive home world' and 'adoptive family', which are. Timeline unchanged at 999.M30; note the purge of Olympia at the end is dated 000.M31 by the novel and the Horus Heresy Journal but 004.M31 by Forge World, an existing known conflict."
-    },
-    {
-      "bookKey": "primarch-lorgar",
-      "verdict": "corrected",
-      "title": "LORGAR: BEARER OF THE WORD",
-      "author": "Gav Thorpe",
-      "type": "Novel",
-      "legions": ["Word Bearers"],
-      "timeline": "959-964.M30",
-      "mainCharacters": ["Lorgar", "Kor Phaeron", "Nairo"],
-      "blurb": "Almost all of this takes place on Colchis, long before the Emperor arrives. The disgraced priest Kor Phaeron finds a strange infant among desert nomads and raises him as a weapon for his own ambitions, and the book follows that abusive father-and-son relationship through the religious war that unites the planet under one faith. It is told through Kor Phaeron and the slave Nairo rather than Lorgar himself, and structured in short chapter-and-verse sections. Brief interludes jump forward to the Word Bearers after Monarchia.",
-      "blurbSafe": "On Colchis, mighty religions rule a decaying society in the name of absent gods until Kor Phaeron finds an extraordinary child among the nomads and raises him to serve his own ends. Seen almost entirely through other people's eyes, this is a character study of Lorgar's upbringing and the religious war that made him, rather than a Legion war story.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Lorgar_-_Bearer_of_the_Word_(Novella)",
-        "https://www.trackofwords.com/2017/10/11/lorgar-bearer-of-the-word-gav-thorpe/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it said the book examines Lorgar's crisis of faith after Monarchia and his discovery of the Chaos Gods. That is The First Heretic. Track of Words is explicit that the body is Colchis before the Emperor, 'barring a few post-Monarchia interludes', and that it is 'probably not the book for anyone wanting to see the Word Bearers in action'. Timeline unchanged at 959-964.M30, which is the frame value; the Colchis body runs roughly 841-857.M30. Kept the Monarchia interludes out of blurbSafe as they are a humiliation reveal."
-    },
-    {
-      "bookKey": "primarch-fulgrim",
-      "verdict": "corrected",
-      "title": "FULGRIM: THE PALATINE PHOENIX",
-      "author": "Josh Reynolds",
-      "type": "Novel",
-      "legions": ["Emperor's Children"],
-      "timeline": "850-868.M30",
-      "mainCharacters": ["Fulgrim", "Fabius", "Abdemon"],
-      "blurb": "Breaking away from Horus to take the 28th Expedition, Fulgrim brings only seven Emperor's Children with him to Byzas, a world whose byzantine aristocracy plays to his strengths. What follows is largely negotiation, intrigue and ham-fisted assassination attempts rather than open war, though plenty of blood is spilled by the end. With the III Legion still small and its confidence only recently rebuilt, this is Fulgrim proving his methods work. A young apothecary named Fabius is among the seven.",
-      "blurbSafe": "Determined to prove himself to his brothers, Fulgrim takes just seven of his finest warriors to bring the world of Byzas into compliance by persuasion rather than annihilation. A story of intrigue, diplomacy and sharply pointed conversation more than battle, it studies the Phoenician's pride, charm and hunger to be recognised, and the price of even a bloodless triumph.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Fulgrim_-_The_Palatine_Phoenix_(Novella)",
-        "https://www.trackofwords.com/2018/01/22/fulgrim-the-palatine-phoenix-josh-reynolds/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "Old blurb described the Legion's rebuilding from near-extinction and Fulgrim's fall to Slaanesh, neither of which is the plot; the rebuilding is background and the fall is Fulgrim (Book V). This is the III Legion's first solo compliance, on Byzas / Twenty-Eight One. Fabius appears as an early-stage apothecary, confirmed by Track of Words. Timeline unchanged at 850-868.M30, which remains inferred rather than stated: Tymell's estimate is '29,850s/860s?' and the in-book line about 'the intervening century since his rediscovery' contradicts the depicted state of the Legion."
-    },
-    {
-      "bookKey": "primarch-ferrus-manus",
-      "verdict": "corrected",
-      "title": "FERRUS MANUS: THE GORGON OF MEDUSA",
-      "author": "David Guymer",
-      "type": "Novel",
-      "legions": ["Iron Hands", "Emperor's Children"],
-      "timeline": "869.M30",
-      "mainCharacters": ["Ferrus Manus"],
-      "blurb": "In 869.M30, with rumours spreading that the Emperor means to step back and raise one of his sons to lead the Crusade, Ferrus Manus learns that the 413th Expedition has stalled against the stubborn human empire of Gardinaal. Rather than wait for reinforcements he takes the war himself, commanding a leaderless host of Iron Hands, Emperor's Children, Ultramarines and Thousand Sons to make an example his father cannot ignore. A rare long look at the Gorgon, and at Terran-versus-Medusan tension inside the X Legion.",
-      "blurbSafe": "With rumours spreading that the Emperor will hand the Great Crusade to one of his sons, Ferrus Manus seizes a stalled campaign against the human empire of Gardinaal to make a statement his father cannot ignore. A rare extended study of the Gorgon, of his Legion's rivalry with the Emperor's Children, and of the divisions growing within the Iron Hands.",
-      "changed": ["blurb", "blurbSafe", "type", "legions", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Ferrus_Manus_-_The_Gorgon_of_Medusa_(Novella)",
-        "https://www.trackofwords.com/2018/03/31/ferrus-manus-gorgon-of-medusa/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "SERIOUS ERROR REMOVED: the old blurb ended by saying his inflexibility 'leads to his death at Isstvan V'. The novel does not depict Isstvan V, and that is a major spoiler for a newcomer. The actual subject is the Fall of the Lords of Gardinaal. Emperor's Children added to legions: the III Legion contingent is a significant presence and a deliberate foil. Timeline unchanged at 869.M30, the best-evidenced date in this batch, cited by Lexicanum to the novel's own chapter 3 and to Horus Heresy Book Two."
-    },
-    {
-      "bookKey": "primarch-jaghatai-khan",
-      "verdict": "corrected",
-      "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
-      "author": "Chris Wraight",
-      "type": "Novel",
-      "legions": ["White Scars"],
-      "timeline": "000.M31",
-      "mainCharacters": ["Jaghatai Khan", "Yesugei", "Hasik Noyan-Khan"],
-      "blurb": "A sequence of discrete episodes spanning more than a century of the Great Crusade, from the newly found Khan meeting his Legion on Terra to the days just after the Ullanor Triumph, by way of Hoadh, Chogoris and a summit on Baal. Throughout, Jaghatai fights to keep the White Scars' warrior mysticism intact in an Imperium that prizes cold rationality, and is slowly dragged into the argument over the Librarius that will lead to Nikaea. A direct prequel to Wraight's other White Scars books.",
-      "blurbSafe": "Told as a series of episodes across the Great Crusade, this follows the Khan and his Legion as their culture of warrior mysticism sits ever more awkwardly with the Imperium's ideals of Unity. Drawn against his instincts into the growing argument over psychic power in the Legions, Jaghatai must decide where his deepest allegiance really lies.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Jaghatai_Khan_-_Warhawk_of_Chorgoris_(Novella)",
-        "https://www.trackofwords.com/2018/07/16/jaghatai-khan-warhawk-of-chogoris-chris-wraight/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Khan's early years on the steppes and his unification of Chogoris. The novel opens with him already found and meeting his Legion on Terra, and the Chogoris episode is one dated stop in the middle. Structure confirmed twice: Track of Words ('several short arcs spanning years of the Great Crusade') and Tymell's per-episode dates (Terra 879, Hoadh 881-884, Chogoris 898, Gar-Ban-Gar 906, Baal 908, Ullanor 000.M31). Timeline unchanged at 000.M31, the last episode. Note the Fandom page title misspells Chogoris as 'Chorgoris'. The book leads up to the Librarius debate but does not reach Nikaea."
-    },
-    {
-      "bookKey": "primarch-vulkan",
-      "verdict": "corrected",
-      "title": "VULKAN: LORD OF DRAKES",
-      "author": "David Annandale",
-      "type": "Novel",
-      "legions": ["Salamanders"],
-      "timeline": "845-855.M30",
-      "mainCharacters": ["Vulkan", "Cassian Vaughn", "Artellus Numeon", "Rhy'tan"],
-      "blurb": "The XVIII Legion exists as two halves that have never met. In the Taras Division, Lord Commander Cassian Vaughn's Terran legionaries are being annihilated by a vast ork invasion at Antaeum, unaware their primarch has already been found. On Nocturne, Vulkan has spent years raising and training a second force in secret. The book is the story of the two halves being welded into one Legion, and of Vulkan stepping fully into the role of primarch for the first time.",
-      "blurbSafe": "The XVIII Legion still does not know that its own lord has been found. On one front its Terran warriors face extinction against a monstrous ork invasion, while on Nocturne Vulkan has quietly raised and trained a new force of his own. This is the story of how two halves became one indivisible Legion, and of Vulkan taking up the mantle of primarch.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Vulkan_-_Lord_of_Drakes_(Novella)",
-        "https://www.trackofwords.com/2018/07/13/rapid-fire-david-annandale-talks-vulkan-lord-of-drakes/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Vulkan's discovery on Nocturne, his humanitarian philosophy and his Perpetual nature. None of that is the plot, and Vulkan has already been found and been away with the Emperor for years when the book opens. Annandale's own elevator pitch to Track of Words: 'This is the origin story of the Salamanders... currently two separate Legions, Nocturnean and Terran, who have never met.' Timeline unchanged at 845-855.M30, but flagging that this remains the weakest date in the batch: no source gives a year and the only firm bracket is post-835.M30, pre-Heresy."
-    },
-    {
-      "bookKey": "primarch-corax",
-      "verdict": "corrected",
-      "title": "CORAX: LORD OF SHADOWS",
-      "author": "Guy Haley",
-      "type": "Novel",
-      "legions": ["Raven Guard"],
-      "timeline": "954.M30",
-      "mainCharacters": ["Corvus Corax", "Caius Valerius", "Agapito"],
-      "blurb": "Not an origin story. The 27th Expedition has stalled trying to bring the Carinae Sodality's thousand void-cities to compliance, and Corax answers the call rather than let the Night Lords take the job. Stubborn resistance, and an ancient bio-weapon unleashed at the void-city of Zenith, force him into escalating brutality. A parallel thread on Kiavahr and an exploration of the Raven Guard's genetic 'Sable Brand' probe the darkness in the Legion, with several fine conversations between Corax and Guilliman.",
-      "blurbSafe": "Corax takes on a stalled compliance against the vast void-cities of the Carinae Sodality, determined to succeed without resorting to terror. Their defenders are well armed and utterly without remorse, and the campaign pushes him steadily further than he wishes to go. A study of the line between justice and vengeance, and of the darkness the Raven Guard carry within them.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Corax_-_Lord_of_Shadows_(Novella)",
-        "https://www.trackofwords.com/2019/02/02/corax-lord-of-shadows-guy-haley/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the slave rebellion on Lycaeus before the Emperor found him. Track of Words is explicit that 'Corax's origin story has already been told' elsewhere and that this book instead examines justice versus vengeance during the Carinae compliance. Timeline unchanged at 954.M30, but note this is genuinely contested: the book's own '32 years since the Emperor came to Deliverance' is firm, while the rediscovery date it hangs off is not. Tymell prefers approximately 970s.M30, which would move this after Lorgar and Guilliman rather than before them."
-    },
-    {
-      "bookKey": "primarch-angron",
-      "verdict": "corrected",
-      "title": "ANGRON: SLAVE OF NUCERIA",
-      "author": "Ian St. Martin",
-      "type": "Novel",
-      "legions": ["World Eaters"],
-      "timeline": "900-905.M30",
-      "mainCharacters": ["Angron", "Mago", "Kharn", "Lhorke"],
-      "blurb": "A Great Crusade novel, set at the compliance of Ghenna soon after Angron is given command of the XII Legion. Contemptuous of sons who cannot match the gladiators he lost, he demands they remake themselves in his image by taking the Butcher's Nails. The present-day thread follows Mago, a centurion who embodies everything honourable about the old War Hounds, while flashbacks show Angron enslaved in Nuceria's fighting pits. It is the story of the World Eaters becoming what they became.",
-      "blurbSafe": "Placed in command of a Legion he never wanted, in service to a father he cannot forgive, Angron gives his sons an ultimatum that will set them on a path they can never leave. Interleaved with his youth in the fighting pits of Nuceria, it is the tragedy of a primarch broken long before the Emperor found him, and of warriors desperate to earn his regard.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Angron_-_Slaves_of_Nuceria_(Novella)",
-        "https://www.trackofwords.com/2019/02/25/angron-slave-of-nuceria-ian-st-martin/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "WORST ERROR IN THE BATCH. The old blurb said 'Angron returns to Nuceria during the Heresy' and that 'Lorgar offers him a terrible apotheosis'. Both are Betrayer, not this book. This is a Great Crusade novel set at Ghenna; Nuceria appears only as flashback and is not destroyed. Confirmed by Track of Words (Ghenna-era 'present' following Mago, 'past' showing Angron as a youth on Nuceria) and by Tymell ('Takes place at Ghenna, some time... after Angron is reunited with his legion'). Timeline unchanged at 900-905.M30. Note the book has an M41 coda following Kharn, which the dataset deliberately ignores for sorting. Fandom's page title pluralises the title as 'Slaves of Nuceria'; the correct title is the singular 'Slave of Nuceria', which the same page's infobox uses."
-    },
-    {
-      "bookKey": "primarch-konrad-curze",
-      "verdict": "corrected",
-      "title": "KONRAD CURZE: THE NIGHT HAUNTER",
-      "author": "Guy Haley",
-      "type": "Novel",
-      "legions": ["Night Lords"],
-      "timeline": "036.M31",
-      "mainCharacters": ["Konrad Curze"],
-      "blurb": "The narrative present is Curze alone in his palace on Tsagualsa, long after the Heresy has ended, spending his final hours justifying himself to a distant and contemptuous father. Around that frame Haley assembles vignettes from across his life: Nostramo before his rediscovery, his reading of his role in the Great Crusade, the changes in his Legion, the destruction of his home world and how he came to Tsagualsa. Fractured by design, and narrated by the least reliable voice imaginable.",
-      "blurbSafe": "Born in the shadows of Nostramo, a world of murderers and worse, Konrad Curze became the figure of dread known as the Night Haunter. Told in fractured vignettes by a deeply unreliable narrator, it pieces together how he saw himself, his Legion and the Imperium. It offers no verdict, and leaves you to decide how far to sympathise.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Konrad_Curze_-_The_Night_Haunter_(Novella)",
-        "https://www.trackofwords.com/2019/08/03/konrad-curze-the-night-haunter-guy-haley/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "Confirms the earlier finding: the frame is post-Heresy, not Heresy-era. Track of Words says Curze spends 'the final hours of his life' in a story 'long after the Heresy has ended', and Tymell independently places the present on Tsagualsa as Curze awaits his death, with the stasis pod recovered around 032.M31. Timeline unchanged at 036.M31. The Callidus assassin M'Shen is reported as present in the frame by secondary sources but I could not confirm her by name from a primary or first-hand source, so she is left out of mainCharacters and out of the blurb. blurbSafe deliberately omits the death frame, since the whole book is a spoiler for Curze's fate."
-    },
-    {
-      "bookKey": "primarch-lion-eljonson",
-      "verdict": "corrected",
-      "title": "LION EL'JONSON: LORD OF THE FIRST",
-      "author": "David Guymer",
-      "type": "Novel",
-      "legions": ["Dark Angels"],
-      "timeline": "997.M30",
-      "mainCharacters": ["Lion El'Jonson", "Duriel", "Aravain", "Savine"],
-      "blurb": "In 997.M30, while the Emperor gathers his mightiest sons for the assault on Ullanor Prime, the Lion takes the Dark Angels to the far Northern Fringe to subdue what looks like one minor rebellious world, in the Muspel system on the edge of the Ghoul Stars. Many of his senior officers think they belong at Ullanor instead. Told partly through a Techmarine, a young Librarian in a secret order and a disillusioned remembrancer, it is Guymer's answer to the charge that the Lion is merely secretive and passive.",
-      "blurbSafe": "While the Emperor masses his sons for the assault on Ullanor Prime, the Lord of the First instead draws his Legion to the farthest reaches of the known galaxy to subdue a single rebellious world. Is this another example of the Lion's infamous pride, or is there more afoot in that graveyard of empires than he will share even with his own sons?",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Lion_El%27Jonson_-_Lord_of_the_First_(Novella)",
-        "https://www.trackofwords.com/2020/02/28/rapid-fire-david-guymer-talks-lion-eljonson-lord-of-the-first/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Lion's relationship with Luther and 'the betrayal festering on Caliban'. Neither Luther nor Caliban is the subject; that is Descent of Angels and Fallen Angels. This is the Northern Fringe Campaign against a xenos foe in the Muspel system. Guymer names the other viewpoints in his Track of Words interview: the Techmarine Duriel, the Librarian Aravain and the remembrancer Savine, and confirms the Ullanor Crusade is raging as the story opens. Timeline unchanged at 997.M30, the cleanest date in this batch. Do not move it to 000.M31 just because Ullanor is mentioned; Ullanor was multi-year and the Triumph is later."
-    },
-    {
-      "bookKey": "primarch-alpharius",
-      "verdict": "corrected",
-      "title": "ALPHARIUS: HEAD OF THE HYDRA",
-      "author": "Mike Brooks",
-      "type": "Novel",
-      "legions": ["Alpha Legion"],
-      "timeline": "981.M30",
-      "mainCharacters": ["Alpharius", "Omegon", "Horus"],
-      "blurb": "A first-person account narrated by Alpharius himself, which makes it the least trustworthy document in the Heresy. It opens and closes on the moment 'Alpharius' presents himself to Horus late in the Great Crusade, the public discovery of the XX Legion's primarch. Between those bookends he recounts being found on Terra before the Crusade had even begun, his dealings with Valdor and the Sigillite, the secret recovery of Omegon during the Rangdan wars, and the Legion's early clandestine work.",
-      "blurbSafe": "Almost nothing is reliably known about the primarch of the Alpha Legion, so here he tells the story himself, in the first person. Covering his rediscovery and the XX Legion's early years, it is a masterclass in obfuscation in which every revelation might be another layer of deceit. When the tale comes from the serpent's mouth, where does the deception end and the truth begin?",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://warhammer40k.fandom.com/wiki/Alpharius_-_Head_of_the_Hydra_(Novella)",
-        "https://www.trackofwords.com/2021/01/12/rapid-fire-mike-brooks-talks-alpharius-head-of-the-hyrda/",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "high",
-      "notes": "Confirms the earlier finding: the book does NOT run into the Heresy. Tymell: 'Starts and ends with \"Alpharius\" (actually Omegon) being \"found\" by Horus late in the Crusade. Begins properly with Alpharius being discovered on Terra, right after the scattering of the Primarchs, before the Crusade has even begun.' Mike Brooks confirms to Track of Words that it is 'a first-person account of the Primarch of the Alpha Legion' and that he is 'of course the ultimate unreliable narrator'. Timeline unchanged at 981.M30. The old blurb was thematically defensible but described 'twin Primarchs' as the premise, which pre-empts a reveal, and gave no actual scope."
-    },
-    {
-      "bookKey": "primarch-mortarion",
-      "verdict": "corrected",
-      "title": "MORTARION: THE PALE KING",
-      "author": "David Annandale",
-      "type": "Novel",
-      "legions": ["Death Guard"],
-      "timeline": "930-939.M30",
-      "mainCharacters": ["Mortarion"],
-      "blurb": "Newly raised to command of the Death Guard, Mortarion volunteers to break the Galaspar system, whose ruling Order he sees as a version of the tyrants who enslaved Barbarus. He drives his barque the Fourth Horseman into Galaspar's hive spires and the primary hive falls in a night and a day, at a cost that appals the Imperium. Two of his brother primarchs then summon him to answer for the slaughter, and the Pale King brooks no challenge to his methods.",
-      "blurbSafe": "Newly raised to command of the Death Guard, Mortarion answers the tyranny of the Galaspar system with a campaign of shocking speed and ferocity. Its cost appals even the Imperium, and two of his brother primarchs come to make him account for his methods. A study of a primarch whose hatred of tyrants shapes every judgement he makes.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://wh40k.lexicanum.com/wiki/Mortarion:_The_Pale_King_(Novel)",
-        "https://wh40k.lexicanum.com/wiki/Conquest_of_Galaspar",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "medium",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Barbarus, the necromantic overlords and Mortarion's future servitude to Nurgle. The book is the Conquest of Galaspar; Barbarus appears only as motivation. Confirmed by the official Black Library synopsis on Lexicanum and by Lexicanum's Conquest of Galaspar article, which cites chapters 3, 4, 9 and 11 of this novel, and by Tymell ('Covers the conquest of Galaspar, the Death Guard's first after Mortarion takes command'). CAUTION on one point carried in tools/proposed-dates.json: it describes a frame set on Absyrtus about a year after Galaspar. I could not confirm that. Lexicanum's Absyrtus article sources the Absyrtus campaign entirely to a different story, The Verdict of the Scythe in Scions of the Emperor, and cites this novel nowhere. I have therefore kept Absyrtus out of the blurb. It does not affect the date either way. Timeline unchanged at 930-939.M30, which remains genuinely contested: Lexicanum's Galaspar infobox gives only 'M30'."
-    },
-    {
-      "bookKey": "primarch-rogal-dorn",
-      "verdict": "corrected",
-      "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
-      "author": "Gav Thorpe",
-      "type": "Novel",
-      "legions": ["Imperial Fists", "Luna Wolves", "Emperor's Children", "Dark Angels"],
-      "timeline": "014.M31",
-      "mainCharacters": ["Rogal Dorn", "Sigismund", "Fafnir Rann"],
-      "blurb": "As the Great Crusade enters its sixth decade, the Emperor sends four primarchs into the Occluda Noctis, hundreds of systems hidden behind a warp storm that blinds even his psychic sight. Dorn leads the Imperial Fists into that darkness against a foe nobody has met before, alongside Horus, Fulgrim and the Lion. Told in short, snappy sections through his Legion and the Remembrancer Order, it studies Dorn almost entirely from the outside, and is framed by scenes on Terra shortly before Horus's armada reaches Sol.",
-      "blurbSafe": "As the Great Crusade enters its sixth decade, the Emperor sends four primarchs beyond a vast warp storm into the Occluda Noctis, a region his psychic sight cannot pierce. Dorn takes the Imperial Fists into that darkness against an enemy unlike any encountered before. Told in quick, snappy sections and largely from other people's perspectives, it is a patient study of who Dorn is and why.",
-      "changed": ["blurb", "blurbSafe", "type", "legions", "mainCharacters"],
-      "sources": [
-        "https://wh40k.lexicanum.com/wiki/Rogal_Dorn:_The_Emperor%27s_Crusader_(Novel)",
-        "https://www.trackofwords.com/2022/11/08/short-and-sweet-november-2022/"
-      ],
-      "confidence": "medium",
-      "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Dorn as Praetorian fortifying the Imperial Palace, which is his Siege-era role, not this book. The body is the Night Crusade into the Occluda Noctis. Track of Words confirms 'Set quite early on in the Great Crusade... a campaign in which a full four Legions and their Primarchs were tasked with bringing the light of Compliance to the darkness of the Occluda Noctis... taking in not just Dorn but also Horus, Fulgrim and the Lion', told 'through the eyes of both his Legion and the Remembrancer Order', with Sigismund and Fafnir Rann among the viewpoints. Luna Wolves, Emperor's Children and Dark Angels added to legions on that basis. Timeline unchanged at 014.M31, the Terra frame, but flagging that roughly 208 pages are a Great Crusade campaign around 848-858.M30, so this entry currently sorts into the middle of the Siege sequence. Track of Words does not mention the Terra frame; it is attested by legiodraconis and by reviewer accounts recorded in tools/proposed-dates.json, hence medium confidence on that one element."
-    },
-    {
-      "bookKey": "primarch-sanguinius",
-      "verdict": "corrected",
-      "title": "SANGUINIUS: THE GREAT ANGEL",
-      "author": "Chris Wraight",
-      "type": "Novel",
-      "legions": ["Blood Angels"],
-      "timeline": "002-003.M31",
-      "mainCharacters": ["Sanguinius"],
-      "blurb": "A discredited remembrancer joins the expeditionary fleets to chronicle the most beloved of the primarchs, and finds the Blood Angels' origins, their lord's unique physical form and their off-limits home world all hedged about with rumour. Narrated in the first person, it follows the IX Legion out of Baal fresh from Nikaea into the six-month war against the megarachnids on Murder, making it a companion piece to Horus Rising. A short prologue and epilogue are set long after the Heresy.",
-      "blurbSafe": "A discredited remembrancer is sent to chronicle the deeds of the most beloved of the Emperor's sons and finds the Blood Angels' origins, their primarch's strange form and their guarded home world all wrapped in rumour and secrecy. Accompanying the Ninth Legion to war, he learns far more than he bargained for, about the Great Angel and about the nature of the Imperium itself.",
-      "changed": ["blurb", "blurbSafe", "type", "mainCharacters"],
-      "sources": [
-        "https://wh40k.lexicanum.com/wiki/Sanguinius:_The_Great_Angel_(Novel)",
-        "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
-      ],
-      "confidence": "medium",
-      "notes": "Confirms the earlier finding: this is late Great Crusade, and it never depicts Signus Prime or the Siege of Terra. SERIOUS CONTENT ERROR in the old blurb, which described visions of his own death, the gene-flaw and dying at Horus's hands. None of that is the book, and it spoils the character comprehensively for a newcomer. The official Black Library synopsis on Lexicanum confirms the discredited-remembrancer framing; Tymell confirms the muster at Baal 'fresh from Nikaea', the 'This. World. Is. Murder.' hand-off into Horus Rising, the six-month span across late 002 and early 003.M31, and the post-Heresy prologue and epilogue. Timeline unchanged at 002-003.M31. The remembrancer narrator is named as Avajis Kautenya in tools/proposed-dates.json but I could not confirm the name from an independent source, so it is omitted from mainCharacters. Confidence medium only because Track of Words never reviewed this one and Lexicanum carries the publisher blurb rather than a plot summary."
-    }
-  ]
+ "batch": "primarchs",
+ "entries": [
+  {
+   "bookKey": "primarch-roboute-guilliman",
+   "verdict": "corrected",
+   "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
+   "author": "David Annandale",
+   "type": "Novella",
+   "legions": [
+    "Ultramarines"
+   ],
+   "timeline": "964-970.M30",
+   "mainCharacters": [
+    "Roboute Guilliman",
+    "Marius Gage"
+   ],
+   "blurb": "Deliberately not an origin story. Guilliman leads the XIII Legion against the last remnants of an ork empire on Thoas, determined to honour the vanished human civilisation that built the world, while quietly reshuffling parts of his own Legion. The war refuses to behave, testing his doctrine that precision and adaptability beat brute force. Each chapter opens with an excerpt from Guilliman's own treatises on war and culture.",
+   "blurbSafe": "Guilliman takes the XIII Legion to the ork-held world of Thoas, set on honouring the civilisation that once lived there. It is a study of the Master of Ultramar as both planner and warrior, his doctrine of precision and adaptability tested by a war that will not go to plan.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Roboute_Guilliman_-_Lord_of_Ultramar_(Novella)",
+    "https://www.trackofwords.com/roboute-guilliman-lord-of-ultramar-david-annandale-the-primarchs-book-one/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "Old blurb was generic filler and never named the actual story. The book is the Battle of Thoas against orks, not a life-of-Guilliman overview, and Track of Words explicitly says it is not an origin story. The treatise excerpts are documentary epigraphs, not scenes, so they do not shift the narrative present. Timeline unchanged. Fandom's infobox calls this a Novella (240pp hardback) while Lexicanum and reviewers call it a novel; type set to Novel for consistency with the series, see batch note. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-leman-russ",
+   "verdict": "corrected",
+   "title": "LEMAN RUSS: THE GREAT WOLF",
+   "author": "Chris Wraight",
+   "type": "Novella",
+   "legions": [
+    "Space Wolves",
+    "Dark Angels"
+   ],
+   "timeline": "015-021.M31",
+   "mainCharacters": [
+    "Leman Russ",
+    "Lion El'Jonson",
+    "Jorin Bloodhowl"
+   ],
+   "blurb": "At the height of the Great Crusade the VI Legion grinds the technologically capable human empire of Dulan towards compliance, with Russ sworn to kill the tyrant Durath himself and the Lion counselling caution. Much of the book follows Jorin Bloodhowl, Jarl of the 13th Company, and a secret the Wolves are hiding from the Dark Angels. Wraight bookends it with post-Heresy scenes on Fenris, where Russ recounts the campaign to a young Blood Claw.",
+   "blurbSafe": "The VI Legion fight to bring the defiant human empire of Dulan to compliance, with the Dark Angels alongside them and Russ pledged to strike down the tyrant Durath personally. This is the origin of the famous rivalry between the Wolf and the Lion, and a look at the secrets, honour and brotherhood beneath the Space Wolves' barbarian reputation.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "legions",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Leman_Russ_-_The_Great_Wolf_(Novella)",
+    "https://www.trackofwords.com/leman-russ-the-great-wolf-chris-wraight-the-primarchs-book-two/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "Old blurb named no plot at all. Structure confirmed twice: Track of Words says 'Wraight bookends the Dulan campaign with post-Heresy scenes', Tymell records the opening chapter as post-Heresy with the Space Wolves already a Chapter, and the closing section with news of the Lion's loss just reaching Fenris. Dark Angels added to legions because the Lion and his Legion are co-leads. Timeline left at the frame value 015-021.M31 per the existing dataset, though note the body of the book is the 870.M30 Dulan campaign, so the entry sorts a very long way from its content. Not a date change, just a flag. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-magnus",
+   "verdict": "corrected",
+   "title": "MAGNUS THE RED: MASTER OF PROSPERO",
+   "author": "Graham McNeill",
+   "type": "Novella",
+   "legions": [
+    "Thousand Sons",
+    "Iron Warriors"
+   ],
+   "timeline": "853.M30",
+   "mainCharacters": [
+    "Magnus the Red",
+    "Perturabo",
+    "Ahriman",
+    "Atharva",
+    "Forrix"
+   ],
+   "blurb": "In the 55th year of the Great Crusade the world of Morningstar is tearing itself apart, and Magnus and Perturabo bring the Thousand Sons and Iron Warriors together to evacuate it. Perturabo handles the logistics while Magnus hunts for the cause, and the heart of the book is the genuine affection between the two brothers and the friendship growing between Ahriman and Forrix. A prologue and epilogue show Magnus brooding on the Planet of the Sorcerers long afterwards.",
+   "blurbSafe": "On the doomed world of Morningstar, Magnus and his brother Perturabo bring their Legions together for a rescue rather than a conquest. Seen through his own eyes and those of his sons, it catches the Crimson King at a hopeful moment, a complicated man of good intentions, restless curiosity and no small hubris.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "legions",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Magnus_the_Red_-_Master_of_Prospero_(Novella)",
+    "https://www.trackofwords.com/2017/05/31/magnus-the-red-master-of-prospero-graham-mcneill/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Magnus roaming the galaxy after forbidden knowledge and colliding with the Emperor's edicts, which is A Thousand Sons, not this book. This is a rescue mission on Morningstar shared with Perturabo. Iron Warriors added to legions: Perturabo and Forrix are co-leads. Frame confirmed by Tymell ('Opens sometime after the fall of Prospero, flashback to the evacuation of Morningstar in 29,853'). Timeline unchanged at 853.M30, which the book states twice; the frame remains undated in every source. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-perturabo",
+   "verdict": "corrected",
+   "title": "PERTURABO: THE HAMMER OF OLYMPIA",
+   "author": "Guy Haley",
+   "type": "Novella",
+   "legions": [
+    "Iron Warriors"
+   ],
+   "timeline": "999.M30",
+   "mainCharacters": [
+    "Perturabo",
+    "Dantioch",
+    "Fortreidon"
+   ],
+   "blurb": "Two interleaved threads: Perturabo's boyhood and rise among the fractious city states of Olympia, and the Iron Warriors' grinding late-Crusade campaign against the time-warping hrud, seen through Warsmith Dantioch and a newly inducted legionary. When word reaches him of turmoil on his adoptive home world, Perturabo abandons the xenos war to deal with it himself. A bleak, honest study of how a prodigy's resentment and self-pity took root, and what that cost his Legion.",
+   "blurbSafe": "Cutting between Perturabo's prodigious youth on Olympia and the Iron Warriors' brutal campaign against the xenos hrud, this is the origin story of the most bitter of the Emperor's sons. When trouble stirs on his adoptive home world, he turns his Legion around to answer it. A bleak look at how a genius came to feel so thanklessly used.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Perturabo_-_The_Hammer_of_Olympia_(Novella)",
+    "https://www.trackofwords.com/2017/07/26/perturabo-hammer-of-olympia-guy-haley/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "Old blurb was roughly right about Olympia but omitted the hrud campaign entirely, which is half the book, and asserted 'his relationship with his adopted sister' as the novel's subject. Track of Words describes the split as Perturabo's early years versus the hrud campaign, with Dantioch and the legionary Fortreidon as the other viewpoints, so the sister claim is not sourced and has been dropped in favour of 'adoptive home world' and 'adoptive family', which are. Timeline unchanged at 999.M30; note the purge of Olympia at the end is dated 000.M31 by the novel and the Horus Heresy Journal but 004.M31 by Forge World, an existing known conflict. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-lorgar",
+   "verdict": "corrected",
+   "title": "LORGAR: BEARER OF THE WORD",
+   "author": "Gav Thorpe",
+   "type": "Novella",
+   "legions": [
+    "Word Bearers"
+   ],
+   "timeline": "959-964.M30",
+   "mainCharacters": [
+    "Lorgar",
+    "Kor Phaeron",
+    "Nairo"
+   ],
+   "blurb": "Almost all of this takes place on Colchis, long before the Emperor arrives. The disgraced priest Kor Phaeron finds a strange infant among desert nomads and raises him as a weapon for his own ambitions, and the book follows that abusive father-and-son relationship through the religious war that unites the planet under one faith. It is told through Kor Phaeron and the slave Nairo rather than Lorgar himself, and structured in short chapter-and-verse sections. Brief interludes jump forward to the Word Bearers after Monarchia.",
+   "blurbSafe": "On Colchis, mighty religions rule a decaying society in the name of absent gods until Kor Phaeron finds an extraordinary child among the nomads and raises him to serve his own ends. Seen almost entirely through other people's eyes, this is a character study of Lorgar's upbringing and the religious war that made him, rather than a Legion war story.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Lorgar_-_Bearer_of_the_Word_(Novella)",
+    "https://www.trackofwords.com/2017/10/11/lorgar-bearer-of-the-word-gav-thorpe/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it said the book examines Lorgar's crisis of faith after Monarchia and his discovery of the Chaos Gods. That is The First Heretic. Track of Words is explicit that the body is Colchis before the Emperor, 'barring a few post-Monarchia interludes', and that it is 'probably not the book for anyone wanting to see the Word Bearers in action'. Timeline unchanged at 959-964.M30, which is the frame value; the Colchis body runs roughly 841-857.M30. Kept the Monarchia interludes out of blurbSafe as they are a humiliation reveal. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-fulgrim",
+   "verdict": "corrected",
+   "title": "FULGRIM: THE PALATINE PHOENIX",
+   "author": "Josh Reynolds",
+   "type": "Novella",
+   "legions": [
+    "Emperor's Children"
+   ],
+   "timeline": "850-868.M30",
+   "mainCharacters": [
+    "Fulgrim",
+    "Fabius",
+    "Abdemon"
+   ],
+   "blurb": "Breaking away from Horus to take the 28th Expedition, Fulgrim brings only seven Emperor's Children with him to Byzas, a world whose byzantine aristocracy plays to his strengths. What follows is largely negotiation, intrigue and ham-fisted assassination attempts rather than open war, though plenty of blood is spilled by the end. With the III Legion still small and its confidence only recently rebuilt, this is Fulgrim proving his methods work. A young apothecary named Fabius is among the seven.",
+   "blurbSafe": "Determined to prove himself to his brothers, Fulgrim takes just seven of his finest warriors to bring the world of Byzas into compliance by persuasion rather than annihilation. A story of intrigue, diplomacy and sharply pointed conversation more than battle, it studies the Phoenician's pride, charm and hunger to be recognised, and the price of even a bloodless triumph.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Fulgrim_-_The_Palatine_Phoenix_(Novella)",
+    "https://www.trackofwords.com/2018/01/22/fulgrim-the-palatine-phoenix-josh-reynolds/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "Old blurb described the Legion's rebuilding from near-extinction and Fulgrim's fall to Slaanesh, neither of which is the plot; the rebuilding is background and the fall is Fulgrim (Book V). This is the III Legion's first solo compliance, on Byzas / Twenty-Eight One. Fabius appears as an early-stage apothecary, confirmed by Track of Words. Timeline unchanged at 850-868.M30, which remains inferred rather than stated: Tymell's estimate is '29,850s/860s?' and the in-book line about 'the intervening century since his rediscovery' contradicts the depicted state of the Legion. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-ferrus-manus",
+   "verdict": "corrected",
+   "title": "FERRUS MANUS: THE GORGON OF MEDUSA",
+   "author": "David Guymer",
+   "type": "Novella",
+   "legions": [
+    "Iron Hands",
+    "Emperor's Children"
+   ],
+   "timeline": "869.M30",
+   "mainCharacters": [
+    "Ferrus Manus"
+   ],
+   "blurb": "In 869.M30, with rumours spreading that the Emperor means to step back and raise one of his sons to lead the Crusade, Ferrus Manus learns that the 413th Expedition has stalled against the stubborn human empire of Gardinaal. Rather than wait for reinforcements he takes the war himself, commanding a leaderless host of Iron Hands, Emperor's Children, Ultramarines and Thousand Sons to make an example his father cannot ignore. A rare long look at the Gorgon, and at Terran-versus-Medusan tension inside the X Legion.",
+   "blurbSafe": "With rumours spreading that the Emperor will hand the Great Crusade to one of his sons, Ferrus Manus seizes a stalled campaign against the human empire of Gardinaal to make a statement his father cannot ignore. A rare extended study of the Gorgon, of his Legion's rivalry with the Emperor's Children, and of the divisions growing within the Iron Hands.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "legions",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Ferrus_Manus_-_The_Gorgon_of_Medusa_(Novella)",
+    "https://www.trackofwords.com/2018/03/31/ferrus-manus-gorgon-of-medusa/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "SERIOUS ERROR REMOVED: the old blurb ended by saying his inflexibility 'leads to his death at Isstvan V'. The novel does not depict Isstvan V, and that is a major spoiler for a newcomer. The actual subject is the Fall of the Lords of Gardinaal. Emperor's Children added to legions: the III Legion contingent is a significant presence and a deliberate foil. Timeline unchanged at 869.M30, the best-evidenced date in this batch, cited by Lexicanum to the novel's own chapter 3 and to Horus Heresy Book Two. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-jaghatai-khan",
+   "verdict": "corrected",
+   "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
+   "author": "Chris Wraight",
+   "type": "Novella",
+   "legions": [
+    "White Scars"
+   ],
+   "timeline": "000.M31",
+   "mainCharacters": [
+    "Jaghatai Khan",
+    "Yesugei",
+    "Hasik Noyan-Khan"
+   ],
+   "blurb": "A sequence of discrete episodes spanning more than a century of the Great Crusade, from the newly found Khan meeting his Legion on Terra to the days just after the Ullanor Triumph, by way of Hoadh, Chogoris and a summit on Baal. Throughout, Jaghatai fights to keep the White Scars' warrior mysticism intact in an Imperium that prizes cold rationality, and is slowly dragged into the argument over the Librarius that will lead to Nikaea. A direct prequel to Wraight's other White Scars books.",
+   "blurbSafe": "Told as a series of episodes across the Great Crusade, this follows the Khan and his Legion as their culture of warrior mysticism sits ever more awkwardly with the Imperium's ideals of Unity. Drawn against his instincts into the growing argument over psychic power in the Legions, Jaghatai must decide where his deepest allegiance really lies.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Jaghatai_Khan_-_Warhawk_of_Chorgoris_(Novella)",
+    "https://www.trackofwords.com/2018/07/16/jaghatai-khan-warhawk-of-chogoris-chris-wraight/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Khan's early years on the steppes and his unification of Chogoris. The novel opens with him already found and meeting his Legion on Terra, and the Chogoris episode is one dated stop in the middle. Structure confirmed twice: Track of Words ('several short arcs spanning years of the Great Crusade') and Tymell's per-episode dates (Terra 879, Hoadh 881-884, Chogoris 898, Gar-Ban-Gar 906, Baal 908, Ullanor 000.M31). Timeline unchanged at 000.M31, the last episode. Note the Fandom page title misspells Chogoris as 'Chorgoris'. The book leads up to the Librarius debate but does not reach Nikaea. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-vulkan",
+   "verdict": "corrected",
+   "title": "VULKAN: LORD OF DRAKES",
+   "author": "David Annandale",
+   "type": "Novella",
+   "legions": [
+    "Salamanders"
+   ],
+   "timeline": "845-855.M30",
+   "mainCharacters": [
+    "Vulkan",
+    "Cassian Vaughn",
+    "Artellus Numeon",
+    "Rhy'tan"
+   ],
+   "blurb": "The XVIII Legion exists as two halves that have never met. In the Taras Division, Lord Commander Cassian Vaughn's Terran legionaries are being annihilated by a vast ork invasion at Antaeum, unaware their primarch has already been found. On Nocturne, Vulkan has spent years raising and training a second force in secret. The book is the story of the two halves being welded into one Legion, and of Vulkan stepping fully into the role of primarch for the first time.",
+   "blurbSafe": "The XVIII Legion still does not know that its own lord has been found. On one front its Terran warriors face extinction against a monstrous ork invasion, while on Nocturne Vulkan has quietly raised and trained a new force of his own. This is the story of how two halves became one indivisible Legion, and of Vulkan taking up the mantle of primarch.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Vulkan_-_Lord_of_Drakes_(Novella)",
+    "https://www.trackofwords.com/2018/07/13/rapid-fire-david-annandale-talks-vulkan-lord-of-drakes/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Vulkan's discovery on Nocturne, his humanitarian philosophy and his Perpetual nature. None of that is the plot, and Vulkan has already been found and been away with the Emperor for years when the book opens. Annandale's own elevator pitch to Track of Words: 'This is the origin story of the Salamanders... currently two separate Legions, Nocturnean and Terran, who have never met.' Timeline unchanged at 845-855.M30, but flagging that this remains the weakest date in the batch: no source gives a year and the only firm bracket is post-835.M30, pre-Heresy. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-corax",
+   "verdict": "corrected",
+   "title": "CORAX: LORD OF SHADOWS",
+   "author": "Guy Haley",
+   "type": "Novella",
+   "legions": [
+    "Raven Guard"
+   ],
+   "timeline": "954.M30",
+   "mainCharacters": [
+    "Corvus Corax",
+    "Caius Valerius",
+    "Agapito"
+   ],
+   "blurb": "Not an origin story. The 27th Expedition has stalled trying to bring the Carinae Sodality's thousand void-cities to compliance, and Corax answers the call rather than let the Night Lords take the job. Stubborn resistance, and an ancient bio-weapon unleashed at the void-city of Zenith, force him into escalating brutality. A parallel thread on Kiavahr and an exploration of the Raven Guard's genetic 'Sable Brand' probe the darkness in the Legion, with several fine conversations between Corax and Guilliman.",
+   "blurbSafe": "Corax takes on a stalled compliance against the vast void-cities of the Carinae Sodality, determined to succeed without resorting to terror. Their defenders are well armed and utterly without remorse, and the campaign pushes him steadily further than he wishes to go. A study of the line between justice and vengeance, and of the darkness the Raven Guard carry within them.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Corax_-_Lord_of_Shadows_(Novella)",
+    "https://www.trackofwords.com/2019/02/02/corax-lord-of-shadows-guy-haley/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the slave rebellion on Lycaeus before the Emperor found him. Track of Words is explicit that 'Corax's origin story has already been told' elsewhere and that this book instead examines justice versus vengeance during the Carinae compliance. Timeline unchanged at 954.M30, but note this is genuinely contested: the book's own '32 years since the Emperor came to Deliverance' is firm, while the rediscovery date it hangs off is not. Tymell prefers approximately 970s.M30, which would move this after Lorgar and Guilliman rather than before them. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-angron",
+   "verdict": "corrected",
+   "title": "ANGRON: SLAVE OF NUCERIA",
+   "author": "Ian St. Martin",
+   "type": "Novella",
+   "legions": [
+    "World Eaters"
+   ],
+   "timeline": "900-905.M30",
+   "mainCharacters": [
+    "Angron",
+    "Mago",
+    "Kharn",
+    "Lhorke"
+   ],
+   "blurb": "A Great Crusade novel, set at the compliance of Ghenna soon after Angron is given command of the XII Legion. Contemptuous of sons who cannot match the gladiators he lost, he demands they remake themselves in his image by taking the Butcher's Nails. The present-day thread follows Mago, a centurion who embodies everything honourable about the old War Hounds, while flashbacks show Angron enslaved in Nuceria's fighting pits. It is the story of the World Eaters becoming what they became.",
+   "blurbSafe": "Placed in command of a Legion he never wanted, in service to a father he cannot forgive, Angron gives his sons an ultimatum that will set them on a path they can never leave. Interleaved with his youth in the fighting pits of Nuceria, it is the tragedy of a primarch broken long before the Emperor found him, and of warriors desperate to earn his regard.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Angron_-_Slaves_of_Nuceria_(Novella)",
+    "https://www.trackofwords.com/2019/02/25/angron-slave-of-nuceria-ian-st-martin/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "WORST ERROR IN THE BATCH. The old blurb said 'Angron returns to Nuceria during the Heresy' and that 'Lorgar offers him a terrible apotheosis'. Both are Betrayer, not this book. This is a Great Crusade novel set at Ghenna; Nuceria appears only as flashback and is not destroyed. Confirmed by Track of Words (Ghenna-era 'present' following Mago, 'past' showing Angron as a youth on Nuceria) and by Tymell ('Takes place at Ghenna, some time... after Angron is reunited with his legion'). Timeline unchanged at 900-905.M30. Note the book has an M41 coda following Kharn, which the dataset deliberately ignores for sorting. Fandom's page title pluralises the title as 'Slaves of Nuceria'; the correct title is the singular 'Slave of Nuceria', which the same page's infobox uses. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-konrad-curze",
+   "verdict": "corrected",
+   "title": "KONRAD CURZE: THE NIGHT HAUNTER",
+   "author": "Guy Haley",
+   "type": "Novella",
+   "legions": [
+    "Night Lords"
+   ],
+   "timeline": "036.M31",
+   "mainCharacters": [
+    "Konrad Curze"
+   ],
+   "blurb": "The narrative present is Curze alone in his palace on Tsagualsa, long after the Heresy has ended, spending his final hours justifying himself to a distant and contemptuous father. Around that frame Haley assembles vignettes from across his life: Nostramo before his rediscovery, his reading of his role in the Great Crusade, the changes in his Legion, the destruction of his home world and how he came to Tsagualsa. Fractured by design, and narrated by the least reliable voice imaginable.",
+   "blurbSafe": "Born in the shadows of Nostramo, a world of murderers and worse, Konrad Curze became the figure of dread known as the Night Haunter. Told in fractured vignettes by a deeply unreliable narrator, it pieces together how he saw himself, his Legion and the Imperium. It offers no verdict, and leaves you to decide how far to sympathise.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Konrad_Curze_-_The_Night_Haunter_(Novella)",
+    "https://www.trackofwords.com/2019/08/03/konrad-curze-the-night-haunter-guy-haley/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "Confirms the earlier finding: the frame is post-Heresy, not Heresy-era. Track of Words says Curze spends 'the final hours of his life' in a story 'long after the Heresy has ended', and Tymell independently places the present on Tsagualsa as Curze awaits his death, with the stasis pod recovered around 032.M31. Timeline unchanged at 036.M31. The Callidus assassin M'Shen is reported as present in the frame by secondary sources but I could not confirm her by name from a primary or first-hand source, so she is left out of mainCharacters and out of the blurb. blurbSafe deliberately omits the death frame, since the whole book is a spoiler for Curze's fate. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-lion-eljonson",
+   "verdict": "corrected",
+   "title": "LION EL'JONSON: LORD OF THE FIRST",
+   "author": "David Guymer",
+   "type": "Novella",
+   "legions": [
+    "Dark Angels"
+   ],
+   "timeline": "997.M30",
+   "mainCharacters": [
+    "Lion El'Jonson",
+    "Duriel",
+    "Aravain",
+    "Savine"
+   ],
+   "blurb": "In 997.M30, while the Emperor gathers his mightiest sons for the assault on Ullanor Prime, the Lion takes the Dark Angels to the far Northern Fringe to subdue what looks like one minor rebellious world, in the Muspel system on the edge of the Ghoul Stars. Many of his senior officers think they belong at Ullanor instead. Told partly through a Techmarine, a young Librarian in a secret order and a disillusioned remembrancer, it is Guymer's answer to the charge that the Lion is merely secretive and passive.",
+   "blurbSafe": "While the Emperor masses his sons for the assault on Ullanor Prime, the Lord of the First instead draws his Legion to the farthest reaches of the known galaxy to subdue a single rebellious world. Is this another example of the Lion's infamous pride, or is there more afoot in that graveyard of empires than he will share even with his own sons?",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Lion_El%27Jonson_-_Lord_of_the_First_(Novella)",
+    "https://www.trackofwords.com/2020/02/28/rapid-fire-david-guymer-talks-lion-eljonson-lord-of-the-first/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described the Lion's relationship with Luther and 'the betrayal festering on Caliban'. Neither Luther nor Caliban is the subject; that is Descent of Angels and Fallen Angels. This is the Northern Fringe Campaign against a xenos foe in the Muspel system. Guymer names the other viewpoints in his Track of Words interview: the Techmarine Duriel, the Librarian Aravain and the remembrancer Savine, and confirms the Ullanor Crusade is raging as the story opens. Timeline unchanged at 997.M30, the cleanest date in this batch. Do not move it to 000.M31 just because Ullanor is mentioned; Ullanor was multi-year and the Triumph is later. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-alpharius",
+   "verdict": "corrected",
+   "title": "ALPHARIUS: HEAD OF THE HYDRA",
+   "author": "Mike Brooks",
+   "type": "Novella",
+   "legions": [
+    "Alpha Legion"
+   ],
+   "timeline": "981.M30",
+   "mainCharacters": [
+    "Alpharius",
+    "Omegon",
+    "Horus"
+   ],
+   "blurb": "A first-person account narrated by Alpharius himself, which makes it the least trustworthy document in the Heresy. It opens and closes on the moment 'Alpharius' presents himself to Horus late in the Great Crusade, the public discovery of the XX Legion's primarch. Between those bookends he recounts being found on Terra before the Crusade had even begun, his dealings with Valdor and the Sigillite, the secret recovery of Omegon during the Rangdan wars, and the Legion's early clandestine work.",
+   "blurbSafe": "Almost nothing is reliably known about the primarch of the Alpha Legion, so here he tells the story himself, in the first person. Covering his rediscovery and the XX Legion's early years, it is a masterclass in obfuscation in which every revelation might be another layer of deceit. When the tale comes from the serpent's mouth, where does the deception end and the truth begin?",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Alpharius_-_Head_of_the_Hydra_(Novella)",
+    "https://www.trackofwords.com/2021/01/12/rapid-fire-mike-brooks-talks-alpharius-head-of-the-hyrda/",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "high",
+   "notes": "Confirms the earlier finding: the book does NOT run into the Heresy. Tymell: 'Starts and ends with \"Alpharius\" (actually Omegon) being \"found\" by Horus late in the Crusade. Begins properly with Alpharius being discovered on Terra, right after the scattering of the Primarchs, before the Crusade has even begun.' Mike Brooks confirms to Track of Words that it is 'a first-person account of the Primarch of the Alpha Legion' and that he is 'of course the ultimate unreliable narrator'. Timeline unchanged at 981.M30. The old blurb was thematically defensible but described 'twin Primarchs' as the premise, which pre-empts a reveal, and gave no actual scope. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-mortarion",
+   "verdict": "corrected",
+   "title": "MORTARION: THE PALE KING",
+   "author": "David Annandale",
+   "type": "Novella",
+   "legions": [
+    "Death Guard"
+   ],
+   "timeline": "930-939.M30",
+   "mainCharacters": [
+    "Mortarion"
+   ],
+   "blurb": "Newly raised to command of the Death Guard, Mortarion volunteers to break the Galaspar system, whose ruling Order he sees as a version of the tyrants who enslaved Barbarus. He drives his barque the Fourth Horseman into Galaspar's hive spires and the primary hive falls in a night and a day, at a cost that appals the Imperium. Two of his brother primarchs then summon him to answer for the slaughter, and the Pale King brooks no challenge to his methods.",
+   "blurbSafe": "Newly raised to command of the Death Guard, Mortarion answers the tyranny of the Galaspar system with a campaign of shocking speed and ferocity. Its cost appals even the Imperium, and two of his brother primarchs come to make him account for his methods. A study of a primarch whose hatred of tyrants shapes every judgement he makes.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://wh40k.lexicanum.com/wiki/Mortarion:_The_Pale_King_(Novel)",
+    "https://wh40k.lexicanum.com/wiki/Conquest_of_Galaspar",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "medium",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Barbarus, the necromantic overlords and Mortarion's future servitude to Nurgle. The book is the Conquest of Galaspar; Barbarus appears only as motivation. Confirmed by the official Black Library synopsis on Lexicanum and by Lexicanum's Conquest of Galaspar article, which cites chapters 3, 4, 9 and 11 of this novel, and by Tymell ('Covers the conquest of Galaspar, the Death Guard's first after Mortarion takes command'). CAUTION on one point carried in tools/proposed-dates.json: it describes a frame set on Absyrtus about a year after Galaspar. I could not confirm that. Lexicanum's Absyrtus article sources the Absyrtus campaign entirely to a different story, The Verdict of the Scythe in Scions of the Emperor, and cites this novel nowhere. I have therefore kept Absyrtus out of the blurb. It does not affect the date either way. Timeline unchanged at 930-939.M30, which remains genuinely contested: Lexicanum's Galaspar infobox gives only 'M30'. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-rogal-dorn",
+   "verdict": "corrected",
+   "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
+   "author": "Gav Thorpe",
+   "type": "Novella",
+   "legions": [
+    "Imperial Fists",
+    "Luna Wolves",
+    "Emperor's Children",
+    "Dark Angels"
+   ],
+   "timeline": "014.M31",
+   "mainCharacters": [
+    "Rogal Dorn",
+    "Sigismund",
+    "Fafnir Rann"
+   ],
+   "blurb": "As the Great Crusade enters its sixth decade, the Emperor sends four primarchs into the Occluda Noctis, hundreds of systems hidden behind a warp storm that blinds even his psychic sight. Dorn leads the Imperial Fists into that darkness against a foe nobody has met before, alongside Horus, Fulgrim and the Lion. Told in short, snappy sections through his Legion and the Remembrancer Order, it studies Dorn almost entirely from the outside, and is framed by scenes on Terra shortly before Horus's armada reaches Sol.",
+   "blurbSafe": "As the Great Crusade enters its sixth decade, the Emperor sends four primarchs beyond a vast warp storm into the Occluda Noctis, a region his psychic sight cannot pierce. Dorn takes the Imperial Fists into that darkness against an enemy unlike any encountered before. Told in quick, snappy sections and largely from other people's perspectives, it is a patient study of who Dorn is and why.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "legions",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://wh40k.lexicanum.com/wiki/Rogal_Dorn:_The_Emperor%27s_Crusader_(Novel)",
+    "https://www.trackofwords.com/2022/11/08/short-and-sweet-november-2022/"
+   ],
+   "confidence": "medium",
+   "notes": "SERIOUS CONTENT ERROR in the old blurb: it described Dorn as Praetorian fortifying the Imperial Palace, which is his Siege-era role, not this book. The body is the Night Crusade into the Occluda Noctis. Track of Words confirms 'Set quite early on in the Great Crusade... a campaign in which a full four Legions and their Primarchs were tasked with bringing the light of Compliance to the darkness of the Occluda Noctis... taking in not just Dorn but also Horus, Fulgrim and the Lion', told 'through the eyes of both his Legion and the Remembrancer Order', with Sigismund and Fafnir Rann among the viewpoints. Luna Wolves, Emperor's Children and Dark Angels added to legions on that basis. Timeline unchanged at 014.M31, the Terra frame, but flagging that roughly 208 pages are a Great Crusade campaign around 848-858.M30, so this entry currently sorts into the middle of the Siege sequence. Track of Words does not mention the Terra frame; it is attested by legiodraconis and by reviewer accounts recorded in tools/proposed-dates.json, hence medium confidence on that one element. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  },
+  {
+   "bookKey": "primarch-sanguinius",
+   "verdict": "corrected",
+   "title": "SANGUINIUS: THE GREAT ANGEL",
+   "author": "Chris Wraight",
+   "type": "Novella",
+   "legions": [
+    "Blood Angels"
+   ],
+   "timeline": "002-003.M31",
+   "mainCharacters": [
+    "Sanguinius"
+   ],
+   "blurb": "A discredited remembrancer joins the expeditionary fleets to chronicle the most beloved of the primarchs, and finds the Blood Angels' origins, their lord's unique physical form and their off-limits home world all hedged about with rumour. Narrated in the first person, it follows the IX Legion out of Baal fresh from Nikaea into the six-month war against the megarachnids on Murder, making it a companion piece to Horus Rising. A short prologue and epilogue are set long after the Heresy.",
+   "blurbSafe": "A discredited remembrancer is sent to chronicle the deeds of the most beloved of the Emperor's sons and finds the Blood Angels' origins, their primarch's strange form and their guarded home world all wrapped in rumour and secrecy. Accompanying the Ninth Legion to war, he learns far more than he bargained for, about the Great Angel and about the nature of the Imperium itself.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "type",
+    "mainCharacters"
+   ],
+   "sources": [
+    "https://wh40k.lexicanum.com/wiki/Sanguinius:_The_Great_Angel_(Novel)",
+    "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
+   ],
+   "confidence": "medium",
+   "notes": "Confirms the earlier finding: this is late Great Crusade, and it never depicts Signus Prime or the Siege of Terra. SERIOUS CONTENT ERROR in the old blurb, which described visions of his own death, the gene-flaw and dying at Horus's hands. None of that is the book, and it spoils the character comprehensively for a newcomer. The official Black Library synopsis on Lexicanum confirms the discredited-remembrancer framing; Tymell confirms the muster at Baal 'fresh from Nikaea', the 'This. World. Is. Murder.' hand-off into Horus Rising, the six-month span across late 002 and early 003.M31, and the post-Heresy prologue and epilogue. Timeline unchanged at 002-003.M31. The remembrancer narrator is named as Avajis Kautenya in tools/proposed-dates.json but I could not confirm the name from an independent source, so it is omitted from mainCharacters. Confidence medium only because Track of Words never reviewed this one and Lexicanum carries the publisher blurb rather than a plot summary. Type set to Novella: the publisher calls all 17 short novels and both wikis call them novellas."
+  }
+ ]
 }

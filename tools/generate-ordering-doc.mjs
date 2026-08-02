@@ -8,37 +8,12 @@
 // only way to change the order is to change the data. validate-data.mjs then
 // asserts that the two still agree.
 
-import { readFileSync, writeFileSync } from 'node:fs';
-import { createContext, runInContext } from 'node:vm';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import { writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { loadFromScript, repoRoot as root } from './load-data.mjs';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const source = readFileSync(join(root, 'script.js'), 'utf8');
 
-// A browser stub wide enough for script.js to reach its data definitions
-// without a DOM. It has to cover the top-level event listeners the chart view
-// registers, not just the element lookups.
-const context = createContext({
-    document: {
-        getElementById: () => null,
-        querySelector: () => null,
-        querySelectorAll: () => [],
-        addEventListener: () => {},
-        documentElement: { classList: { toggle: () => {} } },
-        body: { style: {} },
-    },
-    localStorage: { getItem: () => null, setItem: () => {} },
-    window: { addEventListener: () => {} },
-    requestAnimationFrame: () => {},
-    console,
-});
-runInContext(
-    source.slice(0, source.indexOf('const modalOverlay')) +
-        '\n;globalThis.__b = bookData;',
-    context
-);
-const bookData = context.__b;
+const { bookData } = loadFromScript(['bookData']);
 const entries = Object.entries(bookData);
 
 const ANTHOLOGIES = [

@@ -8,17 +8,17 @@
   {
    "bookKey": "war-divine-adoratrice",
    "number": "XXXIII.12",
-   "title": "THE DIVINE ADORATRICE",
+   "title": "THE DEVINE ADORATRICE",
    "author": "Graham McNeill",
    "anthology": "War Without End",
    "series": null,
    "currentType": "Short Story",
    "currentTimeline": "966.M30",
    "currentLegions": [
-    "Thousand Sons"
+    "Imperial Knights"
    ],
-   "currentBlurb": "The Thousand Sons delve deeper into sorcery and forbidden lore.",
-   "currentBlurbSafe": "Sorcerers of the XV Legion seek dangerous knowledge."
+   "currentBlurb": "Decades before the Heresy, Raeven Devine, second son of House Devine on the knight world of Molech, prepares for the Becoming that will bond him to his first Knight. A Sacristan of the hidden Serpent Cult detonates an electromagnetic charge during the ceremony, and in the confusion Raeven is acclaimed a hero while his elder brother Albard is broken. His mistress Lyx and his mother Cebella engineered all of it.",
+   "currentBlurbSafe": "On the knight world of Molech, generations before Horus turns on the Emperor, Raeven Devine prepares for the rite that will bond him to his first Knight. Not everyone at his family's court wants the ceremony to go as tradition demands."
   },
   {
    "bookKey": "war-virtues-sons",
@@ -30,10 +30,12 @@
    "currentType": "Short Story",
    "currentTimeline": "001.M31",
    "currentLegions": [
-    "Blood Angels"
+    "Blood Angels",
+    "Emperor's Children",
+    "World Eaters"
    ],
-   "currentBlurb": "Blood Angels struggle to maintain their nobility amid the Heresy's brutality.",
-   "currentBlurbSafe": "The IX Legion fights to preserve their virtue in a savage war."
+   "currentBlurb": "Troubled that each Legion has been allowed to embody only a single ideal, Sanguinius sends two of his most single-minded captains to learn from others. Azkaellon of the Sanguinary Guard duels Lucius of the Emperor's Children aboard an oceanic warship, while Amit the Flesh Tearer fights Khârn of the World Eaters in a trench on a jointly conquered world. Sanguinius then watches what the two men bring back to the IX Legion.",
+   "currentBlurbSafe": "Worried that his Legion is growing too narrow in temperament, Sanguinius arranges duels for two of his most extreme captains against warriors of the Emperor's Children and the World Eaters. What the pair learn matters far more to the Angel than who wins."
   },
   {
    "bookKey": "war-sermon-exodus",
@@ -45,10 +47,10 @@
    "currentType": "Short Story",
    "currentTimeline": "004.M31",
    "currentLegions": [
-    "Word Bearers"
+    "Various"
    ],
-   "currentBlurb": "Word Bearers preach their dark gospel during the endless war.",
-   "currentBlurbSafe": "The XVII Legion spreads their corrupted faith across the warzone."
+   "currentBlurb": "Human pilgrims journey from across the wastes of Davin, flocking together to prove themselves worthy in the eyes of dark gods. No Space Marine Legion features in the story, which Black Library published as a direct prequel to David Annandale's novel The Damnation of Pythos and to the doomed refugee exodus that novel opens with.",
+   "currentBlurbSafe": "On Davin, the faithful travel from across the wastes to gather and prove their devotion to powers the Imperium refuses to name. A short prelude to the events of The Damnation of Pythos."
   },
   {
    "bookKey": "war-howl-hearthworld",
@@ -62,8 +64,8 @@
    "currentLegions": [
     "Space Wolves"
    ],
-   "currentBlurb": "The Space Wolves defend their homeworld against traitor forces.",
-   "currentBlurbSafe": "The VI Legion fights to protect Fenris from the Heresy's touch."
+   "currentBlurb": "After Prospero burns, Leman Russ scatters Space Wolves watch packs to shadow every primarch. Veteran sergeant Thirteen Stars Falling is furious to draw Terra and Rogal Dorn, and the senior commander Laughing Jaurmag talks his way into joining the pack. Aboard the transport an Administratum clerk requests their names and ranks, and the Wolves lie, offering birth-names instead of true ones. Jaurmag warns them the clerk almost certainly answers to Malcador.",
+   "currentBlurbSafe": "In the wake of Prospero, Leman Russ assigns watch packs to shadow each of his brother primarchs for any sign of treachery. One pack draws what looks like the dullest posting of all: Terra, and Rogal Dorn."
   },
   {
    "bookKey": "war-lord-red-sands",
@@ -77,8 +79,8 @@
    "currentLegions": [
     "World Eaters"
    ],
-   "currentBlurb": "Angron's past as a gladiator slave haunts him as the World Eaters descend into madness.",
-   "currentBlurbSafe": "The Red Angel's tragic past is revealed as his Legion embraces bloodshed."
+   "currentBlurb": "On Isstvan III, Angron rampages through the ruins killing loyalist Emperor's Children, Death Guard and his own World Eaters without much distinction. Captain Kauragar manages to open a small wound in his gene-father's throat before falling, which pleases the primarch enough that he stays with the dying man. Asked why he now fights for Horus, Angron answers that he does not: Nuceria taught him that only freedom is worth having.",
+   "currentBlurbSafe": "Amid the ruins of Isstvan III, Angron cuts through loyalists and his own World Eaters alike, finding a strange serenity in the carnage. One of his captains gets close enough to ask the primarch why he now follows the Warmaster."
   },
   {
    "bookKey": "war-artefacts",
@@ -92,8 +94,8 @@
    "currentLegions": [
     "Salamanders"
    ],
-   "currentBlurb": "Salamanders recover precious relics from the war's devastation.",
-   "currentBlurbSafe": "The XVIII Legion seeks to preserve artifacts from destruction."
+   "currentBlurb": "Before leaving for Isstvan V, Vulkan returns to Nocturne and takes his Master of the Forge, T'kell, into the secret vault beneath the fortress-monastery. Shaken by Konrad Curze's murder of Nostramo, and by a conversation with Horus he now reads very differently, Vulkan orders the thousands of unique weapons he has made destroyed rather than risk them. T'kell argues for them, and is named the Legion's first Forgefather.",
+   "currentBlurbSafe": "On the eve of Isstvan V, Vulkan comes home to Nocturne and looks at his personal armoury with new eyes, wondering what his life's work as a weaponsmith would mean in the wrong hands."
   },
   {
    "bookKey": "war-chirurgeon",
@@ -107,8 +109,8 @@
    "currentLegions": [
     "Emperor's Children"
    ],
-   "currentBlurb": "Fabius Bile conducts his dark experiments on the fallen.",
-   "currentBlurbSafe": "The Clonelord's twisted surgeries continue unabated."
+   "currentBlurb": "Fabius, chief Apothecary of the Emperor's Children, works through a surgery while recalling the genetic blight that nearly ended the III Legion before Fulgrim was found, and the executions he ordered to contain it, including that of his friend Lycaeon. Fulgrim's gene-seed halted the decay but never cured it. The patient on the slab turns out to be Fabius himself, assisted by Lycaeon's mindless reanimated body.",
+   "currentBlurbSafe": "Fabius of the Emperor's Children operates, and remembers the genetic flaw that almost wiped out the III Legion in its earliest days. His Legion believes that flaw was cured long ago, but its chief Apothecary knows something they do not."
   },
   {
    "bookKey": "war-phoenician",
@@ -120,10 +122,11 @@
    "currentType": "Short Story",
    "currentTimeline": "006.M31",
    "currentLegions": [
+    "Iron Hands",
     "Emperor's Children"
    ],
-   "currentBlurb": "Fulgrim's corruption reaches new depths of depravity.",
-   "currentBlurbSafe": "The Phoenician's fall into darkness continues."
+   "currentBlurb": "On the black sands of Isstvan V, Iron Hands first captain Gabriel Santar lies dying, struck down by his former battle-brother Julius Kaesoron of the Emperor's Children. Helpless, he watches Fulgrim murder his primarch Ferrus Manus. In his last moments Santar's failing sight shows him what the supposedly perfect Phoenician has actually become, a revelation that may never reach the X Legion.",
+   "currentBlurbSafe": "The Dropsite Massacre seen from the black sand, through the eyes of a fallen Iron Hands officer. As Fulgrim and Ferrus Manus come face to face, he glimpses something about the Phoenician that nobody else has seen."
   },
   {
    "bookKey": "war-allegiance",
@@ -135,10 +138,11 @@
    "currentType": "Short Story",
    "currentTimeline": "007-009.M31",
    "currentLegions": [
-    "White Scars"
+    "White Scars",
+    "Thousand Sons"
    ],
-   "currentBlurb": "White Scars warriors declare their loyalty in the galaxy's hour of betrayal.",
-   "currentBlurbSafe": "The V Legion chooses their side in the civil war."
+   "currentBlurb": "Aboard the Swordstorm after the second battle of Prospero, Revuel Arvida, sole Thousand Sons survivor of the Wolf King's wrath, recovers under Stormseer Targutai Yesugei, who quietly presses him to join the V Legion. Arvida hides the onset of the flesh-change while dreaming of ruined Prospero. He is brought to the kurultai where Jaghatai Khan judges the White Scars who swore the blood oath, and one condemned man's refusal to break an oath settles Arvida's own choice.",
+   "currentBlurbSafe": "Carried away from Prospero by the White Scars, the Thousand Sons sorcerer Revuel Arvida slowly recovers his strength and his powers under Stormseer Yesugei's care. The V Legion has its own reckoning to hold, and Arvida must work out where he now belongs."
   },
   {
    "bookKey": "war-daemonology",
@@ -150,10 +154,10 @@
    "currentType": "Short Story",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Thousand Sons"
+    "Death Guard"
    ],
-   "currentBlurb": "The study of daemons leads the Thousand Sons deeper into damnation.",
-   "currentBlurbSafe": "Forbidden knowledge of the warp consumes those who seek it."
+   "currentBlurb": "Beaten by Jaghatai Khan above Prospero, Mortarion leads the Death Guard on a punitive rampage and annihilates the library world Terathalion. He is hunting one thing: a daemon that has spent twenty-five years wearing the skin of an archivist called Lermenta. Interleaved with memories of arguing with Malcador on Terra, his interrogation goes wrong, and the primarch who despises sorcery is forced to use it, then to start learning it from her.",
+   "currentBlurbSafe": "Smarting from his defeat by the Khan, Mortarion turns the Death Guard loose on the worlds of the Prosperine empire, though his own attention is plainly elsewhere. On the library world of Terathalion, the insular primarch is looking for something very specific."
   },
   {
    "bookKey": "war-gunsight",
@@ -165,10 +169,11 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Various"
+    "Officio Assassinorum",
+    "Sons of Horus"
    ],
-   "currentBlurb": "A sniper's perspective on the endless war.",
-   "currentBlurbSafe": "Through a warrior's gunsight, the war stretches to infinity."
+   "currentBlurb": "Vindicare assassin Eristede Kell has been hiding in the underdecks of the Vengeful Spirit for years since the failed Dagonet operation, injured, half-amnesiac and hearing whispers he attributes to Samus. He befriends a secretly loyal ship serf, Letae, then kills him in a delusional fit and uses the body as bait. When Horus comes, Kell fires, the Warmaster plucks the round out of the air, and Kell is turned rather than killed.",
+   "currentBlurbSafe": "An Officio Assassinorum killer has spent a very long time hidden in the bowels of Horus's flagship, waiting for a single shot at the Warmaster himself. Injury and isolation have not left his mind intact."
   },
   {
    "bookKey": "war-laurel-defiance",
@@ -180,10 +185,10 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Various"
+    "Ultramarines"
    ],
-   "currentBlurb": "Loyalists stand defiant against overwhelming odds.",
-   "currentBlurbSafe": "Warriors refuse to yield despite impossible circumstances."
+   "currentBlurb": "With the Shadow Crusade over and the Word Bearers and World Eaters driven out of Ultramar, the Ultramarines captain Lucretius Corvo is to be decorated by the primarchs with the Laurel of Defiance for his heroism. Corvo is privately uneasy about Guilliman and his brothers declaring themselves rulers of a new Imperium, but a ceremony in his own honour is no place to voice doubts.",
+   "currentBlurbSafe": "Ultramar is at peace again after the horrors of the Shadow Crusade, and an Ultramarines captain is to be honoured by the primarchs for his part in saving it. He is rather less certain about what those primarchs have declared in the meantime."
   },
   {
    "bookKey": "war-safe-shadowed-place",
@@ -195,10 +200,11 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Various"
+    "Night Lords",
+    "Ultramarines"
    ],
-   "currentBlurb": "No place remains safe as the Heresy consumes the galaxy.",
-   "currentBlurbSafe": "Refuge becomes illusion in a galaxy at war."
+   "currentBlurb": "Gendor Skraivok, a middling Night Lords commander, shelters a crippled splinter fleet in hidden space at the edge of the Sotha system after the Legion's defeat by the Dark Angels. His remaining captains desert him, and he sends the brothers Kellendvar and Kellenkir to salvage what they can. Krukesh the Pale then arrives and forces their allegiance, just as Sotha throws out a psychic beam that Macragge answers.",
+   "currentBlurbSafe": "Scattered and leaderless, the remnants of a Night Lords fleet gather in the dark on the fringes of Ultramar and take stock of what is left of them. What they see shining out of the Sotha system is not what they came looking for."
   },
   {
    "bookKey": "war-imperfect",
@@ -212,8 +218,8 @@
    "currentLegions": [
     "Emperor's Children"
    ],
-   "currentBlurb": "The III Legion's obsession with perfection becomes their damnation.",
-   "currentBlurbSafe": "The pursuit of perfection leads only to corruption."
+   "currentBlurb": "Fulgrim plays a game of regicide against Ferrus Manus, needling his old friend across the board, then reveals his daemonic form and kills him. The Ferrus at the table is one of hundreds of clones grown by Apothecary Fabius from blood left on Fulgrim's sword, so the Phoenician can keep testing whether he could ever have turned the Gorgon. Fabius returns to his laboratory, where a clone of Horus is growing.",
+   "currentBlurbSafe": "A game of regicide between Fulgrim and Ferrus Manus, played long after the Gorgon should have been able to sit at any board. Fabius, Apothecary of the III Legion, has rather more to do with the arrangement than either player admits."
   },
   {
    "bookKey": "war-wolf-mother",
@@ -225,10 +231,11 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Space Wolves"
+    "Knights-Errant",
+    "Perpetuals"
    ],
-   "currentBlurb": "The warriors of Fenris honor their traditions during the civil war.",
-   "currentBlurbSafe": "Space Wolves maintain their culture amid galaxy-wide treachery."
+   "currentBlurb": "Aboard the refugee ship Molech's Enlightenment, the Perpetual Alivia Sureka hunts the Serpent Cult that fled Molech with the survivors and has taken her daughter Vivyen. The Knight-Errant Severian, tracking the same cult, keeps wrecking her plans. They fight through cultists and corrupted Thalaxii to the cult leader Shargali-Shi, whose ritual is turning the stolen children into a daemon of Slaanesh.",
+   "currentBlurbSafe": "Among the civilians fleeing Molech aboard the Molech's Enlightenment, the cult that brought House Devine to its knees is still at work. Alivia Sureka intends to root it out, with unwelcome help from the lone Knight-Errant Severian."
   },
   {
    "bookKey": "war-harrowing",
@@ -240,10 +247,11 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Various"
+    "Alpha Legion",
+    "Mechanicum"
    ],
-   "currentBlurb": "A harrowing tale of survival in the Heresy's darkest moments.",
-   "currentBlurbSafe": "Warriors endure unimaginable horror during the civil war."
+   "currentBlurb": "Alpha Legion strike commander Dartarion Varix and his sleeper cell wake early aboard the Mechanicum ark freighter Omnissiax, which is carrying the Warmonger Titan Abyssus Edax and a new Legio Perennia battlegroup. Diverted to relieve the Alpha Legion's own rebellion on Callistra Mundi, the ship has to be seized now rather than en route to Terra. Varix sows confusion, wakes a princeps to claim the Titan, and turns the freighter's guns on its escort.",
+   "currentBlurbSafe": "A garrison world is in revolt and a Mechanicum ark freighter is diverted to relieve it, a Titan battlegroup still in its hold. The Alpha Legion do not fight the way other Legions fight, and the loyalists aboard are about to find out how."
   },
   {
    "bookKey": "war-all-remains",
@@ -255,10 +263,10 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Various"
+    "Imperial Army"
    ],
-   "currentBlurb": "In war's aftermath, only ruins and memories remain.",
-   "currentBlurbSafe": "The Heresy leaves only devastation in its wake."
+   "currentBlurb": "As Horus's rebellion consumes the galaxy the dead run into the billions, but far more are pulled off the front line to be treated and eventually returned to the fight. Aboard one hospital vessel cast adrift in the warp, a handful of ragged Imperial Army soldiers make a discovery that answers the question of why so many of their wounded comrades were never seen again. No Space Marine Legion features.",
+   "currentBlurbSafe": "For every soldier killed in the Heresy, many more are shipped away from the front to be patched up and sent back. On one such vessel, lost in the warp, a few Imperial Army survivors start wondering where all the other casualties went."
   },
   {
    "bookKey": "war-lions-command",
@@ -270,10 +278,11 @@
    "currentType": "Short Story",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Dark Angels"
+    "Dark Angels",
+    "Death Guard"
    ],
-   "currentBlurb": "Dark Angels follow their Primarch's orders without question.",
-   "currentBlurbSafe": "The I Legion executes the Lion's will with absolute obedience."
+   "currentBlurb": "After the Dark Angels fleet splits in the aftermath of Perditus, Seneschal Corswain continues hunting the Death Guard forces under Typhon. The chase becomes a tense standoff in orbit above Terra Nullius, a world claiming independence from the Imperium. Corswain must either bend its population to his cause or make an example of them for every other world tempted to secede. In this war there are no innocent bystanders.",
+   "currentBlurbSafe": "Corswain of the Dark Angels pursues Typhon's Death Guard across a splintering Imperium and ends up in a standoff above a world that wants no part of either side. Neutrality is not a position the Lion's seneschal finds easy to accept."
   },
   {
    "bookKey": "war-black-oculus",
@@ -285,10 +294,10 @@
    "currentType": "Short Story",
    "currentTimeline": "010-011.M31",
    "currentLegions": [
-    "Various"
+    "Iron Warriors"
    ],
-   "currentBlurb": "A tale of void warfare and dark secrets in the endless conflict.",
-   "currentBlurbSafe": "Ships clash in the darkness between stars."
+   "currentBlurb": "Told as the monologue of the Prime Navigator of Perturabo's flagship, this recounts how the Iron Warriors escaped the collapsing Iydris system by steering straight into the singularity at its heart. The crossing threw the fleet clear across the warp to the Tallarn system and left the Navigators irreversibly deranged by what they perceived. The narrator now speaks from a hidden place beneath Tallarn's surface, warning of humanity's insignificance.",
+   "currentBlurbSafe": "One of the Iron Warriors' Navigators recounts guiding Perturabo's fleet through something no vessel should have survived. He is speaking from somewhere he should not be, and he has a warning about how little any of it matters."
   },
   {
    "bookKey": "war-twisted",
@@ -300,10 +309,10 @@
    "currentType": "Short Story",
    "currentTimeline": "010.M31",
    "currentLegions": [
-    "Various"
+    "Sons of Horus"
    ],
-   "currentBlurb": "Corruption warps warriors and worlds alike.",
-   "currentBlurbSafe": "The touch of Chaos twists everything it reaches."
+   "currentBlurb": "Maloghurst the Twisted, Horus's crippled equerry, keeps rebuffing the Davinite priests aboard the Vengeful Spirit while a daemon of oil and smoke stalks him for a body. He goes to the Davinites for warding rituals, and they chain him to an eight-pointed cross to invite the possession themselves. Maloghurst breaks free, has them slaughtered, banishes the daemon, and reports another quietly foiled plot to an indifferent Warmaster.",
+   "currentBlurbSafe": "Despised as a cripple inside his own Legion, Maloghurst survives on the Warmaster's favour and his own guile. When something aboard the Vengeful Spirit begins hunting him, the only allies left are ones he has spent years refusing."
   },
   {
    "bookKey": "war-hands-emperor",
@@ -315,10 +324,11 @@
    "currentType": "Short Story",
    "currentTimeline": "012.M31",
    "currentLegions": [
-    "Custodian Guard"
+    "Custodian Guard",
+    "Imperial Fists"
    ],
-   "currentBlurb": "The Emperor's golden guardians strike against the traitors.",
-   "currentBlurbSafe": "Custodians undertake deadly missions in the Emperor's name."
+   "currentBlurb": "Shield-Captain Enobar Stentonox of the Custodian Guard has the watch over the Imperial Palace when a full alert sounds: secure airspace over Terra has been breached, not by traitors but by the Emperor's other praetorians, the Imperial Fists. With neither side willing to accept the blame for the mistake, the disputed skies become a battlefield between two entirely loyal forces.",
+   "currentBlurbSafe": "A Custodian shield-captain stands watch over the Imperial Palace when the alarm goes up that the skies above Terra have been violated. The intruders are not who anyone expected, and neither party is inclined to back down."
   }
  ]
 }

@@ -13,12 +13,61 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "006-013.M31",
    "currentLegions": [
-    "Alpha Legion"
+    "Mechanicum",
+    "Dark Mechanicum",
+    "Collegia Titanica"
    ],
-   "currentBlurb": "The Alpha Legion's myriad schemes converge as the Siege approaches.",
-   "currentBlurbSafe": "The XX Legion's countless operations reach critical junctures."
+   "currentBlurb": "On blockaded Mars, former Collegia Titanica princeps Kallistra Lennox leads a loyalist cell of Titan crew, enginseers and tech-adepts in guerrilla raids against the Dark Mechanicum of Kelbor-Hal. Out in the wastes they recover an uncorrupted Kastelan robot and find it houses the Tabula Myriad, an abominable intelligence from the Dark Age of Technology. Their lexorcist frees it anyway, and it begins turning traitor Titans against their masters.",
+   "currentBlurbSafe": "A ragged loyalist resistance of Titan crew, enginseers and tech-adepts wages a guerrilla war against the Dark Mechanicum on blockaded Mars. Out in the wastes they recover a battle automaton that is not what it appears to be, and must weigh how far they will go to break the stalemate."
+  },
+  {
+   "bookKey": "heralds-children-sicarus",
+   "number": "LII.6",
+   "title": "CHILDREN OF SICARUS",
+   "author": "Anthony Reynolds",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Word Bearers",
+    "Chaos Daemons"
+   ],
+   "currentBlurb": "After the Infidus Imperator is destroyed while duelling Macragge's Honour, Kor Phaeron cuts a hole in reality and escapes to the daemon world of Sicarus with a remnant of Word Bearers. Their new refuge is no sanctuary: the hordes of the Kairic adept Larazzar besiege them until only six legionaries and twelve mortal servants remain. A reincarnating prophet offers salvation through an ancient prophecy, at a price the Black Cardinal will not pay.",
+   "currentBlurbSafe": "Driven out of Ultramar with his flagship destroyed, Kor Phaeron leads his surviving Word Bearers into the Eye of Terror and onto a daemon world that proves anything but safe. Their salvation may lie in the ancient legends of Sicarus, if the Black Cardinal is the one to lead them to it."
+  },
+  {
+   "bookKey": "heralds-blackshield",
+   "number": "LII.5",
+   "title": "BLACKSHIELD",
+   "author": "Chris Wraight",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009-011.M31",
+   "currentLegions": [
+    "Death Guard",
+    "Blackshields"
+   ],
+   "currentBlurb": "Khorak, an ex-Deathshroud Terminator sergeant who broke from the Death Guard after watching Mortarion embrace sorcery at Molech, is hunted down by unmarked ships and forced to land on the toxic swamp world of Agarvian. He and four surviving legionaries make a stand in a gorge and kill dozens before their pursuers stop firing and their leader steps forward: Crysos Morturg, another fallen son of Barbarus. The parley ends in blood.",
+   "currentBlurbSafe": "A renegade Death Guard sergeant who considers himself the last of the 'true' XIV Legion is run to ground on a toxic swamp world by warriors in crudely painted black armour. Cornered and badly outnumbered, he discovers that the leader of his hunters shares his origins, if not his purpose."
+  },
+  {
+   "bookKey": "heralds-painted-count",
+   "number": "LII.8",
+   "title": "THE PAINTED COUNT",
+   "author": "Guy Haley",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Night Lords"
+   ],
+   "currentBlurb": "After the failed invasion of Sotha and the dimming of the Pharos, Night Lords captain Gendor Skraivok languishes aboard the VIII Legion flagship Nightfall, unable to rid himself of the daemon-bound blade that has chosen him. Distrusted by his allies and despised by his rivals, he is cast into the labyrinth deep inside the ship by Curze's equerry Shang. Only by accepting the sword's power does he escape, kill Shang and seize the Legion.",
+   "currentBlurbSafe": "Stranded aboard the Night Lords flagship after the disaster at Sotha, a disgraced captain finds he cannot be rid of the daemonic sword that has attached itself to him. Distrusted by his allies and despised by his rivals, he still intends to claw back the leadership of the VIII Legion by fair means or foul."
   },
   {
    "bookKey": "heralds-grey-raven",
@@ -28,12 +77,12 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "012.M31",
    "currentLegions": [
     "Raven Guard"
    ],
-   "currentBlurb": "A Raven Guard warrior fights in the shadows before the Siege.",
-   "currentBlurbSafe": "The XIX Legion strikes from darkness in the war's final days."
+   "currentBlurb": "Balsar Kurthuri, Chief Librarian of the Raven Guard, is stripped of his rank when Corax disbands the Legion's Librarius for a second time and orders him to Terra to face Malcador's judgement for wielding psychic powers after the Edict of Nikaea. Travelling with the other psykers his primarch no longer trusts, Kurthuri reaches a Sol System braced for invasion and finds his unswerving loyalty repaid with suspicion.",
+   "currentBlurbSafe": "The Raven Guard's Chief Librarian has obeyed every order his primarch ever gave him, including the one that took his powers away and the one that gave them back. Now Corax sends him to Terra to answer to the Sigillite, and a Sol System expecting invasion has little warmth for a returning psyker."
   },
   {
    "bookKey": "heralds-valerius",
@@ -45,10 +94,11 @@
    "currentType": "Audio Drama",
    "currentTimeline": "012-013.M31",
    "currentLegions": [
-    "Various"
+    "Imperial Army",
+    "Raven Guard"
    ],
-   "currentBlurb": "A warrior named Valerius faces his destiny as the Siege looms.",
-   "currentBlurbSafe": "One man's courage is tested in the war's final moments."
+   "currentBlurb": "Vice-Caesari Marcus Valerius of the Therion Cohort has been banished from Corax's sight for preaching that the Emperor is a god. Sent to the great slaughter at Beta-Garmon, he leads his Imperial Army soldiers into a Titan war they cannot win, sustained by the Lectitio Divinitatus and by visions he believes are divine guidance. Every man and woman under his command knows the end is near.",
+   "currentBlurbSafe": "An Imperial Army commander who has come to worship the Emperor as a god is sent to the vast Titan slaughter at Beta-Garmon. His forbidden visions shape every order he gives, and his soldiers must decide how much faith to place in them."
   },
   {
    "bookKey": "heralds-ember-wolves",
@@ -60,40 +110,12 @@
    "currentType": "Short Story",
    "currentTimeline": "012-013.M31",
    "currentLegions": [
-    "Space Wolves"
+    "Collegia Titanica",
+    "Legio Audax",
+    "Legio Castigatra"
    ],
-   "currentBlurb": "Space Wolves burn with fury as they race toward Terra.",
-   "currentBlurbSafe": "The VI Legion's wrath drives them toward the Throneworld."
-  },
-  {
-   "bookKey": "heralds-blackshield",
-   "number": "LII.5",
-   "title": "BLACKSHIELD",
-   "author": "Chris Wraight",
-   "anthology": "Heralds of the Siege",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
-   "currentLegions": [
-    "Blackshields"
-   ],
-   "currentBlurb": "A warrior without allegiance fights his own war before the Siege.",
-   "currentBlurbSafe": "Blackshield Space Marines wage their own battles in the Heresy's final days."
-  },
-  {
-   "bookKey": "heralds-children-sicarus",
-   "number": "LII.6",
-   "title": "CHILDREN OF SICARUS",
-   "author": "Anthony Reynolds",
-   "anthology": "Heralds of the Siege",
-   "series": null,
-   "currentType": "Audio Drama",
-   "currentTimeline": "012-013.M31",
-   "currentLegions": [
-    "Word Bearers"
-   ],
-   "currentBlurb": "Word Bearers from Sicarus march toward Terra to see their dark vision fulfilled.",
-   "currentBlurbSafe": "The XVII Legion advances on the Throneworld with dark purpose."
+   "currentBlurb": "On the hive world of Absalom, loyalist Titans flying the banner of the Fabricator General of Terra fight the Warmaster's engines through the ruins. Princeps Balthus Voltemand's six-strong Warhound battle-pack of the Legio Audax, the traitor Titan Legion called the Ember Wolves, stalks and brings down the far larger loyalist Warmonger Tantorus Magnificat of Legio Castigatra with their Ursus Claws. Gathering around their kill, the princeps find the fight is not over.",
+   "currentBlurbSafe": "God-machines go to war in the ruined hives of Absalom, loyalist Titans against the engines of the Warmaster. A pack of traitor Warhounds has been lying in wait, and when it sights prey worthy of the battle-pack it attacks at once."
   },
   {
    "bookKey": "heralds-exocytosis",
@@ -105,25 +127,11 @@
    "currentType": "Short Story",
    "currentTimeline": "012-013.M31",
    "currentLegions": [
-    "Death Guard"
+    "Death Guard",
+    "Dark Angels"
    ],
-   "currentBlurb": "The Death Guard's corruption reaches horrific new depths.",
-   "currentBlurbSafe": "Nurgle's gifts transform the XIV Legion into plague-bearers."
-  },
-  {
-   "bookKey": "heralds-painted-count",
-   "number": "LII.8",
-   "title": "THE PAINTED COUNT",
-   "author": "Guy Haley",
-   "anthology": "Heralds of the Siege",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
-   "currentLegions": [
-    "Blood Angels"
-   ],
-   "currentBlurb": "A Blood Angels noble fights to maintain his Legion's honor.",
-   "currentBlurbSafe": "The IX Legion struggles with their nature as the Siege approaches."
+   "currentBlurb": "Hounded across the galaxy by the Dark Angels, First Captain Calas Typhon has limped the Death Guard fleet into Segmentum Obscurus and been granted asylum by his old friend Luther of Caliban. Resting in the forests of Zaramund while his ships are repaired, Typhon feels a new corruption working through his flesh and mind, and Luther's Fallen watch their guests closely while laying plans of their own.",
+   "currentBlurbSafe": "A battered Death Guard fleet finds sanctuary in Segmentum Obscurus as the guest of Luther of Caliban, on a world long held as a symbol of brotherhood between the Legions. Waiting there for repairs, the XIV Legion's First Captain begins to suspect something has followed him out of the wider war."
   },
   {
    "bookKey": "heralds-last-son-prospero",
@@ -135,10 +143,11 @@
    "currentType": "Short Story",
    "currentTimeline": "012-013.M31",
    "currentLegions": [
-    "Thousand Sons"
+    "Thousand Sons",
+    "White Scars"
    ],
-   "currentBlurb": "The last loyal son of Prospero fights for redemption before Terra burns.",
-   "currentBlurbSafe": "A Thousand Sons warrior seeks to atone for his Legion's fall."
+   "currentBlurb": "His body ravaged by the flesh-change after he guided the White Scars fleet home through the warp, Thousand Sons sorcerer Revuel Arvida lies dying deep in the Imperial Dungeon on Terra. Jaghatai Khan demands that Malcador save his ward, but the Sigillite has a design of his own: to bind a lingering shard of Magnus the Red into Arvida and set the result to guard the broken webway gate. What emerges is neither man nor primarch.",
+   "currentBlurbSafe": "The last surviving son of Prospero clings to life on Terra, his body consumed by his Legion's curse after he brought the White Scars through the horrors of the ruinstorm. The Khan demands he be saved whatever the cost, and Malcador the Sigillite agrees, for reasons that are entirely his own."
   },
   {
    "bookKey": "heralds-soul-severed",
@@ -148,12 +157,12 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Audio Drama",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "012.M31",
    "currentLegions": [
-    "Various"
+    "Emperor's Children"
    ],
-   "currentBlurb": "Souls are severed from bodies as the warp's influence grows.",
-   "currentBlurbSafe": "Reality frays at the edges as Chaos power intensifies."
+   "currentBlurb": "With Fulgrim vanished into daemonhood, Lord Commander Primus Eidolon rules a third of the Emperor's Children and is challenged by Lord Commander Archorian, an able officer who thinks him a prideful usurper and would return the III Legion to its old glory. The two meet above the chem-world of Horvia, where Archorian springs an ambush. Eidolon has prepared a counter-ambush, and looses the Kakophoni on his own brethren.",
+   "currentBlurbSafe": "In their primarch's absence, one lord commander of the Emperor's Children holds a third of the III Legion and another disputes his right to it. Dissent is not acceptable, and Eidolon is willing to set his Kakophoni against warriors who were once his brothers."
   },
   {
    "bookKey": "heralds-dark-compliance",
@@ -163,12 +172,13 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Audio Drama",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "012.M31",
    "currentLegions": [
-    "Various"
+    "Sons of Horus",
+    "Mechanicum"
    ],
-   "currentBlurb": "Worlds are brought to dark compliance by the traitor forces.",
-   "currentBlurbSafe": "The traitors force worlds to submit through terror and corruption."
+   "currentBlurb": "As world after world swears to the Warmaster out of fear or malice, the heavily fortified Mechanicum world of Accazzar-Beta refuses. Two fleets engage across the void and Horus makes an example of it. His emissary Argonis of the Sons of Horus then recounts exactly what happened there to another defiant planetary ruler, so that the meaning of a dark compliance is understood without another shot being fired.",
+   "currentBlurbSafe": "Late in the Heresy most worlds swear fealty to Horus rather than face annihilation, and any that consider resistance are given one chance. A Sons of Horus emissary sets out for a wavering ruler precisely what a refusal costs, and how far the Warmaster is willing to go."
   },
   {
    "bookKey": "heralds-duty-waits",
@@ -178,12 +188,12 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "013.M31",
    "currentLegions": [
     "Imperial Fists"
    ],
-   "currentBlurb": "Imperial Fists stand ready on Terra, knowing their duty awaits.",
-   "currentBlurbSafe": "The VII Legion prepares to defend humanity's cradle."
+   "currentBlurb": "The Imperial Palace waits for a war that will not arrive. Since the Alpha Legion infiltrated the Palace the Imperial Fists have doubled their patrols and tightened every defence, and four primarchs stand ready, but boredom and dread erode morale faster than any enemy could. When Captain Maximus Thane's company is ordered to put down a civilian riot, the waiting ends in tragedy of the defenders' own making.",
+   "currentBlurbSafe": "Terra is sealed, the defences are complete and four primarchs stand ready, but Horus does not come. A study of how Space Marines endure the strain of waiting on the walls, and how much harder the mortals beside them find it."
   },
   {
    "bookKey": "heralds-magisterium",
@@ -193,12 +203,13 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "013.M31",
    "currentLegions": [
-    "Custodian Guard"
+    "Custodian Guard",
+    "Imperial Fists"
    ],
-   "currentBlurb": "The Custodians prepare for the defense of the Emperor himself.",
-   "currentBlurbSafe": "The Emperor's golden guardians ready themselves for the ultimate battle."
+   "currentBlurb": "The war in the webway beneath the Imperial Palace is over and the Custodian Guard have been gutted by the daemonic hordes that poured through it. Seen through the survivor Samonas, Constantin Valdor gathers what is left of the Ten Thousand and finds himself in conflict with Rogal Dorn over the defence of Terra, while his memories of Prospero remind him this is not the first primarch he has been set against.",
+   "currentBlurbSafe": "With the fighting beneath the Palace ended and the Emperor's guardians terribly reduced, Constantin Valdor must reckon with the Lord Commander of the Imperium over how Terra will be held. It is not the first time the Emperor's magisterium has found himself pitted against a primarch."
   },
   {
    "bookKey": "heralds-now-peals-midnight",
@@ -208,12 +219,12 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "013-014.M31",
    "currentLegions": [
-    "Various"
+    "Imperial Fists"
    ],
-   "currentBlurb": "Midnight arrives as the traitor fleet emerges at Terra. The Siege begins.",
-   "currentBlurbSafe": "The darkest hour strikes as Horus's forces arrive at the Throneworld."
+   "currentBlurb": "The last quiet hours before the Siege of Terra. Rogal Dorn walks the finished defences of the Imperial Palace and makes his final dispositions while his brother primarchs, his sons and billions of mortals wait for the storm to break. There is no battle in it, only the sun going down on the Throneworld and the sense of inevitability as the Warmaster's armada closes on Sol.",
+   "currentBlurbSafe": "For long years the defenders of Terra have stood sentinel against a foe who never came, and now the waiting is almost over. A quiet, measured portrait of the Imperial Palace and its people as the sun sets on the Throneworld."
   },
   {
    "bookKey": "heralds-dreams-unity",
@@ -223,12 +234,14 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "013.M31",
    "currentLegions": [
-    "Various"
+    "Thunder Warriors",
+    "Custodian Guard",
+    "Alpha Legion"
    ],
-   "currentBlurb": "Dreams of unity die as the Heresy reaches its terrible climax.",
-   "currentBlurbSafe": "The Emperor's dream shatters as war comes to Terra."
+   "currentBlurb": "Dahren Heruk is one of the last Thunder Warriors, surviving as a pit fighter in The Maw beneath the Imperial Palace while his gene-forged body rots and his mind slides into memories of Ararat, Sibir and the siege of Abyssna. When his ludus is burned and his few remaining brothers are killed, his search for the culprit runs into the Custodian Tagiomalchian, who is hunting a possessed Alpha Legionary and its cultists in the catacombs.",
+   "currentBlurbSafe": "Long after the Emperor's Custodians slaughtered the Thunder Warriors on his orders, a handful still survive in the slums beneath the Imperial Palace, scraping a living as gladiators as their bodies fail them. With the Throneworld bracing for Horus, one of the last of them is drawn into events far larger than the fighting pits, and hunted in turn by one of the Emperor's praetorians."
   },
   {
    "bookKey": "heralds-board-is-set",
@@ -238,12 +251,13 @@
    "anthology": "Heralds of the Siege",
    "series": null,
    "currentType": "Short Story",
-   "currentTimeline": "012-013.M31",
+   "currentTimeline": "013.M31",
    "currentLegions": [
-    "Various"
+    "Emperor",
+    "Custodian Guard"
    ],
-   "currentBlurb": "The Emperor and Malcador play a final game as the pieces move into place. The board is set, the Siege begins, and the fate of humanity hangs in the balance.",
-   "currentBlurbSafe": "The Emperor and Malcador reflect on the coming battle as the traitors arrive. The endgame begins."
+   "currentBlurb": "Troubled by the approach of the traitor fleets and by the darkness the Emperor holds back beneath the Palace, Malcador the Sigillite goes to commune with him. Over a wargame board the two range across what has happened, what might have been, and the unorthodox strategies that three Space Marine Legions on Terra may yet need. Malcador also weighs the part he himself will have to play.",
+   "currentBlurbSafe": "War on the Throneworld is now inevitable, and Malcador the Sigillite seeks counsel from the Emperor before the fleets arrive. Their conversation over a wargame board is a rare glimpse of the Sigillite with his usual walls down, and it leaves as many questions as answers."
   }
  ]
 }

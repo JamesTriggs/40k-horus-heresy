@@ -1,7 +1,7 @@
 {
  "batch": "siege",
  "anthologies": null,
- "count": 10,
+ "count": 14,
  "entries": [
   {
    "bookKey": "sot-solar-war",
@@ -10,15 +10,33 @@
    "author": "John French",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "Imperial Fists",
     "Sons of Horus",
     "Iron Warriors"
    ],
-   "currentBlurb": "The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods. The Solar War is fought in the void, with massive fleet battles determining whether the traitors can even reach Terra's surface.",
-   "currentBlurbSafe": "The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods in massive void battles that will determine if the traitors can even reach Terra's surface."
+   "currentBlurb": "The Siege opens not on Terra but across the whole Sol System, as Horus's armada fights its way inward past the outer bulwarks Rogal Dorn has spent years building. Sigismund leads the first line of defence in the void, Abaddon holds to the path his father set him, and the remembrancer Mersadie Oliton struggles to reach Terra before the way closes. Only by winning this void war can the traitors earn a foothold on Terran soil.",
+   "currentBlurbSafe": "The last act of the Heresy opens with a colossal void war for the Sol System, as Horus's armada drives inward against defences Rogal Dorn has spent years building. Before a single traitor boot touches the Throneworld, the fleets must settle who controls the approaches to Terra."
+  },
+  {
+   "bookKey": "sot-sons-of-selenar",
+   "number": "SoT 1.5",
+   "title": "SONS OF THE SELENAR",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "Novella",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Shattered Legions",
+    "Iron Hands",
+    "Salamanders",
+    "Raven Guard"
+   ],
+   "currentBlurb": "Returning to the Sol System as the void war rages, the Shattered Legions crew of the Sisypheum come apart, torn between following their resurrected captain on a suicidal mission and obeying orders to rejoin their brothers on Terra. A garbled signal drives them down to the shattered surface of Luna, where horrors from the earliest days of gene-manipulation are unleashed and a long-buried secret is uncovered, one that will shape the galaxy no matter who claims Terra.",
+   "currentBlurbSafe": "The battered Shattered Legions crew of the Sisypheum reach the Sol System divided, torn between a suicidal mission and orders to return to Terra and rejoin their Legion brothers. A strange signal pulls them down to embattled Luna and the secretive Selenar gene-cults, where their bonds of loyalty and devotion to one another are tested one final time."
   },
   {
    "bookKey": "sot-lost-and-damned",
@@ -27,14 +45,14 @@
    "author": "Guy Haley",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "Imperial Fists",
     "All Traitor Legions"
    ],
-   "currentBlurb": "The traitors land on Terra. Billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war. The first walls begin to crack.",
-   "currentBlurbSafe": "The traitors land on Terra, and billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war."
+   "currentBlurb": "On the thirteenth day of Secundus the bombardment of Terra begins, and the first barrier Horus must break is not a wall but the Imperial Palace's aegis shield. Guy Haley tells the ground war largely through Katsuhiro, a conscript shovelled into the outer redoubts, while Mortarion's plague weapons and Angron's fury are unleashed and the traitor primarchs bicker over precedence. The outer defences hold, but every inch is paid for in the lives of billions.",
+   "currentBlurbSafe": "The bombardment of Terra begins and Horus's ground assault falls on the outer redoubts of the Imperial Palace. Told largely through the eyes of a terrified conscript, this is the Siege at its most human, as ordinary people are fed into a war fought between demigods."
   },
   {
    "bookKey": "sot-first-wall",
@@ -43,14 +61,14 @@
    "author": "Gav Thorpe",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "Imperial Fists",
     "Iron Warriors"
    ],
-   "currentBlurb": "The Iron Warriors assault the Lion's Gate spaceport. Perturabo's siege engines grind against Dorn's fortifications in the ultimate test of defense versus offense. The battle becomes personal as master siege-breaker faces master fortifier. When the first wall falls, the defenders realize Terra itself may be conquered.",
-   "currentBlurbSafe": "The Iron Warriors assault the Lion's Gate spaceport in the ultimate test of defense versus offense. Perturabo's siege engines grind against Dorn's fortifications as master siege-breaker faces master fortifier."
+   "currentBlurb": "Determined to humble Dorn, Perturabo sets Warsmith Kroeger to take the Lion's Gate space port, the one prize that would let Horus land his heavy forces at will. Iron Warriors and Imperial Fists grind against each other in their thousands, with Fafnir Rann making the traitors pay for every level gained. Away from the walls a Custodian probes the spreading Lectitio Divinitatus, and a conscript regiment from Afrik marches towards the Palace for reasons of its own.",
+   "currentBlurbSafe": "Perturabo turns the Iron Warriors on the Lion's Gate space port, the prize that would let Horus land his heavy forces at will, and Dorn's sons must hold it. Away from the walls, a Custodian probes the spreading cult of the Emperor while a conscript regiment from Afrik marches on the Palace for reasons of its own."
   },
   {
    "bookKey": "sot-saturnine",
@@ -59,15 +77,33 @@
    "author": "Dan Abnett",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "Imperial Fists",
     "Sons of Horus",
     "Alpha Legion"
    ],
-   "currentBlurb": "The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has anticipated this. In a shocking confrontation, one of the twin Primarchs meets their end. Sigismund duels traitor champions. The Siege's momentum shifts at terrible cost.",
-   "currentBlurbSafe": "The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has prepared for this. The Siege's momentum shifts in shocking confrontations and duels."
+   "currentBlurb": "The Lion's Gate space port has fallen, and the traitor host now drives at the Lion's Gate fortifications and the Eternity Wall space port at once. Stretched past breaking, Rogal Dorn accepts that he cannot defend everything and stakes a gambit at the Saturnine Gate, surrendering ground he cannot hold to buy one chance to strike back at Perturabo. It is the hinge of the whole Siege, and big names do not survive it.",
+   "currentBlurbSafe": "With the Lion's Gate space port lost and the traitors driving at two fronts at once, Rogal Dorn is forced to admit he can no longer defend everything. His answer is a gambit at the Saturnine Gate, trading ground he cannot hold for a single chance to turn his battle of wits with Perturabo."
+  },
+  {
+   "bookKey": "sot-fury-of-magnus",
+   "number": "SoT 4.5",
+   "title": "FURY OF MAGNUS",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "Novella",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Thousand Sons",
+    "Space Wolves",
+    "Salamanders",
+    "Iron Warriors"
+   ],
+   "currentBlurb": "Magnus the Red comes to Terra with the Warmaster's besieging armies, but revenge is not the only thing that draws him. Shattered to his very elements, the Crimson King seeks the missing fragment of himself, and it lies inside the inner sanctum of the Imperial Palace. McNeill surrounds that infiltration with Ahriman's sorcerers, Bodvar Bjarki's Space Wolves, Vulkan and his Draaksward, Perturabo, Malcador and the perpetual Alivia Sureka, while Magnus fights an inner battle of his own.",
+   "currentBlurbSafe": "Of all the Emperor's sons who fell to Chaos, Magnus the Red's tale is perhaps the most tragic. He comes to Terra with the besieging armies seeking not vengeance but a fragment of himself, locked away inside the most impregnable place on the planet. To be whole once more he must first overcome the fiercest defences in the Imperium."
   },
   {
    "bookKey": "sot-mortis",
@@ -76,14 +112,14 @@
    "author": "John French",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "Collegia Titanica",
     "Death Guard"
    ],
-   "currentBlurb": "The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans and Mortarion's Death Guard. The war becomes existential as the Warp breaches reality. Time itself begins to break down. The defenders fight to keep reality intact.",
-   "currentBlurbSafe": "The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans as the war becomes existential and the Warp breaches reality itself."
+   "currentBlurb": "Horus turns the god-engines loose. Legio Mortis is ordered to breach the Mercury Wall, and only Legio Ignatum, their ancient rivals from Mars, stands in the way. Around that Titan duel John French tracks the metaphysical siege as well, with the defenders' waking hours filled with despair and their dreams luring them towards a false paradise, while lost warriors cross the wastelands and warp-grown gardens of a dying Terra.",
+   "currentBlurbSafe": "Horus orders Legio Mortis to breach the Mercury Wall, where their ancient Martian rivals of Legio Ignatum stand against them and the god-engines of both Legios meet in battle. Running alongside the Titan war is a stranger one, as the power of Chaos waxes and the defenders' despair and dreams become weapons turned against them."
   },
   {
    "bookKey": "sot-warhawk",
@@ -92,14 +128,14 @@
    "author": "Chris Wraight",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "White Scars",
     "Death Guard"
    ],
-   "currentBlurb": "Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death. The Khan must defeat Mortarion or Terra falls.",
-   "currentBlurbSafe": "Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death."
+   "currentBlurb": "The Inner Walls are breached and traitor vanguards are tearing towards the heart of the Palace. Jaghatai Khan answers with the most audacious stroke of the whole Siege, an unsupported counter-offensive to liberate the Lion's Gate space port, launched against an old enemy who has been made far greater than he ever was. Elsewhere a black sword is forged from spite, and both an unwilling saint and an enthusiastic sinner are loosed into the ruins.",
+   "currentBlurbSafe": "With the Inner Walls breached, Jaghatai Khan stakes everything on the boldest stroke of the Siege: an unsupported counter-offensive to liberate the Lion's Gate space port. He launches it cut off from any help, against an old enemy who has been made far greater than he ever was, knowing that defeat dooms not only the White Scars but Terra itself."
   },
   {
    "bookKey": "sot-echoes-of-eternity",
@@ -108,14 +144,30 @@
    "author": "Aaron Dembski-Bowden",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "Blood Angels",
     "World Eaters"
    ],
-   "currentBlurb": "The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of his own death. The battle is apocalyptic as Blood Angels succumb to the Black Rage. Sanguinius defeats Angron, banishing him to the Warp, but the victory costs dearly. The Great Angel's wings are broken.",
-   "currentBlurbSafe": "The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of what may come. The battle is apocalyptic as Blood Angels face their darkest curse."
+   "currentBlurb": "The walls are down and the Inner Palace is rubble. With the Khan on the edge of death, Dorn encircled at Bhab Bastion and Guilliman too far out to arrive in time, Sanguinius rallies a broken band of defenders and refugees on the last battlements before the Emperor's sanctum. Dembski-Bowden narrows the focus to two Legions and their people, from Zephon and Amit to Lotara Sarrin and Kargos, as Angron leads the armies of the damned against the Eternity Gate. The Gate holds, and the Angel pays for it.",
+   "currentBlurbSafe": "The walls have fallen, the Inner Palace lies in ruins and the loyalists are forced back to the last battlements before the Emperor's sanctum. Angron leads the armies of the damned forward in a wrathful tide, and with his brothers stricken, encircled or too far away, it falls to Sanguinius to rally a desperate band of defenders and refugees for one last stand."
+  },
+  {
+   "bookKey": "sot-garro-knight-of-grey",
+   "number": "SoT 7.5",
+   "title": "GARRO: KNIGHT OF GREY",
+   "author": "James Swallow",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "Novella",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Knights-Errant",
+    "Death Guard"
+   ],
+   "currentBlurb": "Nathaniel Garro's long road, from the betrayal at Isstvan III and the flight of the Eisenstein to his missions as Malcador's Agentia Primus, ends in the ash and fire of the embattled Imperial Palace. Guarding Euphrati Keeler at Marmax Bastion, he is caught when Mortarion and Typhus lead the Death Guard against it, and he walks out alone to parley with his gene-father so that Keeler can escape. The parley becomes a duel.",
+   "currentBlurbSafe": "As the battle for Terra rages, the former Knight-Errant Nathaniel Garro fights among the ashes of the embattled Imperial Palace, struggling to shield Euphrati Keeler, first saint of the Imperial Cult, from the horrors of the war. Everything since Isstvan has drawn him towards his gene-father Mortarion and a destiny that can only end in bloodshed."
   },
   {
    "bookKey": "sot-end-and-death-vol-1",
@@ -124,13 +176,13 @@
    "author": "Dan Abnett",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "All Legions"
    ],
-   "currentBlurb": "The Siege reaches its climax. Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered across the ship. Loyalist heroes converge for the final battle. Reality warps as Warp and materium collide.",
-   "currentBlurbSafe": "The Siege reaches its climax as Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered. Loyalist heroes converge for the final battle."
+   "currentBlurb": "Horus lowers the void shields of the Vengeful Spirit and dares his father to come to him. Volume one is the long approach to that moment, following Malcador, Keeler and Sindermann, Loken, Fafnir Rann, and Oll Persson and his Argonauts, with rare glimpses from the Warmaster himself. At the final hour of the final day the Emperor rises at last, and with Him go His Angel, His Praetorian and His Captain.",
+   "currentBlurbSafe": "The walls have fallen, the gates are breached and the Warmaster stands on the verge of victory. Horus has come to murder his father, and at the final hour of the final day the Emperor rises to answer him, with His Angel, His Praetorian and His Captain at His side."
   },
   {
    "bookKey": "sot-end-and-death-vol-2",
@@ -139,13 +191,13 @@
    "author": "Dan Abnett",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "All Legions"
    ],
-   "currentBlurb": "Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing he walks to his death. The Great Angel fights valiantly, wounding the Warmaster before falling to his corrupted brother. Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread.",
-   "currentBlurbSafe": "Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing what fate may await him. The Great Angel fights valiantly while Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread."
+   "currentBlurb": "Sanguinius braves the Vengeful Spirit with one purpose, to reach Horus and decapitate the Heresy at a stroke. Loken stalks the same corridors, Oll Persson's long road converges on the ship, and below on Terra Dorn, Sigismund, Rann, Abaddon and Keeler fight their own endings. The Angel gets his duel and wounds the Warmaster, and Horus kills him.",
+   "currentBlurbSafe": "Sanguinius braves the horrors of the Warmaster's flagship with a single purpose: to reach his brother Horus and end the Heresy at its head. The Dark Gods will not make that easy, and as the war edges towards its conclusion, events unfold that could save humanity or plunge it into an eternity of darkness."
   },
   {
    "bookKey": "sot-end-and-death-vol-3",
@@ -154,13 +206,31 @@
    "author": "Dan Abnett",
    "anthology": null,
    "series": "siege-of-terra",
-   "currentType": "",
+   "currentType": "Novel",
    "currentTimeline": "014.M31",
    "currentLegions": [
     "All Legions"
    ],
-   "currentBlurb": "The Emperor confronts Horus in the most consequential battle in human history. When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption. He unleashes His full power, destroying Horus utterly—but the assault leaves Him mortally wounded. Dorn finds his father dying. The Heresy ends, but the Imperium is forever changed.",
-   "currentBlurbSafe": "The Emperor confronts Horus in the most consequential battle in human history. When loyalists fall before the Warmaster, the Emperor must decide if his son can be redeemed—and what price victory will demand."
+   "currentBlurb": "Terra burns and reality itself unravels. Malcador sits ablaze on the Golden Throne buying his master a little more time, the Dark Angels hold the Hollow Mountain and Keeler's pilgrims against Typhus, and Guilliman races across the stars not knowing what he will find. Aboard the Vengeful Spirit the Emperor destroys Horus utterly, soul and all, and pays for it with His body and ten thousand years interred in the Golden Throne.",
+   "currentBlurbSafe": "Terra burns and reality itself is coming apart. Malcador sits ablaze on the Golden Throne to buy his master a little more time, the last redoubts hold out against the traitor hordes, and Guilliman races for the Throneworld not knowing what he will find there. Aboard the Vengeful Spirit, father and son meet at last."
+  },
+  {
+   "bookKey": "sot-era-of-ruin",
+   "number": "SoT 9",
+   "title": "ERA OF RUIN",
+   "author": "Various, introduction by Jacob Youngs",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "Anthology",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "White Scars",
+    "Thousand Sons",
+    "Custodian Guard",
+    "Imperial Army"
+   ],
+   "currentBlurb": "The epilogue to the whole saga: eight new stories from the writers of the Siege of Terra, set both during the battle for the Throneworld and in the wreckage afterwards. Horus is dead and his Heresy is over, but the scars will never fully heal. Chris Wraight's Homebound leaves Ilya Ravallion choosing between the decimated White Scars and a quiet retirement, while John French's Ex Libris has Ahriman racing to learn what he can of the Warp before its gates close to him forever.",
+   "currentBlurbSafe": "The closing volume of the Siege of Terra sequence is not a novel but an anthology, eight new stories from the writers of the series set during the battle for the Throneworld and in the years that follow. Custodians, scheming sorcerers and the lowly footsoldiers of the Imperial Army must all live with what this war has made of them."
   }
  ]
 }

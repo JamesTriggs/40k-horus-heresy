@@ -33,38 +33,15 @@
 // ahead of something that should precede it.
 
 import { readFileSync, writeFileSync } from 'node:fs';
-import { createContext, runInContext } from 'node:vm';
-import { fileURLToPath } from 'node:url';
-import { dirname, join } from 'node:path';
+import { join } from 'node:path';
+import { loadFromScript, repoRoot as root } from './load-data.mjs';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // ---------------------------------------------------------------------------
 // Load both sides
 // ---------------------------------------------------------------------------
 const source = readFileSync(join(root, 'script.js'), 'utf8');
-// A browser stub wide enough for script.js to reach its data definitions
-// without a DOM. It has to cover the top-level event listeners the chart view
-// registers, not just the element lookups.
-const context = createContext({
-    document: {
-        getElementById: () => null,
-        querySelector: () => null,
-        querySelectorAll: () => [],
-        addEventListener: () => {},
-        documentElement: { classList: { toggle: () => {} } },
-        body: { style: {} },
-    },
-    localStorage: { getItem: () => null, setItem: () => {} },
-    window: { addEventListener: () => {} },
-    requestAnimationFrame: () => {},
-    console,
-});
-runInContext(
-    source.slice(0, source.indexOf('const modalOverlay')) + '\n;globalThis.__b = bookData;',
-    context
-);
-const bookData = context.__b;
+const { bookData } = loadFromScript(['bookData']);
 const bookKeys = Object.keys(bookData);
 const chronoRank = new Map(bookKeys.map((k, i) => [k, i + 1]));
 

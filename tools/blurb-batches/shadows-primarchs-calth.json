@@ -8,21 +8,6 @@
  "count": 19,
  "entries": [
   {
-   "bookKey": "mark-of-calth-athame",
-   "number": "XXV.7",
-   "title": "ATHAME",
-   "author": "John French",
-   "anthology": "Mark of Calth",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "800.M30",
-   "currentLegions": [
-    "Various"
-   ],
-   "currentBlurb": "A ritual dagger's history spans millennia, from ancient Terra through the Great Crusade to the Heresy. The athame passes through many hands, each owner playing their role in the galaxy's fate. This story weaves together multiple timelines to reveal the weapon's dark significance.",
-   "currentBlurbSafe": "A ritual dagger's journey through history, passing through many hands across millennia and playing roles in pivotal moments."
-  },
-  {
    "bookKey": "shadows-of-treachery-dark-king",
    "number": "XXII.2",
    "title": "THE DARK KING",
@@ -32,25 +17,11 @@
    "currentType": "Short Story",
    "currentTimeline": "984.M30",
    "currentLegions": [
-    "Night Lords"
+    "Night Lords",
+    "Imperial Fists"
    ],
-   "currentBlurb": "Konrad Curze's madness deepens as his prophetic visions consume him. The Night Haunter sees his own death approaching and the damnation of his Legion. This story explores Curze's descent into darkness and his transformation from the Emperor's justice into something far more terrible.",
-   "currentBlurbSafe": "Konrad Curze's visions of the future torment him, driving the Night Haunter deeper into madness as he sees his own fate approaching."
-  },
-  {
-   "bookKey": "shadows-of-treachery-death-of-silversmith",
-   "number": "XXII.6",
-   "title": "DEATH OF A SILVERSMITH",
-   "author": "Graham McNeill",
-   "anthology": "Shadows of Treachery",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "000.M31",
-   "currentLegions": [
-    "Various"
-   ],
-   "currentBlurb": "A tale of artistry and death during the Heresy. Even in the Age of Darkness, beauty and craftsmanship persist, but they come at a terrible price. This story explores how war destroys not just warriors but the culture and art they once protected.",
-   "currentBlurbSafe": "A story exploring how the Heresy destroys not just warriors but the artists and craftsmen whose work once brought beauty to the Imperium."
+   "currentBlurb": "Konrad Curze beats Rogal Dorn almost to death in front of Sigismund and is imprisoned aboard a void ship, brooding on the compliance of Osmium, the massacres on Cheraut and the visions that Fulgrim betrayed to Dorn. His equerry Shang brings word that Nostramo has slid back into corruption. Curze butchers his guards, drops the pretence of being a dutiful son and has his fleet destroy the planet as the Imperial Fists arrive.",
+   "currentBlurbSafe": "Konrad Curze's methods in the Great Crusade have set him at odds with Rogal Dorn, and the prophetic visions that torment him are becoming impossible to hide from his brothers. Then word arrives from Nostramo, the sunless world he once ruled as its monarch."
   },
   {
    "bookKey": "the-primarchs-feat-of-iron",
@@ -62,10 +33,29 @@
    "currentType": "Novella",
    "currentTimeline": "001.M31",
    "currentLegions": [
-    "Iron Hands"
+    "Iron Hands",
+    "Salamanders",
+    "Death Guard",
+    "Imperial Army"
    ],
-   "currentBlurb": "A chronicle of Ferrus Manus's iron will and the doctrine of strength through flesh's weakness. The Gorgon's philosophy of perfection through cybernetic enhancement defined his Legion. This novella explores Ferrus before his death at Isstvan V, showing the Primarch's character and his fateful friendship with Fulgrim that would end in ultimate betrayal.",
-   "currentBlurbSafe": "The story of Ferrus Manus, the Gorgon, exploring the Iron Hands' philosophy and their Primarch's uncompromising nature before the tragedy of Isstvan V."
+   "currentBlurb": "At the height of the Great Crusade, Ferrus Manus drives the Iron Hands through the deserts of One-Five-Four Four while Vulkan and Mortarion fight elsewhere on the same world. Eldar farseers turn the Legion's bionics against them and pull the Gorgon into a psychic labyrinth, meaning to warn him of the Heresy and his own death. He refuses to listen. Above ground, Sergeant Bion Henricos strikes off his iron hand and leads unaugmented Imperial Army troops to break the enemy.",
+   "currentBlurbSafe": "Ferrus Manus is running behind schedule on a hostile desert world, campaigning alongside Vulkan and Mortarion and increasingly convinced that Eldar witchcraft is to blame for his Legion's poor showing. When the enemy turns the Iron Hands' own augmetics against them, the Gorgon's creed is put on trial."
+  },
+  {
+   "bookKey": "shadows-of-treachery-death-of-silversmith",
+   "number": "XXII.6",
+   "title": "DEATH OF A SILVERSMITH",
+   "author": "Graham McNeill",
+   "anthology": "Shadows of Treachery",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "002.M31",
+   "currentLegions": [
+    "Luna Wolves",
+    "Remembrancers"
+   ],
+   "currentBlurb": "A remembrancer lies dying on the floor of his workshop aboard the Vengeful Spirit, recalling the career that took him from the Sahyadri foothills to Horus's 63rd Expeditionary Fleet. He made four silver moon-phase rings for Hastur Sejanus and the Mournival, then a cruder mould of wolf medallions for a second Luna Wolves captain, who inspected the work, called it perfect and crushed his throat. Asked who did it, he can only repeat his killer's answer.",
+   "currentBlurbSafe": "A silversmith swept up into the newly founded Order of Remembrancers looks back over the commissions of his life, from the piece that first brought him to the Imperium's attention to the delicate work he has been doing for the Luna Wolves aboard the Warmaster's flagship."
   },
   {
    "bookKey": "shadows-of-treachery-kaban-project",
@@ -79,8 +69,8 @@
    "currentLegions": [
     "Mechanicum"
    ],
-   "currentBlurb": "A dangerous AI experiment on Mars threatens to unleash catastrophe during the Mechanicum's civil war. The Kaban Project represents the forbidden knowledge that the Mechanicum both seeks and fears. This story delves into the schism on Mars and the terrible price of technological hubris.",
-   "currentBlurbSafe": "A forbidden AI project on Mars threatens disaster during the Mechanicum's civil war, exploring the dangerous pursuit of forbidden knowledge."
+   "currentBlurb": "Adept Third Class Pallas Ravachol works out that the war machine his master Lukas Chrom is building in a Martian forge is genuinely sentient, an abominable intelligence commissioned by Horus. When Chrom's Protectors come to arrest him the machine kills them on his behalf, and Ravachol runs, hunted across Mars by the assassin Remiare. The sanctuary he finally reaches belongs to another of the discontents, and the Kaban machine finishes what Chrom began.",
+   "currentBlurbSafe": "A junior Mechanicum adept realises that the secret weapon he has been servicing in Master Adept Lukas Chrom's forge is thinking for itself, in flat defiance of the Emperor's ban on artificial intelligence. Raising the alarm turns him into a fugitive on his own world."
   },
   {
    "bookKey": "shadows-of-treachery-lightning-tower",
@@ -92,10 +82,10 @@
    "currentType": "Short Story",
    "currentTimeline": "005-006.M31",
    "currentLegions": [
-    "Imperial Palace"
+    "Imperial Fists"
    ],
-   "currentBlurb": "Rogal Dorn oversees Terra's fortification from the Lightning Tower, preparing the Imperial Palace for the coming siege. As he transforms the Throneworld into an impregnable fortress, Dorn must balance his duty to defend with the knowledge that his brother Primarchs march to destroy everything he has built.",
-   "currentBlurbSafe": "Rogal Dorn works tirelessly to fortify Terra against the coming siege, transforming the Imperial Palace into an impregnable fortress."
+   "currentBlurb": "With Horus's betrayal known on Terra, Rogal Dorn is stripping the beauty out of the Imperial Palace and rebuilding it as a fortress, insisting the ornament be crated up for a restoration he may never see. His huscarl Archamus asks him what he is afraid of. Malcador the Sigillite puts the same question in the Investiary, then produces Konrad Curze's tarot deck and draws out the story of the brothers' fight on Cheraut.",
+   "currentBlurbSafe": "As the Imperial Palace is disfigured into a fortress, Rogal Dorn is twice asked a question he cannot easily answer: what is he afraid of? A quiet evening with Malcador the Sigillite turns into a gentle interrogation of the Praetorian of Terra."
   },
   {
    "bookKey": "the-primarchs-reflection-crackd",
@@ -109,8 +99,8 @@
    "currentLegions": [
     "Emperor's Children"
    ],
-   "currentBlurb": "Fulgrim's corruption reaches its terrible conclusion as the daemon within him claims full control. Once the most beautiful and noble of the Emperor's sons, the Phoenician becomes a twisted reflection of his former glory. This novella explores the final stages of Fulgrim's damnation and his transformation into a Daemon Prince of Slaanesh.",
-   "currentBlurbSafe": "The Phoenician's transformation continues as he struggles with the corruption consuming him. The perfect reflection begins to crack, revealing something terrible beneath."
+   "currentBlurb": "After the Drop Site Massacre, Lucius decides that the Fulgrim leading the Emperor's Children is an impostor and talks Julius Kaesoron, Fabius and Marius Vairosean into seizing their primarch and torturing the daemon out of him. Fulgrim submits to all of it, then rises from the rack unharmed. He had already forced the possessing daemon into the portrait hanging in La Fenice, and the whole episode was a lesson for his favoured sons.",
+   "currentBlurbSafe": "The Emperor's Children are sliding into excess and their primarch's behaviour has grown erratic and capricious. Lucius, of all people, is the first to work out that something about Fulgrim does not add up, and persuading the Brotherhood of the Phoenix to act on that suspicion is dangerous work."
   },
   {
    "bookKey": "shadows-of-treachery-ravens-flight",
@@ -119,13 +109,16 @@
    "author": "Gav Thorpe",
    "anthology": "Shadows of Treachery",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Raven Guard"
+    "Raven Guard",
+    "Iron Warriors",
+    "World Eaters",
+    "Imperial Army"
    ],
-   "currentBlurb": "Corvus Corax leads the shattered remnants of the Raven Guard in a desperate escape from Isstvan V. Hunted by traitor forces and with his Legion decimated, the Ravenlord must use all his cunning to save his surviving sons. This story chronicles the XIX Legion's darkest hour and their flight to safety.",
-   "currentBlurbSafe": "Corvus Corax leads the surviving Raven Guard in a desperate escape from Isstvan V, hunted by traitors with his Legion shattered."
+   "currentBlurb": "Two threads run in parallel. On Isstvan V after the Drop Site Massacre, Corvus Corax leads the surviving Raven Guard in ambushes on Iron Warriors columns and has them loot the dead to stay in the field. On Deliverance, Praefector Marcus Valerius is woken night after night by the same dream of fire and blood and defies Commander Branne to launch an unauthorised relief fleet, arriving on the ninety-eighth day as the World Eaters close in.",
+   "currentBlurbSafe": "In the mountains of Isstvan V, Corvus Corax and the remnants of the Raven Guard fight a scavenging guerrilla war with no prospect of rescue. Light years away on Deliverance, a mortal Imperial Army officer keeps having the same dream and cannot get anyone to listen to him."
   },
   {
    "bookKey": "mark-of-calth-shards-of-erebus",
@@ -137,11 +130,26 @@
    "currentType": "Short Story",
    "currentTimeline": "006-007.M31",
    "currentLegions": [
-    "Ultramarines",
     "Word Bearers"
    ],
-   "currentBlurb": "The aftermath of Erebus's treachery at Calth. The First Chaplain of the Word Bearers orchestrated the betrayal, and now Ultramarines hunt for vengeance against him and his dark works. The shards of Erebus's schemes litter Calth's ruins.",
-   "currentBlurbSafe": "Ultramarines seek vengeance for Erebus's treachery at Calth, hunting through the ruins for the architect of their betrayal."
+   "currentBlurb": "Before the ambush at Calth, Erebus takes the anathame that mortally wounded Horus, hammers eight shards from it and grows them into daggers in a vat of blood. He gives one to each of the six commanders Lorgar has chosen to lead the attack and keeps two back. Interleaved flashbacks cover his training under the Davinite priestess who taught him to step through the warp, and how he repaid her once the lessons ended.",
+   "currentBlurbSafe": "On the eve of the attack on Calth, Erebus works a notorious relic blade in a forge and prepares gifts for the Word Bearers commanders Lorgar has chosen to lead the ambush. Woven through the acrimonious council of war is the story of how the Dark Apostle learned his craft."
+  },
+  {
+   "bookKey": "mark-of-calth-athame",
+   "number": "XXV.7",
+   "title": "ATHAME",
+   "author": "John French",
+   "anthology": "Mark of Calth",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Word Bearers",
+    "Perpetuals"
+   ],
+   "currentBlurb": "An unnamed narrator addresses the blade itself, tracing a flint knife from the dying man who knapped it on ancient Terra to the deathless killer Gog, the Cognitae scholar Magritte and the Word Bearer Anacreon. Every owner kills with it and is killed in turn. The chain ends on Calth, where the cultist Criol Fowst dies and the Perpetual Oll Persson takes the blade to cut his way into the warp.",
+   "currentBlurbSafe": "A disembodied narrator speaks directly to an object, recounting the succession of hands that carried it across thousands of years, from pre-Imperial Terra through the archaeology of the early Great Crusade and on into the Word Bearers Legion. The chain of owners finally reaches Calth."
   },
   {
    "bookKey": "the-primarchs-the-lion",
@@ -153,10 +161,12 @@
    "currentType": "Novella",
    "currentTimeline": "007-009.M31",
    "currentLegions": [
-    "Dark Angels"
+    "Dark Angels",
+    "Death Guard",
+    "Iron Hands"
    ],
-   "currentBlurb": "Lion El'Jonson pursues the traitor Konrad Curze across the stars in a deadly game of cat and mouse. The two Primarchs clash repeatedly, each encounter more brutal than the last. The Lion's pursuit becomes an obsession, revealing the dark knight's capacity for vengeance and the secrets he keeps from his own Legion about Caliban's fate.",
-   "currentBlurbSafe": "Lion El'Jonson hunts the traitor Konrad Curze across the galaxy. The pursuit becomes an obsession, testing the Dark Angels' Primarch's resolve and secrets."
+   "currentBlurb": "Eighty-two days after fighting Konrad Curze at Tsagualsa, the Lion turns aside from the Thramas Crusade for Perditus, where Calas Typhon's Death Guard and a stranded Iron Hands force are contesting a Mechanicum facility that houses Tuchulcha, a sentient warp engine. En route the Invincible Reason is boarded by daemons, and the Lion beheads the Chaplain Nemiel for refusing to let the Librarians fight, setting aside the Edict of Nikaea. He takes the machine and destroys the planet.",
+   "currentBlurbSafe": "Deep into the Thramas Crusade and unable to shake a pursuer through the warp, Lion El'Jonson diverts to a remote Mechanicum research world where Death Guard and Iron Hands forces are already fighting over a secret device. Working out who to believe will cost the Dark Angels a great deal more than a battle."
   },
   {
    "bookKey": "the-primarchs-serpent-beneath",
@@ -170,8 +180,8 @@
    "currentLegions": [
     "Alpha Legion"
    ],
-   "currentBlurb": "The Alpha Legion's machinations reach new depths of complexity in a tale of secrets within secrets. Alpharius Omegon's true allegiance remains impossible to discern as the twin Primarchs play their hidden games. No one, not even their own Legion, knows whether they fight for the Emperor, Horus, or some third option known only to themselves.",
-   "currentBlurbSafe": "The Alpha Legion conducts mysterious operations, with even their own knowing little of their Primarch's true plans and allegiances during the Heresy."
+   "currentBlurb": "Omegon assembles Sigma Squad, a rogue telekinetic named Xalmagundi and a Mechanicum adept to infiltrate and destroy Tenebrae Station, an Alpha Legion warp-manipulation facility that has kept the White Scars blind and contained on Chondax. The raid succeeds at ruinous cost, and the survivors learn only at the end that the Omegon leading them is Captain Sheed Ranko in disguise. The real Omegon then lies to Alpharius about why the station had to die.",
+   "currentBlurbSafe": "Omegon puts together a team of Alpha Legion operatives, a rogue psyker and a Mechanicum adept for a raid on a top-secret installation, one that the Alpha Legion itself controls. Nobody on the mission is told more than they need to know, and that includes who is really giving the orders."
   },
   {
    "bookKey": "shadows-of-treachery-crimson-fist",
@@ -183,10 +193,11 @@
    "currentType": "Novella",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Imperial Fists"
+    "Imperial Fists",
+    "Iron Warriors"
    ],
-   "currentBlurb": "Captain Alexis Polux and the Imperial Fists' Retribution Fleet face impossible odds at Phall. Massively outnumbered by the Iron Warriors, Polux must use cunning and courage to survive Perturabo's trap. This novella chronicles one of the Heresy's most desperate void battles and establishes Polux as one of the VII Legion's greatest heroes.",
-   "currentBlurbSafe": "Captain Alexis Polux and his Imperial Fists face overwhelming Iron Warriors forces at Phall in a desperate void battle that will test their resolve."
+   "currentBlurb": "Becalmed by warp storms in the Phall system, Captain Alexis Polux inherits command of Dorn's Retribution Fleet and holds a defensive sphere for months while his astropaths burn themselves out reaching for Terra. On Terra, Sigismund admits he asked to stay behind because Euphrati Keeler prophesied he would die at Phall. Perturabo attacks expecting to face Sigismund. Polux obeys the recall order, loses Amandus Tyr and the Tribune, and escapes aboard a captured Iron Warriors ship.",
+   "currentBlurbSafe": "Trapped in the Phall system for months and cut off from Terra, Captain Alexis Polux has to choose between forcing a way home and holding the Retribution Fleet where it is. The Iron Warriors have already found him, and on Terra his primarch is dealing with a confession he did not want to hear."
   },
   {
    "bookKey": "mark-of-calth-calth-that-was",
@@ -195,13 +206,14 @@
    "author": "Graham McNeill",
    "anthology": "Mark of Calth",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Novella",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Ultramarines"
+    "Ultramarines",
+    "Word Bearers"
    ],
-   "currentBlurb": "Captain Remus Ventanus leads Ultramarines through Calth's poisoned surface, remembering the jewel world that once was. The beautiful planet has been transformed into a hellscape, and Ventanus must destroy the Word Bearers forces still operating on the surface while mourning everything lost.",
-   "currentBlurbSafe": "Remus Ventanus leads Ultramarines through Calth's ruins, fighting Word Bearers while mourning the beautiful world that was destroyed by betrayal."
+   "currentBlurb": "Graham McNeill returns to Remus Ventanus, the Saviour of Calth, as the war drags on across the poisoned surface and down in the arcologies below. Moving to destroy a large Word Bearers contingent still operating above ground, Ventanus is drawn into a trap that could end every remaining life on the planet, and into an encounter that will shape the Ultramarines for ten thousand years to come.",
+   "currentBlurbSafe": "The war on Calth is far from finished, above ground and below it, and Remus Ventanus sets out against a Word Bearers force still operating on the surface. What he meets there will matter to his Legion for a very long time afterwards."
   },
   {
    "bookKey": "mark-of-calth-dark-heart",
@@ -215,8 +227,8 @@
    "currentLegions": [
     "Word Bearers"
    ],
-   "currentBlurb": "Marduk of the Word Bearers rises through the ranks during the Calth assault. This story explores the XVII Legion's perspective on the betrayal, showing how Lorgar's sons embrace their dark faith and the rewards it brings to the faithful.",
-   "currentBlurbSafe": "A Word Bearers warrior rises through the ranks during the Calth assault, showing the traitor perspective on the betrayal."
+   "currentBlurb": "Anthony Reynolds drops the antihero of his Word Bearers novels into the Heresy. Marduk, a young acolyte of Kor Phaeron, fights on Calth, but his ambitions are not aimed at Guilliman's sons at all. Called to account for leaving his mentor for dead, he reaches for infernal pacts and daemonic power to carve out a place for himself inside his own Legion, the first steps of a name that will still be spoken with awe millennia later.",
+   "currentBlurbSafe": "The assault on Calth is meant to be a campaign of vengeance against the Ultramarines, but one young acolyte of Kor Phaeron is chasing something else entirely. This is an early appearance of Marduk, later the lead of Anthony Reynolds's Word Bearers series."
   },
   {
    "bookKey": "mark-of-calth-the-traveller",
@@ -228,10 +240,11 @@
    "currentType": "Short Story",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Ultramarines"
+    "Ultramarines",
+    "Word Bearers"
    ],
-   "currentBlurb": "A survivor of the orbital bombardment wanders Calth's poisoned surface, bearing witness to the betrayal's aftermath. This story shows the Heresy's impact on ordinary humans caught in the Space Marines' war.",
-   "currentBlurbSafe": "A survivor wanders Calth's poisoned surface after the bombardment, witnessing the devastation and fighting for survival."
+   "currentBlurb": "David Annandale follows a survivor of the Word Bearers' opening strike on Calth's orbital defences down into the arcology shelters, among the ordinary people the Ultramarines built them to protect. He did not come through it alone. What follows is a claustrophobic horror piece about one man's mind buckling under the daemonic pressure the traitors' rituals have let into the deep places of the planet.",
+   "currentBlurbSafe": "A survivor of the Word Bearers' opening attack on Calth's orbital defences shelters with the civilians in the arcologies below the ruined surface. He may not have survived alone."
   },
   {
    "bookKey": "mark-of-calth-deeper-darkness",
@@ -246,24 +259,8 @@
     "Ultramarines",
     "Word Bearers"
    ],
-   "currentBlurb": "Ultramarine Hylas Pelion hunts Dark Apostle Ungol Shax through Calth's underground arcologies. The pursuit becomes a deadly game of cat and mouse in the darkness beneath the planet's surface.",
-   "currentBlurbSafe": "An Ultramarine hunts a Word Bearers Dark Apostle through Calth's underground, in a deadly pursuit through the darkness."
-  },
-  {
-   "bookKey": "mark-of-calth-underworld-war",
-   "number": "XXV.6",
-   "title": "THE UNDERWORLD WAR",
-   "author": "Aaron Dembski-Bowden",
-   "anthology": "Mark of Calth",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "007-009.M31",
-   "currentLegions": [
-    "Ultramarines",
-    "Word Bearers"
-   ],
-   "currentBlurb": "Seven years after the betrayal, the Underworld War continues in Calth's depths. Word Bearer Vakrah Jal navigates the endless guerrilla conflict, showing how the battle for Calth never truly ended—it just moved underground into an eternal war of attrition.",
-   "currentBlurbSafe": "Seven years after the betrayal, the war continues in Calth's underground. A Word Bearer experiences the endless conflict that has consumed the planet's depths."
+   "currentBlurb": "Ultramarines sergeant Hylas Pelion develops an obsessive need to run down the Word Bearers Dark Apostle Ungol Shax, and the hunt draws him into the deepest caverns beneath Calth while his Legion works to secure the arcologies. Rob Sanders plays it as gothic horror. What Pelion learns is that the traitors have called up things from the warp that even the Word Bearers should be afraid to summon.",
+   "currentBlurbSafe": "An Ultramarines sergeant becomes fixated on hunting down one particular Word Bearers Dark Apostle, and the chase takes him steadily further beneath Calth. The traitors have been summoning, and not everything they called up answers to them."
   },
   {
    "bookKey": "mark-of-calth-unmarked",
@@ -277,8 +274,8 @@
    "currentLegions": [
     "Perpetuals"
    ],
-   "currentBlurb": "Oll Persson, the Perpetual soldier, journeys through time and space. His travels span from Verdun to 73 Easting and beyond, revealing the ancient warrior's role in humanity's history and his connection to the Emperor's plans.",
-   "currentBlurbSafe": "An immortal soldier's journey through human history, from ancient battles to the far future, revealing connections to the Emperor's plans."
+   "currentBlurb": "Picking up directly from Know No Fear, the Perpetual Oll Persson leads a handful of Calth survivors away from the ruined world, cutting portals with a stolen athame and following the winds of the aether towards a goal he will not explain. Their road runs through swamps, woods and empty cities, and through Oll's own past, from the Argonauts to Verdun and 73 Easting, with the daemon M'kar behind them the whole way.",
+   "currentBlurbSafe": "Carrying straight on from Know No Fear, Oll Persson leads a small band of Calth survivors on a journey he refuses to explain, using a stolen blade to cut his way from one place to the next. He has been walking a very long time, and something has been following him for much of it."
   },
   {
    "bookKey": "shadows-of-treachery-prince-of-crows",
@@ -290,10 +287,27 @@
    "currentType": "Novella",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Night Lords"
+    "Night Lords",
+    "Dark Angels"
    ],
-   "currentBlurb": "Sevatar, First Captain of the Night Lords, navigates his Primarch's madness and the Lion's relentless pursuit. As Konrad Curze descends further into insanity, Sevatar must hold the VIII Legion together while dealing with prophecies, betrayal, and the knowledge that their Primarch welcomes his own doom. This acclaimed novella explores the Night Lords' darkest nature and the tragedy of Curze's fall.",
-   "currentBlurbSafe": "First Captain Sevatar tries to hold the Night Lords together as Konrad Curze's madness deepens and the Lion hunts them across the stars."
+   "currentBlurb": "With Konrad Curze comatose after the Lion mauled him at Sheol, First Captain Jago Sevatarion takes the Night Lords. He has two Kyroptera captains murdered to end the argument about revenge, reorganises the Legion into six autonomous Great Companies, and walks into his primarch's mind, where he sees the boy who became the Night Haunter. Curze wakes, orders a boarding of the Invincible Reason, and Sevatar ends the novella a prisoner.",
+   "currentBlurbSafe": "The Thramas Crusade has gone badly for the Night Lords and Konrad Curze lies comatose, leaving First Captain Sevatar in charge of a Legion whose surviving captains want revenge. Sevatar has his own ideas about how the VIII survives, and about what is really wrong with their primarch."
+  },
+  {
+   "bookKey": "mark-of-calth-underworld-war",
+   "number": "XXV.6",
+   "title": "THE UNDERWORLD WAR",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "Mark of Calth",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Ultramarines",
+    "Word Bearers"
+   ],
+   "currentBlurb": "Seven years after the betrayal, the fighting beneath Calth has become an endless attritional grind. A war-weary Word Bearer of the Kaurtal, Vakrah Jal, makes the climb up to the blasted surface and remembers his rebirth at Argel Tal's hands and the making of the Gal Vorbak. Aaron Dembski-Bowden keeps the chronology deliberately unstable, so it is never settled whether this is memory or a telling of what is still to come.",
+   "currentBlurbSafe": "Years into the war beneath Calth, one exhausted Word Bearer makes the long climb up to the ruined surface and dwells on how he was remade, and on the brother who remade him. Time does not run entirely straight in the telling."
   }
  ]
 }

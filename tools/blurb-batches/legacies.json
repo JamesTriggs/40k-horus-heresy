@@ -15,25 +15,10 @@
    "currentType": "Short Story",
    "currentTimeline": "004.M31",
    "currentLegions": [
-    "Alpha Legion"
+    "Various"
    ],
-   "currentBlurb": "The Alpha Legion weaves its schemes within schemes, operating in the shadows with motives known only to themselves.",
-   "currentBlurbSafe": "An Alpha Legion tale of deception and hidden agendas during the Heresy."
-  },
-  {
-   "bookKey": "legacies-hunters-moon",
-   "number": "XXXI.3",
-   "title": "HUNTER'S MOON",
-   "author": "Guy Haley",
-   "anthology": "Legacies of Betrayal",
-   "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "004.M31",
-   "currentLegions": [
-    "White Scars"
-   ],
-   "currentBlurb": "A White Scars hunting mission during the Heresy, showcasing the V Legion's swift and deadly warfare style.",
-   "currentBlurbSafe": "White Scars warriors conduct a hunt, demonstrating their mastery of fast-strike warfare."
+   "currentBlurb": "A very short piece first printed in the programme for the 2013 Horus Heresy Weekender. Thoros, a priest of the serpent cult of Davin, breaks in on a gathering of the Warmaster's new religion and calls openly on the favour of his patron powers. The raw display of the Primordial Truth cows the assembled faithful and casts out the pretenders, establishing the Davinites as the true masters of the cult that now underpins the traitor cause.",
+   "currentBlurbSafe": "A Davinite cult priest confronts his rivals inside the Warmaster's fledgling religion, in a brief and unsettling glimpse of how Chaos worship took hold on the traitor side."
   },
   {
    "bookKey": "legacies-thief-revelations",
@@ -42,13 +27,29 @@
    "author": "Graham McNeill",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
-   "currentTimeline": "004.M31",
+   "currentType": "Audio Drama",
+   "currentTimeline": "005.M31",
    "currentLegions": [
     "Thousand Sons"
    ],
-   "currentBlurb": "The Thousand Sons seek forbidden knowledge, stealing secrets that may doom or save them.",
-   "currentBlurbSafe": "Thousand Sons sorcerers pursue dangerous knowledge in their quest for understanding."
+   "currentBlurb": "An audio drama set after the burning of Prospero. Magnus the Red and Ahzek Ahriman cast their psychic sight across the galaxy, hunting any clue to what the future holds and where the broken XV Legion's allegiance should finally rest. Magnus broods over the Legion's direction while Ahriman concentrates on arresting its decline, and the gap between primarch and Chief Librarian starts to open into the split that will define them both.",
+   "currentBlurbSafe": "In the wake of Prospero, Magnus the Red and Ahzek Ahriman use their psychic gifts to search for the Thousand Sons' future, and discover they do not read it the same way."
+  },
+  {
+   "bookKey": "legacies-hunters-moon",
+   "number": "XXXI.3",
+   "title": "HUNTER'S MOON",
+   "author": "Guy Haley",
+   "anthology": "Legacies of Betrayal",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Space Wolves",
+    "Alpha Legion"
+   ],
+   "currentBlurb": "An audio drama set on the primitive ocean world of Pelago. The Space Wolves, appointed by the Emperor as sanctioned executioners of the Legions, have been quietly keeping watch on Alpharius and the XX Legion. A stolen Alpha Legion dropship crashes on Pelago carrying news of the war erupting among the stars, along with a lone survivor and the traitors hunting him, and the Wolves must face whether they could truly carry out a death sentence on one of the Emperor's own sons.",
+   "currentBlurbSafe": "On a remote ocean world, Space Wolves charged with watching the secretive XX Legion have their long vigil broken by a crashed dropship and the news it brings."
   },
   {
    "bookKey": "legacies-veritas-ferrum",
@@ -57,13 +58,13 @@
    "author": "David Annandale",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "006.M31",
    "currentLegions": [
     "Iron Hands"
    ],
-   "currentBlurb": "The Iron Hands' philosophy of flesh's weakness is tested in the aftermath of their Primarch's death.",
-   "currentBlurbSafe": "Iron Hands warriors grapple with their Legion's doctrine after losing their Primarch at Isstvan."
+   "currentBlurb": "An audio drama named for the Iron Hands strike cruiser that reaches the Isstvan system with the second wave of the loyalist fleet. Battered by the traitors and forced to withdraw, the ship's command must weigh the survival of the vessel and its crew against the survivors of the Dropsite Massacre calling for rescue. It is a direct prequel to the novel The Damnation of Pythos.",
+   "currentBlurbSafe": "An Iron Hands warship arrives at Isstvan with the second wave and, driven back by the traitors, its crew faces a hard decision when survivors on the ground beg for aid."
   },
   {
    "bookKey": "legacies-strike-fade",
@@ -72,13 +73,14 @@
    "author": "Guy Haley",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "006.M31",
    "currentLegions": [
-    "Raven Guard"
+    "Salamanders",
+    "Night Lords"
    ],
-   "currentBlurb": "Raven Guard survivors employ hit-and-run tactics against superior traitor forces.",
-   "currentBlurbSafe": "Shattered Raven Guard warriors use guerrilla warfare tactics in their fight against the traitors."
+   "currentBlurb": "A short audio drama set in the aftermath of the Isstvan V massacre. A handful of surviving Salamanders, cut off and hunted across the ruined dropsite, lay an ambush for a Night Lords warband that believes it is stalking easy prey. Revenge counts for more with them than survival does, and the trap they spring costs some of them sooner than they expected.",
+   "currentBlurbSafe": "Stranded Salamanders survivors of the Dropsite Massacre turn the tables on their pursuers, setting an ambush for a Night Lords warband roaming the ruined battlefield."
   },
   {
    "bookKey": "legacies-brotherhood-storm",
@@ -92,8 +94,8 @@
    "currentLegions": [
     "White Scars"
    ],
-   "currentBlurb": "The White Scars must choose their allegiance as the Heresy divides the galaxy. The V Legion's isolation has kept them from the conflict, but now they must decide whether to follow Horus or remain loyal to the Emperor.",
-   "currentBlurbSafe": "The White Scars face a critical choice as news of the Heresy reaches them, forcing the V Legion to decide their allegiance in the civil war."
+   "currentBlurb": "A novella and the first substantial look at the Heresy-era White Scars, written as a direct prequel to the novel Scars. On the ork-held world of Chondax, Shiban Khan leads his warriors in the fast, joyous war of speed and lance the V Legion prefers, while a Stormseer wrestles with his waking gifts and an outsider struggles to keep the Legion supplied. Half the galaxy has already chosen sides, and Jaghatai Khan's silence is starting to look like a choice of its own.",
+   "currentBlurbSafe": "On the ork battlefields of Chondax, Shiban Khan leads his White Scars in a war of speed and lance, while the rest of the Imperium waits to learn where Jaghatai Khan stands."
   },
   {
    "bookKey": "legacies-honour-dead",
@@ -102,13 +104,14 @@
    "author": "Gav Thorpe",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "007.M31",
    "currentLegions": [
+    "Collegia Titanica",
     "Ultramarines"
    ],
-   "currentBlurb": "Ultramarines honor their fallen brothers while seeking vengeance for betrayal.",
-   "currentBlurbSafe": "Ultramarines pay tribute to their dead while pursuing justice for the Word Bearers' treachery."
+   "currentBlurb": "An audio drama set during the burning of Calth. Traitor Battle Titans of the Fire Masters stalk the streets of the city of Ithraca, intent on massacring the fleeing civilian population for their new dark masters, and only the loyalist engines of Legio Praesagius, the True Messengers, stand against them. With the nearby Ultramarines scattered, the story is told largely from ground level, following a mortal woman and her family caught beneath the god-machines.",
+   "currentBlurbSafe": "As Calth burns, traitor and loyalist Titan legions duel across the ruined city of Ithraca, and the civilians trapped beneath them have to fend for themselves."
   },
   {
    "bookKey": "legacies-butchers-nails",
@@ -117,13 +120,14 @@
    "author": "Aaron Dembski-Bowden",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "007-008.M31",
    "currentLegions": [
-    "World Eaters"
+    "World Eaters",
+    "Word Bearers"
    ],
-   "currentBlurb": "The tragic bond between Angron and Lorgar, as the Word Bearers Primarch tries to understand the World Eaters' cursed existence with the Butcher's Nails.",
-   "currentBlurbSafe": "Lorgar attempts to understand Angron's suffering and the curse of the Butcher's Nails that drives the World Eaters."
+   "currentBlurb": "An audio drama in which Angron and Lorgar travel together on a covert mission of the Word Bearers primarch's devising. The World Eaters' berserk fury, and the endless grinding of the Butcher's Nails in Angron's skull, draw xenos raiders down on them, and the killing only feeds him further. Lorgar watches, tries to understand the ruin in his brother's head, and reads in it the portents of the Blood God's son.",
+   "currentBlurbSafe": "Angron and Lorgar set out together on a secretive voyage, and the World Eaters primarch's rage soon attracts attention from xenos raiders who will not let him pass."
   },
   {
    "bookKey": "legacies-kryptos",
@@ -135,10 +139,12 @@
    "currentType": "Short Story",
    "currentTimeline": "007.M31",
    "currentLegions": [
+    "Raven Guard",
+    "Iron Hands",
     "Mechanicum"
    ],
-   "currentBlurb": "Secrets and forbidden knowledge on Mars during the Mechanicum's civil war.",
-   "currentBlurbSafe": "A tale of hidden knowledge and dangerous secrets during Mars's schism."
+   "currentBlurb": "A short story set after the Dropsite Massacre on the doomed forge world of Cavor Sarta. Nykona Sharrowkyn of the Raven Guard and Sabik Wayland of the Iron Hands infiltrate Dark Mechanicum territory to seize the enemy's most valued asset, the strange thing called the Kryptos, by which the traitors encode their fleet communications. It explains how the Shattered Legions came by the asset they use in Angel Exterminatus.",
+   "currentBlurbSafe": "Two veterans of the shattered loyalist Legions, one Raven Guard and one Iron Hand, strike deep into Dark Mechanicum territory on a dying forge world to take the enemy's most prized possession."
   },
   {
    "bookKey": "legacies-wolfs-claw",
@@ -147,13 +153,14 @@
    "author": "Chris Wraight",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "007.M31",
    "currentLegions": [
-    "Space Wolves"
+    "Space Wolves",
+    "Alpha Legion"
    ],
-   "currentBlurb": "Space Wolves unleash their savage fury in the Emperor's name during the Heresy.",
-   "currentBlurbSafe": "The VI Legion demonstrates their ferocity as they fight for the Emperor against the traitors."
+   "currentBlurb": "A short audio drama set in the Alaxxes Nebula, where the VI Legion has gone to ground after being caught by the renegade Alpha Legion. The young pack leader Bjorn, freshly maimed and now called the One-Handed by his warriors, is desperate to fight again, but the Iron Priests have little time for replacing a proud legionary's limbs. He goes looking for new claws of his own, and for traitor blood to christen them in.",
+   "currentBlurbSafe": "Sheltering in a nebula after a mauling by the Alpha Legion, a young and newly maimed Space Wolves pack leader sets out to find his own way back into the fight."
   },
   {
    "bookKey": "legacies-warmaster",
@@ -162,13 +169,13 @@
    "author": "John French",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "008.M31",
    "currentLegions": [
     "Sons of Horus"
    ],
-   "currentBlurb": "A glimpse into Horus's command and the weight of leading the rebellion against the Emperor.",
-   "currentBlurbSafe": "An exploration of Horus's role as Warmaster and the burden of leading the rebellion."
+   "currentBlurb": "A nine-minute audio drama delivered almost entirely as a single monologue. In the strategium of the Vengeful Spirit, Horus lays out his assault on his father's Imperium, weighing his brothers loyal and traitorous alike, his ambitions for the war and the fears he admits to nobody. The piece turns dark when the identity of the listener he has been addressing all along is revealed.",
+   "currentBlurbSafe": "Alone in the strategium of his flagship, the Warmaster talks through his brothers, his war and his private misgivings, in a short piece carried almost entirely by his own voice."
   },
   {
    "bookKey": "legacies-divine-word",
@@ -180,10 +187,11 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "Word Bearers"
+    "Raven Guard",
+    "Imperial Army"
    ],
-   "currentBlurb": "Word Bearers spread their dark faith across the galaxy, converting or destroying all who resist.",
-   "currentBlurbSafe": "The XVII Legion preaches their corrupted faith, forcing conversion or death upon those they encounter."
+   "currentBlurb": "A short story following Marcus Valerius, commander of the Therion Cohort, fighting alongside the Raven Guard. A lifelong adherent of the Imperial Truth who has always scorned those who would make a god of the Emperor, Valerius acts on a sudden flash of intuition that saves his troops from annihilation against overwhelming odds. Badly shaken, he turns to the forbidden Lectitio Divinitatus, and the first seeds of the Imperial Church are sown.",
+   "currentBlurbSafe": "An Imperial Army officer serving beside the Raven Guard, and a firm believer in the Imperial Truth, finds his certainties tested when instinct saves his command from destruction."
   },
   {
    "bookKey": "legacies-kharn",
@@ -192,13 +200,13 @@
    "author": "Anthony Reynolds",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "008.M31",
    "currentLegions": [
     "World Eaters"
    ],
-   "currentBlurb": "Khârn walks the path to damnation, his descent into bloodlust accelerating as the Heresy rages.",
-   "currentBlurbSafe": "Khârn's transformation continues as he descends further into violence and rage."
+   "currentBlurb": "An audio drama set in the fighting pits aboard the World Eaters flagship Conqueror. Khârn and his brothers stage ever bloodier contests of carnage against one another as the Butcher's Nails tighten their hold on the Legion. The XII have forsaken the Crimson Path they once walked and taken up a darker road in its place, and Khârn stands at the centre of what they are turning into.",
+   "currentBlurbSafe": "In the fighting pits of the Conqueror, Khârn and his fellow World Eaters test themselves against each other while the Butcher's Nails reshape what the Legion is becoming."
   },
   {
    "bookKey": "legacies-cypher",
@@ -207,13 +215,13 @@
    "author": "Gav Thorpe",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "008.M31",
    "currentLegions": [
     "Dark Angels"
    ],
-   "currentBlurb": "The mysterious warrior who would become Cypher serves the Dark Angels during the Heresy.",
-   "currentBlurbSafe": "A Dark Angels warrior serves his Legion during the Heresy, on a path that will lead to legend and mystery."
+   "currentBlurb": "An audio drama set on Caliban rather than at the war front. Luther summons the young Librarian Zahariel and sends him into the unknown depths of the Northwilds in the company of Lord Cypher, keeper of the First Legion's traditions, because only a select few know what dark secret the old forests still hold. Something ancient and malevolent is stirring there just as rumours of the galactic civil war reach the home world.",
+   "currentBlurbSafe": "On Caliban, a young Dark Angels Librarian is sent into the northern forests alongside the enigmatic Lord Cypher, to look into a secret that only a handful of the First Legion share."
   },
   {
    "bookKey": "legacies-heart-conqueror",
@@ -225,10 +233,11 @@
    "currentType": "Short Story",
    "currentTimeline": "008.M31",
    "currentLegions": [
-    "World Eaters"
+    "World Eaters",
+    "Word Bearers"
    ],
-   "currentBlurb": "Aboard the Conqueror, the World Eaters' flagship, the Legion's descent into madness accelerates.",
-   "currentBlurbSafe": "Life aboard the World Eaters' flagship reveals the XII Legion's transformation into mindless berserkers."
+   "currentBlurb": "A short story first printed in the 2014 Horus Heresy Weekender programme and set after the events of Betrayer. It is told by Nisha Andrasta, the Navigator responsible for guiding Angron's flagship, who recalls the pride and purpose she felt on first taking the post and cannot reconcile it with what the ship and its Legion have since become. An unsettling encounter with Lorgar offers her no comfort at all.",
+   "currentBlurbSafe": "The Navigator who guides Angron's flagship looks back on why she first took the post, and measures that memory against the vessel and Legion she now serves."
   },
   {
    "bookKey": "legacies-lucius",
@@ -237,13 +246,14 @@
    "author": "Graham McNeill",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Emperor's Children"
+    "Emperor's Children",
+    "Thousand Sons"
    ],
-   "currentBlurb": "Lucius pursues perfection in swordsmanship, his pride and skill marking him for damnation.",
-   "currentBlurbSafe": "The master swordsman Lucius seeks perfection in combat, driven by pride and the pursuit of supremacy."
+   "currentBlurb": "An audio drama set after Fulgrim's apotheosis on Iydris scattered the III Legion. Lucius, who holds himself the finest blade in the galaxy, falls in with Sanakht of the Thousand Sons, another duellist of legendary reputation. The two take each other's measure, and the real question between them is which one stands higher in the regard of the new masters they now serve.",
+   "currentBlurbSafe": "With the Emperor's Children scattered after their primarch's transformation, the swordsman Lucius crosses paths with a celebrated duellist of the Thousand Sons."
   },
   {
    "bookKey": "legacies-censure",
@@ -252,13 +262,14 @@
    "author": "Nick Kyme",
    "anthology": "Legacies of Betrayal",
    "series": null,
-   "currentType": "Short Story",
+   "currentType": "Audio Drama",
    "currentTimeline": "009.M31",
    "currentLegions": [
-    "Salamanders"
+    "Ultramarines",
+    "Word Bearers"
    ],
-   "currentBlurb": "Salamanders face judgment and condemnation as the Heresy forces hard choices upon them.",
-   "currentBlurbSafe": "Salamanders warriors confront difficult decisions and consequences during the civil war."
+   "currentBlurb": "An audio drama set years into the Underworld War in the arcology network beneath Calth. Aeonid Thiel, formerly an honoured sergeant of the Ultramarines and never far from trouble with his own Legion, is pitted against the daemonic forces of the Word Bearers under Dark Apostle Kurtha Sedd. To get at them he has no choice but to return to the ravaged surface and brave the solar flares that have scoured all life from the world.",
+   "currentBlurbSafe": "Deep in the arcologies beneath Calth, an Ultramarines sergeant with a gift for falling foul of his superiors faces the Word Bearers, and finds the only route open to him leads back to the lethal surface."
   },
   {
    "bookKey": "legacies-bjorn",
@@ -272,8 +283,8 @@
    "currentLegions": [
     "Space Wolves"
    ],
-   "currentBlurb": "The warrior who would become the Fell-Handed fights during the Heresy, earning his legendary status.",
-   "currentBlurbSafe": "A Space Wolves warrior fights alone during the Heresy, beginning his path to becoming a legend."
+   "currentBlurb": "A very short story first released in the 2013 Black Library Advent Calendar. Bjorn has taken a vow of silence and fights without a pack, sworn to stay alone until he has killed the daemon that slaughtered his packmates. On the fields of Velbayne, where Leman Russ and the Rout stand arrayed against a daemonic tide, he finally runs the thing down and speaks his brothers' names over it.",
+   "currentBlurbSafe": "A Space Wolf who fights apart from any pack, bound by a vow sworn after his brothers were killed, hunts one particular enemy across the daemon-swarmed fields of Velbayne."
   },
   {
    "bookKey": "legacies-riven",
@@ -285,10 +296,10 @@
    "currentType": "Short Story",
    "currentTimeline": "011.M31",
    "currentLegions": [
-    "Various"
+    "Iron Hands"
    ],
-   "currentBlurb": "A tale of division and broken bonds as the Heresy tears warriors apart.",
-   "currentBlurbSafe": "The Heresy's divisions tear apart bonds of brotherhood and loyalty."
+   "currentBlurb": "A short story first published online in November 2013. Brother Crius of the Iron Hands has spent the war so far on Terra with the Crusader Host, effectively a hostage, when word reaches him that Ferrus Manus is dead at Isstvan V. Rogal Dorn sends him out into the stars to find whatever remains of the X Legion and bring it back for the defence of Terra, and what he finds is a Legion tearing itself apart over what it should now become.",
+   "currentBlurbSafe": "An Iron Hand long held on Terra with the Crusader Host is sent out into the stars to seek survivors of his shattered Legion and bring them home."
   }
  ]
 }
