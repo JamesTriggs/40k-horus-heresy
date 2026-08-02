@@ -1,0 +1,129 @@
+{
+ "batch": "burden",
+ "anthologies": [
+  "The Burden of Loyalty"
+ ],
+ "count": 8,
+ "entries": [
+  {
+   "bookKey": "burden-thirteenth-wolf",
+   "number": "XLVIII.7",
+   "title": "THE THIRTEENTH WOLF",
+   "author": "Gav Thorpe",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "004-005.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "A lost Space Wolf seeks his pack during the Heresy's chaos.",
+   "currentBlurbSafe": "A warrior of Fenris searches for his brothers in the galaxy's darkest hour."
+  },
+  {
+   "bookKey": "burden-into-exile",
+   "number": "XLVIII.3",
+   "title": "INTO EXILE",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "005-007.M31",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Word Bearers embrace their exile from the Emperor's light, finding new purpose in darkness.",
+   "currentBlurbSafe": "The XVII Legion accepts their damnation and finds strength in corruption."
+  },
+  {
+   "bookKey": "burden-cybernetica",
+   "number": "XLVIII.6",
+   "title": "CYBERNETICA",
+   "author": "Rob Sanders",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "005.M31",
+   "currentLegions": [
+    "Mechanicum"
+   ],
+   "currentBlurb": "Battle-automata serve their masters in the civil war, unthinking and relentless.",
+   "currentBlurbSafe": "The Mechanicum's robots fight without question or mercy."
+  },
+  {
+   "bookKey": "burden-binary-succession",
+   "number": "XLVIII.2",
+   "title": "THE BINARY SUCCESSION",
+   "author": "David Annandale",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Mechanicum"
+   ],
+   "currentBlurb": "The Mechanicum's succession of power becomes a battleground during Mars's schism.",
+   "currentBlurbSafe": "Political intrigue on Mars mirrors the galaxy's larger civil war."
+  },
+  {
+   "bookKey": "burden-perpetual",
+   "number": "XLVIII.1",
+   "title": "PERPETUAL",
+   "author": "Dan Abnett",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Perpetuals"
+   ],
+   "currentBlurb": "The Perpetuals Oll Persson and John Grammaticus navigate the Heresy, their immortality granting perspective on humanity's civil war.",
+   "currentBlurbSafe": "Immortal beings watch humanity tear itself apart, their ancient wisdom unable to prevent the tragedy."
+  },
+  {
+   "bookKey": "burden-ordo-sinister",
+   "number": "XLVIII.4",
+   "title": "ORDO SINISTER",
+   "author": "John French",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Collegia Titanica"
+   ],
+   "currentBlurb": "The sinister Psi-Titans of the Ordo Sinister emerge to defend Terra.",
+   "currentBlurbSafe": "The Emperor's most terrible weapons awaken for the coming siege."
+  },
+  {
+   "bookKey": "burden-wolf-king",
+   "number": "XLVIII.8",
+   "title": "THE WOLF KING",
+   "author": "Chris Wraight",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "Leman Russ leads his Wolves through the Heresy, the Wolf King's fury undiminished.",
+   "currentBlurbSafe": "The Primarch of the VI Legion commands his sons in the war for humanity's soul."
+  },
+  {
+   "bookKey": "burden-heart-pharos",
+   "number": "XLVIII.5",
+   "title": "THE HEART OF THE PHAROS",
+   "author": "L J Goulding",
+   "anthology": "The Burden of Loyalty",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Ultramarines"
+   ],
+   "currentBlurb": "The Pharos device's power corrupts those who seek to control it.",
+   "currentBlurbSafe": "An ancient xenos device becomes a weapon and a curse."
+  }
+ ]
+}

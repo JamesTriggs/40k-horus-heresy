@@ -1,0 +1,166 @@
+{
+ "batch": "siege",
+ "anthologies": null,
+ "count": 10,
+ "entries": [
+  {
+   "bookKey": "sot-solar-war",
+   "number": "SoT 1",
+   "title": "THE SOLAR WAR",
+   "author": "John French",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Imperial Fists",
+    "Sons of Horus",
+    "Iron Warriors"
+   ],
+   "currentBlurb": "The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods. The Solar War is fought in the void, with massive fleet battles determining whether the traitors can even reach Terra's surface.",
+   "currentBlurbSafe": "The traitor fleets arrive at Terra and the greatest siege in human history begins. Rogal Dorn has fortified Terra into an impregnable fortress, but faces an enemy empowered by the dark gods in massive void battles that will determine if the traitors can even reach Terra's surface."
+  },
+  {
+   "bookKey": "sot-lost-and-damned",
+   "number": "SoT 2",
+   "title": "THE LOST AND THE DAMNED",
+   "author": "Guy Haley",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Imperial Fists",
+    "All Traitor Legions"
+   ],
+   "currentBlurb": "The traitors land on Terra. Billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war. The first walls begin to crack.",
+   "currentBlurbSafe": "The traitors land on Terra, and billions of mortal followers, daemon engines, and corrupted Titans pour onto the Throneworld. This novel explores the civilian cost of the Siege, as ordinary humans are caught between demigods at war."
+  },
+  {
+   "bookKey": "sot-first-wall",
+   "number": "SoT 3",
+   "title": "THE FIRST WALL",
+   "author": "Gav Thorpe",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Imperial Fists",
+    "Iron Warriors"
+   ],
+   "currentBlurb": "The Iron Warriors assault the Lion's Gate spaceport. Perturabo's siege engines grind against Dorn's fortifications in the ultimate test of defense versus offense. The battle becomes personal as master siege-breaker faces master fortifier. When the first wall falls, the defenders realize Terra itself may be conquered.",
+   "currentBlurbSafe": "The Iron Warriors assault the Lion's Gate spaceport in the ultimate test of defense versus offense. Perturabo's siege engines grind against Dorn's fortifications as master siege-breaker faces master fortifier."
+  },
+  {
+   "bookKey": "sot-saturnine",
+   "number": "SoT 4",
+   "title": "SATURNINE",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Imperial Fists",
+    "Sons of Horus",
+    "Alpha Legion"
+   ],
+   "currentBlurb": "The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has anticipated this. In a shocking confrontation, one of the twin Primarchs meets their end. Sigismund duels traitor champions. The Siege's momentum shifts at terrible cost.",
+   "currentBlurbSafe": "The Saturnine Gambit—Horus's desperate strike at the Saturnine Wall. The Alpha Legion infiltrates Terra's defenses, but Rogal Dorn has prepared for this. The Siege's momentum shifts in shocking confrontations and duels."
+  },
+  {
+   "bookKey": "sot-mortis",
+   "number": "SoT 5",
+   "title": "MORTIS",
+   "author": "John French",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Collegia Titanica",
+    "Death Guard"
+   ],
+   "currentBlurb": "The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans and Mortarion's Death Guard. The war becomes existential as the Warp breaches reality. Time itself begins to break down. The defenders fight to keep reality intact.",
+   "currentBlurbSafe": "The Titan Legions wage apocalyptic battles across Terra's wastelands. Loyalist legions face daemon-corrupted Titans as the war becomes existential and the Warp breaches reality itself."
+  },
+  {
+   "bookKey": "sot-warhawk",
+   "number": "SoT 6",
+   "title": "WARHAWK",
+   "author": "Chris Wraight",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "White Scars",
+    "Death Guard"
+   ],
+   "currentBlurb": "Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death. The Khan must defeat Mortarion or Terra falls.",
+   "currentBlurbSafe": "Jaghatai Khan confronts Mortarion in the ultimate duel between speed and endurance. The Warhawk hunts the Pale King across Terra in a conflict that transcends their vendetta—it's freedom versus tyranny, life versus death."
+  },
+  {
+   "bookKey": "sot-echoes-of-eternity",
+   "number": "SoT 7",
+   "title": "ECHOES OF ETERNITY",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Blood Angels",
+    "World Eaters"
+   ],
+   "currentBlurb": "The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of his own death. The battle is apocalyptic as Blood Angels succumb to the Black Rage. Sanguinius defeats Angron, banishing him to the Warp, but the victory costs dearly. The Great Angel's wings are broken.",
+   "currentBlurbSafe": "The Blood Angels defend against the World Eaters and Daemon Primarch Angron. Sanguinius knows he must face the Red Angel, seeing visions of what may come. The battle is apocalyptic as Blood Angels face their darkest curse."
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-1",
+   "number": "SoT 8a",
+   "title": "THE END AND THE DEATH: VOLUME I",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "All Legions"
+   ],
+   "currentBlurb": "The Siege reaches its climax. Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered across the ship. Loyalist heroes converge for the final battle. Reality warps as Warp and materium collide.",
+   "currentBlurbSafe": "The Siege reaches its climax as Horus lowers his shields and invites the Emperor to board the Vengeful Spirit. The Emperor, Sanguinius, and Dorn teleport to the flagship but are scattered. Loyalist heroes converge for the final battle."
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-2",
+   "number": "SoT 8b",
+   "title": "THE END AND THE DEATH: VOLUME II",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "All Legions"
+   ],
+   "currentBlurb": "Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing he walks to his death. The Great Angel fights valiantly, wounding the Warmaster before falling to his corrupted brother. Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread.",
+   "currentBlurbSafe": "Aboard the Vengeful Spirit, Sanguinius confronts Horus knowing what fate may await him. The Great Angel fights valiantly while Garviel Loken hunts through the flagship. Perpetuals and mortals fight alongside demigods as humanity's fate hangs by a thread."
+  },
+  {
+   "bookKey": "sot-end-and-death-vol-3",
+   "number": "SoT 8c",
+   "title": "THE END AND THE DEATH: VOLUME III",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": "siege-of-terra",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "All Legions"
+   ],
+   "currentBlurb": "The Emperor confronts Horus in the most consequential battle in human history. When Horus strikes down Ollanius Pius, the Emperor accepts His son is beyond redemption. He unleashes His full power, destroying Horus utterly—but the assault leaves Him mortally wounded. Dorn finds his father dying. The Heresy ends, but the Imperium is forever changed.",
+   "currentBlurbSafe": "The Emperor confronts Horus in the most consequential battle in human history. When loyalists fall before the Warmaster, the Emperor must decide if his son can be redeemed—and what price victory will demand."
+  }
+ ]
+}

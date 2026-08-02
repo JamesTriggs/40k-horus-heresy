@@ -1,0 +1,262 @@
+{
+ "batch": "primarchs",
+ "anthologies": null,
+ "count": 17,
+ "entries": [
+  {
+   "bookKey": "primarch-vulkan",
+   "number": "P9",
+   "title": "VULKAN: LORD OF DRAKES",
+   "author": "David Annandale",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "845-855.M30",
+   "currentLegions": [
+    "Salamanders"
+   ],
+   "currentBlurb": "Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity rather than just conquering for it, and the events that made the Salamanders the most humanitarian of all Space Marine Legions. Vulkan's compassion and his Perpetual nature set him apart from his brothers.",
+   "currentBlurbSafe": "Vulkan, alone among the Primarchs, was raised among normal humans and learned the value of every life. This novel explores his discovery on Nocturne, his philosophy of protecting humanity, and what made the Salamanders the most humanitarian of all Legions."
+  },
+  {
+   "bookKey": "primarch-fulgrim",
+   "number": "P6",
+   "title": "FULGRIM: THE PALATINE PHOENIX",
+   "author": "Josh Reynolds",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "850-868.M30",
+   "currentLegions": [
+    "Emperor's Children"
+   ],
+   "currentBlurb": "Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence, his pride in his Legion's achievements, and the character flaws that make him vulnerable to Slaanesh's corruption. The quest for perfection becomes a path to damnation for the most beautiful of the Emperor's sons.",
+   "currentBlurbSafe": "Fulgrim rebuilds his nearly-extinct Legion from the brink and drives them toward perfection in all things. This novel explores the Phoenician's obsession with excellence and the character flaws that make him vulnerable to corruption."
+  },
+  {
+   "bookKey": "primarch-magnus",
+   "number": "P3",
+   "title": "MAGNUS THE RED: MASTER OF PROSPERO",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "853.M30",
+   "currentLegions": [
+    "Thousand Sons"
+   ],
+   "currentBlurb": "Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment, his experiments with psychic powers, and the events that set him on a collision course with the Emperor's edicts. The most powerful psyker among the Primarchs believes he can master Chaos itself—a fatal hubris that will doom his Legion.",
+   "currentBlurbSafe": "Magnus the Red pursues forbidden knowledge across the galaxy, convinced that understanding the warp is humanity's key to survival. This novel explores Magnus's quest for enlightenment and the events that set him on a collision course with the Emperor's edicts."
+  },
+  {
+   "bookKey": "primarch-ferrus-manus",
+   "number": "P7",
+   "title": "FERRUS MANUS: THE GORGON OF MEDUSA",
+   "author": "David Guymer",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "869.M30",
+   "currentLegions": [
+    "Iron Hands"
+   ],
+   "currentBlurb": "Ferrus Manus, lord of the Iron Hands, embodies strength and logic. His metal hands grant him power but also represent his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the tragic irony that his inflexibility and inability to see his brother's corruption leads to his death at Isstvan V. The strongest Primarch falls because he cannot adapt.",
+   "currentBlurbSafe": "Ferrus Manus embodies strength and logic, his metal hands granting power while representing his rejection of weakness. This novel explores his brotherhood with Fulgrim, his philosophy of the flesh being weak, and the inflexibility that defines him."
+  },
+  {
+   "bookKey": "primarch-angron",
+   "number": "P11",
+   "title": "ANGRON: SLAVE OF NUCERIA",
+   "author": "Ian St. Martin",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "900-905.M30",
+   "currentLegions": [
+    "World Eaters"
+   ],
+   "currentBlurb": "Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in the gladiator pits. The Butcher's Nails implanted in his brain drive him toward constant rage and violence. This novel explores the tragedy of Angron—a Primarch who could have been noble but was broken before the Emperor found him. His only peace comes through bloodshed, and Lorgar offers him a terrible apotheosis.",
+   "currentBlurbSafe": "Angron returns to Nuceria during the Heresy, the world where he was enslaved and forced to fight in gladiator pits. The Butcher's Nails drive him toward constant rage. This novel explores the tragedy of a Primarch broken before the Emperor found him."
+  },
+  {
+   "bookKey": "primarch-mortarion",
+   "number": "P15",
+   "title": "MORTARION: THE PALE KING",
+   "author": "David Annandale",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "930-939.M30",
+   "currentLegions": [
+    "Death Guard"
+   ],
+   "currentBlurb": "Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord—the Emperor had to do that. This failure drives Mortarion's resentment. This novel explores his philosophy of endurance, his hatred of tyrants and psykers, and the bitter irony that he will become a slave to Nurgle, the greatest tyrant of all.",
+   "currentBlurbSafe": "Raised on the toxic death world of Barbarus, Mortarion learned to endure what would kill lesser beings. He freed his people from necromantic overlords but could not defeat the greatest warlord. This failure drives his resentment of tyrants and psykers."
+  },
+  {
+   "bookKey": "primarch-corax",
+   "number": "P10",
+   "title": "CORAX: LORD OF SHADOWS",
+   "author": "Guy Haley",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "954.M30",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare and asymmetric combat. This novel explores Corax's hatred of tyrants, his preference for precision strikes over overwhelming force, and how his experiences shaped the Raven Guard's tactics. The Ravenlord operates from the shadows, striking where least expected, disappearing before the enemy can respond.",
+   "currentBlurbSafe": "Corvus Corax led a slave rebellion on Lycaeus before the Emperor found him, learning the art of guerrilla warfare. This novel explores Corax's hatred of tyrants, his preference for precision strikes, and how his experiences shaped the Raven Guard's tactics."
+  },
+  {
+   "bookKey": "primarch-lorgar",
+   "number": "P5",
+   "title": "LORGAR: BEARER OF THE WORD",
+   "author": "Gav Thorpe",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "959-964.M30",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Lorgar, the most faithful son, spreads the Imperial Truth across the galaxy—but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction, his search for meaning, and his ultimate discovery of the Chaos Gods. The Urizen's journey from devoted son to first heretic is one of the Heresy's most pivotal transformations.",
+   "currentBlurbSafe": "Lorgar spreads the Imperial Truth across the galaxy, but his need to worship transforms worlds into centers of Emperor-veneration. This novel examines Lorgar's crisis of faith after Monarchia's destruction and his search for meaning beyond the Imperial Truth."
+  },
+  {
+   "bookKey": "primarch-roboute-guilliman",
+   "number": "P1",
+   "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
+   "author": "David Annandale",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "964-970.M30",
+   "currentLegions": [
+    "Ultramarines"
+   ],
+   "currentBlurb": "Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance and built the XIII Legion into a perfectly organized war machine. This novel explores Guilliman's character, his vision for humanity, and how his experiences during the Great Crusade prepared him for the trials of the Horus Heresy. The Master of the Five Hundred Worlds must balance his role as warrior and statesman.",
+   "currentBlurbSafe": "Long before the Heresy, Roboute Guilliman shaped Ultramar into a model of Imperial governance. This novel explores Guilliman's vision for humanity, his philosophy of warfare and statecraft, and how the Master of the Five Hundred Worlds balances his roles as warrior and administrator."
+  },
+  {
+   "bookKey": "primarch-alpharius",
+   "number": "P14",
+   "title": "ALPHARIUS: HEAD OF THE HYDRA",
+   "author": "Mike Brooks",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "981.M30",
+   "currentLegions": [
+    "Alpha Legion"
+   ],
+   "currentBlurb": "Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep even from each other. The Alpha Legion's methods of infiltration and misdirection are controversial, and this book may be the greatest misdirection of all. Every revelation might be a lie, every truth might be deception. I am Alpharius.",
+   "currentBlurbSafe": "Alpharius tells his own story—but can it be trusted? This novel explores the mystery of the twin Primarchs, their unique approach to warfare, and the secrets they keep. Every revelation might be a lie, every truth might be deception."
+  },
+  {
+   "bookKey": "primarch-lion-eljonson",
+   "number": "P13",
+   "title": "LION EL'JONSON: LORD OF THE FIRST",
+   "author": "David Guymer",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "997.M30",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature and inability to trust create divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that prevents him from seeing the betrayal festering on Caliban. The Lord of the First is supreme in battle but blind to the politics that will split his Legion.",
+   "currentBlurbSafe": "The Lion, first found of the Primarchs, is a master strategist and peerless warrior. But his secretive nature creates divisions within his Legion. This novel explores the Lion's relationship with Luther, his tactical brilliance, and the pride that blinds him."
+  },
+  {
+   "bookKey": "primarch-perturabo",
+   "number": "P4",
+   "title": "PERTURABO: THE HAMMER OF OLYMPIA",
+   "author": "Guy Haley",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "999.M30",
+   "currentLegions": [
+    "Iron Warriors"
+   ],
+   "currentBlurb": "Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the events that push him toward Horus's cause. Perturabo's bitterness at being underappreciated, his perfectionism, and his willingness to sacrifice anything for victory make him one of the most tragic Primarchs—a brilliant mind consumed by resentment.",
+   "currentBlurbSafe": "Perturabo, master of siege warfare and engineering genius, returns to his homeworld of Olympia to crush a rebellion. The novel explores his relationship with his adopted sister and the bitterness at being underappreciated that pushes him toward darker paths."
+  },
+  {
+   "bookKey": "primarch-jaghatai-khan",
+   "number": "P8",
+   "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
+   "author": "Chris Wraight",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "000.M31",
+   "currentLegions": [
+    "White Scars"
+   ],
+   "currentBlurb": "Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else. The Warhawk's free spirit and strategic genius make him both invaluable to the Imperium and difficult to control—a warrior who rides where he wills.",
+   "currentBlurbSafe": "Jaghatai Khan's early years on the steppes of Chogoris shaped him into the fastest and most elusive of the Primarchs. This novel explores the Khan's unification of Chogoris, his philosophy of freedom and speed, and why he values independence above all else."
+  },
+  {
+   "bookKey": "primarch-sanguinius",
+   "number": "P17",
+   "title": "SANGUINIUS: THE GREAT ANGEL",
+   "author": "Chris Wraight",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "002-003.M31",
+   "currentLegions": [
+    "Blood Angels"
+   ],
+   "currentBlurb": "Sanguinius, most beloved of the Primarchs, struggles with visions of his own death and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing he will die at Horus's hands but facing that fate with nobility. Sanguinius represents what the Imperium could have been: beauty, wisdom, and martial prowess combined. His sacrifice will echo through ten thousand years.",
+   "currentBlurbSafe": "Sanguinius struggles with visions and the dark flaw hidden in his Legion's gene-seed. This novel explores the Angel's burden—knowing what fate may await him but facing it with nobility. Sanguinius represents what the Imperium could have been."
+  },
+  {
+   "bookKey": "primarch-rogal-dorn",
+   "number": "P16",
+   "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
+   "author": "Gav Thorpe",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "014.M31",
+   "currentLegions": [
+    "Imperial Fists"
+   ],
+   "currentBlurb": "Rogal Dorn is the Emperor's Praetorian, chosen to fortify the Imperial Palace and defend Terra itself. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty. Where other Primarchs might question or interpret orders, Dorn simply obeys. His rigid adherence to truth and honor make him the perfect defender—but also blind him to the subtleties of treachery.",
+   "currentBlurbSafe": "Rogal Dorn is the Emperor's Praetorian, chosen to fortify Terra and defend the Imperial Palace. This novel explores Dorn's unwavering loyalty, his mastery of defensive warfare, and his absolute dedication to duty and truth."
+  },
+  {
+   "bookKey": "primarch-leman-russ",
+   "number": "P2",
+   "title": "LEMAN RUSS: THE GREAT WOLF",
+   "author": "Chris Wraight",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "015-021.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "Leman Russ, the savage King of Fenris, embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature, his relationship with his brothers, and the burden of being the Emperor's chosen sanction against those who fall from the Imperial Truth. The Great Wolf hunts in the darkness.",
+   "currentBlurbSafe": "Leman Russ embodies the contradiction at the heart of the Space Wolves—appearing as barbarian warriors while serving as the Emperor's most disciplined executioners. This novel delves into Russ's dual nature and the burden of being the Emperor's chosen sanction."
+  },
+  {
+   "bookKey": "primarch-konrad-curze",
+   "number": "P12",
+   "title": "KONRAD CURZE: THE NIGHT HAUNTER",
+   "author": "Guy Haley",
+   "anthology": null,
+   "series": "primarchs",
+   "currentType": "",
+   "currentTimeline": "036.M31",
+   "currentLegions": [
+    "Night Lords"
+   ],
+   "currentBlurb": "Konrad Curze is cursed with visions of his own death and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness, his belief in fate's inevitability, and his complex relationship with his father. The Night Haunter is judge, jury, and executioner—but he has already seen his own execution and welcomes it.",
+   "currentBlurbSafe": "Konrad Curze is cursed with visions and a twisted sense of justice. Raised in the nightmare city of Nostramo, he learned that fear is the ultimate weapon. This novel explores Curze's descent into madness and his belief in fate's inevitability."
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "batch": "silent-war",
+ "anthologies": [
+  "The Silent War"
+ ],
+ "count": 14,
+ "entries": [
+  {
+   "bookKey": "silent-child-night",
+   "number": "XXXVII.2",
+   "title": "CHILD OF NIGHT",
+   "author": "John French",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "005-007.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "A Knight-Errant confronts darkness born from the Heresy.",
+   "currentBlurbSafe": "Malcador's agents face the corruption spreading through the Imperium."
+  },
+  {
+   "bookKey": "silent-wolf-hunt",
+   "number": "XXXVII.7",
+   "title": "WOLF HUNT",
+   "author": "Graham McNeill",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Audio Book",
+   "currentTimeline": "005.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "Space Wolves hunt a dangerous quarry through the void.",
+   "currentBlurbSafe": "The VI Legion pursues their prey across the stars."
+  },
+  {
+   "bookKey": "silent-watcher",
+   "number": "XXXVII.1",
+   "title": "THE WATCHER",
+   "author": "CZ Dunn",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "007-009.M31",
+   "currentLegions": [
+    "Dark Angels"
+   ],
+   "currentBlurb": "The mysterious Watchers in the Dark observe the Heresy unfold.",
+   "currentBlurbSafe": "Ancient guardians witness the galaxy's civil war."
+  },
+  {
+   "bookKey": "silent-grey-angel",
+   "number": "XXXVII.3",
+   "title": "GREY ANGEL",
+   "author": "John French",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Audio Book",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garviel Loken operates as a Knight-Errant, hunting traitors in the shadows.",
+   "currentBlurbSafe": "The former Luna Wolf serves Malcador in secret operations."
+  },
+  {
+   "bookKey": "silent-luna-mendax",
+   "number": "XXXVII.6",
+   "title": "LUNA MENDAX",
+   "author": "Graham McNeill",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Deception and lies spread across Luna during the Heresy.",
+   "currentBlurbSafe": "Terra's moon becomes a battleground of secrets and treachery."
+  },
+  {
+   "bookKey": "silent-purge",
+   "number": "XXXVII.8",
+   "title": "THE PURGE",
+   "author": "Anthony Reynolds",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Novella",
+   "currentTimeline": "007-008.M31",
+   "currentLegions": [
+    "Death Guard"
+   ],
+   "currentBlurb": "The Death Guard's corruption accelerates as they embrace Nurgle's gifts.",
+   "currentBlurbSafe": "The XIV Legion's transformation into plague-bearers continues."
+  },
+  {
+   "bookKey": "silent-ghosts-speak",
+   "number": "XXXVII.11",
+   "title": "GHOSTS SPEAK NOT",
+   "author": "James Swallow",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "007-009.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garro encounters the silent dead during his missions for Malcador.",
+   "currentBlurbSafe": "The Knight-Errant faces ghosts of the past and future."
+  },
+  {
+   "bookKey": "silent-army-one",
+   "number": "XXXVII.9",
+   "title": "ARMY OF ONE",
+   "author": "Rob Sanders",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "A lone operative undertakes an impossible mission for Malcador.",
+   "currentBlurbSafe": "One warrior against overwhelming odds in the Emperor's name."
+  },
+  {
+   "bookKey": "silent-distant-echoes",
+   "number": "XXXVII.10",
+   "title": "DISTANT ECHOES OF OLD NIGHT",
+   "author": "Rob Sanders",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Ancient horrors from humanity's past resurface during the Heresy.",
+   "currentBlurbSafe": "Old Night's terrors return to haunt the Imperium."
+  },
+  {
+   "bookKey": "silent-lost-sons",
+   "number": "XXXVII.12",
+   "title": "LOST SONS",
+   "author": "James Swallow",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garro seeks lost loyalists from traitor Legions to join the Knights-Errant.",
+   "currentBlurbSafe": "The search for loyal sons from fallen Legions continues."
+  },
+  {
+   "bookKey": "silent-templar",
+   "number": "XXXVII.4",
+   "title": "TEMPLAR",
+   "author": "John French",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Sigismund, the Emperor's Champion, faces trials during the Heresy.",
+   "currentBlurbSafe": "The greatest warrior of the Imperial Fists confronts his destiny."
+  },
+  {
+   "bookKey": "silent-patience",
+   "number": "XXXVII.13",
+   "title": "PATIENCE",
+   "author": "James Swallow",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Garro learns patience is a virtue when hunting the Emperor's enemies.",
+   "currentBlurbSafe": "A Knight-Errant discovers that some prey requires patience to catch."
+  },
+  {
+   "bookKey": "silent-sigillite",
+   "number": "XXXVII.14",
+   "title": "THE SIGILLITE",
+   "author": "Chris Wraight",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Audio Book",
+   "currentTimeline": "010.M31",
+   "currentLegions": [
+    "Knights-Errant"
+   ],
+   "currentBlurb": "Malcador the Sigillite orchestrates his shadow war to save the Imperium. The Emperor's right hand works tirelessly to prepare for what must come.",
+   "currentBlurbSafe": "Malcador conducts covert operations to preserve the Emperor's vision."
+  },
+  {
+   "bookKey": "silent-gates-terra",
+   "number": "XXXVII.5",
+   "title": "THE GATES OF TERRA",
+   "author": "Nick Kyme",
+   "anthology": "The Silent War",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012.M31",
+   "currentLegions": [
+    "Imperial Fists"
+   ],
+   "currentBlurb": "Defenders prepare Terra's gates for the coming siege.",
+   "currentBlurbSafe": "The Throneworld fortifies itself against inevitable attack."
+  }
+ ]
+}

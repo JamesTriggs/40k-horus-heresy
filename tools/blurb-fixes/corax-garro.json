@@ -1,0 +1,419 @@
+{
+  "batch": "corax-garro",
+  "entries": [
+    {
+      "bookKey": "corax-weregeld",
+      "verdict": "corrected",
+      "title": "WEREGELD",
+      "author": "Gav Thorpe",
+      "type": "Novella",
+      "legions": [
+        "Raven Guard",
+        "Space Wolves",
+        "Sons of Horus",
+        "Thousand Sons",
+        "Alpha Legion"
+      ],
+      "timeline": "013.M31",
+      "mainCharacters": [
+        "Corvus Corax",
+        "Leman Russ",
+        "Ezekyle Abaddon",
+        "Marcus Valerius",
+        "Agapito",
+        "Bjorn"
+      ],
+      "blurb": "Corax leads the Raven Guard to Yarant III, breaking a traitor blockade to reach the Space Wolves, who are making a last stand under Ezekyle Abaddon's Sons of Horus, Thousand Sons and Alpha Legion while Leman Russ lies comatose. Learning that Marcus Valerius's visions have steered him for years, Corax breaks, sends the Raptors and most of his Legion clear, and leads a suicidal charge alongside Bjorn. He survives, parts from the Wolves and vows to fight Horus from the shadows.",
+      "blurbSafe": "Corvus Corax takes the Raven Guard to the aid of the Space Wolves, besieged on a distant world by a traitor host under Ezekyle Abaddon. Concluding Gav Thorpe's Raven Guard arc, it forces Corax to reckon with everything his shadow war has cost him.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "timeline",
+        "legions"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Yarant",
+        "https://warhammer40k.fandom.com/wiki/Weregeld_(Novella)",
+        "https://gavthorpe.co.uk/2016/10/05/corax-authors-notes/",
+        "https://www.blacklibrary.com/the-horus-heresy/novels/corax-ebook.html"
+      ],
+      "confidence": "high",
+      "notes": "The current text was fabricated: Weregeld is not the start of a quest for vengeance after Isstvan, it is the closing novella of the Corax arc, new to the Book 40 anthology in 2016. Setting is the Battle of Yarant III, which follows Leman Russ's wounding by Horus at Trisolian (Wolfsbane) and sits alongside the Beta-Garmon campaign, so 013.M31 rather than 006-007.M31. Corax explicitly dispatches non-Raven Guard elements to Terra and Beta-Garmon during the story, which anchors the late date. Date is a reasoned placement, not a printed in-universe stamp, so treat as approximate. Ordering: this should be the LAST Corax entry, not the first. The site currently numbers it XL.1."
+    },
+    {
+      "bookKey": "corax-soulforge",
+      "verdict": "corrected",
+      "title": "SOULFORGE",
+      "author": "Gav Thorpe",
+      "type": "Novella",
+      "legions": [
+        "Raven Guard",
+        "Word Bearers",
+        "Mechanicum"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Corvus Corax",
+        "Agapito"
+      ],
+      "blurb": "Fighting a shadow war after the Dropsite Massacre, Corax's Raven Guard board a stricken Word Bearers vessel and find proof of an alliance between the traitors and the Mechanicum forge world of Constanix II, which is turning out terrifying new war machines. Corax takes the Legion to the forge world in a hit-and-run campaign, infiltrates the Mechanicum priesthood to win allies, and meets the first daemon engines of the Dark Mechanicum. Commander Agapito's unspent rage over Isstvan tests his primarch's methods throughout.",
+      "blurbSafe": "The surviving Raven Guard remain defiant after Isstvan V, and evidence recovered behind enemy lines points to a pact between the Word Bearers and a Mechanicum forge world supplying dreadful new war machines. Corvus Corax judges the threat too great to ignore.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.trackofwords.com/2017/01/20/corax-soulforge-gav-thorpe/",
+        "https://warhammer40k.fandom.com/wiki/Corax:_Soulforge",
+        "https://wh40k.lexicanum.com/wiki/Corax:_Soulforge",
+        "https://www.blacklibrary.com/the-horus-heresy/novels/corax-ebook.html"
+      ],
+      "confidence": "high",
+      "notes": "The prior audit was right. The current text described the plot of Deliverance Lost (obtaining gene-tech from Terra to rebuild the Legion). Soulforge is the 2013 Limited Edition novella set after Deliverance Lost, and is the assault on the forge world Constanix II. Word Bearers and the Dark Mechanicum are the antagonists and must be added to the factions. Type and timeline confirmed unchanged."
+    },
+    {
+      "bookKey": "corax-ravenlord",
+      "verdict": "corrected",
+      "title": "RAVENLORD",
+      "author": "Gav Thorpe",
+      "type": "Novella",
+      "legions": [
+        "Raven Guard"
+      ],
+      "timeline": "007-008.M31",
+      "mainCharacters": [
+        "Corvus Corax"
+      ],
+      "blurb": "Corax and the remnants of his Legion now wage a war of liberation, freeing worlds held down by traitor forces, gathering followers and disrupting the Warmaster's influence wherever they can. An unexpected reunion with another survivor of Isstvan V leads the Raven Guard to the prison colony of Carandiru, and to an assault that makes them confront the ghosts of their own uprising on Deliverance. Corax must rally warriors still weighed down by the massacre and by the disaster at Ravendelve.",
+      "blurbSafe": "Corax's diminished Legion fights a very different kind of war, liberating oppressed worlds and drawing recruits to the Raven Guard banner. A chance reunion with a fellow survivor of Isstvan V sets them on course for a prison colony and for their own past.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://www.trackofwords.com/2014/05/26/ravenlord-gav-thorpe/",
+        "https://gavthorpe.co.uk/books/ravenlord-by-gav-thorpe/",
+        "https://warhammer40k.fandom.com/wiki/Ravenlord",
+        "https://www.blacklibrary.com/all-products/ravenlord"
+      ],
+      "confidence": "high",
+      "notes": "The current text was fabricated: Ravenlord is not about destroying failed gene-seed creations (that is the Ravendelve disaster at the end of Deliverance Lost). It is the 2014 Limited Edition novella covering the assault on the prison colony Carandiru. Type and timeline unchanged. Ordering caveat: Lexicanum and the Warhammer 40k Wiki both place Ravenlord THIRD in the Raven Guard chronology (Soulforge, The Shadowmasters, Ravenlord, The Value of Fear, Raptor, Weregeld), not fifth. I could not find a source supporting the fifth position."
+    },
+    {
+      "bookKey": "corax-shadowmasters",
+      "verdict": "corrected",
+      "title": "THE SHADOWMASTERS",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": [
+        "Raven Guard"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Chamell"
+      ],
+      "blurb": "The Mor Deythan stand apart from the rest of the Raven Guard, so secretive that many deny they exist at all. Sharing their primarch's gift for becoming one with the shadows, Sergeant Chamell leads his self-styled Shadowmasters behind enemy lines to sow fear and confusion in support of a wider Legion assault. The piece revisits an engagement from Corax: Soulforge from the perspective of the warriors who made it possible.",
+      "blurbSafe": "The Mor Deythan are the Raven Guard's most secretive cadre, warriors who share Corax's ability to slip through any battlefield unseen and unheard. This short piece follows one sergeant and his squad working far behind enemy lines.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "timeline"
+      ],
+      "sources": [
+        "https://www.trackofwords.com/2017/01/21/quick-review-the-shadowmasters-gav-thorpe/",
+        "https://warhammer40k.fandom.com/wiki/The_Shadowmasters_(Short_Story)",
+        "https://gavthorpe.co.uk/books/the-shadowmasters-by-gav-thorpe/"
+      ],
+      "confidence": "medium",
+      "notes": "Type confirmed as Short Story: first published inside the dust jacket of the Corax: Soulforge hardback, later also issued as an audio book (April 2015) and collected in Book 40. Because it depicts an engagement concurrent with Soulforge, the timeline is narrowed from 007-008.M31 to 007.M31. Track of Words names the theatre as 'Atlas'; I could not independently confirm whether Atlas is a location on or near Constanix II, so the blurb refers to the wider Legion assault rather than naming it. Confidence medium on setting detail only, high on protagonist and premise."
+    },
+    {
+      "bookKey": "garro-oath-moment",
+      "verdict": "corrected",
+      "title": "GARRO: OATH OF MOMENT",
+      "author": "James Swallow",
+      "type": "Audio Drama",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard",
+        "Ultramarines",
+        "Word Bearers"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Malcador the Sigillite",
+        "Tylos Rubio"
+      ],
+      "blurb": "Newly returned to Terra after the flight of the Eisenstein, Nathaniel Garro is given a secret mission by Malcador the Sigillite and sent to a warzone where the Ultramarines are supposedly fighting greenskins. He arrives at Calth in the middle of the Word Bearers' betrayal, fights alongside the XIII Legion's 21st Company defending the approaches to Numinus, and only then reveals his real objective: to demand an oath of moment from Tylos Rubio, a Codicier silenced by the Edict of Nikaea.",
+      "blurbSafe": "Having proved his loyalty aboard the Eisenstein, Nathaniel Garro accepts an assignment from Malcador the Sigillite that sends him back among the stars to an Ultramarines warzone. What the Sigillite actually wants from him there is not what Garro has been told.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://books.apple.com/gb/audiobook/garro-oath-of-moment-the-horus-heresy-series-unabridged/id1318793713",
+        "https://civilian-reader.blogspot.com/2012/03/garro-oath-of-moment-by-james-swallow.html",
+        "https://wh40k.lexicanum.com/wiki/Tylos_Rubio",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Calth"
+      ],
+      "confidence": "high",
+      "notes": "Type Audio Drama confirmed (2010, Toby Longworth, roughly 71 minutes). The current text was generic and omitted the entire actual plot, Calth and Rubio. Timeline 007.M31 retained as consistent with the Battle of Calth. The 'greenskin invasion' in the official blurb is the pretext for the Calth muster, not the real enemy."
+    },
+    {
+      "bookKey": "garro-sword-truth",
+      "verdict": "corrected",
+      "title": "GARRO: SWORD OF TRUTH",
+      "author": "James Swallow",
+      "type": "Audio Drama",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard",
+        "Ultramarines",
+        "World Eaters",
+        "Emperor's Children",
+        "White Scars"
+      ],
+      "timeline": "007-008.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Tylos Rubio",
+        "Macer Varren"
+      ],
+      "blurb": "Back from Calth and operating out of the Somnus Citadel on Luna, Garro is sent with Tylos Rubio and a Custodian to intercept a ragged flotilla of legionaries loitering at the edge of the Solar System. Boarding the World Eaters warship Daggerline, he meets captains of the World Eaters, Emperor's Children and White Scars, all claiming to be loyalists in flight from Isstvan. Falsified orders point to a conspiracy, and Garro must look beneath the obvious to tell friend from foe.",
+      "blurbSafe": "Returning from one battlefield to find another mission waiting, Nathaniel Garro is sent to assess a ragged fleet of legionaries from several Legions gathered near Terra. Their presence alarms the loyalist defenders, and their word alone will not settle whether they are friends or foes.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-sword-of-truth-mp3.html",
+        "https://civilian-reader.blogspot.com/2013/02/audiobook-garro-sword-of-truth-by-james.html",
+        "https://wh40k.lexicanum.com/wiki/Garro:_Sword_of_Truth_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Type Audio Drama confirmed (2012, roughly 140 minutes, John Banks, Toby Longworth, Ramon Tikaram). Current text was generic and wrong in emphasis: Garro is not hunting loyalists inside traitor Legions, he is vetting a mixed loyalist-claiming flotilla at the edge of the Solar System. One contingent is a traitor plant; secondary sources name the White Scars captain Hakeem, but I only found this in aggregated wiki snippets so I have deliberately kept the identity out of the blurb. Ordering evidence: the official blurb states Garro 'returns from the battlefields of Calth', and Macer Varren is recruited here but is already a Knight-Errant in Legion of One, so Sword of Truth precedes Legion of One chronologically. The site's order is correct on this point."
+    },
+    {
+      "bookKey": "corax-value-fear",
+      "verdict": "corrected",
+      "title": "THE VALUE OF FEAR",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": [
+        "Raven Guard",
+        "Night Lords",
+        "Alpha Legion"
+      ],
+      "timeline": "008.M31",
+      "mainCharacters": [
+        "Ashel"
+      ],
+      "blurb": "Corax's Raven Guard are gathering leaderless loyalists to their banner wherever they find them. In the industrial nightmare of an underhive, Sergeant Ashel's squad fights beside the unlikeliest of allies, a loyal Night Lord, to put down an Alpha Legion-fomented rebellion. Watching his counterpart work, Ashel is unsettled by how effectively terror achieves what the XIX Legion's own shadow tactics do not. A very short 2014 Advent Calendar piece.",
+      "blurbSafe": "The Raven Guard are drawing every leaderless loyalist they can find to Corax's banner. Deep in an underhive, one of their sergeants receives a lesson in terror tactics from the most unlikely of allies.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.trackofwords.com/2014/12/17/quick-review-the-value-of-fear/",
+        "https://warhammer40k.fandom.com/wiki/The_Value_of_Fear_(Short_Story)",
+        "https://gavthorpe.co.uk/books/the-value-of-fear-by-gav-thorpe/",
+        "https://www.blacklibrary.com/all-products/value-of-fear"
+      ],
+      "confidence": "high",
+      "notes": "The current text simply restated the title as a theme. The actual story is a Raven Guard and loyalist Night Lords joint action in an underhive, from the Black Library 2014 Advent Calendar (roughly 1,000 words). Night Lords must be added to the factions; the official blurb names them explicitly. The Alpha Legion role in the rebellion comes from the Track of Words review only, so it is the least certain element. Type Short Story and timeline 008.M31 unchanged."
+    },
+    {
+      "bookKey": "corax-raptor",
+      "verdict": "corrected",
+      "title": "RAPTOR",
+      "author": "Gav Thorpe",
+      "type": "Audio Drama",
+      "legions": [
+        "Raven Guard",
+        "Space Wolves"
+      ],
+      "timeline": "008.M31",
+      "mainCharacters": [
+        "Navar Hef",
+        "Corvus Corax"
+      ],
+      "blurb": "After Isstvan V, Corax sanctioned an accelerated implantation process to make new Raven Guard, and his enemies subverted it in secret. Horrendously mutated but unwavering, the Raptors still stand ready to serve. When a watch-pack of Space Wolves legionaries arrives unannounced, Lieutenant Navar Hef must greet these warlike kinsmen, endure their scrutiny of his malformed brothers, and decide whether the Wolves are hiding flaws of their own.",
+      "blurbSafe": "The Raptors are Corax's newest legionaries, products of a rushed gene-seed process and viewed with suspicion by almost everyone. When Space Wolves arrive without warning, one Raptor lieutenant is left to host warriors who have come to take their measure.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/raptor-mp3.html",
+        "https://www.trackofwords.com/black-library/black-library-reviews/black-library-the-horus-heresy-series/",
+        "https://warhammer40k.fandom.com/wiki/Corax:_Soulforge"
+      ],
+      "confidence": "high",
+      "notes": "Type Audio Drama confirmed (March 2015, 69 minutes, cast including Joe Absolom and Sean Barrett), though the Corax anthology reprints it as prose and Black Library's contents listing labels it a short story. The current text was wrong on the central fact: the Raptors are already mutated when the story opens, they do not transform into monsters at the end. Space Wolves must be added to the factions. Timeline 008.M31 unchanged, no printed in-universe date found."
+    },
+    {
+      "bookKey": "garro-legion-one",
+      "verdict": "corrected",
+      "title": "GARRO: LEGION OF ONE",
+      "author": "James Swallow",
+      "type": "Audio Drama",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard",
+        "Ultramarines",
+        "World Eaters",
+        "Sons of Horus"
+      ],
+      "timeline": "008.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Tylos Rubio",
+        "Macer Varren",
+        "Garviel Loken"
+      ],
+      "blurb": "Almost a year after the betrayal, Garro sets foot on the ruin of Isstvan III with fellow Knights-Errant Tylos Rubio and Macer Varren, hunting a feral survivor the loyalists call Cerberus who strikes at friend and foe alike. Beset by the horrors left on the dead world, the three are nearly killed by Cerberus himself. Garro holds him off and urges him to remember who he truly is: Garviel Loken, once captain of the Luna Wolves.",
+      "blurbSafe": "Nathaniel Garro and two fellow Knights-Errant walk the ruins of the world where the Heresy began, searching for a lone survivor who has been killing indiscriminately ever since. What they find there matters far beyond one lost warrior.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-legion-of-one-mp3.html",
+        "https://civilian-reader.blogspot.com/2012/03/garro-legion-of-one-by-james-swallow.html",
+        "https://wh40k.lexicanum.com/wiki/Garro:_Legion_of_One_(Audio_Book)",
+        "https://www.goodreads.com/book/show/10146826-garro"
+      ],
+      "confidence": "high",
+      "notes": "Type Audio Drama confirmed (2011, 68 minutes, Toby Longworth). Current text was pure title-paraphrase and factually wrong: Garro is not alone, he is one of three Knights-Errant. Legions added for Rubio (Ultramarines), Varren (World Eaters) and Loken (Luna Wolves, listed as Sons of Horus). Timeline left at 008.M31 but flagged: the official blurb says 'almost a year' after Isstvan III, which would sit earlier, while the story must post-date Sword of Truth because Varren is already a Knight-Errant. The published canon is loose here and I found no printed in-universe date."
+    },
+    {
+      "bookKey": "garro-shield-lies",
+      "verdict": "corrected",
+      "title": "GARRO: SHIELD OF LIES",
+      "author": "James Swallow",
+      "type": "Audio Drama",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard",
+        "Mechanicum"
+      ],
+      "timeline": "008-009.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Katanoh Tallery"
+      ],
+      "blurb": "Katanoh Tallery, a humble Administratum adept on the orbital plate Riga, uncovers evidence of a conspiracy inside the monolithic bureaucracy and flees into the shadows, hunted by Mechanicum automata. She falls instead into the hands of the Knight-Errant Nathaniel Garro, who must weigh whether she is a threat or a witness while the two of them evade her pursuers. For Garro it opens a personal quest to find his own place in the war.",
+      "blurbSafe": "For most people on Terra the war exists only as rumour, until a junior Administratum adept stumbles on evidence of a conspiracy reaching into the heart of the Imperium's bureaucracy. Running for her life, she finds herself at the mercy of the mysterious Knight-Errant Nathaniel Garro.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-shield-of-lies-mp3.html",
+        "https://www.trackofwords.com/2015/01/31/garro-shield-of-lies-james-swallow/"
+      ],
+      "confidence": "high",
+      "notes": "Type Audio Drama confirmed (130 minutes, cast including Jonathan Keeble and Toby Longworth). Current text was a title-paraphrase with no real content; the actual story is largely told from Tallery's viewpoint on the orbital plate Riga. Mechanicum added as the pursuing force. Timeline 008-009.M31 retained, no printed in-universe date found."
+    },
+    {
+      "bookKey": "garro-burden-duty",
+      "verdict": "corrected",
+      "title": "BURDEN OF DUTY",
+      "author": "James Swallow",
+      "type": "Audio Drama",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard",
+        "Imperial Fists"
+      ],
+      "timeline": "009-010.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Massak"
+      ],
+      "blurb": "While the Knights-Errant fight a quiet war in the Imperium's dark places, Garro uses a false identity and a single-person craft to infiltrate the Imperial Fists' star fort Phalanx, armed only with his power sword. He makes for the Seclusium, the sealed chamber where Rogal Dorn has confined his Legion's Librarians since the Edict of Nikaea, intending to recruit the psyker Massak for Malcador. The imprisoned Librarians, locked in from outside, turn on him.",
+      "blurbSafe": "The Knights-Errant move quietly in places others cannot reach. Malcador's next errand takes Nathaniel Garro aboard the Imperial Fists' mighty star fort Phalanx, seeking one more kindred soul for his growing band of warriors.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/burden-of-duty-mp3.html",
+        "https://wh40k.lexicanum.com/wiki/Burden_of_Duty_(Audio_Drama)",
+        "https://warhammer40k.fandom.com/wiki/Burden_of_Duty"
+      ],
+      "confidence": "medium",
+      "notes": "Type Audio Drama confirmed (October 2012, John Banks, Toby Longworth, Ramon Tikaram; later re-released on CD alongside Grey Angel). Current text was generic sentiment with no plot. Imperial Fists added. Lexicanum also states that Massak declines to leave with Garro; I found that in only one source chain so I have left the outcome out of the blurb rather than assert it. Black Library now titles the story 'Garro: Burden of Duty'; the original 2012 release was 'Burden of Duty', which is what the manifest uses. Timeline 009-010.M31 retained, no printed in-universe date found."
+    },
+    {
+      "bookKey": "garro-ashes-fealty",
+      "verdict": "corrected",
+      "title": "GARRO: ASHES OF FEALTY",
+      "author": "James Swallow",
+      "type": "Audio Drama",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard"
+      ],
+      "timeline": "010-011.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Meric Voyen"
+      ],
+      "blurb": "Meric Voyen, once an Apothecary of the XIV Legion and one of the Eisenstein's survivors, returns bearing a deadly cargo into the Solar System: his research towards a cure for the plague consuming their former brothers. Garro, who knows too well how readily the warp corrupts, must decide whether any good can come of Voyen's work or whether it is already too late to act. Two old comrades clash over single-minded science and hard pragmatism.",
+      "blurbSafe": "An old comrade from the Eisenstein reappears in the Solar System, carrying dangerous cargo and a purpose he will not be talked out of. Garro must judge what to do about a former brother's work before the warp's influence settles the question for him.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-ashes-of-fealty-mp3.html",
+        "https://www.trackofwords.com/2015/02/17/quick-review-garro-ashes-of-fealty-james-swallow/"
+      ],
+      "confidence": "high",
+      "notes": "Type Audio Drama confirmed (2015, 18 minutes, Jonathan Keeble and Toby Longworth). Current text was a title-paraphrase about loyalty; the actual story is the reunion with Meric Voyen and his search for a cure to the Death Guard's affliction. Death Guard added to factions. Timeline 010-011.M31 retained, no printed in-universe date found."
+    },
+    {
+      "bookKey": "garro-vow-faith",
+      "verdict": "corrected",
+      "title": "GARRO: VOW OF FAITH",
+      "author": "James Swallow",
+      "type": "Novella",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard"
+      ],
+      "timeline": "011-013.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Euphrati Keeler",
+        "Malcador the Sigillite"
+      ],
+      "blurb": "Beset by doubt about Malcador and about his own place in the war, Garro sets aside his duties as the Sigillite's Agentia Primus and searches Terra for Euphrati Keeler, the Living Saint who once saved his life and set him on his path. He spends most of the story out of armour and without authority, while the Warmaster's agents hunt Keeler too, knowing her death would wound the Throneworld's spirit as surely as any assault.",
+      "blurbSafe": "Filled with doubts about the war and his place in it, Nathaniel Garro abandons his duties and goes looking for the woman who once saved his life. His search takes him across more of Terra than he has ever seen.",
+      "changed": [
+        "blurb",
+        "blurbSafe",
+        "legions"
+      ],
+      "sources": [
+        "https://www.trackofwords.com/2016/01/17/garro-vow-of-faith-james-swallow/",
+        "https://www.blacklibrary.com/the-horus-heresy/novels/garro-vow-of-faith-ebook.html",
+        "https://wh40k.lexicanum.com/wiki/Garro:_Vow_of_Faith"
+      ],
+      "confidence": "high",
+      "notes": "Type Novella confirmed (December 2015 limited edition hardback plus simultaneous ebook; the only non-audio original in the Garro collection). The current text overreached badly, claiming Garro founds the Grey Knights and the Inquisition; nothing of the sort happens here. The story is his crisis of faith and his search for Euphrati Keeler on Terra. Timeline 011-013.M31 retained, no printed in-universe date found."
+    }
+  ]
+}

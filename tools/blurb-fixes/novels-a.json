@@ -1,0 +1,413 @@
+{
+ "batch": "novels-a",
+ "entries": [
+  {
+   "bookKey": "descent-of-angels",
+   "verdict": "corrected",
+   "title": "DESCENT OF ANGELS",
+   "author": "Mitchel Scanlon",
+   "type": "Novel",
+   "legions": [
+    "Dark Angels"
+   ],
+   "timeline": "820-945.M30",
+   "mainCharacters": [
+    "Zahariel El'Zurias",
+    "Nemiel",
+    "Lion El'Jonson",
+    "Luther"
+   ],
+   "blurb": "On the forest world of Caliban the knightly orders hunt the great beasts that prey on humanity, and the aspirant Zahariel El'Zurias rises through the Order under its master, Lion El'Jonson. Then the Emperor arrives, Caliban is folded into the Imperium, and the Lion leads the newly named Dark Angels out into the Great Crusade. Zahariel takes the black himself, and a schism that will one day split the First Legion begins to take shape.",
+   "blurbSafe": "On the forest world of Caliban, knightly orders defend a low-technology people from the beasts of the endless woods, and the aspirant Zahariel El'Zurias dreams of joining the greatest order of all, led by the warrior Lion El'Jonson. When the Great Crusade reaches Caliban, the world and its knights are remade, and the sons of Caliban must decide whether to follow the Lion to the stars.",
+   "changed": [
+    "blurb",
+    "blurbSafe",
+    "timeline"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Descent_of_Angels",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Lion_El%27Jonson",
+    "https://warhammer40k.fandom.com/wiki/Fallen_Angels_(Novel)"
+   ],
+   "confidence": "medium",
+   "notes": "Content of the old blurb was broadly right but it omitted the actual viewpoint character, Zahariel El'Zurias, and read as though the Lion were the protagonist. Both the Fandom and Wikipedia synopses make Zahariel the narrator, with the first half on pre-Imperial Caliban and the second half following the early Great Crusade. Timeline end corrected from 970.M30: the Lion is found on Caliban in 846.M30 (Lion El'Jonson page), and Fallen Angels, which picks up directly where this novel ends, opens in the 147th year of the Great Crusade, which the same page's dating makes roughly 945.M30 (it dates the 200th year as 998.M30). Wikipedia independently says the novel concludes about 50 years before the Heresy. The 820.M30 start is carried over unverified, hence medium confidence."
+  },
+  {
+   "bookKey": "the-first-heretic",
+   "verdict": "corrected",
+   "title": "THE FIRST HERETIC",
+   "author": "Aaron Dembski-Bowden",
+   "type": "Novel",
+   "legions": [
+    "Word Bearers"
+   ],
+   "timeline": "959.M30",
+   "mainCharacters": [
+    "Argel Tal",
+    "Lorgar",
+    "Erebus",
+    "Kor Phaeron",
+    "Cyrene Valantion"
+   ],
+   "blurb": "Lorgar and the Word Bearers are humiliated by the Emperor for worshipping him as a god. Crushed by his father's rebuke, Lorgar seeks meaning in the great pilgrimage to Cadia and the Eye of Terror. There, he finds gods who welcome worship—the Ruinous Powers of Chaos. This is the story of the Legion that fell first, spreading the seeds of corruption throughout the Imperium and orchestrating the Warmaster's fall.",
+   "blurbSafe": "Lorgar and the Word Bearers face the Emperor's wrath for worshipping him as a god. Humiliated and seeking meaning beyond the Imperial Truth, Lorgar embarks on a pilgrimage into the Eye of Terror. What he discovers there will challenge everything the Imperium believes about gods and faith.",
+   "changed": [
+    "timeline"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_First_Heretic",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Pilgrimage_of_Lorgar",
+    "https://warhammer40k.fandom.com/wiki/Anathame"
+   ],
+   "confidence": "medium",
+   "notes": "Blurb and blurbSafe verified and carried through unchanged. Every element checks out: the censure for the Word Bearers' worship of the Emperor on Khur, the Pilgrimage of Lorgar (which the Fandom Pilgrimage page confirms passes through the Cadia System before entering the Eye of Terror), the Legion's fall to Chaos, and Erebus engineering the Warmaster's corruption. Timeline moved from 956.M30 to 959.M30: the Fandom novel page states the book starts 47 years before Isstvan V, dated ca. 006.M31, giving 959.M30; Wikipedia says 43 years before Isstvan V and the Pilgrimage page says 43 years before the Heresy, giving 962-963.M30. No source supports 956.M30. Note the novel spans roughly 50 years and ends with the Word Bearers en route to Calth (007.M31), a span the single-millennium date format cannot express, so the opening year is used."
+  },
+  {
+   "bookKey": "legion",
+   "verdict": "confirmed",
+   "title": "LEGION",
+   "author": "Dan Abnett",
+   "type": "Novel",
+   "legions": [
+    "Alpha Legion"
+   ],
+   "timeline": "001.M31",
+   "mainCharacters": [
+    "Alpharius",
+    "Omegon",
+    "John Grammaticus",
+    "Hurtado Bronzi",
+    "Peto Soneka"
+   ],
+   "blurb": "The Alpha Legion operates in the shadows of the Great Crusade, their methods questioned by all. When they encounter the Cabal, a xenos organization that claims to see the future, the twins Alpharius and Omegon are presented with a terrible choice: let the Imperium burn to deny Chaos, or fight for humanity's survival. Their decision will shape the course of the Heresy, though none will know which side they truly serve.",
+   "blurbSafe": "The Alpha Legion operates in shadows, their methods questioned by all who witness them. When they encounter the Cabal, a mysterious xenos organization claiming to see the future, the twins Alpharius and Omegon must make a choice that will shape the coming conflict in ways none can predict.",
+   "changed": [],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Legion_(Novel)",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Alpha_Legion"
+   ],
+   "confidence": "medium",
+   "notes": "Blurb accurate, carried through unchanged. The Cabal's proposition is exactly as described: the Alpha Legion page sets out the two futures, one in which the Emperor wins and humanity is slowly consumed by Chaos over ten to twenty millennia, and one in which Horus wins, humanity is destroyed, and the Chaos Gods starve. Setting is the compliance of Nurth, protagonists Alpharius and Omegon plus Imperial Army officers of the Geno Five-Two Chiliad and the Cabal agent John Grammaticus. Timeline left at 001.M31 but flagged: sources conflict. Wikipedia and the Alpha Legion page both say the story runs about two years before the Heresy begins, while the Alpha Legion campaign list dates the Nurth compliance to ca. 999.M30. 001.M31 sits between them and nothing directly contradicts it."
+  },
+  {
+   "bookKey": "a-thousand-sons",
+   "verdict": "confirmed",
+   "title": "A THOUSAND SONS",
+   "author": "Graham McNeill",
+   "type": "Novel",
+   "legions": [
+    "Thousand Sons",
+    "Space Wolves"
+   ],
+   "timeline": "001-004.M31",
+   "mainCharacters": [
+    "Magnus the Red",
+    "Ahzek Ahriman",
+    "Lemuel Gaumon",
+    "Leman Russ"
+   ],
+   "blurb": "Magnus the Red, master of psychic powers, foresees Horus's betrayal and uses sorcery to warn the Emperor—shattering the Webway Project and dooming Terra. The Emperor, enraged at this catastrophic breach, unleashes Leman Russ and the Space Wolves upon Prospero. The Thousand Sons, devoted scholars and psykers, are betrayed by their own mutations and the machinations of Tzeentch. Magnus's arrogance costs him everything.",
+   "blurbSafe": "Magnus the Red, master of psychic powers, attempts to warn the Emperor of a terrible betrayal—but his methods catastrophically damage the Emperor's secret Webway Project. The Emperor unleashes Leman Russ and the Space Wolves upon Prospero, where the Thousand Sons face annihilation for Magnus's hubris.",
+   "changed": [],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/A_Thousand_Sons",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Council_of_Nikaea"
+   ],
+   "confidence": "high",
+   "notes": "Verified against the Fandom plot summary and Wikipedia and carried through unchanged: censure at the Council of Nikaea, continued secret sorcery on Prospero, Magnus foreseeing Horus's fall, the psychic warning breaching the Emperor's webway project beneath the Imperial Palace, the Emperor dispatching Leman Russ, and the flesh-change and Tzeentch's hand in the Legion's fate. The Council of Nikaea is dated 001.M31 on the Fandom wiki, supporting the start of the given range."
+  },
+  {
+   "bookKey": "horus-rising",
+   "verdict": "corrected",
+   "title": "HORUS RISING",
+   "author": "Dan Abnett",
+   "type": "Novel",
+   "legions": [
+    "Sons of Horus",
+    "Luna Wolves"
+   ],
+   "timeline": "002-003.M31",
+   "mainCharacters": [
+    "Garviel Loken",
+    "Horus",
+    "Tarik Torgaddon",
+    "Erebus",
+    "Euphrati Keeler"
+   ],
+   "blurb": "The Great Crusade is at its zenith. The Emperor has withdrawn to Terra and left Warmaster Horus in command, and Captain Garviel Loken of the Luna Wolves is raised to the Mournival as the 63rd Expeditionary Fleet fights its way from one compliance to the next, including the killing world of Murder. It ends among the Interex on Xenobia, where diplomacy collapses after Erebus of the Word Bearers steals a Chaos-tainted xenos blade from their Hall of Devices.",
+   "blurbSafe": "The Great Crusade is at its height. The Emperor has returned to Terra, leaving his favoured son Horus as Warmaster in command of the Imperium's armies, and Captain Garviel Loken of the Luna Wolves is elevated to the Warmaster's inner circle. Through Loken's eyes the 63rd Expeditionary Fleet fights its way across the stars in the last golden days before everything changes.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Horus_Rising",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Interex",
+    "https://warhammer40k.fandom.com/wiki/Anathame",
+    "https://www.trackofwords.com/2017/05/11/horus-rising-dan-abnett/"
+   ],
+   "confidence": "high",
+   "notes": "Reported error confirmed and fixed. The old blurb and blurbSafe both claimed Horus is wounded by the anathame on Davin's moon in this book. That happens in False Gods (book II). The Fandom Anathame page states the blade was stolen by Erebus from the Interex's Hall of Devices in Xenobia Principis and was then used, through events orchestrated by Erebus, to mortally injure Horus on the plague moon of Davin. The Interex page confirms the theft and the resulting war are the Xenobia debacle, and the official False Gods synopsis on the series list page opens with the Warmaster putting the debacle with the Interex behind him. The rewritten blurb now ends where the novel ends. blurbSafe reveals nothing about Erebus, the theft or any wounding, which matters because a new reader starts here. Timeline left at 002-003.M31 and flagged: Wikipedia places the novel in the 203rd year of the Great Crusade, which the Lion El'Jonson page's dating would make roughly 001.M31, but no source gives an explicit M31 date for the book so the existing value is retained."
+  },
+  {
+   "bookKey": "false-gods",
+   "verdict": "corrected",
+   "title": "FALSE GODS",
+   "author": "Graham McNeill",
+   "type": "Novel",
+   "legions": [
+    "Sons of Horus"
+   ],
+   "timeline": "004.M31",
+   "mainCharacters": [
+    "Horus",
+    "Garviel Loken",
+    "Erebus",
+    "Eugan Temba",
+    "Tarik Torgaddon"
+   ],
+   "blurb": "Sent to bring the rebel world of Davin back to compliance, Horus descends alone on the plague moon and fights Eugan Temba, a governor rotted by Nurgle's gift, who cuts him with the anathame Erebus stole from the Interex. Dying of a wound Imperial medicine cannot touch, the Warmaster is carried to the Temple of the Serpent Lodge, where a ritual casts his spirit into the warp. There Erebus shows him a future in which the Emperor ascends to godhood and discards his sons, and Horus chooses rebellion.",
+   "blurbSafe": "Sent to reconquer the rebel world of Davin, the Warmaster is struck down by a xenos blade that no Imperial medicine can heal, and his sons turn in desperation to the Serpent Lodge. In a dark ritual, Horus's spirit walks the warp, where he is shown visions that challenge everything he believes about his father's plans for humanity.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/False_Gods",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Anathame",
+    "https://warhammer40k.fandom.com/wiki/Davin"
+   ],
+   "confidence": "high",
+   "notes": "Everything the old blurb said was accurate, but it opened with Horus already dying, which left the wounding on Davin's moon attached to no book at all and let the Horus Rising error stand unchallenged. Both texts now place the anathame wound where it belongs, in this novel. Detail is from the Fandom False Gods plot summary: Erebus reports Davin non-compliant, the Sons of Horus land on the swamp moon, Horus goes on alone to Temba's grounded flagship, Temba is mutated by his worship of Nurgle and wields the Kinebrach anathame, and Erebus persuades the Mournival to take Horus to the Temple of the Serpent Lodge, where the induced vision of the Emperor's apotheosis turns him. blurbSafe stops short of saying Horus falls."
+  },
+  {
+   "bookKey": "the-outcast-dead",
+   "verdict": "confirmed",
+   "title": "THE OUTCAST DEAD",
+   "author": "Graham McNeill",
+   "type": "Novel",
+   "legions": [
+    "Various"
+   ],
+   "timeline": "004.M31",
+   "mainCharacters": [
+    "Kai Zulane",
+    "Atharva",
+    "Severian",
+    "Yasu Nagasena"
+   ],
+   "blurb": "While the Heresy erupts across the galaxy, Terra writhes with its own conflicts. Renegade Space Marines from various Legions are imprisoned deep beneath the Imperial Palace. When astropath Kai Zulane receives a prophetic vision of the Heresy's outcome, he becomes the most hunted man on Terra. The Outcast Dead must fight through the underhives and face the deadly custodians to deliver a message that could change everything.",
+   "blurbSafe": "Deep beneath the Imperial Palace, renegade Space Marines from various Legions are imprisoned. When astropath Kai Zulane receives a prophetic vision about the Heresy, he becomes hunted by every faction on Terra. The Outcast Dead must fight through the underhives to deliver a message that could change everything.",
+   "changed": [],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/The_Outcast_Dead_(Novel)",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy"
+   ],
+   "confidence": "medium",
+   "notes": "Broadly accurate and carried through unchanged. Confirmed: the first novel-length story in the series set almost entirely on Terra, Kai Zulane a former Ultramarines-attached astropath who unwittingly becomes keeper of a secret about how the Heresy ends, a mixed band of Space Marines suspected of treachery held beneath the Imperial Palace, and a manhunt through Terra's underworld involving the Emperor's Custodians. Two small looseness points not worth a rewrite: Zulane absorbs the secret from another mind rather than receiving a prophetic vision of his own, and the novel's chronological anchor is Magnus's psychic assault on the Imperial Palace rather than a galaxy-wide eruption. Wikipedia dates the action from several months before that event to several months after, supporting the 004.M31 timeline."
+  },
+  {
+   "bookKey": "prospero-burns",
+   "verdict": "corrected",
+   "title": "PROSPERO BURNS",
+   "author": "Dan Abnett",
+   "type": "Novel",
+   "legions": [
+    "Space Wolves",
+    "Thousand Sons"
+   ],
+   "timeline": "004-005.M31",
+   "mainCharacters": [
+    "Kasper Hawser",
+    "Leman Russ",
+    "Magnus the Red"
+   ],
+   "blurb": "The Space Wolves are the Emperor's executioners, and Leman Russ has been given his orders: make Magnus answer for his crime. Through the eyes of the Terran scholar Kasper Hawser, taken into the VI Legion as its skjald, we watch the Wolves fall on Prospero. But Horus has twisted the Emperor's command, and what should have been an arrest becomes annihilation. Russ breaks Magnus over his knee, and Tzeentch takes what is left of the Thousand Sons.",
+   "blurbSafe": "The Emperor is enraged. Magnus the Red has made a terrible mistake that endangers Terra itself, and Leman Russ is charged with bringing his brother to account. Through the eyes of Kasper Hawser, a Terran scholar who becomes the Space Wolves' oral historian, we see the VI Legion as few outsiders ever have, and follow them to the sorcerous world of Prospero.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Prospero_Burns",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Magnus_the_Red"
+   ],
+   "confidence": "high",
+   "notes": "Real error found and fixed. The old blurb said Magnus 'breaks his own spine teleporting the survivors into the warp'. The Fandom Magnus the Red page describes the duel plainly: Magnus punctures one of Russ's hearts, Russ kicks him in his single eye and then lifts Magnus into the air and breaks his back over his knee. It was Russ who broke Magnus's spine, and it was Tzeentch, not Magnus, who then transported Tizca into the Eye of Terror in exchange for Magnus's eternal fealty. The rest of the old blurb was correct, including Horus twisting the Emperor's order of apprehension into an order of destruction, which the same page confirms. blurbSafe was rewritten because the old one revealed Horus's interference, which is a betrayal reveal."
+  },
+  {
+   "bookKey": "galaxy-in-flames",
+   "verdict": "corrected",
+   "title": "GALAXY IN FLAMES",
+   "author": "Ben Counter",
+   "type": "Novel",
+   "legions": [
+    "Sons of Horus",
+    "Emperor's Children",
+    "Death Guard",
+    "World Eaters"
+   ],
+   "timeline": "005.M31",
+   "mainCharacters": [
+    "Garviel Loken",
+    "Saul Tarvitz",
+    "Nathaniel Garro",
+    "Horus",
+    "Tarik Torgaddon"
+   ],
+   "blurb": "Horus leads the Imperial fleet against the rebel world of Isstvan III, then turns its guns on his own. Life-eater virus bombs fall on the Choral City to purge the loyalists within the Sons of Horus, Emperor's Children, Death Guard and World Eaters, but Saul Tarvitz's warning saves thousands, and Garviel Loken leads a hopeless resistance in the ruins. Nathaniel Garro, kept from the drop by his wounds, seizes a frigate in orbit and runs for Terra while Horus pounds the city flat.",
+   "blurbSafe": "On the rebel world of Isstvan III, Horus at last shows his hand, and the loyalists within four Legions find themselves the target. Saul Tarvitz, Garviel Loken and Nathaniel Garro each have a part to play in the hours that follow, and the Age of Darkness begins.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Galaxy_in_Flames",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Isstvan_III_Atrocity",
+    "https://warhammer40k.fandom.com/wiki/Eisenstein"
+   ],
+   "confidence": "high",
+   "notes": "Error found and fixed. Both old texts put Nathaniel Garro on the ground surviving the virus bombardment alongside Loken and Tarvitz. The Fandom Eisenstein page says the opposite: Garro lost most of his right leg in an earlier action in the Isstvan system, and the time needed to adjust to the augmetic meant he could not be declared fit for combat duty on Isstvan III, where he would otherwise have been among the loyalists caught in the virus-bombing. He was in orbit, where he seized the Eisenstein. Also softened 'a second bombardment that reduces the planet to atomic fire': the Isstvan III Atrocity page describes a final conventional high-explosive bombardment that flattened the Choral City, not an atomic one. Tarvitz's warning and Loken's resistance in the ruins are confirmed by the same page."
+  },
+  {
+   "bookKey": "mechanicum",
+   "verdict": "corrected",
+   "title": "MECHANICUM",
+   "author": "Graham McNeill",
+   "type": "Novel",
+   "legions": [
+    "Mechanicum"
+   ],
+   "timeline": "005.M31",
+   "mainCharacters": [
+    "Dalia Cythera",
+    "Koriel Zeth",
+    "Kelbor-Hal"
+   ],
+   "blurb": "As Horus's treachery spreads, Mars tears itself apart. Fabricator General Kelbor-Hal declares for the Warmaster in exchange for the forbidden knowledge sealed away under the Treaty of Mars, loyalist magi such as Koriel Zeth are hunted through their own forge-temples, and Titan fights Titan. Meanwhile the menial Dalia Cythera builds a machine that reads the warp and uncovers the Dragon of Mars, the ancient thing the Emperor buried beneath the Red Planet.",
+   "blurbSafe": "As Horus's rebellion spreads, the forges of Mars become the greatest prize in the galaxy, and the Mechanicum's own factions begin to circle one another. Amid the gathering storm a young menial named Dalia Cythera is brought to the Red Planet to build a device that should not be possible, while whispers speak of something ancient stirring far below.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Mechanicum_(Novel)",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Schism_of_Mars"
+   ],
+   "confidence": "high",
+   "notes": "Corrected an unsupported framing and a significant omission. Both old texts opened with 'As Terra reels from Magnus's psychic assault, Mars erupts into civil war'. Neither the Fandom Mechanicum page nor the Schism of Mars page mentions Magnus anywhere in connection with the Martian civil war, and the novel predates A Thousand Sons in publication; the war is driven by Horus's agents and Kelbor-Hal's grievance over withheld knowledge. Replaced with the sourced framing. Also added the Dalia Cythera and Dragon of Mars thread, which is roughly half the novel and was missing entirely. Kelbor-Hal's bargain for the knowledge sealed by the Treaty of Mars, the persecution of loyalist tech-priests and the Titan war are all confirmed. Timeline left at 005.M31, noting the Schism of Mars page dates the wider civil war 005-006.M31."
+  },
+  {
+   "bookKey": "the-flight-of-the-eisenstein",
+   "verdict": "corrected",
+   "title": "THE FLIGHT OF THE EISENSTEIN",
+   "author": "James Swallow",
+   "type": "Novel",
+   "legions": [
+    "Death Guard"
+   ],
+   "timeline": "005.M31",
+   "mainCharacters": [
+    "Nathaniel Garro",
+    "Ignatius Grulgor",
+    "Solun Decius"
+   ],
+   "blurb": "Battle-Captain Nathaniel Garro of the Death Guard seizes the frigate Eisenstein over Isstvan III and runs for Terra with seventy loyal warriors and the news of Horus's betrayal. Traitor ships hunt them, the life-eater virus gets loose aboard and turns Ignatius Grulgor's men into something worse than dead, and the crippled ship is left adrift in the warp until Rogal Dorn's Imperial Fists find it. Garro reaches Terra, where nobody wants to believe him.",
+   "blurbSafe": "Battle-Captain Nathaniel Garro of the Death Guard escapes the Isstvan system aboard the frigate Eisenstein, carrying warning of a betrayal that will tear the Imperium apart. Hunted through the void and stalked by something far worse aboard his own ship, Garro must somehow reach Terra with news that no one on the Throneworld will want to believe.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Flight_of_the_Eisenstein",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Eisenstein",
+    "https://warhammer40k.fandom.com/wiki/Knights-Errant"
+   ],
+   "confidence": "high",
+   "notes": "Corrected an over-claim. The old blurb closed by saying Garro's journey marks him as the first of Malcador's Knights-Errant, 'the warriors who will become the founding members of the Grey Knights'. The Knights-Errant page dates that body's founding to 005.M31 and shows the Grey Knights were founded in 014.M31 from just eight psychic Knights-Errant chosen as the 'Titans'; Garro, though Agentia Primus, was not among them, and his recruitment by Malcador belongs to the later Garro stories rather than to this novel. Removed. Everything else verified: the Seventy, the flight from Isstvan III, the life-eater outbreak aboard involving Grulgor, the Eisenstein left crippled in the warp and found by Rogal Dorn's fleet (Fandom Eisenstein page), and the disbelief Garro meets from Imperial authorities (Wikipedia)."
+  },
+  {
+   "bookKey": "fallen-angels",
+   "verdict": "corrected",
+   "title": "FALLEN ANGELS",
+   "author": "Mike Lee",
+   "type": "Novel",
+   "legions": [
+    "Dark Angels"
+   ],
+   "timeline": "005.M31",
+   "mainCharacters": [
+    "Zahariel El'Zurias",
+    "Luther",
+    "Lion El'Jonson",
+    "Nemiel"
+   ],
+   "blurb": "Two stories run in parallel. On Caliban, Luther and the Librarian Zahariel put down an insurgency against Imperial rule and find something far older stirring beneath the forests, while the resentment of a garrison left behind by its primarch hardens into something worse. Across the galaxy, Lion El'Jonson moves to deny the forge world Diamat and its secret siege engines to Horus, sending Chaplain Nemiel and a small strike force into a Dark Mechanicum trap.",
+   "blurbSafe": "With news of Horus's treachery spreading, the Dark Angels are split between the Lion's crusade among the stars and the garrison Luther commands on their home world of Caliban. The Lion moves to keep a vital forge world out of traitor hands, while on Caliban an insurgency, and something far older beneath the forests, test the loyalty of those left behind.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Fallen_Angels_(Novel)",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy"
+   ],
+   "confidence": "high",
+   "notes": "Corrected a major omission and a misleading closing line. The old blurb covered only the Caliban half and closed with 'When the Lion returns, he will find his homeworld has become a fortress of rebellion', which invites the reader to expect the Lion's return in this book. He does not return to Caliban here. The Fandom plot summary and Wikipedia both describe two parallel threads, the second being the Lion's race to secure the forge world Diamat and its secret Titan-scale siege engines before Horus can, with Chaplain Nemiel leading the strike force into a Dark Mechanicum betrayal. Added that, plus the Caliban insurgency and the warp entity beneath the Northwilds arcology. Timeline left at 005.M31, the Diamat thread and the arrival of news of Horus's treachery, noting the Caliban thread reaches back to roughly 945.M30, a span the single-millennium format cannot carry."
+  },
+  {
+   "bookKey": "fear-to-tread",
+   "verdict": "corrected",
+   "title": "FEAR TO TREAD",
+   "author": "James Swallow",
+   "type": "Novel",
+   "legions": [
+    "Blood Angels"
+   ],
+   "timeline": "005-006.M31",
+   "mainCharacters": [
+    "Sanguinius",
+    "Meros",
+    "Raldoron",
+    "Azkaellon"
+   ],
+   "blurb": "Horus sends Sanguinius and the whole IX Legion to cleanse the Signus Cluster, and the Blood Angels sail into a trap built to break them. Daemons hold the system, the bloodthirster Ka'Bandha waits for the Angel, and the flaw hidden in the Legion's gene-seed, the Red Thirst, is turned against them. They win through at ruinous cost, but the Signus trap keeps them out of the war while the loyalist Legions are butchered at the Isstvan V dropsite massacre.",
+   "blurbSafe": "Horus sends Sanguinius and the Blood Angels to liberate the distant Signus Cluster, and what waits there is nothing any son of Baal has faced before. Isolated and outnumbered, the IX Legion must fight a war against horrors out of the warp, and against a secret hidden in their own blood.",
+   "changed": [
+    "blurb",
+    "blurbSafe"
+   ],
+   "sources": [
+    "https://warhammer40k.fandom.com/wiki/Fear_to_Tread",
+    "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy_(Novels)",
+    "https://en.wikipedia.org/wiki/The_Horus_Heresy",
+    "https://warhammer40k.fandom.com/wiki/Signus_Campaign",
+    "https://warhammer40k.fandom.com/wiki/Drop_Site_Massacre"
+   ],
+   "confidence": "high",
+   "notes": "Reported error confirmed and fixed. The old blurb closed with the Blood Angels being 'delayed from reaching Terra in time to prevent the Dropsite Massacre'. The Drop Site Massacre took place at Isstvan V, not Terra, and the Fandom page dates it to ca. 006.M31. The purpose of the Signus trap, per the Signus Campaign page, was to isolate and corrupt the IX Legion, and Wikipedia's synopsis states that while the Blood Angels were fighting at Signus, Horus's rebellion erupted openly and the loyalists suffered catastrophic losses in the Dropsite Massacre, after which Sanguinius turned for Terra. Rewritten accordingly. Also corrected the flaw: the Signus Campaign page names the Red Thirst as the curse Horus set out to exploit, with the campaign producing the first reported instance of the Black Rage rather than the Black Rage driving the plot. Ka'Bandha and the daemonic host are confirmed, as is the 005-006.M31 dating."
+  }
+ ]
+}

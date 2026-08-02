@@ -1,0 +1,469 @@
+{
+  "batch": "novels-c",
+  "entries": [
+    {
+      "bookKey": "pharos",
+      "verdict": "corrected",
+      "title": "PHAROS",
+      "author": "Guy Haley",
+      "type": "Novel",
+      "legions": [
+        "Ultramarines",
+        "Imperial Fists",
+        "Night Lords",
+        "Iron Warriors"
+      ],
+      "timeline": "009.M31",
+      "mainCharacters": [
+        "Barabas Dantioch",
+        "Alexis Polux",
+        "Krukesh the Pale",
+        "Gendor Skraivok",
+        "Oberdeii"
+      ],
+      "blurb": "On Sotha, the loyalist Iron Warriors warsmith Barabas Dantioch and Imperial Fists captain Alexis Polux tend the Pharos, the xenos beacon that holds Imperium Secundus together. Krukesh the Pale's scattered Night Lords attack not to destroy it but to seize it, hoping to use it to locate Curze's flagship Nightfall and reunite their broken Legion. Dantioch overloads the device to wreck the invasion fleet and dies doing it. The psychic shockwave carries far beyond the galaxy, where the Tyranid hive fleets take notice.",
+      "blurbSafe": "The Pharos is an ancient xenos device on Sotha, the one thing that pierces the Ruinstorm and holds Imperium Secundus together. When a scattered Night Lords fleet moves against it for reasons of their own, a thin garrison of Ultramarines, Imperial Fists and the exiled warsmith who studies the machine must hold the mountain.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Pharos_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Sotha",
+        "https://wh40k.lexicanum.com/wiki/Pharos_(Device)",
+        "https://warhammer40k.fandom.com/wiki/Pharos"
+      ],
+      "confidence": "high",
+      "notes": "Real error corrected: the Night Lords do not attack to destroy the beacon and blind the loyalists, they attack to capture it and use it to find the Nightfall and reunite the Legion after their defeat in the Thramas Crusade. Barabas Dantioch, a loyalist Iron Warrior, is the device's keeper and the man who overloads it at the cost of his life, so Iron Warriors added to the faction list. Battle of Sotha is dated ~009.M31, so the existing timeline is confirmed. The Tyranid coda in the existing blurb is correct and has been kept."
+    },
+    {
+      "bookKey": "deathfire",
+      "verdict": "corrected",
+      "title": "DEATHFIRE",
+      "author": "Nick Kyme",
+      "type": "Novel",
+      "legions": [
+        "Salamanders",
+        "Ultramarines",
+        "Word Bearers",
+        "Death Guard"
+      ],
+      "timeline": "010.M31",
+      "mainCharacters": [
+        "Artellus Numeon",
+        "Vulkan",
+        "Barthusa Narek",
+        "Quor Gallek",
+        "Aeonid Thiel"
+      ],
+      "blurb": "Vulkan already lies in state beneath the Fortress of Hera, and Artellus Numeon, once captain of the Pyre Guard, refuses to accept it. Against the wishes of Imperium Secundus he takes his primarch's stasis casket off Macragge aboard the Charybdis, bound for Nocturne and the fires of Mount Deathfire. Word Bearers under Quor Gallek and the renegade vigilator Barthusa Narek hunt the convoy, wanting the body for rites of their own. Numeon's own death on the mountain proves to be the sacrifice that brings Vulkan back.",
+      "blurbSafe": "Many of Vulkan's sons still refuse to believe their primarch is truly dead. Led by Artellus Numeon, they set out to carry his body from Macragge home to Nocturne and the flames of Mount Deathfire, hunted across war-torn space while Numeon wrestles with his own doubts about what waits at the end of the journey.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Deathfire_(Novel)",
+        "https://warhammer40k.fandom.com/wiki/Deathfire_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Vulkan",
+        "https://warhammer40k.fandom.com/wiki/Artellus_Numeon"
+      ],
+      "confidence": "high",
+      "notes": "Real error corrected: the existing blurb calls it a quest 'to find Vulkan', but Vulkan's body is never lost. It is already in a stasis casket on Macragge and the book is about smuggling it home to Nocturne. Word Bearers (Quor Gallek, Barthusa Narek), Death Guard and Ultramarines added as featured factions from the dramatis personae. Numeon's death as the final sacrifice, and Vulkan's rebirth from the Unbound Flame, are confirmed on the Vulkan article. Timeline left at 010.M31: no source consulted gives a specific date for this novel, so it has not been changed."
+    },
+    {
+      "bookKey": "tallarn",
+      "verdict": "corrected",
+      "title": "TALLARN",
+      "author": "John French",
+      "type": "Anthology",
+      "legions": [
+        "Iron Warriors",
+        "Imperial Army",
+        "Alpha Legion",
+        "Iron Hands",
+        "Sons of Horus"
+      ],
+      "timeline": "010-011.M31",
+      "mainCharacters": [
+        "Perturabo",
+        "Tahirah",
+        "Kinor Argonis",
+        "Menoetius",
+        "Iaeo"
+      ],
+      "blurb": "A single collected volume gathering John French's whole Tallarn cycle. Perturabo virus-bombs the agri world of Tallarn, killing millions and entrenching the survivors underground, then lands to dig for the Cursus of Alganar, a buried blackstone artefact that is his real reason for coming. Because the poisoned air makes infantry work impossible, what follows is fought in tanks: some ten million armoured vehicles and more than a year of grinding attrition, waged largely by ordinary Imperial Army crews rather than Space Marines. The Iron Warriors are eventually driven off.",
+      "blurbSafe": "The Iron Warriors virus-bomb Tallarn from orbit and then land, and Perturabo has a purpose here he shares with almost nobody. With the poisoned surface making infantry work impossible, the fighting falls to tank crews, and the result is the largest armoured battle in Imperial history, ground out over more than a year across the dunes of a dead world.",
+      "changed": [
+        "type",
+        "timeline",
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Tallarn_(Anthology)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Tallarn",
+        "https://warhammer40k.fandom.com/wiki/Tallarn",
+        "https://wh40k.lexicanum.com/wiki/Tallarn:_Ironclad_(Novella)"
+      ],
+      "confidence": "high",
+      "notes": "Three real errors. (1) Scale: the existing blurb says 'billions of Imperial Guard tankers'. Sources give roughly ten million armoured vehicles committed and over a million wrecks left behind, and the M31 term is Imperial Army, not Imperial Guard (the Tallarn Desert Raiders regiments are only raised about twenty years later). (2) Timeline: both wikis date the Battle of Tallarn to 010-011.M31, not 010-012.M31. Range start is unchanged, so this does not move the sort position. (3) The 'ancient buried secret' is nameable: the Cursus of Alganar, also called the Black Oculus, a blackstone warp gateway. Format flagged: this is book 45 of the series but is formally a collected volume of one novel (Ironclad), one novella (Executioner) and two short stories (Siren, Witness), so type is set to Anthology rather than Novel. Change that back to Novel if the site groups it with the standalone novels. Alpha Legion, Iron Hands and Sons of Horus added as featured factions."
+    },
+    {
+      "bookKey": "praetorian-of-dorn",
+      "verdict": "corrected",
+      "title": "PRAETORIAN OF DORN",
+      "author": "John French",
+      "type": "Novel",
+      "legions": [
+        "Imperial Fists",
+        "Alpha Legion"
+      ],
+      "timeline": "010.M31",
+      "mainCharacters": [
+        "Archamus",
+        "Rogal Dorn",
+        "Alpharius",
+        "Kestros",
+        "Andromeda-17"
+      ],
+      "blurb": "Archamus, master of Dorn's Huscarls and last of the First, hunts Alpha Legion sleeper cells through the Solar System while Alpharius mounts the first attack on Sol since the war began. It is a war of deduction as much as firepower, and it leads to Pluto. There Alpharius impales Archamus, and Rogal Dorn deliberately steps into a killing blow to pin his brother in place long enough to cut him down with Storm's Teeth. With the Alpha Legion, of course, nothing is ever quite certain.",
+      "blurbSafe": "The Solar System comes under attack for the first time since the war began, and defences the Imperial Fists thought impregnable are proving anything but. While every eye is fixed on the threat beyond the gates, Archamus, master of Dorn's Huscarls, works inward, unpicking an infiltration that has been in place far longer than anyone realised.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Praetorian_of_Dorn_(Novel)",
+        "https://warhammer40k.fandom.com/wiki/Archamus",
+        "https://warhammer40k.fandom.com/wiki/Praetorian_of_Dorn"
+      ],
+      "confidence": "high",
+      "notes": "The existing blurb was substantially accurate and its central spoiler (Dorn kills Alpharius) is correct. One soft error fixed: it credits Rogal Dorn with running the counter-infiltration, when the protagonist and title character is Archamus, master of the Huscarls, who conducts the hunt with Sergeant Kestros and the Selenar psyker Andromeda-17 and dies at Pluto. The mechanics of the duel are also specific: Alpharius impales Archamus with the Pale Spear, Dorn takes a killing stroke on purpose to trap Alpharius and kills him with the chainsword Storm's Teeth. Existing blurb was also five sentences, over the length guide. Timeline left at 010.M31, no source consulted contradicts it."
+    },
+    {
+      "bookKey": "the-master-of-mankind",
+      "verdict": "corrected",
+      "title": "THE MASTER OF MANKIND",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Novel",
+      "legions": [
+        "Custodian Guard",
+        "Sisters of Silence",
+        "Mechanicum",
+        "Thousand Sons"
+      ],
+      "timeline": "011.M31",
+      "mainCharacters": [
+        "The Emperor",
+        "Ra Endymion",
+        "Diocletian Coros",
+        "Arkhan Land",
+        "Magnus the Red"
+      ],
+      "blurb": "Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway, defending humanity's future against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work, a human-controlled path through the Webway that would free humanity from warp travel. As the Emperor battles alongside the Custodians, the Sisters of Silence and Fabricator-General Kane's Mechanicum against endless daemon hordes, His dream of apotheosis for humanity crumbles. He cannot leave to face Horus, for if the Webway breach is not contained, Terra itself will fall to Chaos.",
+      "blurbSafe": "Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work, a human-controlled path that would free humanity from warp travel. As daemon hordes assault the breach, the Emperor cannot leave His post, even as Horus marches on Terra.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Master_of_Mankind_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/War_Within_the_Webway",
+        "https://wh40k.lexicanum.com/wiki/Ra_Endymion",
+        "https://warhammer40k.fandom.com/wiki/The_Master_of_Mankind_(Novel)"
+      ],
+      "confidence": "high",
+      "notes": "No factual errors found in the existing text, so it is carried through almost verbatim. Two light touches only: the two em dashes were replaced with commas for house style, and the Mechanicum of Fabricator-General Zagreus Kane was named, since the official Black Library synopsis lists it as the third loyalist force alongside the Custodians and Sisters of Silence. Mechanicum and Thousand Sons (Magnus appears in person and is banished) added to the faction list. Timeline left at 011.M31: the War Within the Webway as a whole spans 004-014.M31, and no source pins this novel to a single year. For reference, the outcome is an Imperial defeat: Calastar falls, the Emperor abandons the Webway Project and seals the portal, and binds the daemon Drach'nyen into Tribune Ra Endymion. That is deliberately not in the blurb, which stops where the existing text stopped."
+    },
+    {
+      "bookKey": "the-path-of-heaven",
+      "verdict": "corrected",
+      "title": "THE PATH OF HEAVEN",
+      "author": "Chris Wraight",
+      "type": "Novel",
+      "legions": [
+        "White Scars",
+        "Death Guard",
+        "Emperor's Children"
+      ],
+      "timeline": "011.M31",
+      "mainCharacters": [
+        "Jaghatai Khan",
+        "Targutai Yesugei",
+        "Shiban Khan",
+        "Torghun Khan",
+        "Eidolon",
+        "Revuel Arvida",
+        "Ilya Ravallion"
+      ],
+      "blurb": "Four years of attritional warfare against the Death Guard and the Emperor's Children have broken the V Legion's spirit, and the Khan's stormseers are hunting a road to Terra rather than a battle. They find it in the Dark Glass, an ancient webway station, and Eidolon's Emperor's Children come for them at Catallus. When a Navis Nobilite agent destroys the station, Targutai Yesugei binds himself to its command throne and burns his own life to force the portal open, sending the White Scars home.",
+      "blurbSafe": "Four years of grinding warfare against the Death Guard and the Emperor's Children have worn the White Scars down, and Jaghatai Khan's stormseers must find a clear route to Terra if the Legion is to reach the final battle at all. Riding with them are the Sagyar Mazan, once-traitors seeking redemption through death.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Path_of_Heaven_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Targutai_Yesugei",
+        "https://warhammer40k.fandom.com/wiki/The_Path_of_Heaven"
+      ],
+      "confidence": "high",
+      "notes": "Two real errors. (1) 'the Death Guard, now fully transformed by Nurgle's plague' is wrong for this point in the timeline. The Death Guard are not plague-ridden until the Destroyer Hive takes them in THE BURIED DAGGER, book 54, at 013.M31. (2) The Emperor's Children are co-equal antagonists with the Death Guard, named in the official Black Library synopsis and heavily represented in the dramatis personae through Eidolon, so they have been added to the faction list. Also reframed: the White Scars are not harrying the Death Guard to buy Terra time, they are being ground down and are searching for a route home. The climax is the Dark Glass webway station at the Battle of Catallus, where Yesugei sacrifices himself to open the portal. Sagyar Mazan detail in the existing text is correct and has been kept in the spoiler-free version."
+    },
+    {
+      "bookKey": "angels-of-caliban",
+      "verdict": "corrected",
+      "title": "ANGELS OF CALIBAN",
+      "author": "Gav Thorpe",
+      "type": "Novel",
+      "legions": [
+        "Dark Angels",
+        "Night Lords",
+        "Ultramarines",
+        "Blood Angels"
+      ],
+      "timeline": "011.M31",
+      "mainCharacters": [
+        "Lion El'Jonson",
+        "Konrad Curze",
+        "Luther",
+        "Zahariel",
+        "Roboute Guilliman",
+        "Sanguinius"
+      ],
+      "blurb": "As Lord Protector of Ultramar, the Lion hunts Konrad Curze across the worlds of Imperium Secundus, and his methods are brutal enough to push the Triumvirate to the brink of civil war. He runs Curze down at last and breaks his spine rather than kill him. At the public trial that follows, Guilliman snaps the Lion's sword and Sanguinius banishes him, ending the Triumvirate. Far away on Caliban, Luther and Zahariel bend the Legion's homeworld to their own purpose, and the Lion resolves to go back.",
+      "blurbSafe": "The Lion stands as Lord Protector of Ultramar, hunting the Night Haunter across the worlds of Imperium Secundus by means his brother primarchs find hard to stomach. Old rivalries back on Caliban threaten to tear the Dark Angels in half, and not even the Dreadwing can guarantee the Lion victory if he sets himself against his loyal brothers.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Angels_of_Caliban_(Novel)",
+        "https://warhammer40k.fandom.com/wiki/Angels_of_Caliban"
+      ],
+      "confidence": "high",
+      "notes": "Real errors. The existing blurb says the Lion 'pursues the Night Lords through the Ruinstorm'. He does not: he hunts Konrad Curze personally, inside Ultramar and Imperium Secundus, and the Legion-level Night Lords war (the Thramas Crusade) is already over. The existing blurb also ends on 'the devastating realization that the Dark Angels' homeworld has turned traitor, and half the Legion has fallen with it', which overstates what happens here. Caliban's open fall comes later. In this book Luther and Zahariel consolidate control, Zahariel kills Lord Cypher and takes the title, and the Lion merely resolves to return home. Guilliman and Sanguinius are major on-page characters and have been added as factions. Lexicanum dates the main narrative 'At Ultramar in the year 11.M31', confirming the existing timeline."
+    },
+    {
+      "bookKey": "old-earth",
+      "verdict": "corrected",
+      "title": "OLD EARTH",
+      "author": "Nick Kyme",
+      "type": "Novel",
+      "legions": [
+        "Salamanders",
+        "Iron Hands",
+        "Raven Guard",
+        "Word Bearers",
+        "Imperial Fists"
+      ],
+      "timeline": "011.M31",
+      "mainCharacters": [
+        "Vulkan",
+        "Shadrak Meduson",
+        "John Grammaticus",
+        "Eldrad Ulthran",
+        "Barthusa Narek",
+        "Rogal Dorn"
+      ],
+      "blurb": "Reborn beneath Mount Deathfire with almost no memory of why, Vulkan takes three legionaries as his Draaksward and walks the webway towards Terra. On the way he fights through a fringe realm of Commorragh, finds Shadrak Meduson's Shattered Legions tearing themselves apart over a fraudulent resurrected Ferrus Manus, and kills a Great Unclean One at Calastar. Eldrad Ulthran delivers him to the Imperial Palace, where the Emperor reveals that the talisman Vulkan forged is a dead man's switch, built to destroy Terra rather than let Horus have it.",
+      "blurbSafe": "Reborn beneath Mount Deathfire and haunted by a sense of destiny he cannot yet name, Vulkan gathers a handful of trusted sons and sets out on the last stage of his journey. The road runs past the feuding remnants of the legions shattered at Isstvan V, where rumours of Ferrus Manus's return are spreading, and Vulkan must choose between their war of vengeance and a path of his own.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Old_Earth_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Vulkan",
+        "https://warhammer40k.fandom.com/wiki/Old_Earth_(Novel)"
+      ],
+      "confidence": "high",
+      "notes": "Two real errors. (1) 'Reunited with his Legion, Vulkan prepares for the final defense of Terra' is wrong. Vulkan travels with just three legionaries, the Draaksward (Abidemi, Zytos and Gargo), refuses to join the Shattered Legions' war, and reaches Terra with only them. (2) 'He brings with him a weapon designed for use against the Traitor forces' inverts the point. The Talisman of Seven Hammers is a doomsday device, a dead man's switch the Emperor intends Vulkan to trigger to consume Terra if Horus wins. Vulkan installs it in the Golden Throne and takes station at the Eternity Gate. Iron Hands, Raven Guard, Word Bearers and Imperial Fists added as featured factions from the dramatis personae. Timeline left at 011.M31, unverified but uncontradicted."
+    },
+    {
+      "bookKey": "ruinstorm",
+      "verdict": "corrected",
+      "title": "RUINSTORM",
+      "author": "David Annandale",
+      "type": "Novel",
+      "legions": [
+        "Ultramarines",
+        "Dark Angels",
+        "Blood Angels",
+        "Word Bearers"
+      ],
+      "timeline": "011.M31",
+      "mainCharacters": [
+        "Sanguinius",
+        "Roboute Guilliman",
+        "Lion El'Jonson",
+        "Konrad Curze",
+        "Madail"
+      ],
+      "blurb": "Imperium Secundus stands revealed as a heretical folly, and Guilliman, the Lion and Sanguinius take their Legions into the Ruinstorm, steering by captured traitor Navigators and dragging the chained Konrad Curze along. A vision sends Sanguinius to Davin, the world where Horus fell, and there the daemon Madail offers him the Warmaster's place. He refuses, the Sanguinor takes his place in the portal, and Davin is destroyed. The storm thins, and the three primarchs part ways for Terra.",
+      "blurbSafe": "Imperium Secundus is finished, Terra still stands, and Sanguinius, Guilliman and the Lion mean to reach it whatever the cost. The Ruinstorm hides the Throneworld from them, and something inside the storm is watching every move and working patiently on each primarch's private weakness.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Ruinstorm_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Second_Battle_of_Davin",
+        "https://warhammer40k.fandom.com/wiki/Ruinstorm_(Novel)"
+      ],
+      "confidence": "high",
+      "notes": "Real error corrected. The existing blurb says the storm is 'powered by daemonic engines at Davin and other key locations' and that the primarchs 'must split up, each taking a separate path to destroy these focal points'. Neither is right. They travel together the whole way, guided first by Tuchulcha and then by corrupted Navigators taken at Anuari, and the climax is a single location, Davin, where Sanguinius duels the daemon Madail. The destruction of Davin by cyclonic torpedoes is what weakens the Ruinstorm. They only separate at the very end, with Guilliman and the Lion drawing off Horus's blockade so the Blood Angels can run for Terra. Word Bearers added as a featured faction. Second Battle of Davin is dated ~011.M31, confirming the existing timeline."
+    },
+    {
+      "bookKey": "wolfsbane",
+      "verdict": "corrected",
+      "title": "WOLFSBANE",
+      "author": "Guy Haley",
+      "type": "Novel",
+      "legions": [
+        "Space Wolves",
+        "Sons of Horus",
+        "Mechanicum"
+      ],
+      "timeline": "012.M31",
+      "mainCharacters": [
+        "Leman Russ",
+        "Bjorn",
+        "Belisarius Cawl",
+        "Horus Lupercal",
+        "Kva"
+      ],
+      "blurb": "Russ withdraws the Space Wolves from Terra over his brothers' objections, having learned in the Underverse beneath Fenris that the Spear of Russ, which holds a fragment of the Emperor's power, can wound Horus even though it cannot kill him. The Wolves ambush the Vengeful Spirit over Trisolian. Russ lets himself be wounded to open a gap and drives the spear home, burning away the corruption Horus has carried since Molech, but he hesitates at the last instant. The beating that follows leaves him comatose and his fleet shattered.",
+      "blurbSafe": "The time has come for Leman Russ to make good on his vow and try to stop the Warmaster before he breaks through to the Segmentum Solar. Against the opposition of three of his brothers he takes his Legion from Terra, carrying one weapon that might touch a being no mortal blade can harm.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Wolfsbane_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Leman_Russ_(Primarch)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Trisolian",
+        "https://www.trackofwords.com/2018/05/10/rapid-fire-guy-haley-talks-wolfsbane/"
+      ],
+      "confidence": "high",
+      "notes": "Two real errors, one of them an invented name. (1) The weapon is the Spear of Russ, not 'Gungnir'. A full-text search of the Warhammer 40k Fandom wiki for 'Gungnir' returns nothing, and Lexicanum names the Spear of Russ throughout: it was awarded to Russ after the Wheel of Fire Campaign and holds a portion of the Emperor's power, illuminating the truth to whatever it pierces. It was not 'forged by the Emperor Himself to wound a Primarch empowered by Chaos'. (2) 'The Chaos Gods restore their champion' does not happen here, it happens in SLAVES TO DARKNESS. What the spear actually does is strip the Molech-derived power out of Horus, which is why he is left near death in book 51. The confrontation is aboard the Vengeful Spirit over Trisolian A4, dated 012.M31, confirming the existing timeline. Belisarius Cawl gets his Heresy debut here, confirmed by Guy Haley in the Track of Words interview and by Lexicanum's dramatis personae. Mechanicum added as a faction."
+    },
+    {
+      "bookKey": "titandeath",
+      "verdict": "corrected",
+      "title": "TITANDEATH",
+      "author": "Guy Haley",
+      "type": "Novel",
+      "legions": [
+        "Collegia Titanica",
+        "Imperial Army",
+        "Blood Angels",
+        "White Scars",
+        "Sons of Horus"
+      ],
+      "timeline": "012-013.M31",
+      "mainCharacters": [
+        "Esha Ani Mohana",
+        "Abhani Lus Mohana",
+        "Mohana Mankata Vi",
+        "Terent Harrtek",
+        "Sanguinius",
+        "Jaghatai Khan"
+      ],
+      "blurb": "Beta-Garmon is the only viable road left to the Solar System, so Dorn commits most of his non-Astartes strength and a vast mustering of Titans to hold it, fearing what god-machine warfare would do to Terra itself. The book follows the all-female Legio Solaria, and princeps Esha Ani Mohana in particular, through the slaughter on Beta-Garmon III against Terent Harrtek's Legio Vulpa. Sanguinius and the Khan arrive late and take the loyalist war effort in hand. The Great Mother of the Solaria is killed, and Beta-Garmon falls to Horus.",
+      "blurbSafe": "Beta-Garmon is the most direct and only viable route to the Solar System, and both sides commit Titans in numbers never seen before or since. Among the loyalist god-machines are the Imperial Hunters of Legio Solaria, whose princeps are drawn from a single genetic line and who carry an old grudge against the traitor Legio Vulpa.",
+      "changed": [
+        "legions",
+        "timeline",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Titandeath_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Beta-Garmon",
+        "https://warhammer40k.fandom.com/wiki/Titandeath_(Novel)"
+      ],
+      "confidence": "medium",
+      "notes": "Corrections. (1) Outcome: the existing text says the loyalists 'eventually retreat' having bloodied the traitors. The recorded outcome of Beta-Garmon is a traitor victory, and Mohana Mankata VI, Great Mother of the Legio Solaria, is listed as killed in action. (2) Timeline extended to 012-013.M31. Lexicanum dates the second phase of Beta-Garmon, which is what this novel covers, to 012-013.M31, and puts the arrival of Sanguinius and Jaghatai Khan (both in the novel's dramatis personae) at 084013.M31. The range start is still 012, so the sort position does not move. Confidence is medium on the timeline only, because the novel is not itself dated. (3) Factions: the existing list of Collegia Titanica alone is too narrow. Fasadian Imperial Army infantry, Sanguinius with the Blood Angels, Jaghatai Khan with the White Scars, and Horus's own Sons of Horus armada all feature. Knights of House Procon Vi and Word Bearers attached to Legio Vulpa also appear but have been left off to keep the filter usable."
+    },
+    {
+      "bookKey": "slaves-to-darkness",
+      "verdict": "corrected",
+      "title": "SLAVES TO DARKNESS",
+      "author": "John French",
+      "type": "Novel",
+      "legions": [
+        "Sons of Horus",
+        "All Traitor Legions"
+      ],
+      "timeline": "013.M31",
+      "mainCharacters": [
+        "Horus Lupercal",
+        "Maloghurst",
+        "Lorgar",
+        "Perturabo",
+        "Fulgrim",
+        "Angron",
+        "Mortarion"
+      ],
+      "blurb": "Horus lies close to death from the Spear of Russ, which tore away the power that had been carrying him, and the traitor alliance starts to come apart. Lorgar and Perturabo must marshal Fulgrim and Angron, now daemon primarchs answerable to nobody, while Mortarion is sent ahead as vanguard. It falls to Maloghurst to hold the fractious Legion together. He finally walks into the immaterium himself, spending his life to persuade the last resisting fragment of Horus's soul to take the rebellion up again.",
+      "blurbSafe": "With Guilliman and the Lion returning at speed, the traitors have very little time left in which to strike at Terra, and the Warmaster's scattered hosts must be united before they can move. Horus lies wounded, Fulgrim and Angron have become things beyond anyone's command, and it falls to Maloghurst to hold the Sons of Horus together.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Slaves_to_Darkness_(Novel)",
+        "https://warhammer40k.fandom.com/wiki/Maloghurst",
+        "https://warhammer40k.fandom.com/wiki/Slaves_to_Darkness_(Novel)"
+      ],
+      "confidence": "high",
+      "notes": "Real error corrected. The existing blurb explains Horus's recovery as him purging the last of his humanity and the Chaos Gods restoring him: 'He purges the last remnants of his humanity, embracing full damnation... The Gods restore their champion, now more monster than man.' That is not what happens. Horus is wounded because the Spear of Russ stripped his Molech-derived power, and a fragment of his soul is holding out in the warp against enslavement. Maloghurst enters the immaterium by sorcery and gives his own life to convince that fragment to continue the rebellion and begin the Siege. Maloghurst is the character the Black Library synopsis itself foregrounds, and he was missing from the existing text entirely. Also added: Mortarion being sent ahead as vanguard, which is the direct hook into THE BURIED DAGGER. Faction list left as-is; the dramatis personae genuinely does cover all eight traitor Legions, so 'All Traitor Legions' is fair."
+    },
+    {
+      "bookKey": "the-buried-dagger",
+      "verdict": "corrected",
+      "title": "THE BURIED DAGGER",
+      "author": "James Swallow",
+      "type": "Novel",
+      "legions": [
+        "Death Guard",
+        "Knights-Errant"
+      ],
+      "timeline": "013.M31",
+      "mainCharacters": [
+        "Mortarion",
+        "Calas Typhon",
+        "Nathaniel Garro",
+        "Malcador the Sigillite",
+        "Garviel Loken",
+        "Tylos Rubio"
+      ],
+      "blurb": "Calas Typhon has the fleet's Navigators executed and steers the Death Guard into the warp himself, where the Destroyer Hive leaves the Legion bloated, rotting and unable to die. Mortarion, who swore never to serve a tyrant again, cuts Typhon down twice and it changes nothing. Broken at last, he hears Nurgle's offer and takes it. On Terra, Malcador's Knights-Errant break a plague cult at White Mountain, and the survivors become the Nine Who Are Named, seed of the Grey Knights.",
+      "blurbSafe": "Sent ahead as the Warmaster's vanguard, Mortarion's fleet becomes lost in the warp and a terrible sickness takes hold of the supposedly unbreakable Death Guard. Meanwhile, in the cloisters of Holy Terra, Malcador the Sigillite uncovers a plot meant to sow sedition and carnage ahead of Horus's armies, and turns to his Knights-Errant to stop it.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Buried_Dagger_(Novel)",
+        "https://wh40k.lexicanum.com/wiki/Mortarion",
+        "https://wh40k.lexicanum.com/wiki/Knights-Errant",
+        "https://warhammer40k.fandom.com/wiki/The_Buried_Dagger_(Novel)"
+      ],
+      "confidence": "high",
+      "notes": "The existing blurb was close but got the central horror backwards: 'Mortarion... watches his sons die in agony'. The point of the Destroyer Hive is that the Death Guard cannot die. They are made bloated and immortal and suffering, which is precisely why Mortarion has no way out. Also missing entirely was Calas Typhon, who engineers the whole thing by having the Navigators executed and steering the fleet himself, and who survives being killed twice. The Terra thread is more specific than 'Malcador continues forging the foundations': the Knights-Errant fight a Nurgle cult under the Lord of the Flies at White Mountain, Tylos Rubio is used as Erebus's unwitting assassin against Malcador, and the survivors are renamed the Nine Who Are Named and taken to Titan, becoming the forerunners of the Grey Knights. Loken and Garro are not among them. Knights-Errant added as a faction. Timeline left at 013.M31, uncontradicted."
+    }
+  ]
+}

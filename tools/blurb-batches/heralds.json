@@ -1,0 +1,249 @@
+{
+ "batch": "heralds",
+ "anthologies": [
+  "Heralds of the Siege"
+ ],
+ "count": 16,
+ "entries": [
+  {
+   "bookKey": "heralds-myriad",
+   "number": "LII.1",
+   "title": "MYRIAD",
+   "author": "Rob Sanders",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Alpha Legion"
+   ],
+   "currentBlurb": "The Alpha Legion's myriad schemes converge as the Siege approaches.",
+   "currentBlurbSafe": "The XX Legion's countless operations reach critical junctures."
+  },
+  {
+   "bookKey": "heralds-grey-raven",
+   "number": "LII.2",
+   "title": "THE GREY RAVEN",
+   "author": "Gav Thorpe",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Raven Guard"
+   ],
+   "currentBlurb": "A Raven Guard warrior fights in the shadows before the Siege.",
+   "currentBlurbSafe": "The XIX Legion strikes from darkness in the war's final days."
+  },
+  {
+   "bookKey": "heralds-valerius",
+   "number": "LII.3",
+   "title": "VALERIUS",
+   "author": "Gav Thorpe",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "A warrior named Valerius faces his destiny as the Siege looms.",
+   "currentBlurbSafe": "One man's courage is tested in the war's final moments."
+  },
+  {
+   "bookKey": "heralds-ember-wolves",
+   "number": "LII.4",
+   "title": "THE EMBER WOLVES",
+   "author": "Rob Sanders",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Space Wolves"
+   ],
+   "currentBlurb": "Space Wolves burn with fury as they race toward Terra.",
+   "currentBlurbSafe": "The VI Legion's wrath drives them toward the Throneworld."
+  },
+  {
+   "bookKey": "heralds-blackshield",
+   "number": "LII.5",
+   "title": "BLACKSHIELD",
+   "author": "Chris Wraight",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Blackshields"
+   ],
+   "currentBlurb": "A warrior without allegiance fights his own war before the Siege.",
+   "currentBlurbSafe": "Blackshield Space Marines wage their own battles in the Heresy's final days."
+  },
+  {
+   "bookKey": "heralds-children-sicarus",
+   "number": "LII.6",
+   "title": "CHILDREN OF SICARUS",
+   "author": "Anthony Reynolds",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Word Bearers"
+   ],
+   "currentBlurb": "Word Bearers from Sicarus march toward Terra to see their dark vision fulfilled.",
+   "currentBlurbSafe": "The XVII Legion advances on the Throneworld with dark purpose."
+  },
+  {
+   "bookKey": "heralds-exocytosis",
+   "number": "LII.7",
+   "title": "EXOCYTOSIS",
+   "author": "James Swallow",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Death Guard"
+   ],
+   "currentBlurb": "The Death Guard's corruption reaches horrific new depths.",
+   "currentBlurbSafe": "Nurgle's gifts transform the XIV Legion into plague-bearers."
+  },
+  {
+   "bookKey": "heralds-painted-count",
+   "number": "LII.8",
+   "title": "THE PAINTED COUNT",
+   "author": "Guy Haley",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Blood Angels"
+   ],
+   "currentBlurb": "A Blood Angels noble fights to maintain his Legion's honor.",
+   "currentBlurbSafe": "The IX Legion struggles with their nature as the Siege approaches."
+  },
+  {
+   "bookKey": "heralds-last-son-prospero",
+   "number": "LII.9",
+   "title": "THE LAST SON OF PROSPERO",
+   "author": "Chris Wraight",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Thousand Sons"
+   ],
+   "currentBlurb": "The last loyal son of Prospero fights for redemption before Terra burns.",
+   "currentBlurbSafe": "A Thousand Sons warrior seeks to atone for his Legion's fall."
+  },
+  {
+   "bookKey": "heralds-soul-severed",
+   "number": "LII.10",
+   "title": "THE SOUL, SEVERED",
+   "author": "Chris Wraight",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Souls are severed from bodies as the warp's influence grows.",
+   "currentBlurbSafe": "Reality frays at the edges as Chaos power intensifies."
+  },
+  {
+   "bookKey": "heralds-dark-compliance",
+   "number": "LII.11",
+   "title": "DARK COMPLIANCE",
+   "author": "John French",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Audio Drama",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Worlds are brought to dark compliance by the traitor forces.",
+   "currentBlurbSafe": "The traitors force worlds to submit through terror and corruption."
+  },
+  {
+   "bookKey": "heralds-duty-waits",
+   "number": "LII.12",
+   "title": "DUTY WAITS",
+   "author": "Guy Haley",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Imperial Fists"
+   ],
+   "currentBlurb": "Imperial Fists stand ready on Terra, knowing their duty awaits.",
+   "currentBlurbSafe": "The VII Legion prepares to defend humanity's cradle."
+  },
+  {
+   "bookKey": "heralds-magisterium",
+   "number": "LII.13",
+   "title": "MAGISTERIUM",
+   "author": "Chris Wraight",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Custodian Guard"
+   ],
+   "currentBlurb": "The Custodians prepare for the defense of the Emperor himself.",
+   "currentBlurbSafe": "The Emperor's golden guardians ready themselves for the ultimate battle."
+  },
+  {
+   "bookKey": "heralds-now-peals-midnight",
+   "number": "LII.14",
+   "title": "NOW PEALS MIDNIGHT",
+   "author": "John French",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Midnight arrives as the traitor fleet emerges at Terra. The Siege begins.",
+   "currentBlurbSafe": "The darkest hour strikes as Horus's forces arrive at the Throneworld."
+  },
+  {
+   "bookKey": "heralds-dreams-unity",
+   "number": "LII.15",
+   "title": "DREAMS OF UNITY",
+   "author": "Nick Kyme",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "Dreams of unity die as the Heresy reaches its terrible climax.",
+   "currentBlurbSafe": "The Emperor's dream shatters as war comes to Terra."
+  },
+  {
+   "bookKey": "heralds-board-is-set",
+   "number": "LII.16",
+   "title": "THE BOARD IS SET",
+   "author": "Gav Thorpe",
+   "anthology": "Heralds of the Siege",
+   "series": null,
+   "currentType": "Short Story",
+   "currentTimeline": "012-013.M31",
+   "currentLegions": [
+    "Various"
+   ],
+   "currentBlurb": "The Emperor and Malcador play a final game as the pieces move into place. The board is set, the Siege begins, and the fate of humanity hangs in the balance.",
+   "currentBlurbSafe": "The Emperor and Malcador reflect on the coming battle as the traitors arrive. The endgame begins."
+  }
+ ]
+}

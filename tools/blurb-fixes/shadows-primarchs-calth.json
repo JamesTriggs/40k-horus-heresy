@@ -1,0 +1,592 @@
+{
+  "batch": "shadows-primarchs-calth",
+  "entries": [
+    {
+      "bookKey": "mark-of-calth-athame",
+      "verdict": "corrected",
+      "title": "ATHAME",
+      "author": "John French",
+      "type": "Short Story",
+      "legions": [
+        "Word Bearers",
+        "Perpetuals"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Gog",
+        "Magritte",
+        "Anacreon",
+        "Criol Fowst",
+        "Oll Persson"
+      ],
+      "blurb": "An unnamed narrator addresses the blade itself, tracing a flint knife from the dying man who knapped it on ancient Terra to the deathless killer Gog, the Cognitae scholar Magritte and the Word Bearer Anacreon. Every owner kills with it and is killed in turn. The chain ends on Calth, where the cultist Criol Fowst dies and the Perpetual Oll Persson takes the blade to cut his way into the warp.",
+      "blurbSafe": "A disembodied narrator speaks directly to an object, recounting the succession of hands that carried it across thousands of years, from pre-Imperial Terra through the archaeology of the early Great Crusade and on into the Word Bearers Legion. The chain of owners finally reaches Calth.",
+      "changed": [
+        "timeline",
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Athame_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Mark_of_Calth_(Anthology)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "high",
+      "notes": "Lexicanum carries a full scene-by-scene plot summary. The framing device is a narrator speaking to the dagger, confirmed independently by the Wordaholic Anonymous review ('a disjointed voice speaking to a blade'). The manifest date of 800.M30 is arbitrary: the story runs from pre-Imperial Terra through the early Great Crusade to Calth, and the site's NNN.MNN format cannot express that span, so it is anchored at its terminal point, the Battle of Calth in 007.M31 (Lexicanum, Battle of Calth). Legions changed from 'Various' to the two factions that actually carry the story, the Word Bearers (Anacreon, Arune Xen, Criol Fowst) and the Perpetuals (Oll Persson). The manifest blurb was not so much wrong as empty; it named no characters and no events."
+    },
+    {
+      "bookKey": "shadows-of-treachery-dark-king",
+      "verdict": "corrected",
+      "title": "THE DARK KING",
+      "author": "Graham McNeill",
+      "type": "Short Story",
+      "legions": [
+        "Night Lords",
+        "Imperial Fists"
+      ],
+      "timeline": "984.M30",
+      "mainCharacters": [
+        "Konrad Curze",
+        "Rogal Dorn",
+        "Sigismund",
+        "Shang"
+      ],
+      "blurb": "Konrad Curze beats Rogal Dorn almost to death in front of Sigismund and is imprisoned aboard a void ship, brooding on the compliance of Osmium, the massacres on Cheraut and the visions that Fulgrim betrayed to Dorn. His equerry Shang brings word that Nostramo has slid back into corruption. Curze butchers his guards, drops the pretence of being a dutiful son and has his fleet destroy the planet as the Imperial Fists arrive.",
+      "blurbSafe": "Konrad Curze's methods in the Great Crusade have set him at odds with Rogal Dorn, and the prophetic visions that torment him are becoming impossible to hide from his brothers. Then word arrives from Nostramo, the sunless world he once ruled as its monarch.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Dark_King_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Chapbook_(Anthology)",
+        "https://wh40k.lexicanum.com/wiki/Shadows_of_Treachery"
+      ],
+      "confidence": "high",
+      "notes": "Confirmed: this is Curze and Nostramo. Format confirmed as a print short story, first published in the 2007 Games Day Horus Heresy Chapbook alongside The Lightning Tower and later collected in Shadows of Treachery; the Black Library audio release is a narration of the same short story, not an original audio drama, so 'Short Story' stands. Legions corrected: the Imperial Fists are central (Dorn, Sigismund, and the VII fleet that arrives over Nostramo), and Fulgrim's Phoenix Guard also feature. The manifest blurb was pure mood with no events; it never mentions Dorn, the assault or the destruction of Nostramo, which is the point of the story. Timeline of 984.M30 left unchanged: no source consulted gives a firm date for the destruction of Nostramo, and Lexicanum's Nostramo article carries none."
+    },
+    {
+      "bookKey": "shadows-of-treachery-death-of-silversmith",
+      "verdict": "corrected",
+      "title": "DEATH OF A SILVERSMITH",
+      "author": "Graham McNeill",
+      "type": "Short Story",
+      "legions": [
+        "Luna Wolves",
+        "Remembrancers"
+      ],
+      "timeline": "002.M31",
+      "mainCharacters": [
+        "The Silversmith",
+        "Hastur Sejanus"
+      ],
+      "blurb": "A remembrancer lies dying on the floor of his workshop aboard the Vengeful Spirit, recalling the career that took him from the Sahyadri foothills to Horus's 63rd Expeditionary Fleet. He made four silver moon-phase rings for Hastur Sejanus and the Mournival, then a cruder mould of wolf medallions for a second Luna Wolves captain, who inspected the work, called it perfect and crushed his throat. Asked who did it, he can only repeat his killer's answer.",
+      "blurbSafe": "A silversmith swept up into the newly founded Order of Remembrancers looks back over the commissions of his life, from the piece that first brought him to the Imperium's attention to the delicate work he has been doing for the Luna Wolves aboard the Warmaster's flagship.",
+      "changed": [
+        "timeline",
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Death_of_a_Silversmith_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Shadows_of_Treachery"
+      ],
+      "confidence": "medium",
+      "notes": "The manifest blurb was invented from the title: it offers a general lament about war destroying art and gets the setting wrong. The story is a first-person deathbed monologue by an unnamed remembrancer silversmith aboard the Vengeful Spirit, murdered by an unnamed Luna Wolves captain who had commissioned a mould for wolf medallions. Legions changed from 'Various' to Luna Wolves and Remembrancers, both values already in use elsewhere on the site. Timeline moved from 000.M31 to 002.M31: the story is set after the Ullanor Triumph and the founding of the remembrancer order but while Hastur Sejanus is still alive, so immediately before the opening of Horus Rising, which the site dates 002-003.M31. Medium confidence applies to the date only."
+    },
+    {
+      "bookKey": "the-primarchs-feat-of-iron",
+      "verdict": "corrected",
+      "title": "FEAT OF IRON",
+      "author": "Nick Kyme",
+      "type": "Novella",
+      "legions": [
+        "Iron Hands",
+        "Salamanders",
+        "Death Guard",
+        "Imperial Army"
+      ],
+      "timeline": "001.M31",
+      "mainCharacters": [
+        "Ferrus Manus",
+        "Gabriel Santar",
+        "Bion Henricos",
+        "Shadrak Meduson"
+      ],
+      "blurb": "At the height of the Great Crusade, Ferrus Manus drives the Iron Hands through the deserts of One-Five-Four Four while Vulkan and Mortarion fight elsewhere on the same world. Eldar farseers turn the Legion's bionics against them and pull the Gorgon into a psychic labyrinth, meaning to warn him of the Heresy and his own death. He refuses to listen. Above ground, Sergeant Bion Henricos strikes off his iron hand and leads unaugmented Imperial Army troops to break the enemy.",
+      "blurbSafe": "Ferrus Manus is running behind schedule on a hostile desert world, campaigning alongside Vulkan and Mortarion and increasingly convinced that Eldar witchcraft is to blame for his Legion's poor showing. When the enemy turns the Iron Hands' own augmetics against them, the Gorgon's creed is put on trial.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Feat_of_Iron_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/One-Five-Four_Four",
+        "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
+      ],
+      "confidence": "medium",
+      "notes": "The manifest blurb was a generic character sketch of Ferrus Manus with no plot in it, and wrongly implied a story about Fulgrim and Isstvan V. The actual story is a Great Crusade campaign on One-Five-Four Four (later Caldera) against the Eldar, who abduct Ferrus Manus into a psychic labyrinth to try to divert him from his fate; the human counterpoint is Bion Henricos and the founding of the Chainveil. Legions expanded: the Salamanders and Death Guard are on-world in the same campaign per the Black Library story description, and the Imperial Army auxiliaries are central to the resolution. The Eldar are the antagonists, but the site has no existing Eldar or Aeldari faction tag, so they are described in the blurb rather than added as a new tag. Timeline left at 001.M31 but flagged: no source consulted gives a year for the One-Five-Four Four campaign, only that it is mid-Great Crusade, so the existing value is unverified rather than known-wrong."
+    },
+    {
+      "bookKey": "shadows-of-treachery-kaban-project",
+      "verdict": "corrected",
+      "title": "THE KABAN PROJECT",
+      "author": "Graham McNeill",
+      "type": "Short Story",
+      "legions": [
+        "Mechanicum"
+      ],
+      "timeline": "003-004.M31",
+      "mainCharacters": [
+        "Pallas Ravachol",
+        "Lukas Chrom",
+        "Remiare",
+        "Urtzi Malevolus"
+      ],
+      "blurb": "Adept Third Class Pallas Ravachol works out that the war machine his master Lukas Chrom is building in a Martian forge is genuinely sentient, an abominable intelligence commissioned by Horus. When Chrom's Protectors come to arrest him the machine kills them on his behalf, and Ravachol runs, hunted across Mars by the assassin Remiare. The sanctuary he finally reaches belongs to another of the discontents, and the Kaban machine finishes what Chrom began.",
+      "blurbSafe": "A junior Mechanicum adept realises that the secret weapon he has been servicing in Master Adept Lukas Chrom's forge is thinking for itself, in flat defiance of the Emperor's ban on artificial intelligence. Raising the alarm turns him into a fugitive on his own world.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Kaban_Project_(Short_Story)",
+        "https://www.trackofwords.com/2015/02/23/the-kaban-project-graham-mcneill/"
+      ],
+      "confidence": "high",
+      "notes": "Confirmed as Mechanicum, so that faction tag was already right. The blurb was wrong on substance: it describes the story as set during the Mechanicum's civil war, which it predates, and names no protagonist. The story follows Adept Third Class Pallas Ravachol, the machine is a commission from Horus, and Urtzi Malevolus is separately building the Warmaster's Terminator armour. Timeline of 003-004.M31 left unchanged; sources place it in the early stages of the Heresy and before the events of the novel Mechanicum, but give no year."
+    },
+    {
+      "bookKey": "shadows-of-treachery-lightning-tower",
+      "verdict": "corrected",
+      "title": "THE LIGHTNING TOWER",
+      "author": "Dan Abnett",
+      "type": "Short Story",
+      "legions": [
+        "Imperial Fists"
+      ],
+      "timeline": "005-006.M31",
+      "mainCharacters": [
+        "Rogal Dorn",
+        "Malcador the Sigillite",
+        "Archamus"
+      ],
+      "blurb": "With Horus's betrayal known on Terra, Rogal Dorn is stripping the beauty out of the Imperial Palace and rebuilding it as a fortress, insisting the ornament be crated up for a restoration he may never see. His huscarl Archamus asks him what he is afraid of. Malcador the Sigillite puts the same question in the Investiary, then produces Konrad Curze's tarot deck and draws out the story of the brothers' fight on Cheraut.",
+      "blurbSafe": "As the Imperial Palace is disfigured into a fortress, Rogal Dorn is twice asked a question he cannot easily answer: what is he afraid of? A quiet evening with Malcador the Sigillite turns into a gentle interrogation of the Praetorian of Terra.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Lightning_Tower_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Horus_Heresy_Chapbook_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Confirmed: Dorn and Malcador on Terra. Legions corrected from 'Imperial Palace', which is a location rather than a faction, to Imperial Fists. Format confirmed as a print short story, first published in the 2007 Games Day Horus Heresy Chapbook; the Black Library audio release is a narration of it. The manifest blurb described siege preparation only and missed the substance of the piece, which is the repeated question 'what are you afraid of' and the Lightning Tower card from Curze's deck."
+    },
+    {
+      "bookKey": "the-primarchs-reflection-crackd",
+      "verdict": "corrected",
+      "title": "THE REFLECTION CRACK'D",
+      "author": "Graham McNeill",
+      "type": "Novella",
+      "legions": [
+        "Emperor's Children"
+      ],
+      "timeline": "006.M31",
+      "mainCharacters": [
+        "Lucius",
+        "Fulgrim",
+        "Julius Kaesoron",
+        "Fabius",
+        "Marius Vairosean",
+        "Eidolon"
+      ],
+      "blurb": "After the Drop Site Massacre, Lucius decides that the Fulgrim leading the Emperor's Children is an impostor and talks Julius Kaesoron, Fabius and Marius Vairosean into seizing their primarch and torturing the daemon out of him. Fulgrim submits to all of it, then rises from the rack unharmed. He had already forced the possessing daemon into the portrait hanging in La Fenice, and the whole episode was a lesson for his favoured sons.",
+      "blurbSafe": "The Emperor's Children are sliding into excess and their primarch's behaviour has grown erratic and capricious. Lucius, of all people, is the first to work out that something about Fulgrim does not add up, and persuading the Brotherhood of the Phoenix to act on that suspicion is dangerous work.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Reflection_Crack'd_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "The manifest blurb had the story backwards. It claims the daemon claims full control and that Fulgrim becomes a Daemon Prince of Slaanesh; in fact Fulgrim has already reversed the possession and trapped the daemon in the painting, and his daemonhood comes much later in the series. Faction and type were already correct. The viewpoint character is Lucius, not Fulgrim."
+    },
+    {
+      "bookKey": "shadows-of-treachery-ravens-flight",
+      "verdict": "corrected",
+      "title": "RAVEN'S FLIGHT",
+      "author": "Gav Thorpe",
+      "type": "Audio Drama",
+      "legions": [
+        "Raven Guard",
+        "Iron Warriors",
+        "World Eaters",
+        "Imperial Army"
+      ],
+      "timeline": "006.M31",
+      "mainCharacters": [
+        "Corvus Corax",
+        "Marcus Valerius",
+        "Branne Nev",
+        "Agapito"
+      ],
+      "blurb": "Two threads run in parallel. On Isstvan V after the Drop Site Massacre, Corvus Corax leads the surviving Raven Guard in ambushes on Iron Warriors columns and has them loot the dead to stay in the field. On Deliverance, Praefector Marcus Valerius is woken night after night by the same dream of fire and blood and defies Commander Branne to launch an unauthorised relief fleet, arriving on the ninety-eighth day as the World Eaters close in.",
+      "blurbSafe": "In the mountains of Isstvan V, Corvus Corax and the remnants of the Raven Guard fight a scavenging guerrilla war with no prospect of rescue. Light years away on Deliverance, a mortal Imperial Army officer keeps having the same dream and cannot get anyone to listen to him.",
+      "changed": [
+        "type",
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Raven's_Flight_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Shadows_of_Treachery"
+      ],
+      "confidence": "high",
+      "notes": "Format correction. This was the first original Horus Heresy audio drama, written by Gav Thorpe, performed by Toby Longworth and directed by Lisa Bowerman, released on CD in February 2010; it only appeared in print two years later in Shadows of Treachery. Labelling it a Short Story hides that. Legions expanded: the Iron Warriors and World Eaters are the on-page enemies, and the Marcus Valerius thread with the Imperial Army auxiliaries is half the story and was entirely missing from the manifest blurb. The date 006.M31 is stated on the Lexicanum page itself."
+    },
+    {
+      "bookKey": "mark-of-calth-shards-of-erebus",
+      "verdict": "corrected",
+      "title": "THE SHARDS OF EREBUS",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": [
+        "Word Bearers"
+      ],
+      "timeline": "006-007.M31",
+      "mainCharacters": [
+        "Erebus",
+        "Kor Phaeron",
+        "Quor Vondar",
+        "Hol Beloth",
+        "Kolos Undil"
+      ],
+      "blurb": "Before the ambush at Calth, Erebus takes the anathame that mortally wounded Horus, hammers eight shards from it and grows them into daggers in a vat of blood. He gives one to each of the six commanders Lorgar has chosen to lead the attack and keeps two back. Interleaved flashbacks cover his training under the Davinite priestess who taught him to step through the warp, and how he repaid her once the lessons ended.",
+      "blurbSafe": "On the eve of the attack on Calth, Erebus works a notorious relic blade in a forge and prepares gifts for the Word Bearers commanders Lorgar has chosen to lead the ambush. Woven through the acrimonious council of war is the story of how the Dark Apostle learned his craft.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Shards_of_Erebus_(Short_Story)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "high",
+      "notes": "The manifest blurb inverted the chronology. It describes the aftermath of Calth with Ultramarines hunting Erebus for vengeance; the story is set immediately before the ambush and is told entirely from the Word Bearers side. The Wordaholic Anonymous review independently confirms that it takes place before Know No Fear and consists of Word Bearers receiving shards of a blade from Erebus. Ultramarines removed from the faction list: they are the intended victims, discussed at the council of war, but they never appear."
+    },
+    {
+      "bookKey": "the-primarchs-the-lion",
+      "verdict": "corrected",
+      "title": "THE LION",
+      "author": "Gav Thorpe",
+      "type": "Novella",
+      "legions": [
+        "Dark Angels",
+        "Death Guard",
+        "Iron Hands"
+      ],
+      "timeline": "007-009.M31",
+      "mainCharacters": [
+        "Lion El'Jonson",
+        "Corswain",
+        "Calas Typhon",
+        "Nemiel",
+        "Theralyn Fiana",
+        "Lasko Midoa"
+      ],
+      "blurb": "Eighty-two days after fighting Konrad Curze at Tsagualsa, the Lion turns aside from the Thramas Crusade for Perditus, where Calas Typhon's Death Guard and a stranded Iron Hands force are contesting a Mechanicum facility that houses Tuchulcha, a sentient warp engine. En route the Invincible Reason is boarded by daemons, and the Lion beheads the Chaplain Nemiel for refusing to let the Librarians fight, setting aside the Edict of Nikaea. He takes the machine and destroys the planet.",
+      "blurbSafe": "Deep into the Thramas Crusade and unable to shake a pursuer through the warp, Lion El'Jonson diverts to a remote Mechanicum research world where Death Guard and Iron Hands forces are already fighting over a secret device. Working out who to believe will cost the Dark Angels a great deal more than a battle.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Lion_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/Thramas_Crusade",
+        "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "The manifest blurb was invented and describes a completely different story, a running duel between the Lion and Konrad Curze; that is Savage Weapons and Prince of Crows, not this novella. The Black Library description is explicit: 'Fighting a daemonic incursion within their fleet, the Dark Angels stumble into a conflict between the Iron Hands and Death Guard.' Legions corrected accordingly, which adds a traitor Legion (Death Guard) and a second loyalist one (Iron Hands) to what had been tagged as a Dark Angels-only story. Timeline left at 007-009.M31, matching Lexicanum's dating of the Thramas Crusade; the novella sits shortly before Prince of Crows."
+    },
+    {
+      "bookKey": "the-primarchs-serpent-beneath",
+      "verdict": "corrected",
+      "title": "THE SERPENT BENEATH",
+      "author": "Rob Sanders",
+      "type": "Novella",
+      "legions": [
+        "Alpha Legion"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Omegon",
+        "Sheed Ranko",
+        "Goran Setebos",
+        "Xalmagundi",
+        "Volkern Auguramus",
+        "Alpharius"
+      ],
+      "blurb": "Omegon assembles Sigma Squad, a rogue telekinetic named Xalmagundi and a Mechanicum adept to infiltrate and destroy Tenebrae Station, an Alpha Legion warp-manipulation facility that has kept the White Scars blind and contained on Chondax. The raid succeeds at ruinous cost, and the survivors learn only at the end that the Omegon leading them is Captain Sheed Ranko in disguise. The real Omegon then lies to Alpharius about why the station had to die.",
+      "blurbSafe": "Omegon puts together a team of Alpha Legion operatives, a rogue psyker and a Mechanicum adept for a raid on a top-secret installation, one that the Alpha Legion itself controls. Nobody on the mission is told more than they need to know, and that includes who is really giving the orders.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Serpent_Beneath_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Type, faction and date were already right. The manifest blurb was pure atmosphere and described no events at all, and it mistakenly treats Alpharius Omegon as a single undifferentiated figure; the whole point of the novella is Omegon acting separately from, and arguably against, Alpharius. The faction list is kept to Alpha Legion: the White Scars are the subject of the station's work but never appear on the page."
+    },
+    {
+      "bookKey": "shadows-of-treachery-crimson-fist",
+      "verdict": "corrected",
+      "title": "THE CRIMSON FIST",
+      "author": "John French",
+      "type": "Novella",
+      "legions": [
+        "Imperial Fists",
+        "Iron Warriors"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Alexis Polux",
+        "Rogal Dorn",
+        "Sigismund",
+        "Perturabo",
+        "Amandus Tyr"
+      ],
+      "blurb": "Becalmed by warp storms in the Phall system, Captain Alexis Polux inherits command of Dorn's Retribution Fleet and holds a defensive sphere for months while his astropaths burn themselves out reaching for Terra. On Terra, Sigismund admits he asked to stay behind because Euphrati Keeler prophesied he would die at Phall. Perturabo attacks expecting to face Sigismund. Polux obeys the recall order, loses Amandus Tyr and the Tribune, and escapes aboard a captured Iron Warriors ship.",
+      "blurbSafe": "Trapped in the Phall system for months and cut off from Terra, Captain Alexis Polux has to choose between forcing a way home and holding the Retribution Fleet where it is. The Iron Warriors have already found him, and on Terra his primarch is dealing with a confession he did not want to hear.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Crimson_Fist_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Phall",
+        "https://wh40k.lexicanum.com/wiki/Shadows_of_Treachery"
+      ],
+      "confidence": "high",
+      "notes": "Broadly right in the manifest, but sharpened. The fleet is stranded by warp storms rather than lured into 'Perturabo's trap'; the Iron Warriors locate it via a psi-array planted in the system. The Sigismund and Dorn thread on Terra is roughly half the novella and was missing entirely. Iron Warriors added to the faction list. Date confirmed: Lexicanum gives the Battle of Phall as 007.M31."
+    },
+    {
+      "bookKey": "mark-of-calth-calth-that-was",
+      "verdict": "corrected",
+      "title": "CALTH THAT WAS",
+      "author": "Graham McNeill",
+      "type": "Novella",
+      "legions": [
+        "Ultramarines",
+        "Word Bearers"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Remus Ventanus"
+      ],
+      "blurb": "Graham McNeill returns to Remus Ventanus, the Saviour of Calth, as the war drags on across the poisoned surface and down in the arcologies below. Moving to destroy a large Word Bearers contingent still operating above ground, Ventanus is drawn into a trap that could end every remaining life on the planet, and into an encounter that will shape the Ultramarines for ten thousand years to come.",
+      "blurbSafe": "The war on Calth is far from finished, above ground and below it, and Remus Ventanus sets out against a Word Bearers force still operating on the surface. What he meets there will matter to his Legion for a very long time afterwards.",
+      "changed": [
+        "type",
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Mark_of_Calth_(Anthology)",
+        "https://warhammer40k.fandom.com/wiki/Calth_That_Was_(Novella)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "medium",
+      "notes": "Format correction: this is the novella of Mark of Calth, not a short story. Lexicanum states the anthology contains 'seven short stories by various authors, and one novella by Graham McNeill'; the Warhammer 40k Wiki page is titled and categorised as a novella; and the Black Library back-cover copy calls it 'the novella-length Calth That Was'. The Wordaholic Anonymous review also notes it is by far the longest piece in the book. Word Bearers added to the faction list. Confidence is medium on plot detail because no source consulted carries a scene-level summary, so the blurb stays close to the two published synopses and adds nothing beyond them."
+    },
+    {
+      "bookKey": "mark-of-calth-dark-heart",
+      "verdict": "corrected",
+      "title": "DARK HEART",
+      "author": "Anthony Reynolds",
+      "type": "Short Story",
+      "legions": [
+        "Word Bearers"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Marduk",
+        "Kor Phaeron"
+      ],
+      "blurb": "Anthony Reynolds drops the antihero of his Word Bearers novels into the Heresy. Marduk, a young acolyte of Kor Phaeron, fights on Calth, but his ambitions are not aimed at Guilliman's sons at all. Called to account for leaving his mentor for dead, he reaches for infernal pacts and daemonic power to carve out a place for himself inside his own Legion, the first steps of a name that will still be spoken with awe millennia later.",
+      "blurbSafe": "The assault on Calth is meant to be a campaign of vengeance against the Ultramarines, but one young acolyte of Kor Phaeron is chasing something else entirely. This is an early appearance of Marduk, later the lead of Anthony Reynolds's Word Bearers series.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Dark_Heart_(Short_Story)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "medium",
+      "notes": "Faction, type and date were already right, and the manifest named Marduk correctly. Sharpened because the manifest framed it as 'the XVII Legion's perspective on the betrayal' and a straightforward rise through the ranks; the published description is explicit that Marduk's target is not the Ultramarines but rivals inside his own Legion. The Wordaholic Anonymous review adds the specific hook, that Marduk has to account for having left his mentor for dead. Medium confidence: no scene-level summary exists on either wiki."
+    },
+    {
+      "bookKey": "mark-of-calth-the-traveller",
+      "verdict": "corrected",
+      "title": "THE TRAVELLER",
+      "author": "David Annandale",
+      "type": "Short Story",
+      "legions": [
+        "Ultramarines",
+        "Word Bearers"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [],
+      "blurb": "David Annandale follows a survivor of the Word Bearers' opening strike on Calth's orbital defences down into the arcology shelters, among the ordinary people the Ultramarines built them to protect. He did not come through it alone. What follows is a claustrophobic horror piece about one man's mind buckling under the daemonic pressure the traitors' rituals have let into the deep places of the planet.",
+      "blurbSafe": "A survivor of the Word Bearers' opening attack on Calth's orbital defences shelters with the civilians in the arcologies below the ruined surface. He may not have survived alone.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/The_Traveller_(Anthology_Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Mark_of_Calth_(Anthology)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "medium",
+      "notes": "The weakest-sourced entry in the batch. Both wikis carry only the one-line Black Library synopsis: 'A survivor of the Word Bearers' initial surprise attack on the orbital defences of Calth finds that he may not be alone.' The Wordaholic Anonymous review supplies the setting and register, that it follows ordinary people in the underground arcologies and is 'man vs his own mental well being vs deamonic onslaught'. Nothing beyond those two sources has been asserted, and the viewpoint character is not named in either, so mainCharacters is left empty. The manifest's claim that he 'wanders Calth's poisoned surface' after an orbital bombardment is unsupported: he is a survivor of the attack on the orbital defence platforms and the action is underground. Word Bearers added to the factions; the Ultramarines tag is retained for the Ultramar setting rather than for a Space Marine viewpoint, which this story does not have."
+    },
+    {
+      "bookKey": "mark-of-calth-deeper-darkness",
+      "verdict": "corrected",
+      "title": "A DEEPER DARKNESS",
+      "author": "Rob Sanders",
+      "type": "Short Story",
+      "legions": [
+        "Ultramarines",
+        "Word Bearers"
+      ],
+      "timeline": "007-008.M31",
+      "mainCharacters": [
+        "Hylas Pelion",
+        "Ungol Shax"
+      ],
+      "blurb": "Ultramarines sergeant Hylas Pelion develops an obsessive need to run down the Word Bearers Dark Apostle Ungol Shax, and the hunt draws him into the deepest caverns beneath Calth while his Legion works to secure the arcologies. Rob Sanders plays it as gothic horror. What Pelion learns is that the traitors have called up things from the warp that even the Word Bearers should be afraid to summon.",
+      "blurbSafe": "An Ultramarines sergeant becomes fixated on hunting down one particular Word Bearers Dark Apostle, and the chase takes him steadily further beneath Calth. The traitors have been summoning, and not everything they called up answers to them.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/A_Deeper_Darkness_(Anthology_Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Mark_of_Calth_(Anthology)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "high",
+      "notes": "Factions, type and date were already right and the manifest named both characters correctly. Corrected because the manifest reduces it to a cat-and-mouse chase and drops the actual point, which both published synopses state plainly: Pelion realises there are things in the warp that even the Word Bearers should fear. The Wordaholic Anonymous review independently confirms Pelion's rank as sergeant, the obsessive nature of the hunt, and the gothic-horror register."
+    },
+    {
+      "bookKey": "mark-of-calth-underworld-war",
+      "verdict": "corrected",
+      "title": "THE UNDERWORLD WAR",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Short Story",
+      "legions": [
+        "Ultramarines",
+        "Word Bearers"
+      ],
+      "timeline": "014.M31",
+      "mainCharacters": [
+        "Vakrah Jal",
+        "Argel Tal"
+      ],
+      "blurb": "Seven years after the betrayal, the fighting beneath Calth has become an endless attritional grind. A war-weary Word Bearer of the Kaurtal, Vakrah Jal, makes the climb up to the blasted surface and remembers his rebirth at Argel Tal's hands and the making of the Gal Vorbak. Aaron Dembski-Bowden keeps the chronology deliberately unstable, so it is never settled whether this is memory or a telling of what is still to come.",
+      "blurbSafe": "Years into the war beneath Calth, one exhausted Word Bearer makes the long climb up to the ruined surface and dwells on how he was remade, and on the brother who remade him. Time does not run entirely straight in the telling.",
+      "changed": [
+        "timeline",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Mark_of_Calth_(Anthology)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Calth",
+        "https://warhammer40k.fandom.com/wiki/The_Underworld_War_(Anthology_Short_Story)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "high",
+      "notes": "Timeline correction, and the clearest date error in the batch. Both wikis state the story is set seven standard years after the Battle of Calth. Lexicanum dates the Battle of Calth to 007.M31 and notes the underground war continues until 014.M31, so the story sits at 014.M31, not the manifest's 007-009.M31. The manifest blurb otherwise had the gist right; it has been rewritten to include the Argel Tal and Gal Vorbak material, which the Wordaholic Anonymous review confirms is the core of the piece, and the deliberate ambiguity between past and future."
+    },
+    {
+      "bookKey": "mark-of-calth-unmarked",
+      "verdict": "corrected",
+      "title": "UNMARKED",
+      "author": "Dan Abnett",
+      "type": "Short Story",
+      "legions": [
+        "Perpetuals"
+      ],
+      "timeline": "007.M31",
+      "mainCharacters": [
+        "Oll Persson",
+        "M'kar"
+      ],
+      "blurb": "Picking up directly from Know No Fear, the Perpetual Oll Persson leads a handful of Calth survivors away from the ruined world, cutting portals with a stolen athame and following the winds of the aether towards a goal he will not explain. Their road runs through swamps, woods and empty cities, and through Oll's own past, from the Argonauts to Verdun and 73 Easting, with the daemon M'kar behind them the whole way.",
+      "blurbSafe": "Carrying straight on from Know No Fear, Oll Persson leads a small band of Calth survivors on a journey he refuses to explain, using a stolen blade to cut his way from one place to the next. He has been walking a very long time, and something has been following him for much of it.",
+      "changed": [
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Unmarked_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/Mark_of_Calth_(Anthology)",
+        "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
+      ],
+      "confidence": "high",
+      "notes": "Faction, type and date were already right, and the manifest correctly named Verdun and 73 Easting. Rewritten because it omitted the actual premise: this is a direct continuation of Know No Fear in which Oll uses the athame from John French's story to cut warp portals, travelling with a band of Calth survivors and pursued by the daemon M'kar. The faction stays as Perpetuals rather than adding Word Bearers, since M'kar appears as a daemon rather than as a Legion force."
+    },
+    {
+      "bookKey": "shadows-of-treachery-prince-of-crows",
+      "verdict": "corrected",
+      "title": "PRINCE OF CROWS",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Novella",
+      "legions": [
+        "Night Lords",
+        "Dark Angels"
+      ],
+      "timeline": "009.M31",
+      "mainCharacters": [
+        "Sevatar",
+        "Konrad Curze",
+        "Lion El'Jonson",
+        "Alastor Rushal"
+      ],
+      "blurb": "With Konrad Curze comatose after the Lion mauled him at Sheol, First Captain Jago Sevatarion takes the Night Lords. He has two Kyroptera captains murdered to end the argument about revenge, reorganises the Legion into six autonomous Great Companies, and walks into his primarch's mind, where he sees the boy who became the Night Haunter. Curze wakes, orders a boarding of the Invincible Reason, and Sevatar ends the novella a prisoner.",
+      "blurbSafe": "The Thramas Crusade has gone badly for the Night Lords and Konrad Curze lies comatose, leaving First Captain Sevatar in charge of a Legion whose surviving captains want revenge. Sevatar has his own ideas about how the VIII survives, and about what is really wrong with their primarch.",
+      "changed": [
+        "legions",
+        "blurb",
+        "blurbSafe"
+      ],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Prince_of_Crows_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/Thramas_Crusade",
+        "https://wh40k.lexicanum.com/wiki/Shadows_of_Treachery"
+      ],
+      "confidence": "high",
+      "notes": "Type and date were right; Lexicanum's plot summary opens '009.M31, Sheol'. The manifest blurb was broadly in the right area but vague and slightly off, describing 'the Lion's relentless pursuit' when the novella actually opens with Curze already beaten and comatose. Dark Angels added to the factions: the I Legion are the on-page antagonists throughout and the novella ends aboard the Invincible Reason. A Raven Guard captain, Alastor Rushal, also serves on the Kyroptera, but he is not enough of a presence to warrant a Raven Guard tag."
+    }
+  ]
+}

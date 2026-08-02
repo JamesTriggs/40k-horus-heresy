@@ -1,0 +1,404 @@
+{
+  "batch": "war-without-end",
+  "entries": [
+    {
+      "bookKey": "war-divine-adoratrice",
+      "verdict": "corrected",
+      "title": "THE DEVINE ADORATRICE",
+      "author": "Graham McNeill",
+      "type": "Short Story",
+      "legions": ["Imperial Knights"],
+      "timeline": "966.M30",
+      "mainCharacters": ["Raeven Devine", "Lyx", "Cebella Devine", "Albard Devine", "Cyprian Devine"],
+      "blurb": "Decades before the Heresy, Raeven Devine, second son of House Devine on the knight world of Molech, prepares for the Becoming that will bond him to his first Knight. A Sacristan of the hidden Serpent Cult detonates an electromagnetic charge during the ceremony, and in the confusion Raeven is acclaimed a hero while his elder brother Albard is broken. His mistress Lyx and his mother Cebella engineered all of it.",
+      "blurbSafe": "On the knight world of Molech, generations before Horus turns on the Emperor, Raeven Devine prepares for the rite that will bond him to his first Knight. Not everyone at his family's court wants the ceremony to go as tradition demands.",
+      "changed": ["title", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Devine_Adoratrice_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Title in the manifest was wrong: the anthology contents list and the story's own page both give 'The Devine Adoratrice'. Devine is the ruling family surname on Molech, not the adjective 'divine'. The manifest's Thousand Sons attribution and sorcery blurb were pure invention: no Legion appears at all. This is a court-intrigue prequel to McNeill's Vengeful Spirit featuring House Devine, an Imperial Knights household, and the Sacristans who serve them. Lexicanum states the setting explicitly as 'Molech, 966.M30, the One hundred and Sixty-Eighth Year of the Great Crusade', which matches the manifest date, so the timeline is confirmed. 'Imperial Knights' is not currently in the site's faction vocabulary and would need adding; it matches neither the loyalist nor traitor filter, which is correct here."
+    },
+    {
+      "bookKey": "war-virtues-sons",
+      "verdict": "corrected",
+      "title": "VIRTUES OF THE SONS",
+      "author": "Andy Smillie",
+      "type": "Short Story",
+      "legions": ["Blood Angels", "Emperor's Children", "World Eaters"],
+      "timeline": "001.M31",
+      "mainCharacters": ["Sanguinius", "Amit", "Azkaellon", "Khârn", "Lucius", "Horus"],
+      "blurb": "Troubled that each Legion has been allowed to embody only a single ideal, Sanguinius sends two of his most single-minded captains to learn from others. Azkaellon of the Sanguinary Guard duels Lucius of the Emperor's Children aboard an oceanic warship, while Amit the Flesh Tearer fights Khârn of the World Eaters in a trench on a jointly conquered world. Sanguinius then watches what the two men bring back to the IX Legion.",
+      "blurbSafe": "Worried that his Legion is growing too narrow in temperament, Sanguinius arranges duels for two of his most extreme captains against warriors of the Emperor's Children and the World Eaters. What the pair learn matters far more to the Angel than who wins.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Virtues_of_the_Sons",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Plot and cast confirmed from the Lexicanum article and the quoted Black Library cover description. Emperor's Children and World Eaters were missing from the manifest's factions. Originally released as an Andy Smillie audio drama and later as prose; it appears in War Without End as a short story, so the type is unchanged. The date could not be sourced: the story is clearly Great Crusade era (Sanguinius consults Horus, joint Legion compliance actions), and the manifest's 001.M31 falls inside that window, so it has been left alone rather than replaced with a guess."
+    },
+    {
+      "bookKey": "war-sermon-exodus",
+      "verdict": "corrected",
+      "title": "SERMON OF EXODUS",
+      "author": "David Annandale",
+      "type": "Short Story",
+      "legions": ["Various"],
+      "timeline": "004.M31",
+      "mainCharacters": [],
+      "blurb": "Human pilgrims journey from across the wastes of Davin, flocking together to prove themselves worthy in the eyes of dark gods. No Space Marine Legion features in the story, which Black Library published as a direct prequel to David Annandale's novel The Damnation of Pythos and to the doomed refugee exodus that novel opens with.",
+      "blurbSafe": "On Davin, the faithful travel from across the wastes to gather and prove their devotion to powers the Imperium refuses to name. A short prelude to the events of The Damnation of Pythos.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Sermon_of_Exodus_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/The_Damnation_of_Pythos_(Novel)"
+      ],
+      "confidence": "low",
+      "notes": "Weakest entry in the batch. No plot summary exists on Lexicanum, Track of Words or any other source I could reach; the only real evidence is the Black Library cover line quoted on Lexicanum, 'Journeying from across the wastes of Davin, the faithful flock to prove themselves worthy in the eyes of dark gods. A Prequel to The Damnation of Pythos.' The blurb above says no more than that source supports. The manifest's Word Bearers attribution is not supported: nothing indicates the XVII Legion appears, and the Damnation of Pythos dramatis personae lists Iron Hands, Salamanders, Raven Guard, Emperor's Children and human colonists, not Word Bearers, so I have set the faction to 'Various' rather than assert a Legion. Timeline unverified and left at the manifest value: as a direct prequel to The Damnation of Pythos (007.M31 in this dataset) it probably belongs later than 004.M31, but I found nothing to pin it down and did not want to swap one guess for another."
+    },
+    {
+      "bookKey": "war-howl-hearthworld",
+      "verdict": "corrected",
+      "title": "HOWL OF THE HEARTHWORLD",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Short Story",
+      "legions": ["Space Wolves"],
+      "timeline": "004.M31",
+      "mainCharacters": ["Thirteen Stars Falling", "Laughing Jaurmag", "Leman Russ"],
+      "blurb": "After Prospero burns, Leman Russ scatters Space Wolves watch packs to shadow every primarch. Veteran sergeant Thirteen Stars Falling is furious to draw Terra and Rogal Dorn, and the senior commander Laughing Jaurmag talks his way into joining the pack. Aboard the transport an Administratum clerk requests their names and ranks, and the Wolves lie, offering birth-names instead of true ones. Jaurmag warns them the clerk almost certainly answers to Malcador.",
+      "blurbSafe": "In the wake of Prospero, Leman Russ assigns watch packs to shadow each of his brother primarchs for any sign of treachery. One pack draws what looks like the dullest posting of all: Terra, and Rogal Dorn.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Howl_of_the_Hearthworld_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "The manifest blurb was invented: the Space Wolves are not defending Fenris and there is no attack on their home world. This is a watch-pack story set en route to Terra. Faction and date left as they were: Space Wolves is correct, and 004.M31 sits sensibly against the site's own placement of Prospero Burns at 004-005.M31."
+    },
+    {
+      "bookKey": "war-lord-red-sands",
+      "verdict": "corrected",
+      "title": "LORD OF THE RED SANDS",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Short Story",
+      "legions": ["World Eaters"],
+      "timeline": "005.M31",
+      "mainCharacters": ["Angron", "Kauragar"],
+      "blurb": "On Isstvan III, Angron rampages through the ruins killing loyalist Emperor's Children, Death Guard and his own World Eaters without much distinction. Captain Kauragar manages to open a small wound in his gene-father's throat before falling, which pleases the primarch enough that he stays with the dying man. Asked why he now fights for Horus, Angron answers that he does not: Nuceria taught him that only freedom is worth having.",
+      "blurbSafe": "Amid the ruins of Isstvan III, Angron cuts through loyalists and his own World Eaters alike, finding a strange serenity in the carnage. One of his captains gets close enough to ask the primarch why he now follows the Warmaster.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Lord_of_the_Red_Sands_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Faction and date confirmed. Date matches the site's own placement of Galaxy in Flames and the Isstvan III atrocity at 005.M31. The manifest blurb was a reasonable guess but wrong in emphasis: this is not a flashback to Angron's gladiator past, it is the Isstvan III massacre from his point of view, ending on his answer about freedom. Also collected in the Angron anthology, The Imperial Truth and Crusade's End."
+    },
+    {
+      "bookKey": "war-artefacts",
+      "verdict": "corrected",
+      "title": "ARTEFACTS",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Salamanders"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Vulkan", "T'kell", "Konrad Curze", "Horus"],
+      "blurb": "Before Isstvan V, Vulkan returns to Nocturne and tells his Master of the Forge T'kell about Konrad Curze's calculated murder of Nostramo and his own failure to redeem his brother. Fearing his life's work could be turned against the Imperium, he orders the secret vault of thousands of unique weapons destroyed. T'kell argues that in the right hands they could save worlds, and Vulkan names him the first Forgefather, to keep seven and burn the rest.",
+      "blurbSafe": "Preparing for war against the traitors, Vulkan returns to his forge on Nocturne and looks at his personal armoury with new eyes. After what Konrad Curze did to his own home world, the primarch begins to ask whether any Legion should hold weapons like these.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Artefacts_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Faction and date confirmed: Salamanders, on Nocturne, immediately before the Dropsite Massacre, which this site places at 006.M31. The manifest blurb ('recover precious relics from the war's devastation') is the opposite of the plot, which is about destroying artefacts rather than recovering them, and is the origin of the Forgefather title and the seven relics of Nocturne. Confirms the audit note: Artefacts is also reprinted in Born of Flame, and additionally in Sedition's Gate (first publication) and Lupercal's War."
+    },
+    {
+      "bookKey": "war-chirurgeon",
+      "verdict": "corrected",
+      "title": "CHIRURGEON",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Emperor's Children"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Fabius", "Lycaeon"],
+      "blurb": "Fabius, chief Apothecary of the Emperor's Children, works through a surgery while recalling the genetic blight that nearly ended the III Legion before Fulgrim was found, and the executions he ordered to contain it, including that of his friend Lycaeon. Fulgrim's gene-seed halted the decay but never cured it. The patient on the slab turns out to be Fabius himself, assisted by Lycaeon's mindless reanimated body.",
+      "blurbSafe": "Fabius of the Emperor's Children operates, and remembers the genetic flaw that almost wiped out the III Legion in its earliest days. His Legion believes that flaw was cured long ago, but its chief Apothecary knows something they do not.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Chirurgeon_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Faction confirmed. The manifest blurb ('experiments on the fallen', 'the Clonelord') was invented and also anachronistic: 'Clonelord' is a much later 41st-millennium epithet. No in-universe date could be sourced for this one; the manifest's 006.M31 is unverified but not demonstrably wrong, so it has been left alone. Note the story is largely flashback to the pre-Fulgrim III Legion."
+    },
+    {
+      "bookKey": "war-phoenician",
+      "verdict": "corrected",
+      "title": "THE PHOENICIAN",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Iron Hands", "Emperor's Children"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Gabriel Santar", "Fulgrim", "Ferrus Manus", "Julius Kaesoron"],
+      "blurb": "On the black sands of Isstvan V, Iron Hands first captain Gabriel Santar lies dying, struck down by his former battle-brother Julius Kaesoron of the Emperor's Children. Helpless, he watches Fulgrim murder his primarch Ferrus Manus. In his last moments Santar's failing sight shows him what the supposedly perfect Phoenician has actually become, a revelation that may never reach the X Legion.",
+      "blurbSafe": "The Dropsite Massacre seen from the black sand, through the eyes of a fallen Iron Hands officer. As Fulgrim and Ferrus Manus come face to face, he glimpses something about the Phoenician that nobody else has seen.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Phoenician_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Confirms the audit flag. The point-of-view character is Gabriel Santar of the Iron Hands, not an Emperor's Children protagonist, so Iron Hands has been added as the lead faction. Setting is Isstvan V, which this site dates 006.M31, matching the manifest. The manifest blurb was a generic 'Fulgrim's corruption' guess."
+    },
+    {
+      "bookKey": "war-allegiance",
+      "verdict": "corrected",
+      "title": "ALLEGIANCE",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["White Scars", "Thousand Sons"],
+      "timeline": "007-009.M31",
+      "mainCharacters": ["Revuel Arvida", "Targutai Yesugei", "Jaghatai Khan", "Orzun"],
+      "blurb": "Aboard the Swordstorm after the second battle of Prospero, Revuel Arvida, sole Thousand Sons survivor of the Wolf King's wrath, recovers under Stormseer Targutai Yesugei, who quietly presses him to join the V Legion. Arvida hides the onset of the flesh-change while dreaming of ruined Prospero. He is brought to the kurultai where Jaghatai Khan judges the White Scars who swore the blood oath, and one condemned man's refusal to break an oath settles Arvida's own choice.",
+      "blurbSafe": "Carried away from Prospero by the White Scars, the Thousand Sons sorcerer Revuel Arvida slowly recovers his strength and his powers under Stormseer Yesugei's care. The V Legion has its own reckoning to hold, and Arvida must work out where he now belongs.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Allegiance_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Not a story about the White Scars picking a side in the civil war, as the manifest blurb claimed. It is Revuel Arvida's story, set immediately after Scars, so Thousand Sons has been added. The oath-breaker trials are of White Scars who swore to Horus, and the Khan's judgement is already made, not pending. Date left as the manifest range: the story opens right after the second battle of Prospero (007.M31 here) and covers a period of recovery, so 007-009.M31 is defensible, though 007.M31 alone would arguably be tighter."
+    },
+    {
+      "bookKey": "war-daemonology",
+      "verdict": "corrected",
+      "title": "DAEMONOLOGY",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["Death Guard"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Mortarion", "Lermenta", "Malcador the Sigillite"],
+      "blurb": "Beaten by Jaghatai Khan above Prospero, Mortarion leads the Death Guard on a punitive rampage and annihilates the library world Terathalion. He is hunting one thing: a daemon that has spent twenty-five years wearing the skin of an archivist called Lermenta. Interleaved with memories of arguing with Malcador on Terra, his interrogation goes wrong, and the primarch who despises sorcery is forced to use it, then to start learning it from her.",
+      "blurbSafe": "Smarting from his defeat by the Khan, Mortarion turns the Death Guard loose on the worlds of the Prosperine empire, though his own attention is plainly elsewhere. On the library world of Terathalion, the insular primarch is looking for something very specific.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Daemonology_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Serious faction error in the manifest: this is a Mortarion and Death Guard story, not Thousand Sons. The title misled whoever wrote the original entry. Lexicanum gives the date explicitly, 'Mortarion brings his forces to the library-world Terathalion in 007.M31', which matches the manifest, so the timeline is confirmed. Thousand Sons are referenced only as the Legion that once brought Terathalion into compliance."
+    },
+    {
+      "bookKey": "war-gunsight",
+      "verdict": "corrected",
+      "title": "GUNSIGHT",
+      "author": "James Swallow",
+      "type": "Short Story",
+      "legions": ["Officio Assassinorum", "Sons of Horus"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Eristede Kell", "Horus", "Letae"],
+      "blurb": "Vindicare assassin Eristede Kell has been hiding in the underdecks of the Vengeful Spirit for years since the failed Dagonet operation, injured, half-amnesiac and hearing whispers he attributes to Samus. He befriends a secretly loyal ship serf, Letae, then kills him in a delusional fit and uses the body as bait. When Horus comes, Kell fires, the Warmaster plucks the round out of the air, and Kell is turned rather than killed.",
+      "blurbSafe": "An Officio Assassinorum killer has spent a very long time hidden in the bowels of Horus's flagship, waiting for a single shot at the Warmaster himself. Injury and isolation have not left his mind intact.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Gunsight_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "'Various' replaced with the actual factions. This is a direct sequel to Swallow's novel Nemesis, following its surviving Vindicare, Eristede Kell, aboard the Sons of Horus flagship. Date unverified but consistent: this site places Nemesis at 007.M31 and the story happens years after Dagonet, so the manifest's 008.M31 is left as is. Lexicanum also files it under Sources (Black Legion) for the ending."
+    },
+    {
+      "bookKey": "war-laurel-defiance",
+      "verdict": "corrected",
+      "title": "THE LAUREL OF DEFIANCE",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Ultramarines"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Lucretius Corvo", "Roboute Guilliman"],
+      "blurb": "With the Shadow Crusade over and the Word Bearers and World Eaters driven out of Ultramar, the Ultramarines captain Lucretius Corvo is to be decorated by the primarchs with the Laurel of Defiance for his heroism. Corvo is privately uneasy about Guilliman and his brothers declaring themselves rulers of a new Imperium, but a ceremony in his own honour is no place to voice doubts.",
+      "blurbSafe": "Ultramar is at peace again after the horrors of the Shadow Crusade, and an Ultramarines captain is to be honoured by the primarchs for his part in saving it. He is rather less certain about what those primarchs have declared in the meantime.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Laurel_of_Defiance_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "'Various' replaced with Ultramarines. This is an Imperium Secundus political piece, not a generic last-stand story as the manifest blurb implied. Date left at 009.M31, consistent with this site's placement of The Unremembered Empire. Plot detail comes from the Black Library cover description quoted on Lexicanum; no fuller synopsis exists there, so the blurb stays within what that source states."
+    },
+    {
+      "bookKey": "war-safe-shadowed-place",
+      "verdict": "corrected",
+      "title": "A SAFE AND SHADOWED PLACE",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Night Lords", "Ultramarines"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Gendor Skraivok", "Krukesh the Pale", "Kellendvar", "Kellenkir"],
+      "blurb": "Gendor Skraivok, a middling Night Lords commander, shelters a crippled splinter fleet in hidden space at the edge of the Sotha system after the Legion's defeat by the Dark Angels. His remaining captains desert him, and he sends the brothers Kellendvar and Kellenkir to salvage what they can. Krukesh the Pale then arrives and forces their allegiance, just as Sotha throws out a psychic beam that Macragge answers.",
+      "blurbSafe": "Scattered and leaderless, the remnants of a Night Lords fleet gather in the dark on the fringes of Ultramar and take stock of what is left of them. What they see shining out of the Sotha system is not what they came looking for.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/A_Safe_and_Shadowed_Place_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "'Various' replaced. Direct prequel to the novel Pharos, introducing Skraivok and Krukesh. Ultramarines are included because the story turns on Sotha, the Pharos and Macragge, though the point of view is entirely Night Lords. Date left at 009.M31, matching this site's placement of Pharos."
+    },
+    {
+      "bookKey": "war-imperfect",
+      "verdict": "corrected",
+      "title": "IMPERFECT",
+      "author": "Nick Kyme",
+      "type": "Short Story",
+      "legions": ["Emperor's Children"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Fulgrim", "Fabius", "Ferrus Manus"],
+      "blurb": "Fulgrim plays a game of regicide against Ferrus Manus, needling his old friend across the board, then reveals his daemonic form and kills him. The Ferrus at the table is one of hundreds of clones grown by Apothecary Fabius from blood left on Fulgrim's sword, so the Phoenician can keep testing whether he could ever have turned the Gorgon. Fabius returns to his laboratory, where a clone of Horus is growing.",
+      "blurbSafe": "A game of regicide between Fulgrim and Ferrus Manus, played long after the Gorgon should have been able to sit at any board. Fabius, Apothecary of the III Legion, has rather more to do with the arrangement than either player admits.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Imperfect_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Faction left as Emperor's Children. Lexicanum also files it under Sources (Iron Hands), but the only Iron Hands presence is a Fabius-grown clone, so adding Iron Hands would wrongly flip the loyalist filter and I have left it off. The manifest blurb was a title paraphrase about the pursuit of perfection. Date unverified; the manifest's 009.M31 sits after Fulgrim's ascension at Iydris (007.M31 here) and is plausible, so left unchanged."
+    },
+    {
+      "bookKey": "war-wolf-mother",
+      "verdict": "corrected",
+      "title": "WOLF MOTHER",
+      "author": "Graham McNeill",
+      "type": "Short Story",
+      "legions": ["Knights-Errant", "Perpetuals"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Alivia Sureka", "Severian", "Vivyen Sureka", "Shargali-Shi"],
+      "blurb": "Aboard the refugee ship Molech's Enlightenment, the Perpetual Alivia Sureka hunts the Serpent Cult that fled Molech with the survivors and has taken her daughter Vivyen. The Knight-Errant Severian, tracking the same cult, keeps wrecking her plans. They fight through cultists and corrupted Thalaxii to the cult leader Shargali-Shi, whose ritual is turning the stolen children into a daemon of Slaanesh.",
+      "blurbSafe": "Among the civilians fleeing Molech aboard the Molech's Enlightenment, the cult that brought House Devine to its knees is still at work. Alivia Sureka intends to root it out, with unwelcome help from the lone Knight-Errant Severian.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Wolf_Mother_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Serious faction error in the manifest: nothing to do with the Space Wolves or Fenrisian tradition. The 'Wolf' of the title is Severian, a former Luna Wolf now serving Malcador as a Knight-Errant. Protagonist is Alivia Sureka, a Perpetual. Both 'Knights-Errant' and 'Perpetuals' are already in the site's faction vocabulary. Date left at 009.M31, immediately after Vengeful Spirit (008-009.M31 here), which the story follows directly."
+    },
+    {
+      "bookKey": "war-harrowing",
+      "verdict": "corrected",
+      "title": "THE HARROWING",
+      "author": "Rob Sanders",
+      "type": "Short Story",
+      "legions": ["Alpha Legion", "Mechanicum"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Dartarion Varix", "55/Phi-silon", "Manus Cruciam"],
+      "blurb": "Alpha Legion strike commander Dartarion Varix and his sleeper cell wake early aboard the Mechanicum ark freighter Omnissiax, which is carrying the Warmonger Titan Abyssus Edax and a new Legio Perennia battlegroup. Diverted to relieve the Alpha Legion's own rebellion on Callistra Mundi, the ship has to be seized now rather than en route to Terra. Varix sows confusion, wakes a princeps to claim the Titan, and turns the freighter's guns on its escort.",
+      "blurbSafe": "A garrison world is in revolt and a Mechanicum ark freighter is diverted to relieve it, a Titan battlegroup still in its hold. The Alpha Legion do not fight the way other Legions fight, and the loyalists aboard are about to find out how.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Harrowing_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Confirms the audit flag: this is an Alpha Legion infiltration, not a generic survival-horror piece. 'Various' replaced with Alpha Legion and Mechanicum, which fixes a traitor-filter miss. Note Lexicanum has a separate page for a 41st-millennium Khornate warband also called The Harrowing, which is unrelated. Date unverified; manifest 009.M31 left unchanged."
+    },
+    {
+      "bookKey": "war-all-remains",
+      "verdict": "corrected",
+      "title": "ALL THAT REMAINS",
+      "author": "James Swallow",
+      "type": "Short Story",
+      "legions": ["Imperial Army"],
+      "timeline": "009.M31",
+      "mainCharacters": [],
+      "blurb": "As Horus's rebellion consumes the galaxy the dead run into the billions, but far more are pulled off the front line to be treated and eventually returned to the fight. Aboard one hospital vessel cast adrift in the warp, a handful of ragged Imperial Army soldiers make a discovery that answers the question of why so many of their wounded comrades were never seen again. No Space Marine Legion features.",
+      "blurbSafe": "For every soldier killed in the Heresy, many more are shipped away from the front to be patched up and sent back. On one such vessel, lost in the warp, a few Imperial Army survivors start wondering where all the other casualties went.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/All_That_Remains_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "medium",
+      "notes": "'Various' replaced with Imperial Army, which the Black Library cover description names explicitly. No synopsis exists on Lexicanum and I found no other reliable source, so the blurb deliberately stops where the publisher's own description stops and does not state what the soldiers find or who they are. No named characters could be established, hence the empty mainCharacters array. Date unverified; manifest 009.M31 left unchanged."
+    },
+    {
+      "bookKey": "war-lions-command",
+      "verdict": "corrected",
+      "title": "BY THE LION'S COMMAND",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": ["Dark Angels", "Death Guard"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Corswain", "Typhon"],
+      "blurb": "After the Dark Angels fleet splits in the aftermath of Perditus, Seneschal Corswain continues hunting the Death Guard forces under Typhon. The chase becomes a tense standoff in orbit above Terra Nullius, a world claiming independence from the Imperium. Corswain must either bend its population to his cause or make an example of them for every other world tempted to secede. In this war there are no innocent bystanders.",
+      "blurbSafe": "Corswain of the Dark Angels pursues Typhon's Death Guard across a splintering Imperium and ends up in a standoff above a world that wants no part of either side. Neutrality is not a position the Lion's seneschal finds easy to accept.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/By_the_Lion's_Command_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Death Guard added: they are the quarry throughout. The manifest blurb ('follow their Primarch's orders without question', 'absolute obedience') inverts the actual tension, which is Corswain acting alone, far from the Lion, on a decision the Lion has not made for him. Plot from the Black Library cover description; Lexicanum carries no fuller synopsis. Date unverified; 009.M31 is consistent with this site's placement of The Unremembered Empire and has been left."
+    },
+    {
+      "bookKey": "war-black-oculus",
+      "verdict": "corrected",
+      "title": "BLACK OCULUS",
+      "author": "John French",
+      "type": "Short Story",
+      "legions": ["Iron Warriors"],
+      "timeline": "010-011.M31",
+      "mainCharacters": ["Prime Navigator of the Iron Warriors flagship", "Perturabo"],
+      "blurb": "Told as the monologue of the Prime Navigator of Perturabo's flagship, this recounts how the Iron Warriors escaped the collapsing Iydris system by steering straight into the singularity at its heart. The crossing threw the fleet clear across the warp to the Tallarn system and left the Navigators irreversibly deranged by what they perceived. The narrator now speaks from a hidden place beneath Tallarn's surface, warning of humanity's insignificance.",
+      "blurbSafe": "One of the Iron Warriors' Navigators recounts guiding Perturabo's fleet through something no vessel should have survived. He is speaking from somewhere he should not be, and he has a warning about how little any of it matters.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Black_Oculus_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "'Various' replaced with Iron Warriors, fixing another traitor-filter miss. Not a void-battle story: it is a first-person Navigator monologue bridging Angel Exterminatus and the Battle of Tallarn. No named character exists for the narrator, so mainCharacters uses a descriptive label. Date left at the manifest range, which brackets this site's Tallarn entry at 010-012.M31."
+    },
+    {
+      "bookKey": "war-twisted",
+      "verdict": "corrected",
+      "title": "TWISTED",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Sons of Horus"],
+      "timeline": "010.M31",
+      "mainCharacters": ["Maloghurst", "Horus"],
+      "blurb": "Maloghurst the Twisted, Horus's crippled equerry, keeps rebuffing the Davinite priests aboard the Vengeful Spirit while a daemon of oil and smoke stalks him for a body. He goes to the Davinites for warding rituals, and they chain him to an eight-pointed cross to invite the possession themselves. Maloghurst breaks free, has them slaughtered, banishes the daemon, and reports another quietly foiled plot to an indifferent Warmaster.",
+      "blurbSafe": "Despised as a cripple inside his own Legion, Maloghurst survives on the Warmaster's favour and his own guile. When something aboard the Vengeful Spirit begins hunting him, the only allies left are ones he has spent years refusing.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Twisted_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Confirms the audit flag: this is a Maloghurst story, and 'Twisted' is his epithet, not a description of corruption in general. 'Various' replaced with Sons of Horus, fixing a traitor-filter miss. Date unverified; manifest 010.M31 left unchanged."
+    },
+    {
+      "bookKey": "war-hands-emperor",
+      "verdict": "corrected",
+      "title": "HANDS OF THE EMPEROR",
+      "author": "Rob Sanders",
+      "type": "Short Story",
+      "legions": ["Custodian Guard", "Imperial Fists"],
+      "timeline": "012.M31",
+      "mainCharacters": ["Enobar Stentonox"],
+      "blurb": "Shield-Captain Enobar Stentonox of the Custodian Guard has the watch over the Imperial Palace when a full alert sounds: secure airspace over Terra has been breached, not by traitors but by the Emperor's other praetorians, the Imperial Fists. With neither side willing to accept the blame for the mistake, the disputed skies become a battlefield between two entirely loyal forces.",
+      "blurbSafe": "A Custodian shield-captain stands watch over the Imperial Palace when the alarm goes up that the skies above Terra have been violated. The intruders are not who anyone expected, and neither party is inclined to back down.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Hands_of_the_Emperor_(Short_Story)",
+        "https://wh40k.lexicanum.com/wiki/War_Without_End_(Anthology)"
+      ],
+      "confidence": "high",
+      "notes": "Confirms the audit flag: the conflict is loyalist on loyalist, Custodian Guard against Imperial Fists over Terra, not Custodians striking at traitors as the manifest blurb said. Imperial Fists added. Plot from the Black Library cover description; Lexicanum has no fuller synopsis. Date unverified; manifest 012.M31 left unchanged, though the story could plausibly sit anywhere in the Palace fortification period."
+    }
+  ]
+}

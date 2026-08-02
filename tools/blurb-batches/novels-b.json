@@ -1,0 +1,217 @@
+{
+ "batch": "novels-b",
+ "anthologies": null,
+ "count": 13,
+ "entries": [
+  {
+   "bookKey": "fulgrim",
+   "number": "V",
+   "title": "FULGRIM",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "006.M31",
+   "currentLegions": [
+    "Emperor's Children",
+    "Iron Hands"
+   ],
+   "currentBlurb": "The Emperor's Children, devoted to perfection in all things, discover a daemonic blade on a lost world. Fulgrim becomes possessed by the sword's malevolent spirit, and Slaanesh's corruption spreads through the Legion. Their pursuit of excellence becomes twisted into depravity and excess. The climax comes when Fulgrim murders his brother Ferrus Manus of the Iron Hands at Isstvan V, fully embracing damnation. The daemon and Primarch merge, creating a being of terrible beauty and horror.",
+   "currentBlurbSafe": "The Emperor's Children discover a daemonic blade on a lost world, and Fulgrim becomes possessed by its malevolent spirit. As Slaanesh's corruption spreads through the Legion, their pursuit of perfection twists into depravity and excess, culminating in a tragic confrontation with Ferrus Manus at Isstvan V."
+  },
+  {
+   "bookKey": "vulkan-lives",
+   "number": "XXVI",
+   "title": "VULKAN LIVES",
+   "author": "Nick Kyme",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "006-007.M31",
+   "currentLegions": [
+    "Salamanders",
+    "Night Lords"
+   ],
+   "currentBlurb": "Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan is a Perpetual—he cannot truly die. Each time Curze kills him, he returns, driving the Night Haunter to madness. Vulkan's resilience and inherent nobility stand in stark contrast to Curze's nihilism. His sons search desperately for their lost Primarch while Vulkan himself endures endless death and rebirth, testing the limits of even a Primarch's sanity.",
+   "currentBlurbSafe": "Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan possesses a unique ability—each time Curze kills him, he returns. This endless cycle tests both Primarchs, as Vulkan's resilience confronts Curze's nihilism."
+  },
+  {
+   "bookKey": "deliverance-lost",
+   "number": "XVIII",
+   "title": "DELIVERANCE LOST",
+   "author": "Gav Thorpe",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Raven Guard",
+    "Alpha Legion"
+   ],
+   "currentBlurb": "Decimated at Isstvan V, Corvus Corax returns to Deliverance with a handful of survivors. To rebuild his Legion quickly, he recovers gene-tech from the Emperor's laboratories beneath the Himalazian Mountains. But Alpha Legion operatives have infiltrated his ranks, and they sabotage the new gene-seed. The results are horrific—mutated abominations instead of Astartes. Corax is forced to mercy-kill his own sons. The tragedy will haunt him until his eventual disappearance into the Eye of Terror.",
+   "currentBlurbSafe": "Decimated at Isstvan V, Corvus Corax seeks to rebuild his Legion using gene-tech from the Emperor's laboratories. But Alpha Legion operatives have infiltrated his ranks, threatening to sabotage the Raven Guard's desperate attempt at salvation."
+  },
+  {
+   "bookKey": "the-crimson-king",
+   "number": "XLIV",
+   "title": "THE CRIMSON KING",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Thousand Sons"
+   ],
+   "currentBlurb": "After the fall of Prospero, Magnus and his Thousand Sons find themselves on the Planet of the Sorcerers within the Eye of Terror. Magnus is broken, fragmented into shards scattered across reality. Ahriman and the Thousand Sons desperately try to restore their Primarch while navigating the deadly politics of Tzeentch's realm. Magnus must accept that his quest for knowledge has damned him and his Legion, and choose whether to serve Horus or chart his own dark path.",
+   "currentBlurbSafe": "After Prospero's fall, Magnus and his Thousand Sons find themselves on the Planet of the Sorcerers within the Eye of Terror. Magnus is broken, his essence fragmented across reality, and Ahriman must navigate the deadly politics of Tzeentch's realm while trying to restore their Primarch."
+  },
+  {
+   "bookKey": "the-damnation-of-pythos",
+   "number": "XXX",
+   "title": "THE DAMNATION OF PYTHOS",
+   "author": "David Annandale",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Iron Hands",
+    "Salamanders",
+    "Raven Guard"
+   ],
+   "currentBlurb": "Survivors from the Dropsite Massacre seek refuge on the verdant world of Pythos. But the planet is a trap—a daemonic plot by the Chaos Gods to create a warp rift. Iron Hands, consumed by rage after Ferrus Manus's death, pursue vengeance without wisdom. Salamanders and Raven Guard struggle to maintain their honor while surrounded by death. Pythos becomes a daemon world, and those who sought sanctuary find only damnation. It stands as a grim testament to how Chaos exploits humanity's weaknesses.",
+   "currentBlurbSafe": "Survivors from the Dropsite Massacre seek refuge on the verdant world of Pythos, but the planet harbors a dark secret. Iron Hands consumed by rage pursue vengeance, while Salamanders and Raven Guard struggle to maintain their honor in a world that may be a trap."
+  },
+  {
+   "bookKey": "nemesis",
+   "number": "XIII",
+   "title": "NEMESIS",
+   "author": "James Swallow",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Officio Assassinorum"
+   ],
+   "currentBlurb": "Malcador the Sigillite authorizes a desperate gambit: deploy a team of elite assassins to kill Horus before he can march on Terra. The Execution Force includes operatives from every Assassin Clade, each a master of death. But Horus has his own weapon—a supernatural assassin forged by the Chaos Gods. The shadow war culminates in a deadly game of hunter and hunted, where the galaxy's most lethal killers face off. Even the Emperor's finest may not be enough to stop a Warmaster blessed by the dark gods.",
+   "currentBlurbSafe": "Malcador the Sigillite authorizes a desperate gambit: deploy elite assassins to kill Horus before he can march on Terra. But Horus has his own weapon—a supernatural assassin forged by the Chaos Gods. The shadow war culminates in a deadly game of hunter and hunted."
+  },
+  {
+   "bookKey": "know-no-fear",
+   "number": "XIX",
+   "title": "KNOW NO FEAR",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Ultramarines",
+    "Word Bearers"
+   ],
+   "currentBlurb": "The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines, proud and unprepared for treachery, are devastated by orbital bombardment and brutal ground assaults. Roboute Guilliman survives being sucked into space, his transhuman physiology barely preserving him. Though the Ultramarines eventually repel the invasion, Calth is left a poisoned, irradiated wreck. The Mark of Calth becomes a scar worn by the Ultramarines forever, a reminder that even the most noble can be caught unprepared by treachery.",
+   "currentBlurbSafe": "The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines face devastating orbital bombardment and brutal ground assaults, unprepared for treachery from those they considered brothers in arms."
+  },
+  {
+   "bookKey": "battle-for-the-abyss",
+   "number": "VIII",
+   "title": "BATTLE FOR THE ABYSS",
+   "author": "Ben Counter",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Word Bearers",
+    "Ultramarines",
+    "Space Wolves",
+    "World Eaters",
+    "Thousand Sons"
+   ],
+   "currentBlurb": "The Word Bearers launch the Furious Abyss, a massive warship designed to destroy Macragge and cripple the Ultramarines before the Battle of Calth. A ragtag group of loyalist Space Marines from various Legions—including a World Eater still loyal to the Emperor—pursue the vessel through the warp. They must overcome their differences and stop the Furious Abyss before it reaches Ultramar. In a desperate boarding action, they sabotage the ship, but the cost is high. The mission succeeds, but barely—and Macragge is warned.",
+   "currentBlurbSafe": "The Word Bearers launch the Furious Abyss, a massive warship designed to destroy Macragge and cripple the Ultramarines. A ragtag group of loyalist Space Marines from various Legions pursue the vessel through the warp, racing to stop it before it reaches Ultramar."
+  },
+  {
+   "bookKey": "angel-exterminatus",
+   "number": "XXIII",
+   "title": "ANGEL EXTERMINATUS",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "Iron Warriors",
+    "Emperor's Children"
+   ],
+   "currentBlurb": "Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo, master of siege warfare but always bitter at being overlooked, seeks ancient weapons to use against the Emperor. But Fulgrim has darker plans—he intends to ascend to daemonhood by sacrificing Perturabo. The Iron Warriors Primarch barely escapes the trap, emerging with his paranoia and bitterness magnified. Fulgrim achieves his goal, becoming a daemon prince of Slaanesh. The alliance between the Legions fractures further.",
+   "currentBlurbSafe": "Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo seeks ancient weapons, but Fulgrim has darker plans involving ascension and sacrifice. The alliance between the Iron Warriors and Emperor's Children will be tested in ways neither anticipated."
+  },
+  {
+   "bookKey": "betrayer",
+   "number": "XXIV",
+   "title": "BETRAYER",
+   "author": "Aaron Dembski-Bowden",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "World Eaters",
+    "Word Bearers",
+    "Ultramarines"
+   ],
+   "currentBlurb": "Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's Five Hundred Worlds. Angron, driven by the Butcher's Nails implanted in his brain, is dying. Lorgar performs a dark ritual, elevating Angron to become a Daemon Primarch of Khorne at the cost of countless lives. Captain Khârn of the World Eaters witnesses his Legion's complete fall to madness. Guilliman desperately tries to contain the devastation, but the Ultramarines are being bled white across a hundred battlefields.",
+   "currentBlurbSafe": "Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's worlds. Angron, driven by the Butcher's Nails and dying, becomes the focus of a dark ritual. Captain Khârn witnesses his Legion's descent into madness while Guilliman desperately tries to contain the devastation."
+  },
+  {
+   "bookKey": "scars",
+   "number": "XXVIII",
+   "title": "SCARS",
+   "author": "Chris Wraight",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "007.M31",
+   "currentLegions": [
+    "White Scars"
+   ],
+   "currentBlurb": "The White Scars, far from Terra prosecuting the Great Crusade, learn of the Heresy late. Jaghatai Khan, the Warhawk, must decide which side to join. His Legion is divided—some wish to join Horus, others remain loyal. The Khan is close to both Magnus and Horus, but when he learns the truth about the Word Bearers' manipulation and Horus's true allegiance to Chaos, his decision is made. The White Scars will ride for Terra. But first, they must purge the traitors within their own ranks.",
+   "currentBlurbSafe": "The White Scars, far from Terra prosecuting the Great Crusade, learn of the Heresy late. Jaghatai Khan must decide which side to join as his Legion divides between those loyal to the Emperor and those who would follow Horus. The Khan's choice will define the White Scars forever."
+  },
+  {
+   "bookKey": "vengeful-spirit",
+   "number": "XXIX",
+   "title": "VENGEFUL SPIRIT",
+   "author": "Graham McNeill",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "008-009.M31",
+   "currentLegions": [
+    "Sons of Horus"
+   ],
+   "currentBlurb": "Horus returns to Molech, a Knight World where he once fought beside the Emperor. He seeks entry to the same warp gate the Emperor used millennia ago to bargain with the Chaos Gods for power. Defended by loyalist Titans and Knights, Molech becomes a slaughterhouse. Horus succeeds in entering the gate and emerges transformed, wielding powers that rival the Emperor Himself. The Warmaster is now truly a match for his father, setting the stage for their final confrontation. But the power comes at a terrible price—Horus is no longer truly human.",
+   "currentBlurbSafe": "Horus returns to Molech, a Knight World where he once fought beside the Emperor. He seeks entry to the same warp gate the Emperor used to bargain with the Chaos Gods. Defended by loyalist forces, Molech becomes a slaughterhouse as Horus pursues ultimate power."
+  },
+  {
+   "bookKey": "the-unremembered-empire",
+   "number": "XXVII",
+   "title": "THE UNREMEMBERED EMPIRE",
+   "author": "Dan Abnett",
+   "anthology": null,
+   "series": null,
+   "currentType": "",
+   "currentTimeline": "009.M31",
+   "currentLegions": [
+    "Ultramarines",
+    "Dark Angels",
+    "Blood Angels"
+   ],
+   "currentBlurb": "Believing Terra has fallen, Roboute Guilliman establishes Imperium Secundus on Macragge, a contingency government to preserve humanity. When Lion El'Jonson and Sanguinius arrive, tensions rise. The Lion questions Guilliman's motives, fearing ambition for the throne. They crown Sanguinius as Emperor instead, but the entire project is based on a lie. When they learn Terra still stands, the Imperium Secundus must end. The three brothers prepare to race to Terra—but the Ruinstorm, a warp storm engineered by Chaos, bars their way.",
+   "currentBlurbSafe": "Believing Terra has fallen, Roboute Guilliman establishes Imperium Secundus on Macragge. When Lion El'Jonson and Sanguinius arrive, tensions rise as questions of loyalty and ambition threaten to fracture the alliance. The three Primarchs must decide humanity's future."
+  }
+ ]
+}

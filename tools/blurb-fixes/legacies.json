@@ -1,0 +1,367 @@
+{
+  "batch": "legacies",
+  "entries": [
+    {
+      "bookKey": "legacies-serpent",
+      "verdict": "corrected",
+      "title": "SERPENT",
+      "author": "John French",
+      "type": "Short Story",
+      "legions": ["Various"],
+      "timeline": "004.M31",
+      "mainCharacters": ["Thoros"],
+      "blurb": "A very short piece first printed in the programme for the 2013 Horus Heresy Weekender. Thoros, a priest of the serpent cult of Davin, breaks in on a gathering of the Warmaster's new religion and calls openly on the favour of his patron powers. The raw display of the Primordial Truth cows the assembled faithful and casts out the pretenders, establishing the Davinites as the true masters of the cult that now underpins the traitor cause.",
+      "blurbSafe": "A Davinite cult priest confronts his rivals inside the Warmaster's fledgling religion, in a brief and unsettling glimpse of how Chaos worship took hold on the traitor side.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/john-french/serpent-mp3.html",
+        "https://www.goodreads.com/en/book/show/18907513-serpent"
+      ],
+      "confidence": "medium",
+      "notes": "The current data assigning this to the Alpha Legion appears to be a guess from the title. No Legiones Astartes force is identifiable in any source; the story is about the Davinite priesthood, so legions is set to the existing catalogue value 'Various' (the site vocabulary has no Chaos-cult faction). Format confirmed as prose short story: it was printed in the Weekender 2013 programme, and Black Library's audio release is an unabridged 12-minute audiobook reading rather than an audio drama. No source anchors the in-universe date, so 004.M31 is retained unverified."
+    },
+    {
+      "bookKey": "legacies-hunters-moon",
+      "verdict": "corrected",
+      "title": "HUNTER'S MOON",
+      "author": "Guy Haley",
+      "type": "Audio Drama",
+      "legions": ["Space Wolves", "Alpha Legion"],
+      "timeline": "006.M31",
+      "mainCharacters": [],
+      "blurb": "An audio drama set on the primitive ocean world of Pelago. The Space Wolves, appointed by the Emperor as sanctioned executioners of the Legions, have been quietly keeping watch on Alpharius and the XX Legion. A stolen Alpha Legion dropship crashes on Pelago carrying news of the war erupting among the stars, along with a lone survivor and the traitors hunting him, and the Wolves must face whether they could truly carry out a death sentence on one of the Emperor's own sons.",
+      "blurbSafe": "On a remote ocean world, Space Wolves charged with watching the secretive XX Legion have their long vigil broken by a crashed dropship and the news it brings.",
+      "changed": ["type", "timeline", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/guy-haley/hunters-moon-mp3.html",
+        "https://wh40k.lexicanum.com/wiki/Hunter's_Moon_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Confirmed as flagged by the prior audit: Space Wolves versus Alpha Legion, not White Scars. Originally a 35-minute audio drama released on CD paired with Thief of Revelations, later collected in prose. Timeline moved from 004.M31 to 006.M31 because the plot turns on news of the Heresy having already broken; that is a reasoned anchor rather than a dated source, so treat the date as medium confidence."
+    },
+    {
+      "bookKey": "legacies-thief-revelations",
+      "verdict": "corrected",
+      "title": "THIEF OF REVELATIONS",
+      "author": "Graham McNeill",
+      "type": "Audio Drama",
+      "legions": ["Thousand Sons"],
+      "timeline": "005.M31",
+      "mainCharacters": ["Magnus the Red", "Ahzek Ahriman"],
+      "blurb": "An audio drama set after the burning of Prospero. Magnus the Red and Ahzek Ahriman cast their psychic sight across the galaxy, hunting any clue to what the future holds and where the broken XV Legion's allegiance should finally rest. Magnus broods over the Legion's direction while Ahriman concentrates on arresting its decline, and the gap between primarch and Chief Librarian starts to open into the split that will define them both.",
+      "blurbSafe": "In the wake of Prospero, Magnus the Red and Ahzek Ahriman use their psychic gifts to search for the Thousand Sons' future, and discover they do not read it the same way.",
+      "changed": ["type", "timeline", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/graham-mcneill/thief-of-revelations-mp3.html",
+        "https://grimdarkarchive.com/book/thief-of-revelations/"
+      ],
+      "confidence": "medium",
+      "notes": "Legion was already correct. Format corrected to Audio Drama (approximately 35 minutes, released November 2013, full cast). Timeline moved from 004.M31 to 005.M31 because every source places the story after the fall of Prospero, which this site dates at 004-005.M31 (PROSPERO BURNS). The exact year is not stated in any source, so the date is medium confidence."
+    },
+    {
+      "bookKey": "legacies-veritas-ferrum",
+      "verdict": "corrected",
+      "title": "VERITAS FERRUM",
+      "author": "David Annandale",
+      "type": "Audio Drama",
+      "legions": ["Iron Hands"],
+      "timeline": "006.M31",
+      "mainCharacters": [],
+      "blurb": "An audio drama named for the Iron Hands strike cruiser that reaches the Isstvan system with the second wave of the loyalist fleet. Battered by the traitors and forced to withdraw, the ship's command must weigh the survival of the vessel and its crew against the survivors of the Dropsite Massacre calling for rescue. It is a direct prequel to the novel The Damnation of Pythos.",
+      "blurbSafe": "An Iron Hands warship arrives at Isstvan with the second wave and, driven back by the traitors, its crew faces a hard decision when survivors on the ground beg for aid.",
+      "changed": ["type", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/david-annandale/veritas-ferrum-mp3.html",
+        "https://wh40k.lexicanum.com/wiki/Veritas_Ferrum_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Legion and date were already correct. Format corrected: this was an audio drama released in the 2012 Black Library Advent Calendar, later adapted to prose for this anthology. The current blurb's framing around Iron Hands doctrine is generic; the actual story is a shipboard rescue dilemma at Isstvan V. No viewpoint character is named in any source I could reach, so mainCharacters is left empty rather than guessed."
+    },
+    {
+      "bookKey": "legacies-strike-fade",
+      "verdict": "corrected",
+      "title": "STRIKE AND FADE",
+      "author": "Guy Haley",
+      "type": "Audio Drama",
+      "legions": ["Salamanders", "Night Lords"],
+      "timeline": "006.M31",
+      "mainCharacters": [],
+      "blurb": "A short audio drama set in the aftermath of the Isstvan V massacre. A handful of surviving Salamanders, cut off and hunted across the ruined dropsite, lay an ambush for a Night Lords warband that believes it is stalking easy prey. Revenge counts for more with them than survival does, and the trap they spring costs some of them sooner than they expected.",
+      "blurbSafe": "Stranded Salamanders survivors of the Dropsite Massacre turn the tables on their pursuers, setting an ambush for a Night Lords warband roaming the ruined battlefield.",
+      "changed": ["type", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/guy-haley/strike-and-fade-mp3.html",
+        "https://wh40k.lexicanum.com/wiki/Strike_and_Fade_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Serious error corrected: this is Salamanders versus Night Lords, not Raven Guard. The prior data appears to have inferred 'guerrilla tactics' from the title and attached the wrong shattered Legion. Adding Night Lords also puts a traitor Legion on the record for this entry. Format corrected to Audio Drama (2012 Black Library Advent Calendar, roughly 10 minutes)."
+    },
+    {
+      "bookKey": "legacies-brotherhood-storm",
+      "verdict": "corrected",
+      "title": "BROTHERHOOD OF THE STORM",
+      "author": "Chris Wraight",
+      "type": "Novella",
+      "legions": ["White Scars"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Shiban Khan", "Jaghatai Khan"],
+      "blurb": "A novella and the first substantial look at the Heresy-era White Scars, written as a direct prequel to the novel Scars. On the ork-held world of Chondax, Shiban Khan leads his warriors in the fast, joyous war of speed and lance the V Legion prefers, while a Stormseer wrestles with his waking gifts and an outsider struggles to keep the Legion supplied. Half the galaxy has already chosen sides, and Jaghatai Khan's silence is starting to look like a choice of its own.",
+      "blurbSafe": "On the ork battlefields of Chondax, Shiban Khan leads his White Scars in a war of speed and lance, while the rest of the Imperium waits to learn where Jaghatai Khan stands.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://www.trackofwords.com/2014/11/13/brotherhood-of-the-storm-chris-wraight/",
+        "https://grimdarkarchive.com/book/brotherhood-of-the-storm/"
+      ],
+      "confidence": "high",
+      "notes": "Confirmed as flagged: White Scars and Jaghatai Khan, and confirmed as the anthology's only novella. Type, legions and timeline were already right. The blurb is rewritten because the current one describes an allegiance crisis, whereas the novella is actually the Chondax ork campaign with Shiban Khan as the main viewpoint. Orks feature heavily but there is no Ork entry in the site's faction vocabulary, so they are described in the blurb instead. The 007.M31 date is retained; Chondax runs immediately into Scars, which the site also dates 007.M31."
+    },
+    {
+      "bookKey": "legacies-honour-dead",
+      "verdict": "corrected",
+      "title": "HONOUR TO THE DEAD",
+      "author": "Gav Thorpe",
+      "type": "Audio Drama",
+      "legions": ["Collegia Titanica", "Ultramarines"],
+      "timeline": "007.M31",
+      "mainCharacters": [],
+      "blurb": "An audio drama set during the burning of Calth. Traitor Battle Titans of the Fire Masters stalk the streets of the city of Ithraca, intent on massacring the fleeing civilian population for their new dark masters, and only the loyalist engines of Legio Praesagius, the True Messengers, stand against them. With the nearby Ultramarines scattered, the story is told largely from ground level, following a mortal woman and her family caught beneath the god-machines.",
+      "blurbSafe": "As Calth burns, traitor and loyalist Titan legions duel across the ruined city of Ithraca, and the civilians trapped beneath them have to fend for themselves.",
+      "changed": ["type", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/gav-thorpe/honour-to-the-dead-mp3.html",
+        "https://grimdarkarchive.com/book/honour-to-the-dead/"
+      ],
+      "confidence": "high",
+      "notes": "Substantially wrong before: this is a Titan Legions story, not an Ultramarines revenge tale. Legio Praesagius (True Messengers, loyalist) against the Fire Masters (traitor) over Ithraca on Calth, with a civilian family as the human viewpoint. Ultramarines are present only as scattered offscreen forces. Collegia Titanica added as the primary faction. Format corrected to Audio Drama (roughly 74 minutes, full cast, first released 2013). No named viewpoint character is confirmed by a source, so mainCharacters is left empty."
+    },
+    {
+      "bookKey": "legacies-butchers-nails",
+      "verdict": "corrected",
+      "title": "BUTCHER'S NAILS",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Audio Drama",
+      "legions": ["World Eaters", "Word Bearers"],
+      "timeline": "007-008.M31",
+      "mainCharacters": ["Angron", "Lorgar"],
+      "blurb": "An audio drama in which Angron and Lorgar travel together on a covert mission of the Word Bearers primarch's devising. The World Eaters' berserk fury, and the endless grinding of the Butcher's Nails in Angron's skull, draw xenos raiders down on them, and the killing only feeds him further. Lorgar watches, tries to understand the ruin in his brother's head, and reads in it the portents of the Blood God's son.",
+      "blurbSafe": "Angron and Lorgar set out together on a secretive voyage, and the World Eaters primarch's rage soon attracts attention from xenos raiders who will not let him pass.",
+      "changed": ["type", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/aaron-dembski-bowden/butchers-nails-mp3.html",
+        "https://grimdarkarchive.com/book/butchers-nails/"
+      ],
+      "confidence": "high",
+      "notes": "The existing blurb was broadly right about the Angron and Lorgar relationship. Corrected: format is Audio Drama (August 2012), and Word Bearers added alongside World Eaters since Lorgar and his Legion are half the story. Timeline left at 007-008.M31; the story sits just ahead of Betrayer, which this site dates 007.M31, so the existing range already covers it."
+    },
+    {
+      "bookKey": "legacies-kryptos",
+      "verdict": "corrected",
+      "title": "KRYPTOS",
+      "author": "Graham McNeill",
+      "type": "Short Story",
+      "legions": ["Raven Guard", "Iron Hands", "Mechanicum"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Nykona Sharrowkyn", "Sabik Wayland"],
+      "blurb": "A short story set after the Dropsite Massacre on the doomed forge world of Cavor Sarta. Nykona Sharrowkyn of the Raven Guard and Sabik Wayland of the Iron Hands infiltrate Dark Mechanicum territory to seize the enemy's most valued asset, the strange thing called the Kryptos, by which the traitors encode their fleet communications. It explains how the Shattered Legions came by the asset they use in Angel Exterminatus.",
+      "blurbSafe": "Two veterans of the shattered loyalist Legions, one Raven Guard and one Iron Hand, strike deep into Dark Mechanicum territory on a dying forge world to take the enemy's most prized possession.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/the-horus-heresy/quick-reads/kryptos-ebook.html",
+        "https://www.goodreads.com/en/book/show/15704226-kryptos",
+        "https://graham-mcneill.com/kryptos/"
+      ],
+      "confidence": "high",
+      "notes": "Confirmed as flagged: Raven Guard and Iron Hands at Cavor Sarta, nothing to do with Mars or the Mechanicum civil war. The prior entry listed Mechanicum alone and set the story on Mars, which stripped both loyalist Legions off the record. Mechanicum is retained because the antagonists are the Dark Mechanicum of Cavor Sarta. Format (Short Story, June 2012 eBook) and date were already correct. Protagonist names cross-checked against a Goodreads plot summary and Graham McNeill's own site."
+    },
+    {
+      "bookKey": "legacies-wolfs-claw",
+      "verdict": "corrected",
+      "title": "WOLF'S CLAW",
+      "author": "Chris Wraight",
+      "type": "Audio Drama",
+      "legions": ["Space Wolves", "Alpha Legion"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Bjorn"],
+      "blurb": "A short audio drama set in the Alaxxes Nebula, where the VI Legion has gone to ground after being caught by the renegade Alpha Legion. The young pack leader Bjorn, freshly maimed and now called the One-Handed by his warriors, is desperate to fight again, but the Iron Priests have little time for replacing a proud legionary's limbs. He goes looking for new claws of his own, and for traitor blood to christen them in.",
+      "blurbSafe": "Sheltering in a nebula after a mauling by the Alpha Legion, a young and newly maimed Space Wolves pack leader sets out to find his own way back into the fight.",
+      "changed": ["type", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/chris-wraight/wolfs-claw-mp3.html",
+        "https://grimdarkarchive.com/book/wolfs-claw/"
+      ],
+      "confidence": "high",
+      "notes": "The current blurb was pure title-guessing. This is a specific Bjorn origin piece: how he gained his claw at Alaxxes. Alpha Legion added as the antagonist Legion. Format corrected to Audio Drama (March 2014, roughly 10 minutes) - Black Library's own page labels it 'A Horus Heresy audio drama', in contrast to Lone Wolf which it labels an unabridged audiobook."
+    },
+    {
+      "bookKey": "legacies-warmaster",
+      "verdict": "corrected",
+      "title": "WARMASTER",
+      "author": "John French",
+      "type": "Audio Drama",
+      "legions": ["Sons of Horus"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Horus"],
+      "blurb": "A nine-minute audio drama delivered almost entirely as a single monologue. In the strategium of the Vengeful Spirit, Horus lays out his assault on his father's Imperium, weighing his brothers loyal and traitorous alike, his ambitions for the war and the fears he admits to nobody. The piece turns dark when the identity of the listener he has been addressing all along is revealed.",
+      "blurbSafe": "Alone in the strategium of his flagship, the Warmaster talks through his brothers, his war and his private misgivings, in a short piece carried almost entirely by his own voice.",
+      "changed": ["type", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/john-french/warmaster-mp3.html",
+        "https://grimdarkarchive.com/book/warmaster/"
+      ],
+      "confidence": "medium",
+      "notes": "Legion and date left as they were. Format corrected to Audio Drama (December 2012, roughly 9 minutes). Sources confirm there is a twist about who Horus is speaking to but none of them state who it is, so the blurb notes the twist exists without inventing the answer. No source anchors the in-universe year, so 008.M31 is retained unverified."
+    },
+    {
+      "bookKey": "legacies-divine-word",
+      "verdict": "corrected",
+      "title": "THE DIVINE WORD",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": ["Raven Guard", "Imperial Army"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Marcus Valerius"],
+      "blurb": "A short story following Marcus Valerius, commander of the Therion Cohort, fighting alongside the Raven Guard. A lifelong adherent of the Imperial Truth who has always scorned those who would make a god of the Emperor, Valerius acts on a sudden flash of intuition that saves his troops from annihilation against overwhelming odds. Badly shaken, he turns to the forbidden Lectitio Divinitatus, and the first seeds of the Imperial Church are sown.",
+      "blurbSafe": "An Imperial Army officer serving beside the Raven Guard, and a firm believer in the Imperial Truth, finds his certainties tested when instinct saves his command from destruction.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/gav-thorpe/the-divine-word-mp3.html",
+        "https://grimdarkarchive.com/book/the-divine-word/"
+      ],
+      "confidence": "high",
+      "notes": "Serious error corrected: this has nothing to do with the Word Bearers. It is a loyalist story about Marcus Valerius of the Therion Cohort serving with the Raven Guard, and the origins of Emperor-worship. Leaving it tagged Word Bearers would place a loyalist story on the traitor side of any faction filter. Format kept as Short Story (22 pages, July 2013); the Black Library MP3 is an unabridged reading of the prose, not an audio drama. Date left unchanged as no source anchors it."
+    },
+    {
+      "bookKey": "legacies-kharn",
+      "verdict": "corrected",
+      "title": "KHÂRN: THE EIGHTFOLD PATH",
+      "author": "Anthony Reynolds",
+      "type": "Audio Drama",
+      "legions": ["World Eaters"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Khârn"],
+      "blurb": "An audio drama set in the fighting pits aboard the World Eaters flagship Conqueror. Khârn and his brothers stage ever bloodier contests of carnage against one another as the Butcher's Nails tighten their hold on the Legion. The XII have forsaken the Crimson Path they once walked and taken up a darker road in its place, and Khârn stands at the centre of what they are turning into.",
+      "blurbSafe": "In the fighting pits of the Conqueror, Khârn and his fellow World Eaters test themselves against each other while the Butcher's Nails reshape what the Legion is becoming.",
+      "changed": ["type", "blurb", "blurbSafe"],
+      "sources": [
+        "https://grimdarkarchive.com/book/kharn-the-eightfold-path/",
+        "https://warhammeraudio.com/khrn-the-eightfold-path-2017112213/"
+      ],
+      "confidence": "high",
+      "notes": "Confirmed as flagged: World Eaters. Legion and date unchanged. Format corrected to Audio Drama (released 8 December 2013, roughly 13 minutes, full cast). The blurb is replaced because the current one is an abstract restatement rather than the actual fighting-pit setting."
+    },
+    {
+      "bookKey": "legacies-cypher",
+      "verdict": "corrected",
+      "title": "CYPHER: GUARDIAN OF ORDER",
+      "author": "Gav Thorpe",
+      "type": "Audio Drama",
+      "legions": ["Dark Angels"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Zahariel", "Luther", "Lord Cypher"],
+      "blurb": "An audio drama set on Caliban rather than at the war front. Luther summons the young Librarian Zahariel and sends him into the unknown depths of the Northwilds in the company of Lord Cypher, keeper of the First Legion's traditions, because only a select few know what dark secret the old forests still hold. Something ancient and malevolent is stirring there just as rumours of the galactic civil war reach the home world.",
+      "blurbSafe": "On Caliban, a young Dark Angels Librarian is sent into the northern forests alongside the enigmatic Lord Cypher, to look into a secret that only a handful of the First Legion share.",
+      "changed": ["type", "blurb", "blurbSafe"],
+      "sources": [
+        "https://grimdarkarchive.com/book/cypher-guardian-of-order/",
+        "https://warhammeraudio.com/cypher-guardian-of-order-201711229/"
+      ],
+      "confidence": "medium",
+      "notes": "Legion was already right. Format corrected to Audio Drama (roughly 9 minutes, full cast). The current blurb implied a Heresy-front warrior story; it is actually a Caliban home-world piece with Zahariel as the viewpoint. Date retained at 008.M31 but flagged: the Zahariel and Luther Northwilds arc spans roughly 006-009.M31 across Fallen Angels and Angels of Caliban, and no source pins this story to a year."
+    },
+    {
+      "bookKey": "legacies-heart-conqueror",
+      "verdict": "corrected",
+      "title": "HEART OF THE CONQUEROR",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Short Story",
+      "legions": ["World Eaters", "Word Bearers"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Nisha Andrasta", "Lorgar"],
+      "blurb": "A short story first printed in the 2014 Horus Heresy Weekender programme and set after the events of Betrayer. It is told by Nisha Andrasta, the Navigator responsible for guiding Angron's flagship, who recalls the pride and purpose she felt on first taking the post and cannot reconcile it with what the ship and its Legion have since become. An unsettling encounter with Lorgar offers her no comfort at all.",
+      "blurbSafe": "The Navigator who guides Angron's flagship looks back on why she first took the post, and measures that memory against the vessel and Legion she now serves.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.trackofwords.com/2015/02/22/quick-review-heart-of-the-conqueror-aaron-dembski-bowden/",
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/mp3-the-horus-heresy-legacies-of-betrayal-eng-2022.html"
+      ],
+      "confidence": "medium",
+      "notes": "The current blurb was a generic 'descent into madness' restatement. The story is actually a mortal Navigator's first-person reflection, with Lorgar appearing. Format stays Short Story (Weekender 2014 programme, later a quick read), which is worth noting because most other Legacies entries of this length are audio dramas. Word Bearers added for Lorgar. Date left unchanged; sources place it after Betrayer (007.M31 on this site) without giving a year."
+    },
+    {
+      "bookKey": "legacies-lucius",
+      "verdict": "corrected",
+      "title": "LUCIUS: THE ETERNAL BLADEMASTER",
+      "author": "Graham McNeill",
+      "type": "Audio Drama",
+      "legions": ["Emperor's Children", "Thousand Sons"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Lucius", "Sanakht"],
+      "blurb": "An audio drama set after Fulgrim's apotheosis on Iydris scattered the III Legion. Lucius, who holds himself the finest blade in the galaxy, falls in with Sanakht of the Thousand Sons, another duellist of legendary reputation. The two take each other's measure, and the real question between them is which one stands higher in the regard of the new masters they now serve.",
+      "blurbSafe": "With the Emperor's Children scattered after their primarch's transformation, the swordsman Lucius crosses paths with a celebrated duellist of the Thousand Sons.",
+      "changed": ["type", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://grimdarkarchive.com/book/lucius-the-eternal-blade/",
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/mp3-the-horus-heresy-legacies-of-betrayal-eng-2022.html"
+      ],
+      "confidence": "medium",
+      "notes": "Confirmed as flagged: Emperor's Children. Thousand Sons added because Sanakht is the co-lead. Format corrected to Audio Drama (released 21 December 2013). Note that Black Library also lists this story as 'Lucius: The Eternal Blade'; the manifest title is retained. Date left unchanged; sources place it after Iydris (Angel Exterminatus, 007.M31 on this site) without giving a year."
+    },
+    {
+      "bookKey": "legacies-censure",
+      "verdict": "corrected",
+      "title": "CENSURE",
+      "author": "Nick Kyme",
+      "type": "Audio Drama",
+      "legions": ["Ultramarines", "Word Bearers"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Aeonid Thiel", "Kurtha Sedd"],
+      "blurb": "An audio drama set years into the Underworld War in the arcology network beneath Calth. Aeonid Thiel, formerly an honoured sergeant of the Ultramarines and never far from trouble with his own Legion, is pitted against the daemonic forces of the Word Bearers under Dark Apostle Kurtha Sedd. To get at them he has no choice but to return to the ravaged surface and brave the solar flares that have scoured all life from the world.",
+      "blurbSafe": "Deep in the arcologies beneath Calth, an Ultramarines sergeant with a gift for falling foul of his superiors faces the Word Bearers, and finds the only route open to him leads back to the lethal surface.",
+      "changed": ["type", "legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/nick-kyme/censure-mp3.html",
+        "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/mp3-the-horus-heresy-legacies-of-betrayal-eng-2022.html"
+      ],
+      "confidence": "high",
+      "notes": "Serious error corrected: this is Ultramarines versus Word Bearers on Calth, not a Salamanders story. The prior entry appears to have attached Nick Kyme's usual Legion by default. Format corrected to Audio Drama (roughly 75 minutes, full cast). Date retained at 009.M31, which is consistent with the Underworld War having 'raged for years' after Calth (007.M31 on this site)."
+    },
+    {
+      "bookKey": "legacies-bjorn",
+      "verdict": "corrected",
+      "title": "BJORN: LONE WOLF",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["Space Wolves"],
+      "timeline": "010.M31",
+      "mainCharacters": ["Bjorn", "Leman Russ"],
+      "blurb": "A very short story first released in the 2013 Black Library Advent Calendar. Bjorn has taken a vow of silence and fights without a pack, sworn to stay alone until he has killed the daemon that slaughtered his packmates. On the fields of Velbayne, where Leman Russ and the Rout stand arrayed against a daemonic tide, he finally runs the thing down and speaks his brothers' names over it.",
+      "blurbSafe": "A Space Wolf who fights apart from any pack, bound by a vow sworn after his brothers were killed, hunts one particular enemy across the daemon-swarmed fields of Velbayne.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/authors/chris-wraight/lone-wolf-mp3.html",
+        "https://www.goodreads.com/book/show/19079995-bjorn"
+      ],
+      "confidence": "medium",
+      "notes": "Legion, date and Short Story type all stand. Type deliberately not changed to Audio Drama: Goodreads records it as a nine-page prose piece from the Black Library Advent Calendar 2013, and Black Library's own audio page calls it 'A Horus Heresy unabridged audiobook' with a single narrator, unlike the sibling Wolf's Claw which it explicitly calls an audio drama. Blurb replaced because the current one is a title paraphrase with no actual content. Date is unverified; no source gives a year for Velbayne."
+    },
+    {
+      "bookKey": "legacies-riven",
+      "verdict": "corrected",
+      "title": "RIVEN",
+      "author": "John French",
+      "type": "Short Story",
+      "legions": ["Iron Hands"],
+      "timeline": "011.M31",
+      "mainCharacters": ["Crius"],
+      "blurb": "A short story first published online in November 2013. Brother Crius of the Iron Hands has spent the war so far on Terra with the Crusader Host, effectively a hostage, when word reaches him that Ferrus Manus is dead at Isstvan V. Rogal Dorn sends him out into the stars to find whatever remains of the X Legion and bring it back for the defence of Terra, and what he finds is a Legion tearing itself apart over what it should now become.",
+      "blurbSafe": "An Iron Hand long held on Terra with the Crusader Host is sent out into the stars to seek survivors of his shattered Legion and bring them home.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://www.blacklibrary.com/the-horus-heresy/quick-reads/riven-ebook.html",
+        "https://www.goodreads.com/en/book/show/18827371-riven"
+      ],
+      "confidence": "medium",
+      "notes": "Legions changed from the placeholder 'Various' to Iron Hands, which is what the story is about. Imperial Fists deliberately not added: Rogal Dorn issues the mission but the Legion itself is not a participant. Format (Short Story) is correct. Date flagged as doubtful rather than changed: the plot is triggered by news of Ferrus Manus's death at Isstvan V (006.M31 on this site), which sits awkwardly with the current 011.M31, but no source gives an in-universe year and 011.M31 may reflect a deliberate placement alongside the Shattered Legions material, so it is left alone."
+    }
+  ]
+}

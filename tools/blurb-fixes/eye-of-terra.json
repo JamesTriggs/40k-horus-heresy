@@ -1,0 +1,303 @@
+{
+  "batch": "eye-of-terra",
+  "entries": [
+    {
+      "bookKey": "eye-wolf-ash-fire",
+      "verdict": "corrected",
+      "title": "THE WOLF OF ASH AND FIRE",
+      "author": "Graham McNeill",
+      "type": "Short Story",
+      "legions": ["Luna Wolves", "Orks"],
+      "timeline": "999.M30",
+      "mainCharacters": ["Horus Lupercal", "The Emperor", "Hastur Sejanus"],
+      "blurb": "Two centuries into the Great Crusade and shortly before the Ullanor campaign, Horus Lupercal leads the Luna Wolves against the ork-held planetoid of Gorro. The Emperor joins the assault in person, fighting beside his favoured son for the first time in a very long while. Framed by Horus's exchanges with the Mournival, it is a portrait of the XVI Legion and its primarch at their loyal height.",
+      "blurbSafe": "Shortly before Ullanor, Horus Lupercal takes the Luna Wolves to war against the orks of Gorro, and the Emperor himself takes the field alongside them. A glimpse of the XVI Legion, its primarch and the Mournival during the Great Crusade.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Wolf_of_Ash_and_Fire_(Short_Story)",
+        "https://www.trackofwords.com/2014/01/28/the-wolf-of-ash-and-fire-graham-mcneill/",
+        "https://www.adventureswithpeps.com/blog/the-wolf-of-ash-and-fire-horus-heresy-eye-of-terra"
+      ],
+      "confidence": "high",
+      "notes": "The Space Wolves attribution was wrong, a title guess. This is the XVI Legion under their pre-Heresy name of Luna Wolves, fighting orks on Gorro with the Emperor present. Originally an exclusive attached to the Macragge's Honour graphic novel. Hastur Sejanus is listed per the audit brief plus Track of Words noting Mournival dialogue, but Lexicanum does not name him, so treat that one name as slightly weaker than the rest."
+    },
+    {
+      "bookKey": "eye-aurelian",
+      "verdict": "corrected",
+      "title": "AURELIAN",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Novella",
+      "legions": ["Word Bearers", "Chaos Daemons"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Lorgar Aurelian", "Argel Tal", "Ingethel", "Magnus the Red"],
+      "blurb": "Four days after the Drop Site Massacre, Lorgar assaults the daemon-possessed Fulgrim in front of the assembled traitor primarchs, then recounts to Magnus the pilgrimage he made into the Eye of Terror forty-three years earlier. Guided by the daemon Ingethel, the Word Bearers primarch walked dead worlds and a ruined craftworld, was tested by a champion of Khorne, and was shown visions of Calth, Terra and his Legion's damnation.",
+      "blurbSafe": "Aaron Dembski-Bowden's novella follows Lorgar of the Word Bearers on the pilgrimage into the Eye of Terror that shaped him, guided by a daemon through dead worlds and impossible visions. It is framed by a gathering of the traitor primarchs in the aftermath of Isstvan V.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Aurelian_(Novella)"
+      ],
+      "confidence": "high",
+      "notes": "The existing entry was broadly right, unusually for this batch. Sharpened with the actual frame story, four days after the Isstvan V Drop Site Massacre, and the named daemon guide Ingethel. Added Chaos Daemons to the faction list since An'ggrath, Kairos Fateweaver and Ingethel all appear. Format Novella confirmed, originally a 2011 limited hardback."
+    },
+    {
+      "bookKey": "eye-long-night",
+      "verdict": "corrected",
+      "title": "THE LONG NIGHT",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Audio Drama",
+      "legions": ["Night Lords", "Dark Angels"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Jago Sevatarion", "Altani"],
+      "blurb": "Captured at the close of the Thramas Crusade, Night Lords First Captain Jago Sevatarion is held prisoner aboard the Dark Angels flagship Invincible Reason, in agony from psychic powers he believes are killing him. A young astropath named Altani reaches out to ease his pain and is savagely punished for it by the Master of the Choir. Sevatar escapes during a prisoner transfer and takes his own kind of justice.",
+      "blurbSafe": "The Night Lords First Captain Sevatar sits in a Dark Angels cell after the Thramas Crusade, tormented by newly woken psychic powers. An astropath aboard the ship makes contact with him, which neither of them is supposed to do.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Long_Night_(Audio_Drama)",
+        "https://wh40k.lexicanum.com/wiki/Jago_Sevatarion"
+      ],
+      "confidence": "high",
+      "notes": "Confirms the audit brief. Sevatar is imprisoned aboard the Invincible Reason, so the Dark Angels belong in the faction list alongside the Night Lords. Timeline of 009.M31 verified against the Thramas Crusade, dated 007 to 009.M31 and ended at Sheol IX. Format kept as Audio Drama, the original November 2014 release, though the anthology carries the prose adaptation."
+    },
+    {
+      "bookKey": "eye-massacre",
+      "verdict": "corrected",
+      "title": "MASSACRE",
+      "author": "Aaron Dembski-Bowden",
+      "type": "Short Story",
+      "legions": ["Night Lords"],
+      "timeline": "006.M31",
+      "mainCharacters": ["Talos", "Konrad Curze"],
+      "blurb": "Talos and First Claw of the Night Lords' 10th Company muster for the drop site massacre on Isstvan V, fighting once more alongside Konrad Curze, a primarch the VIII Legion has campaigned without for years. Told as a series of vignettes, it carries the squad through the slaughter of the loyalist Legions and stands as the direct prequel to Dembski-Bowden's Night Lords trilogy.",
+      "blurbSafe": "The Night Lords of First Claw muster for Isstvan V, reunited with a primarch they have fought without for many years. A short prequel introducing Talos and his squad from the Night Lords trilogy.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Massacre_(Short_Story)",
+        "https://www.aarondembskibowden.com/work/massacre/",
+        "https://www.goodreads.com/en/book/show/27270872-massacre"
+      ],
+      "confidence": "high",
+      "notes": "Legions was listed as Various, which is wrong. This is squarely a Night Lords story, First Claw at the Isstvan V Drop Site Massacre, hence 006.M31. The author's own site describes it as First Claw fighting through the Dropsite Massacre in vignettes."
+    },
+    {
+      "bookKey": "eye-brotherhood-moon",
+      "verdict": "corrected",
+      "title": "BROTHERHOOD OF THE MOON",
+      "author": "Chris Wraight",
+      "type": "Short Story",
+      "legions": ["White Scars"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Torghun Khan", "Jaghatai Khan"],
+      "blurb": "In the aftermath of the Terran lodge rebellion inside the V Legion, Torghun Khan is brought before his accusers and his primarch to explain himself. Jaghatai Khan has ordered the hearing, and Torghun must account for how far he went and whether his conduct amounts to outright heresy. Chris Wraight's story runs alongside the events of the novel Scars.",
+      "blurbSafe": "After the rebellion within the White Scars, the Terran legionary Torghun Khan is put on trial before Jaghatai Khan and made to account for his part in it. A companion piece to Chris Wraight's Scars.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Brotherhood_of_the_Moon_(Short_Story)"
+      ],
+      "confidence": "high",
+      "notes": "White Scars was already correct, but the blurb was generic filler. The actual content is Torghun Khan's trial after the Legion's internal rebellion, tied to Scars. Timeline of 007.M31 left as is and is consistent with Scars, though Lexicanum gives no explicit date."
+    },
+    {
+      "bookKey": "eye-inheritor",
+      "verdict": "corrected",
+      "title": "INHERITOR",
+      "author": "Gav Thorpe",
+      "type": "Short Story",
+      "legions": ["Word Bearers", "World Eaters", "Ultramarines"],
+      "timeline": "007-008.M31",
+      "mainCharacters": ["Torquill Eliphas", "Lorgar Aurelian"],
+      "blurb": "Torquill Eliphas of the Word Bearers, the legionary who will later be known as the Inheritor, pursues his own designs on Kronus deep inside Ultramar. Fighting as part of Lorgar's Shadow Crusade and supported by World Eaters berserkers, he wars on the Ultramarines, but his real objective is the Templum Daemonarchia, a structure raised to harness the power of the warp.",
+      "blurbSafe": "During Lorgar's Shadow Crusade, the Word Bearer Torquill Eliphas leads an assault on the world of Kronus in Ultramar with World Eaters at his side. Killing Ultramarines is not the whole of what he wants from the place.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Inheritor_(Short_Story)"
+      ],
+      "confidence": "high",
+      "notes": "Serious error corrected. The entry was tagged Dark Angels, presumably because Gav Thorpe writes the Dark Angels. It is in fact a Word Bearers story, Torquill Eliphas of the Ark of Testimony Chapter on Kronus, with World Eaters allies against Ultramarines defenders. This flips the entry from loyalist to traitor."
+    },
+    {
+      "bookKey": "eye-vorax",
+      "verdict": "corrected",
+      "title": "VORAX",
+      "author": "Matthew Farrer",
+      "type": "Short Story",
+      "legions": ["Dark Mechanicum", "Imperial Fists"],
+      "timeline": "005-006.M31",
+      "mainCharacters": [],
+      "blurb": "Mars is broken and the Ring of Iron is the last contested outpost still in Dark Mechanicum hands, a shattered halo of forges and shipyards with an Imperial Fists blockade closing around the planet. Rogue priests and adepts survive in its depths. Matthew Farrer's story turns on a reversal of hunter and hunted as those holdouts encounter something they had not counted on.",
+      "blurbSafe": "In the wreckage of the Ring of Iron above Mars, holdouts of the Dark Mechanicum shelter in the depths while the Imperial Fists blockade the planet. Deep in the machinery, the roles of hunter and hunted are not what they appear.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Vorax_(Short_Story)"
+      ],
+      "confidence": "medium",
+      "notes": "Faction corrected from the vague Mechanicum to Dark Mechanicum plus the blockading Imperial Fists. Lexicanum carries only the Black Library cover copy and no character names, so mainCharacters is deliberately empty and the blurb stays at the level the source supports rather than inventing a protagonist. The 005-006.M31 date is unverified, the Imperial Fists blockade of the Ring of Iron follows the Schism of Mars, so it may sit slightly later."
+    },
+    {
+      "bookKey": "eye-ironfire",
+      "verdict": "corrected",
+      "title": "IRONFIRE",
+      "author": "Rob Sanders",
+      "type": "Short Story",
+      "legions": ["Iron Warriors"],
+      "timeline": "008.M31",
+      "mainCharacters": ["Idriss Krendl", "Perturabo"],
+      "blurb": "Warsmith Idriss Krendl of the Iron Warriors, broken and disgraced by his failure at the Schadenhold, means to buy his way back into Perturabo's favour. Commanding two enormous siege guns taken from the forge world Diamat, he tests a new siege-breaking doctrine, the Ironfire protocol, against the Great Selenic Palace on Euphorus, spending subordinates and allies freely to prove the method works.",
+      "blurbSafe": "Disgraced after the fall of the Schadenhold, the Iron Warriors warsmith Idriss Krendl sets out to prove a new siege doctrine and win back his primarch's regard. He brings two colossal guns to bear on the Great Selenic Palace of Euphorus.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Ironfire_(Short_Story)",
+        "https://www.trackofwords.com/2015/05/20/quick-review-ironfire-rob-sanders/",
+        "https://www.adventureswithpeps.com/blog/book-review-eye-of-terra-ironfire-by-rob-sanders"
+      ],
+      "confidence": "high",
+      "notes": "Serious error corrected. Iron Hands was a title guess. This is Iron Warriors, Warsmith Idriss Krendl on Euphorus, a direct sequel to The Iron Within, exactly as the audit flagged. Flips the entry from loyalist to traitor. One review, Adventures with Peps, states the palace is held by Emperor's Children, and Track of Words hints at a traitor-against-traitor dynamic, but I could not corroborate the defenders from a second solid source, so I left them out of the faction list and out of the blurb."
+    },
+    {
+      "bookKey": "eye-red-marked",
+      "verdict": "corrected",
+      "title": "RED-MARKED",
+      "author": "Nick Kyme",
+      "type": "Audio Drama",
+      "legions": ["Ultramarines", "Word Bearers"],
+      "timeline": "007.M31",
+      "mainCharacters": ["Aeonid Thiel"],
+      "blurb": "Sergeant Aeonid Thiel, still wearing the red mark of censure, is stranded on the Ultramar garrison world of Oran on his way back to Macragge. Traitor warband activity is rising, listening posts have fallen silent, and his warnings about gaps in the defences only irritate his superiors. With a handful of rogue veterans he sets out to find the truth behind something called the Nightfane.",
+      "blurbSafe": "Held up on the garrison world of Oran, the censured Ultramarines sergeant Aeonid Thiel notices traitor activity rising and outposts going quiet. He gathers a few veterans to investigate what is stirring on the borders of Ultramar.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Red-Marked_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Legions was Various, which is wrong. This is an Ultramarines story starring Aeonid Thiel, set after Calth and the Shadow Crusade with Word Bearers remnants as the threat. The 007.M31 date is left unchanged but is questionable, the source places it during Imperium Secundus, which argues for 008 or 009.M31 and would sit close to Stratagem."
+    },
+    {
+      "bookKey": "eye-master-first",
+      "verdict": "corrected",
+      "title": "MASTER OF THE FIRST",
+      "author": "Gav Thorpe",
+      "type": "Audio Drama",
+      "legions": ["Dark Angels"],
+      "timeline": "007-009.M31",
+      "mainCharacters": ["Merir Astelan", "Luther", "Zahariel El'Zurias", "Cypher"],
+      "blurb": "On Caliban, with the I Legion scattered and bled by the Thramas Crusade, Luther tightens his grip and a group of Dark Angels officers plot armed rebellion against him. Former Chapter Master Merir Astelan agrees to lead a bloodless coup, seizing the communications relays to reach Terra and the Lion. Instead he betrays the conspirators to Luther and helps crush them, keeping his own ambitions for another day.",
+      "blurbSafe": "With the Dark Angels scattered by the Thramas Crusade, Luther consolidates power on Caliban and officers of the First begin to conspire against him. Merir Astelan is asked to lead them, and he has his own view of what the Legion needs.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Master_of_the_First_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Dark Angels was already correct, as the audit expected, but the old blurb invented a Deathwing angle that has nothing to do with the story. It is set on Caliban and concerns Astelan, Luther and a failed coup. Timeline of 007-009.M31 is consistent with the Thramas Crusade and left unchanged."
+    },
+    {
+      "bookKey": "eye-stratagem",
+      "verdict": "corrected",
+      "title": "STRATAGEM",
+      "author": "Nick Kyme",
+      "type": "Audio Drama",
+      "legions": ["Ultramarines"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Aeonid Thiel", "Roboute Guilliman"],
+      "blurb": "Back from Calth and the Underworld War, Sergeant Aeonid Thiel is summoned before Roboute Guilliman himself. Traitor warbands left behind by the Shadow Crusade are picking at the fragile peace of Imperium Secundus, and the primarch wants the censured sergeant's mind on the problem. A new order of battle for the Ultramarines has to be written, and Thiel is the man asked to help write it.",
+      "blurbSafe": "Returned from Calth, Aeonid Thiel is called before Roboute Guilliman while traitor warbands gnaw at the edges of Imperium Secundus. The primarch has a use for a legionary who thinks about war differently.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Stratagem_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Legions was Various. It is an Ultramarines piece, Thiel and Guilliman, and it is the in-universe origin of the Codex-era stratagem concept. Originally a 2014 Advent Calendar audio drama, 21 minutes."
+    },
+    {
+      "bookKey": "eye-sins-father",
+      "verdict": "corrected",
+      "title": "SINS OF THE FATHER",
+      "author": "Andy Smillie",
+      "type": "Audio Drama",
+      "legions": ["Blood Angels"],
+      "timeline": "001.M31",
+      "mainCharacters": ["Azkaellon", "Nassir Amit"],
+      "blurb": "Azkaellon and Nassir Amit, two of Sanguinius's most favoured sons, face one another in the Blood Angels' ritual duel known as the Tempest of Angels. The contest measures temperament as much as skill, setting Azkaellon's disciplined control against Amit's ferocity. Each comes away having learned something uncomfortable about the other's virtues and about his own weaknesses. Black Library frames it as the prequel to Virtues of the Sons.",
+      "blurbSafe": "Two of Sanguinius's favoured warriors, Azkaellon and Nassir Amit, meet in the Blood Angels' ritual duel called the Tempest of Angels. A short, character-driven piece about what the IX Legion's finest see in one another.",
+      "changed": ["type", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Sins_of_the_Father_(Short_Story)"
+      ],
+      "confidence": "medium",
+      "notes": "Blood Angels was correct but everything else was generic gene-seed-curse filler. The actual content is the Azkaellon versus Amit ritual duel. Format changed from Short Story to Audio Drama, Lexicanum records it as an Andy Smillie audio drama published 17 November 2014, 13 minutes, performed by Toby Longworth, Jonathan Keeble and Steve Conlin, with a prose version following later, which is what the anthology carries. The 001.M31 timeline could not be verified from any source and is left untouched rather than guessed at."
+    },
+    {
+      "bookKey": "eye-herald-sanguinius",
+      "verdict": "corrected",
+      "title": "HERALD OF SANGUINIUS",
+      "author": "Andy Smillie",
+      "type": "Audio Drama",
+      "legions": ["Blood Angels"],
+      "timeline": "009.M31",
+      "mainCharacters": ["Sanguinius", "Azkaellon"],
+      "blurb": "Sanguinius has taken the throne of Imperium Secundus, and the danger to him is no longer only outside the realm. Commander Azkaellon and the Sanguinary Guard, sworn to keep the Great Angel alive, are driven to desperate measures to shield their primarch from betrayal within his own new empire.",
+      "blurbSafe": "Newly seated on the throne of Imperium Secundus, Sanguinius faces threats from inside his own realm. Azkaellon and the Sanguinary Guard must decide how far they will go to keep him safe.",
+      "changed": ["blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Herald_of_Sanguinius_(Audio_Drama)"
+      ],
+      "confidence": "high",
+      "notes": "Blood Angels correct. The old blurb invented a messenger carrying word from Sanguinius, which is a title guess. The story is actually about Sanguinius on the throne of Imperium Secundus and Azkaellon's Sanguinary Guard countering an internal threat. Originally a December 2014 Advent Calendar audio drama, 20 minutes."
+    },
+    {
+      "bookKey": "eye-eagles-talon",
+      "verdict": "corrected",
+      "title": "THE EAGLE'S TALON",
+      "author": "John French",
+      "type": "Audio Drama",
+      "legions": ["Imperial Fists", "Iron Warriors"],
+      "timeline": "010-011.M31",
+      "mainCharacters": ["Gamus", "Theophon", "Arcad"],
+      "blurb": "Deep into the armoured war on Tallarn, three Imperial Fists reconnaissance squads infiltrate an Iron Warriors macro-transporter to stop it landing reinforcements on the poisoned surface. The account is assembled from seven recovered vox transmissions. Secondary objectives fall, then the mission unravels as the legionaries are overrun, and Theophon fires the charges anyway, destroying himself, the ship and, in effect, the battle for the planet.",
+      "blurbSafe": "As the tank war on Tallarn grinds on, Imperial Fists recon squads board an Iron Warriors macro-transporter to keep its cargo off the surface. Their mission is reconstructed entirely from the vox traffic they left behind.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Eagle%27s_Talon_(Audio_Drama)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Tallarn"
+      ],
+      "confidence": "high",
+      "notes": "Serious error corrected. Emperor's Children was wrong. This is Imperial Fists against Iron Warriors at Tallarn, as the audit flagged, which flips the entry from traitor to loyalist. The 010-011.M31 date is now positively confirmed against the Battle of Tallarn article rather than merely assumed."
+    },
+    {
+      "bookKey": "eye-iron-corpses",
+      "verdict": "corrected",
+      "title": "IRON CORPSES",
+      "author": "David Annandale",
+      "type": "Audio Drama",
+      "legions": ["Iron Warriors", "Collegia Titanica"],
+      "timeline": "010-011.M31",
+      "mainCharacters": ["Koparnos", "Benwrath"],
+      "blurb": "After the macro-transporter Eagle's Talon comes down on Tallarn, Iron Warriors Warsmith Koparnos is left alone on the poisoned southern continent among the wreckage of dead god-machines. Dying of virus contamination, he finds a Warlord Titan, Ostentio Contritio, that still has power in it, and takes it by force, wiring its loyalist princeps Benwrath directly into the machine until she is barely distinguishable from it.",
+      "blurbSafe": "Stranded on Tallarn's poisoned southern continent amid the wreckage of dead god-machines, an Iron Warriors warsmith finds one Titan that still has power in it. Getting it moving will demand something no princeps would ever agree to.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/Iron_Corpses_(Audio_Drama)",
+        "https://wh40k.lexicanum.com/wiki/Battle_of_Tallarn"
+      ],
+      "confidence": "high",
+      "notes": "Serious error corrected. Iron Hands was a title guess. This is Iron Warriors, Warsmith Koparnos, and it is a direct sequel to The Eagle's Talon on Tallarn. Flips the entry from loyalist to traitor. Collegia Titanica added for the loyalist Titan and its princeps, Benwrath, though the source does not name her Legio. Date confirmed against the Battle of Tallarn."
+    },
+    {
+      "bookKey": "eye-final-compliance",
+      "verdict": "corrected",
+      "title": "THE FINAL COMPLIANCE OF SIXTY-THREE FOURTEEN",
+      "author": "Guy Haley",
+      "type": "Short Story",
+      "legions": ["Sons of Horus"],
+      "timeline": "006.M31",
+      "mainCharacters": [],
+      "blurb": "With the Heresy under way, emissaries of the XVI Legion return to worlds brought into compliance during the Great Crusade and demand they swear their oaths again, this time to the Warmaster rather than to the Emperor and with the Imperial Truth declared a lie. On Sixty-Three Fourteen the population must answer while the Sons of Horus stand at battle readiness above them, and a grim decision follows.",
+      "blurbSafe": "Worlds that swore compliance to Horus during the Great Crusade are asked to renew their oaths now that he has turned against the Emperor. On Sixty-Three Fourteen the Sons of Horus wait at battle readiness for the answer.",
+      "changed": ["legions", "blurb", "blurbSafe"],
+      "sources": [
+        "https://wh40k.lexicanum.com/wiki/The_Final_Compliance_of_Sixty-Three_Fourteen_(Short_Story)",
+        "https://grimdarkarchive.com/book/the-final-compliance-of-sixty-three-fourteen/"
+      ],
+      "confidence": "medium",
+      "notes": "Legions changed from Various to Sons of Horus, the XVI Legion, which both sources agree on. No source I could reach names a protagonist, so mainCharacters is left empty and the blurb stays within what the Black Library cover copy and the Grimdark Archive entry support. The 006.M31 date is plausible for a post-Isstvan reconquest sweep but is not stated anywhere I could verify."
+    }
+  ]
+}

@@ -199,6 +199,36 @@ for (const [key, book] of bookEntries) {
 }
 
 // ---------------------------------------------------------------------------
+// 6b. Blurb quality. Warnings for now, to be promoted to errors once the
+// research passes have landed across all 224 entries.
+// ---------------------------------------------------------------------------
+{
+    let identical = 0, thin = 0, statusLine = 0;
+    // Word-boundary matched, not substring: "dies" otherwise matches "bodies".
+    const SPOILER_PHRASES = [
+        'dies', 'died', 'is killed', 'killed by', 'betrays', 'betrayed by',
+        'turns traitor', 'sacrifices himself', 'becomes a daemon',
+    ];
+    const hasSpoiler = (text) => SPOILER_PHRASES.some((p) =>
+        new RegExp(`\\b${p}\\b`, 'i').test(text));
+    let leaky = 0;
+
+    for (const [key, book] of bookEntries) {
+        if (String(book.blurb).trim() === String(book.blurbSafe).trim()) {
+            identical++;
+            warn(`bookData['${key}'] has blurbSafe identical to blurb, so spoiler-free mode does nothing`);
+        }
+        if (String(book.blurb).trim().length < 90) thin++;
+        if (/<strong>Status:<\/strong>/.test(book.details || '')) statusLine++;
+        if (hasSpoiler(String(book.blurbSafe))) leaky++;
+    }
+
+    if (thin) warn(`${thin} entries have a blurb under 90 characters, which is usually a title restatement`);
+    if (statusLine) warn(`${statusLine} entries still carry a 'Status:' line in details, which leaks through spoiler-free mode`);
+    if (leaky) warn(`${leaky} entries have a blurbSafe containing outcome words`);
+}
+
+// ---------------------------------------------------------------------------
 // 7. Legion taxonomy. Values must be real factions, not formats.
 // ---------------------------------------------------------------------------
 {
