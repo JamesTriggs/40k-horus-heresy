@@ -59,12 +59,17 @@ console.log('\nOrdering and data');
 await page.click('#viewChronological');
 await page.waitForTimeout(600);
 
-await check('224 cards render', async () => {
+// The expected count comes from the data, so adding a book does not silently
+// fail a hardcoded assertion.
+const EXPECTED_ENTRIES = await page.evaluate(() => Object.keys(bookData).length);
+console.log(`  (dataset holds ${EXPECTED_ENTRIES} entries)`);
+
+await check('every entry renders as a card', async () => {
     const n = (await page.$$('.book-card')).length;
-    if (n !== 224) throw new Error('got ' + n);
+    if (n !== EXPECTED_ENTRIES) throw new Error(`${n} cards for ${EXPECTED_ENTRIES} entries`);
 });
 
-await check('chronological badges ascend 1..224 with no gaps', async () => {
+await check('chronological badges ascend with no gaps', async () => {
     const nums = await page.$$eval('.chronological-badge', (e) =>
         e.map((x) => Number(x.textContent.replace('Chrono: ', ''))));
     if (!nums.every((n, i) => n === i + 1)) throw new Error('not sequential');
@@ -110,7 +115,7 @@ await check('a corrupt progress value does not blank the archive', async () => {
     const n = (await p.$$('.book-card')).length;
     await p.evaluate(() => localStorage.clear());
     await p.close();
-    if (n !== 224) throw new Error('got ' + n + ' cards');
+    if (n !== EXPECTED_ENTRIES) throw new Error('got ' + n + ' cards');
 });
 
 await check("a JSON 'null' progress value does not blank the archive", async () => {
@@ -122,7 +127,7 @@ await check("a JSON 'null' progress value does not blank the archive", async () 
     const n = (await p.$$('.book-card')).length;
     await p.evaluate(() => localStorage.clear());
     await p.close();
-    if (n !== 224) throw new Error('got ' + n + ' cards');
+    if (n !== EXPECTED_ENTRIES) throw new Error('got ' + n + ' cards');
 });
 
 console.log('\nModals and scroll lock');

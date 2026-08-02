@@ -12,11 +12,11 @@
 
 ## 📖 Overview
 
-An immersive, grimdark-themed web application showcasing all **224 entries** from the Horus Heresy universe, featuring:
+An immersive, grimdark-themed web application showcasing all **228 entries** from the Horus Heresy universe, featuring:
 - 39 main Horus Heresy novels
 - 158 individual anthology stories, novellas and audio dramas, across 15 volumes
-- 17 The Primarchs character novels
-- 10 Siege of Terra finale books
+- 17 The Primarchs novellas
+- 14 Siege of Terra books, including the three interleaved novellas and the Era of Ruin epilogue anthology
 
 Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate aesthetic with full character encyclopedia, reading tracker, and dual Loyalist/Traitor themes.
 
@@ -33,7 +33,7 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 
 ### 📚 Complete Book Collection
-- **224 entries** with official Black Library cover artwork
+- **228 entries** with official Black Library cover artwork
 - **Chronological ordering** by in-story timeline (730.M30 → 036.M31), strict, with no series held back as an appendix
 - **Publication order** sorting option
 - **Full book details**: authors, legions, timelines, character lists, synopses
@@ -119,7 +119,7 @@ Deploy to any static hosting service:
 ├── styles.css                    # All styling and themes
 ├── script.js                     # Data and application logic
 ├── images/                       # Book covers and character portraits
-│   ├── *.jpg                     # 81 cover images shared across 224 entries
+│   ├── *.jpg                     # 81 cover images shared across 228 entries
 │   ├── character-*.jpg           # 32 character portraits
 │   ├── character-placeholder.svg # Placeholder for minor characters
 │   ├── imperial-aquila.png       # Loyalist symbol
@@ -187,7 +187,7 @@ ordering log and run the validator.
 
 ## 📊 Statistics
 
-- **224 entries** across 4 series groupings
+- **228 entries** across 4 series groupings
 - **123 characters** in encyclopedia
 - **48 quotes** with attributions
 - **5,174 lines** of JavaScript, of which roughly 86% is data

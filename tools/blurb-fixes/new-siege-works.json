@@ -1,0 +1,140 @@
+{
+  "batch": "new-siege-works",
+  "newEntries": true,
+  "entries": [
+    {
+      "proposedKey": "sot-sons-of-selenar",
+      "number": "SoT 1.5",
+      "readAfter": "sot-solar-war",
+      "readAfterReason": "Graham McNeill states outright in his Track of Words Rapid Fire interview that the story 'sits between The Solar War and The Lost and the Damned, with the action picking up in the aftermath of the cataclysmic cometary event that finishes the first book and leading neatly into the beginning of the second'. His Track of Words review likewise places it 'roughly simultaneously with the events of The Solar War'. Note that this is a narrative placement, not the publication order: the novella came out in 2020 after The First Wall, which is why the Lexicanum series navigation lists it between Book III and Book IV.",
+      "verdict": "corrected",
+      "title": "SONS OF THE SELENAR",
+      "author": "Graham McNeill",
+      "type": "Novella",
+      "legions": [
+        "Shattered Legions",
+        "Iron Hands",
+        "Salamanders",
+        "Raven Guard"
+      ],
+      "timeline": "014.M31",
+      "mainCharacters": [
+        "Nykona Sharrowkyn",
+        "Sabik Wayland",
+        "Cadmus Tyro",
+        "Ulrach Branthan",
+        "Atesh Tarsa",
+        "Heliosa-78"
+      ],
+      "blurb": "Returning to the Sol System as the void war rages, the Shattered Legions crew of the Sisypheum come apart, torn between following their resurrected captain on a suicidal mission and obeying orders to rejoin their brothers on Terra. A garbled signal drives them down to the shattered surface of Luna, where horrors from the earliest days of gene-manipulation are unleashed and a long-buried secret is uncovered, one that will shape the galaxy no matter who claims Terra.",
+      "blurbSafe": "The battered Shattered Legions crew of the Sisypheum reach the Sol System divided, torn between a suicidal mission and orders to return to Terra and rejoin their Legion brothers. A strange signal pulls them down to embattled Luna and the secretive Selenar gene-cults, where their bonds of loyalty and devotion to one another are tested one final time.",
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+        "https://wh40k.lexicanum.com/wiki/Sons_of_the_Selenar_(Novella)",
+        "https://www.trackofwords.com/2020/01/12/rapid-fire-graham-mcneill-talks-sons-of-the-selenar/",
+        "https://www.trackofwords.com/2020/06/23/sons-of-the-selenar-graham-mcneill/"
+      ],
+      "confidence": "high",
+      "notes": "New entry, first of three Siege of Terra novellas. Type Novella confirmed by Lexicanum (192 pages, limited edition late 2019, standard release 2020) and by the Fandom series page, which lists it as Novella 1. Blurb built from the official Black Library synopsis carried on both wikis, plus the Track of Words review for the emotional shape of the story. Number SoT 1.5 chosen because the author places it narratively between Book 1 and Book 2 and the existing scheme uses plain integers for the main novels, so a decimal slots it in without renumbering anything. Cast taken from the Lexicanum dramatis personae, and McNeill names Sharrowkyn and Wayland as the true leads. Legions listed as the three Shattered Legions contingents actually named in the dramatis personae. The Selenar gene-cults are a faction here too but are not a Legion, so they are left out of that field and appear in the text instead. Deliberately not stated: what the long-buried secret actually is, and which crew members die. The review is explicit that the arc ends painfully but does not say who falls, and I would not assert it without a source. Timeline 014.M31 to match the rest of the Siege books, and no printed in-universe stamp was found."
+    },
+    {
+      "proposedKey": "sot-fury-of-magnus",
+      "number": "SoT 4.5",
+      "readAfter": "sot-saturnine",
+      "readAfterReason": "Both wikis state the placement explicitly. Lexicanum: 'Fury of Magnus is the 2nd Novella of the Horus Heresy: The Siege of Terra series, taking place between Book Four and Book Five of the series', with an infobox reading preceded by Saturnine and followed by Mortis. The Fandom novella page repeats the same wording. Publication order agrees, and the Lexicanum series navigation places it between IV and V.",
+      "verdict": "corrected",
+      "title": "FURY OF MAGNUS",
+      "author": "Graham McNeill",
+      "type": "Novella",
+      "legions": [
+        "Thousand Sons",
+        "Space Wolves",
+        "Salamanders",
+        "Iron Warriors"
+      ],
+      "timeline": "014.M31",
+      "mainCharacters": [
+        "Magnus the Red",
+        "Ahzek Ahriman",
+        "Bodvar Bjarki",
+        "Vulkan",
+        "Malcador the Sigillite",
+        "Alivia Sureka"
+      ],
+      "blurb": "Magnus the Red comes to Terra with the Warmaster's besieging armies, but revenge is not the only thing that draws him. Shattered to his very elements, the Crimson King seeks the missing fragment of himself, and it lies inside the inner sanctum of the Imperial Palace. McNeill surrounds that infiltration with Ahriman's sorcerers, Bodvar Bjarki's Space Wolves, Vulkan and his Draaksward, Perturabo, Malcador and the perpetual Alivia Sureka, while Magnus fights an inner battle of his own.",
+      "blurbSafe": "Of all the Emperor's sons who fell to Chaos, Magnus the Red's tale is perhaps the most tragic. He comes to Terra with the besieging armies seeking not vengeance but a fragment of himself, locked away inside the most impregnable place on the planet. To be whole once more he must first overcome the fiercest defences in the Imperium.",
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Fury_of_Magnus_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/Fury_of_Magnus_(Novella)",
+        "https://warhammer40k.fandom.com/wiki/The_Horus_Heresy:_Siege_of_Terra_(Novels)",
+        "https://www.trackofwords.com/2020/09/13/rapid-fire-graham-mcneill-talks-fury-of-magnus/"
+      ],
+      "confidence": "high",
+      "notes": "New entry, second Siege of Terra novella, 248 pages, released August 2020 per both wikis. Title: the brief called it 'THE FURY OF MAGNUS', but the actual published title has no definite article. Black Library, the Fandom page and the Lexicanum page title all give 'Fury of Magnus'. Only the Lexicanum infobox header inconsistently prefixes 'The'. Entered as FURY OF MAGNUS. Number SoT 4.5 because both wikis place it between Book Four (Saturnine) and Book Five (Mortis), which is also the publication slot. Blurb text is the official Black Library synopsis, reworded. Cast comes from the Lexicanum dramatis personae, which lists Magnus, Ahriman, Amon, Menkaura and Atrahasis for the Thousand Sons, Bodvar Bjarki, Svafnir Rackwulf and Olgyr Widdowsyn for the Space Wolves, Vulkan with three Draaksward for the Salamanders, Perturabo, and Malcador, Alivia Sureka and the wyrd-wraith Promeus on the Imperial side. The blurb lists those names but deliberately does not assert who fights whom or in what order, because no source I could reach describes the plot beat by beat. Deliberately not stated: whether Magnus recovers his shard, and what happens when he reaches the sanctum. The safe summary uses the official back-cover framing, which does mention facing his father, but stops short of any outcome."
+    },
+    {
+      "proposedKey": "sot-garro-knight-of-grey",
+      "number": "SoT 7.5",
+      "readAfter": "sot-echoes-of-eternity",
+      "readAfterReason": "The Lexicanum Siege of Terra series navigation places Garro: Knight of Grey between VII Echoes of Eternity and VIII The End and the Death, which also matches publication order (the novella came out between Echoes of Eternity in 2022 and The End and the Death: Volume I in March 2023). The Lexicanum Nathaniel Garro article, citing Knight of Grey chapters 5 to 6, places the events 'later in the Siege of Terra', after the Saturnine Gate ambush he fights in during Book 4, with the Death Guard assaulting deep into the Imperial Palace, which is consistent with a late slot.",
+      "verdict": "corrected",
+      "title": "GARRO: KNIGHT OF GREY",
+      "author": "James Swallow",
+      "type": "Novella",
+      "legions": [
+        "Knights-Errant",
+        "Death Guard"
+      ],
+      "timeline": "014.M31",
+      "mainCharacters": [
+        "Nathaniel Garro",
+        "Euphrati Keeler",
+        "Helig Gallor",
+        "Mortarion",
+        "Typhus"
+      ],
+      "blurb": "Nathaniel Garro's long road, from the betrayal at Isstvan III and the flight of the Eisenstein to his missions as Malcador's Agentia Primus, ends in the ash and fire of the embattled Imperial Palace. Guarding Euphrati Keeler at Marmax Bastion, he is caught when Mortarion and Typhus lead the Death Guard against it, and he walks out alone to parley with his gene-father so that Keeler can escape. The parley becomes a duel.",
+      "blurbSafe": "As the battle for Terra rages, the former Knight-Errant Nathaniel Garro fights among the ashes of the embattled Imperial Palace, struggling to shield Euphrati Keeler, first saint of the Imperial Cult, from the horrors of the war. Everything since Isstvan has drawn him towards his gene-father Mortarion and a destiny that can only end in bloodshed.",
+      "sources": [
+        "https://warhammer40k.fandom.com/wiki/Garro:_Knight_of_Grey_(Novella)",
+        "https://wh40k.lexicanum.com/wiki/Nathaniel_Garro",
+        "https://wh40k.lexicanum.com/wiki/The_Horus_Heresy:_Siege_of_Terra",
+        "https://www.warhammer-community.com/2022/07/13/nathaniel-garro-strikes-back-against-mortarion-in-a-new-siege-of-terra-novella/"
+      ],
+      "confidence": "high",
+      "notes": "New entry, third Siege of Terra novella, 144 pages, hardback, released 31 January 2023 per the Fandom page (Track of Words dates it 2022, which will be the limited edition). Number SoT 7.5 because the Lexicanum series navigation puts it after Book VII and before Book VIII, and a decimal keeps it clear of the existing 8a, 8b and 8c volumes of The End and the Death. Blurb text combines the official Black Library synopsis (Fandom novella page and series page) with the plot detail on the Lexicanum Nathaniel Garro article, which cites chapters 5 to 6 of this novella directly and supplies Marmax Bastion, the rendezvous with Keeler, Helig Gallor's escort role, the parley, and the duel. MAJOR SPOILER HELD BACK: the Lexicanum article states that Garro is killed by Mortarion in this novella, that Keeler briefly empowers him with the Emperor's light, that Libertas is broken, and that Garro wounds Mortarion grievously with the stub of his own sword before dying. None of that is in the safe summary, and the full blurb stops at 'the parley becomes a duel' rather than naming the outcome, because Garro's death is one of the largest character spoilers in the closing stretch of the saga and the site's own full blurbs for the main novels only spoil deaths that the official synopses already announce. If you want the full blurb to be a genuine spoiler blurb in the same register as the Echoes of Eternity and End and the Death entries, the sourced sentence to append is: 'Mortarion strikes him down, and Garro takes a piece of his gene-father with him.' Legions: Garro is a former Knight-Errant by this point, but Knights-Errant remains the most useful faction label for him, and the Death Guard are the named enemy."
+    },
+    {
+      "proposedKey": "sot-era-of-ruin",
+      "number": "SoT 9",
+      "readAfter": "sot-end-and-death-vol-3",
+      "readAfterReason": "It is the epilogue to the whole series and must be read last. The Lexicanum anthology page records it as preceded by The End and the Death: Volume III and followed by Ashes of the Imperium, the first book of the new Horus Heresy: The Scouring series. Warhammer Community announced it on 22 January 2025 as 'a bumper epilogue anthology', opening with the Siege already over. Track of Words lists it under Siege of Terra after the three novellas. Its own back-cover copy begins 'Horus is dead. His Heresy is over', so reading it before Volume III would spoil the finale outright.",
+      "verdict": "corrected",
+      "title": "ERA OF RUIN",
+      "author": "Various, introduction by Jacob Youngs",
+      "type": "Anthology",
+      "legions": [
+        "White Scars",
+        "Thousand Sons",
+        "Adeptus Custodes",
+        "Imperial Army"
+      ],
+      "timeline": "014.M31",
+      "mainCharacters": [
+        "Ilya Ravallion",
+        "Ahzek Ahriman"
+      ],
+      "blurb": "The epilogue to the whole saga: eight new stories from the writers of the Siege of Terra, set both during the battle for the Throneworld and in the wreckage afterwards. Horus is dead and his Heresy is over, but the scars will never fully heal. Chris Wraight's Homebound leaves Ilya Ravallion choosing between the decimated White Scars and a quiet retirement, while John French's Ex Libris has Ahriman racing to learn what he can of the Warp before its gates close to him forever.",
+      "blurbSafe": "The closing volume of the Siege of Terra sequence is not a novel but an anthology, eight new stories from the writers of the series set during the battle for the Throneworld and in the years that follow. Custodians, scheming sorcerers and the lowly footsoldiers of the Imperial Army must all live with what this war has made of them.",
+      "sources": [
+        "https://www.warhammer-community.com/en-gb/articles/wvwxpbdq/the-shockwaves-of-the-siege-of-terra-are-felt-in-a-bumper-epilogue-anthology/",
+        "https://www.blacklibrary.com/the-horus-heresy/featured/ebook-siege-of-terra-era-of-ruin-eng-2025.html",
+        "https://wh40k.lexicanum.com/wiki/Era_of_Ruin_(Anthology)",
+        "https://www.trackofwords.com/black-library/black-library-reviews/black-library-the-horus-heresy-series/",
+        "https://www.goodreads.com/book/show/229201702-era-of-ruin"
+      ],
+      "confidence": "medium",
+      "notes": "ERA OF RUIN IS REAL AND PUBLISHED, and it is ONE VOLUME, not a multi-part set. Full retail title 'Siege of Terra: Era of Ruin', subtitled 'A Siege of Terra Anthology'. 272 pages, hardback, Black Library. Lexicanum gives June 2025, Goodreads gives 15 July 2025 for the hardcover, ISBN 9781800261808 (Goodreads) or 9781800262607 (Lexicanum, likely the special edition). There is no single named editor on the cover: it is credited to Various authors, and the only named editorial credit anywhere is the introduction by Jacob Youngs on the Black Library contents listing, so the author field records that rather than inventing an editor. Contents, identical across Black Library, Warhammer Community and Lexicanum: Introduction by Jacob Youngs, Angels of Another Age by John French, Fulgurite by Nick Kyme, Fragments (All We Have Left) by Dan Abnett, Ex Libris by John French, System Purge by Gav Thorpe, After the Dawn, the Darkness by Guy Haley, Homebound by Chris Wraight, The Carrion Lord of the Imperium by Aaron Dembski-Bowden. Number SoT 9 chosen because the existing scheme runs SoT 1 to SoT 8a/8b/8c, this follows all three of those volumes, and 9 sorts after 8c under any sensible comparison. Timeline left at 014.M31, the Siege year. Warhammer Community and Lexicanum both say the stories are set during and after the Siege, and the Great Scouring runs ca. 014 to 021.M31, but no source I could reach dates any individual story, so I have not asserted an end point for the range. If you want a range, 014-021.M31 is the defensible outer bound, flagged as an inference. mainCharacters is deliberately just the two people actually named in the official copy (Ilya Ravallion in Homebound, Ahzek Ahriman in Ex Libris). The other six stories have no named characters in any source I could reach. Legions likewise: White Scars and Thousand Sons come from those two named stories, Adeptus Custodes and Imperial Army from the official line about 'mighty Custodians, scheming sorcerers, and the lowly footsoldiers of the Imperial Army'. Confidence medium for that reason, not because the book's existence is in any doubt. SPOILER NOTE: the official back-cover copy opens 'Horus is dead. His Heresy is over', which gives away the ending of the entire saga, so the safe summary is written from scratch and describes only the premise, the cast types and the mood. It does not state who won, who died, or how the Siege ended. Also worth knowing for the site: Lexicanum lists Ashes of the Imperium by Chris Wraight as the book that follows this one, opening a new series called The Horus Heresy: The Scouring, so Era of Ruin is the true end of the Siege of Terra sequence."
+    }
+  ]
+}
