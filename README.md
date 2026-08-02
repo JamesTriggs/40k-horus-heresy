@@ -64,6 +64,12 @@ For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 - **Dynamic quotes**: 48 Thought for the Day quotes with attributions
 - **Complete visual transformation** between allegiances
 
+### ♿ Keyboard and screen reader
+
+- Book cards and character names are real buttons, so the catalogue is fully operable without a mouse
+- Dialogs use `role="dialog"`, trap Tab, mark the background `inert`, and return focus to whatever opened them
+- Visible focus rings throughout, and `prefers-reduced-motion` is respected
+
 ### 📱 Fully Responsive
 - Optimized for desktop, tablet, and mobile devices
 - Touch-friendly interactions
@@ -138,6 +144,25 @@ Deploy to any static hosting service:
 └── README.md                    # This file
 ```
 
+## 🔄 Progress sync, without a server
+
+The site is a static page with no backend, so progress lives in `localStorage`.
+To carry it between devices, the whole reading log is packed into a short code:
+two bits per book over the alphabetically sorted key list, which is 228 books in
+57 bytes, about 88 characters including the header.
+
+Press the **⇄** button for your code, or a link that carries it. Paste the code
+on another device to restore.
+
+- Nothing is uploaded. There is no account, no service, and nothing to shut down.
+- Sorted alphabetically rather than by display order, so re-sorting the
+  chronology never invalidates an existing code.
+- A short fingerprint of the book list is embedded. A code from a different
+  dataset is **refused** rather than decoded against shifted indices, which
+  would silently corrupt the log.
+- Restoring replaces this device's progress, and a sync link asks first if the
+  device already has any.
+
 ## 🧪 Checks
 
 Two gates, neither of which needs a build step.
@@ -154,8 +179,9 @@ node tools/generate-ordering-doc.mjs
 # Rebuild the recommended reading order after changing dates or the chart.
 node tools/build-reading-order.mjs
 
-# 47 browser checks: the three views, ordering, modals, scroll lock, contrast in
-# both themes, mobile layout. Needs Playwright and a local server.
+# 62 browser checks: the three views, ordering, modals, scroll lock, contrast in
+# both themes, keyboard access, progress sync, mobile layout.
+# Needs Playwright and a local server.
 npm i -D playwright && npx playwright install chromium-headless-shell
 python3 -m http.server 8899 &
 node tools/ui-checks.mjs

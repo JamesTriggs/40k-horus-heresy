@@ -539,6 +539,104 @@ await check('the header subtitle matches the active view', async () => {
     if (!/READING ORDER/.test(reading)) throw new Error('reading view subtitle: ' + reading);
 });
 
+console.log('\nKeyboard and assistive technology');
+
+await check('a book card is a real button, reachable and activatable', async () => {
+    await page.evaluate(() => document.querySelector('.book-card').focus());
+    const tag = await page.evaluate(() => document.activeElement.tagName);
+    if (tag !== 'BUTTON') throw new Error('focused element is a ' + tag);
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(500);
+    const open = await page.evaluate(() => document.getElementById('modalOverlay').classList.contains('active'));
+    if (!open) throw new Error('Enter did not open the dialog');
+});
+
+await check('focus moves into the dialog and Tab cannot escape it', async () => {
+    const inside = () => page.evaluate(() =>
+        document.getElementById('modalOverlay').contains(document.activeElement));
+    if (!await inside()) throw new Error('focus stayed outside on open');
+    for (let i = 0; i < 25; i++) await page.keyboard.press('Tab');
+    if (!await inside()) throw new Error('Tab escaped the dialog');
+});
+
+await check('the background is inert while a dialog is open', async () => {
+    const inert = await page.evaluate(() =>
+        document.querySelector('.dataslate-container').hasAttribute('inert'));
+    if (!inert) throw new Error('background is still reachable');
+});
+
+await check('focus returns to the trigger on close', async () => {
+    // The trigger sits inside the inert container, so inert has to be cleared
+    // before focus is restored or the restore silently does nothing.
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(400);
+    const back = await page.evaluate(() => document.activeElement.classList.contains('book-card'));
+    if (!back) throw new Error('focus was not restored');
+});
+
+await check('character names are buttons, not spans', async () => {
+    await page.evaluate(() => showModal('horus-rising'));
+    await page.waitForTimeout(400);
+    const tag = await page.evaluate(() => document.querySelector('.character-link')?.tagName || 'none');
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(300);
+    if (tag !== 'BUTTON') throw new Error('character link is a ' + tag);
+});
+
+await check('nothing removes its own focus outline', async () => {
+    const bad = await page.evaluate(() => {
+        let n = 0;
+        for (const el of document.querySelectorAll('button, input, select, a')) {
+            el.focus();
+            const cs = getComputedStyle(el);
+            if (cs.outlineStyle === 'none' && cs.outlineWidth === '0px' && el.matches(':focus-visible')) n++;
+        }
+        return n;
+    });
+    if (bad) throw new Error(bad + ' focusable elements have no visible focus state');
+});
+
+console.log('\nProgress sync');
+
+await check('a progress code round-trips through a separate browser profile', async () => {
+    const source = await newPage({ width: 1200, height: 900 });
+    await source.goto(BASE, { waitUntil: 'load' });
+    await source.waitForSelector('.book-card');
+    await source.waitForTimeout(700);
+    await source.evaluate(() => {
+        const ks = Object.keys(bookData);
+        readingProgress.save({ [ks[0]]: 'finished', [ks[7]]: 'reading', [ks[120]]: 'finished' });
+    });
+    const code = await source.evaluate(() => exportProgressCode());
+    await source.close();
+
+    // A fresh context has its own localStorage, which is the point.
+    const context = await browser.newContext();
+    const target = await context.newPage();
+    await target.goto(BASE, { waitUntil: 'load' });
+    await target.waitForSelector('.book-card');
+    await target.waitForTimeout(700);
+    const result = await target.evaluate((c) => importProgressCode(c), code);
+    const restored = await target.evaluate(() => readingProgress.load());
+    await context.close();
+
+    if (!result.ok) throw new Error(result.reason);
+    if (Object.keys(restored).length !== 3) throw new Error('restored ' + Object.keys(restored).length + ' of 3');
+});
+
+await check('a code from a different dataset is refused, not misapplied', async () => {
+    // Decoding against shifted indices would silently corrupt the log, so a
+    // fingerprint mismatch has to fail loudly.
+    const r = await page.evaluate(() => importProgressCode('HH2-badbadb-AAAA'));
+    if (r.ok) throw new Error('a mismatched code was accepted');
+    if (!/different version/i.test(r.reason)) throw new Error('unhelpful reason: ' + r.reason);
+});
+
+await check('junk input is rejected cleanly', async () => {
+    const r = await page.evaluate(() => importProgressCode('not a code'));
+    if (r.ok) throw new Error('junk accepted');
+});
+
 console.log('\nLayout');
 
 await check('the catalogue scrolls with the page, no nested scroller', async () => {
