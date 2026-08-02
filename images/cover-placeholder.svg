@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 508" width="315" height="508" role="img" aria-label="No cover artwork available">
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#24242a"/>
+      <stop offset="50%" stop-color="#191920"/>
+      <stop offset="100%" stop-color="#121216"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="315" height="508" fill="url(#plate)"/>
+  <rect x="8" y="8" width="299" height="492" fill="none" stroke="#d4af37" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="16" y="16" width="283" height="476" fill="none" stroke="#d4af37" stroke-opacity="0.18" stroke-width="1"/>
+
+  <!-- Aquila-ish mark, kept abstract rather than imitating the official device -->
+  <g transform="translate(157.5 196)" fill="none" stroke="#d4af37" stroke-opacity="0.5" stroke-width="2.5" stroke-linecap="round">
+    <path d="M -52 0 L -18 -13 L 0 0 L 18 -13 L 52 0"/>
+    <path d="M -34 14 L 0 -4 L 34 14"/>
+    <path d="M 0 -4 L 0 40"/>
+    <path d="M -13 40 L 13 40"/>
+  </g>
+
+  <rect x="60" y="266" width="195" height="1.5" fill="url(#rule)"/>
+
+  <text x="157.5" y="304" text-anchor="middle" fill="#d4af37" fill-opacity="0.85"
+        font-family="'Share Tech Mono', monospace" font-size="19" letter-spacing="3">NO IMAGE</text>
+  <text x="157.5" y="332" text-anchor="middle" fill="#e8dcc4" fill-opacity="0.5"
+        font-family="'Share Tech Mono', monospace" font-size="12.5" letter-spacing="1.6">ON RECORD</text>
+
+  <text x="157.5" y="440" text-anchor="middle" fill="#e8dcc4" fill-opacity="0.3"
+        font-family="'Share Tech Mono', monospace" font-size="10" letter-spacing="1.2">COVER ARTWORK</text>
+  <text x="157.5" y="458" text-anchor="middle" fill="#e8dcc4" fill-opacity="0.3"
+        font-family="'Share Tech Mono', monospace" font-size="10" letter-spacing="1.2">NOT ARCHIVED</text>
+</svg>
