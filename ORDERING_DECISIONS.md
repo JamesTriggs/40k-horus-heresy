@@ -1,6 +1,6 @@
 # Horus Heresy Chronological Ordering Decision Log
 
-**Generated:** 2026-08-02 by `tools/generate-ordering-doc.mjs`  
+**Generated:** 2026-08-03 by `tools/generate-ordering-doc.mjs`  
 **Total Books:** 228  
 **Purpose:** Authoritative chronological ordering for all Horus Heresy books and anthology stories.
 
@@ -25,21 +25,21 @@ Principle 1 replaces an earlier principle that placed pre-Heresy books at the en
 
 | Timeline | Event | Key Books |
 |----------|-------|-----------|
-| 820-970.M30 | Caliban Era | Descent of Angels |
-| 962.M30 | Razing of Monarchia | The First Heretic |
-| 001.M31 | Council of Nikaea | A Thousand Sons |
-| 002-003.M31 | Horus at Peak | Horus Rising |
-| 004.M31 | Horus Corrupted | False Gods |
-| 004-005.M31 | Burning of Prospero | Prospero Burns |
-| 005.M31 | Isstvan III | Galaxy in Flames |
-| 006.M31 | Isstvan V Drop Site Massacre | Fulgrim, The Phoenician |
-| 007.M31 | Battle of Calth | Know No Fear |
-| 007-008.M31 | Shadow Crusade | Betrayer |
-| 008-009.M31 | Battle of Molech | Vengeful Spirit |
-| 009.M31 | Imperium Secundus | The Unremembered Empire |
-| 012.M31 | Beta-Garmon | Titandeath, Wolfsbane |
-| 014.M31 | Siege of Terra | The Solar War through The End and the Death |
-| 015-036.M31 | The Scouring | Leman Russ, Konrad Curze |
+| 820-945.M30 | Caliban Era | DESCENT OF ANGELS |
+| 959.M30 | Razing of Monarchia | THE FIRST HERETIC |
+| 001-004.M31 | Council of Nikaea | A THOUSAND SONS |
+| 002-003.M31 | Horus at his zenith | HORUS RISING |
+| 004.M31 | Horus corrupted on Davin | FALSE GODS |
+| 004-005.M31 | Burning of Prospero | PROSPERO BURNS |
+| 005.M31 | Isstvan III | GALAXY IN FLAMES |
+| 005-006.M31 | Isstvan V Drop Site Massacre | FULGRIM, THE PHOENICIAN |
+| 007.M31 | Battle of Calth | KNOW NO FEAR |
+| 007.M31 | Shadow Crusade | BETRAYER |
+| 009.M31 | Battle of Molech | VENGEFUL SPIRIT |
+| 009-010.M31 | Imperium Secundus | THE UNREMEMBERED EMPIRE |
+| 012-013.M31 | Beta-Garmon | TITANDEATH, WOLFSBANE |
+| 014.M31 | Siege of Terra | THE SOLAR WAR, THE END AND THE DEATH: VOLUME III |
+| 036.M31 | The Scouring | KONRAD CURZE: THE NIGHT HAUNTER |
 
 ---
 
