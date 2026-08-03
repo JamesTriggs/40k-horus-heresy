@@ -211,6 +211,22 @@ await check('the ordering guide renders the generated document', async () => {
     if (r.literalQuotes) throw new Error('blockquote markdown rendered literally');
     if (r.orphanListItems) throw new Error(r.orphanListItems + ' list items outside a ul/ol');
     if (r.retiredPrinciple) throw new Error('still shows the retired ordering principle');
+
+    // The log is generated, so it must reflect the live dataset rather than
+    // whatever the data looked like when someone last edited it by hand.
+    const body = await page.$eval('#orderingModalBody', (e) => e.innerText);
+    const total = await page.evaluate(() => Object.keys(bookData).length);
+    if (!body.includes(String(total))) {
+        throw new Error(`the log does not mention the current total of ${total} entries`);
+    }
+    for (const recent of ['SONS OF THE SELENAR', 'FURY OF MAGNUS', 'GARRO: KNIGHT OF GREY', 'ERA OF RUIN']) {
+        if (!body.includes(recent)) throw new Error('the log omits ' + recent);
+    }
+    // The summary table's dates are derived from the data, so a stale value
+    // here means the log was not regenerated after a timeline correction.
+    for (const stale of ['820-970.M30', '962.M30']) {
+        if (body.includes(stale)) throw new Error('the events table still shows the stale value ' + stale);
+    }
     await page.keyboard.press('Escape');
     await page.waitForTimeout(300);
 });

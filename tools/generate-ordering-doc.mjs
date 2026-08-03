@@ -67,23 +67,82 @@ w('## Key Chronological Events Reference');
 w();
 w('| Timeline | Event | Key Books |');
 w('|----------|-------|-----------|');
-[
-    ['820-970.M30', 'Caliban Era', 'Descent of Angels'],
-    ['962.M30', 'Razing of Monarchia', 'The First Heretic'],
-    ['001.M31', 'Council of Nikaea', 'A Thousand Sons'],
-    ['002-003.M31', 'Horus at Peak', 'Horus Rising'],
-    ['004.M31', 'Horus Corrupted', 'False Gods'],
-    ['004-005.M31', 'Burning of Prospero', 'Prospero Burns'],
-    ['005.M31', 'Isstvan III', 'Galaxy in Flames'],
-    ['006.M31', 'Isstvan V Drop Site Massacre', 'Fulgrim, The Phoenician'],
-    ['007.M31', 'Battle of Calth', 'Know No Fear'],
-    ['007-008.M31', 'Shadow Crusade', 'Betrayer'],
-    ['008-009.M31', 'Battle of Molech', 'Vengeful Spirit'],
-    ['009.M31', 'Imperium Secundus', 'The Unremembered Empire'],
-    ['012.M31', 'Beta-Garmon', 'Titandeath, Wolfsbane'],
-    ['014.M31', 'Siege of Terra', 'The Solar War through The End and the Death'],
-    ['015-036.M31', 'The Scouring', 'Leman Russ, Konrad Curze'],
-].forEach(([t, e, b]) => w(`| ${t} | ${e} | ${b} |`));
+
+// The event names are editorial, but the dates are looked up from the data.
+// They used to be hardcoded here, and after the research pass corrected 30
+// timelines, 8 of 15 rows were quietly wrong. A summary table that disagrees
+// with the list beneath it is worse than no table.
+const KEY_EVENTS = [
+    ['Caliban Era', ['DESCENT OF ANGELS']],
+    ['Razing of Monarchia', ['THE FIRST HERETIC']],
+    ['Council of Nikaea', ['A THOUSAND SONS']],
+    ['Horus at his zenith', ['HORUS RISING']],
+    ['Horus corrupted on Davin', ['FALSE GODS']],
+    ['Burning of Prospero', ['PROSPERO BURNS']],
+    ['Isstvan III', ['GALAXY IN FLAMES']],
+    ['Isstvan V Drop Site Massacre', ['FULGRIM', 'THE PHOENICIAN']],
+    ['Battle of Calth', ['KNOW NO FEAR']],
+    ['Shadow Crusade', ['BETRAYER']],
+    ['Battle of Molech', ['VENGEFUL SPIRIT']],
+    ['Imperium Secundus', ['THE UNREMEMBERED EMPIRE']],
+    ['Beta-Garmon', ['TITANDEATH', 'WOLFSBANE']],
+    ['Siege of Terra', ['THE SOLAR WAR', 'THE END AND THE DEATH: VOLUME III']],
+    ['The Scouring', ['KONRAD CURZE: THE NIGHT HAUNTER']],
+];
+
+const byTitle = new Map(entries.map(([, b]) => [b.title.toUpperCase(), b]));
+
+// Parse a timeline into an absolute start and end year, so an event covering
+// several books can be reported as one continuous span.
+const parseTimeline = (timeline) => {
+    const m = /^(\d{3})(?:-(\d{3}))?\.M(\d{2})$/.exec(timeline || '');
+    if (!m) return null;
+    const millennium = Number(m[3]);
+    const base = (millennium - 1) * 1000;
+    return {
+        start: base + Number(m[1]),
+        end: base + Number(m[2] ?? m[1]),
+        millennium,
+    };
+};
+
+const formatSpan = (start, end) => {
+    const toParts = (absolute) => ({
+        millennium: Math.floor(absolute / 1000) + 1,
+        year: String(absolute % 1000).padStart(3, '0'),
+    });
+    const a = toParts(start);
+    const b = toParts(end);
+    if (start === end) return `${a.year}.M${a.millennium}`;
+    if (a.millennium === b.millennium) return `${a.year}-${b.year}.M${a.millennium}`;
+    return `${a.year}.M${a.millennium} to ${b.year}.M${b.millennium}`;
+};
+
+const eventRows = KEY_EVENTS.map(([event, titles]) => {
+    const books = titles.map((t) => {
+        const book = byTitle.get(t);
+        if (!book) throw new Error(`Key event "${event}" names a book not in bookData: ${t}`);
+        const parsed = parseTimeline(book.timeline);
+        if (!parsed) throw new Error(`Key event "${event}" names ${t}, whose timeline does not parse: ${book.timeline}`);
+        return { book, parsed };
+    });
+
+    const start = Math.min(...books.map((b) => b.parsed.start));
+    const end = Math.max(...books.map((b) => b.parsed.end));
+
+    return {
+        timeline: formatSpan(start, end),
+        event,
+        // Titles are stored in caps and shown that way throughout the list
+        // below, so leave them alone rather than title-casing "VOLUME III".
+        books: books.map((b) => b.book.title).join(', '),
+        sort: start,
+    };
+});
+
+eventRows.sort((a, b) => a.sort - b.sort);
+eventRows.forEach((r) => w(`| ${r.timeline} | ${r.event} | ${r.books} |`));
+
 w();
 w('---');
 w();

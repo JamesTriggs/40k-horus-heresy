@@ -173,6 +173,48 @@ for (const [key, book] of bookEntries) {
 }
 
 // ---------------------------------------------------------------------------
+// 5b. The ordering log's summary table must agree with the data beneath it.
+// Those dates were hardcoded in the generator, and after 30 timelines were
+// corrected 8 of 15 rows were silently wrong.
+// ---------------------------------------------------------------------------
+{
+    const docPath = join(root, 'ORDERING_DECISIONS.md');
+    if (existsSync(docPath)) {
+        const doc = readFileSync(docPath, 'utf8');
+        const byTitle = new Map(bookEntries.map(([, b]) => [b.title.toUpperCase(), b]));
+        const rows = [...doc.matchAll(/^\| (\d{3}(?:-\d{3})?\.M\d{2}[^|]*) \| ([^|]+) \| ([^|]+) \|$/gm)];
+
+        if (!rows.length) {
+            warn('Could not parse the key events table out of ORDERING_DECISIONS.md');
+        }
+
+        const parse = (t) => {
+            const m = /^(\d{3})(?:-(\d{3}))?\.M(\d{2})$/.exec(t.trim());
+            if (!m) return null;
+            const base = (Number(m[3]) - 1) * 1000;
+            return { start: base + Number(m[1]), end: base + Number(m[2] ?? m[1]) };
+        };
+
+        for (const [, claimed, event, titles] of rows) {
+            const span = parse(claimed.trim());
+            if (!span) continue;   // cross-millennium rows use a different form
+            const books = titles.split(',').map((t) => byTitle.get(t.trim().toUpperCase()));
+            if (books.some((b) => !b)) {
+                fail(`Key events row "${event.trim()}" names a book that is not in bookData`);
+                continue;
+            }
+            const parsedBooks = books.map((b) => parse(b.timeline)).filter(Boolean);
+            if (parsedBooks.length !== books.length) continue;
+            const start = Math.min(...parsedBooks.map((p) => p.start));
+            const end = Math.max(...parsedBooks.map((p) => p.end));
+            if (start !== span.start || end !== span.end) {
+                fail(`Key events row "${event.trim()}" claims ${claimed.trim()} but its books span a different range. Regenerate with tools/generate-ordering-doc.mjs`);
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
 // 6b. Blurb quality. Warnings for now, to be promoted to errors once the
 // research passes have landed across all 224 entries.
 // ---------------------------------------------------------------------------
