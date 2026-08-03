@@ -44,6 +44,7 @@ For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 - **Legion filters**: Filter by specific legion or all Loyalist/Traitor books
 - **Sort options**: Chronological, Publication, Title A-Z, Author A-Z
 - **Series toggles**: Show/hide Primarchs and Siege of Terra series
+- **Numerals**: switch book numbering between High Gothic (`XVI`) and Low Gothic (`16`). Series prefixes such as `P9` and `SoT 8a` are already Low Gothic and pass through untouched
 
 ### 📖 Reading Progress Tracker
 - **Three-state system**: Not Started, Reading, Finished
@@ -151,8 +152,14 @@ To carry it between devices, the whole reading log is packed into a short code:
 two bits per book over the alphabetically sorted key list, which is 228 books in
 57 bytes, about 88 characters including the header.
 
-Press the **⇄** button for your code, or a link that carries it. Paste the code
-on another device to restore.
+Press the **⇄** button for your cipher, or a vector that carries it. Enter the
+cipher on another dataslate to receive it.
+
+The wording throughout is framed in the setting: a **dataslate transfer** issues
+a **record cipher** that you **transmit** to another dataslate. One deliberate
+exception: anywhere the interface describes *losing* data it drops the flavour
+and says plainly that clearing your browser data will erase it. The browser
+suite asserts both halves of that rule, so flavour cannot creep into a warning.
 
 - Nothing is uploaded. There is no account, no service, and nothing to shut down.
 - Sorted alphabetically rather than by display order, so re-sorting the
@@ -179,7 +186,7 @@ node tools/generate-ordering-doc.mjs
 # Rebuild the recommended reading order after changing dates or the chart.
 node tools/build-reading-order.mjs
 
-# 62 browser checks: the three views, ordering, modals, scroll lock, contrast in
+# 73 browser checks: the three views, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs Playwright and a local server.
 npm i -D playwright && npx playwright install chromium-headless-shell

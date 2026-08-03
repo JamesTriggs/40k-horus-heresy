@@ -1066,15 +1066,15 @@ function importProgressCode(code) {
     const parts = cleaned.split('-');
 
     if (parts.length !== 3 || parts[0] !== SYNC_PREFIX) {
-        return { ok: false, reason: 'That does not look like a progress code.' };
+        return { ok: false, reason: 'That is not a record cipher.' };
     }
 
     const keys = syncKeyList();
     if (parts[1] !== syncFingerprint(keys)) {
         return {
             ok: false,
-            reason: 'That code was made from a different version of the archive. ' +
-                    'Reload both devices so they hold the same books, then export again.',
+            reason: 'That cipher was struck from a different revision of the archive. ' +
+                    'Reload both dataslates so they hold the same records, then issue a new cipher.',
         };
     }
 
@@ -1082,10 +1082,10 @@ function importProgressCode(code) {
     try {
         bytes = fromBase64Url(parts[2]);
     } catch (error) {
-        return { ok: false, reason: 'That code is damaged or incomplete.' };
+        return { ok: false, reason: 'That cipher is corrupted or incomplete.' };
     }
     if (bytes.length !== Math.ceil(keys.length / 4)) {
-        return { ok: false, reason: 'That code is the wrong length for this archive.' };
+        return { ok: false, reason: 'That cipher is the wrong length for this archive.' };
     }
 
     const restored = {};
@@ -5336,6 +5336,66 @@ const bookData = {
     }
 };
 
+// Numeral display. Roman numbering is High Gothic in the setting, so the plain
+// form is Low Gothic. Only the numeral part is converted: P9 and SoT 8a are
+// already Low Gothic and are left alone.
+const NUMERALS_KEY = 'horusHeresyLowGothicNumerals';
+let useLowGothicNumerals = false;
+
+const ROMAN_VALUES = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+
+function romanToArabic(roman) {
+    let total = 0;
+    for (let i = 0; i < roman.length; i++) {
+        const value = ROMAN_VALUES[roman[i]];
+        const next = ROMAN_VALUES[roman[i + 1]];
+        total += next && next > value ? -value : value;
+    }
+    return total;
+}
+
+// 'XXV.7' becomes '25.7'. Anything not purely Roman is returned untouched.
+function displayBookNumber(number) {
+    const raw = String(number ?? '');
+    if (!useLowGothicNumerals) return raw;
+
+    const match = /^([IVXLCDM]+)(\.\d+)?$/.exec(raw.toUpperCase());
+    if (!match) return raw;
+    return romanToArabic(match[1]) + (match[2] || '');
+}
+
+function loadNumeralPreference() {
+    try {
+        useLowGothicNumerals = localStorage.getItem(NUMERALS_KEY) === '1';
+    } catch (error) {
+        useLowGothicNumerals = false;
+    }
+    return useLowGothicNumerals;
+}
+
+function initializeNumerals() {
+    const box = document.getElementById('lowGothicNumerals');
+    const sample = document.getElementById('numeralSample');
+    if (!box) return;
+
+    box.checked = loadNumeralPreference();
+    const updateSample = () => {
+        if (sample) sample.textContent = useLowGothicNumerals ? '(16 \u2190 XVI)' : '(XVI \u2192 16)';
+    };
+    updateSample();
+
+    box.addEventListener('change', () => {
+        useLowGothicNumerals = box.checked;
+        try {
+            localStorage.setItem(NUMERALS_KEY, useLowGothicNumerals ? '1' : '0');
+        } catch (error) {
+            console.warn('Numeral preference could not be saved:', error);
+        }
+        updateSample();
+        rerenderCurrentView();
+    });
+}
+
 // Convert a series number into a numeric publication-order key.
 // Returns UNKNOWN_NUMBER for anything unrecognised so bad data sorts last
 // and is visible to the validator rather than silently landing mid-list.
@@ -5541,7 +5601,7 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
                 <img class="book-cover-img" src="${encodeURI(optimisedImage(book.coverImage))}"
                      alt="Cover of ${escapeHtml(book.title)}"
                      loading="lazy" decoding="async" width="315" height="508">
-                <div class="book-number-overlay">${escapeHtml(book.number)}</div>
+                <div class="book-number-overlay">${escapeHtml(displayBookNumber(book.number))}</div>
                 <div class="chronological-badge">Chrono: ${chronologicalNumber}</div>
                 ${statusBadge}
             </div>
@@ -6146,7 +6206,7 @@ function initializeSyncPanel() {
         const counts = readingProgress.load();
         const finished = Object.values(counts).filter((v) => v === 'finished').length;
         const reading = Object.values(counts).filter((v) => v === 'reading').length;
-        summary.textContent = `${finished} finished, ${reading} reading, out of ${Object.keys(bookData).length} entries.`;
+        summary.textContent = `${finished} read, ${reading} in progress, of ${Object.keys(bookData).length} records.`;
     };
 
     const copy = async (field, btn) => {
@@ -6189,7 +6249,7 @@ function initializeSyncPanel() {
     document.getElementById('restoreBtn').addEventListener('click', () => {
         const result = importProgressCode(pasteField.value);
         if (!result.ok) { say(result.reason, 'error'); return; }
-        say(`Restored ${result.applied} book${result.applied === 1 ? '' : 's'}.`, 'ok');
+        say(`Transmission received. ${result.applied} record${result.applied === 1 ? '' : 's'} restored.`, 'ok');
         refresh();
         rerenderCurrentView();
     });
@@ -6201,11 +6261,11 @@ function initializeSyncPanel() {
         history.replaceState(null, '', location.pathname + location.search);
         const existing = Object.values(readingProgress.load()).filter(Boolean).length;
         const proceed = existing === 0 || confirm(
-            `This link carries reading progress. Restoring will replace the ${existing} book(s) already marked on this device. Continue?`);
+            `This vector carries a reading record. Receiving it will overwrite the ${existing} record(s) already marked on this dataslate. Proceed?`);
         if (proceed) {
             const result = importProgressCode(decodeURIComponent(fromUrl[1]));
             open();
-            say(result.ok ? `Restored ${result.applied} books from the link.` : result.reason,
+            say(result.ok ? `Transmission received. ${result.applied} records restored.` : result.reason,
                 result.ok ? 'ok' : 'error');
             if (result.ok) { refresh(); rerenderCurrentView(); }
         }
@@ -7175,6 +7235,7 @@ window.addEventListener('load', async () => {
     setupFilterListeners(); // Set up filter events
     initializeViewSwitcher();
     initializeFilterDisclosure();
+    initializeNumerals();
     initializeSyncPanel();
     initializeProgressHint();
     initializeWelcome();
