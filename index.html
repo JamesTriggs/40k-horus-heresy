@@ -30,8 +30,8 @@
                  stale hardcoded total cannot flash before the real one. -->
             <div class="progress-counter" id="progressCounter" aria-live="polite"></div>
             <button type="button" class="progress-hint" id="progressHint">
-                <span class="progress-hint-text">Saved in this browser only</span>
-                <span class="progress-hint-action">Sync to another device ⇄</span>
+                <span class="progress-hint-text">Held in this dataslate only</span>
+                <span class="progress-hint-action">Transmit to another dataslate ⇄</span>
             </button>
         </header>
 
@@ -93,6 +93,12 @@
                     <input type="checkbox" id="showSpoilers" class="series-checkbox" checked>
                     <span class="toggle-text">SHOW SPOILERS</span>
                 </label>
+                <!-- Roman numbering is High Gothic in the setting, so the plain
+                     form is Low Gothic. Default stays High Gothic. -->
+                <label class="toggle-label">
+                    <input type="checkbox" id="lowGothicNumerals" class="series-checkbox">
+                    <span class="toggle-text">LOW GOTHIC NUMERALS <span class="numeral-sample" id="numeralSample">(XVI &rarr; 16)</span></span>
+                </label>
             </div>
             <button id="clearAllFilters" class="clear-filter-btn">CLEAR ALL</button>
         </div>
@@ -122,24 +128,24 @@
                 <button class="close-modal" id="closeWelcome" aria-label="Close">✕</button>
             </div>
             <div class="modal-body">
-                <p class="welcome-lede">Two hundred and twenty-eight books. Here is what you need to know.</p>
+                <p class="welcome-lede">Two hundred and twenty-eight records recovered. Mark well what follows.</p>
 
                 <dl class="welcome-list">
                     <dt>Three views</dt>
                     <dd><strong>Reading Order</strong> is where to start. <strong>Chronological</strong> is when things happened, which is not the same thing. <strong>Storyline Chart</strong> shows each Legion's thread and what to read first.</dd>
 
-                    <dt>Track what you have read</dt>
+                    <dt>Mark what you have read</dt>
                     <dd>Open any book and press <em>Mark as reading</em>. Press again for finished.</dd>
 
-                    <dt>Your progress is saved in this browser</dt>
-                    <dd>There is no account and nothing is uploaded. That also means clearing your browser data will erase it, and it will not appear on your phone by itself. The <strong>⇄</strong> button gives you a short code, or a link, that carries your progress to another device.</dd>
+                    <dt>Your record is held in this dataslate</dt>
+                    <dd>No account, no archive server, nothing transmitted. Which also means clearing your browser data will erase it, and it will not appear on another dataslate by itself. The <strong>⇄</strong> button issues a short cipher, or a vector, that carries your record across.</dd>
 
-                    <dt>Reading for the first time?</dt>
-                    <dd>Turn off <em>Show spoilers</em> before you browse. It swaps every summary for a spoiler-free one.</dd>
+                    <dt>First time through the Heresy?</dt>
+                    <dd>Revoke <em>Show spoilers</em> before you browse. Every summary is redacted to one that gives nothing away.</dd>
                 </dl>
 
                 <div class="welcome-actions">
-                    <button type="button" class="sync-action" id="welcomeBegin" data-autofocus>BEGIN</button>
+                    <button type="button" class="sync-action" id="welcomeBegin" data-autofocus>ACKNOWLEDGE</button>
                 </div>
             </div>
         </div>
@@ -147,28 +153,28 @@
 
     <!-- Progress sync. No server and no account: the reading log is packed
          into a short code you carry to another device. -->
-    <button class="sync-float-btn" id="syncBtn" title="Sync reading progress to another device"
-            aria-label="Sync reading progress to another device">
+    <button class="sync-float-btn" id="syncBtn" title="Transmit your record to another dataslate"
+            aria-label="Transmit your reading record to another dataslate">
         <span aria-hidden="true">⇄</span>
     </button>
 
     <div class="modal-overlay" id="syncModalOverlay" role="dialog" aria-modal="true" aria-labelledby="syncModalTitle">
         <div class="modal-content sync-modal">
             <div class="modal-header">
-                <h2 class="modal-title" id="syncModalTitle">PROGRESS SYNC</h2>
-                <button class="close-modal" id="closeSyncModal" aria-label="Close sync">✕</button>
+                <h2 class="modal-title" id="syncModalTitle">DATASLATE TRANSFER</h2>
+                <button class="close-modal" id="closeSyncModal" aria-label="Close dataslate transfer">✕</button>
             </div>
             <div class="modal-body">
                 <p class="sync-intro" id="syncSummary"></p>
 
-                <h3 class="sync-heading">Carry your progress to another device</h3>
-                <label class="sync-label" for="syncCode">Your progress code</label>
+                <h3 class="sync-heading">Transmit to another dataslate</h3>
+                <label class="sync-label" for="syncCode">Your record cipher</label>
                 <div class="sync-row">
                     <input type="text" id="syncCode" class="sync-input" readonly data-autofocus>
                     <button type="button" class="sync-action" id="copyCodeBtn">COPY</button>
                 </div>
 
-                <label class="sync-label" for="syncLink">Or open this link on the other device</label>
+                <label class="sync-label" for="syncLink">Or open this vector on the other dataslate</label>
                 <div class="sync-row">
                     <input type="text" id="syncLink" class="sync-input" readonly>
                     <button type="button" class="sync-action" id="copyLinkBtn">COPY</button>
@@ -176,15 +182,15 @@
 
                 <div class="sync-divider"></div>
 
-                <h3 class="sync-heading">Restore from a code</h3>
-                <label class="sync-label" for="syncPaste">Paste a progress code</label>
+                <h3 class="sync-heading">Receive a transmission</h3>
+                <label class="sync-label" for="syncPaste">Enter a record cipher</label>
                 <div class="sync-row">
                     <input type="text" id="syncPaste" class="sync-input" placeholder="HH2-...">
-                    <button type="button" class="sync-action" id="restoreBtn">RESTORE</button>
+                    <button type="button" class="sync-action" id="restoreBtn">RECEIVE</button>
                 </div>
 
                 <p class="sync-status" id="syncStatus" role="status" aria-live="polite"></p>
-                <p class="sync-note">Nothing is uploaded anywhere. The code is your reading log, encoded. Restoring replaces the progress on this device.</p>
+                <p class="sync-note">No astropath required and nothing is transmitted off this dataslate. The cipher <em>is</em> your reading record, encoded, so it only travels where you carry it. Receiving a cipher overwrites the record held here.</p>
             </div>
         </div>
     </div>
@@ -193,11 +199,11 @@
          "this is saved locally" is when there is finally something to lose. -->
     <div class="progress-toast" id="progressToast" role="status" aria-live="polite" hidden>
         <div class="progress-toast-body">
-            <strong>Progress saved</strong>
-            <p>Stored in this browser only. Clearing your browsing data will erase it.</p>
+            <strong>Record committed</strong>
+            <p>Held in this dataslate alone. Clearing your browser data will erase it.</p>
         </div>
         <div class="progress-toast-actions">
-            <button type="button" class="sync-action" id="toastSync">SYNC ⇄</button>
+            <button type="button" class="sync-action" id="toastSync">TRANSMIT ⇄</button>
             <button type="button" class="progress-toast-dismiss" id="toastDismiss" aria-label="Dismiss">✕</button>
         </div>
     </div>

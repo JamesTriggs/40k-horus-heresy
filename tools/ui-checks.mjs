@@ -641,8 +641,11 @@ await check('a code from a different dataset is refused, not misapplied', async 
     // Decoding against shifted indices would silently corrupt the log, so a
     // fingerprint mismatch has to fail loudly.
     const r = await page.evaluate(() => importProgressCode('HH2-badbadb-AAAA'));
-    if (r.ok) throw new Error('a mismatched code was accepted');
-    if (!/different version/i.test(r.reason)) throw new Error('unhelpful reason: ' + r.reason);
+    if (r.ok) throw new Error('a mismatched cipher was accepted');
+    // The wording is in-universe, so assert that it explains the cause rather
+    // than matching a phrase that flavour changes will keep breaking.
+    if (!/revision|version/i.test(r.reason)) throw new Error('unhelpful reason: ' + r.reason);
+    if (!/reload/i.test(r.reason)) throw new Error('reason gives no way forward: ' + r.reason);
 });
 
 await check('junk input is rejected cleanly', async () => {
@@ -664,9 +667,13 @@ await check('a first visit explains that progress is saved locally', async () =>
     if (!shown) throw new Error('the first-run panel did not appear');
 
     const text = await first.$eval('#welcomeOverlay', (e) => e.innerText);
-    if (!/saved in this browser/i.test(text)) throw new Error('does not say progress is local');
-    if (!/erase/i.test(text)) throw new Error('does not warn that clearing data erases it');
-    if (!/⇄/.test(text)) throw new Error('does not point at the sync control');
+    // Two things have to hold together: the framing stays in the setting, and
+    // the consequence of losing data stays in plain language.
+    if (!/dataslate/i.test(text)) throw new Error('not framed in the setting');
+    if (!/browser data will erase it/i.test(text)) {
+        throw new Error('the data-loss warning is not plainly worded');
+    }
+    if (!/⇄/.test(text)) throw new Error('does not point at the transfer control');
 
     await first.click('#welcomeBegin');
     await first.waitForTimeout(400);
@@ -698,7 +705,10 @@ await check('marking a first book warns that progress is browser-only', async ()
         return { visible: !el.hidden && el.classList.contains('is-visible'), text: el.innerText };
     });
     if (!toast.visible) throw new Error('no save hint appeared');
-    if (!/this browser only/i.test(toast.text)) throw new Error('hint text: ' + toast.text);
+    if (!/dataslate/i.test(toast.text)) throw new Error('not framed in the setting: ' + toast.text);
+    if (!/browser data will erase it/i.test(toast.text)) {
+        throw new Error('the data-loss warning is not plainly worded: ' + toast.text);
+    }
 
     // It must not nag on every subsequent change.
     await page2.evaluate(() => document.getElementById('toastDismiss').click());
@@ -717,7 +727,7 @@ await check('marking a first book warns that progress is browser-only', async ()
 
 await check('the progress counter carries a persistent sync affordance', async () => {
     const text = await page.$eval('#progressHint', (e) => e.innerText.replace(/\n/g, ' '));
-    if (!/this browser/i.test(text)) throw new Error('hint reads: ' + text);
+    if (!/dataslate/i.test(text)) throw new Error('hint reads: ' + text);
     await page.evaluate(() => document.getElementById('progressHint').click());
     await page.waitForTimeout(500);
     const open = await page.evaluate(() =>
@@ -739,6 +749,86 @@ await check('a sync link is not blocked by the first-run panel', async () => {
         document.getElementById('welcomeOverlay').classList.contains('active'));
     await context.close();
     if (blocked) throw new Error('the panel got in the way of a restore');
+});
+
+console.log('\nIn-universe wording');
+
+await check('the transfer panel is framed in the setting', async () => {
+    await page.evaluate(() => document.getElementById('syncBtn').click());
+    await page.waitForTimeout(500);
+    const text = await page.$eval('#syncModalOverlay', (e) => e.innerText);
+    for (const needed of [/DATASLATE TRANSFER/i, /dataslate/i, /cipher/i, /astropath/i]) {
+        if (!needed.test(text)) throw new Error('missing ' + needed);
+    }
+    for (const stale of [/progress code/i, /another device/i]) {
+        if (stale.test(text)) throw new Error('still uses out-of-universe wording: ' + stale);
+    }
+});
+
+await check('the overwrite consequence is still stated plainly', async () => {
+    // Flavour belongs on labels, not on warnings about losing data.
+    const text = await page.$eval('#syncModalOverlay', (e) => e.innerText);
+    if (!/overwrites the record held here/i.test(text)) {
+        throw new Error('the overwrite consequence is not plainly stated');
+    }
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(300);
+});
+
+await check('the save hint keeps a plain data-loss warning', async () => {
+    const text = await page.$eval('#progressToast', (e) => e.innerText);
+    if (!/dataslate/i.test(text)) throw new Error('not in-universe: ' + text);
+    if (!/browser data will erase it/i.test(text)) {
+        throw new Error('the data-loss warning is not plain: ' + text);
+    }
+});
+
+console.log('\nNumerals');
+
+await check('High Gothic numerals are the default', async () => {
+    const numbers = await page.$$eval('.book-number-overlay', (e) => e.slice(0, 6).map((x) => x.textContent));
+    if (!numbers.some((n) => /^[IVXLCDM]+(\.\d+)?$/.test(n))) {
+        throw new Error('no Roman numerals present: ' + numbers.join(', '));
+    }
+});
+
+await check('toggling to Low Gothic converts the numerals', async () => {
+    await page.evaluate(() => {
+        const d = document.getElementById('filterDisclosure');
+        if (d && getComputedStyle(d).display !== 'none') d.click();
+    });
+    await page.check('#lowGothicNumerals');
+    await page.waitForTimeout(600);
+    const numbers = await page.$$eval('.book-number-overlay', (e) => e.slice(0, 6).map((x) => x.textContent));
+    if (numbers.some((n) => /^[IVXLCDM]+(\.\d+)?$/.test(n))) {
+        throw new Error('still Roman: ' + numbers.join(', '));
+    }
+});
+
+await check('series prefixes are not mangled by the conversion', async () => {
+    // P9 and SoT 8a are already Low Gothic, so they must pass through untouched.
+    const r = await page.evaluate(() => ['primarch-vulkan', 'sot-solar-war', 'sot-end-and-death-vol-1']
+        .map((k) => [bookData[k].number, displayBookNumber(bookData[k].number)]));
+    for (const [before, after] of r) {
+        if (before !== after) throw new Error(`${before} became ${after}`);
+    }
+});
+
+await check('the numeral preference survives a reload', async () => {
+    await page.reload({ waitUntil: 'load' });
+    await page.waitForSelector('.book-card');
+    await page.waitForTimeout(900);
+    const checked = await page.evaluate(() => document.getElementById('lowGothicNumerals').checked);
+    if (!checked) throw new Error('the toggle reset');
+    const numbers = await page.$$eval('.book-number-overlay', (e) => e.slice(0, 4).map((x) => x.textContent));
+    if (numbers.some((n) => /^[IVXLCDM]+(\.\d+)?$/.test(n))) throw new Error('reverted to Roman');
+    // Leave the suite in its default state for anything that follows.
+    await page.evaluate(() => {
+        const d = document.getElementById('filterDisclosure');
+        if (d && getComputedStyle(d).display !== 'none') d.click();
+    });
+    await page.uncheck('#lowGothicNumerals');
+    await page.waitForTimeout(500);
 });
 
 console.log('\nLayout');

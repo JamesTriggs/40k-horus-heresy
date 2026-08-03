@@ -2940,3 +2940,10 @@ body.traitor-theme .sync-float-btn {
     .progress-toast-actions { justify-content: space-between; }
     .welcome-list dd { font-size: 0.75rem; }
 }
+
+/* The numeral sample shows which way the toggle goes, so the label is not
+   ambiguous about whether it is describing the current or the next state. */
+.numeral-sample {
+    opacity: 0.65;
+    letter-spacing: 0.02rem;
+}
