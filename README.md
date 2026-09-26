@@ -42,7 +42,7 @@ The reading view offers a **Core** path through the 12 novels in [Warhammer Comm
 - **Work links**: opening a book gives it a shareable `#work=` URL, and browser Back returns to the catalogue
 - **Browse links and layouts**: filters, search and view choices are reflected in the URL, and readers can switch between cover grid and a compact list
 - **Spoiler toggle**: Spoilers start hidden. Enabling them reveals full summaries, character details and the chronological event log
-- **Event atlas**: Seven sourced turning points connect distinct viewpoints to the works that cover them. Work details reveal related events when spoilers are enabled
+- **Event atlas**: Fifteen sourced turning points connect distinct viewpoints to the works that cover them. Work details reveal related events when spoilers are enabled
 
 ### 🔍 Search & Filter
 - **Real-time search** by title, author, or character name
@@ -216,7 +216,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 106 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
+# 107 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

@@ -34,7 +34,7 @@ for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
             const width = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
             if (width > 1) throw new Error(`${name}: horizontal overflow of ${width}px`);
             await page.goto(new URL('events.html#prospero', base).href, { waitUntil: 'load' });
-            if (await page.locator('.event-card').count() !== 7) throw new Error(`${name}: event atlas count changed`);
+            if (await page.locator('.event-card').count() !== 15) throw new Error(`${name}: event atlas count changed`);
             const atlasWidth = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
             if (atlasWidth > 1) throw new Error(`${name}: event atlas overflows by ${atlasWidth}px`);
             if (errors.length) throw new Error(`${name}: ${errors.join('; ')}`);

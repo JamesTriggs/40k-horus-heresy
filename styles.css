@@ -1002,7 +1002,10 @@ body.traitor-theme .allegiance-toggle:hover {
 .source-page h2 { margin-top: 2rem; }
 .source-page li { margin-bottom: 0.6rem; }
 
-.event-jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; }
+.event-navigation { margin: 1.5rem 0; }
+.event-navigation summary { color: var(--imperial-gold); cursor: pointer; }
+.event-navigation summary:focus-visible { outline: 2px solid var(--imperial-gold); outline-offset: 3px; }
+.event-jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 0; }
 .event-jump a {
     padding: 0.35rem 0.6rem;
     border: 1px solid rgba(212, 175, 55, 0.55);

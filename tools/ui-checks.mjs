@@ -1402,7 +1402,7 @@ await check('sources page opens and stays within the mobile viewport', async () 
 });
 
 console.log('\nEvent atlas');
-await check('event atlas renders seven cited arcs without mobile overflow', async () => {
+await check('event atlas renders fifteen cited arcs without mobile overflow', async () => {
     const atlas = await newPage({ width: 390, height: 844 });
     await atlas.goto(new URL('events.html', BASE).href);
     const result = await atlas.evaluate(() => ({
@@ -1412,7 +1412,20 @@ await check('event atlas renders seven cited arcs without mobile overflow', asyn
             link.protocol === 'https:' && link.rel.includes('noopener')),
     }));
     await atlas.close();
-    if (result.count !== 7 || result.overflow > 1 || !result.sources) throw new Error(JSON.stringify(result));
+    if (result.count !== 15 || result.overflow > 1 || !result.sources) throw new Error(JSON.stringify(result));
+});
+
+await check('mobile event index expands and jumps to a selected arc', async () => {
+    const atlas = await newPage({ width: 390, height: 844 });
+    await atlas.goto(new URL('events.html', BASE).href);
+    const firstTop = await atlas.locator('.event-card').first().evaluate((element) => element.getBoundingClientRect().top);
+    if (firstTop >= 844) throw new Error(`first event starts at ${firstTop}px`);
+    await atlas.locator('.event-navigation summary').click();
+    await atlas.locator('#eventJump a[href="#prospero"]').click();
+    const focused = await atlas.evaluate(() => document.activeElement?.id);
+    const fragment = new URL(atlas.url()).hash;
+    await atlas.close();
+    if (focused !== 'prospero' || fragment !== '#prospero') throw new Error(`${focused}, ${fragment}`);
 });
 
 await check('a direct Prospero link shows both viewpoints and opens the named work', async () => {

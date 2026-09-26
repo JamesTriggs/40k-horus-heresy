@@ -26,7 +26,7 @@ for (const event of eventData.events) {
     if (event.factions.length) {
         const factions = document.createElement('p');
         factions.className = 'event-factions';
-        factions.textContent = `Factions named by the source: ${event.factions.join(', ')}`;
+        factions.textContent = `Related factions: ${event.factions.join(', ')}`;
         article.append(factions);
     }
 
