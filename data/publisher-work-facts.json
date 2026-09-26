@@ -75,5 +75,79 @@
       "author": "Graham McNeill",
       "format": "Novella"
     }
+  },
+  "directWorks": {
+    "descent-of-angels": {
+      "title": "DESCENT OF ANGELS",
+      "author": "Mitchel Scanlon",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/descent-of-angels-ebook.html"
+    },
+    "legion": {
+      "title": "LEGION",
+      "author": "Dan Abnett",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/legion-ebook.html"
+    },
+    "mechanicum": {
+      "title": "MECHANICUM",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/Mechanicum-eBook.html"
+    },
+    "nemesis": {
+      "title": "NEMESIS",
+      "author": "James Swallow",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/Nemesis-ebook.html"
+    },
+    "battle-for-the-abyss": {
+      "title": "BATTLE FOR THE ABYSS",
+      "author": "Ben Counter",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/battle-for-the-abyss-ebook.html"
+    },
+    "scars": {
+      "title": "SCARS",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/scars-ebook.html"
+    },
+    "vengeful-spirit": {
+      "title": "VENGEFUL SPIRIT",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/vengeful-spirit.html"
+    },
+    "pharos": {
+      "title": "PHAROS",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/popular-characters/popular-roboute-guiliman/pharos-ebook.html"
+    },
+    "the-crimson-king": {
+      "title": "THE CRIMSON KING",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/hh-the-crimson-king-ebook.html"
+    },
+    "the-path-of-heaven": {
+      "title": "THE PATH OF HEAVEN",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/chris-wraight/path-of-heaven-ebook.html"
+    },
+    "the-outcast-dead": {
+      "title": "THE OUTCAST DEAD",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/the-outcast-dead-ebook-ebook.html"
+    },
+    "the-damnation-of-pythos": {
+      "title": "THE DAMNATION OF PYTHOS",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/damnation-of-pythos-ebook.html"
+    }
   }
 }

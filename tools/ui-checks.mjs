@@ -289,6 +289,19 @@ await check('series overview cites checked title and author separately from summ
     if (!result.claim || !result.link || !result.summaryLimit) throw new Error(JSON.stringify(result));
 });
 
+await check('numbered novel cites its own Black Library publication page', async () => {
+    const sourced = await newPage({ width: 1200, height: 900 });
+    await sourced.goto(new URL('#work=descent-of-angels', BASE).href, { waitUntil: 'load' });
+    await sourced.waitForSelector('#modalOverlay.active');
+    const result = await sourced.$eval('#workResearch', (host) => ({
+        claim: host.textContent.includes('Title, author and novel format:'),
+        link: [...host.querySelectorAll('a')].some((a) => a.hostname === 'www.blacklibrary.com' &&
+            a.textContent === 'Black Library product page'),
+    }));
+    await sourced.close();
+    if (!result.claim || !result.link) throw new Error(JSON.stringify(result));
+});
+
 await check('character links preserve overlapping names and plain text', async () => {
     const result = await page.evaluate(() => {
         const host = document.createElement('div');

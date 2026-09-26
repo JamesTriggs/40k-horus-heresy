@@ -2112,6 +2112,19 @@ function renderWorkResearch(bookKey) {
         host.append(publication);
     }
 
+    const directFacts = publisherWorkFactsData.directWorks[bookKey];
+    if (directFacts) {
+        const publication = document.createElement('p');
+        publication.textContent = 'Title, author and novel format: ';
+        const link = document.createElement('a');
+        link.href = directFacts.source;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Black Library product page';
+        publication.append(link, document.createTextNode(` (checked ${publisherWorkFactsData.reviewedAt}).`));
+        host.append(publication);
+    }
+
     const list = document.createElement('ul');
     for (const value of sources) {
         let url;

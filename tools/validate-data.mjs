@@ -63,6 +63,19 @@ for (const [key, facts] of Object.entries(publisherWorkFacts.works || {})) {
         if (book[field] !== value) fail(`Publisher work fact '${field}' has drifted for '${key}'`);
     }
 }
+for (const [key, facts] of Object.entries(publisherWorkFacts.directWorks || {})) {
+    const book = bookData[key];
+    if (!book) { fail(`Direct publisher facts have unknown work '${key}'`); continue; }
+    if (!isBlackLibraryUrl(facts.source) || Object.keys(facts).some((field) =>
+        !['title', 'author', 'format', 'source'].includes(field))) {
+        fail(`Direct publisher facts for '${key}' have invalid fields or source`);
+    }
+    for (const field of ['title', 'author', 'format']) {
+        if (!facts[field] || book[field] !== facts[field]) {
+            fail(`Direct publisher fact '${field}' has drifted for '${key}'`);
+        }
+    }
+}
 const eventIds = new Set();
 const knownFactions = new Set(bookEntries.flatMap(([, book]) => book.legions));
 for (const event of eventData.events) {
