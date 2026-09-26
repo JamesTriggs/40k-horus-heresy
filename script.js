@@ -1854,6 +1854,7 @@ function showModal(bookKey, { updateUrl = true } = {}) {
     const clickableDetails = showSpoilers
         ? makeCharactersClickable(book.details)
         : '<p>Character and event details are hidden while spoilers are off.</p>';
+    const safeFacts = showSpoilers ? '' : `<p class="work-safe-facts"><strong>Author:</strong> ${escapeHtml(book.author)}<br><strong>Format:</strong> ${escapeHtml(book.format)}</p>`;
     const clickableBlurb = makeCharactersClickable(blurbText, false);
 
     // Determine button text and class based on status
@@ -1879,6 +1880,7 @@ function showModal(bookKey, { updateUrl = true } = {}) {
             </button>
         </div>
         <div class="book-details-text">
+            ${safeFacts}
             ${clickableDetails}
         </div>
     `;
@@ -2082,6 +2084,18 @@ function renderWorkResearch(bookKey) {
         link.rel = 'noopener noreferrer';
         link.textContent = 'Warhammer Community’s Horus Heresy Saga list';
         publication.append(link, document.createTextNode(` (checked ${readingRoutesData.core.reviewedAt}).`));
+        host.append(publication);
+    }
+
+    if (book.series === 'primarchs') {
+        const publication = document.createElement('p');
+        publication.textContent = 'Standalone Primarchs novel format: ';
+        const link = document.createElement('a');
+        link.href = primarchFormatReviewData.publisherNovelList;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Black Library novel catalogue';
+        publication.append(link, document.createTextNode(` (reviewed ${primarchFormatReviewData.reviewedAt}).`));
         host.append(publication);
     }
 

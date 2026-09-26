@@ -37,6 +37,17 @@ const publisherCollections = JSON.parse(readFileSync(join(root, 'data/publisher-
 const readingRoutes = JSON.parse(readFileSync(join(root, 'data/reading-routes.json'), 'utf8'));
 const eventData = JSON.parse(readFileSync(join(root, 'data/events.json'), 'utf8'));
 const publisherWorkFacts = JSON.parse(readFileSync(join(root, 'data/publisher-work-facts.json'), 'utf8'));
+const primarchFormatReview = JSON.parse(readFileSync(join(root, 'data/primarch-format-review.json'), 'utf8'));
+if (primarchFormatReview.format !== 'Novel' || !primarchFormatReview.reviewedAt) fail('Primarch format review is incomplete');
+for (const urlText of [primarchFormatReview.seriesSource, primarchFormatReview.publisherNovelList,
+    ...(primarchFormatReview.sampleProductPages || [])]) {
+    if (!isBlackLibraryUrl(urlText)) fail(`Primarch format review has an invalid publisher URL '${urlText}'`);
+}
+for (const [key, book] of bookEntries) {
+    if (book.series === 'primarchs' && book.format !== primarchFormatReview.format) {
+        fail(`Primarchs novel '${key}' has incorrect format '${book.format}'`);
+    }
+}
 try {
     const url = new URL(publisherWorkFacts.source);
     if (url.protocol !== 'https:' || url.hostname !== 'www.warhammer-community.com') fail('Publisher work facts need an official HTTPS source');

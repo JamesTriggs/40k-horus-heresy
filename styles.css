@@ -964,6 +964,8 @@ body.traitor-theme .allegiance-toggle:hover {
 }
 .work-events h3 { margin-top: 0; }
 .work-events a { color: var(--imperial-gold); }
+.work-safe-facts { line-height: 1.7; }
+.work-safe-facts strong { color: var(--imperial-gold); }
 
 .work-collections[hidden] { display: none; }
 .work-collections h3 { margin-top: 0; }

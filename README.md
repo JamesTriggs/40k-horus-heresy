@@ -15,7 +15,7 @@
 An immersive, grimdark-themed web application with **228 catalogue entries representing 226 distinct works** from the Horus Heresy universe, featuring:
 - 39 main Horus Heresy novels
 - 158 individual anthology stories, novellas and audio dramas, across 15 volumes
-- 17 The Primarchs novellas
+- 17 standalone Primarchs novels
 - 14 Siege of Terra books, including the three interleaved novellas and the Era of Ruin epilogue anthology
 
 Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate aesthetic with full character encyclopedia, reading tracker, and dual Loyalist/Traitor themes.
@@ -142,6 +142,7 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── data/publisher-collections.json # Checked anthology contents and disputes
 ├── data/reading-routes.json      # Sourced Core route
 ├── data/publisher-work-facts.json # Checked title and author evidence for 18 more works
+├── data/primarch-format-review.json # Publisher evidence for Primarchs novel formats
 ├── data/events.json              # Sourced event and viewpoint relationships
 ├── sources.html                  # Research and correction information
 ├── events.html                   # Event atlas
@@ -218,7 +219,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 111 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
+# 112 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

@@ -669,9 +669,23 @@ await check('format filter uses structured fields and resets cleanly', async () 
     }));
     await page.click('#clearAllFilters');
     const reset = await page.$eval('#formatFilter', (e) => e.value);
-    if (result.cards !== 48 || !result.allNovels || reset) {
+    if (result.cards !== 65 || !result.allNovels || reset) {
         throw new Error(`${result.cards} novels, all=${result.allNovels}, reset=${reset}`);
     }
+});
+
+await check('Primarchs standalones are novels with publisher format evidence', async () => {
+    const result = await page.evaluate(() => {
+        showModal('primarch-vulkan', { updateUrl: false });
+        return {
+            format: bookData['primarch-vulkan'].format,
+            details: document.getElementById('keyDetails').textContent,
+            source: document.getElementById('workResearch').textContent,
+        };
+    });
+    await page.evaluate(() => closeModal({ updateHistory: false }));
+    if (result.format !== 'Novel' || !result.details.includes('Type: Novel') ||
+        !result.source.includes('Black Library novel catalogue')) throw new Error(JSON.stringify(result));
 });
 
 await check('the spoiler preference survives a reload', async () => {
@@ -709,6 +723,9 @@ await check('spoiler-free book and character details hide outcomes', async () =>
     await page.evaluate(() => closeCharacterModal());
     await page.check('#showSpoilers');
     if (!details.includes('Character and event details are hidden')) throw new Error('book details were not redacted');
+    if (!details.includes('Author: Guy Haley') || !details.includes('Format: Novel')) {
+        throw new Error('spoiler-free publication facts are missing');
+    }
     if (character.includes('sacrificing himself')) throw new Error('character bio leaked');
     if (!character.includes('Character details are hidden')) throw new Error('character details were not redacted');
 });
