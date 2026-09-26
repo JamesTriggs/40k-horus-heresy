@@ -92,6 +92,11 @@ for (const [key, facts] of Object.entries(publisherWorkFacts.directWorks || {}))
         }
     }
 }
+for (const [key, book] of bookEntries) {
+    if (book.series === 'primarchs' && !publisherWorkFacts.directWorks?.[key]) {
+        fail(`Primarchs novel '${key}' needs its individual publisher fact record`);
+    }
+}
 const eventIds = new Set();
 const knownFactions = new Set(bookEntries.flatMap(([, book]) => book.legions));
 for (const event of eventData.events) {

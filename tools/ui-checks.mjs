@@ -720,6 +720,21 @@ await check('Primarchs standalones are novels with publisher format evidence', a
     if (result.format !== 'Novel' || !result.details.includes('Type: Novel') ||
         !result.source.includes('Black Library novel catalogue')) throw new Error(JSON.stringify(result));
 });
+await check('Ferrus Manus direct link uses the corrected publisher title and stable ID', async () => {
+    const primarch = await newPage({ width: 1200, height: 850 });
+    await primarch.goto(new URL('#work=primarch-ferrus-manus', BASE).href);
+    await primarch.waitForSelector('#modalOverlay.active');
+    const result = {
+        title: await primarch.locator('#modalTitle').textContent(),
+        source: await primarch.locator('#workResearch').textContent(),
+        url: new URL(primarch.url()).hash,
+    };
+    await primarch.close();
+    if (result.title !== 'FERRUS MANUS: GORGON OF MEDUSA' ||
+        !result.source.includes('Black Library product page') || result.url !== '#work=primarch-ferrus-manus') {
+        throw new Error(JSON.stringify(result));
+    }
+});
 
 await check('the spoiler preference survives a reload', async () => {
     await page.uncheck('#showSpoilers');
@@ -1487,6 +1502,22 @@ await check('mobile: at least one book card is above the fold', async () => {
 await check('mobile: no horizontal overflow', async () => {
     const o = await mobile.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     if (o > 1) throw new Error('overflows by ' + o + 'px');
+});
+await check('mobile: long work titles clear the dialog close button', async () => {
+    const mobile = await newPage({ width: 390, height: 844 });
+    await mobile.goto(new URL('#work=primarch-ferrus-manus', BASE).href);
+    await mobile.waitForSelector('#modalOverlay.active');
+    const result = await mobile.evaluate(() => {
+        const title = document.querySelector('#modalOverlay .modal-title');
+        const close = document.getElementById('closeModal');
+        return {
+            titleRight: title.getBoundingClientRect().right,
+            closeLeft: close.getBoundingClientRect().left,
+            overflow: title.scrollWidth - title.clientWidth,
+        };
+    });
+    await mobile.close();
+    if (result.titleRight > result.closeLeft - 4 || result.overflow > 1) throw new Error(JSON.stringify(result));
 });
 
 await check('narrow phones keep all three accessible view controls on one row', async () => {

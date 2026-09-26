@@ -17,6 +17,7 @@ for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
             const first = await page.locator('.book-card').first().getAttribute('aria-label');
             if (!first?.includes('HORUS RISING')) throw new Error(`${name}: wrong starting book: ${first}`);
             await page.click('#coreRoute');
+            await page.waitForFunction(() => document.querySelectorAll('.book-card').length === 12);
             if (await page.locator('.book-card').count() !== 12) throw new Error(`${name}: Core route count changed`);
             await page.click('#fullRoute');
             await page.locator('.book-card').first().click();

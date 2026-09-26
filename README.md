@@ -144,7 +144,7 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── data/collections.json         # Stable IDs for represented volumes
 ├── data/publisher-collections.json # Checked anthology contents and disputes
 ├── data/reading-routes.json      # Sourced Core route
-├── data/publisher-work-facts.json # Publisher facts for 18 overview works and 12 direct listings
+├── data/publisher-work-facts.json # Publisher facts for 18 overview works and 29 direct listings
 ├── data/primarch-format-review.json # Publisher evidence for Primarchs novel formats
 ├── data/events.json              # Sourced event and viewpoint relationships
 ├── sources.html                  # Research and correction information
@@ -222,7 +222,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 116 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
+# 118 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

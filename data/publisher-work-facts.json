@@ -148,6 +148,108 @@
       "author": "David Annandale",
       "format": "Novel",
       "source": "https://www.blacklibrary.com/the-horus-heresy/novels/damnation-of-pythos-ebook.html"
+    },
+    "primarch-vulkan": {
+      "title": "VULKAN: LORD OF DRAKES",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/primarchs_/primarchs-vulkan-lord-of-drakes.html"
+    },
+    "primarch-fulgrim": {
+      "title": "FULGRIM: THE PALATINE PHOENIX",
+      "author": "Josh Reynolds",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/fulgrim-the-palatine-phoenix-ebook.html"
+    },
+    "primarch-magnus": {
+      "title": "MAGNUS THE RED: MASTER OF PROSPERO",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/magnus-the-red.html"
+    },
+    "primarch-ferrus-manus": {
+      "title": "FERRUS MANUS: GORGON OF MEDUSA",
+      "author": "David Guymer",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/ferrus-manus-gorgon-of-medusa-ebook.html"
+    },
+    "primarch-angron": {
+      "title": "ANGRON: SLAVE OF NUCERIA",
+      "author": "Ian St. Martin",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/angron-slave-of-nuceria-ebook-2019.html"
+    },
+    "primarch-mortarion": {
+      "title": "MORTARION: THE PALE KING",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/primarchs_/ebook-mortarion-the-pale-king-eng-2022.html"
+    },
+    "primarch-corax": {
+      "title": "CORAX: LORD OF SHADOWS",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/primarchs-corax-ebook-cs-2018.html"
+    },
+    "primarch-lorgar": {
+      "title": "LORGAR: BEARER OF THE WORD",
+      "author": "Gav Thorpe",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/gav-thorpe/lorgar-bearer-of-the-word-ebook.html"
+    },
+    "primarch-roboute-guilliman": {
+      "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/david-annandale/roboute-guilliman-ebook.html"
+    },
+    "primarch-alpharius": {
+      "title": "ALPHARIUS: HEAD OF THE HYDRA",
+      "author": "Mike Brooks",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/top-10/alpharius-head-of-the-hydra-ebook-2021.html"
+    },
+    "primarch-lion-eljonson": {
+      "title": "LION EL'JONSON: LORD OF THE FIRST",
+      "author": "David Guymer",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/lion-eljonson-lord-of-the-first-ebook-2020.html"
+    },
+    "primarch-perturabo": {
+      "title": "PERTURABO: THE HAMMER OF OLYMPIA",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/perturabo-ebook.html"
+    },
+    "primarch-jaghatai-khan": {
+      "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/chris-wraight/primarchs-jaghatai-khan-warhawk-of-chogoris-ebook.html"
+    },
+    "primarch-sanguinius": {
+      "title": "SANGUINIUS: THE GREAT ANGEL",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/ebook-sanguinius-the-great-angel-eng-2022.html"
+    },
+    "primarch-rogal-dorn": {
+      "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
+      "author": "Gav Thorpe",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/primarchs_/ebook-rogal-dorn-the-emperors-crusader-eng-2022.html"
+    },
+    "primarch-leman-russ": {
+      "title": "LEMAN RUSS: THE GREAT WOLF",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/leman-russ-ebook.html"
+    },
+    "primarch-konrad-curze": {
+      "title": "KONRAD CURZE: THE NIGHT HAUNTER",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/konrad-curze-the-night-haunter-mp3-2019.html"
     }
   }
 }

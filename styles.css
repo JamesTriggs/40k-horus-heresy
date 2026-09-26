@@ -1178,7 +1178,8 @@ body.traitor-theme .ordering-guide-float-btn:hover {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
-    margin-right: 3rem;
+    margin-right: 5rem;
+    overflow-wrap: anywhere;
 }
 
 .close-modal {
@@ -1837,7 +1838,7 @@ body.traitor-theme #orderingModalBody strong {
     .modal-title {
         font-size: 1.3rem;
         letter-spacing: 0.1rem;
-        margin-right: 2rem;
+        margin-right: 4rem;
     }
 
     .close-modal {
