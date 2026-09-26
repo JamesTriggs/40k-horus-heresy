@@ -316,6 +316,51 @@
       "author": "Various, introduction by Jacob Youngs",
       "format": "Anthology",
       "source": "https://www.blacklibrary.com/series/series-sot/ebook-siege-of-terra-era-of-ruin-eng-2025.html"
+    },
+    "garro-oath-moment": {
+      "title": "GARRO: OATH OF MOMENT",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/authors/james-swallow/Garro-oath-of-moment-mp3.html"
+    },
+    "garro-sword-truth": {
+      "title": "GARRO: SWORD OF TRUTH",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-sword-of-truth-mp3.html"
+    },
+    "garro-legion-one": {
+      "title": "GARRO: LEGION OF ONE",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-legion-of-one-mp3.html"
+    },
+    "garro-shield-lies": {
+      "title": "GARRO: SHIELD OF LIES",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/bundles/audio-bundle-errant-knights-2021.html",
+      "sourceLabel": "Black Library audio collection",
+      "formatSource": "https://www.blacklibrary.com/series/the-horus-heresy/hh-garro-weapon-of-fate-ebook.html"
+    },
+    "garro-burden-duty": {
+      "title": "GARRO: BURDEN OF DUTY",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/burden-of-duty-mp3.html"
+    },
+    "garro-ashes-fealty": {
+      "title": "GARRO: ASHES OF FEALTY",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/authors/james-swallow/garro-ashes-of-fealty-mp3.html"
+    },
+    "garro-vow-faith": {
+      "title": "GARRO: VOW OF FAITH",
+      "author": "James Swallow",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/garro-vow-of-faith-ebook.html",
+      "formatSource": "https://www.blacklibrary.com/series/the-horus-heresy/hh-garro-weapon-of-fate-ebook.html"
     }
   }
 }

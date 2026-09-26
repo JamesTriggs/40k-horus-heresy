@@ -322,6 +322,51 @@ await check('direct publication citations name the actual work format', async ()
     await sourced.close();
 });
 
+await check('Garro sources distinguish audio drama, novella and novelisation', async () => {
+    const sourced = await newPage({ width: 390, height: 844 });
+    for (const [key, title, format] of [
+        ['garro-burden-duty', 'GARRO: BURDEN OF DUTY', 'Audio Drama'],
+        ['garro-shield-lies', 'GARRO: SHIELD OF LIES', 'Audio Drama'],
+        ['garro-vow-faith', 'GARRO: VOW OF FAITH', 'Novella'],
+    ]) {
+        await sourced.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await sourced.waitForSelector('#modalOverlay.active');
+        const result = await sourced.evaluate((workKey) => ({
+            title: bookData[workKey].title,
+            format: bookData[workKey].format,
+            citations: document.getElementById('workResearch').textContent,
+            urls: [...document.querySelectorAll('#workResearch a')].map((link) => link.href),
+        }), key);
+        if (result.title !== title || result.format !== format ||
+            !result.citations.toLowerCase().includes(`${format.toLowerCase()} format:`) ||
+            (key !== 'garro-burden-duty' && !result.urls.some((url) => url.includes('hh-garro-weapon-of-fate-ebook.html')))) {
+            throw new Error(`${key}: ${JSON.stringify(result)}`);
+        }
+    }
+    await sourced.close();
+});
+
+await check('Mark of Calth cites seven listed stories without silently verifying Athame', async () => {
+    const sourced = await newPage({ width: 390, height: 844 });
+    await sourced.goto(BASE, { waitUntil: 'load' });
+    const listed = await sourced.evaluate(() => publisherCollectionsData.disputed['Mark of Calth'].publisherListed);
+    if (listed.length !== 7 || listed.some((entry) => entry.key === 'mark-of-calth-athame')) {
+        throw new Error('the disputed publisher list changed');
+    }
+    for (const [key, cited] of [['mark-of-calth-calth-that-was', true], ['mark-of-calth-athame', false]]) {
+        await sourced.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await sourced.waitForSelector('#modalOverlay.active');
+        const research = await sourced.locator('#workResearch').innerText();
+        const hasCitation = research.includes('Title and author listed in');
+        if (hasCitation !== cited) throw new Error(`${key}: cited=${hasCitation}`);
+        if (!cited && (!research.includes('British National Bibliography record') ||
+            !research.includes('Black Library’s current contents list omits this story'))) {
+            throw new Error('Athame needs its bibliographic citation and publisher caveat');
+        }
+    }
+    await sourced.close();
+});
+
 await check('character links preserve overlapping names and plain text', async () => {
     const result = await page.evaluate(() => {
         const host = document.createElement('div');

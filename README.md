@@ -144,7 +144,7 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── data/collections.json         # Stable IDs for represented volumes
 ├── data/publisher-collections.json # Checked anthology contents and disputes
 ├── data/reading-routes.json      # Sourced Core route
-├── data/publisher-work-facts.json # Publisher facts for 18 overview works and 40 direct listings
+├── data/publisher-work-facts.json # Publisher facts for 18 overview works and 47 Black Library listings
 ├── data/primarch-format-review.json # Publisher evidence for Primarchs novel formats
 ├── data/events.json              # Sourced event and viewpoint relationships
 ├── sources.html                  # Research and correction information

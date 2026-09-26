@@ -61,7 +61,7 @@
     "dependentRank": 100
    },
    {
-    "prerequisite": "BURDEN OF DUTY",
+    "prerequisite": "GARRO: BURDEN OF DUTY",
     "prerequisiteKey": "garro-burden-duty",
     "prerequisiteRank": 143,
     "dependent": "GARRO: SWORD OF TRUTH",
@@ -1904,7 +1904,7 @@
   {
    "bookKey": "garro-burden-duty",
    "number": "XLII.5",
-   "title": "BURDEN OF DUTY",
+   "title": "GARRO: BURDEN OF DUTY",
    "timeline": "009-010.M31",
    "phase": "imperium-secundus",
    "chronoRank": 159,

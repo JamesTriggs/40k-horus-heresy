@@ -786,7 +786,44 @@
     "Mark of Calth": {
       "publisherSource": "https://www.blacklibrary.com/the-horus-heresy/novels/mark-of-calth-ebook.html",
       "bibliographicSource": "https://obnb.uk/p16417052-mark-of-calth",
-      "note": "Black Library’s current product page lists seven stories and omits Athame. A bibliographic record lists Athame as an eighth story. The published book contents need checking before this collection is marked verified."
+      "note": "Black Library’s current product page lists seven stories and omits Athame. A bibliographic record lists Athame as an eighth story. The published book contents need checking before this collection is marked verified.",
+      "publisherListed": [
+        {
+          "key": "mark-of-calth-shards-of-erebus",
+          "title": "THE SHARDS OF EREBUS",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "mark-of-calth-calth-that-was",
+          "title": "CALTH THAT WAS",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "mark-of-calth-dark-heart",
+          "title": "DARK HEART",
+          "author": "Anthony Reynolds"
+        },
+        {
+          "key": "mark-of-calth-the-traveller",
+          "title": "THE TRAVELLER",
+          "author": "David Annandale"
+        },
+        {
+          "key": "mark-of-calth-deeper-darkness",
+          "title": "A DEEPER DARKNESS",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "mark-of-calth-unmarked",
+          "title": "UNMARKED",
+          "author": "Dan Abnett"
+        },
+        {
+          "key": "mark-of-calth-underworld-war",
+          "title": "THE UNDERWORLD WAR",
+          "author": "Aaron Dembski-Bowden"
+        }
+      ]
     }
   }
 }

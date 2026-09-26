@@ -2195,13 +2195,50 @@ function renderWorkResearch(bookKey) {
     const directFacts = publisherWorkFactsData.directWorks[bookKey];
     if (directFacts) {
         const publication = document.createElement('p');
-        publication.textContent = `Title, author and ${directFacts.format.toLowerCase()} format: `;
+        publication.textContent = directFacts.formatSource
+            ? 'Title and author: '
+            : `Title, author and ${directFacts.format.toLowerCase()} format: `;
         const link = document.createElement('a');
         link.href = directFacts.source;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.textContent = 'Black Library product page';
+        link.textContent = directFacts.sourceLabel || 'Black Library product page';
         publication.append(link, document.createTextNode(` (checked ${publisherWorkFactsData.reviewedAt}).`));
+        host.append(publication);
+        if (directFacts.formatSource) {
+            const format = document.createElement('p');
+            format.textContent = `${directFacts.format} format: `;
+            const formatLink = document.createElement('a');
+            formatLink.href = directFacts.formatSource;
+            formatLink.target = '_blank';
+            formatLink.rel = 'noopener noreferrer';
+            formatLink.textContent = 'Black Library’s Garro volume';
+            format.append(formatLink, document.createTextNode(` (checked ${publisherWorkFactsData.reviewedAt}).`));
+            host.append(format);
+        }
+    }
+
+    const markListing = publisherCollectionsData.disputed?.['Mark of Calth'];
+    if (markListing?.publisherListed?.some((entry) => entry.key === bookKey)) {
+        const publication = document.createElement('p');
+        publication.textContent = 'Title and author listed in ';
+        const link = document.createElement('a');
+        link.href = markListing.publisherSource;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Black Library’s Mark of Calth contents';
+        publication.append(link, document.createTextNode(` (checked ${publisherCollectionsData.reviewedAt}). The full contents list remains disputed.`));
+        host.append(publication);
+    }
+    if (bookKey === 'mark-of-calth-athame' && markListing) {
+        const publication = document.createElement('p');
+        publication.textContent = 'Title and author: ';
+        const link = document.createElement('a');
+        link.href = markListing.bibliographicSource;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'British National Bibliography record';
+        publication.append(link, document.createTextNode('. Black Library’s current contents list omits this story.'));
         host.append(publication);
     }
 

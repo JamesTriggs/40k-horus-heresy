@@ -82,8 +82,10 @@ for (const [key, facts] of Object.entries(publisherWorkFacts.works || {})) {
 for (const [key, facts] of Object.entries(publisherWorkFacts.directWorks || {})) {
     const book = bookData[key];
     if (!book) { fail(`Direct publisher facts have unknown work '${key}'`); continue; }
-    if (!isBlackLibraryUrl(facts.source) || Object.keys(facts).some((field) =>
-        !['title', 'author', 'format', 'source'].includes(field))) {
+    if (!isBlackLibraryUrl(facts.source) || (facts.formatSource && !isBlackLibraryUrl(facts.formatSource)) ||
+        (facts.sourceLabel && facts.sourceLabel !== 'Black Library audio collection') ||
+        Object.keys(facts).some((field) =>
+            !['title', 'author', 'format', 'source', 'formatSource', 'sourceLabel'].includes(field))) {
         fail(`Direct publisher facts for '${key}' have invalid fields or source`);
     }
     for (const field of ['title', 'author', 'format']) {
@@ -192,6 +194,16 @@ for (const [name, record] of Object.entries(publisherCollections.disputed || {})
             fail(`Disputed collection '${name}' needs an HTTPS bibliographic URL`);
         }
     } catch { fail(`Disputed collection '${name}' has an invalid bibliographic URL`); }
+    const listed = record.publisherListed || [];
+    if (new Set(listed.map((entry) => entry.key)).size !== listed.length) {
+        fail(`Disputed collection '${name}' repeats a publisher-listed work`);
+    }
+    for (const entry of listed) {
+        const book = bookData[entry.key];
+        if (!book || book.anthology !== name || book.title !== entry.title || book.author !== entry.author) {
+            fail(`Disputed collection '${name}' has a stale publisher-listed work '${entry.key}'`);
+        }
+    }
 }
 
 // ---------------------------------------------------------------------------

@@ -597,7 +597,7 @@ Books are listed in the order the site renders them.
 
 ### Timeline: 009-010.M31
 
-**159.** [XLII.5] **BURDEN OF DUTY**
+**159.** [XLII.5] **GARRO: BURDEN OF DUTY**
 
 
 ### Timeline: 009.M31
