@@ -250,6 +250,72 @@
       "author": "Guy Haley",
       "format": "Novel",
       "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/konrad-curze-the-night-haunter-mp3-2019.html"
+    },
+    "deathfire": {
+      "title": "DEATHFIRE",
+      "author": "Nick Kyme",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/deathfire-ebook.html"
+    },
+    "tallarn": {
+      "title": "TALLARN",
+      "author": "John French",
+      "format": "Anthology",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html"
+    },
+    "angels-of-caliban": {
+      "title": "ANGELS OF CALIBAN",
+      "author": "Gav Thorpe",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/angels-of-caliban-ebook.html"
+    },
+    "old-earth": {
+      "title": "OLD EARTH",
+      "author": "Nick Kyme",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/old-earth-ebook.html"
+    },
+    "ruinstorm": {
+      "title": "RUINSTORM",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/ruinstorm-ebook.html"
+    },
+    "wolfsbane": {
+      "title": "WOLFSBANE",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/guy-haley/wolfsbane-ebook.html"
+    },
+    "the-buried-dagger": {
+      "title": "THE BURIED DAGGER",
+      "author": "James Swallow",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/james-swallow/horus-heresy-the-buried-dagger-ebook-cs-2018.html"
+    },
+    "sot-sons-of-selenar": {
+      "title": "SONS OF THE SELENAR",
+      "author": "Graham McNeill",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/all-products/sons-of-the-selenar-ebook-2020.html"
+    },
+    "sot-garro-knight-of-grey": {
+      "title": "GARRO: KNIGHT OF GREY",
+      "author": "James Swallow",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/featured/ebook-garro-knight-of-grey-eng-2023.html"
+    },
+    "sot-end-and-death-vol-3": {
+      "title": "THE END AND THE DEATH: VOLUME III",
+      "author": "Dan Abnett",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/ebook-the-end-and-the-death-volume-iii-eng-2024.html"
+    },
+    "sot-era-of-ruin": {
+      "title": "ERA OF RUIN",
+      "author": "Various, introduction by Jacob Youngs",
+      "format": "Anthology",
+      "source": "https://www.blacklibrary.com/series/series-sot/ebook-siege-of-terra-era-of-ruin-eng-2025.html"
     }
   }
 }

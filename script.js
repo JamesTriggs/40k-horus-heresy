@@ -2195,7 +2195,7 @@ function renderWorkResearch(bookKey) {
     const directFacts = publisherWorkFactsData.directWorks[bookKey];
     if (directFacts) {
         const publication = document.createElement('p');
-        publication.textContent = 'Title, author and novel format: ';
+        publication.textContent = `Title, author and ${directFacts.format.toLowerCase()} format: `;
         const link = document.createElement('a');
         link.href = directFacts.source;
         link.target = '_blank';

@@ -302,6 +302,26 @@ await check('numbered novel cites its own Black Library publication page', async
     if (!result.claim || !result.link) throw new Error(JSON.stringify(result));
 });
 
+await check('direct publication citations name the actual work format', async () => {
+    const sourced = await newPage({ width: 390, height: 844 });
+    for (const [key, format] of [
+        ['sot-sons-of-selenar', 'novella'],
+        ['sot-era-of-ruin', 'anthology'],
+        ['tallarn', 'anthology'],
+    ]) {
+        await sourced.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await sourced.waitForSelector('#modalOverlay.active');
+        const result = await sourced.evaluate((workKey) => ({
+            format: bookData[workKey].format.toLowerCase(),
+            citation: document.getElementById('workResearch').textContent,
+        }), key);
+        if (result.format !== format || !result.citation.includes(`Title, author and ${format} format:`)) {
+            throw new Error(`${key}: ${JSON.stringify(result)}`);
+        }
+    }
+    await sourced.close();
+});
+
 await check('character links preserve overlapping names and plain text', async () => {
     const result = await page.evaluate(() => {
         const host = document.createElement('div');
