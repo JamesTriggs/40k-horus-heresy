@@ -471,6 +471,28 @@ await check('a collection can mark distinct component works finished in bulk', a
     }
 });
 
+await check('a reprinted work links to each collection and opens a shareable full-catalogue result', async () => {
+    const p = await newPage({ width: 1200, height: 850 });
+    await p.goto(new URL('?route=core#work=war-artefacts', BASE).href);
+    await p.waitForSelector('#modalOverlay.active');
+    const names = await p.locator('.collection-browse').allTextContents();
+    if (names.length !== 2 || !names.some((name) => name.includes('War Without End')) ||
+        !names.some((name) => name.includes('Born of Flame'))) throw new Error(JSON.stringify(names));
+    await p.locator('.collection-browse').filter({ hasText: 'Born of Flame' }).click();
+    const result = {
+        cards: await p.locator('.book-card').count(),
+        collection: await p.locator('#collectionFilter').inputValue(),
+        focused: await p.evaluate(() => document.activeElement?.className),
+        url: new URL(p.url()),
+    };
+    await p.close();
+    if (result.cards !== 5 || result.collection !== 'Born of Flame' || result.focused !== 'filter-info' ||
+        result.url.searchParams.get('collection') !== 'Born of Flame' ||
+        result.url.searchParams.has('route') || result.url.hash) {
+        throw new Error(`${result.cards} cards, ${result.collection}, ${result.url}`);
+    }
+});
+
 await check('legion sentinels do not leak into the UI', async () => {
     await page.selectOption('#legionFilter', '__LOYALIST__');
     await page.waitForTimeout(400);

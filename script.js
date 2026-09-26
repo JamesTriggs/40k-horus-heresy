@@ -1870,6 +1870,7 @@ function renderWorkCollections(bookKey) {
         button.className = 'collection-browse';
         button.textContent = `${name} · ${count} ${bookData[bookKey].collectionRelation === 'novelised in' ? 'related' : 'listed'} works`;
         button.addEventListener('click', () => {
+            setRoute('full');
             const select = document.getElementById('collectionFilter');
             select.value = name;
             document.getElementById('legionFilter').value = '';
@@ -1877,10 +1878,18 @@ function renderWorkCollections(bookKey) {
             document.getElementById('includePrimarchs').checked = true;
             document.getElementById('includeSiegeOfTerra').checked = true;
             document.getElementById('formatFilter').value = '';
-            closeModal();
+            closeModal({ updateHistory: false });
+            history.replaceState(null, '', location.pathname + location.search);
             if (currentView === 'chart') setView('reading');
             else generateBookCards();
-            document.querySelector('.book-display').scrollIntoView({ block: 'start' });
+            syncBrowseUrl();
+            const results = document.querySelector('.book-display');
+            results.scrollIntoView({ block: 'start' });
+            const summary = results.querySelector('.filter-info');
+            if (summary) {
+                summary.tabIndex = -1;
+                summary.focus({ preventScroll: true });
+            }
         });
         host.append(button);
         const publisher = publisherCollectionsData.collections[name];
@@ -1997,7 +2006,7 @@ function renderWorkResearch(bookKey) {
 }
 
 // Close modal function
-function closeModal() {
+function closeModal({ updateHistory = true } = {}) {
     if (!modalOverlay.classList.contains('active')) return;
     modalOverlay.classList.remove('active');
     document.title = BASE_TITLE;
@@ -2005,7 +2014,7 @@ function closeModal() {
     if (description) description.content = BASE_DESCRIPTION;
     focusManager.release(modalOverlay);
     scrollLock.release();
-    if (linkedWorkKey()) {
+    if (updateHistory && linkedWorkKey()) {
         if (history.state?.workModal) history.back();
         else history.replaceState(null, '', location.pathname + location.search);
     }

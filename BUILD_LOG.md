@@ -88,6 +88,8 @@ This log tracks work against [ROADMAP.md](ROADMAP.md). Each completed slice reco
 - The next stable bundle pass completed 99 Chromium checks, eight axe journeys including the returning-reader header, and Firefox/WebKit smoke checks at desktop and phone widths. Generated-data, syntax and whitespace checks also pass.
 - Warhammer Community's published 12-novel Saga list confirms the Core works' titles, authors and novel format. `data/reading-routes.json` records those checked fields for each work, and validation catches later drift. Each Core work detail now cites that source for those facts, separately from its summary research links; the Sources page states the limit of this check. All 100 browser checks passed on the stable bundle, with no console or page errors.
 - Changed the header from “The Complete Heresy” to “Horus Heresy Fiction”. The catalogue audit still lists 19 chart titles outside the active catalogue, so an exhaustive claim would overstate current coverage.
+- A collection link from a work detail now switches to Full Fiction when necessary, clears the work hash, updates the shareable collection URL, and focuses the result summary. Without this, a Core route link to a reprinted short story could show zero results, and collection navigation left its filter out of the URL. Checked both containers for *Artefacts*, the five-work *Born of Flame* result, a 390px screenshot with loaded covers, and zero horizontal overflow.
+- The stable bundle passed all 101 Chromium checks with no console or page errors, eight axe journeys, and Firefox/WebKit desktop and phone smoke checks after the collection navigation change. The generated-data, syntax and whitespace checks passed.
 
 ### Dependencies outside code
 

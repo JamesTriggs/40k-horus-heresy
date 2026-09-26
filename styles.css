@@ -633,6 +633,7 @@ body.traitor-theme .allegiance-toggle:hover {
     margin-bottom: 1rem;
     border-radius: 2px;
 }
+.filter-info:focus { outline: 2px solid var(--imperial-gold); outline-offset: 2px; }
 
 .book-display {
     display: grid;
