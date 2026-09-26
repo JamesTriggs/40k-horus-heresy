@@ -33,6 +33,7 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 
 The reading view offers a **Core** path through the 12 novels in [Warhammer Community's curated Horus Heresy Saga](https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/), **Full Fiction** for the whole archive, and a shortcut to the Legion filter. Path choice is linkable and does not change saved progress.
+The expandable next-read guide picks the first unstarted work in the chosen path, explains the order, and offers two following titles. Readers can save a suggestion for later, restore saved choices and switch from Full Fiction to the shorter Core path.
 
 ### 📚 Fiction catalogue
 - **228 entries** with cover images
@@ -216,7 +217,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 107 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
+# 110 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

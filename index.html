@@ -68,6 +68,20 @@
             <p class="route-source" id="routeSource" hidden>Core follows <a href="https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/" target="_blank" rel="noopener noreferrer">Warhammer Community’s 12-novel Horus Heresy Saga selection</a>. It is a short publisher-curated route, not the only valid reading order. Short works and other novels remain in Full Fiction.</p>
         </nav>
 
+        <details class="next-read-guide" id="nextReadGuide">
+            <summary>WHAT SHOULD I READ NEXT?</summary>
+            <div class="next-read-content" id="nextReadContent">
+                <p id="nextReadExplanation"></p>
+                <button type="button" id="nextReadPrimary" class="next-read-primary"></button>
+                <div id="nextReadAlternatives" class="next-read-alternatives" role="group" aria-label="Other reading options"></div>
+                <div class="next-read-actions">
+                    <button type="button" id="nextReadSkip">Save for later</button>
+                    <button type="button" id="nextReadReset" hidden>Restore saved works</button>
+                    <button type="button" id="nextReadShorter">Show shorter path</button>
+                </div>
+            </div>
+        </details>
+
         <!-- Mobile only. The stacked filter bar is 358px tall on a phone, which
              pushed the catalogue below the fold on its own. -->
         <button type="button" class="filter-disclosure" id="filterDisclosure"

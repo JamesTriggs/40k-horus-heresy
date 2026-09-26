@@ -115,6 +115,47 @@ await check('a returning reader can reopen an in-progress work from the header',
     if (await button.isVisible()) throw new Error('Continue action remained after finishing the work');
     await returning.close();
 });
+await check('next-read guide explains, skips and restores a Core suggestion', async () => {
+    const guide = await newPage({ width: 390, height: 844 });
+    await guide.goto(new URL('?route=core', BASE).href);
+    await guide.waitForSelector('.book-card');
+    await guide.locator('#nextReadGuide summary').click();
+    const first = await guide.locator('#nextReadPrimary').textContent();
+    await guide.locator('#nextReadSkip').click();
+    await guide.reload();
+    await guide.waitForSelector('.book-card');
+    await guide.locator('#nextReadGuide summary').click();
+    const second = await guide.locator('#nextReadPrimary').textContent();
+    await guide.locator('#nextReadReset').click();
+    const restored = await guide.locator('#nextReadPrimary').textContent();
+    await guide.close();
+    if (!first.includes('HORUS RISING') || !second.includes('FALSE GODS') ||
+        !restored.includes('HORUS RISING')) throw new Error(`${first}, ${second}, ${restored}`);
+});
+await check('next-read guide never suggests a finished work', async () => {
+    const guide = await newPage({ width: 1280, height: 850 });
+    await guide.addInitScript(() => localStorage.setItem('horusHeresyProgress', JSON.stringify({ 'horus-rising': 'finished' })));
+    await guide.goto(new URL('?route=core', BASE).href);
+    await guide.waitForSelector('.book-card');
+    await guide.locator('#nextReadGuide summary').click();
+    const primary = await guide.locator('#nextReadPrimary').textContent();
+    const options = await guide.locator('#nextReadAlternatives').textContent();
+    await guide.close();
+    if (!primary.includes('FALSE GODS') || options.includes('HORUS RISING')) {
+        throw new Error(`${primary}, ${options}`);
+    }
+});
+await check('next-read guide can switch from Full Fiction to the shorter Core path', async () => {
+    const guide = await newPage({ width: 1280, height: 850 });
+    await guide.goto(BASE);
+    await guide.waitForSelector('.book-card');
+    await guide.locator('#nextReadGuide summary').click();
+    await guide.locator('#nextReadShorter').click();
+    const route = new URL(guide.url()).searchParams.get('route');
+    const first = await guide.locator('#nextReadPrimary').textContent();
+    await guide.close();
+    if (route !== 'core' || !first.includes('HORUS RISING')) throw new Error(`${route}: ${first}`);
+});
 await page.click('#fullRoute');
 
 console.log('\nOrdering and data');

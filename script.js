@@ -10,6 +10,7 @@ const SPOILER_KEY = 'horusHeresyShowSpoilers';
 const VIEW_KEY = 'horusHeresyView';
 const LAYOUT_KEY = 'horusHeresyLayout';
 const ROUTE_KEY = 'horusHeresyRoute';
+const SKIPPED_KEY = 'horusHeresySavedForLater';
 const BASE_TITLE = document.title;
 const BASE_DESCRIPTION = document.querySelector('meta[name="description"]')?.content || '';
 const workIdentityByKey = new Map();
@@ -833,12 +834,14 @@ function setView(view, { persist = true } = {}) {
     const grid = document.querySelector('.book-display');
     const filters = document.querySelector('.filter-section');
     const routes = document.querySelector('.route-choices');
+    const nextReadGuide = document.getElementById('nextReadGuide');
     // The mobile disclosure button lives outside .filter-section, so it needs
     // hiding separately or it sits there controlling nothing.
     const filterToggle = document.getElementById('filterDisclosure');
 
     if (view === 'chart') {
         if (routes) routes.hidden = true;
+        if (nextReadGuide) nextReadGuide.hidden = true;
         if (grid) grid.hidden = true;
         if (filters) filters.hidden = true;
         if (filterToggle) filterToggle.hidden = true;
@@ -846,6 +849,7 @@ function setView(view, { persist = true } = {}) {
         renderChartView();
     } else {
         if (routes) routes.hidden = false;
+        if (nextReadGuide) nextReadGuide.hidden = false;
         if (chartHost) chartHost.hidden = true;
         if (grid) grid.hidden = false;
         if (filters) filters.hidden = false;
@@ -854,6 +858,7 @@ function setView(view, { persist = true } = {}) {
         const search = document.getElementById('searchInput')?.value || '';
         generateBookCards(legion, search);
     }
+    renderNextReadGuide();
 }
 
 function setRoute(route) {
@@ -889,6 +894,86 @@ function initializeRoutes() {
     document.getElementById('coreRoute').setAttribute('aria-pressed', String(currentRoute === 'core'));
     document.getElementById('fullRoute').setAttribute('aria-pressed', String(currentRoute === 'full'));
     document.getElementById('routeSource').hidden = currentRoute !== 'core';
+}
+
+function loadSavedForLater() {
+    try {
+        const ids = JSON.parse(localStorage.getItem(SKIPPED_KEY) || '[]');
+        return new Set(Array.isArray(ids) ? ids.filter((id) => workKeysById.has(id)) : []);
+    } catch { return new Set(); }
+}
+
+function saveForLater(ids) {
+    try { localStorage.setItem(SKIPPED_KEY, JSON.stringify([...ids])); }
+    catch { /* Private browsing may disable storage. */ }
+}
+
+function recommendationKeys() {
+    if (!readingOrder) return [];
+    const legion = currentRoute === 'full' ? document.getElementById('legionFilter')?.value : '';
+    const keys = currentRoute === 'core' ? CORE_ROUTE : getSortedBookKeys('reading');
+    const seen = new Set();
+    return keys.filter((key) => {
+        const id = workIdentityByKey.get(key) || key;
+        if (seen.has(id)) return false;
+        seen.add(id);
+        if (legion && !legion.startsWith('__') && !bookData[key].legions.includes(legion)) return false;
+        return !readingProgress.getStatus(key);
+    });
+}
+
+function renderNextReadGuide() {
+    const host = document.getElementById('nextReadGuide');
+    if (!host || host.hidden || !readingOrder) return;
+    const skipped = loadSavedForLater();
+    const choices = recommendationKeys().filter((key) => !skipped.has(workIdentityByKey.get(key) || key));
+    const primary = choices[0];
+    const explanation = document.getElementById('nextReadExplanation');
+    const button = document.getElementById('nextReadPrimary');
+    const alternatives = document.getElementById('nextReadAlternatives');
+    const skip = document.getElementById('nextReadSkip');
+    const reset = document.getElementById('nextReadReset');
+    const shorter = document.getElementById('nextReadShorter');
+    const legion = currentRoute === 'full' ? document.getElementById('legionFilter')?.value : '';
+    const faction = legion && !legion.startsWith('__') ? ` for ${legion}` : '';
+    const path = currentRoute === 'core' ? 'the publisher-curated Core path' : `the Archive reading order${faction}`;
+    explanation.textContent = primary
+        ? `The first work you have not started in ${path}. The two options below follow it in the same order. Your saved-for-later choices stay out of this suggestion.`
+        : `No unstarted works remain in ${path} after your saved-for-later choices.`;
+    button.hidden = !primary;
+    button.dataset.workKey = primary || '';
+    if (primary) button.textContent = `NEXT: ${bookData[primary].title}`;
+    alternatives.replaceChildren();
+    for (const key of choices.slice(1, 3)) {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.textContent = bookData[key].title;
+        option.addEventListener('click', () => showModal(key));
+        alternatives.append(option);
+    }
+    skip.hidden = !primary;
+    reset.hidden = skipped.size === 0;
+    shorter.hidden = currentRoute === 'core';
+}
+
+function initializeNextReadGuide() {
+    document.getElementById('nextReadPrimary').addEventListener('click', (event) => {
+        const key = event.currentTarget.dataset.workKey;
+        if (key) showModal(key);
+    });
+    document.getElementById('nextReadSkip').addEventListener('click', () => {
+        const key = document.getElementById('nextReadPrimary').dataset.workKey;
+        if (!key) return;
+        const skipped = loadSavedForLater();
+        skipped.add(workIdentityByKey.get(key) || key);
+        saveForLater(skipped);
+        renderNextReadGuide();
+    });
+    document.getElementById('nextReadReset').addEventListener('click', () => {
+        saveForLater(new Set());
+        renderNextReadGuide();
+    });
+    document.getElementById('nextReadShorter').addEventListener('click', () => setRoute('core'));
 }
 
 // The storyline chart.
@@ -1681,6 +1766,7 @@ function updateProgressCounter() {
         counter.textContent = `PROGRESS: ${totalFinished}/${totalBooks} FINISHED | ${totalReading} READING`;
     }
     updateContinueReading();
+    renderNextReadGuide();
 }
 
 function updateContinueReading() {
@@ -2784,6 +2870,7 @@ window.addEventListener('load', async () => {
     populateCollectionFilter();
     restoreBrowseUrl();
     initializeRoutes();
+    initializeNextReadGuide();
     setupFilterListeners(); // Set up filter events
     initializeViewSwitcher();
     initializeFilterDisclosure();
