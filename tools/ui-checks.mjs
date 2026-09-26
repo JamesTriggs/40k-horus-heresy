@@ -145,6 +145,33 @@ await check('next-read guide never suggests a finished work', async () => {
         throw new Error(`${primary}, ${options}`);
     }
 });
+
+await check('next-read guide flags an unfinished chart predecessor without changing the route order', async () => {
+    const guide = await newPage({ width: 390, height: 844 });
+    await guide.goto(BASE, { waitUntil: 'load' });
+    await guide.waitForFunction(() => Boolean(readingOrder?.byKey));
+    const result = await guide.evaluate(() => {
+        const progress = {};
+        for (const key of getSortedBookKeys('reading')) {
+            if (key === 'garro-sword-truth') break;
+            progress[key] = 'finished';
+        }
+        readingProgress.save(progress);
+        renderNextReadGuide();
+        const primary = document.getElementById('nextReadPrimary').dataset.workKey;
+        const before = document.getElementById('nextReadChartNote').textContent;
+        readingProgress.setStatus('garro-burden-duty', 'finished');
+        renderNextReadGuide();
+        return {
+            primary,
+            before,
+            hiddenAfter: document.getElementById('nextReadChartNote').hidden,
+        };
+    });
+    await guide.close();
+    if (result.primary !== 'garro-sword-truth' || !result.before.includes('1 unfinished work') ||
+        !result.hiddenAfter) throw new Error(JSON.stringify(result));
+});
 await check('next-read guide can switch from Full Fiction to the shorter Core path', async () => {
     const guide = await newPage({ width: 1280, height: 850 });
     await guide.goto(BASE);

@@ -951,6 +951,13 @@ function recommendationKeys() {
     });
 }
 
+function unfinishedChartPrerequisites(bookKey) {
+    const entry = readingOrder?.byKey.get(bookKey);
+    if (!entry) return [];
+    const ids = [...new Set(entry.prerequisites.map((key) => workIdentityByKey.get(key) || key))];
+    return ids.filter((id) => readingProgress.getStatus(id) !== 'finished');
+}
+
 function renderNextReadGuide() {
     const host = document.getElementById('nextReadGuide');
     if (!host || host.hidden || !readingOrder) return;
@@ -959,6 +966,7 @@ function renderNextReadGuide() {
     const primary = choices[0];
     const explanation = document.getElementById('nextReadExplanation');
     const button = document.getElementById('nextReadPrimary');
+    const chartNote = document.getElementById('nextReadChartNote');
     const alternatives = document.getElementById('nextReadAlternatives');
     const skip = document.getElementById('nextReadSkip');
     const reset = document.getElementById('nextReadReset');
@@ -972,6 +980,12 @@ function renderNextReadGuide() {
     button.hidden = !primary;
     button.dataset.workKey = primary || '';
     if (primary) button.textContent = `NEXT: ${bookData[primary].title}`;
+    const chartFirst = currentRoute === 'full' && primary ? unfinishedChartPrerequisites(primary) : [];
+    chartNote.hidden = chartFirst.length === 0;
+    if (chartFirst.length) {
+        const count = chartFirst.length;
+        chartNote.textContent = `Daunt’s chart places ${count} unfinished ${count === 1 ? 'work' : 'works'} before this one. This is community reading advice. Enable spoilers to see the link in the work detail.`;
+    }
     alternatives.replaceChildren();
     for (const key of choices.slice(1, 3)) {
         const option = document.createElement('button');
