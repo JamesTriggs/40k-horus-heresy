@@ -1800,6 +1800,7 @@ function showModal(bookKey, { updateUrl = true } = {}) {
     const spoilerWarning = !showSpoilers ? '<div class="spoiler-notice">📖 SPOILER-FREE MODE - Major plot points hidden</div>' : '';
     blurb.innerHTML = spoilerWarning + `<p>${clickableBlurb}</p>`;
     renderWorkCollections(bookKey);
+    renderWorkEvents(bookKey);
     renderWorkResearch(bookKey);
 
     // Add event listener for status cycle button
@@ -1944,6 +1945,31 @@ function renderWorkCollections(bookKey) {
             host.append(note);
         }
     }
+}
+
+function renderWorkEvents(bookKey) {
+    const host = document.getElementById('workEvents');
+    const workId = workIdentityByKey.get(bookKey) || bookKey;
+    const showSpoilers = document.getElementById('showSpoilers')?.checked ?? false;
+    const related = showSpoilers ? eventData.events.filter((event) => event.works.some((work) =>
+        (workIdentityByKey.get(work.key) || work.key) === workId)) : [];
+    host.replaceChildren();
+    host.hidden = related.length === 0;
+    if (!related.length) return;
+
+    const heading = document.createElement('h3');
+    heading.textContent = 'Related events';
+    host.append(heading);
+    const list = document.createElement('ul');
+    for (const event of related) {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `events.html#${event.id}`;
+        link.textContent = event.title;
+        item.append(link);
+        list.append(item);
+    }
+    host.append(list);
 }
 
 function renderWorkResearch(bookKey) {

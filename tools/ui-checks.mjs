@@ -1401,6 +1401,54 @@ await check('sources page opens and stays within the mobile viewport', async () 
     }
 });
 
+console.log('\nEvent atlas');
+await check('event atlas renders seven cited arcs without mobile overflow', async () => {
+    const atlas = await newPage({ width: 390, height: 844 });
+    await atlas.goto(new URL('events.html', BASE).href);
+    const result = await atlas.evaluate(() => ({
+        count: document.querySelectorAll('.event-card').length,
+        overflow: document.documentElement.scrollWidth - innerWidth,
+        sources: [...document.querySelectorAll('.event-source a')].every((link) =>
+            link.protocol === 'https:' && link.rel.includes('noopener')),
+    }));
+    await atlas.close();
+    if (result.count !== 7 || result.overflow > 1 || !result.sources) throw new Error(JSON.stringify(result));
+});
+
+await check('a direct Prospero link shows both viewpoints and opens the named work', async () => {
+    const atlas = await newPage({ width: 1200, height: 850 });
+    await atlas.goto(new URL('events.html#prospero', BASE).href);
+    const focused = await atlas.evaluate(() => document.activeElement?.id);
+    const text = await atlas.locator('#prospero').textContent();
+    await atlas.locator('#prospero .event-works a').first().click();
+    await atlas.waitForSelector('#modalOverlay.active');
+    const title = await atlas.locator('#modalTitle').textContent();
+    await atlas.close();
+    if (focused !== 'prospero' || !text.includes('Thousand Sons viewpoint') ||
+        !text.includes('Space Wolves viewpoint') || title !== 'A THOUSAND SONS') {
+        throw new Error(`${focused}, ${title}`);
+    }
+});
+
+await check('work event links stay hidden until spoilers are enabled', async () => {
+    const work = await newPage({ width: 1200, height: 850 });
+    await work.goto(new URL('#work=know-no-fear', BASE).href);
+    await work.waitForSelector('#modalOverlay.active');
+    const hidden = await work.locator('#workEvents').evaluate((element) => element.hidden);
+    await work.evaluate(() => {
+        document.getElementById('showSpoilers').checked = true;
+        showModal('know-no-fear', { updateUrl: false });
+    });
+    const link = work.locator('#workEvents a');
+    const label = await link.textContent();
+    await link.click();
+    await work.waitForSelector('#calth');
+    const destination = new URL(work.url());
+    await work.close();
+    if (!hidden || label !== 'Calth' || !destination.pathname.endsWith('/events.html') ||
+        destination.hash !== '#calth') throw new Error(`${hidden}, ${label}, ${destination}`);
+});
+
 console.log('');
 if (errors.length) {
     failed++;

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-26",
+  "events": [
+    {
+      "id": "isstvan-iii",
+      "title": "Isstvan III",
+      "introSafe": "The opening rebellion reaches Isstvan III. These novels follow the crisis through different parts of the expedition.",
+      "factions": [],
+      "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+      "works": [
+        { "key": "galaxy-in-flames", "relation": "covers" },
+        { "key": "the-flight-of-the-eisenstein", "relation": "continues" }
+      ]
+    },
+    {
+      "id": "drop-site-massacre",
+      "title": "Drop Site Massacre",
+      "introSafe": "Several Legions converge on Isstvan V. The publisher points to these books for different perspectives on the same event.",
+      "factions": ["Word Bearers", "Raven Guard", "Salamanders", "Iron Hands"],
+      "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+      "works": [
+        { "key": "fulgrim", "relation": "covers" },
+        { "key": "the-first-heretic", "relation": "mentions", "viewpoint": "Word Bearers" },
+        { "key": "deliverance-lost", "relation": "mentions", "viewpoint": "Raven Guard" },
+        { "key": "vulkan-lives", "relation": "mentions", "viewpoint": "Salamanders" }
+      ]
+    },
+    {
+      "id": "prospero",
+      "title": "Prospero",
+      "introSafe": "Two novels approach the conflict at Prospero from opposing Legion perspectives.",
+      "factions": ["Thousand Sons", "Space Wolves"],
+      "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+      "works": [
+        { "key": "a-thousand-sons", "relation": "covers", "viewpoint": "Thousand Sons" },
+        { "key": "prospero-burns", "relation": "covers", "viewpoint": "Space Wolves" }
+      ]
+    },
+    {
+      "id": "calth",
+      "title": "Calth",
+      "introSafe": "The Heresy reaches the Ultramarines at Calth. This is the publisher's named entry point for the conflict.",
+      "factions": ["Word Bearers", "Ultramarines"],
+      "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+      "works": [
+        { "key": "know-no-fear", "relation": "covers" }
+      ]
+    },
+    {
+      "id": "ultramar",
+      "title": "Ultramar",
+      "introSafe": "Several Loyalist threads meet in Ultramar as the Legions decide how to respond to a widening civil war.",
+      "factions": ["Ultramarines", "Blood Angels", "Dark Angels", "Shattered Legions"],
+      "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+      "works": [
+        { "key": "the-unremembered-empire", "relation": "covers" }
+      ]
+    },
+    {
+      "id": "beta-garmon",
+      "title": "Beta-Garmon",
+      "introSafe": "The route towards the Sol System passes through Beta-Garmon. These books place that campaign in the wider approach to Terra.",
+      "factions": [],
+      "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+      "works": [
+        { "key": "titandeath", "relation": "covers" },
+        { "key": "slaves-to-darkness", "relation": "covers" }
+      ]
+    },
+    {
+      "id": "siege-opening",
+      "title": "The opening Siege",
+      "introSafe": "The fiction narrows towards Terra across these opening Siege of Terra novels. Their order here follows the publisher's overview.",
+      "factions": [],
+      "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+      "works": [
+        { "key": "sot-solar-war", "relation": "opens" },
+        { "key": "sot-lost-and-damned", "relation": "continues" },
+        { "key": "sot-first-wall", "relation": "continues" },
+        { "key": "sot-saturnine", "relation": "continues" },
+        { "key": "sot-mortis", "relation": "continues" }
+      ]
+    }
+  ]
+}

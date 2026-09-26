@@ -54,6 +54,10 @@ await audit('storyline chart', { width: 1280, height: 800 }, async (page) => {
     await page.waitForSelector('#chartSvg');
 });
 await audit('sources page', { width: 390, height: 844 }, (page) => page.goto(new URL('sources.html', base).href));
+for (const viewport of [{ width: 1280, height: 800 }, { width: 390, height: 844 }]) {
+    await audit(`event atlas ${viewport.width}px`, viewport,
+        (page) => page.goto(new URL('events.html', base).href));
+}
 
 await browser.close();
 if (failed) process.exitCode = 1;

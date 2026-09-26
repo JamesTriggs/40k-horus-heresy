@@ -42,6 +42,7 @@ The reading view offers a **Core** path through the 12 novels in [Warhammer Comm
 - **Work links**: opening a book gives it a shareable `#work=` URL, and browser Back returns to the catalogue
 - **Browse links and layouts**: filters, search and view choices are reflected in the URL, and readers can switch between cover grid and a compact list
 - **Spoiler toggle**: Spoilers start hidden. Enabling them reveals full summaries, character details and the chronological event log
+- **Event atlas**: Seven sourced turning points connect distinct viewpoints to the works that cover them. Work details reveal related events when spoilers are enabled
 
 ### 🔍 Search & Filter
 - **Real-time search** by title, author, or character name
@@ -62,7 +63,7 @@ The reading view offers a **Core** path through the 12 novels in [Warhammer Comm
 - **121 characters** with clickable encyclopedia entries
 - **32 with portrait images**, 89 with themed placeholders
 - **Full bios** from Warhammer 40K lore
-- **"Appears In"** section listing all books featuring each character
+- **Catalogue listings** for 85 characters, drawn from explicit names in the inherited Main Characters fields. These links are incomplete and still need editorial review
 - Click any character name in book descriptions to view their entry
 
 ### 🎨 Dual Theme System
@@ -139,7 +140,10 @@ Deploy to any static hosting service:
 ├── data/work-identities.json     # Stable work IDs and legacy key map
 ├── data/publisher-collections.json # Checked anthology contents and disputes
 ├── data/reading-routes.json      # Sourced Core route
+├── data/events.json              # Sourced event and viewpoint relationships
 ├── sources.html                  # Research and correction information
+├── events.html                   # Event atlas
+├── events.js                     # Event atlas rendering
 ├── ROADMAP.md                    # Product and editorial roadmap
 ├── BUILD_LOG.md                  # Slice-by-slice implementation record
 ├── CHART_RECONCILIATION.md       # Publisher evidence for chart-only works
@@ -212,7 +216,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 103 browser checks: the three views, routes, ordering, modals, scroll lock, contrast in
+# 106 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

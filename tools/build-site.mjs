@@ -9,7 +9,7 @@ rmSync(output, { recursive: true, force: true });
 mkdirSync(output);
 
 const files = [
-    'index.html', 'sources.html', 'styles.css', 'script.js',
+    'index.html', 'sources.html', 'events.html', 'events.js', 'styles.css', 'script.js',
     'catalogue-data.js', 'reading-order.json', 'daunt-chart.json',
     'favicon.png', 'favicon-32.png', 'apple-touch-icon.png',
     'ORDERING_DECISIONS.md', 'CATALOGUE_AUDIT.md',

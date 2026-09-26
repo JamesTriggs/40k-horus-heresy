@@ -35,6 +35,40 @@ for (const key of bookKeys) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`U
 for (const key of Object.keys(characterData)) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`Unsafe character key '${key}'`);
 const publisherCollections = JSON.parse(readFileSync(join(root, 'data/publisher-collections.json'), 'utf8'));
 const readingRoutes = JSON.parse(readFileSync(join(root, 'data/reading-routes.json'), 'utf8'));
+const eventData = JSON.parse(readFileSync(join(root, 'data/events.json'), 'utf8'));
+const eventIds = new Set();
+const knownFactions = new Set(bookEntries.flatMap(([, book]) => book.legions));
+for (const event of eventData.events) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(event.id) || eventIds.has(event.id)) {
+        fail(`Event has an invalid or duplicate ID '${event.id}'`);
+    }
+    eventIds.add(event.id);
+    if (!event.title || !event.introSafe || !Array.isArray(event.works) || !event.works.length) {
+        fail(`Event '${event.id}' needs a title, safe introduction and works`);
+        continue;
+    }
+    try {
+        const source = new URL(event.source);
+        if (source.protocol !== 'https:' || source.hostname !== 'www.warhammer-community.com') {
+            fail(`Event '${event.id}' needs an official HTTPS source`);
+        }
+    } catch { fail(`Event '${event.id}' has an invalid source URL`); }
+    for (const faction of event.factions || []) {
+        if (!knownFactions.has(faction)) fail(`Event '${event.id}' has unknown faction '${faction}'`);
+    }
+    const keys = new Set();
+    for (const work of event.works) {
+        if (!bookData[work.key]) fail(`Event '${event.id}' has unknown work '${work.key}'`);
+        if (!['covers', 'mentions', 'continues', 'opens'].includes(work.relation)) {
+            fail(`Event '${event.id}' has unknown relationship '${work.relation}'`);
+        }
+        if (keys.has(work.key)) fail(`Event '${event.id}' repeats work '${work.key}'`);
+        keys.add(work.key);
+        if (work.viewpoint && !knownFactions.has(work.viewpoint)) {
+            fail(`Event '${event.id}' has unknown viewpoint '${work.viewpoint}'`);
+        }
+    }
+}
 const characterAppearances = JSON.parse(readFileSync(join(root, 'data/character-appearances.json'), 'utf8'));
 for (const [characterKey, keys] of Object.entries(characterAppearances.characters)) {
     if (!characterData[characterKey]) fail(`Character appearance list has unknown character '${characterKey}'`);
