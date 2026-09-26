@@ -35,6 +35,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadFromScript, repoRoot as root } from './load-data.mjs';
+import { normaliseTitle, chartTitleKey } from './chart-match.mjs';
 
 
 // ---------------------------------------------------------------------------
@@ -50,27 +51,9 @@ const chart = JSON.parse(readFileSync(join(root, 'daunt-chart.json'), 'utf8'));
 // ---------------------------------------------------------------------------
 // Map chart nodes to bookData keys
 // ---------------------------------------------------------------------------
-const normalise = (s) => String(s)
-    .toLowerCase()
-    .replace(/^(garro|bjorn):\s*/, '')
-    .replace(/[^a-z0-9]+/g, '');
-
-// The chart carries typos and variant titles. Recorded in
-// DAUNT-CHART-EXTRACTION.md and reproduced here so the mapping is auditable.
-const ALIASES = {
-    'thief of revelation': 'THIEF OF REVELATIONS',
-    'vulcan lives': 'VULKAN LIVES',
-    'the heart of pharos': 'THE HEART OF THE PHAROS',
-    wolfhunt: 'WOLF HUNT',
-    'guardian of the order': 'CYPHER: GUARDIAN OF ORDER',
-    'herald of sangiunius': 'HERALD OF SANGUINIUS',
-    'the devine adoratrice': 'THE DIVINE ADORATRICE',
-    'tallarn: executioner': 'TALLARN',
-};
-
 const byTitle = new Map();
 for (const key of bookKeys) {
-    const n = normalise(bookData[key].title);
+    const n = normaliseTitle(bookData[key].title);
     // First writer wins, so a reprint resolves to its earliest position
     if (!byTitle.has(n)) byTitle.set(n, key);
 }
@@ -80,8 +63,7 @@ const keyToNode = new Map();
 const unmatchedNodes = [];
 for (const node of chart.nodes) {
     if (node.isAnthologyContainer) continue;   // a container, not a readable unit
-    const alias = ALIASES[node.label.toLowerCase()];
-    const key = byTitle.get(normalise(alias ?? node.label));
+    const key = byTitle.get(chartTitleKey(node.label));
     if (key) {
         nodeToKey.set(node.id, key);
         if (!keyToNode.has(key)) keyToNode.set(key, node.id);

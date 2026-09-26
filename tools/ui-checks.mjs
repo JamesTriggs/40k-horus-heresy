@@ -63,6 +63,60 @@ await page.goto(BASE, { waitUntil: 'load' });
 await page.waitForSelector('.book-card');
 await page.waitForTimeout(1300);
 
+await check('a new reader starts with spoilers hidden', async () => {
+    const enabled = await page.$eval('#showSpoilers', (e) => e.checked);
+    if (enabled) throw new Error('spoilers were enabled on first visit');
+});
+await page.check('#showSpoilers');
+
+console.log('\nReader routes');
+await check('publisher-curated Core route has the 12 novels in published order', async () => {
+    await page.click('#coreRoute');
+    const titles = await page.locator('.book-card .book-title').allTextContents();
+    if (titles.length !== 12 || titles[0] !== 'HORUS RISING' || titles[11] !== 'SLAVES TO DARKNESS') {
+        throw new Error(`${titles.length} Core works, from ${titles[0]} to ${titles.at(-1)}`);
+    }
+    if (!new URL(page.url()).searchParams.has('route')) throw new Error('route is not linkable');
+    if (!await page.locator('#routeSource a').isVisible()) throw new Error('publisher source missing');
+});
+await check('Core route opens from a fresh URL and Full Fiction restores the catalogue', async () => {
+    const linked = await newPage({ width: 1280, height: 850 });
+    await linked.goto(new URL('?route=core', BASE).href);
+    await linked.waitForSelector('.book-card');
+    if (await linked.locator('.book-card').count() !== 12) throw new Error('direct Core link failed');
+    await linked.click('#fullRoute');
+    if (await linked.locator('.book-card').count() !== 228) throw new Error('Full Fiction did not restore entries');
+    await linked.close();
+});
+await check('Start Here switches from chronology to the curated reading sequence', async () => {
+    await page.click('#viewChronological');
+    await page.click('#coreRoute');
+    const first = await page.locator('.book-card .book-title').first().textContent();
+    const active = await page.locator('#viewReading').getAttribute('aria-pressed');
+    if (first !== 'HORUS RISING' || active !== 'true') throw new Error(`first=${first}, reading=${active}`);
+});
+await check('a returning reader can reopen an in-progress work from the header', async () => {
+    const returning = await newPage({ width: 390, height: 844 });
+    await returning.addInitScript(() => localStorage.setItem('horusHeresyProgress', JSON.stringify({ 'horus-rising': 'reading' })));
+    await returning.goto(BASE, { waitUntil: 'load' });
+    await returning.waitForSelector('.book-card');
+    const button = returning.locator('#continueReading');
+    if (!await button.isVisible() || !await button.textContent().then((value) => value.includes('HORUS RISING'))) {
+        throw new Error('Continue action is missing or points to another work');
+    }
+    await button.click();
+    if (await returning.locator('#modalTitle').textContent() !== 'HORUS RISING') {
+        throw new Error('Continue action did not open the work');
+    }
+    await returning.evaluate(() => {
+        readingProgress.setStatus('horus-rising', 'finished');
+        updateProgressCounter();
+    });
+    if (await button.isVisible()) throw new Error('Continue action remained after finishing the work');
+    await returning.close();
+});
+await page.click('#fullRoute');
+
 console.log('\nOrdering and data');
 
 // These assertions are about the chronological index specifically, so pin the
@@ -151,6 +205,76 @@ await check('book modal opens', async () => {
     if (!t) throw new Error('empty title');
 });
 
+await check('work detail shows research limits and safe source links', async () => {
+    const result = await page.$eval('#workResearch', (host) => ({
+        note: host.textContent.includes('not all been checked against a primary source'),
+        links: [...host.querySelectorAll('a')].map((link) => ({
+            href: link.href, rel: link.rel,
+            internalWork: link.origin === location.origin && link.hash.startsWith('#work='),
+        })),
+    }));
+    if (!result.note) throw new Error('missing research limitation');
+    if (!result.links.some((link) => link.href.includes('/issues/new?'))) throw new Error('missing correction link');
+    if (result.links.some((link) => !link.internalWork &&
+        (!link.href.startsWith('https://') || !link.rel.includes('noopener')))) {
+        throw new Error('unsafe research link');
+    }
+});
+
+await check('Core novel detail cites the publisher list for title, author and format', async () => {
+    const sourced = await newPage({ width: 1200, height: 900 });
+    await sourced.goto(new URL('#work=horus-rising', BASE).href, { waitUntil: 'load' });
+    await sourced.waitForSelector('#modalOverlay.active');
+    const result = await sourced.$eval('#workResearch', (host) => ({
+        claim: host.textContent.includes('Title, author and novel format:'),
+        publisher: [...host.querySelectorAll('a')].some((link) =>
+            link.hostname === 'www.warhammer-community.com' && link.textContent.includes('Horus Heresy Saga')),
+    }));
+    await sourced.close();
+    if (!result.claim || !result.publisher) throw new Error(JSON.stringify(result));
+});
+
+await check('character links preserve overlapping names and plain text', async () => {
+    const result = await page.evaluate(() => {
+        const host = document.createElement('div');
+        host.innerHTML = makeCharactersClickable('Captain Garviel Loken meets Loken.', false);
+        return { text: host.textContent, links: [...host.querySelectorAll('.character-link')].map((x) => x.textContent) };
+    });
+    if (result.text !== 'Captain Garviel Loken meets Loken.') throw new Error('text was corrupted: ' + result.text);
+    if (result.links.join(',') !== 'Garviel Loken,Loken') throw new Error('wrong character links: ' + result.links.join(','));
+});
+
+await check('a direct work URL opens the right work on a fresh visit', async () => {
+    const fresh = await newPage({ width: 1200, height: 900 }, { firstRun: true });
+    await fresh.goto(new URL('#work=horus-rising', BASE).href, { waitUntil: 'load' });
+    await fresh.waitForSelector('#modalOverlay.active');
+    const title = await fresh.$eval('#modalTitle', (e) => e.textContent);
+    const pageTitle = await fresh.title();
+    const pageDescription = await fresh.$eval('meta[name="description"]', (e) => e.content);
+    const welcome = await fresh.$eval('#welcomeOverlay', (e) => e.classList.contains('active'));
+    await fresh.click('#closeModal');
+    const hash = await fresh.evaluate(() => location.hash);
+    const restoredTitle = await fresh.title();
+    await fresh.close();
+    if (title !== 'HORUS RISING' || welcome || hash || !pageTitle.includes('HORUS RISING') ||
+        !pageDescription || restoredTitle.includes('HORUS RISING')) {
+        throw new Error(`${title}, pageTitle=${pageTitle}, welcome=${welcome}, hash=${hash}`);
+    }
+});
+
+await check('browser Back closes a clicked work and Forward restores it', async () => {
+    const visit = await newPage({ width: 1200, height: 900 });
+    await visit.goto(BASE, { waitUntil: 'load' });
+    await visit.locator('.book-card').first().click();
+    const opened = await visit.evaluate(() => location.hash);
+    await visit.goBack();
+    const closed = await visit.$eval('#modalOverlay', (e) => !e.classList.contains('active'));
+    await visit.goForward();
+    const restored = await visit.$eval('#modalOverlay', (e) => e.classList.contains('active'));
+    await visit.close();
+    if (!opened.startsWith('#work=') || !closed || !restored) throw new Error('history did not restore modal state');
+});
+
 await check('page scroll is locked while a modal is open', async () => {
     const before = await page.evaluate(() => window.scrollY);
     await page.mouse.wheel(0, 1200);
@@ -191,6 +315,18 @@ await check('page unlocks once every modal is closed', async () => {
     if (locked) throw new Error('still locked');
 });
 
+await check('character work lists use explicit main-character links rather than blurb mentions', async () => {
+    await page.evaluate(() => showCharacterModal('rogal-dorn'));
+    const list = await page.locator('#characterBooks').textContent();
+    await page.evaluate(() => closeCharacterModal());
+    if (!list.includes('LISTED AS A MAIN CHARACTER IN:') || !list.includes('PRAETORIAN OF DORN')) {
+        throw new Error('explicit character links missing');
+    }
+    if (list.includes('THE FLIGHT OF THE EISENSTEIN')) {
+        throw new Error('a synopsis mention was presented as a character appearance');
+    }
+});
+
 await check('the ordering guide renders the generated document', async () => {
     await page.click('#orderingGuideBtn');
     await page.waitForFunction(
@@ -205,12 +341,14 @@ await check('the ordering guide renders the generated document', async () => {
             orphanListItems: [...b.querySelectorAll('li')]
                 .filter((li) => !['UL', 'OL'].includes(li.parentElement.tagName)).length,
             retiredPrinciple: b.innerText.includes('Placed at end'),
+            unsafeLinks: [...b.querySelectorAll('a')].filter((a) => a.protocol !== 'https:').length,
         };
     });
     if (r.length < 5000) throw new Error('only ' + r.length + ' chars, the book list is missing');
     if (r.literalQuotes) throw new Error('blockquote markdown rendered literally');
     if (r.orphanListItems) throw new Error(r.orphanListItems + ' list items outside a ul/ol');
     if (r.retiredPrinciple) throw new Error('still shows the retired ordering principle');
+    if (r.unsafeLinks) throw new Error('ordering guide contains an unsafe link');
 
     // The log is generated, so it must reflect the live dataset rather than
     // whatever the data looked like when someone last edited it by hand.
@@ -273,11 +411,85 @@ await check('a finished card dims its cover but not its title or badge', async (
 
 console.log('\nFilters');
 
+await check('compact list keeps work links and persists across reload', async () => {
+    const p = await newPage({ width: 390, height: 844 });
+    await p.goto(BASE);
+    await p.click('#filterDisclosure');
+    await p.click('#layoutToggle');
+    const layout = await p.$eval('.book-display', (el) => ({
+        list: el.classList.contains('is-list-layout'),
+        columns: getComputedStyle(el).gridTemplateColumns,
+    }));
+    if (!layout.list || layout.columns.includes(' ')) throw new Error('list still uses several columns');
+    await p.reload();
+    await p.waitForSelector('.book-card');
+    if (!await p.$eval('.book-display', (el) => el.classList.contains('is-list-layout'))) {
+        throw new Error('layout did not persist');
+    }
+    await p.locator('.book-card').first().click();
+    if (!await p.locator('#modalOverlay').evaluate((el) => el.classList.contains('active'))) {
+        throw new Error('list card did not open');
+    }
+    await p.close();
+});
+
+await check('a browse URL restores search, collection and view on a fresh visit', async () => {
+    const p = await newPage({ width: 1200, height: 850 });
+    await p.goto(BASE + '?view=chronological&q=wolf&collection=The+Silent+War');
+    await p.waitForSelector('.book-card');
+    const state = await p.evaluate(() => ({
+        search: document.getElementById('searchInput').value,
+        collection: document.getElementById('collectionFilter').value,
+        view: document.getElementById('viewChronological').getAttribute('aria-pressed'),
+        cards: document.querySelectorAll('.book-card').length,
+    }));
+    if (state.search !== 'wolf' || state.collection !== 'The Silent War' || state.view !== 'true' || !state.cards) {
+        throw new Error(JSON.stringify(state));
+    }
+    await p.selectOption('#formatFilter', 'Audio Drama');
+    if (!p.url().includes('format=Audio+Drama')) throw new Error('filter was not reflected in URL');
+    await p.close();
+});
+
+await check('a collection can mark distinct component works finished in bulk', async () => {
+    const p = await newPage({ width: 1200, height: 850 });
+    await p.goto(BASE);
+    await p.waitForSelector('.book-card');
+    await p.selectOption('#collectionFilter', 'Born of Flame');
+    const before = await p.$eval('#collectionBulk', (button) => ({ hidden: button.hidden, text: button.textContent }));
+    if (before.hidden || !before.text.includes('5')) throw new Error(JSON.stringify(before));
+    p.once('dialog', (dialog) => dialog.accept());
+    await p.click('#collectionBulk');
+    const result = await p.evaluate(() => ({
+        finished: document.querySelectorAll('.book-card.book-finished').length,
+        count: readingProgress.getCount('finished'),
+        reprint: readingProgress.getStatus('war-artefacts'),
+    }));
+    await p.close();
+    if (result.finished !== 5 || result.count !== 5 || result.reprint !== 'finished') {
+        throw new Error(JSON.stringify(result));
+    }
+});
+
 await check('legion sentinels do not leak into the UI', async () => {
     await page.selectOption('#legionFilter', '__LOYALIST__');
     await page.waitForTimeout(400);
     const info = await page.$eval('.filter-info', (e) => e.textContent);
     if (info.includes('__')) throw new Error(info);
+});
+
+await check('broad-scope books filter without pretending scope is a Legion', async () => {
+    await page.selectOption('#legionFilter', '__BROAD_SCOPE__');
+    const result = await page.evaluate(() => ({
+        cards: document.querySelectorAll('.book-card').length,
+        valid: [...document.querySelectorAll('.book-card')].every((card) =>
+            !!bookData[card.dataset.book].factionScope),
+        label: document.querySelector('.filter-info')?.textContent,
+    }));
+    await page.click('#clearAllFilters');
+    if (result.cards !== 8 || !result.valid || result.label.includes('__')) {
+        throw new Error(JSON.stringify(result));
+    }
 });
 
 await check('CLEAR ALL resets the sort order too', async () => {
@@ -289,6 +501,54 @@ await check('CLEAR ALL resets the sort order too', async () => {
     if (v !== 'view') throw new Error('sort is ' + v);
 });
 
+await check('a collection can be browsed from a story and cleared', async () => {
+    await page.evaluate(() => showModal('tales-of-heresy-the-last-church'));
+    const button = page.locator('#workCollections .collection-browse');
+    if (!(await button.textContent()).includes('Tales of Heresy · 7 listed works')) {
+        throw new Error('wrong collection contents count');
+    }
+    const publisher = await page.$eval('#workCollections .collection-source a', (link) => link.href);
+    if (!publisher.startsWith('https://www.blacklibrary.com/')) {
+        throw new Error('checked collection lacks publisher source');
+    }
+    await button.click();
+    const selected = await page.$eval('#collectionFilter', (e) => e.value);
+    const cards = await page.locator('.book-card').count();
+    if (selected !== 'Tales of Heresy' || cards !== 7) throw new Error(`${selected}: ${cards} cards`);
+    await page.click('#clearAllFilters');
+    if (await page.$eval('#collectionFilter', (e) => e.value)) throw new Error('collection filter not cleared');
+});
+
+await check('Garro is labelled a novelisation and Mark of Calth stays disputed', async () => {
+    const result = await page.evaluate(() => {
+        renderWorkCollections('garro-oath-moment');
+        const garro = document.getElementById('workCollections').textContent;
+        renderWorkCollections('mark-of-calth-athame');
+        const calth = document.getElementById('workCollections').textContent;
+        return { garro, calth };
+    });
+    if (!result.garro.includes('Novelised in this volume') ||
+        !result.garro.includes('Black Library explains the relationship') ||
+        !result.calth.includes('omits Athame') ||
+        !result.calth.includes('Bibliographic record')) {
+        throw new Error('collection relationship or dispute is hidden');
+    }
+});
+
+await check('format filter uses structured fields and resets cleanly', async () => {
+    await page.selectOption('#formatFilter', 'Novel');
+    const result = await page.evaluate(() => ({
+        cards: document.querySelectorAll('.book-card').length,
+        allNovels: [...document.querySelectorAll('.book-card')].every((card) =>
+            bookData[card.dataset.book].format === 'Novel'),
+    }));
+    await page.click('#clearAllFilters');
+    const reset = await page.$eval('#formatFilter', (e) => e.value);
+    if (result.cards !== 48 || !result.allNovels || reset) {
+        throw new Error(`${result.cards} novels, all=${result.allNovels}, reset=${reset}`);
+    }
+});
+
 await check('the spoiler preference survives a reload', async () => {
     await page.uncheck('#showSpoilers');
     await page.waitForTimeout(300);
@@ -298,6 +558,45 @@ await check('the spoiler preference survives a reload', async () => {
     if (checked) throw new Error('spoilers were silently re-enabled');
     await page.check('#showSpoilers');
     await page.waitForTimeout(300);
+});
+
+await check('spoiler-free search ignores the full blurb', async () => {
+    await page.uncheck('#showSpoilers');
+    await page.fill('#searchInput', 'The Great Mother of the Solaria is killed');
+    await page.waitForTimeout(450);
+    const hiddenCount = await page.locator('.book-card').count();
+    if (hiddenCount !== 0) throw new Error(`${hiddenCount} full-blurb matches leaked`);
+    await page.check('#showSpoilers');
+    await page.waitForTimeout(450);
+    const shownCount = await page.locator('.book-card').count();
+    if (shownCount < 1) throw new Error('full-blurb search did not return when enabled');
+    await page.fill('#searchInput', '');
+    await page.waitForTimeout(450);
+});
+
+await check('spoiler-free book and character details hide outcomes', async () => {
+    await page.uncheck('#showSpoilers');
+    await page.evaluate(() => showModal('titandeath'));
+    const details = await page.locator('#keyDetails').innerText();
+    await page.evaluate(() => closeModal());
+    await page.evaluate(() => showCharacterModal('sanguinius'));
+    const character = await page.locator('#characterModalOverlay').innerText();
+    await page.evaluate(() => closeCharacterModal());
+    await page.check('#showSpoilers');
+    if (!details.includes('Character and event details are hidden')) throw new Error('book details were not redacted');
+    if (character.includes('sacrificing himself')) throw new Error('character bio leaked');
+    if (!character.includes('Character details are hidden')) throw new Error('character details were not redacted');
+});
+
+await check('spoiler-free ordering guide hides its event table', async () => {
+    await page.uncheck('#showSpoilers');
+    await page.click('#orderingGuideBtn');
+    await page.waitForTimeout(400);
+    const guide = await page.locator('#orderingModalBody').innerText();
+    await page.click('#closeOrderingModal');
+    await page.check('#showSpoilers');
+    if (guide.includes('Isstvan V Drop Site Massacre')) throw new Error('event table leaked');
+    if (!guide.includes('hidden while spoilers are off')) throw new Error('missing redaction explanation');
 });
 
 console.log('\nContrast, both themes');
@@ -626,6 +925,66 @@ await check('nothing removes its own focus outline', async () => {
 
 console.log('\nProgress sync');
 
+await check('a legacy reprint status counts once and reaches both entries', async () => {
+    const p = await newPage({ width: 1200, height: 900 });
+    await p.goto(BASE);
+    await p.evaluate(() => localStorage.setItem('horusHeresyProgress',
+        JSON.stringify({ 'flame-artefacts': 'finished' })));
+    await p.reload({ waitUntil: 'load' });
+    await p.waitForSelector('.book-card');
+    const result = await p.evaluate(() => ({
+        original: readingProgress.getStatus('war-artefacts'),
+        reprint: readingProgress.getStatus('flame-artefacts'),
+        finished: readingProgress.getCount('finished'),
+        total: readingProgress.getTotalBooks(),
+    }));
+    await p.evaluate(() => showModal('war-artefacts'));
+    await p.click('#markReadBtn');
+    const cleared = await p.evaluate(() => ({
+        original: readingProgress.getStatus('war-artefacts'),
+        reprint: readingProgress.getStatus('flame-artefacts'),
+        markedCards: document.querySelectorAll(
+            '.book-card[data-book="war-artefacts"].book-finished, .book-card[data-book="flame-artefacts"].book-finished'
+        ).length,
+    }));
+    await p.close();
+    if (result.original !== 'finished' || result.reprint !== 'finished') {
+        throw new Error('a legacy reprint status did not reach both entries');
+    }
+    if (result.finished !== 1 || result.total !== 226) {
+        throw new Error(`progress counted ${result.finished}/${result.total} works`);
+    }
+    if (cleared.original || cleared.reprint || cleared.markedCards) {
+        throw new Error('clearing one reprint did not clear the work everywhere');
+    }
+});
+
+await check('old 228-entry transfer codes still restore reprint progress', async () => {
+    const p = await newPage({ width: 1200, height: 900 });
+    await p.goto(BASE);
+    await p.waitForSelector('.book-card');
+    const result = await p.evaluate(() => {
+        const keys = syncKeyList();
+        const bytes = new Uint8Array(Math.ceil(keys.length / 4));
+        const index = keys.indexOf('flame-artefacts');
+        bytes[index >> 2] = 2 << ((index % 4) * 2);
+        const oldCode = `${SYNC_PREFIX}-${syncFingerprint(keys)}-${toBase64Url(bytes)}`;
+        const restored = importProgressCode(oldCode);
+        return {
+            restored,
+            original: readingProgress.getStatus('war-artefacts'),
+            reprint: readingProgress.getStatus('flame-artefacts'),
+            newCode: exportProgressCode(),
+        };
+    });
+    await p.close();
+    if (!result.restored.ok || result.restored.applied !== 1 ||
+        result.original !== 'finished' || result.reprint !== 'finished') {
+        throw new Error('legacy transfer was not migrated as one finished work');
+    }
+    if (!result.newCode.startsWith('HH2-')) throw new Error('transfer format changed');
+});
+
 await check('a progress code round-trips through a separate browser profile', async () => {
     const source = await newPage({ width: 1200, height: 900 });
     await source.goto(BASE, { waitUntil: 'load' });
@@ -667,6 +1026,63 @@ await check('a code from a different dataset is refused, not misapplied', async 
 await check('junk input is rejected cleanly', async () => {
     const r = await page.evaluate(() => importProgressCode('not a code'));
     if (r.ok) throw new Error('junk accepted');
+});
+
+await check('plain JSON progress restores work IDs and rejects invalid files', async () => {
+    const p = await newPage({ width: 1200, height: 900 });
+    await p.goto(BASE, { waitUntil: 'load' });
+    await p.waitForSelector('.book-card');
+    const exported = await p.evaluate(() => {
+        readingProgress.setStatus('flame-artefacts', 'finished');
+        readingProgress.setStatus('horus-rising', 'reading');
+        return exportProgressFile();
+    });
+    if (exported.works['war-artefacts'] !== 'finished' || exported.works['flame-artefacts']) {
+        throw new Error('file did not use canonical work IDs');
+    }
+    await p.evaluate(() => readingProgress.save({}));
+    await p.click('#syncBtn');
+    await p.setInputFiles('#uploadProgress', {
+        name: 'progress.json', mimeType: 'application/json',
+        buffer: Buffer.from(JSON.stringify(exported)),
+    });
+    await p.waitForFunction(() => document.getElementById('syncStatus').textContent.includes('restored from JSON'));
+    const restored = await p.evaluate(() => ({
+        first: readingProgress.getStatus('war-artefacts'),
+        reprint: readingProgress.getStatus('flame-artefacts'),
+        second: readingProgress.getStatus('horus-rising'),
+    }));
+    await p.setInputFiles('#uploadProgress', {
+        name: 'invalid.json', mimeType: 'application/json',
+        buffer: Buffer.from(JSON.stringify({ ...exported, works: { unknown: 'finished' } })),
+    });
+    await p.waitForFunction(() => document.getElementById('syncStatus').textContent.includes('not a supported'));
+    const afterInvalid = await p.evaluate(() => readingProgress.getCount());
+    await p.close();
+    if (restored.first !== 'finished' || restored.reprint !== 'finished' ||
+        restored.second !== 'reading' || afterInvalid !== 2) {
+        throw new Error('JSON restore lost or changed a work status');
+    }
+});
+
+await check('plain JSON backup downloads a readable file', async () => {
+    const p = await newPage({ width: 1200, height: 900 });
+    await p.goto(BASE, { waitUntil: 'load' });
+    await p.waitForSelector('.book-card');
+    await p.evaluate(() => readingProgress.setStatus('horus-rising', 'finished'));
+    await p.click('#syncBtn');
+    const [download] = await Promise.all([
+        p.waitForEvent('download'),
+        p.click('#downloadProgress'),
+    ]);
+    const chunks = [];
+    for await (const chunk of await download.createReadStream()) chunks.push(chunk);
+    await p.close();
+    const payload = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+    if (download.suggestedFilename() !== 'horus-heresy-progress.json' ||
+        payload.works['horus-rising'] !== 'finished') {
+        throw new Error('download did not contain the marked work');
+    }
 });
 
 console.log('\nOnboarding');
@@ -879,9 +1295,40 @@ await check('mobile: no horizontal overflow', async () => {
     if (o > 1) throw new Error('overflows by ' + o + 'px');
 });
 
+await check('narrow phones keep all three accessible view controls on one row', async () => {
+    const narrow = await newPage({ width: 320, height: 800 });
+    await narrow.goto(BASE, { waitUntil: 'load' });
+    const result = await narrow.evaluate(() => {
+        const buttons = [...document.querySelectorAll('.view-btn')];
+        return {
+            tops: buttons.map((button) => Math.round(button.getBoundingClientRect().top)),
+            labels: buttons.map((button) => button.getAttribute('aria-label')),
+            overflow: document.documentElement.scrollWidth - innerWidth,
+        };
+    });
+    await narrow.close();
+    if (new Set(result.tops).size !== 1 || result.labels.some((label) => !label) || result.overflow > 1) {
+        throw new Error(JSON.stringify(result));
+    }
+});
+
 await check('mobile: pinch-zoom is not blocked', async () => {
     const ta = await mobile.evaluate(() => getComputedStyle(document.body).touchAction);
     if (ta === 'pan-y') throw new Error('touch-action: pan-y blocks pinch-zoom, failing WCAG 1.4.4');
+});
+
+await check('sources page opens and stays within the mobile viewport', async () => {
+    const sourcePage = await newPage({ width: 390, height: 844 });
+    await sourcePage.goto(new URL('sources.html', BASE).href, { waitUntil: 'load' });
+    const result = await sourcePage.evaluate(() => ({
+        title: document.querySelector('h1')?.textContent,
+        overflow: document.documentElement.scrollWidth - innerWidth,
+        correction: !!document.querySelector('a[href*="issues/new"]'),
+    }));
+    await sourcePage.close();
+    if (result.title !== 'Sources and corrections' || !result.correction || result.overflow > 1) {
+        throw new Error(JSON.stringify(result));
+    }
 });
 
 console.log('');

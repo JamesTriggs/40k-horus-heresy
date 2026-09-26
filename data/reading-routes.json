@@ -1,0 +1,81 @@
+{
+  "core": {
+    "title": "Horus Heresy Saga",
+    "source": "https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/",
+    "reviewedAt": "2026-09-26",
+    "works": [
+      {
+        "key": "horus-rising",
+        "title": "HORUS RISING",
+        "author": "Dan Abnett",
+        "format": "Novel"
+      },
+      {
+        "key": "false-gods",
+        "title": "FALSE GODS",
+        "author": "Graham McNeill",
+        "format": "Novel"
+      },
+      {
+        "key": "galaxy-in-flames",
+        "title": "GALAXY IN FLAMES",
+        "author": "Ben Counter",
+        "format": "Novel"
+      },
+      {
+        "key": "the-flight-of-the-eisenstein",
+        "title": "THE FLIGHT OF THE EISENSTEIN",
+        "author": "James Swallow",
+        "format": "Novel"
+      },
+      {
+        "key": "fulgrim",
+        "title": "FULGRIM",
+        "author": "Graham McNeill",
+        "format": "Novel"
+      },
+      {
+        "key": "the-first-heretic",
+        "title": "THE FIRST HERETIC",
+        "author": "Aaron Dembski-Bowden",
+        "format": "Novel"
+      },
+      {
+        "key": "prospero-burns",
+        "title": "PROSPERO BURNS",
+        "author": "Dan Abnett",
+        "format": "Novel"
+      },
+      {
+        "key": "know-no-fear",
+        "title": "KNOW NO FEAR",
+        "author": "Dan Abnett",
+        "format": "Novel"
+      },
+      {
+        "key": "betrayer",
+        "title": "BETRAYER",
+        "author": "Aaron Dembski-Bowden",
+        "format": "Novel"
+      },
+      {
+        "key": "praetorian-of-dorn",
+        "title": "PRAETORIAN OF DORN",
+        "author": "John French",
+        "format": "Novel"
+      },
+      {
+        "key": "the-master-of-mankind",
+        "title": "THE MASTER OF MANKIND",
+        "author": "Aaron Dembski-Bowden",
+        "format": "Novel"
+      },
+      {
+        "key": "slaves-to-darkness",
+        "title": "SLAVES TO DARKNESS",
+        "author": "John French",
+        "format": "Novel"
+      }
+    ]
+  }
+}

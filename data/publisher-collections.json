@@ -1,0 +1,792 @@
+{
+  "reviewedAt": "2026-09-26",
+  "collections": {
+    "Age of Darkness": {
+      "source": "https://www.blacklibrary.com/authors/anthologies/age-of-darkness.html",
+      "entries": [
+        {
+          "key": "age-of-darkness-rebirth",
+          "title": "REBIRTH",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "age-of-darkness-face-of-treachery",
+          "title": "THE FACE OF TREACHERY",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "age-of-darkness-iron-within",
+          "title": "THE IRON WITHIN",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "age-of-darkness-savage-weapons",
+          "title": "SAVAGE WEAPONS",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "age-of-darkness-rules-of-engagement",
+          "title": "RULES OF ENGAGEMENT",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "age-of-darkness-liars-due",
+          "title": "LIAR'S DUE",
+          "author": "James Swallow"
+        },
+        {
+          "key": "age-of-darkness-forgotten-sons",
+          "title": "FORGOTTEN SONS",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "age-of-darkness-little-horus",
+          "title": "LITTLE HORUS",
+          "author": "Dan Abnett"
+        },
+        {
+          "key": "age-of-darkness-the-last-remembrancer",
+          "title": "THE LAST REMEMBRANCER",
+          "author": "John French"
+        }
+      ]
+    },
+    "Born of Flame": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/born-of-flame-ebook.html",
+      "entries": [
+        {
+          "key": "flame-promethean-sun",
+          "title": "PROMETHEAN SUN",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "flame-scorched-earth",
+          "title": "SCORCHED EARTH",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "flame-artefacts",
+          "title": "ARTEFACTS",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "flame-immortal-duty-2",
+          "title": "IMMORTAL DUTY",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "flame-sons-of-forge",
+          "title": "SONS OF THE FORGE",
+          "author": "Nick Kyme"
+        }
+      ]
+    },
+    "Corax": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/corax-ebook.html",
+      "entries": [
+        {
+          "key": "corax-soulforge",
+          "title": "SOULFORGE",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "corax-ravenlord",
+          "title": "RAVENLORD",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "corax-shadowmasters",
+          "title": "THE SHADOWMASTERS",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "corax-value-fear",
+          "title": "THE VALUE OF FEAR",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "corax-raptor",
+          "title": "RAPTOR",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "corax-weregeld",
+          "title": "WEREGELD",
+          "author": "Gav Thorpe"
+        }
+      ]
+    },
+    "Eye of Terra": {
+      "source": "https://www.blacklibrary.com/all-products/eye-of-terra-ebook.html",
+      "entries": [
+        {
+          "key": "eye-wolf-ash-fire",
+          "title": "THE WOLF OF ASH AND FIRE",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "eye-sins-father",
+          "title": "SINS OF THE FATHER",
+          "author": "Andy Smillie"
+        },
+        {
+          "key": "eye-vorax",
+          "title": "VORAX",
+          "author": "Matthew Farrer"
+        },
+        {
+          "key": "eye-aurelian",
+          "title": "AURELIAN",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "eye-massacre",
+          "title": "MASSACRE",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "eye-final-compliance",
+          "title": "THE FINAL COMPLIANCE OF SIXTY-THREE FOURTEEN",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "eye-brotherhood-moon",
+          "title": "BROTHERHOOD OF THE MOON",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "eye-inheritor",
+          "title": "INHERITOR",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "eye-red-marked",
+          "title": "RED-MARKED",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "eye-master-first",
+          "title": "MASTER OF THE FIRST",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "eye-ironfire",
+          "title": "IRONFIRE",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "eye-stratagem",
+          "title": "STRATAGEM",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "eye-herald-sanguinius",
+          "title": "HERALD OF SANGUINIUS",
+          "author": "Andy Smillie"
+        },
+        {
+          "key": "eye-long-night",
+          "title": "THE LONG NIGHT",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "eye-eagles-talon",
+          "title": "THE EAGLE'S TALON",
+          "author": "John French"
+        },
+        {
+          "key": "eye-iron-corpses",
+          "title": "IRON CORPSES",
+          "author": "David Annandale"
+        }
+      ]
+    },
+    "Heralds of the Siege": {
+      "source": "https://www.blacklibrary.com/all-products/the-horus-heresy-heralds-of-the-siege.html",
+      "entries": [
+        {
+          "key": "heralds-myriad",
+          "title": "MYRIAD",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "heralds-children-sicarus",
+          "title": "CHILDREN OF SICARUS",
+          "author": "Anthony Reynolds"
+        },
+        {
+          "key": "heralds-blackshield",
+          "title": "BLACKSHIELD",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "heralds-painted-count",
+          "title": "THE PAINTED COUNT",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "heralds-grey-raven",
+          "title": "THE GREY RAVEN",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "heralds-valerius",
+          "title": "VALERIUS",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "heralds-ember-wolves",
+          "title": "THE EMBER WOLVES",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "heralds-exocytosis",
+          "title": "EXOCYTOSIS",
+          "author": "James Swallow"
+        },
+        {
+          "key": "heralds-last-son-prospero",
+          "title": "THE LAST SON OF PROSPERO",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "heralds-soul-severed",
+          "title": "THE SOUL, SEVERED",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "heralds-dark-compliance",
+          "title": "DARK COMPLIANCE",
+          "author": "John French"
+        },
+        {
+          "key": "heralds-duty-waits",
+          "title": "DUTY WAITS",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "heralds-magisterium",
+          "title": "MAGISTERIUM",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "heralds-now-peals-midnight",
+          "title": "NOW PEALS MIDNIGHT",
+          "author": "John French"
+        },
+        {
+          "key": "heralds-dreams-unity",
+          "title": "DREAMS OF UNITY",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "heralds-board-is-set",
+          "title": "THE BOARD IS SET",
+          "author": "Gav Thorpe"
+        }
+      ]
+    },
+    "Legacies of Betrayal": {
+      "source": "https://www.blacklibrary.com/all-products/legacies-of-betrayal-ebook.html",
+      "entries": [
+        {
+          "key": "legacies-serpent",
+          "title": "SERPENT",
+          "author": "John French"
+        },
+        {
+          "key": "legacies-thief-revelations",
+          "title": "THIEF OF REVELATIONS",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "legacies-hunters-moon",
+          "title": "HUNTER'S MOON",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "legacies-veritas-ferrum",
+          "title": "VERITAS FERRUM",
+          "author": "David Annandale"
+        },
+        {
+          "key": "legacies-strike-fade",
+          "title": "STRIKE AND FADE",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "legacies-brotherhood-storm",
+          "title": "BROTHERHOOD OF THE STORM",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "legacies-honour-dead",
+          "title": "HONOUR TO THE DEAD",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "legacies-butchers-nails",
+          "title": "BUTCHER'S NAILS",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "legacies-kryptos",
+          "title": "KRYPTOS",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "legacies-wolfs-claw",
+          "title": "WOLF'S CLAW",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "legacies-warmaster",
+          "title": "WARMASTER",
+          "author": "John French"
+        },
+        {
+          "key": "legacies-divine-word",
+          "title": "THE DIVINE WORD",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "legacies-kharn",
+          "title": "KHÂRN: THE EIGHTFOLD PATH",
+          "author": "Anthony Reynolds"
+        },
+        {
+          "key": "legacies-cypher",
+          "title": "CYPHER: GUARDIAN OF ORDER",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "legacies-heart-conqueror",
+          "title": "HEART OF THE CONQUEROR",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "legacies-lucius",
+          "title": "LUCIUS: THE ETERNAL BLADE",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "legacies-censure",
+          "title": "CENSURE",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "legacies-bjorn",
+          "title": "BJORN: LONE WOLF",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "legacies-riven",
+          "title": "RIVEN",
+          "author": "John French"
+        }
+      ]
+    },
+    "Shadows of Treachery": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/shadows-of-treachery-ebook.html",
+      "entries": [
+        {
+          "key": "shadows-of-treachery-dark-king",
+          "title": "THE DARK KING",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "shadows-of-treachery-death-of-silversmith",
+          "title": "DEATH OF A SILVERSMITH",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "shadows-of-treachery-kaban-project",
+          "title": "THE KABAN PROJECT",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "shadows-of-treachery-lightning-tower",
+          "title": "THE LIGHTNING TOWER",
+          "author": "Dan Abnett"
+        },
+        {
+          "key": "shadows-of-treachery-ravens-flight",
+          "title": "RAVEN'S FLIGHT",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "shadows-of-treachery-crimson-fist",
+          "title": "THE CRIMSON FIST",
+          "author": "John French"
+        },
+        {
+          "key": "shadows-of-treachery-prince-of-crows",
+          "title": "PRINCE OF CROWS",
+          "author": "Aaron Dembski-Bowden"
+        }
+      ]
+    },
+    "Shattered Legions": {
+      "source": "https://www.blacklibrary.com/all-products/hh-shattered-legions-ebook.html",
+      "entries": [
+        {
+          "key": "shattered-immortal-duty",
+          "title": "IMMORTAL DUTY",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "shattered-meduson",
+          "title": "MEDUSON",
+          "author": "Dan Abnett"
+        },
+        {
+          "key": "shattered-the-either",
+          "title": "THE EITHER",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "shattered-unforged",
+          "title": "UNFORGED",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "shattered-grey-talon",
+          "title": "GREY TALON",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "shattered-keys-hel",
+          "title": "THE KEYS OF HEL",
+          "author": "John French"
+        },
+        {
+          "key": "shattered-deeds-endure",
+          "title": "DEEDS ENDURE",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "shattered-the-noose",
+          "title": "THE NOOSE",
+          "author": "David Annandale"
+        },
+        {
+          "key": "shattered-unspoken",
+          "title": "UNSPOKEN",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "shattered-hand-elect",
+          "title": "THE HAND ELECT",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "shattered-seventh-serpent",
+          "title": "THE SEVENTH SERPENT",
+          "author": "Graham McNeill"
+        }
+      ]
+    },
+    "Tales of Heresy": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/Tales-of-Heresy-eBook.html",
+      "entries": [
+        {
+          "key": "tales-of-heresy-the-last-church",
+          "title": "THE LAST CHURCH",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "tales-of-heresy-after-deshea",
+          "title": "AFTER DESH'EA",
+          "author": "Matthew Farrer"
+        },
+        {
+          "key": "tales-of-heresy-wolf-at-the-door",
+          "title": "WOLF AT THE DOOR",
+          "author": "Mike Lee"
+        },
+        {
+          "key": "tales-of-heresy-call-of-the-lion",
+          "title": "CALL OF THE LION",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "tales-of-heresy-scions-of-the-storm",
+          "title": "SCIONS OF THE STORM",
+          "author": "Anthony Reynolds"
+        },
+        {
+          "key": "tales-of-heresy-blood-games",
+          "title": "BLOOD GAMES",
+          "author": "Dan Abnett"
+        },
+        {
+          "key": "tales-of-heresy-the-voice",
+          "title": "THE VOICE",
+          "author": "James Swallow"
+        }
+      ]
+    },
+    "The Burden of Loyalty": {
+      "source": "https://www.blacklibrary.com/all-products/the-burden-of-loyalty-ebook.html",
+      "entries": [
+        {
+          "key": "burden-thirteenth-wolf",
+          "title": "THE THIRTEENTH WOLF",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "burden-into-exile",
+          "title": "INTO EXILE",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "burden-cybernetica",
+          "title": "CYBERNETICA",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "burden-perpetual",
+          "title": "PERPETUAL",
+          "author": "Dan Abnett"
+        },
+        {
+          "key": "burden-wolf-king",
+          "title": "THE WOLF KING",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "burden-heart-pharos",
+          "title": "THE HEART OF THE PHAROS",
+          "author": "L J Goulding"
+        },
+        {
+          "key": "burden-binary-succession",
+          "title": "THE BINARY SUCCESSION",
+          "author": "David Annandale"
+        },
+        {
+          "key": "burden-ordo-sinister",
+          "title": "ORDO SINISTER",
+          "author": "John French"
+        }
+      ]
+    },
+    "The Primarchs": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/the-primarchs-ebook.html",
+      "entries": [
+        {
+          "key": "the-primarchs-feat-of-iron",
+          "title": "FEAT OF IRON",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "the-primarchs-reflection-crackd",
+          "title": "THE REFLECTION CRACK'D",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "the-primarchs-the-lion",
+          "title": "THE LION",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "the-primarchs-serpent-beneath",
+          "title": "THE SERPENT BENEATH",
+          "author": "Rob Sanders"
+        }
+      ]
+    },
+    "The Silent War": {
+      "source": "https://www.blacklibrary.com/all-products/the-silent-war-ebook.html",
+      "entries": [
+        {
+          "key": "silent-child-night",
+          "title": "CHILD OF NIGHT",
+          "author": "John French"
+        },
+        {
+          "key": "silent-wolf-hunt",
+          "title": "WOLF HUNT",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "silent-purge",
+          "title": "THE PURGE",
+          "author": "Anthony Reynolds"
+        },
+        {
+          "key": "silent-watcher",
+          "title": "THE WATCHER",
+          "author": "C Z Dunn"
+        },
+        {
+          "key": "silent-ghosts-speak",
+          "title": "GHOSTS SPEAK NOT",
+          "author": "James Swallow"
+        },
+        {
+          "key": "silent-grey-angel",
+          "title": "GREY ANGEL",
+          "author": "John French"
+        },
+        {
+          "key": "silent-luna-mendax",
+          "title": "LUNA MENDAX",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "silent-army-one",
+          "title": "ARMY OF ONE",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "silent-distant-echoes",
+          "title": "DISTANT ECHOES OF OLD NIGHT",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "silent-lost-sons",
+          "title": "LOST SONS",
+          "author": "James Swallow"
+        },
+        {
+          "key": "silent-templar",
+          "title": "TEMPLAR",
+          "author": "John French"
+        },
+        {
+          "key": "silent-patience",
+          "title": "PATIENCE",
+          "author": "James Swallow"
+        },
+        {
+          "key": "silent-sigillite",
+          "title": "THE SIGILLITE",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "silent-gates-terra",
+          "title": "THE GATES OF TERRA",
+          "author": "Nick Kyme"
+        }
+      ]
+    },
+    "War Without End": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/hh-war-without-end-ebook.html",
+      "entries": [
+        {
+          "key": "war-divine-adoratrice",
+          "title": "THE DEVINE ADORATRICE",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "war-virtues-sons",
+          "title": "VIRTUES OF THE SONS",
+          "author": "Andy Smillie"
+        },
+        {
+          "key": "war-sermon-exodus",
+          "title": "SERMON OF EXODUS",
+          "author": "David Annandale"
+        },
+        {
+          "key": "war-howl-hearthworld",
+          "title": "HOWL OF THE HEARTHWORLD",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "war-lord-red-sands",
+          "title": "LORD OF THE RED SANDS",
+          "author": "Aaron Dembski-Bowden"
+        },
+        {
+          "key": "war-artefacts",
+          "title": "ARTEFACTS",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "war-chirurgeon",
+          "title": "CHIRURGEON",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "war-phoenician",
+          "title": "THE PHOENICIAN",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "war-allegiance",
+          "title": "ALLEGIANCE",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "war-daemonology",
+          "title": "DAEMONOLOGY",
+          "author": "Chris Wraight"
+        },
+        {
+          "key": "war-gunsight",
+          "title": "GUNSIGHT",
+          "author": "James Swallow"
+        },
+        {
+          "key": "war-laurel-defiance",
+          "title": "THE LAUREL OF DEFIANCE",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "war-safe-shadowed-place",
+          "title": "A SAFE AND SHADOWED PLACE",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "war-imperfect",
+          "title": "IMPERFECT",
+          "author": "Nick Kyme"
+        },
+        {
+          "key": "war-wolf-mother",
+          "title": "WOLF MOTHER",
+          "author": "Graham McNeill"
+        },
+        {
+          "key": "war-harrowing",
+          "title": "THE HARROWING",
+          "author": "Rob Sanders"
+        },
+        {
+          "key": "war-all-remains",
+          "title": "ALL THAT REMAINS",
+          "author": "James Swallow"
+        },
+        {
+          "key": "war-lions-command",
+          "title": "BY THE LION'S COMMAND",
+          "author": "Gav Thorpe"
+        },
+        {
+          "key": "war-black-oculus",
+          "title": "BLACK OCULUS",
+          "author": "John French"
+        },
+        {
+          "key": "war-twisted",
+          "title": "TWISTED",
+          "author": "Guy Haley"
+        },
+        {
+          "key": "war-hands-emperor",
+          "title": "HANDS OF THE EMPEROR",
+          "author": "Rob Sanders"
+        }
+      ]
+    }
+  },
+  "disputed": {
+    "Mark of Calth": {
+      "publisherSource": "https://www.blacklibrary.com/the-horus-heresy/novels/mark-of-calth-ebook.html",
+      "bibliographicSource": "https://obnb.uk/p16417052-mark-of-calth",
+      "note": "Black Library’s current product page lists seven stories and omits Athame. A bibliographic record lists Athame as an eighth story. The published book contents need checking before this collection is marked verified."
+    }
+  }
+}

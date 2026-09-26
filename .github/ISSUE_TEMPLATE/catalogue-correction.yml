@@ -1,0 +1,34 @@
+name: Catalogue correction
+description: Report a factual error or disputed reading relationship
+title: "Correction: "
+labels: [bug]
+body:
+  - type: input
+    id: work
+    attributes:
+      label: Work or collection
+      description: Include the stable work ID from its URL if available.
+      placeholder: "Horus Rising (horus-rising)"
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Current claim and proposed correction
+      description: Quote the short claim that needs changing, then state the correction.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting source
+      description: Give a publisher URL or a precise publication and page reference. Explain conflicting sources.
+    validations:
+      required: true
+  - type: dropdown
+    id: spoilers
+    attributes:
+      label: Does this correction contain plot spoilers?
+      options: ["Yes", "No", "Unsure"]
+    validations:
+      required: true

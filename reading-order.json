@@ -6,8 +6,8 @@
   "chartSource": "Daunt's Horus Heresy Timeline v0.9",
   "totals": {
    "entries": 228,
-   "inChart": 152,
-   "notInChart": 76
+   "inChart": 163,
+   "notInChart": 65
   },
   "prerequisiteEdgesTotal": 205,
   "prerequisiteEdgesHonoured": 194,
@@ -87,7 +87,7 @@
    {
     "prerequisite": "TWISTED",
     "prerequisiteKey": "war-twisted",
-    "prerequisiteRank": 160,
+    "prerequisiteRank": 158,
     "dependent": "THE EITHER",
     "dependentKey": "shattered-the-either",
     "dependentRank": 66
@@ -102,7 +102,7 @@
    }
   ],
   "violationNote": "A violation means the phase ordering places a book before something the chart says should precede it. These are surfaced in the interface on the affected book rather than silently reordered.",
-  "chartNodesWithoutBookEntry": 30
+  "chartNodesWithoutBookEntry": 19
  },
  "phases": [
   {
@@ -191,8 +191,10 @@
    "timeline": "005.M31",
    "phase": "opening",
    "chronoRank": 45,
-   "inChart": false,
-   "prerequisites": [],
+   "inChart": true,
+   "prerequisites": [
+    "galaxy-in-flames"
+   ],
    "rank": 4
   },
   {
@@ -283,7 +285,7 @@
    "timeline": "966.M30",
    "phase": "before-the-betrayal",
    "chronoRank": 17,
-   "inChart": false,
+   "inChart": true,
    "prerequisites": [],
    "rank": 12
   },
@@ -328,7 +330,9 @@
    "phase": "before-the-betrayal",
    "chronoRank": 25,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-flight-of-the-eisenstein"
+   ],
    "rank": 16
   },
   {
@@ -399,7 +403,7 @@
    "timeline": "003-004.M31",
    "phase": "isstvan",
    "chronoRank": 33,
-   "inChart": false,
+   "inChart": true,
    "prerequisites": [],
    "rank": 22
   },
@@ -410,7 +414,7 @@
    "timeline": "004.M31",
    "phase": "isstvan",
    "chronoRank": 35,
-   "inChart": false,
+   "inChart": true,
    "prerequisites": [],
    "rank": 23
   },
@@ -498,7 +502,9 @@
    "phase": "isstvan",
    "chronoRank": 44,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "shadows-of-treachery-kaban-project"
+   ],
    "rank": 30
   },
   {
@@ -510,6 +516,7 @@
    "chronoRank": 46,
    "inChart": true,
    "prerequisites": [
+    "the-flight-of-the-eisenstein",
     "tales-of-heresy-call-of-the-lion"
    ],
    "rank": 31
@@ -572,7 +579,9 @@
    "phase": "isstvan",
    "chronoRank": 51,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-flight-of-the-eisenstein"
+   ],
    "rank": 36
   },
   {
@@ -583,7 +592,9 @@
    "phase": "isstvan",
    "chronoRank": 52,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-outcast-dead"
+   ],
    "rank": 37
   },
   {
@@ -620,7 +631,9 @@
    "phase": "isstvan",
    "chronoRank": 55,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-flight-of-the-eisenstein"
+   ],
    "rank": 40
   },
   {
@@ -901,8 +914,10 @@
    "timeline": "006.M31",
    "phase": "isstvan",
    "chronoRank": 77,
-   "inChart": false,
-   "prerequisites": [],
+   "inChart": true,
+   "prerequisites": [
+    "war-sermon-exodus"
+   ],
    "rank": 63
   },
   {
@@ -913,7 +928,9 @@
    "phase": "isstvan",
    "chronoRank": 78,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-flight-of-the-eisenstein"
+   ],
    "rank": 64
   },
   {
@@ -1063,6 +1080,7 @@
    "chronoRank": 92,
    "inChart": true,
    "prerequisites": [
+    "the-flight-of-the-eisenstein",
     "shadows-of-treachery-lightning-tower"
    ],
    "rank": 76
@@ -1415,8 +1433,10 @@
    "timeline": "007.M31",
    "phase": "calth",
    "chronoRank": 119,
-   "inChart": false,
-   "prerequisites": [],
+   "inChart": true,
+   "prerequisites": [
+    "legacies-wolfs-claw"
+   ],
    "rank": 105
   },
   {
@@ -1560,8 +1580,10 @@
    "timeline": "008.M31",
    "phase": "calth",
    "chronoRank": 133,
-   "inChart": false,
-   "prerequisites": [],
+   "inChart": true,
+   "prerequisites": [
+    "age-of-darkness-iron-within"
+   ],
    "rank": 117
   },
   {
@@ -1647,6 +1669,7 @@
    "chronoRank": 138,
    "inChart": true,
    "prerequisites": [
+    "the-outcast-dead",
     "legacies-riven"
    ],
    "rank": 124
@@ -1685,7 +1708,8 @@
    "chronoRank": 141,
    "inChart": true,
    "prerequisites": [
-    "silent-grey-angel"
+    "silent-grey-angel",
+    "war-divine-adoratrice"
    ],
    "rank": 127
   },
@@ -1697,7 +1721,9 @@
    "phase": "imperium-secundus",
    "chronoRank": 144,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-flight-of-the-eisenstein"
+   ],
    "rank": 128
   },
   {
@@ -1975,17 +2001,6 @@
    "rank": 150
   },
   {
-   "bookKey": "burden-binary-succession",
-   "number": "XLVIII.2",
-   "title": "THE BINARY SUCCESSION",
-   "timeline": "010-011.M31",
-   "phase": "imperium-secundus",
-   "chronoRank": 166,
-   "inChart": true,
-   "prerequisites": [],
-   "rank": 151
-  },
-  {
    "bookKey": "flame-sons-of-forge",
    "number": "L.3",
    "title": "SONS OF THE FORGE",
@@ -1994,7 +2009,7 @@
    "chronoRank": 167,
    "inChart": false,
    "prerequisites": [],
-   "rank": 152
+   "rank": 151
   },
   {
    "bookKey": "the-crimson-king",
@@ -2007,7 +2022,7 @@
    "prerequisites": [
     "prospero-burns"
    ],
-   "rank": 153
+   "rank": 152
   },
   {
    "bookKey": "silent-lost-sons",
@@ -2020,7 +2035,7 @@
    "prerequisites": [
     "garro-oath-moment"
    ],
-   "rank": 154
+   "rank": 153
   },
   {
    "bookKey": "deathfire",
@@ -2033,18 +2048,18 @@
    "prerequisites": [
     "eye-stratagem"
    ],
-   "rank": 155
+   "rank": 154
   },
   {
-   "bookKey": "praetorian-of-dorn",
-   "number": "XXXIX",
-   "title": "PRAETORIAN OF DORN",
-   "timeline": "010.M31",
+   "bookKey": "tallarn",
+   "number": "XLV",
+   "title": "TALLARN",
+   "timeline": "010-011.M31",
    "phase": "imperium-secundus",
-   "chronoRank": 172,
+   "chronoRank": 171,
    "inChart": false,
    "prerequisites": [],
-   "rank": 156
+   "rank": 155
   },
   {
    "bookKey": "legacies-bjorn",
@@ -2054,8 +2069,10 @@
    "phase": "imperium-secundus",
    "chronoRank": 173,
    "inChart": true,
-   "prerequisites": [],
-   "rank": 157
+   "prerequisites": [
+    "burden-wolf-king"
+   ],
+   "rank": 156
   },
   {
    "bookKey": "war-black-oculus",
@@ -2068,20 +2085,7 @@
    "prerequisites": [
     "angel-exterminatus"
    ],
-   "rank": 158
-  },
-  {
-   "bookKey": "tallarn",
-   "number": "XLV",
-   "title": "TALLARN",
-   "timeline": "010-011.M31",
-   "phase": "imperium-secundus",
-   "chronoRank": 171,
-   "inChart": true,
-   "prerequisites": [
-    "war-black-oculus"
-   ],
-   "rank": 159
+   "rank": 157
   },
   {
    "bookKey": "war-twisted",
@@ -2094,7 +2098,7 @@
    "prerequisites": [
     "age-of-darkness-little-horus"
    ],
-   "rank": 160
+   "rank": 158
   },
   {
    "bookKey": "eye-eagles-talon",
@@ -2104,10 +2108,8 @@
    "phase": "imperium-secundus",
    "chronoRank": 176,
    "inChart": true,
-   "prerequisites": [
-    "tallarn"
-   ],
-   "rank": 161
+   "prerequisites": [],
+   "rank": 159
   },
   {
    "bookKey": "eye-iron-corpses",
@@ -2117,10 +2119,8 @@
    "phase": "imperium-secundus",
    "chronoRank": 177,
    "inChart": true,
-   "prerequisites": [
-    "tallarn"
-   ],
-   "rank": 162
+   "prerequisites": [],
+   "rank": 160
   },
   {
    "bookKey": "silent-templar",
@@ -2133,6 +2133,33 @@
    "prerequisites": [
     "shadows-of-treachery-crimson-fist",
     "silent-purge"
+   ],
+   "rank": 161
+  },
+  {
+   "bookKey": "praetorian-of-dorn",
+   "number": "XXXIX",
+   "title": "PRAETORIAN OF DORN",
+   "timeline": "010.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 172,
+   "inChart": true,
+   "prerequisites": [
+    "silent-templar",
+    "deliverance-lost"
+   ],
+   "rank": 162
+  },
+  {
+   "bookKey": "burden-binary-succession",
+   "number": "XLVIII.2",
+   "title": "THE BINARY SUCCESSION",
+   "timeline": "010-011.M31",
+   "phase": "imperium-secundus",
+   "chronoRank": 166,
+   "inChart": true,
+   "prerequisites": [
+    "praetorian-of-dorn"
    ],
    "rank": 163
   },
@@ -2166,7 +2193,9 @@
    "phase": "imperium-secundus",
    "chronoRank": 181,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-flight-of-the-eisenstein"
+   ],
    "rank": 166
   },
   {
@@ -2202,8 +2231,12 @@
    "timeline": "011.M31",
    "phase": "imperium-secundus",
    "chronoRank": 184,
-   "inChart": false,
-   "prerequisites": [],
+   "inChart": true,
+   "prerequisites": [
+    "burden-into-exile",
+    "the-outcast-dead",
+    "burden-ordo-sinister"
+   ],
    "rank": 169
   },
   {
@@ -2244,6 +2277,7 @@
    "inChart": true,
    "prerequisites": [
     "deathfire",
+    "the-master-of-mankind",
     "shattered-hand-elect"
    ],
    "rank": 172
@@ -2322,6 +2356,7 @@
    "chronoRank": 192,
    "inChart": true,
    "prerequisites": [
+    "burden-wolf-king",
     "ruinstorm"
    ],
    "rank": 178
@@ -2396,7 +2431,8 @@
    "chronoRank": 198,
    "inChart": true,
    "prerequisites": [
-    "betrayer"
+    "betrayer",
+    "the-master-of-mankind"
    ],
    "rank": 184
   },
@@ -2422,7 +2458,8 @@
    "chronoRank": 200,
    "inChart": true,
    "prerequisites": [
-    "the-path-of-heaven"
+    "the-path-of-heaven",
+    "praetorian-of-dorn"
    ],
    "rank": 186
   },
@@ -2469,7 +2506,9 @@
    "phase": "road-to-terra",
    "chronoRank": 204,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "praetorian-of-dorn"
+   ],
    "rank": 190
   },
   {
@@ -2480,7 +2519,9 @@
    "phase": "road-to-terra",
    "chronoRank": 205,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-master-of-mankind"
+   ],
    "rank": 191
   },
   {
@@ -2515,7 +2556,9 @@
    "phase": "road-to-terra",
    "chronoRank": 208,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "the-master-of-mankind"
+   ],
    "rank": 194
   },
   {
@@ -2571,17 +2614,6 @@
    "rank": 198
   },
   {
-   "bookKey": "sot-sons-of-selenar",
-   "number": "SoT 1.5",
-   "title": "SONS OF THE SELENAR",
-   "timeline": "014.M31",
-   "phase": "siege",
-   "chronoRank": 213,
-   "inChart": false,
-   "prerequisites": [],
-   "rank": 199
-  },
-  {
    "bookKey": "sot-lost-and-damned",
    "number": "SoT 2",
    "title": "THE LOST AND THE DAMNED",
@@ -2592,7 +2624,7 @@
    "prerequisites": [
     "sot-solar-war"
    ],
-   "rank": 200
+   "rank": 199
   },
   {
    "bookKey": "sot-first-wall",
@@ -2605,6 +2637,19 @@
    "prerequisites": [
     "sot-lost-and-damned"
    ],
+   "rank": 200
+  },
+  {
+   "bookKey": "sot-sons-of-selenar",
+   "number": "SoT 1.5",
+   "title": "SONS OF THE SELENAR",
+   "timeline": "014.M31",
+   "phase": "siege",
+   "chronoRank": 213,
+   "inChart": true,
+   "prerequisites": [
+    "sot-first-wall"
+   ],
    "rank": 201
   },
   {
@@ -2615,7 +2660,9 @@
    "phase": "siege",
    "chronoRank": 216,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "sot-sons-of-selenar"
+   ],
    "rank": 202
   },
   {
@@ -2625,8 +2672,10 @@
    "timeline": "014.M31",
    "phase": "siege",
    "chronoRank": 217,
-   "inChart": false,
-   "prerequisites": [],
+   "inChart": true,
+   "prerequisites": [
+    "sot-saturnine"
+   ],
    "rank": 203
   },
   {
@@ -2637,7 +2686,9 @@
    "phase": "siege",
    "chronoRank": 218,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "sot-fury-of-magnus"
+   ],
    "rank": 204
   },
   {
@@ -2673,8 +2724,10 @@
    "timeline": "014.M31",
    "phase": "siege",
    "chronoRank": 221,
-   "inChart": false,
-   "prerequisites": [],
+   "inChart": true,
+   "prerequisites": [
+    "sot-echoes-of-eternity"
+   ],
    "rank": 207
   },
   {
@@ -2685,7 +2738,9 @@
    "phase": "siege",
    "chronoRank": 222,
    "inChart": true,
-   "prerequisites": [],
+   "prerequisites": [
+    "sot-garro-knight-of-grey"
+   ],
    "rank": 208
   },
   {

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horus Heresy Archive - Complete Dataslate</title>
-    <meta name="description" content="Interactive archive of all 228 Horus Heresy novels, novellas and anthology stories in strict in-universe chronological order, with a character encyclopedia, reading tracker and Imperial/Chaos themes.">
+    <title>Horus Heresy Archive | Reading Guide</title>
+    <meta name="description" content="Independent Horus Heresy reading guide with 226 distinct works, anthology contents, source notes and a local reading tracker. Browse recommended or estimated chronological order.">
     <!-- favicon.png was a 313 KB 700x700 image, byte-identical to the aquila,
          served for a 32px slot and again as the touch icon. -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -24,11 +24,12 @@
             <img src="images/imperial-aquila.png" alt="Imperial Aquila" class="imperial-aquila" id="headerSymbol">
             <h1 class="main-title">HORUS HERESY ARCHIVE</h1>
             <div class="classification" id="classification">CLASSIFICATION: VERMILLION</div>
-            <div class="subtitle-series" id="subtitleSeries">THE COMPLETE HERESY</div>
+            <div class="subtitle-series" id="subtitleSeries">HORUS HERESY FICTION</div>
             <div class="subtitle-quote" id="thoughtForTheDay">THOUGHT FOR THE DAY: "BLESSED IS THE MIND TOO SMALL FOR DOUBT"</div>
             <!-- Replaced by updateProgressCounter() on load. Kept empty so a
                  stale hardcoded total cannot flash before the real one. -->
             <div class="progress-counter" id="progressCounter" aria-live="polite"></div>
+            <button type="button" class="continue-reading" id="continueReading" hidden></button>
             <button type="button" class="progress-hint" id="progressHint">
                 <span class="progress-hint-text">Held in this dataslate only</span>
                 <span class="progress-hint-action">Transmit to another dataslate ⇄</span>
@@ -36,21 +37,36 @@
         </header>
 
         <nav class="view-switcher" aria-label="View">
-            <button type="button" class="view-btn is-active" id="viewReading" data-view="reading" aria-pressed="true">
-                <span class="view-btn-title">READING ORDER</span>
+            <button type="button" class="view-btn is-active" id="viewReading" data-view="reading" aria-pressed="true" aria-label="Reading order">
+                <span class="view-btn-title"><span class="view-label-full">READING ORDER</span><span class="view-label-short" aria-hidden="true">READ</span></span>
                 <span class="view-btn-hint">Where to start</span>
             </button>
-            <button type="button" class="view-btn" id="viewChronological" data-view="chronological" aria-pressed="false">
-                <span class="view-btn-title">CHRONOLOGICAL</span>
+            <button type="button" class="view-btn" id="viewChronological" data-view="chronological" aria-pressed="false" aria-label="Chronological order">
+                <span class="view-btn-title"><span class="view-label-full">CHRONOLOGICAL</span><span class="view-label-short" aria-hidden="true">TIME</span></span>
                 <span class="view-btn-hint">In-universe timeline</span>
             </button>
-            <button type="button" class="view-btn" id="viewChart" data-view="chart" aria-pressed="false">
-                <span class="view-btn-title">STORYLINE CHART</span>
+            <button type="button" class="view-btn" id="viewChart" data-view="chart" aria-pressed="false" aria-label="Storyline chart">
+                <span class="view-btn-title"><span class="view-label-full">STORYLINE CHART</span><span class="view-label-short" aria-hidden="true">CHART</span></span>
                 <span class="view-btn-hint">By Legion, with prerequisites</span>
             </button>
         </nav>
 
+        <main id="mainContent">
         <div class="view-note" id="viewNote"></div>
+
+        <nav class="route-choices" aria-label="Choose a reading path">
+            <div class="route-heading">CHOOSE YOUR PATH</div>
+            <button type="button" class="route-choice" id="coreRoute" aria-pressed="false">
+                <strong>START HERE</strong><span>12 pivotal novels, curated by Black Library</span>
+            </button>
+            <button type="button" class="route-choice" id="fullRoute" aria-pressed="true">
+                <strong>FULL FICTION</strong><span>All 226 distinct works in this archive</span>
+            </button>
+            <button type="button" class="route-choice" id="legionRoute">
+                <strong>EXPLORE A LEGION</strong><span>Choose a faction in the catalogue filter</span>
+            </button>
+            <p class="route-source" id="routeSource" hidden>Core follows <a href="https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/" target="_blank" rel="noopener noreferrer">Warhammer Community’s 12-novel Horus Heresy Saga selection</a>. It is a short publisher-curated route, not the only valid reading order. Short works and other novels remain in Full Fiction.</p>
+        </nav>
 
         <!-- Mobile only. The stacked filter bar is 358px tall on a phone, which
              pushed the catalogue below the fold on its own. -->
@@ -71,6 +87,24 @@
                     <option value="">ALL LEGIONS</option>
                 </select>
             </div>
+            <div class="collection-container">
+                <label for="collectionFilter" class="filter-label">COLLECTION:</label>
+                <select id="collectionFilter" class="legion-filter">
+                    <option value="">ALL COLLECTIONS</option>
+                </select>
+                <button type="button" class="collection-bulk" id="collectionBulk" hidden></button>
+            </div>
+            <div class="format-container">
+                <label for="formatFilter" class="filter-label">FORMAT:</label>
+                <select id="formatFilter" class="legion-filter">
+                    <option value="">ALL FORMATS</option>
+                    <option value="Novel">NOVELS</option>
+                    <option value="Novella">NOVELLAS</option>
+                    <option value="Short Story">SHORT STORIES</option>
+                    <option value="Audio Drama">AUDIO DRAMAS</option>
+                    <option value="Anthology">ANTHOLOGIES</option>
+                </select>
+            </div>
             <div class="sort-container">
                 <label for="sortOrder" class="filter-label">SORT BY:</label>
                 <select id="sortOrder" class="sort-select">
@@ -80,6 +114,7 @@
                     <option value="author">AUTHOR (A-Z)</option>
                 </select>
             </div>
+            <button type="button" class="layout-toggle" id="layoutToggle" aria-pressed="false">COMPACT LIST</button>
             <div class="series-toggle-container">
                 <label class="toggle-label">
                     <input type="checkbox" id="includePrimarchs" class="series-checkbox" checked>
@@ -90,7 +125,7 @@
                     <span class="toggle-text">SIEGE OF TERRA (10)</span>
                 </label>
                 <label class="toggle-label spoiler-toggle">
-                    <input type="checkbox" id="showSpoilers" class="series-checkbox" checked>
+                    <input type="checkbox" id="showSpoilers" class="series-checkbox">
                     <span class="toggle-text">SHOW SPOILERS</span>
                 </label>
                 <!-- Roman numbering is High Gothic in the setting, so the plain
@@ -103,14 +138,16 @@
             <button id="clearAllFilters" class="clear-filter-btn">CLEAR ALL</button>
         </div>
 
-        <main class="book-display" aria-label="Book catalogue">
+        <div class="book-display" aria-label="Book catalogue">
             <!-- Book cards generated dynamically by script.js -->
-        </main>
+        </div>
 
         <!-- Storyline chart view, rendered on demand from daunt-chart.json -->
         <section class="chart-view" id="chartView" hidden></section>
+        </main>
 
         <footer class="dataslate-footer">
+            <a href="sources.html">Sources and corrections</a>
             <div class="servo-skull">⚡</div>
             <div class="timestamp">M31.006 - RECOVERED RECORDS</div>
         </footer>
@@ -128,7 +165,7 @@
                 <button class="close-modal" id="closeWelcome" aria-label="Close">✕</button>
             </div>
             <div class="modal-body">
-                <p class="welcome-lede">Two hundred and twenty-eight records recovered. Mark well what follows.</p>
+                <p class="welcome-lede">Two hundred and twenty-six distinct works across 228 catalogue entries. Mark well what follows.</p>
 
                 <dl class="welcome-list">
                     <dt>Three views</dt>
@@ -141,7 +178,7 @@
                     <dd>No account, no archive server, nothing transmitted. Which also means clearing your browser data will erase it, and it will not appear on another dataslate by itself. The <strong>⇄</strong> button issues a short cipher, or a vector, that carries your record across.</dd>
 
                     <dt>First time through the Heresy?</dt>
-                    <dd>Revoke <em>Show spoilers</em> before you browse. Every summary is redacted to one that gives nothing away.</dd>
+                    <dd>Spoilers are hidden by default. Enable <em>Show spoilers</em> when you want the full summaries, character details and event log.</dd>
                 </dl>
 
                 <div class="welcome-actions">
@@ -190,6 +227,14 @@
                 </div>
 
                 <p class="sync-status" id="syncStatus" role="status" aria-live="polite"></p>
+                <div class="sync-divider"></div>
+                <h3 class="sync-heading">Plain file backup</h3>
+                <p class="sync-note">Download a readable JSON copy of your work-level progress, or restore one here. Restoring replaces the progress on this device.</p>
+                <div class="sync-row">
+                    <button type="button" class="sync-action" id="downloadProgress">DOWNLOAD JSON</button>
+                    <button type="button" class="sync-action" id="chooseProgress">RESTORE JSON</button>
+                    <input type="file" id="uploadProgress" accept=".json,application/json" hidden>
+                </div>
                 <p class="sync-note">No astropath required and nothing is transmitted off this dataslate. The cipher <em>is</em> your reading record, encoded, so it only travels where you carry it. Receiving a cipher overwrites the record held here.</p>
             </div>
         </div>
@@ -245,6 +290,8 @@
                 <div class="key-details" id="keyDetails"></div>
                 <div class="divider"></div>
                 <div class="blurb" id="blurb"></div>
+                <section class="work-collections" id="workCollections" aria-label="Collections containing this work" hidden></section>
+                <section class="work-research" id="workResearch" aria-label="Research and corrections"></section>
             </div>
             <div class="modal-footer">
                 <div class="warning-strip">⚠ HERETICAL CONTENT DETECTED ⚠</div>
@@ -268,6 +315,7 @@
         </div>
     </div>
 
+    <script src="catalogue-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

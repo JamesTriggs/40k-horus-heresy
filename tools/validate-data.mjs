@@ -4,9 +4,8 @@
 // Run with: node tools/validate-data.mjs
 // Exits non-zero on any error, so it can gate a commit or a CI run.
 //
-// This exists because the book data lives in a JavaScript object literal, where
-// a duplicated property is legal syntax and silently wins. That is how 223 of
-// 224 books came to render in the wrong order without anything failing.
+// Duplicated properties are still legal in JSON and silently win on parse. The
+// old JavaScript literal hid this defect in 139 entries, so scan raw source.
 
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -17,46 +16,116 @@ const warnings = [];
 
 const fail = (msg) => errors.push(msg);
 const warn = (msg) => warnings.push(msg);
+const isBlackLibraryUrl = (value) => {
+    try {
+        const url = new URL(value);
+        return url.protocol === 'https:' && url.hostname === 'www.blacklibrary.com';
+    } catch { return false; }
+};
 
 // ---------------------------------------------------------------------------
-// Load script.js up to the point where it starts touching the DOM.
+// Load generated browser data and the reviewable JSON source.
 // ---------------------------------------------------------------------------
-const source = readFileSync(join(root, 'script.js'), 'utf8');
-const domBoundary = source.indexOf('const modalOverlay');
-if (domBoundary === -1) fail('Could not find the DOM boundary in script.js');
-
 const { bookData, characterData, getSortedBookKeys, romanToNumber, chronologicalRank } =
     loadFromScript(['bookData', 'characterData', 'getSortedBookKeys', 'romanToNumber', 'chronologicalRank']);
 
 const bookKeys = Object.keys(bookData);
 const bookEntries = Object.entries(bookData);
+for (const key of bookKeys) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`Unsafe book key '${key}'`);
+for (const key of Object.keys(characterData)) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`Unsafe character key '${key}'`);
+const publisherCollections = JSON.parse(readFileSync(join(root, 'data/publisher-collections.json'), 'utf8'));
+const readingRoutes = JSON.parse(readFileSync(join(root, 'data/reading-routes.json'), 'utf8'));
+const characterAppearances = JSON.parse(readFileSync(join(root, 'data/character-appearances.json'), 'utf8'));
+for (const [characterKey, keys] of Object.entries(characterAppearances.characters)) {
+    if (!characterData[characterKey]) fail(`Character appearance list has unknown character '${characterKey}'`);
+    if (!Array.isArray(keys) || new Set(keys).size !== keys.length) fail(`Character '${characterKey}' has duplicate or invalid appearance links`);
+    for (const key of keys) if (!bookData[key]) fail(`Character '${characterKey}' links to missing work '${key}'`);
+}
+for (const [characterKey, character] of Object.entries(characterData)) {
+    const expected = bookEntries.filter(([, book]) => {
+        const field = book.details.match(/Main Characters:<\/strong>\s*([^<]*)/i)?.[1] || '';
+        return field.split(',').some((name) =>
+            name.trim().replace(/\s*\([^)]*\)/g, '').toLocaleLowerCase() === character.name.toLocaleLowerCase());
+    }).map(([key]) => key);
+    const actual = characterAppearances.characters[characterKey] || [];
+    if (expected.join('|') !== actual.join('|')) {
+        fail(`Character '${characterKey}' appearance links have drifted from the catalogue's Main Characters fields`);
+    }
+}
+for (const [name, route] of Object.entries(readingRoutes)) {
+    if (!route.title || !route.reviewedAt || !Array.isArray(route.works) || !route.works.length) {
+        fail(`Reading route '${name}' is missing its title, review date or works`);
+        continue;
+    }
+    try {
+        if (new URL(route.source).protocol !== 'https:') fail(`Reading route '${name}' needs an HTTPS source`);
+    } catch { fail(`Reading route '${name}' has an invalid source URL`); }
+    if (new Set(route.works.map((work) => work.key)).size !== route.works.length) fail(`Reading route '${name}' repeats a work`);
+    for (const work of route.works) {
+        const book = bookData[work.key];
+        if (!book) fail(`Reading route '${name}' refers to missing work '${work.key}'`);
+        else if (book.title !== work.title || book.author !== work.author || book.format !== work.format) {
+            fail(`Reading route '${name}' has stale checked title, author or format for '${work.key}'`);
+        }
+        if (name === 'core' && work.format !== 'Novel') fail(`Core route work '${work.key}' is not a novel`);
+    }
+}
+
+for (const [name, record] of Object.entries(publisherCollections.collections)) {
+    if (!isBlackLibraryUrl(record.source)) {
+        fail(`Publisher collection '${name}' needs a Black Library source URL`);
+    }
+    const expected = new Set(record.entries.map((entry) => entry.key));
+    const actual = new Set(bookEntries.filter(([, book]) => book.anthology === name).map(([key]) => key));
+    if (expected.size !== record.entries.length || expected.size !== actual.size ||
+        [...expected].some((key) => !actual.has(key))) {
+        fail(`Publisher collection '${name}' no longer matches its checked member list`);
+    }
+    for (const entry of record.entries) {
+        const book = bookData[entry.key];
+        if (!book || book.title !== entry.title || book.author !== entry.author) {
+            fail(`Publisher collection '${name}' has stale title or author for '${entry.key}'`);
+        }
+    }
+}
+for (const [name, record] of Object.entries(publisherCollections.disputed || {})) {
+    if (!isBlackLibraryUrl(record.publisherSource)) {
+        fail(`Disputed collection '${name}' needs a Black Library source URL`);
+    }
+    try {
+        if (new URL(record.bibliographicSource).protocol !== 'https:') {
+            fail(`Disputed collection '${name}' needs an HTTPS bibliographic URL`);
+        }
+    } catch { fail(`Disputed collection '${name}' has an invalid bibliographic URL`); }
+}
 
 // ---------------------------------------------------------------------------
-// 1. Duplicated properties within an entry. This is the defect that shipped.
+// 1. Duplicated properties within a JSON entry. This is the defect that shipped.
 // ---------------------------------------------------------------------------
-{
-    const literalStart = source.indexOf('const bookData = {');
-    const literalEnd = source.indexOf('const UNKNOWN_NUMBER');
-    const literal = source.slice(literalStart, literalEnd);
-    const entryPattern = /\n {4}'([^']+)': \{([\s\S]*?)\n {4}\},?/g;
+for (const [filename, expectedCount] of [
+    ['data/books.json', bookKeys.length],
+    ['data/characters.json', Object.keys(characterData).length],
+]) {
+    const source = readFileSync(join(root, filename), 'utf8');
+    const entryPattern = /^  "([^"]+)": \{([\s\S]*?)^  \},?$/gm;
     let match;
     let checked = 0;
-    while ((match = entryPattern.exec(literal)) !== null) {
+    while ((match = entryPattern.exec(source)) !== null) {
         const [, key, body] = match;
         checked++;
         const seen = new Map();
-        for (const prop of body.matchAll(/^ {8}([a-zA-Z]+):/gm)) {
+        for (const prop of body.matchAll(/^    "([^"]+)":/gm)) {
             const name = prop[1];
             seen.set(name, (seen.get(name) ?? 0) + 1);
         }
         for (const [name, count] of seen) {
             if (count > 1) {
-                fail(`bookData['${key}'] declares '${name}' ${count} times. The last one silently wins.`);
+                fail(`${filename} entry '${key}' declares '${name}' ${count} times. The last one silently wins.`);
             }
         }
     }
-    if (checked !== bookKeys.length) {
-        warn(`Property scan parsed ${checked} entries but bookData has ${bookKeys.length}. The regex may be stale.`);
+    if (checked !== expectedCount) {
+        fail(`Property scan parsed ${checked} entries in ${filename}, expected ${expectedCount}.`);
     }
 }
 
@@ -72,18 +141,51 @@ for (const [key, book] of bookEntries) {
 // ---------------------------------------------------------------------------
 // 3. Required fields.
 // ---------------------------------------------------------------------------
-const REQUIRED = ['number', 'title', 'author', 'timeline', 'coverImage', 'legions', 'details', 'blurb', 'blurbSafe'];
+const REQUIRED = ['number', 'title', 'author', 'format', 'timeline', 'coverImage', 'legions', 'details', 'blurb', 'blurbSafe'];
 for (const [key, book] of bookEntries) {
     for (const field of REQUIRED) {
         if (book[field] === undefined || book[field] === null || book[field] === '') {
             fail(`bookData['${key}'] is missing required field '${field}'`);
         }
     }
+    const detailsText = book.details.replace(/<\/?strong>|<br>/g, '');
+    if (/[<>]/.test(detailsText)) {
+        fail(`bookData['${key}'].details contains markup outside the allowed strong and br tags`);
+    }
     if (book.number !== undefined && typeof book.number !== 'string') {
         fail(`bookData['${key}'].number must be a string, got ${typeof book.number}`);
     }
     if (book.legions !== undefined && !Array.isArray(book.legions)) {
         fail(`bookData['${key}'].legions must be an array`);
+    }
+    if (!['Novel', 'Novella', 'Short Story', 'Audio Drama', 'Anthology'].includes(book.format)) {
+        fail(`bookData['${key}'].format is not recognised`);
+    }
+    const detailFormat = /<strong>Type:<\/strong>\s*([^<\n]+)/.exec(book.details)?.[1]?.trim();
+    if (detailFormat !== book.format) {
+        fail(`bookData['${key}'].format differs from its legacy detail text`);
+    }
+    if (book.factionScope && !['various', 'all', 'all-traitor'].includes(book.factionScope)) {
+        fail(`bookData['${key}'].factionScope is not recognised`);
+    }
+    if (book.collectionRelation &&
+        (book.collectionRelation !== 'novelised in' || !isBlackLibraryUrl(book.collectionSource))) {
+        fail(`bookData['${key}'] has an unsupported collection relationship or source`);
+    }
+    if (!book.research || !Array.isArray(book.research.sources)) {
+        fail(`bookData['${key}'].research.sources must be an array`);
+    } else {
+        for (const source of book.research.sources) {
+            try {
+                if (new URL(source).protocol !== 'https:') fail(`bookData['${key}'] has a non-HTTPS research URL`);
+            } catch {
+                fail(`bookData['${key}'] has an invalid research URL`);
+            }
+        }
+    }
+    if (book.research && book.research.reviewedAt !== null &&
+        !/^\d{4}-\d{2}-\d{2}$/.test(book.research.reviewedAt)) {
+        fail(`bookData['${key}'].research.reviewedAt must be a date or null`);
     }
 }
 
@@ -257,7 +359,7 @@ for (const [key, book] of bookEntries) {
     }
     for (const value of NOT_A_LEGION) {
         if (counts.has(value)) {
-            warn(`'${value}' is used as a legion on ${counts.get(value)} entries but is not a faction`);
+            fail(`'${value}' is used as a legion on ${counts.get(value)} entries but is not a faction`);
         }
     }
 }
@@ -268,6 +370,10 @@ for (const [key, book] of bookEntries) {
 {
     const checkImage = (path, owner) => {
         if (!path) return;
+        if (!/^images\/[a-zA-Z0-9/_-]+\.(?:jpg|png|svg|webp)$/.test(path)) {
+            fail(`${owner} has an unsafe image path '${path}'`);
+            return;
+        }
         if (!existsSync(join(root, path))) fail(`${owner} references missing image '${path}'`);
     };
     for (const [key, book] of bookEntries) checkImage(book.coverImage, `bookData['${key}']`);
@@ -286,7 +392,7 @@ for (const [key, book] of bookEntries) {
             .normalize('NFD')
             .replace(/[̀-ͯ]/g, '');
         if (byName.has(normalised)) {
-            warn(`characterData['${key}'] duplicates '${byName.get(normalised)}' (both are "${char.name}")`);
+            fail(`characterData['${key}'] duplicates '${byName.get(normalised)}' (both are "${char.name}")`);
         } else {
             byName.set(normalised, key);
         }

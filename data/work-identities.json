@@ -1,0 +1,1589 @@
+{
+  "schemaVersion": 1,
+  "identities": [
+    {
+      "id": "tales-of-heresy-the-last-church",
+      "title": "THE LAST CHURCH",
+      "legacyKeys": [
+        "tales-of-heresy-the-last-church"
+      ]
+    },
+    {
+      "id": "descent-of-angels",
+      "title": "DESCENT OF ANGELS",
+      "legacyKeys": [
+        "descent-of-angels"
+      ]
+    },
+    {
+      "id": "primarch-vulkan",
+      "title": "VULKAN: LORD OF DRAKES",
+      "legacyKeys": [
+        "primarch-vulkan"
+      ]
+    },
+    {
+      "id": "primarch-fulgrim",
+      "title": "FULGRIM: THE PALATINE PHOENIX",
+      "legacyKeys": [
+        "primarch-fulgrim"
+      ]
+    },
+    {
+      "id": "primarch-magnus",
+      "title": "MAGNUS THE RED: MASTER OF PROSPERO",
+      "legacyKeys": [
+        "primarch-magnus"
+      ]
+    },
+    {
+      "id": "primarch-ferrus-manus",
+      "title": "FERRUS MANUS: THE GORGON OF MEDUSA",
+      "legacyKeys": [
+        "primarch-ferrus-manus"
+      ]
+    },
+    {
+      "id": "tales-of-heresy-after-deshea",
+      "title": "AFTER DESH'EA",
+      "legacyKeys": [
+        "tales-of-heresy-after-deshea"
+      ]
+    },
+    {
+      "id": "primarch-angron",
+      "title": "ANGRON: SLAVE OF NUCERIA",
+      "legacyKeys": [
+        "primarch-angron"
+      ]
+    },
+    {
+      "id": "primarch-mortarion",
+      "title": "MORTARION: THE PALE KING",
+      "legacyKeys": [
+        "primarch-mortarion"
+      ]
+    },
+    {
+      "id": "tales-of-heresy-wolf-at-the-door",
+      "title": "WOLF AT THE DOOR",
+      "legacyKeys": [
+        "tales-of-heresy-wolf-at-the-door"
+      ]
+    },
+    {
+      "id": "primarch-corax",
+      "title": "CORAX: LORD OF SHADOWS",
+      "legacyKeys": [
+        "primarch-corax"
+      ]
+    },
+    {
+      "id": "the-first-heretic",
+      "title": "THE FIRST HERETIC",
+      "legacyKeys": [
+        "the-first-heretic"
+      ]
+    },
+    {
+      "id": "primarch-lorgar",
+      "title": "LORGAR: BEARER OF THE WORD",
+      "legacyKeys": [
+        "primarch-lorgar"
+      ]
+    },
+    {
+      "id": "tales-of-heresy-call-of-the-lion",
+      "title": "CALL OF THE LION",
+      "legacyKeys": [
+        "tales-of-heresy-call-of-the-lion"
+      ]
+    },
+    {
+      "id": "tales-of-heresy-scions-of-the-storm",
+      "title": "SCIONS OF THE STORM",
+      "legacyKeys": [
+        "tales-of-heresy-scions-of-the-storm"
+      ]
+    },
+    {
+      "id": "primarch-roboute-guilliman",
+      "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
+      "legacyKeys": [
+        "primarch-roboute-guilliman"
+      ]
+    },
+    {
+      "id": "war-divine-adoratrice",
+      "title": "THE DEVINE ADORATRICE",
+      "legacyKeys": [
+        "war-divine-adoratrice"
+      ]
+    },
+    {
+      "id": "primarch-alpharius",
+      "title": "ALPHARIUS: HEAD OF THE HYDRA",
+      "legacyKeys": [
+        "primarch-alpharius"
+      ]
+    },
+    {
+      "id": "shadows-of-treachery-dark-king",
+      "title": "THE DARK KING",
+      "legacyKeys": [
+        "shadows-of-treachery-dark-king"
+      ]
+    },
+    {
+      "id": "primarch-lion-eljonson",
+      "title": "LION EL'JONSON: LORD OF THE FIRST",
+      "legacyKeys": [
+        "primarch-lion-eljonson"
+      ]
+    },
+    {
+      "id": "eye-wolf-ash-fire",
+      "title": "THE WOLF OF ASH AND FIRE",
+      "legacyKeys": [
+        "eye-wolf-ash-fire"
+      ]
+    },
+    {
+      "id": "primarch-perturabo",
+      "title": "PERTURABO: THE HAMMER OF OLYMPIA",
+      "legacyKeys": [
+        "primarch-perturabo"
+      ]
+    },
+    {
+      "id": "primarch-jaghatai-khan",
+      "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
+      "legacyKeys": [
+        "primarch-jaghatai-khan"
+      ]
+    },
+    {
+      "id": "legion",
+      "title": "LEGION",
+      "legacyKeys": [
+        "legion"
+      ]
+    },
+    {
+      "id": "a-thousand-sons",
+      "title": "A THOUSAND SONS",
+      "legacyKeys": [
+        "a-thousand-sons"
+      ]
+    },
+    {
+      "id": "the-primarchs-feat-of-iron",
+      "title": "FEAT OF IRON",
+      "legacyKeys": [
+        "the-primarchs-feat-of-iron"
+      ]
+    },
+    {
+      "id": "war-virtues-sons",
+      "title": "VIRTUES OF THE SONS",
+      "legacyKeys": [
+        "war-virtues-sons"
+      ]
+    },
+    {
+      "id": "eye-sins-father",
+      "title": "SINS OF THE FATHER",
+      "legacyKeys": [
+        "eye-sins-father"
+      ]
+    },
+    {
+      "id": "flame-promethean-sun",
+      "title": "PROMETHEAN SUN",
+      "legacyKeys": [
+        "flame-promethean-sun"
+      ]
+    },
+    {
+      "id": "shadows-of-treachery-death-of-silversmith",
+      "title": "DEATH OF A SILVERSMITH",
+      "legacyKeys": [
+        "shadows-of-treachery-death-of-silversmith"
+      ]
+    },
+    {
+      "id": "horus-rising",
+      "title": "HORUS RISING",
+      "legacyKeys": [
+        "horus-rising"
+      ]
+    },
+    {
+      "id": "primarch-sanguinius",
+      "title": "SANGUINIUS: THE GREAT ANGEL",
+      "legacyKeys": [
+        "primarch-sanguinius"
+      ]
+    },
+    {
+      "id": "shadows-of-treachery-kaban-project",
+      "title": "THE KABAN PROJECT",
+      "legacyKeys": [
+        "shadows-of-treachery-kaban-project"
+      ]
+    },
+    {
+      "id": "false-gods",
+      "title": "FALSE GODS",
+      "legacyKeys": [
+        "false-gods"
+      ]
+    },
+    {
+      "id": "the-outcast-dead",
+      "title": "THE OUTCAST DEAD",
+      "legacyKeys": [
+        "the-outcast-dead"
+      ]
+    },
+    {
+      "id": "prospero-burns",
+      "title": "PROSPERO BURNS",
+      "legacyKeys": [
+        "prospero-burns"
+      ]
+    },
+    {
+      "id": "age-of-darkness-rebirth",
+      "title": "REBIRTH",
+      "legacyKeys": [
+        "age-of-darkness-rebirth"
+      ]
+    },
+    {
+      "id": "legacies-serpent",
+      "title": "SERPENT",
+      "legacyKeys": [
+        "legacies-serpent"
+      ]
+    },
+    {
+      "id": "war-sermon-exodus",
+      "title": "SERMON OF EXODUS",
+      "legacyKeys": [
+        "war-sermon-exodus"
+      ]
+    },
+    {
+      "id": "war-howl-hearthworld",
+      "title": "HOWL OF THE HEARTHWORLD",
+      "legacyKeys": [
+        "war-howl-hearthworld"
+      ]
+    },
+    {
+      "id": "burden-thirteenth-wolf",
+      "title": "THE THIRTEENTH WOLF",
+      "legacyKeys": [
+        "burden-thirteenth-wolf"
+      ]
+    },
+    {
+      "id": "legacies-thief-revelations",
+      "title": "THIEF OF REVELATIONS",
+      "legacyKeys": [
+        "legacies-thief-revelations"
+      ]
+    },
+    {
+      "id": "galaxy-in-flames",
+      "title": "GALAXY IN FLAMES",
+      "legacyKeys": [
+        "galaxy-in-flames"
+      ]
+    },
+    {
+      "id": "mechanicum",
+      "title": "MECHANICUM",
+      "legacyKeys": [
+        "mechanicum"
+      ]
+    },
+    {
+      "id": "the-flight-of-the-eisenstein",
+      "title": "THE FLIGHT OF THE EISENSTEIN",
+      "legacyKeys": [
+        "the-flight-of-the-eisenstein"
+      ]
+    },
+    {
+      "id": "fallen-angels",
+      "title": "FALLEN ANGELS",
+      "legacyKeys": [
+        "fallen-angels"
+      ]
+    },
+    {
+      "id": "fear-to-tread",
+      "title": "FEAR TO TREAD",
+      "legacyKeys": [
+        "fear-to-tread"
+      ]
+    },
+    {
+      "id": "shadows-of-treachery-lightning-tower",
+      "title": "THE LIGHTNING TOWER",
+      "legacyKeys": [
+        "shadows-of-treachery-lightning-tower"
+      ]
+    },
+    {
+      "id": "war-lord-red-sands",
+      "title": "LORD OF THE RED SANDS",
+      "legacyKeys": [
+        "war-lord-red-sands"
+      ]
+    },
+    {
+      "id": "eye-vorax",
+      "title": "VORAX",
+      "legacyKeys": [
+        "eye-vorax"
+      ]
+    },
+    {
+      "id": "silent-child-night",
+      "title": "CHILD OF NIGHT",
+      "legacyKeys": [
+        "silent-child-night"
+      ]
+    },
+    {
+      "id": "silent-wolf-hunt",
+      "title": "WOLF HUNT",
+      "legacyKeys": [
+        "silent-wolf-hunt"
+      ]
+    },
+    {
+      "id": "burden-into-exile",
+      "title": "INTO EXILE",
+      "legacyKeys": [
+        "burden-into-exile"
+      ]
+    },
+    {
+      "id": "burden-cybernetica",
+      "title": "CYBERNETICA",
+      "legacyKeys": [
+        "burden-cybernetica"
+      ]
+    },
+    {
+      "id": "fulgrim",
+      "title": "FULGRIM",
+      "legacyKeys": [
+        "fulgrim"
+      ]
+    },
+    {
+      "id": "legacies-hunters-moon",
+      "title": "HUNTER'S MOON",
+      "legacyKeys": [
+        "legacies-hunters-moon"
+      ]
+    },
+    {
+      "id": "vulkan-lives",
+      "title": "VULKAN LIVES",
+      "legacyKeys": [
+        "vulkan-lives"
+      ]
+    },
+    {
+      "id": "tales-of-heresy-blood-games",
+      "title": "BLOOD GAMES",
+      "legacyKeys": [
+        "tales-of-heresy-blood-games"
+      ]
+    },
+    {
+      "id": "tales-of-heresy-the-voice",
+      "title": "THE VOICE",
+      "legacyKeys": [
+        "tales-of-heresy-the-voice"
+      ]
+    },
+    {
+      "id": "age-of-darkness-face-of-treachery",
+      "title": "THE FACE OF TREACHERY",
+      "legacyKeys": [
+        "age-of-darkness-face-of-treachery"
+      ]
+    },
+    {
+      "id": "age-of-darkness-iron-within",
+      "title": "THE IRON WITHIN",
+      "legacyKeys": [
+        "age-of-darkness-iron-within"
+      ]
+    },
+    {
+      "id": "the-primarchs-reflection-crackd",
+      "title": "THE REFLECTION CRACK'D",
+      "legacyKeys": [
+        "the-primarchs-reflection-crackd"
+      ]
+    },
+    {
+      "id": "shadows-of-treachery-ravens-flight",
+      "title": "RAVEN'S FLIGHT",
+      "legacyKeys": [
+        "shadows-of-treachery-ravens-flight"
+      ]
+    },
+    {
+      "id": "mark-of-calth-shards-of-erebus",
+      "title": "THE SHARDS OF EREBUS",
+      "legacyKeys": [
+        "mark-of-calth-shards-of-erebus"
+      ]
+    },
+    {
+      "id": "legacies-veritas-ferrum",
+      "title": "VERITAS FERRUM",
+      "legacyKeys": [
+        "legacies-veritas-ferrum"
+      ]
+    },
+    {
+      "id": "legacies-strike-fade",
+      "title": "STRIKE AND FADE",
+      "legacyKeys": [
+        "legacies-strike-fade"
+      ]
+    },
+    {
+      "id": "war-artefacts",
+      "title": "ARTEFACTS",
+      "legacyKeys": [
+        "war-artefacts",
+        "flame-artefacts"
+      ]
+    },
+    {
+      "id": "war-chirurgeon",
+      "title": "CHIRURGEON",
+      "legacyKeys": [
+        "war-chirurgeon"
+      ]
+    },
+    {
+      "id": "eye-aurelian",
+      "title": "AURELIAN",
+      "legacyKeys": [
+        "eye-aurelian"
+      ]
+    },
+    {
+      "id": "eye-massacre",
+      "title": "MASSACRE",
+      "legacyKeys": [
+        "eye-massacre"
+      ]
+    },
+    {
+      "id": "eye-final-compliance",
+      "title": "THE FINAL COMPLIANCE OF SIXTY-THREE FOURTEEN",
+      "legacyKeys": [
+        "eye-final-compliance"
+      ]
+    },
+    {
+      "id": "shattered-immortal-duty",
+      "title": "IMMORTAL DUTY",
+      "legacyKeys": [
+        "shattered-immortal-duty",
+        "flame-immortal-duty-2"
+      ]
+    },
+    {
+      "id": "flame-scorched-earth",
+      "title": "SCORCHED EARTH",
+      "legacyKeys": [
+        "flame-scorched-earth"
+      ]
+    },
+    {
+      "id": "war-phoenician",
+      "title": "THE PHOENICIAN",
+      "legacyKeys": [
+        "war-phoenician"
+      ]
+    },
+    {
+      "id": "the-damnation-of-pythos",
+      "title": "THE DAMNATION OF PYTHOS",
+      "legacyKeys": [
+        "the-damnation-of-pythos"
+      ]
+    },
+    {
+      "id": "silent-purge",
+      "title": "THE PURGE",
+      "legacyKeys": [
+        "silent-purge"
+      ]
+    },
+    {
+      "id": "shattered-meduson",
+      "title": "MEDUSON",
+      "legacyKeys": [
+        "shattered-meduson"
+      ]
+    },
+    {
+      "id": "shattered-the-either",
+      "title": "THE EITHER",
+      "legacyKeys": [
+        "shattered-the-either"
+      ]
+    },
+    {
+      "id": "heralds-myriad",
+      "title": "MYRIAD",
+      "legacyKeys": [
+        "heralds-myriad"
+      ]
+    },
+    {
+      "id": "mark-of-calth-athame",
+      "title": "ATHAME",
+      "legacyKeys": [
+        "mark-of-calth-athame"
+      ]
+    },
+    {
+      "id": "deliverance-lost",
+      "title": "DELIVERANCE LOST",
+      "legacyKeys": [
+        "deliverance-lost"
+      ]
+    },
+    {
+      "id": "nemesis",
+      "title": "NEMESIS",
+      "legacyKeys": [
+        "nemesis"
+      ]
+    },
+    {
+      "id": "know-no-fear",
+      "title": "KNOW NO FEAR",
+      "legacyKeys": [
+        "know-no-fear"
+      ]
+    },
+    {
+      "id": "battle-for-the-abyss",
+      "title": "BATTLE FOR THE ABYSS",
+      "legacyKeys": [
+        "battle-for-the-abyss"
+      ]
+    },
+    {
+      "id": "betrayer",
+      "title": "BETRAYER",
+      "legacyKeys": [
+        "betrayer"
+      ]
+    },
+    {
+      "id": "scars",
+      "title": "SCARS",
+      "legacyKeys": [
+        "scars"
+      ]
+    },
+    {
+      "id": "age-of-darkness-savage-weapons",
+      "title": "SAVAGE WEAPONS",
+      "legacyKeys": [
+        "age-of-darkness-savage-weapons"
+      ]
+    },
+    {
+      "id": "the-primarchs-the-lion",
+      "title": "THE LION",
+      "legacyKeys": [
+        "the-primarchs-the-lion"
+      ]
+    },
+    {
+      "id": "the-primarchs-serpent-beneath",
+      "title": "THE SERPENT BENEATH",
+      "legacyKeys": [
+        "the-primarchs-serpent-beneath"
+      ]
+    },
+    {
+      "id": "shadows-of-treachery-crimson-fist",
+      "title": "THE CRIMSON FIST",
+      "legacyKeys": [
+        "shadows-of-treachery-crimson-fist"
+      ]
+    },
+    {
+      "id": "mark-of-calth-calth-that-was",
+      "title": "CALTH THAT WAS",
+      "legacyKeys": [
+        "mark-of-calth-calth-that-was"
+      ]
+    },
+    {
+      "id": "mark-of-calth-dark-heart",
+      "title": "DARK HEART",
+      "legacyKeys": [
+        "mark-of-calth-dark-heart"
+      ]
+    },
+    {
+      "id": "mark-of-calth-the-traveller",
+      "title": "THE TRAVELLER",
+      "legacyKeys": [
+        "mark-of-calth-the-traveller"
+      ]
+    },
+    {
+      "id": "mark-of-calth-deeper-darkness",
+      "title": "A DEEPER DARKNESS",
+      "legacyKeys": [
+        "mark-of-calth-deeper-darkness"
+      ]
+    },
+    {
+      "id": "mark-of-calth-unmarked",
+      "title": "UNMARKED",
+      "legacyKeys": [
+        "mark-of-calth-unmarked"
+      ]
+    },
+    {
+      "id": "legacies-brotherhood-storm",
+      "title": "BROTHERHOOD OF THE STORM",
+      "legacyKeys": [
+        "legacies-brotherhood-storm"
+      ]
+    },
+    {
+      "id": "legacies-honour-dead",
+      "title": "HONOUR TO THE DEAD",
+      "legacyKeys": [
+        "legacies-honour-dead"
+      ]
+    },
+    {
+      "id": "legacies-butchers-nails",
+      "title": "BUTCHER'S NAILS",
+      "legacyKeys": [
+        "legacies-butchers-nails"
+      ]
+    },
+    {
+      "id": "legacies-kryptos",
+      "title": "KRYPTOS",
+      "legacyKeys": [
+        "legacies-kryptos"
+      ]
+    },
+    {
+      "id": "legacies-wolfs-claw",
+      "title": "WOLF'S CLAW",
+      "legacyKeys": [
+        "legacies-wolfs-claw"
+      ]
+    },
+    {
+      "id": "war-allegiance",
+      "title": "ALLEGIANCE",
+      "legacyKeys": [
+        "war-allegiance"
+      ]
+    },
+    {
+      "id": "war-daemonology",
+      "title": "DAEMONOLOGY",
+      "legacyKeys": [
+        "war-daemonology"
+      ]
+    },
+    {
+      "id": "eye-brotherhood-moon",
+      "title": "BROTHERHOOD OF THE MOON",
+      "legacyKeys": [
+        "eye-brotherhood-moon"
+      ]
+    },
+    {
+      "id": "eye-inheritor",
+      "title": "INHERITOR",
+      "legacyKeys": [
+        "eye-inheritor"
+      ]
+    },
+    {
+      "id": "eye-red-marked",
+      "title": "RED-MARKED",
+      "legacyKeys": [
+        "eye-red-marked"
+      ]
+    },
+    {
+      "id": "eye-master-first",
+      "title": "MASTER OF THE FIRST",
+      "legacyKeys": [
+        "eye-master-first"
+      ]
+    },
+    {
+      "id": "silent-watcher",
+      "title": "THE WATCHER",
+      "legacyKeys": [
+        "silent-watcher"
+      ]
+    },
+    {
+      "id": "silent-ghosts-speak",
+      "title": "GHOSTS SPEAK NOT",
+      "legacyKeys": [
+        "silent-ghosts-speak"
+      ]
+    },
+    {
+      "id": "corax-soulforge",
+      "title": "SOULFORGE",
+      "legacyKeys": [
+        "corax-soulforge"
+      ]
+    },
+    {
+      "id": "corax-ravenlord",
+      "title": "RAVENLORD",
+      "legacyKeys": [
+        "corax-ravenlord"
+      ]
+    },
+    {
+      "id": "corax-shadowmasters",
+      "title": "THE SHADOWMASTERS",
+      "legacyKeys": [
+        "corax-shadowmasters"
+      ]
+    },
+    {
+      "id": "garro-oath-moment",
+      "title": "GARRO: OATH OF MOMENT",
+      "legacyKeys": [
+        "garro-oath-moment"
+      ]
+    },
+    {
+      "id": "garro-sword-truth",
+      "title": "GARRO: SWORD OF TRUTH",
+      "legacyKeys": [
+        "garro-sword-truth"
+      ]
+    },
+    {
+      "id": "shattered-unforged",
+      "title": "UNFORGED",
+      "legacyKeys": [
+        "shattered-unforged"
+      ]
+    },
+    {
+      "id": "shattered-grey-talon",
+      "title": "GREY TALON",
+      "legacyKeys": [
+        "shattered-grey-talon"
+      ]
+    },
+    {
+      "id": "burden-perpetual",
+      "title": "PERPETUAL",
+      "legacyKeys": [
+        "burden-perpetual"
+      ]
+    },
+    {
+      "id": "burden-wolf-king",
+      "title": "THE WOLF KING",
+      "legacyKeys": [
+        "burden-wolf-king"
+      ]
+    },
+    {
+      "id": "heralds-children-sicarus",
+      "title": "CHILDREN OF SICARUS",
+      "legacyKeys": [
+        "heralds-children-sicarus"
+      ]
+    },
+    {
+      "id": "silent-grey-angel",
+      "title": "GREY ANGEL",
+      "legacyKeys": [
+        "silent-grey-angel"
+      ]
+    },
+    {
+      "id": "silent-luna-mendax",
+      "title": "LUNA MENDAX",
+      "legacyKeys": [
+        "silent-luna-mendax"
+      ]
+    },
+    {
+      "id": "age-of-darkness-rules-of-engagement",
+      "title": "RULES OF ENGAGEMENT",
+      "legacyKeys": [
+        "age-of-darkness-rules-of-engagement"
+      ]
+    },
+    {
+      "id": "age-of-darkness-liars-due",
+      "title": "LIAR'S DUE",
+      "legacyKeys": [
+        "age-of-darkness-liars-due"
+      ]
+    },
+    {
+      "id": "age-of-darkness-forgotten-sons",
+      "title": "FORGOTTEN SONS",
+      "legacyKeys": [
+        "age-of-darkness-forgotten-sons"
+      ]
+    },
+    {
+      "id": "age-of-darkness-little-horus",
+      "title": "LITTLE HORUS",
+      "legacyKeys": [
+        "age-of-darkness-little-horus"
+      ]
+    },
+    {
+      "id": "legacies-warmaster",
+      "title": "WARMASTER",
+      "legacyKeys": [
+        "legacies-warmaster"
+      ]
+    },
+    {
+      "id": "legacies-divine-word",
+      "title": "THE DIVINE WORD",
+      "legacyKeys": [
+        "legacies-divine-word"
+      ]
+    },
+    {
+      "id": "legacies-kharn",
+      "title": "KHÂRN: THE EIGHTFOLD PATH",
+      "legacyKeys": [
+        "legacies-kharn"
+      ]
+    },
+    {
+      "id": "legacies-cypher",
+      "title": "CYPHER: GUARDIAN OF ORDER",
+      "legacyKeys": [
+        "legacies-cypher"
+      ]
+    },
+    {
+      "id": "legacies-heart-conqueror",
+      "title": "HEART OF THE CONQUEROR",
+      "legacyKeys": [
+        "legacies-heart-conqueror"
+      ]
+    },
+    {
+      "id": "war-gunsight",
+      "title": "GUNSIGHT",
+      "legacyKeys": [
+        "war-gunsight"
+      ]
+    },
+    {
+      "id": "eye-ironfire",
+      "title": "IRONFIRE",
+      "legacyKeys": [
+        "eye-ironfire"
+      ]
+    },
+    {
+      "id": "corax-value-fear",
+      "title": "THE VALUE OF FEAR",
+      "legacyKeys": [
+        "corax-value-fear"
+      ]
+    },
+    {
+      "id": "corax-raptor",
+      "title": "RAPTOR",
+      "legacyKeys": [
+        "corax-raptor"
+      ]
+    },
+    {
+      "id": "garro-legion-one",
+      "title": "GARRO: LEGION OF ONE",
+      "legacyKeys": [
+        "garro-legion-one"
+      ]
+    },
+    {
+      "id": "garro-shield-lies",
+      "title": "GARRO: SHIELD OF LIES",
+      "legacyKeys": [
+        "garro-shield-lies"
+      ]
+    },
+    {
+      "id": "shattered-keys-hel",
+      "title": "THE KEYS OF HEL",
+      "legacyKeys": [
+        "shattered-keys-hel"
+      ]
+    },
+    {
+      "id": "shattered-deeds-endure",
+      "title": "DEEDS ENDURE",
+      "legacyKeys": [
+        "shattered-deeds-endure"
+      ]
+    },
+    {
+      "id": "angel-exterminatus",
+      "title": "ANGEL EXTERMINATUS",
+      "legacyKeys": [
+        "angel-exterminatus"
+      ]
+    },
+    {
+      "id": "vengeful-spirit",
+      "title": "VENGEFUL SPIRIT",
+      "legacyKeys": [
+        "vengeful-spirit"
+      ]
+    },
+    {
+      "id": "the-unremembered-empire",
+      "title": "THE UNREMEMBERED EMPIRE",
+      "legacyKeys": [
+        "the-unremembered-empire"
+      ]
+    },
+    {
+      "id": "pharos",
+      "title": "PHAROS",
+      "legacyKeys": [
+        "pharos"
+      ]
+    },
+    {
+      "id": "age-of-darkness-the-last-remembrancer",
+      "title": "THE LAST REMEMBRANCER",
+      "legacyKeys": [
+        "age-of-darkness-the-last-remembrancer"
+      ]
+    },
+    {
+      "id": "shadows-of-treachery-prince-of-crows",
+      "title": "PRINCE OF CROWS",
+      "legacyKeys": [
+        "shadows-of-treachery-prince-of-crows"
+      ]
+    },
+    {
+      "id": "legacies-lucius",
+      "title": "LUCIUS: THE ETERNAL BLADE",
+      "legacyKeys": [
+        "legacies-lucius"
+      ]
+    },
+    {
+      "id": "legacies-censure",
+      "title": "CENSURE",
+      "legacyKeys": [
+        "legacies-censure"
+      ]
+    },
+    {
+      "id": "war-laurel-defiance",
+      "title": "THE LAUREL OF DEFIANCE",
+      "legacyKeys": [
+        "war-laurel-defiance"
+      ]
+    },
+    {
+      "id": "war-safe-shadowed-place",
+      "title": "A SAFE AND SHADOWED PLACE",
+      "legacyKeys": [
+        "war-safe-shadowed-place"
+      ]
+    },
+    {
+      "id": "war-imperfect",
+      "title": "IMPERFECT",
+      "legacyKeys": [
+        "war-imperfect"
+      ]
+    },
+    {
+      "id": "war-wolf-mother",
+      "title": "WOLF MOTHER",
+      "legacyKeys": [
+        "war-wolf-mother"
+      ]
+    },
+    {
+      "id": "war-harrowing",
+      "title": "THE HARROWING",
+      "legacyKeys": [
+        "war-harrowing"
+      ]
+    },
+    {
+      "id": "war-all-remains",
+      "title": "ALL THAT REMAINS",
+      "legacyKeys": [
+        "war-all-remains"
+      ]
+    },
+    {
+      "id": "war-lions-command",
+      "title": "BY THE LION'S COMMAND",
+      "legacyKeys": [
+        "war-lions-command"
+      ]
+    },
+    {
+      "id": "eye-stratagem",
+      "title": "STRATAGEM",
+      "legacyKeys": [
+        "eye-stratagem"
+      ]
+    },
+    {
+      "id": "eye-herald-sanguinius",
+      "title": "HERALD OF SANGUINIUS",
+      "legacyKeys": [
+        "eye-herald-sanguinius"
+      ]
+    },
+    {
+      "id": "silent-army-one",
+      "title": "ARMY OF ONE",
+      "legacyKeys": [
+        "silent-army-one"
+      ]
+    },
+    {
+      "id": "silent-distant-echoes",
+      "title": "DISTANT ECHOES OF OLD NIGHT",
+      "legacyKeys": [
+        "silent-distant-echoes"
+      ]
+    },
+    {
+      "id": "garro-burden-duty",
+      "title": "BURDEN OF DUTY",
+      "legacyKeys": [
+        "garro-burden-duty"
+      ]
+    },
+    {
+      "id": "shattered-the-noose",
+      "title": "THE NOOSE",
+      "legacyKeys": [
+        "shattered-the-noose"
+      ]
+    },
+    {
+      "id": "shattered-unspoken",
+      "title": "UNSPOKEN",
+      "legacyKeys": [
+        "shattered-unspoken"
+      ]
+    },
+    {
+      "id": "burden-heart-pharos",
+      "title": "THE HEART OF THE PHAROS",
+      "legacyKeys": [
+        "burden-heart-pharos"
+      ]
+    },
+    {
+      "id": "eye-long-night",
+      "title": "THE LONG NIGHT",
+      "legacyKeys": [
+        "eye-long-night"
+      ]
+    },
+    {
+      "id": "heralds-blackshield",
+      "title": "BLACKSHIELD",
+      "legacyKeys": [
+        "heralds-blackshield"
+      ]
+    },
+    {
+      "id": "heralds-painted-count",
+      "title": "THE PAINTED COUNT",
+      "legacyKeys": [
+        "heralds-painted-count"
+      ]
+    },
+    {
+      "id": "burden-binary-succession",
+      "title": "THE BINARY SUCCESSION",
+      "legacyKeys": [
+        "burden-binary-succession"
+      ]
+    },
+    {
+      "id": "flame-sons-of-forge",
+      "title": "SONS OF THE FORGE",
+      "legacyKeys": [
+        "flame-sons-of-forge"
+      ]
+    },
+    {
+      "id": "the-crimson-king",
+      "title": "THE CRIMSON KING",
+      "legacyKeys": [
+        "the-crimson-king"
+      ]
+    },
+    {
+      "id": "silent-lost-sons",
+      "title": "LOST SONS",
+      "legacyKeys": [
+        "silent-lost-sons"
+      ]
+    },
+    {
+      "id": "deathfire",
+      "title": "DEATHFIRE",
+      "legacyKeys": [
+        "deathfire"
+      ]
+    },
+    {
+      "id": "tallarn",
+      "title": "TALLARN",
+      "legacyKeys": [
+        "tallarn"
+      ]
+    },
+    {
+      "id": "praetorian-of-dorn",
+      "title": "PRAETORIAN OF DORN",
+      "legacyKeys": [
+        "praetorian-of-dorn"
+      ]
+    },
+    {
+      "id": "legacies-bjorn",
+      "title": "BJORN: LONE WOLF",
+      "legacyKeys": [
+        "legacies-bjorn"
+      ]
+    },
+    {
+      "id": "war-black-oculus",
+      "title": "BLACK OCULUS",
+      "legacyKeys": [
+        "war-black-oculus"
+      ]
+    },
+    {
+      "id": "war-twisted",
+      "title": "TWISTED",
+      "legacyKeys": [
+        "war-twisted"
+      ]
+    },
+    {
+      "id": "eye-eagles-talon",
+      "title": "THE EAGLE'S TALON",
+      "legacyKeys": [
+        "eye-eagles-talon"
+      ]
+    },
+    {
+      "id": "eye-iron-corpses",
+      "title": "IRON CORPSES",
+      "legacyKeys": [
+        "eye-iron-corpses"
+      ]
+    },
+    {
+      "id": "silent-templar",
+      "title": "TEMPLAR",
+      "legacyKeys": [
+        "silent-templar"
+      ]
+    },
+    {
+      "id": "silent-patience",
+      "title": "PATIENCE",
+      "legacyKeys": [
+        "silent-patience"
+      ]
+    },
+    {
+      "id": "silent-sigillite",
+      "title": "THE SIGILLITE",
+      "legacyKeys": [
+        "silent-sigillite"
+      ]
+    },
+    {
+      "id": "garro-ashes-fealty",
+      "title": "GARRO: ASHES OF FEALTY",
+      "legacyKeys": [
+        "garro-ashes-fealty"
+      ]
+    },
+    {
+      "id": "shattered-hand-elect",
+      "title": "THE HAND ELECT",
+      "legacyKeys": [
+        "shattered-hand-elect"
+      ]
+    },
+    {
+      "id": "burden-ordo-sinister",
+      "title": "ORDO SINISTER",
+      "legacyKeys": [
+        "burden-ordo-sinister"
+      ]
+    },
+    {
+      "id": "the-master-of-mankind",
+      "title": "THE MASTER OF MANKIND",
+      "legacyKeys": [
+        "the-master-of-mankind"
+      ]
+    },
+    {
+      "id": "the-path-of-heaven",
+      "title": "THE PATH OF HEAVEN",
+      "legacyKeys": [
+        "the-path-of-heaven"
+      ]
+    },
+    {
+      "id": "angels-of-caliban",
+      "title": "ANGELS OF CALIBAN",
+      "legacyKeys": [
+        "angels-of-caliban"
+      ]
+    },
+    {
+      "id": "old-earth",
+      "title": "OLD EARTH",
+      "legacyKeys": [
+        "old-earth"
+      ]
+    },
+    {
+      "id": "ruinstorm",
+      "title": "RUINSTORM",
+      "legacyKeys": [
+        "ruinstorm"
+      ]
+    },
+    {
+      "id": "legacies-riven",
+      "title": "RIVEN",
+      "legacyKeys": [
+        "legacies-riven"
+      ]
+    },
+    {
+      "id": "garro-vow-faith",
+      "title": "GARRO: VOW OF FAITH",
+      "legacyKeys": [
+        "garro-vow-faith"
+      ]
+    },
+    {
+      "id": "shattered-seventh-serpent",
+      "title": "THE SEVENTH SERPENT",
+      "legacyKeys": [
+        "shattered-seventh-serpent"
+      ]
+    },
+    {
+      "id": "wolfsbane",
+      "title": "WOLFSBANE",
+      "legacyKeys": [
+        "wolfsbane"
+      ]
+    },
+    {
+      "id": "titandeath",
+      "title": "TITANDEATH",
+      "legacyKeys": [
+        "titandeath"
+      ]
+    },
+    {
+      "id": "war-hands-emperor",
+      "title": "HANDS OF THE EMPEROR",
+      "legacyKeys": [
+        "war-hands-emperor"
+      ]
+    },
+    {
+      "id": "silent-gates-terra",
+      "title": "THE GATES OF TERRA",
+      "legacyKeys": [
+        "silent-gates-terra"
+      ]
+    },
+    {
+      "id": "heralds-grey-raven",
+      "title": "THE GREY RAVEN",
+      "legacyKeys": [
+        "heralds-grey-raven"
+      ]
+    },
+    {
+      "id": "heralds-valerius",
+      "title": "VALERIUS",
+      "legacyKeys": [
+        "heralds-valerius"
+      ]
+    },
+    {
+      "id": "heralds-ember-wolves",
+      "title": "THE EMBER WOLVES",
+      "legacyKeys": [
+        "heralds-ember-wolves"
+      ]
+    },
+    {
+      "id": "heralds-exocytosis",
+      "title": "EXOCYTOSIS",
+      "legacyKeys": [
+        "heralds-exocytosis"
+      ]
+    },
+    {
+      "id": "heralds-last-son-prospero",
+      "title": "THE LAST SON OF PROSPERO",
+      "legacyKeys": [
+        "heralds-last-son-prospero"
+      ]
+    },
+    {
+      "id": "heralds-soul-severed",
+      "title": "THE SOUL, SEVERED",
+      "legacyKeys": [
+        "heralds-soul-severed"
+      ]
+    },
+    {
+      "id": "heralds-dark-compliance",
+      "title": "DARK COMPLIANCE",
+      "legacyKeys": [
+        "heralds-dark-compliance"
+      ]
+    },
+    {
+      "id": "corax-weregeld",
+      "title": "WEREGELD",
+      "legacyKeys": [
+        "corax-weregeld"
+      ]
+    },
+    {
+      "id": "heralds-duty-waits",
+      "title": "DUTY WAITS",
+      "legacyKeys": [
+        "heralds-duty-waits"
+      ]
+    },
+    {
+      "id": "heralds-magisterium",
+      "title": "MAGISTERIUM",
+      "legacyKeys": [
+        "heralds-magisterium"
+      ]
+    },
+    {
+      "id": "heralds-now-peals-midnight",
+      "title": "NOW PEALS MIDNIGHT",
+      "legacyKeys": [
+        "heralds-now-peals-midnight"
+      ]
+    },
+    {
+      "id": "heralds-dreams-unity",
+      "title": "DREAMS OF UNITY",
+      "legacyKeys": [
+        "heralds-dreams-unity"
+      ]
+    },
+    {
+      "id": "heralds-board-is-set",
+      "title": "THE BOARD IS SET",
+      "legacyKeys": [
+        "heralds-board-is-set"
+      ]
+    },
+    {
+      "id": "slaves-to-darkness",
+      "title": "SLAVES TO DARKNESS",
+      "legacyKeys": [
+        "slaves-to-darkness"
+      ]
+    },
+    {
+      "id": "the-buried-dagger",
+      "title": "THE BURIED DAGGER",
+      "legacyKeys": [
+        "the-buried-dagger"
+      ]
+    },
+    {
+      "id": "mark-of-calth-underworld-war",
+      "title": "THE UNDERWORLD WAR",
+      "legacyKeys": [
+        "mark-of-calth-underworld-war"
+      ]
+    },
+    {
+      "id": "sot-solar-war",
+      "title": "THE SOLAR WAR",
+      "legacyKeys": [
+        "sot-solar-war"
+      ]
+    },
+    {
+      "id": "sot-sons-of-selenar",
+      "title": "SONS OF THE SELENAR",
+      "legacyKeys": [
+        "sot-sons-of-selenar"
+      ]
+    },
+    {
+      "id": "sot-lost-and-damned",
+      "title": "THE LOST AND THE DAMNED",
+      "legacyKeys": [
+        "sot-lost-and-damned"
+      ]
+    },
+    {
+      "id": "sot-first-wall",
+      "title": "THE FIRST WALL",
+      "legacyKeys": [
+        "sot-first-wall"
+      ]
+    },
+    {
+      "id": "sot-saturnine",
+      "title": "SATURNINE",
+      "legacyKeys": [
+        "sot-saturnine"
+      ]
+    },
+    {
+      "id": "sot-fury-of-magnus",
+      "title": "FURY OF MAGNUS",
+      "legacyKeys": [
+        "sot-fury-of-magnus"
+      ]
+    },
+    {
+      "id": "sot-mortis",
+      "title": "MORTIS",
+      "legacyKeys": [
+        "sot-mortis"
+      ]
+    },
+    {
+      "id": "sot-warhawk",
+      "title": "WARHAWK",
+      "legacyKeys": [
+        "sot-warhawk"
+      ]
+    },
+    {
+      "id": "sot-echoes-of-eternity",
+      "title": "ECHOES OF ETERNITY",
+      "legacyKeys": [
+        "sot-echoes-of-eternity"
+      ]
+    },
+    {
+      "id": "sot-garro-knight-of-grey",
+      "title": "GARRO: KNIGHT OF GREY",
+      "legacyKeys": [
+        "sot-garro-knight-of-grey"
+      ]
+    },
+    {
+      "id": "sot-end-and-death-vol-1",
+      "title": "THE END AND THE DEATH: VOLUME I",
+      "legacyKeys": [
+        "sot-end-and-death-vol-1"
+      ]
+    },
+    {
+      "id": "sot-end-and-death-vol-2",
+      "title": "THE END AND THE DEATH: VOLUME II",
+      "legacyKeys": [
+        "sot-end-and-death-vol-2"
+      ]
+    },
+    {
+      "id": "sot-end-and-death-vol-3",
+      "title": "THE END AND THE DEATH: VOLUME III",
+      "legacyKeys": [
+        "sot-end-and-death-vol-3"
+      ]
+    },
+    {
+      "id": "sot-era-of-ruin",
+      "title": "ERA OF RUIN",
+      "legacyKeys": [
+        "sot-era-of-ruin"
+      ]
+    },
+    {
+      "id": "primarch-rogal-dorn",
+      "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
+      "legacyKeys": [
+        "primarch-rogal-dorn"
+      ]
+    },
+    {
+      "id": "primarch-leman-russ",
+      "title": "LEMAN RUSS: THE GREAT WOLF",
+      "legacyKeys": [
+        "primarch-leman-russ"
+      ]
+    },
+    {
+      "id": "primarch-konrad-curze",
+      "title": "KONRAD CURZE: THE NIGHT HAUNTER",
+      "legacyKeys": [
+        "primarch-konrad-curze"
+      ]
+    }
+  ]
+}

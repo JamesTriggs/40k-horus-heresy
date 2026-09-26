@@ -1,0 +1,94 @@
+# Horus Heresy Archive implementation log
+
+This log tracks work against [ROADMAP.md](ROADMAP.md). Each completed slice records the change, its proof and any remaining risk. A checked box requires working code and verification, not just a draft.
+
+## 26 September 2026
+
+### Baseline
+
+- Branch: `feat/horus-heresy-roadmap`, from `main` at `0ef2245`.
+- Existing uncommitted work carried forward: spoiler-mode fixes in `index.html`, `script.js`, `tools/ui-checks.mjs` and `README.md`. Before this roadmap run, all 77 browser checks and the data validator passed.
+- Current catalogue: 228 entries representing 226 distinct work identities, 185 chart nodes, 205 chart edges and 123 character records. The identity grouping still needs editorial review.
+- Working method: one demonstrable slice at a time, with data and browser proof where relevant. Black Library establishes publication facts. The Omnibus Project informs navigational patterns and receives credit for its own editorial work.
+
+### Roadmap status
+
+- [ ] 0.1 Reconcile works, reprints, editions, collections and stable IDs. Preserve existing progress and transfer codes.
+- [ ] 0.2 Extract structured data, add source and confidence fields, verify facts and character appearances.
+- [ ] 0.3 Audit spoiler surfaces, publish sources and corrections information.
+- [ ] 1.1 Build useful entry points, list view, format and collection filters, anthology contents.
+- [ ] 1.2 Add stable URLs for works and views, browser Back behaviour and shareable searches.
+- [ ] 1.3 Add reviewed Core, Full and Legion routes with rationale.
+- [ ] 2.1 Build sourced work and collection reference pages and labelled relationships.
+- [ ] 2.2 Build event, Legion and character dossiers and connect the chart.
+- [ ] 2.3 Expose provenance, confidence and disputed placements.
+- [ ] 3.1 Give explainable next-read recommendations and alternatives.
+- [ ] 3.2 Support collection-level progress, format preference and plain export/import.
+- [ ] 3.3 Test novice, faction and completionist journeys against a static list.
+- [ ] 4 Establish release, correction, automated QA and update processes.
+- [ ] Final QA, security, accessibility and visual review, then open deploy-ready PR.
+
+### Slice 0.1 in progress
+
+- Goal: make the current catalogue identities and duplicates explicit before altering progress keys or UI counts.
+- Planned proof: generated reconciliation is deterministic, all existing keys still resolve, and existing progress/transfer browser checks remain green.
+- Added `data/work-identities.json` with 226 stable work IDs covering all 228 existing entry keys. The two confirmed reprint pairs share work IDs; no reading keys have been changed yet.
+- Added `tools/reconcile-catalogue.mjs` and generated `CATALOGUE_AUDIT.md`. The audit reports 15 represented anthology containers, 163 chart title matches and 19 chart nodes requiring review. `--check` passes.
+- Consolidated chart title aliases in `tools/chart-match.mjs`, then regenerated `reading-order.json`. This corrected the stale *Devine Adoratrice* alias and increased matched reading-order entries from 152 to 163. The four Tallarn component novellas remain distinct unmatched works rather than being conflated with the *Tallarn* collection.
+- Extracted books and characters into `data/books.json` and `data/characters.json`; `tools/build-catalogue.mjs` generates the browser bundle. The validator checks the JSON source and generated data.
+- Migrated local progress to work-level counting. The two reprint pairs share status, while legacy keys and 228-position HH2 transfer codes remain readable. Two new browser checks cover the reprint and old-code cases.
+- Functional proof: 79 browser checks passed twice after the migration, plus catalogue generation, reconciliation and data validation checks. The validator retains five documented warnings about faction sentinel labels and duplicate character identities.
+- The initial desktop and mobile screenshots were visually inspected. The header and controls consume much of the first screen. A more direct entry point remains part of Stage 1.
+
+### Slice 0.2 in progress
+
+- Every book entry now includes recorded summary research links and a research date where available. The four newest Siege entries have no recorded review date.
+- Only 30 of 228 entries include an official Black Library or Warhammer Community URL. The other 198 still require publisher-level verification. Existing confidence labels refer to the prior summary research, not to independently verified publication facts.
+- Added a research and correction section in each work detail, and a public `sources.html` page that explains the distinction between sourced facts and editorial order. External links are built as DOM nodes and restricted to HTTPS.
+- Remaining: primary-source review of every work, explicit fact-level citations, character appearance reconciliation and the 30-work editorial sample.
+
+### Stage 1 and release groundwork
+
+- Added a collection filter and a route from a story detail to every currently listed work in its anthology. This uses the stable work identities, so reprint appearances do not inflate a collection's work count. Collection membership is still based on the legacy one-anthology-per-entry data model and needs a fuller editorial audit.
+- Added `package.json`, a lockfile and a GitHub Actions QA workflow for generated-data checks and Playwright browser checks on pull requests.
+- Visual review exposed corrupted text around overlapping character names, including “Garviel Loken”. Replaced HTML-string regex substitution with text-node matching and added a regression check. The prior method could modify generated markup while trying to link a surname.
+- Functional proof: 83 browser checks pass, including collection lookup, safe research links, corrected character links and mobile Sources page layout. Generated-data checks pass with the same five pre-existing warnings. `git diff --check` and JavaScript syntax checks pass.
+- Visual proof: inspected collection detail, filtered collection results, research panel, corrected character links and Sources page at mobile and desktop sizes. The new controls fit the mobile viewport and the blurb text is no longer corrupted.
+- Work detail URLs now use stable work IDs in `#work=...`. Direct links open on a fresh visit, the first-run introduction stays out of the way, and Back and Forward follow modal history. Transfer-code links retain their `#s=...` format. Browser checks cover direct entry and history travel.
+- Added a plain JSON progress backup beside the compact transfer code. It exports stable work IDs, validates uploads and their statuses before restoring, rejects unknown IDs, preserves reprint compatibility and confirms before replacing an existing record. A mobile screenshot of the transfer panel was inspected.
+- Extracted a structured `format` value for all 228 entries from the legacy detail text: 48 novels, 40 novellas, 95 short stories, 43 audio dramas and 2 anthologies. Added a format filter and a validator rule. These inherited labels still need primary-source review. Desktop visual review showed the extra controls pushed the first books below the fold, so the desktop header was tightened. The first card now starts about 893px from the top in a 1000px viewport.
+
+### Publisher review in progress
+
+- Checked contents, titles and authors for 13 anthologies covering 143 catalogue entries against Black Library product pages. `data/publisher-collections.json` records the source page, reviewed date and exact checked entries. The validator catches membership, title or author drift, and work details link to the publisher listing.
+- Corrected *Lucius: The Eternal Blade* against the standalone Black Library listing and *The Watcher* author styling against *The Silent War* listing. Black Library describes *Garro* as a novelisation of earlier audio dramas and a novella, so those seven entries now say “novelised in” rather than “in” the volume. *Mark of Calth* remains disputed: the current Black Library product page lists seven stories, while a bibliographic record lists *Athame* as an eighth. The site shows both sources rather than silently removing it.
+- Black Library calls *Sons of the Forge* a novel on its standalone page, but also includes it in a later “Novella Collection”. Its inherited format label remains under review until the editorial distinction is settled.
+- Removed duplicate placeholder records for Khârn and Lion El'Jonson. The fuller character entries remain, with the same name matching aliases. The character total is now 121.
+- Moved eight “Various”, “All Legions” and “All Traitor Legions” meta labels out of the real Legion tags into `factionScope`. The broad-scope filter now uses that field. Duplicate character identities and fake Legion tags are validator errors. This clears the five known validator warnings.
+- Functional proof after this cleanup: all 90 browser checks pass with no console or page errors, and the generated-data, identity and chronology gates pass with no warnings. JavaScript syntax and diff whitespace checks pass.
+- Made the historical blurb research script prose-only and opt-in for writes. Its previous default would restore older publication fields, including fake Legion tags and outdated title/author corrections. A dry run now reports zero changes.
+- Added a compact list alongside the cover grid, with a saved preference. Checked mobile and desktop screenshots: text stays readable, there is no horizontal overflow, and the first mobile story remains visible above the fold. Added URL-backed search, collection, format, Legion, sort and view state, so a fresh visit can restore the same browse result. Browser checks for both features pass.
+- Current automated proof: 92 browser checks pass with no console/page errors. The data, generation, identity, chronology, syntax and whitespace gates pass.
+- Added an axe accessibility gate in CI. It found an unlabeled main-content region and an interactive chart nested under an SVG image role. Both were corrected. Desktop catalogue, mobile catalogue, work detail, chart and Sources page now report zero axe violations. Added structured GitHub forms for catalogue corrections and missing works, and linked the correction form from the site.
+- Reviewed all 19 chart-only titles against publisher listings in [CHART_RECONCILIATION.md](CHART_RECONCILIATION.md). They include four distinct *Tallarn* components, a graphic novel, novellas, novels and shorter works. The publisher itself conflicts on whether *Tallarn: Ironclad* is a novella or novel. These works remain outside the active catalogue until their identity, safe text and progress migration are prepared. The generated identity audit links to this review.
+- Work deep links now set a specific browser title and spoiler-safe description, reverting both when the detail closes. A browser check covers opening a direct link and restoring the catalogue title.
+- Switched Netlify to a dedicated `dist/` build. The previous root publish would have exposed source JSON, research notes, build tools and installed npm dependencies after adding Playwright. The build copies only the reader app, its public audit documents and the existing visual assets. CI asserts that `data/`, `tools/` and `node_modules/` are absent, then tests the deployable bundle rather than the source tree.
+- Added confirmed bulk completion for anthology contents. It updates distinct work identities and both legacy keys for a reprint in one save, while excluding *Garro* novelisation components from collection-completion claims. Browser proof marks the five *Born of Flame* works and checks the reprint counterpart and 226-work progress count. The current browser suite has 93 checks.
+- Hardened the ordering log renderer by treating Markdown source as text first and only linking to HTTPS URLs. Character appearance rows now use DOM text nodes rather than interpolating catalogue values into HTML. Added Firefox and WebKit smoke journeys to CI for desktop and mobile, pending local browser installation and proof.
+- The first browser run after escaping Markdown caught a literal blockquote marker. The parser now recognises the escaped `&gt;` marker. A focused browser check confirms one rendered blockquote, zero literal markers and only HTTPS links; the full 93-check Chromium suite then passed.
+- Added three entry choices above the catalogue: a 12-novel Core route following Warhammer Community's published Horus Heresy Saga selection, Full Fiction and a shortcut to the Legion filter. The Core work keys, source and review date are in `data/reading-routes.json` and validated during the data build. URL links preserve the route choice and saved reading status is shared. The mobile controls were compacted after visual inspection so the first catalogue card remains visible within an 844px viewport.
+- Replaced character profile “appears in” lists that searched summaries by substring. `data/character-appearances.json` now records 366 explicit links for 85 characters, extracted by exact canonical-name match from the inherited “Main Characters” fields. The UI labels them as catalogue listings and the Sources page says they are neither exhaustive nor independently verified. This removes ungrounded matches caused by a synopsis merely mentioning someone.
+- Verified the built `dist/` bundle: 96 Chromium browser checks, seven axe journeys and Firefox/WebKit desktop and mobile smoke checks passed. The bundle excludes source data, tools and installed dependencies. Syntax and whitespace checks passed. This is an interim QA result while further roadmap work remains.
+- Inspected the Core route and character profile at desktop and phone widths. The character list remains scrollable inside the dialog. Compacting the mobile view switcher into one row moved the first catalogue card from about 826px to 772px in an 844px viewport; all three view buttons retain their 44px touch targets.
+- A focused regression found that Start Here could leave a reader in chronological order. It now switches to the recommended reading view before showing the Core sequence. A browser check covers that transition.
+- A 320px viewport exposed broken line wrapping in the view navigation. It now uses short visible labels at narrow widths, with full accessible button names. Visual inspection confirms that all three controls fit on one row without horizontal overflow.
+- With the final responsive navigation in place, the stable `dist/` bundle passed all 98 Chromium checks, seven axe journeys, and Firefox/WebKit smoke checks at desktop and phone widths. A prior browser run had one 404 because the bundle was rebuilt during the test; the stable rerun reported no console or page errors.
+- Added a Continue action for readers with an in-progress work. It opens the earliest work marked “reading” in the Archive's reading order, without changing route or filters, and disappears once no work is in progress. A mobile returning-reader screenshot was inspected and a browser journey verifies opening and clearing it.
+- Tightened data validation so inherited detail HTML may contain only the existing `<strong>` and `<br>` tags, and book and character keys are safe identifiers. This guards HTML templates that use generated catalogue data.
+- The next stable bundle pass completed 99 Chromium checks, eight axe journeys including the returning-reader header, and Firefox/WebKit smoke checks at desktop and phone widths. Generated-data, syntax and whitespace checks also pass.
+- Warhammer Community's published 12-novel Saga list confirms the Core works' titles, authors and novel format. `data/reading-routes.json` records those checked fields for each work, and validation catches later drift. Each Core work detail now cites that source for those facts, separately from its summary research links; the Sources page states the limit of this check. All 100 browser checks passed on the stable bundle, with no console or page errors.
+- Changed the header from “The Complete Heresy” to “Horus Heresy Fiction”. The catalogue audit still lists 19 chart titles outside the active catalogue, so an exhaustive claim would overstate current coverage.
+
+### Dependencies outside code
+
+- Moderated reader sessions and expert editorial review need real participants. Until then, acceptance targets involving reader confidence or canon judgement remain unverified and must not be marked complete.

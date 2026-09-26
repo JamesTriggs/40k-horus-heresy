@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 1,
+  "basis": "Legacy Main Characters field; canonical name match only. Not an exhaustive appearance index.",
+  "characters": {
+    "horus-lupercal": [
+      "eye-wolf-ash-fire",
+      "wolfsbane",
+      "heralds-dark-compliance",
+      "slaves-to-darkness"
+    ],
+    "roboute-guilliman": [
+      "primarch-roboute-guilliman",
+      "know-no-fear",
+      "betrayer",
+      "age-of-darkness-rules-of-engagement",
+      "the-unremembered-empire",
+      "war-laurel-defiance",
+      "eye-stratagem",
+      "angels-of-caliban",
+      "ruinstorm",
+      "sot-end-and-death-vol-3"
+    ],
+    "lion-el-jonson": [
+      "descent-of-angels",
+      "primarch-lion-eljonson",
+      "fallen-angels",
+      "age-of-darkness-savage-weapons",
+      "the-primarchs-the-lion",
+      "the-unremembered-empire",
+      "shadows-of-treachery-prince-of-crows",
+      "angels-of-caliban",
+      "ruinstorm",
+      "primarch-leman-russ"
+    ],
+    "sanguinius": [
+      "war-virtues-sons",
+      "primarch-sanguinius",
+      "fear-to-tread",
+      "the-unremembered-empire",
+      "eye-herald-sanguinius",
+      "angels-of-caliban",
+      "ruinstorm",
+      "titandeath",
+      "sot-lost-and-damned",
+      "sot-saturnine",
+      "sot-echoes-of-eternity",
+      "sot-end-and-death-vol-1",
+      "sot-end-and-death-vol-2"
+    ],
+    "leman-russ": [
+      "a-thousand-sons",
+      "prospero-burns",
+      "war-howl-hearthworld",
+      "burden-wolf-king",
+      "legacies-bjorn",
+      "wolfsbane",
+      "corax-weregeld",
+      "primarch-leman-russ"
+    ],
+    "rogal-dorn": [
+      "shadows-of-treachery-dark-king",
+      "shadows-of-treachery-lightning-tower",
+      "burden-cybernetica",
+      "tales-of-heresy-blood-games",
+      "silent-purge",
+      "shadows-of-treachery-crimson-fist",
+      "age-of-darkness-the-last-remembrancer",
+      "praetorian-of-dorn",
+      "old-earth",
+      "silent-gates-terra",
+      "heralds-magisterium",
+      "heralds-now-peals-midnight",
+      "sot-solar-war",
+      "sot-lost-and-damned",
+      "sot-saturnine",
+      "sot-end-and-death-vol-1",
+      "sot-end-and-death-vol-2",
+      "sot-end-and-death-vol-3",
+      "primarch-rogal-dorn"
+    ],
+    "ferrus-manus": [
+      "primarch-ferrus-manus",
+      "the-primarchs-feat-of-iron",
+      "flame-promethean-sun",
+      "fulgrim",
+      "war-phoenician",
+      "war-imperfect"
+    ],
+    "fulgrim": [
+      "primarch-fulgrim",
+      "fulgrim",
+      "the-primarchs-reflection-crackd",
+      "war-phoenician",
+      "angel-exterminatus",
+      "war-imperfect",
+      "slaves-to-darkness"
+    ],
+    "perturabo": [
+      "primarch-magnus",
+      "primarch-perturabo",
+      "shadows-of-treachery-crimson-fist",
+      "eye-ironfire",
+      "angel-exterminatus",
+      "tallarn",
+      "war-black-oculus",
+      "slaves-to-darkness",
+      "sot-first-wall",
+      "sot-saturnine"
+    ],
+    "angron": [
+      "tales-of-heresy-after-deshea",
+      "primarch-angron",
+      "war-lord-red-sands",
+      "betrayer",
+      "legacies-butchers-nails",
+      "slaves-to-darkness",
+      "sot-lost-and-damned",
+      "sot-echoes-of-eternity"
+    ],
+    "mortarion": [
+      "primarch-mortarion",
+      "flame-promethean-sun",
+      "scars",
+      "war-daemonology",
+      "vengeful-spirit",
+      "slaves-to-darkness",
+      "the-buried-dagger",
+      "sot-lost-and-damned",
+      "sot-warhawk",
+      "sot-garro-knight-of-grey"
+    ],
+    "magnus-the-red": [
+      "primarch-magnus",
+      "a-thousand-sons",
+      "prospero-burns",
+      "legacies-thief-revelations",
+      "eye-aurelian",
+      "the-crimson-king",
+      "the-master-of-mankind",
+      "sot-fury-of-magnus"
+    ],
+    "lorgar-aurelian": [
+      "eye-aurelian",
+      "eye-inheritor"
+    ],
+    "konrad-curze": [
+      "shadows-of-treachery-dark-king",
+      "vulkan-lives",
+      "eye-massacre",
+      "age-of-darkness-savage-weapons",
+      "silent-watcher",
+      "the-unremembered-empire",
+      "shadows-of-treachery-prince-of-crows",
+      "angels-of-caliban",
+      "ruinstorm",
+      "primarch-konrad-curze"
+    ],
+    "corvus-corax": [
+      "primarch-corax",
+      "shadows-of-treachery-ravens-flight",
+      "deliverance-lost",
+      "corax-soulforge",
+      "corax-ravenlord",
+      "corax-raptor",
+      "heralds-grey-raven",
+      "heralds-valerius",
+      "corax-weregeld"
+    ],
+    "jaghatai-khan": [
+      "primarch-jaghatai-khan",
+      "scars",
+      "legacies-brotherhood-storm",
+      "war-allegiance",
+      "eye-brotherhood-moon",
+      "the-path-of-heaven",
+      "titandeath",
+      "heralds-last-son-prospero",
+      "sot-lost-and-damned",
+      "sot-warhawk"
+    ],
+    "vulkan": [
+      "primarch-vulkan",
+      "flame-promethean-sun",
+      "vulkan-lives",
+      "war-artefacts",
+      "flame-artefacts",
+      "the-unremembered-empire",
+      "deathfire",
+      "old-earth",
+      "sot-fury-of-magnus"
+    ],
+    "garviel-loken": [
+      "horus-rising",
+      "false-gods",
+      "galaxy-in-flames",
+      "silent-grey-angel",
+      "silent-luna-mendax",
+      "garro-legion-one",
+      "vengeful-spirit",
+      "the-buried-dagger",
+      "sot-saturnine",
+      "sot-end-and-death-vol-1",
+      "sot-end-and-death-vol-2"
+    ],
+    "nathaniel-garro": [
+      "galaxy-in-flames",
+      "the-flight-of-the-eisenstein",
+      "silent-ghosts-speak",
+      "garro-oath-moment",
+      "garro-sword-truth",
+      "garro-legion-one",
+      "garro-shield-lies",
+      "garro-burden-duty",
+      "silent-patience",
+      "garro-ashes-fealty",
+      "garro-vow-faith",
+      "the-buried-dagger",
+      "sot-garro-knight-of-grey"
+    ],
+    "ezekyle-abaddon": [
+      "age-of-darkness-little-horus",
+      "corax-weregeld",
+      "sot-solar-war",
+      "sot-saturnine",
+      "sot-end-and-death-vol-2"
+    ],
+    "erebus": [
+      "the-first-heretic",
+      "tales-of-heresy-scions-of-the-storm",
+      "horus-rising",
+      "false-gods",
+      "mark-of-calth-shards-of-erebus",
+      "nemesis"
+    ],
+    "kharn": [
+      "primarch-angron"
+    ],
+    "ahriman": [
+      "primarch-magnus"
+    ],
+    "tarik-torgaddon": [
+      "horus-rising",
+      "false-gods",
+      "galaxy-in-flames",
+      "silent-luna-mendax"
+    ],
+    "saul-tarvitz": [
+      "galaxy-in-flames"
+    ],
+    "argel-tal": [
+      "the-first-heretic",
+      "eye-aurelian",
+      "betrayer",
+      "mark-of-calth-underworld-war"
+    ],
+    "kor-phaeron": [
+      "the-first-heretic",
+      "primarch-lorgar",
+      "tales-of-heresy-scions-of-the-storm",
+      "mark-of-calth-shards-of-erebus",
+      "know-no-fear",
+      "mark-of-calth-dark-heart",
+      "heralds-children-sicarus"
+    ],
+    "malcador-the-sigillite": [
+      "shadows-of-treachery-lightning-tower",
+      "burden-cybernetica",
+      "nemesis",
+      "war-daemonology",
+      "garro-oath-moment",
+      "silent-army-one",
+      "silent-sigillite",
+      "garro-vow-faith",
+      "silent-gates-terra",
+      "heralds-grey-raven",
+      "heralds-last-son-prospero",
+      "heralds-board-is-set",
+      "the-buried-dagger",
+      "sot-fury-of-magnus",
+      "sot-end-and-death-vol-1",
+      "sot-end-and-death-vol-3"
+    ],
+    "typhus": [
+      "sot-garro-knight-of-grey",
+      "sot-end-and-death-vol-3"
+    ],
+    "sigismund": [
+      "shadows-of-treachery-dark-king",
+      "shadows-of-treachery-crimson-fist",
+      "silent-templar",
+      "sot-solar-war",
+      "sot-saturnine",
+      "sot-warhawk",
+      "sot-end-and-death-vol-2",
+      "primarch-rogal-dorn"
+    ],
+    "luther": [
+      "descent-of-angels",
+      "fallen-angels",
+      "eye-master-first",
+      "silent-grey-angel",
+      "legacies-cypher",
+      "angels-of-caliban",
+      "heralds-exocytosis"
+    ],
+    "cypher": [
+      "eye-master-first",
+      "silent-grey-angel"
+    ],
+    "nemiel": [
+      "descent-of-angels",
+      "fallen-angels",
+      "the-primarchs-the-lion"
+    ],
+    "zahariel": [
+      "legacies-cypher",
+      "angels-of-caliban"
+    ],
+    "bjorn": [
+      "legacies-wolfs-claw",
+      "burden-wolf-king",
+      "legacies-bjorn",
+      "wolfsbane",
+      "corax-weregeld"
+    ],
+    "maloghurst": [
+      "war-twisted",
+      "slaves-to-darkness"
+    ],
+    "raldoron": [
+      "fear-to-tread"
+    ],
+    "meros": [
+      "fear-to-tread"
+    ],
+    "marius-gage": [
+      "primarch-roboute-guilliman"
+    ],
+    "remus-ventanus": [
+      "know-no-fear",
+      "mark-of-calth-calth-that-was",
+      "age-of-darkness-rules-of-engagement"
+    ],
+    "forrix": [
+      "primarch-magnus",
+      "sot-first-wall"
+    ],
+    "kroeger": [
+      "sot-first-wall"
+    ],
+    "artellus-numeon": [
+      "primarch-vulkan",
+      "vulkan-lives",
+      "deathfire"
+    ],
+    "the-emperor": [
+      "tales-of-heresy-the-last-church",
+      "eye-wolf-ash-fire",
+      "the-master-of-mankind",
+      "heralds-board-is-set"
+    ],
+    "john-grammaticus": [
+      "legion",
+      "vulkan-lives",
+      "the-unremembered-empire",
+      "old-earth"
+    ],
+    "julius-kaesoron": [
+      "the-primarchs-reflection-crackd",
+      "war-phoenician"
+    ],
+    "ignatius-grulgor": [
+      "the-flight-of-the-eisenstein"
+    ],
+    "azkaellon": [
+      "war-virtues-sons",
+      "eye-sins-father",
+      "fear-to-tread",
+      "eye-herald-sanguinius"
+    ],
+    "branne-nev": [
+      "shadows-of-treachery-ravens-flight",
+      "deliverance-lost"
+    ],
+    "nykona-sharrowkyn": [
+      "legacies-kryptos",
+      "angel-exterminatus",
+      "shattered-seventh-serpent",
+      "sot-sons-of-selenar"
+    ],
+    "archamus": [
+      "shadows-of-treachery-lightning-tower",
+      "praetorian-of-dorn"
+    ],
+    "shiban-khan": [
+      "scars",
+      "legacies-brotherhood-storm",
+      "the-path-of-heaven",
+      "sot-warhawk"
+    ],
+    "torghun-khan": [
+      "eye-brotherhood-moon",
+      "the-path-of-heaven"
+    ],
+    "kasper-hawser": [
+      "prospero-burns"
+    ],
+    "lemuel-gaumon": [
+      "a-thousand-sons",
+      "the-crimson-king"
+    ],
+    "kai-zulane": [
+      "the-outcast-dead"
+    ],
+    "cyrene-valantion": [
+      "the-first-heretic"
+    ],
+    "dalia-cythera": [
+      "mechanicum"
+    ],
+    "kelbor-hal": [
+      "mechanicum",
+      "burden-binary-succession"
+    ],
+    "barabas-dantioch": [
+      "age-of-darkness-iron-within",
+      "pharos",
+      "burden-heart-pharos"
+    ],
+    "alexis-polux": [
+      "shadows-of-treachery-crimson-fist",
+      "pharos"
+    ],
+    "ilya-ravallion": [
+      "the-path-of-heaven",
+      "sot-warhawk",
+      "sot-era-of-ruin"
+    ],
+    "yesugei": [
+      "primarch-jaghatai-khan"
+    ],
+    "eldrad-ulthran": [
+      "old-earth"
+    ],
+    "ra-endymion": [
+      "the-master-of-mankind"
+    ],
+    "diocletian-coros": [
+      "the-master-of-mankind"
+    ],
+    "arkhan-land": [
+      "burden-into-exile",
+      "the-master-of-mankind",
+      "sot-echoes-of-eternity"
+    ],
+    "zephon": [
+      "sot-echoes-of-eternity"
+    ],
+    "amendera-kendel": [
+      "tales-of-heresy-the-voice",
+      "silent-ghosts-speak"
+    ],
+    "tylos-rubio": [
+      "garro-oath-moment",
+      "garro-sword-truth",
+      "garro-legion-one",
+      "silent-lost-sons",
+      "the-buried-dagger"
+    ],
+    "amon": [
+      "the-crimson-king"
+    ],
+    "agapito": [
+      "primarch-corax",
+      "shadows-of-treachery-ravens-flight",
+      "corax-soulforge",
+      "corax-weregeld"
+    ],
+    "navar-hef": [
+      "corax-raptor"
+    ],
+    "spear": [
+      "nemesis"
+    ],
+    "alivia-sureka": [
+      "war-wolf-mother",
+      "sot-fury-of-magnus"
+    ],
+    "skraal": [
+      "battle-for-the-abyss"
+    ],
+    "brynngar": [
+      "battle-for-the-abyss"
+    ],
+    "severian": [
+      "the-outcast-dead",
+      "silent-wolf-hunt",
+      "war-wolf-mother"
+    ],
+    "atharva": [
+      "primarch-magnus",
+      "the-outcast-dead"
+    ],
+    "ahzek-ahriman": [
+      "a-thousand-sons",
+      "legacies-thief-revelations",
+      "the-crimson-king",
+      "sot-fury-of-magnus",
+      "sot-era-of-ruin"
+    ],
+    "alpharius": [
+      "primarch-alpharius",
+      "legion",
+      "the-primarchs-serpent-beneath",
+      "praetorian-of-dorn",
+      "shattered-seventh-serpent"
+    ],
+    "calas-typhon": [
+      "the-primarchs-the-lion",
+      "heralds-exocytosis",
+      "the-buried-dagger"
+    ],
+    "lorgar": [
+      "the-first-heretic",
+      "primarch-lorgar",
+      "tales-of-heresy-scions-of-the-storm",
+      "know-no-fear",
+      "betrayer",
+      "legacies-butchers-nails",
+      "legacies-heart-conqueror",
+      "slaves-to-darkness"
+    ],
+    "typhon": [
+      "war-lions-command"
+    ],
+    "zahariel-elzurias": [
+      "descent-of-angels",
+      "fallen-angels",
+      "eye-master-first"
+    ]
+  }
+}

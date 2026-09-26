@@ -37,3 +37,4 @@ horus-heresy-complete.html
 # Agent outputs
 .claude/
 node_modules/
+dist/
