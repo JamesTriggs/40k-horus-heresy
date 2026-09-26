@@ -36,6 +36,22 @@ for (const key of Object.keys(characterData)) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.
 const publisherCollections = JSON.parse(readFileSync(join(root, 'data/publisher-collections.json'), 'utf8'));
 const readingRoutes = JSON.parse(readFileSync(join(root, 'data/reading-routes.json'), 'utf8'));
 const eventData = JSON.parse(readFileSync(join(root, 'data/events.json'), 'utf8'));
+const publisherWorkFacts = JSON.parse(readFileSync(join(root, 'data/publisher-work-facts.json'), 'utf8'));
+try {
+    const url = new URL(publisherWorkFacts.source);
+    if (url.protocol !== 'https:' || url.hostname !== 'www.warhammer-community.com') fail('Publisher work facts need an official HTTPS source');
+} catch { fail('Publisher work facts source URL is invalid'); }
+if (!/^\d{4}-\d{2}-\d{2}$/.test(publisherWorkFacts.reviewedAt || '')) fail('Publisher work facts need a review date');
+for (const [key, facts] of Object.entries(publisherWorkFacts.works || {})) {
+    const book = bookData[key];
+    if (!book) { fail(`Publisher work facts have unknown work '${key}'`); continue; }
+    if (!facts.title || !facts.author || Object.keys(facts).some((field) => !['title', 'author', 'format'].includes(field))) {
+        fail(`Publisher work facts for '${key}' have invalid fields`);
+    }
+    for (const [field, value] of Object.entries(facts)) {
+        if (book[field] !== value) fail(`Publisher work fact '${field}' has drifted for '${key}'`);
+    }
+}
 const eventIds = new Set();
 const knownFactions = new Set(bookEntries.flatMap(([, book]) => book.legions));
 for (const event of eventData.events) {

@@ -2085,6 +2085,19 @@ function renderWorkResearch(bookKey) {
         host.append(publication);
     }
 
+    const publisherFacts = publisherWorkFactsData.works[bookKey];
+    if (publisherFacts) {
+        const publication = document.createElement('p');
+        publication.textContent = publisherFacts.format ? 'Title, author and format: ' : 'Title and author: ';
+        const link = document.createElement('a');
+        link.href = publisherWorkFactsData.source;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Warhammer Community’s series overview';
+        publication.append(link, document.createTextNode(` (checked ${publisherWorkFactsData.reviewedAt}).`));
+        host.append(publication);
+    }
+
     const list = document.createElement('ul');
     for (const value of sources) {
         let url;

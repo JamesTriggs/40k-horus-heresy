@@ -275,6 +275,20 @@ await check('Core novel detail cites the publisher list for title, author and fo
     if (!result.claim || !result.publisher) throw new Error(JSON.stringify(result));
 });
 
+await check('series overview cites checked title and author separately from summaries', async () => {
+    const sourced = await newPage({ width: 1200, height: 900 });
+    await sourced.goto(new URL('#work=fallen-angels', BASE).href, { waitUntil: 'load' });
+    await sourced.waitForSelector('#modalOverlay.active');
+    const result = await sourced.$eval('#workResearch', (host) => ({
+        claim: host.textContent.includes('Title and author:'),
+        link: [...host.querySelectorAll('a')].some((a) => a.hostname === 'www.warhammer-community.com' &&
+            a.textContent.includes('series overview')),
+        summaryLimit: host.textContent.includes('Publication details and chronology have not all been checked'),
+    }));
+    await sourced.close();
+    if (!result.claim || !result.link || !result.summaryLimit) throw new Error(JSON.stringify(result));
+});
+
 await check('character links preserve overlapping names and plain text', async () => {
     const result = await page.evaluate(() => {
         const host = document.createElement('div');

@@ -86,8 +86,8 @@ The expandable next-read guide picks the first unstarted work in the chosen path
 
 ## 🚀 Quick Start
 
-### Option 1: GitHub Pages (Easiest)
-Visit the live site: **[https://jamestriggs.github.io/40k-horus-heresy/](https://jamestriggs.github.io/40k-horus-heresy/)**
+### Option 1: Published site
+Visit **[https://jamestriggs.github.io/40k-horus-heresy/](https://jamestriggs.github.io/40k-horus-heresy/)**. Features on an open pull request appear there only after deployment.
 
 ### Option 2: Local Development
 ```bash
@@ -95,7 +95,10 @@ Visit the live site: **[https://jamestriggs.github.io/40k-horus-heresy/](https:/
 git clone https://github.com/JamesTriggs/40k-horus-heresy.git
 cd 40k-horus-heresy
 
-# Start a local server
+# Build and serve the same files used for deployment
+npm ci
+npm run build
+cd dist
 python3 -m http.server 8000
 
 # Open in browser
@@ -103,10 +106,7 @@ open http://localhost:8000
 ```
 
 ### Option 3: Deploy Your Own
-Deploy to any static hosting service:
-- **Netlify**: Drag and drop the folder
-- **Vercel**: One-click deployment
-- **GitHub Pages**: Fork this repo and enable Pages
+Run `npm ci && npm run build`, then publish the generated `dist/` directory on a static host. The included Netlify configuration already uses this build and publish directory.
 
 ## 🎮 How to Use
 
@@ -141,6 +141,7 @@ Deploy to any static hosting service:
 ├── data/work-identities.json     # Stable work IDs and legacy key map
 ├── data/publisher-collections.json # Checked anthology contents and disputes
 ├── data/reading-routes.json      # Sourced Core route
+├── data/publisher-work-facts.json # Checked title and author evidence for 18 more works
 ├── data/events.json              # Sourced event and viewpoint relationships
 ├── sources.html                  # Research and correction information
 ├── events.html                   # Event atlas
@@ -217,7 +218,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 110 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
+# 111 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

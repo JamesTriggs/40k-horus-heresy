@@ -85,7 +85,7 @@ const lines = [
     '| --- | --- | --- |',
     ...reprints.map((work) => `| \`${work.id}\` | ${work.title} | ${work.legacyKeys.map((key) => `\`${key}\``).join(', ')} |`),
     '',
-    'Both keys remain valid for old reading records. A future work-level UI should count each group once and migrate statuses without discarding either key.',
+    'Both keys remain valid for old reading records. The catalogue counts each group once in work-level progress and keeps both legacy statuses in sync.',
     '',
     '## Anthology containers',
     '',

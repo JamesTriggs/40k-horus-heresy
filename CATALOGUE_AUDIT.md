@@ -17,7 +17,7 @@
 | `war-artefacts` | ARTEFACTS | `war-artefacts`, `flame-artefacts` |
 | `shattered-immortal-duty` | IMMORTAL DUTY | `shattered-immortal-duty`, `flame-immortal-duty-2` |
 
-Both keys remain valid for old reading records. A future work-level UI should count each group once and migrate statuses without discarding either key.
+Both keys remain valid for old reading records. The catalogue counts each group once in work-level progress and keeps both legacy statuses in sync.
 
 ## Anthology containers
 

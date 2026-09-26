@@ -1,0 +1,79 @@
+{
+  "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+  "reviewedAt": "2026-09-26",
+  "works": {
+    "a-thousand-sons": {
+      "title": "A THOUSAND SONS",
+      "author": "Graham McNeill"
+    },
+    "deliverance-lost": {
+      "title": "DELIVERANCE LOST",
+      "author": "Gav Thorpe"
+    },
+    "vulkan-lives": {
+      "title": "VULKAN LIVES",
+      "author": "Nick Kyme"
+    },
+    "fallen-angels": {
+      "title": "FALLEN ANGELS",
+      "author": "Mike Lee"
+    },
+    "angel-exterminatus": {
+      "title": "ANGEL EXTERMINATUS",
+      "author": "Graham McNeill"
+    },
+    "fear-to-tread": {
+      "title": "FEAR TO TREAD",
+      "author": "James Swallow"
+    },
+    "the-unremembered-empire": {
+      "title": "THE UNREMEMBERED EMPIRE",
+      "author": "Dan Abnett"
+    },
+    "titandeath": {
+      "title": "TITANDEATH",
+      "author": "Guy Haley"
+    },
+    "sot-solar-war": {
+      "title": "THE SOLAR WAR",
+      "author": "John French"
+    },
+    "sot-lost-and-damned": {
+      "title": "THE LOST AND THE DAMNED",
+      "author": "Guy Haley"
+    },
+    "sot-first-wall": {
+      "title": "THE FIRST WALL",
+      "author": "Gav Thorpe"
+    },
+    "sot-saturnine": {
+      "title": "SATURNINE",
+      "author": "Dan Abnett"
+    },
+    "sot-mortis": {
+      "title": "MORTIS",
+      "author": "John French"
+    },
+    "sot-warhawk": {
+      "title": "WARHAWK",
+      "author": "Chris Wraight"
+    },
+    "sot-echoes-of-eternity": {
+      "title": "ECHOES OF ETERNITY",
+      "author": "Aaron Dembski-Bowden"
+    },
+    "sot-end-and-death-vol-1": {
+      "title": "THE END AND THE DEATH: VOLUME I",
+      "author": "Dan Abnett"
+    },
+    "sot-end-and-death-vol-2": {
+      "title": "THE END AND THE DEATH: VOLUME II",
+      "author": "Dan Abnett"
+    },
+    "sot-fury-of-magnus": {
+      "title": "FURY OF MAGNUS",
+      "author": "Graham McNeill",
+      "format": "Novella"
+    }
+  }
+}
