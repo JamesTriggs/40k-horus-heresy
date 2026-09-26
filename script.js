@@ -598,6 +598,7 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
     bookDisplay.innerHTML = ''; // Clear existing cards
 
     let displayedCount = 0;
+    const matchedWorkIds = new Set();
     const query = searchQuery.toLowerCase().trim();
     const includePrimarchs = document.getElementById('includePrimarchs')?.checked ?? true;
     const includeSiegeOfTerra = document.getElementById('includeSiegeOfTerra')?.checked ?? true;
@@ -661,6 +662,9 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
             if (!titleMatch && !authorMatch && !charactersMatch && !blurbMatch) {
                 return; // Skip this book
             }
+            const workId = workIdentityByKey.get(bookKey) || bookKey;
+            if (matchedWorkIds.has(workId)) return;
+            matchedWorkIds.add(workId);
         }
 
         displayedCount++;
@@ -1839,11 +1843,16 @@ function showModal(bookKey, { updateUrl = true } = {}) {
         });
     }, 0);
 
-    // Show modal and store current book key
+    // Replacing the content of an open work dialog must not add another focus
+    // trap or scroll lock. This also applies when the spoiler setting changes.
+    const wasOpen = modalOverlay.classList.contains('active');
     modalOverlay.classList.add('active');
-    focusManager.trap(modalOverlay);
     modalOverlay.dataset.currentBook = bookKey;
-    scrollLock.acquire();
+    if (wasOpen) modalTitle.focus({ preventScroll: true });
+    else {
+        focusManager.trap(modalOverlay);
+        scrollLock.acquire();
+    }
 }
 
 function renderWorkCollections(bookKey) {
@@ -2140,7 +2149,7 @@ function showCharacterModal(characterKey) {
     // Explicit links from the catalogue's Main Characters field. A mention in
     // a synopsis is not enough to claim that a character appears in a work.
     const books = (characterAppearancesData.characters[characterKey] || [])
-        .map((key) => bookData[key]).filter(Boolean);
+        .map((key) => ({ key, book: bookData[key] })).filter((item) => item.book);
 
     // Display books list
     const bookList = document.getElementById('characterBooks');
@@ -2150,10 +2159,15 @@ function showCharacterModal(characterKey) {
         heading.className = 'appears-in-label';
         heading.textContent = 'LISTED AS A MAIN CHARACTER IN:';
         bookList.append(heading);
-        for (const book of books) {
-            const item = document.createElement('div');
+        for (const { key, book } of books) {
+            const item = document.createElement('button');
+            item.type = 'button';
             item.className = 'character-book-item';
             item.textContent = `${book.number} - ${book.title}`;
+            item.addEventListener('click', () => {
+                closeCharacterModal();
+                showModal(key);
+            });
             bookList.append(item);
         }
     }

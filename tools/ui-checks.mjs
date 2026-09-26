@@ -327,6 +327,40 @@ await check('character work lists use explicit main-character links rather than 
     }
 });
 
+await check('a character work link replaces the parent detail without stacking modal traps', async () => {
+    const linked = await newPage({ width: 1200, height: 900 });
+    await linked.goto(new URL('#work=horus-rising', BASE).href);
+    await linked.waitForSelector('#modalOverlay.active');
+    await linked.evaluate(() => {
+        document.getElementById('showSpoilers').checked = true;
+        showModal('horus-rising', { updateUrl: false });
+        showCharacterModal('garviel-loken');
+    });
+    await linked.locator('.character-book-item').filter({ hasText: 'FALSE GODS' }).click();
+    const result = await linked.evaluate(() => ({
+        title: document.getElementById('modalTitle').textContent,
+        characterOpen: document.getElementById('characterModalOverlay').classList.contains('active'),
+        traps: focusManager._stack.length,
+        locked: document.documentElement.classList.contains('modal-open'),
+        hash: location.hash,
+    }));
+    await linked.click('#closeModal');
+    await linked.waitForFunction(() => document.getElementById('modalTitle').textContent === 'HORUS RISING');
+    const returned = await linked.evaluate(() => ({
+        open: document.getElementById('modalOverlay').classList.contains('active'),
+        traps: focusManager._stack.length,
+    }));
+    await linked.click('#closeModal');
+    const released = await linked.evaluate(() => focusManager._stack.length === 0 &&
+        !document.documentElement.classList.contains('modal-open'));
+    await linked.close();
+    if (result.title !== 'FALSE GODS' || result.characterOpen || result.traps !== 1 ||
+        !result.locked || result.hash !== '#work=false-gods' || !returned.open ||
+        returned.traps !== 1 || !released) {
+        throw new Error(JSON.stringify({ ...result, returned, released }));
+    }
+});
+
 await check('the ordering guide renders the generated document', async () => {
     await page.click('#orderingGuideBtn');
     await page.waitForFunction(
@@ -449,6 +483,20 @@ await check('a browse URL restores search, collection and view on a fresh visit'
     await p.selectOption('#formatFilter', 'Audio Drama');
     if (!p.url().includes('format=Audio+Drama')) throw new Error('filter was not reflected in URL');
     await p.close();
+});
+await check('search returns one work for a reprint and shows both of its collections', async () => {
+    const p = await newPage({ width: 1200, height: 850 });
+    await p.goto(BASE);
+    await p.waitForSelector('.book-card');
+    await p.fill('#searchInput', 'ARTEFACTS');
+    await p.waitForTimeout(400);
+    const cards = await p.locator('.book-card').count();
+    await p.locator('.book-card').first().click();
+    const collections = await p.locator('.collection-browse').allTextContents();
+    await p.close();
+    if (cards !== 1 || collections.length !== 2) {
+        throw new Error(`${cards} search results, ${collections.length} containers`);
+    }
 });
 
 await check('a collection can mark distinct component works finished in bulk', async () => {
