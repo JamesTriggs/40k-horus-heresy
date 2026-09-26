@@ -60,6 +60,7 @@ The expandable next-read guide picks the first unstarted work in the chosen path
 - **Progress counter**: Shows breakdown across all series
 - **Persistent storage**: Progress saved in browser localStorage
 - **Portable backup**: compact transfer codes or a readable JSON file keyed by stable work ID
+- **Collection ownership**: mark a represented volume as owned without changing its stories' reading statuses. The JSON backup includes owned volume IDs
 
 ### 👤 Character Encyclopedia
 - **121 characters** with clickable encyclopedia entries
@@ -140,6 +141,7 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── data/characters.json          # Reviewable character records
 ├── data/character-appearances.json # Explicit links from the Main Characters field
 ├── data/work-identities.json     # Stable work IDs and legacy key map
+├── data/collections.json         # Stable IDs for represented volumes
 ├── data/publisher-collections.json # Checked anthology contents and disputes
 ├── data/reading-routes.json      # Sourced Core route
 ├── data/publisher-work-facts.json # Publisher facts for 18 overview works and 12 direct listings
@@ -180,7 +182,7 @@ two bits per book over the alphabetically sorted key list, which is 228 books in
 
 Press the **⇄** button for your cipher, or a vector that carries it. Enter the
 cipher on another dataslate to receive it.
-The same panel can download a readable JSON backup or restore one after validating its work IDs and statuses.
+The same panel can download a readable JSON backup or restore one after validating its work IDs, statuses and owned collection IDs. The compact transfer code carries reading statuses only.
 
 The wording throughout is framed in the setting: a **dataslate transfer** issues
 a **record cipher** that you **transmit** to another dataslate. One deliberate
@@ -220,7 +222,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 114 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
+# 116 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

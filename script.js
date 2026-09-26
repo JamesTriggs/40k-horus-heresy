@@ -11,13 +11,28 @@ const VIEW_KEY = 'horusHeresyView';
 const LAYOUT_KEY = 'horusHeresyLayout';
 const ROUTE_KEY = 'horusHeresyRoute';
 const SKIPPED_KEY = 'horusHeresySavedForLater';
+const OWNED_COLLECTIONS_KEY = 'horusHeresyOwnedCollections';
 const BASE_TITLE = document.title;
 const BASE_DESCRIPTION = document.querySelector('meta[name="description"]')?.content || '';
 const workIdentityByKey = new Map();
 const workKeysById = new Map();
+const collectionByName = new Map(collectionIdentityData.collections.map((collection) => [collection.name, collection]));
+const collectionById = new Map(collectionIdentityData.collections.map((collection) => [collection.id, collection]));
 for (const identity of workIdentityData.identities) {
     workKeysById.set(identity.id, identity.legacyKeys);
     for (const key of identity.legacyKeys) workIdentityByKey.set(key, identity.id);
+}
+
+function loadOwnedCollections() {
+    try {
+        const ids = JSON.parse(localStorage.getItem(OWNED_COLLECTIONS_KEY) || '[]');
+        return new Set(Array.isArray(ids) ? ids.filter((id) => collectionById.has(id)) : []);
+    } catch { return new Set(); }
+}
+
+function saveOwnedCollections(ids) {
+    try { localStorage.setItem(OWNED_COLLECTIONS_KEY, JSON.stringify([...ids])); return true; }
+    catch { return false; }
 }
 
 function linkedWorkKey() {
@@ -241,13 +256,21 @@ function exportProgressFile() {
         const status = readingProgress.getStatus(identity.id);
         if (status) works[identity.id] = status;
     }
-    return { format: 'horus-heresy-progress', version: 1, works };
+    return { format: 'horus-heresy-progress', version: 1, works,
+        ownedCollections: [...loadOwnedCollections()] };
+}
+
+function validOwnedCollections(value) {
+    return value === undefined || (Array.isArray(value) &&
+        new Set(value).size === value.length && value.every((id) =>
+            typeof id === 'string' && collectionById.has(id)));
 }
 
 function importProgressFile(payload) {
     if (!payload || typeof payload !== 'object' || Array.isArray(payload) ||
         payload.format !== 'horus-heresy-progress' || payload.version !== 1 ||
-        !payload.works || typeof payload.works !== 'object' || Array.isArray(payload.works)) {
+        !payload.works || typeof payload.works !== 'object' || Array.isArray(payload.works) ||
+        !validOwnedCollections(payload.ownedCollections)) {
         return { ok: false, reason: 'This is not a supported Horus Heresy progress file.' };
     }
     const progress = Object.create(null);
@@ -257,8 +280,13 @@ function importProgressFile(payload) {
         }
         for (const key of workKeysById.get(id)) progress[key] = status;
     }
+    const previousProgress = { ...readingProgress.load() };
     if (!readingProgress.save(progress)) {
         return { ok: false, reason: 'The record could not be saved in this browser.' };
+    }
+    if (payload.ownedCollections && !saveOwnedCollections(new Set(payload.ownedCollections))) {
+        readingProgress.save(previousProgress);
+        return { ok: false, reason: 'The owned collection list could not be saved in this browser.' };
     }
     return { ok: true, applied: Object.keys(payload.works).length };
 }
@@ -743,6 +771,7 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
     // Update progress counter
     updateProgressCounter();
     updateCollectionBulkButton();
+    updateCollectionOwnedButton();
 
     // Show filter/search result info
     if (filterLegion || query || collection || format) {
@@ -1529,17 +1558,19 @@ function initializeSyncPanel() {
         // Validate before asking to replace the current record.
         if (!payload || payload.format !== 'horus-heresy-progress' || payload.version !== 1 ||
             !payload.works || typeof payload.works !== 'object' || Array.isArray(payload.works) ||
+            !validOwnedCollections(payload.ownedCollections) ||
             Object.entries(payload.works).some(([id, value]) =>
                 !workKeysById.has(id) || (value !== 'reading' && value !== 'finished'))) {
             say('This is not a supported Horus Heresy progress file.', 'error');
             return;
         }
         const existing = readingProgress.getCount();
-        if (existing && !confirm(`Restoring this file will replace ${existing} marked work${existing === 1 ? '' : 's'} on this device. Proceed?`)) return;
+        const owned = payload.ownedCollections ? loadOwnedCollections().size : 0;
+        if ((existing || owned) && !confirm(`Restoring this file will replace your reading record${owned ? ' and owned collection list' : ''} on this device. Proceed?`)) return;
         const result = importProgressFile(payload);
         say(result.ok ? `${result.applied} work records restored from JSON.` : result.reason,
             result.ok ? 'ok' : 'error');
-        if (result.ok) { refresh(); rerenderCurrentView(); }
+        if (result.ok) { refresh(); rerenderCurrentView(); updateCollectionOwnedButton(); }
     });
 
     // A sync link lands here. Ask first, because restoring replaces whatever
@@ -2546,11 +2577,23 @@ function updateCollectionBulkButton() {
     button.textContent = remaining ? `MARK ${remaining} FINISHED` : 'COLLECTION COMPLETE';
 }
 
+function updateCollectionOwnedButton() {
+    const button = document.getElementById('collectionOwned');
+    const name = document.getElementById('collectionFilter')?.value;
+    const collection = collectionByName.get(name);
+    button.hidden = !collection;
+    if (!collection) return;
+    const owned = loadOwnedCollections().has(collection.id);
+    button.setAttribute('aria-pressed', String(owned));
+    button.textContent = owned ? 'OWNED · REMOVE' : 'I OWN A COPY';
+}
+
 // Set up filter and search event listeners
 function setupFilterListeners() {
     const filterSelect = document.getElementById('legionFilter');
     const collectionSelect = document.getElementById('collectionFilter');
     const collectionBulk = document.getElementById('collectionBulk');
+    const collectionOwned = document.getElementById('collectionOwned');
     const formatSelect = document.getElementById('formatFilter');
     const searchInput = document.getElementById('searchInput');
     const clearSearchBtn = document.getElementById('clearSearch');
@@ -2594,6 +2637,14 @@ function setupFilterListeners() {
         readingProgress.save(progress);
         rerenderCurrentView();
         maybeShowSaveHint();
+    });
+    collectionOwned.addEventListener('click', () => {
+        const collection = collectionByName.get(collectionSelect.value);
+        if (!collection) return;
+        const owned = loadOwnedCollections();
+        if (owned.has(collection.id)) owned.delete(collection.id);
+        else owned.add(collection.id);
+        if (saveOwnedCollections(owned)) updateCollectionOwnedButton();
     });
     formatSelect.addEventListener('change', applyFilters);
 

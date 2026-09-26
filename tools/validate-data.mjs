@@ -34,6 +34,22 @@ const bookEntries = Object.entries(bookData);
 for (const key of bookKeys) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`Unsafe book key '${key}'`);
 for (const key of Object.keys(characterData)) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`Unsafe character key '${key}'`);
 const publisherCollections = JSON.parse(readFileSync(join(root, 'data/publisher-collections.json'), 'utf8'));
+const collectionIdentities = JSON.parse(readFileSync(join(root, 'data/collections.json'), 'utf8'));
+const collectionNames = new Set(bookEntries.map(([, book]) => book.anthology).filter(Boolean));
+const collectionIds = new Set();
+const recordedCollections = new Set();
+for (const collection of collectionIdentities.collections || []) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(collection.id) || collectionIds.has(collection.id)) {
+        fail(`Collection has unsafe or duplicate ID '${collection.id}'`);
+    }
+    collectionIds.add(collection.id);
+    if (!collectionNames.has(collection.name) || recordedCollections.has(collection.name)) {
+        fail(`Collection has unknown or duplicate name '${collection.name}'`);
+    }
+    recordedCollections.add(collection.name);
+    if (!['collection', 'novelisation'].includes(collection.kind)) fail(`Collection '${collection.id}' has invalid kind`);
+}
+for (const name of collectionNames) if (!recordedCollections.has(name)) fail(`Collection '${name}' has no stable ID`);
 const readingRoutes = JSON.parse(readFileSync(join(root, 'data/reading-routes.json'), 'utf8'));
 const eventData = JSON.parse(readFileSync(join(root, 'data/events.json'), 'utf8'));
 const publisherWorkFacts = JSON.parse(readFileSync(join(root, 'data/publisher-work-facts.json'), 'utf8'));

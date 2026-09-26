@@ -28,6 +28,10 @@ for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
             if (viewport.width < 769) await page.click('#filterDisclosure');
             await page.selectOption('#collectionFilter', 'Born of Flame');
             if (await page.locator('.book-card').count() !== 5) throw new Error(`${name}: collection filter failed`);
+            await page.click('#collectionOwned');
+            if (await page.locator('#collectionOwned').getAttribute('aria-pressed') !== 'true') {
+                throw new Error(`${name}: collection ownership was not saved`);
+            }
             await page.click('#viewChart');
             await page.waitForSelector('#chartSvg');
             if (await page.locator('.chart-node').count() !== 185) throw new Error(`${name}: chart node count changed`);

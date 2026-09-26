@@ -33,6 +33,12 @@ await audit('mobile next-read guide', { width: 390, height: 844 }, async (page) 
     await page.waitForSelector('.book-card');
     await page.locator('#nextReadGuide summary').click();
 });
+await audit('mobile collection ownership', { width: 390, height: 844 }, async (page) => {
+    await page.waitForSelector('.book-card');
+    await page.locator('#filterDisclosure').click();
+    await page.selectOption('#collectionFilter', 'Born of Flame');
+    await page.locator('#collectionOwned').click();
+});
 await audit('returning reader', { width: 390, height: 844 }, async (page) => {
     await page.evaluate(() => localStorage.setItem('horusHeresyProgress', JSON.stringify({ 'horus-rising': 'reading' })));
     await page.reload({ waitUntil: 'load' });

@@ -107,6 +107,7 @@
                     <option value="">ALL COLLECTIONS</option>
                 </select>
                 <button type="button" class="collection-bulk" id="collectionBulk" hidden></button>
+                <button type="button" class="collection-bulk" id="collectionOwned" aria-pressed="false" hidden></button>
             </div>
             <div class="format-container">
                 <label for="formatFilter" class="filter-label">FORMAT:</label>
@@ -244,7 +245,7 @@
                 <p class="sync-status" id="syncStatus" role="status" aria-live="polite"></p>
                 <div class="sync-divider"></div>
                 <h3 class="sync-heading">Plain file backup</h3>
-                <p class="sync-note">Download a readable JSON copy of your work-level progress, or restore one here. Restoring replaces the progress on this device.</p>
+                <p class="sync-note">Download a readable JSON copy of your work-level progress and owned collections, or restore one here. Restoring replaces those records on this device. The short cipher carries reading progress only.</p>
                 <div class="sync-row">
                     <button type="button" class="sync-action" id="downloadProgress">DOWNLOAD JSON</button>
                     <button type="button" class="sync-action" id="chooseProgress">RESTORE JSON</button>

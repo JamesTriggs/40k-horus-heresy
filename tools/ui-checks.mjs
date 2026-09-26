@@ -586,6 +586,26 @@ await check('a collection can mark distinct component works finished in bulk', a
         throw new Error(JSON.stringify(result));
     }
 });
+await check('collection ownership survives reload without changing reading progress', async () => {
+    const owned = await newPage({ width: 390, height: 844 });
+    await owned.goto(BASE);
+    await owned.waitForSelector('.book-card');
+    await owned.locator('#filterDisclosure').click();
+    await owned.selectOption('#collectionFilter', 'Born of Flame');
+    await owned.locator('#collectionOwned').click();
+    const selected = await owned.locator('#collectionOwned').getAttribute('aria-pressed');
+    await owned.reload();
+    await owned.waitForSelector('.book-card');
+    const result = await owned.evaluate(() => ({
+        name: document.getElementById('collectionFilter').value,
+        pressed: document.getElementById('collectionOwned').getAttribute('aria-pressed'),
+        progress: readingProgress.getCount(),
+    }));
+    await owned.close();
+    if (selected !== 'true' || result.name !== 'Born of Flame' || result.pressed !== 'true' || result.progress !== 0) {
+        throw new Error(JSON.stringify({ selected, ...result }));
+    }
+});
 
 await check('a reprinted work links to each collection and opens a shareable full-catalogue result', async () => {
     const p = await newPage({ width: 1200, height: 850 });
@@ -1238,6 +1258,25 @@ await check('plain JSON backup downloads a readable file', async () => {
         payload.works['horus-rising'] !== 'finished') {
         throw new Error('download did not contain the marked work');
     }
+});
+
+await check('plain JSON backup restores owned collections and rejects unknown IDs', async () => {
+    const p = await newPage({ width: 1200, height: 900 });
+    await p.goto(BASE);
+    await p.waitForSelector('.book-card');
+    const result = await p.evaluate(() => {
+        saveOwnedCollections(new Set(['born-of-flame']));
+        const backup = exportProgressFile();
+        saveOwnedCollections(new Set());
+        const restored = importProgressFile(backup);
+        const invalid = importProgressFile({ ...backup, ownedCollections: ['unknown-volume'] });
+        const legacy = importProgressFile({ format: backup.format, version: 1, works: {} });
+        return { backup: backup.ownedCollections, restored, invalid,
+            legacy, owned: [...loadOwnedCollections()] };
+    });
+    await p.close();
+    if (!result.backup.includes('born-of-flame') || !result.restored.ok || result.invalid.ok || !result.legacy.ok ||
+        !result.owned.includes('born-of-flame')) throw new Error(JSON.stringify(result));
 });
 
 console.log('\nOnboarding');

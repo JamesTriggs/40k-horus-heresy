@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "age-of-darkness",
+      "name": "Age of Darkness",
+      "kind": "collection"
+    },
+    {
+      "id": "born-of-flame",
+      "name": "Born of Flame",
+      "kind": "collection"
+    },
+    {
+      "id": "corax",
+      "name": "Corax",
+      "kind": "collection"
+    },
+    {
+      "id": "eye-of-terra",
+      "name": "Eye of Terra",
+      "kind": "collection"
+    },
+    {
+      "id": "garro",
+      "name": "Garro",
+      "kind": "novelisation"
+    },
+    {
+      "id": "heralds-of-the-siege",
+      "name": "Heralds of the Siege",
+      "kind": "collection"
+    },
+    {
+      "id": "legacies-of-betrayal",
+      "name": "Legacies of Betrayal",
+      "kind": "collection"
+    },
+    {
+      "id": "mark-of-calth",
+      "name": "Mark of Calth",
+      "kind": "collection"
+    },
+    {
+      "id": "shadows-of-treachery",
+      "name": "Shadows of Treachery",
+      "kind": "collection"
+    },
+    {
+      "id": "shattered-legions",
+      "name": "Shattered Legions",
+      "kind": "collection"
+    },
+    {
+      "id": "tales-of-heresy",
+      "name": "Tales of Heresy",
+      "kind": "collection"
+    },
+    {
+      "id": "the-burden-of-loyalty",
+      "name": "The Burden of Loyalty",
+      "kind": "collection"
+    },
+    {
+      "id": "the-primarchs",
+      "name": "The Primarchs",
+      "kind": "collection"
+    },
+    {
+      "id": "the-silent-war",
+      "name": "The Silent War",
+      "kind": "collection"
+    },
+    {
+      "id": "war-without-end",
+      "name": "War Without End",
+      "kind": "collection"
+    }
+  ]
+}
