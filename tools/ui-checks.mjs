@@ -1547,6 +1547,25 @@ await check('work event links stay hidden until spoilers are enabled', async () 
         destination.hash !== '#calth') throw new Error(`${hidden}, ${label}, ${destination}`);
 });
 
+await check('work detail distinguishes chart prerequisites and follows them', async () => {
+    const work = await newPage({ width: 1200, height: 850 });
+    await work.goto(new URL('#work=prospero-burns', BASE).href);
+    await work.waitForSelector('#modalOverlay.active');
+    const hidden = await work.locator('#workRelationships').evaluate((element) => element.hidden);
+    await work.evaluate(() => {
+        document.getElementById('showSpoilers').checked = true;
+        showModal('prospero-burns', { updateUrl: false });
+    });
+    const text = await work.locator('#workRelationships').textContent();
+    await work.locator('#workRelationships button').filter({ hasText: 'A THOUSAND SONS' }).click();
+    const title = await work.locator('#modalTitle').textContent();
+    await work.close();
+    if (!hidden || !text.includes('Read first in the chart') ||
+        !text.includes('Daunt’s timeline') || title !== 'A THOUSAND SONS') {
+        throw new Error(`${hidden}, ${title}`);
+    }
+});
+
 console.log('');
 if (errors.length) {
     failed++;

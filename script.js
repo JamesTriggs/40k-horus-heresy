@@ -1889,6 +1889,7 @@ function showModal(bookKey, { updateUrl = true } = {}) {
     blurb.innerHTML = spoilerWarning + `<p>${clickableBlurb}</p>`;
     renderWorkCollections(bookKey);
     renderWorkEvents(bookKey);
+    renderWorkRelationships(bookKey);
     renderWorkResearch(bookKey);
 
     // Add event listener for status cycle button
@@ -2058,6 +2059,54 @@ function renderWorkEvents(bookKey) {
         list.append(item);
     }
     host.append(list);
+}
+
+function renderWorkRelationships(bookKey) {
+    const host = document.getElementById('workRelationships');
+    host.replaceChildren();
+    const showSpoilers = document.getElementById('showSpoilers')?.checked ?? false;
+    const workId = workIdentityByKey.get(bookKey) || bookKey;
+    const entry = readingOrder?.byKey.get(bookKey);
+    if (!showSpoilers || !entry) { host.hidden = true; return; }
+    const preceding = [...new Set(entry.prerequisites.map((key) => workIdentityByKey.get(key) || key))];
+    const following = [...new Set([...readingOrder.byKey.values()]
+        .filter((candidate) => candidate.prerequisites.some((key) =>
+            (workIdentityByKey.get(key) || key) === workId))
+        .map((candidate) => workIdentityByKey.get(candidate.bookKey) || candidate.bookKey))];
+    if (!preceding.length && !following.length) { host.hidden = true; return; }
+    host.hidden = false;
+
+    const heading = document.createElement('h3');
+    heading.textContent = 'Chart reading links';
+    host.append(heading);
+    for (const [label, ids] of [['Read first in the chart', preceding], ['The chart places this before', following]]) {
+        if (!ids.length) continue;
+        const subheading = document.createElement('h4');
+        subheading.textContent = label;
+        host.append(subheading);
+        const list = document.createElement('ul');
+        for (const id of ids) {
+            const key = workKeysById.get(id)?.[0];
+            if (!key) continue;
+            const item = document.createElement('li');
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.textContent = bookData[key].title;
+            button.addEventListener('click', () => showModal(key));
+            item.append(button);
+            list.append(item);
+        }
+        host.append(list);
+    }
+    const source = document.createElement('p');
+    source.textContent = 'These are arrows in ';
+    const link = document.createElement('a');
+    link.href = 'https://gaming.kylebb.com/hhtimeline/';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = 'Daunt’s timeline';
+    source.append(link, document.createTextNode(', not a single mandatory reading order.'));
+    host.append(source);
 }
 
 function renderWorkResearch(bookKey) {

@@ -41,6 +41,7 @@ The expandable next-read guide picks the first unstarted work in the chosen path
 - **Publication order** sorting option
 - **Full book details**: authors, legions, timelines, character lists, synopses
 - **Work links**: opening a book gives it a shareable `#work=` URL, and browser Back returns to the catalogue
+- **Chart relationships**: spoiler-controlled work details show Daunt's read-first and follow-up arrows with a source link, separate from the Archive's chosen reading order
 - **Browse links and layouts**: filters, search and view choices are reflected in the URL, and readers can switch between cover grid and a compact list
 - **Spoiler toggle**: Spoilers start hidden. Enabling them reveals full summaries, character details and the chronological event log
 - **Event atlas**: Fifteen sourced turning points connect distinct viewpoints to the works that cover them. Work details reveal related events when spoilers are enabled
@@ -219,7 +220,7 @@ node tools/build-reading-order.mjs
 # Build the deployable static site. Netlify publishes dist/, not the repo root.
 npm run build
 
-# 113 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
+# 114 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
 # Needs the checked-in npm dependencies and a local server.
 npm ci && npx playwright install chromium-headless-shell firefox webkit

@@ -43,6 +43,14 @@ await audit('work detail', { width: 1280, height: 800 }, async (page) => {
     await page.locator('.book-card').first().click();
     await page.waitForSelector('#modalOverlay.active');
 });
+await audit('work chart links', { width: 390, height: 844 }, async (page) => {
+    await page.waitForSelector('.book-card');
+    await page.evaluate(() => {
+        document.getElementById('showSpoilers').checked = true;
+        showModal('prospero-burns');
+    });
+    await page.waitForSelector('#workRelationships:not([hidden])');
+});
 for (const viewport of [{ width: 1280, height: 800 }, { width: 390, height: 844 }]) {
     await audit(`character profile ${viewport.width}px`, viewport, async (page) => {
         await page.waitForSelector('.book-card');

@@ -967,6 +967,15 @@ body.traitor-theme .allegiance-toggle:hover {
 .work-safe-facts { line-height: 1.7; }
 .work-safe-facts strong { color: var(--imperial-gold); }
 
+.work-relationships { margin-top: 1.25rem; padding: 1rem 1.5rem; border-left: 4px solid var(--imperial-gold); background: rgba(0, 0, 0, 0.35); }
+.work-relationships h3 { margin-top: 0; }
+.work-relationships h4 { margin: 0.8rem 0 0.3rem; font-size: 0.9rem; }
+.work-relationships ul { margin: 0; padding-left: 1.3rem; }
+.work-relationships button { border: 0; padding: 0.25rem 0; background: none; color: var(--imperial-gold); cursor: pointer; font: inherit; text-align: left; text-decoration: underline; }
+.work-relationships button:focus-visible { outline: 2px solid var(--imperial-gold); outline-offset: 2px; }
+.work-relationships a { color: var(--imperial-gold); }
+.work-relationships p { margin-bottom: 0; font-size: 0.8rem; }
+
 .work-collections[hidden] { display: none; }
 .work-collections h3 { margin-top: 0; }
 .collection-browse {
