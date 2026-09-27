@@ -1024,6 +1024,21 @@ await check('Primarchs novella introductions do not reveal identities or earlier
     await reader.close();
 });
 
+await check('every novella has a sourced spoiler-free introduction', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    await reader.goto(new URL('#work=corax-weregeld', BASE).href, { waitUntil: 'load' });
+    await reader.waitForSelector('#modalOverlay.active');
+    const result = await reader.evaluate(() => ({
+        reviewed: Object.values(bookData).filter((book) => book.format === 'Novella')
+            .every((book) => book.safeSummaryReview?.source.startsWith('https://www.blacklibrary.com/')),
+        blurb: document.querySelector('#blurb').textContent,
+        cited: document.querySelector('#workResearch').textContent.includes('product description'),
+    }));
+    if (!result.reviewed || result.blurb.includes('besieged on a distant world by a traitor host') ||
+        !result.cited) throw new Error(JSON.stringify(result));
+    await reader.close();
+});
+
 await check('spoiler-free ordering guide hides its event table', async () => {
     await page.uncheck('#showSpoilers');
     await page.click('#orderingGuideBtn');

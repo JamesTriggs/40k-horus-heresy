@@ -776,6 +776,10 @@
         "https://wh40k.lexicanum.com/wiki/Shadrak_Meduson"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/nick-kyme/promethean-sun-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "shadows-of-treachery-death-of-silversmith": {
@@ -1410,7 +1414,7 @@
     "anthology": "The Burden of Loyalty",
     "details": "\n            <strong>Author:</strong> Rob Sanders<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> The Burden of Loyalty Anthology<br>\n            <strong>Legion:</strong> Mechanicum, Raven Guard, Imperial Fists<br>\n            <strong>Main Characters:</strong> The Carrion, Rogal Dorn, Malcador the Sigillite<br>\n            <strong>Timeline:</strong> 005.M31\n        ",
     "blurb": "Rob Sanders returns to the Schism of Mars through the Carrion, a Raven Guard maimed so badly that his Legion sent him to the red planet to train as a Techmarine. He watches the forge world turn on itself, then he and a handful of fellow Techmarines fight clear through waves of corrupted skitarii. His testimony reaches Terra, where Rogal Dorn and Malcador weigh a final solution, the extermination of all life on Mars.",
-    "blurbSafe": "A grievously wounded Raven Guard, sent away from his Legion to train as a Techmarine on Mars, is on the red planet when the Mechanicum begins to tear itself apart. What he lives through there will shape how Terra chooses to deal with a forge world that has slipped its leash.",
+    "blurbSafe": "Following the Mechanicum's rebellion on Mars, Dorn and Malcador consider how to stop a threat so near Terra. Their answer may go further than either side expects.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -1419,6 +1423,10 @@
         "https://warhammer40k.fandom.com/wiki/Schism_of_Mars"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/cybernetica-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "fulgrim": {
@@ -1785,13 +1793,17 @@
     "anthology": "Eye of Terra",
     "details": "\n            <strong>Author:</strong> Aaron Dembski-Bowden<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Eye of Terra Anthology<br>\n            <strong>Legion:</strong> Word Bearers, Chaos Daemons<br>\n            <strong>Main Characters:</strong> Lorgar Aurelian, Argel Tal, Ingethel, Magnus the Red<br>\n            <strong>Timeline:</strong> 006.M31\n        ",
     "blurb": "Four days after the Drop Site Massacre, Lorgar assaults the daemon-possessed Fulgrim in front of the assembled traitor primarchs, then recounts to Magnus the pilgrimage he made into the Eye of Terror forty-three years earlier. Guided by the daemon Ingethel, the Word Bearers primarch walked dead worlds and a ruined craftworld, was tested by a champion of Khorne, and was shown visions of Calth, Terra and his Legion's damnation.",
-    "blurbSafe": "Aaron Dembski-Bowden's novella follows Lorgar of the Word Bearers on the pilgrimage into the Eye of Terror that shaped him, guided by a daemon through dead worlds and impossible visions. It is framed by a gathering of the traitor primarchs in the aftermath of Isstvan V.",
+    "blurbSafe": "After the Emperor's rebuke at Monarchia, Lorgar seeks the truth of the cosmos beyond the known galaxy. Drawn towards the Eye of Terror, he faces forces that may change the Word Bearers' course.",
     "research": {
       "confidence": "high",
       "sources": [
         "https://wh40k.lexicanum.com/wiki/Aurelian_(Novella)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/aurelian-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "eye-massacre": {
@@ -1890,6 +1902,10 @@
         "https://40ktimeline.com/books/scorched-earth"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/nick-kyme/scorched-earth-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "flame-artefacts": {
@@ -2009,7 +2025,7 @@
     "anthology": "The Silent War",
     "details": "\n            <strong>Author:</strong> Anthony Reynolds<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> The Silent War Anthology<br>\n            <strong>Legion:</strong> Word Bearers, Ultramarines, Imperial Fists<br>\n            <strong>Main Characters:</strong> Sor Talgron, Rogal Dorn, Aecus Decimus, Jarulek<br>\n            <strong>Timeline:</strong> 006-008.M31\n        ",
     "blurb": "Sor Talgron, captain of the Word Bearers' 34th Company, is recalled from Terra where he has spent years playing the trusted ally to Rogal Dorn. Before he leaves he murders the Terran-born Predicant Volkhar Wreth and has a daemon bound into the corpse. He then takes his company to Percepton Primus in Ultramar, where a 163-day war against the Ultramarines ends with the defenders scouring their own world with phosphex.",
-    "blurbSafe": "A Word Bearers captain has spent the years before the Heresy stationed on Terra, treated as a friend by the Imperial Fists. Recalled to Lorgar's side for the Shadow Crusade, he leads his company into a long and vicious siege against the Ultramarines in Ultramar.",
+    "blurbSafe": "As the Shadow Crusade spreads across Ultramar, Word Bearers commander Sor Talgron attacks the isolated world of Percepton Primus. The prolonged campaign leaves him questioning his place in Lorgar’s plans.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2017,6 +2033,10 @@
         "https://wh40k.lexicanum.com/wiki/The_Purge_(Novella)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/anthony-reynolds/the-purge-audiobook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "shattered-meduson": {
@@ -2336,7 +2356,7 @@
     "anthology": "The Primarchs",
     "details": "\n            <strong>Author:</strong> Gav Thorpe<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> The Primarchs Anthology<br>\n            <strong>Legion:</strong> Dark Angels, Death Guard, Iron Hands<br>\n            <strong>Main Characters:</strong> Lion El'Jonson, Corswain, Calas Typhon, Nemiel, Theralyn Fiana, Lasko Midoa<br>\n            <strong>Timeline:</strong> 007-009.M31\n        ",
     "blurb": "Eighty-two days after fighting Konrad Curze at Tsagualsa, the Lion turns aside from the Thramas Crusade for Perditus, where Calas Typhon's Death Guard and a stranded Iron Hands force are contesting a Mechanicum facility that houses Tuchulcha, a sentient warp engine. En route the Invincible Reason is boarded by daemons, and the Lion beheads the Chaplain Nemiel for refusing to let the Librarians fight, setting aside the Edict of Nikaea. He takes the machine and destroys the planet.",
-    "blurbSafe": "Deep into the Thramas Crusade and unable to shake a pursuer through the warp, Lion El'Jonson diverts to a remote Mechanicum research world where Death Guard and Iron Hands forces are already fighting over a secret device. Working out who to believe will cost the Dark Angels a great deal more than a battle.",
+    "blurbSafe": "Amid their campaign against the Night Lords, the Dark Angels are caught between two brother Legions and a daemonic threat. Lion El'Jonson must decide whom to trust before the conflict widens.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2345,6 +2365,10 @@
         "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/the-lion-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-primarchs-serpent-beneath": {
@@ -2388,7 +2412,7 @@
     "anthology": "Shadows of Treachery",
     "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Shadows of Treachery Anthology<br>\n            <strong>Legion:</strong> Imperial Fists, Iron Warriors<br>\n            <strong>Main Characters:</strong> Alexis Polux, Rogal Dorn, Sigismund, Perturabo, Amandus Tyr<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "Becalmed by warp storms in the Phall system, Captain Alexis Polux inherits command of Dorn's Retribution Fleet and holds a defensive sphere for months while his astropaths burn themselves out reaching for Terra. On Terra, Sigismund admits he asked to stay behind because Euphrati Keeler prophesied he would die at Phall. Perturabo attacks expecting to face Sigismund. Polux obeys the recall order, loses Amandus Tyr and the Tribune, and escapes aboard a captured Iron Warriors ship.",
-    "blurbSafe": "Trapped in the Phall system for months and cut off from Terra, Captain Alexis Polux has to choose between forcing a way home and holding the Retribution Fleet where it is. The Iron Warriors have already found him, and on Terra his primarch is dealing with a confession he did not want to hear.",
+    "blurbSafe": "Captain Alexis Polux and an Imperial Fists fleet are stranded in the Phall system by warp storms. As they seek a way back to the wider war, the Iron Warriors move to attack them.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2397,6 +2421,10 @@
         "https://wh40k.lexicanum.com/wiki/Shadows_of_Treachery"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/john-french/the-crimson-fist-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "mark-of-calth-calth-that-was": {
@@ -2413,7 +2441,7 @@
     "anthology": "Mark of Calth",
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Mark of Calth Anthology<br>\n            <strong>Legion:</strong> Ultramarines, Word Bearers<br>\n            <strong>Main Characters:</strong> Remus Ventanus<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "Graham McNeill returns to Remus Ventanus, the Saviour of Calth, as the war drags on across the poisoned surface and down in the arcologies below. Moving to destroy a large Word Bearers contingent still operating above ground, Ventanus is drawn into a trap that could end every remaining life on the planet, and into an encounter that will shape the Ultramarines for ten thousand years to come.",
-    "blurbSafe": "The war on Calth is far from finished, above ground and below it, and Remus Ventanus sets out against a Word Bearers force still operating on the surface. What he meets there will matter to his Legion for a very long time afterwards.",
+    "blurbSafe": "The war on Calth continues after the first betrayal. Remus Ventanus and the Ultramarines fight to survive amid the devastated world and confront the Word Bearers still threatening its people.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -2422,6 +2450,10 @@
         "https://wordaholicanonymous.wordpress.com/2023/01/07/7336/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/mark-of-calth-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "mark-of-calth-dark-heart": {
@@ -2534,7 +2566,7 @@
     "anthology": "Legacies of Betrayal",
     "details": "\n            <strong>Author:</strong> Chris Wraight<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Legacies of Betrayal Anthology<br>\n            <strong>Legion:</strong> White Scars<br>\n            <strong>Main Characters:</strong> Shiban Khan, Jaghatai Khan<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "A novella and the first substantial look at the Heresy-era White Scars, written as a direct prequel to the novel Scars. On the ork-held world of Chondax, Shiban Khan leads his warriors in the fast, joyous war of speed and lance the V Legion prefers, while a Stormseer wrestles with his waking gifts and an outsider struggles to keep the Legion supplied. Half the galaxy has already chosen sides, and Jaghatai Khan's silence is starting to look like a choice of its own.",
-    "blurbSafe": "On the ork battlefields of Chondax, Shiban Khan leads his White Scars in a war of speed and lance, while the rest of the Imperium waits to learn where Jaghatai Khan stands.",
+    "blurbSafe": "The White Scars have fought a long war against the orks of Chondax while the wider Imperium has heard little from them. As news of Horus’s rebellion spreads, the Legion must turn its attention beyond that distant campaign.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2542,6 +2574,10 @@
         "https://grimdarkarchive.com/book/brotherhood-of-the-storm/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/brotherhood-of-the-storm-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "legacies-honour-dead": {
@@ -2856,6 +2892,10 @@
         "https://www.blacklibrary.com/the-horus-heresy/novels/corax-ebook.html"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/corax-soulforge-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "corax-ravenlord": {
@@ -2881,6 +2921,10 @@
         "https://www.blacklibrary.com/all-products/ravenlord"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/ravenlord-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "corax-shadowmasters": {
@@ -3058,7 +3102,7 @@
     "anthology": "The Burden of Loyalty",
     "details": "\n            <strong>Author:</strong> Chris Wraight<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> The Burden of Loyalty Anthology<br>\n            <strong>Legion:</strong> Space Wolves, Alpha Legion, Dark Angels<br>\n            <strong>Main Characters:</strong> Leman Russ, Bjorn, Gunnar Gunnhilt, Kva<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "Bridging SCARS and VENGEFUL SPIRIT, Wraight's novella finds the Space Wolves still bleeding from the razing of Prospero and run to ground in the Alaxxes Nebula by the Alpha Legion fleet. Jaghatai Khan refuses to come, and a demoralised Leman Russ shuts himself away, leaving First Captain Gunnar Gunnhilt to fight the breakout and young Bjorn to talk his primarch back from despair. Gunnhilt dies buying time, and a Dark Angels fleet hidden in the nebula finally turns the battle.",
-    "blurbSafe": "Battered by Prospero and cornered in a corrosive nebula by an Alpha Legion fleet, the Space Wolves call on a brother Legion for aid. With his ships trapped and supplies failing, Leman Russ must work out what the Emperor's executioner is actually for.",
+    "blurbSafe": "After the fighting at Prospero, the Space Wolves are trapped in the Alaxxes Nebula by an Alpha Legion fleet. With supplies running low, Leman Russ must find a way for his warriors to survive.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -3067,6 +3111,10 @@
         "https://www.trackofwords.com/2015/11/29/1398-2/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/wolf-king-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "heralds-children-sicarus": {
@@ -4281,6 +4329,10 @@
         "https://www.trackofwords.com/2017/05/30/sons-of-the-forge-nick-kyme/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/sons-of-the-forge-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-crimson-king": {
@@ -4889,7 +4941,11 @@
       "reviewedAt": "2026-08-02"
     },
     "collectionRelation": "novelised in",
-    "collectionSource": "https://www.blacklibrary.com/series/the-horus-heresy/hh-garro-weapon-of-fate-ebook.html"
+    "collectionSource": "https://www.blacklibrary.com/series/the-horus-heresy/hh-garro-weapon-of-fate-ebook.html",
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/garro-vow-of-faith-ebook.html",
+      "reviewedAt": "2026-09-27"
+    }
   },
   "shattered-seventh-serpent": {
     "number": "XLIII.11",
@@ -4918,6 +4974,10 @@
         "https://speculiction.blogspot.com/2024/04/review-of-shattered-legions-ed-by.html"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/the-seventh-serpent-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "wolfsbane": {
@@ -5224,7 +5284,7 @@
     "anthology": "Corax",
     "details": "\n            <strong>Author:</strong> Gav Thorpe<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Corax Anthology<br>\n            <strong>Legion:</strong> Raven Guard, Space Wolves, Sons of Horus, Thousand Sons, Alpha Legion<br>\n            <strong>Main Characters:</strong> Corvus Corax, Leman Russ, Ezekyle Abaddon, Marcus Valerius, Agapito, Bjorn<br>\n            <strong>Timeline:</strong> 013.M31\n        ",
     "blurb": "Corax leads the Raven Guard to Yarant III, breaking a traitor blockade to reach the Space Wolves, who are making a last stand under Ezekyle Abaddon's Sons of Horus, Thousand Sons and Alpha Legion while Leman Russ lies comatose. Learning that Marcus Valerius's visions have steered him for years, Corax breaks, sends the Raptors and most of his Legion clear, and leads a suicidal charge alongside Bjorn. He survives, parts from the Wolves and vows to fight Horus from the shadows.",
-    "blurbSafe": "Corvus Corax takes the Raven Guard to the aid of the Space Wolves, besieged on a distant world by a traitor host under Ezekyle Abaddon. Concluding Gav Thorpe's Raven Guard arc, it forces Corax to reckon with everything his shadow war has cost him.",
+    "blurbSafe": "Corax and the Raven Guard continue their campaign against the Warmaster’s allies. As the Legion struggles with the cost of rebuilding after Isstvan V, its primarch must face a difficult choice about its future.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5234,6 +5294,10 @@
         "https://www.blacklibrary.com/the-horus-heresy/novels/corax-ebook.html"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/corax-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "heralds-duty-waits": {
