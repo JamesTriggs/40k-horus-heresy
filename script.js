@@ -685,7 +685,7 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
             const titleMatch = book.title.toLowerCase().includes(query);
             const authorMatch = book.author.toLowerCase().includes(query);
             const charactersMatch = showSpoilers && book.details.toLowerCase().includes(query);
-            const visibleBlurb = showSpoilers ? book.blurb : book.blurbSafe;
+            const visibleBlurb = showSpoilers ? book.blurb : (book.safeSummaryReview ? book.blurbSafe : '');
             const blurbMatch = visibleBlurb?.toLowerCase().includes(query) ?? false;
 
             if (!titleMatch && !authorMatch && !charactersMatch && !blurbMatch) {
@@ -1879,7 +1879,7 @@ function showModal(bookKey, { updateUrl = true } = {}) {
 
     document.title = `${book.title} | Horus Heresy Archive`;
     const description = document.querySelector('meta[name="description"]');
-    if (description) description.content = book.blurbSafe || BASE_DESCRIPTION;
+    if (description) description.content = book.safeSummaryReview ? book.blurbSafe : BASE_DESCRIPTION;
 
     if (updateUrl) {
         const id = workIdentityByKey.get(bookKey) || bookKey;
@@ -1892,7 +1892,9 @@ function showModal(bookKey, { updateUrl = true } = {}) {
 
     // Check spoiler setting
     const showSpoilers = document.getElementById('showSpoilers')?.checked ?? false;
-    const blurbText = showSpoilers ? book.blurb : (book.blurbSafe || 'Summary withheld in spoiler-free mode.');
+    const blurbText = showSpoilers ? book.blurb : (book.safeSummaryReview
+        ? book.blurbSafe
+        : 'Introduction pending spoiler review. Enable spoilers to read the full synopsis.');
 
     // Populate modal content with clickable character names
     modalTitle.textContent = book.title;

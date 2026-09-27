@@ -870,6 +870,31 @@ await check('spoiler-free book and character details hide outcomes', async () =>
     if (!character.includes('Character details are hidden')) throw new Error('character details were not redacted');
 });
 
+await check('unreviewed introductions stay out of work details, search and metadata', async () => {
+    const reader = await newPage({ width: 1280, height: 844 });
+    await reader.goto(BASE, { waitUntil: 'load' });
+    await reader.evaluate(() => showModal('tales-of-heresy-the-last-church', { updateUrl: false }));
+    const result = await reader.evaluate(() => ({
+        blurb: document.querySelector('#blurb').textContent,
+        description: document.querySelector('meta[name="description"]').content,
+    }));
+    if (!result.blurb.includes('Introduction pending spoiler review') ||
+        result.blurb.includes('sole surviving church') ||
+        result.description.includes('sole surviving church')) {
+        throw new Error(JSON.stringify(result));
+    }
+    await reader.evaluate(() => closeModal({ updateHistory: false }));
+    await reader.fill('#searchInput', 'sole surviving church');
+    await reader.waitForTimeout(450);
+    if (await reader.locator('.book-card').count() !== 0) throw new Error('unreviewed safe text matched search');
+    await reader.fill('#searchInput', '');
+    await reader.check('#showSpoilers');
+    await reader.evaluate(() => showModal('tales-of-heresy-the-last-church', { updateUrl: false }));
+    const revealed = await reader.locator('#blurb').innerText();
+    if (!revealed.includes('Uriah chooses to burn')) throw new Error('full synopsis was unavailable by choice');
+    await reader.close();
+});
+
 await check('reviewed safe introductions keep major plot turns out of default work details', async () => {
     const reader = await newPage({ width: 390, height: 844 });
     for (const [key, spoiler] of [
