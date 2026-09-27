@@ -1002,6 +1002,28 @@ await check('every novel and anthology has a sourced spoiler-free introduction',
     await reader.close();
 });
 
+await check('Primarchs novella introductions do not reveal identities or earlier outcomes', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    for (const [key, spoiler] of [
+        ['the-primarchs-feat-of-iron', "Iron Hands' own augmetics"],
+        ['the-primarchs-reflection-crackd', 'Lucius, of all people'],
+        ['the-primarchs-serpent-beneath', 'Omegon'],
+        ['shadows-of-treachery-prince-of-crows', 'Curze lies comatose'],
+    ]) {
+        await reader.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await reader.waitForSelector('#modalOverlay.active');
+        const result = await reader.evaluate((workKey) => ({
+            blurb: document.querySelector('#blurb').textContent,
+            expected: bookData[workKey].blurbSafe,
+            cited: document.querySelector('#workResearch').textContent.includes('product description'),
+        }), key);
+        if (!result.blurb.includes(result.expected) || result.blurb.includes(spoiler) || !result.cited) {
+            throw new Error(`${key}: ${JSON.stringify(result)}`);
+        }
+    }
+    await reader.close();
+});
+
 await check('spoiler-free ordering guide hides its event table', async () => {
     await page.uncheck('#showSpoilers');
     await page.click('#orderingGuideBtn');

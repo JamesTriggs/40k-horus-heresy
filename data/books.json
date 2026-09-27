@@ -690,7 +690,7 @@
     "anthology": "The Primarchs",
     "details": "\n            <strong>Author:</strong> Nick Kyme<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> The Primarchs Anthology<br>\n            <strong>Legion:</strong> Iron Hands, Salamanders, Death Guard, Imperial Army<br>\n            <strong>Main Characters:</strong> Ferrus Manus, Gabriel Santar, Bion Henricos, Shadrak Meduson<br>\n            <strong>Timeline:</strong> 001.M31\n        ",
     "blurb": "At the height of the Great Crusade, Ferrus Manus drives the Iron Hands through the deserts of One-Five-Four Four while Vulkan and Mortarion fight elsewhere on the same world. Eldar farseers turn the Legion's bionics against them and pull the Gorgon into a psychic labyrinth, meaning to warn him of the Heresy and his own death. He refuses to listen. Above ground, Sergeant Bion Henricos strikes off his iron hand and leads unaugmented Imperial Army troops to break the enemy.",
-    "blurbSafe": "Ferrus Manus is running behind schedule on a hostile desert world, campaigning alongside Vulkan and Mortarion and increasingly convinced that Eldar witchcraft is to blame for his Legion's poor showing. When the enemy turns the Iron Hands' own augmetics against them, the Gorgon's creed is put on trial.",
+    "blurbSafe": "At the height of the Great Crusade, Ferrus Manus fights beside the Salamanders and Death Guard on an alien-held world. Cut off from his allies, he must decide whether to heed a warning that could change his future.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -699,6 +699,10 @@
         "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/feat-of-iron-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "war-virtues-sons": {
@@ -1611,7 +1615,7 @@
     "anthology": "The Primarchs",
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> The Primarchs Anthology<br>\n            <strong>Legion:</strong> Emperor's Children<br>\n            <strong>Main Characters:</strong> Lucius, Fulgrim, Julius Kaesoron, Fabius, Marius Vairosean, Eidolon<br>\n            <strong>Timeline:</strong> 006.M31\n        ",
     "blurb": "After the Drop Site Massacre, Lucius decides that the Fulgrim leading the Emperor's Children is an impostor and talks Julius Kaesoron, Fabius and Marius Vairosean into seizing their primarch and torturing the daemon out of him. Fulgrim submits to all of it, then rises from the rack unharmed. He had already forced the possessing daemon into the portrait hanging in La Fenice, and the whole episode was a lesson for his favoured sons.",
-    "blurbSafe": "The Emperor's Children are sliding into excess and their primarch's behaviour has grown erratic and capricious. Lucius, of all people, is the first to work out that something about Fulgrim does not add up, and persuading the Brotherhood of the Phoenix to act on that suspicion is dangerous work.",
+    "blurbSafe": "The Emperor's Children notice troubling changes in Fulgrim and plot to confront what they believe has taken hold of their primarch. Their plan unfolds amid the Legion's descent into excess.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -1619,6 +1623,10 @@
         "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/the-reflection-crackd-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "shadows-of-treachery-ravens-flight": {
@@ -2352,7 +2360,7 @@
     "anthology": "The Primarchs",
     "details": "\n            <strong>Author:</strong> Rob Sanders<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> The Primarchs Anthology<br>\n            <strong>Legion:</strong> Alpha Legion<br>\n            <strong>Main Characters:</strong> Omegon, Sheed Ranko, Goran Setebos, Xalmagundi, Volkern Auguramus, Alpharius<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "Omegon assembles Sigma Squad, a rogue telekinetic named Xalmagundi and a Mechanicum adept to infiltrate and destroy Tenebrae Station, an Alpha Legion warp-manipulation facility that has kept the White Scars blind and contained on Chondax. The raid succeeds at ruinous cost, and the survivors learn only at the end that the Omegon leading them is Captain Sheed Ranko in disguise. The real Omegon then lies to Alpharius about why the station had to die.",
-    "blurbSafe": "Omegon puts together a team of Alpha Legion operatives, a rogue psyker and a Mechanicum adept for a raid on a top-secret installation, one that the Alpha Legion itself controls. Nobody on the mission is told more than they need to know, and that includes who is really giving the orders.",
+    "blurbSafe": "An Alpha Legion commander assembles a team to infiltrate one of the Legion's own secret installations. In a mission built on deception, even the operatives cannot be sure whose plan they are carrying out.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2360,6 +2368,10 @@
         "https://wh40k.lexicanum.com/wiki/The_Primarchs_(Anthology)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/the-serpent-beneath-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "shadows-of-treachery-crimson-fist": {
@@ -3718,7 +3730,7 @@
     "anthology": "Shadows of Treachery",
     "details": "\n            <strong>Author:</strong> Aaron Dembski-Bowden<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Shadows of Treachery Anthology<br>\n            <strong>Legion:</strong> Night Lords, Dark Angels<br>\n            <strong>Main Characters:</strong> Sevatar, Konrad Curze, Lion El'Jonson, Alastor Rushal<br>\n            <strong>Timeline:</strong> 009.M31\n        ",
     "blurb": "With Konrad Curze comatose after the Lion mauled him at Sheol, First Captain Jago Sevatarion takes the Night Lords. He has two Kyroptera captains murdered to end the argument about revenge, reorganises the Legion into six autonomous Great Companies, and walks into his primarch's mind, where he sees the boy who became the Night Haunter. Curze wakes, orders a boarding of the Invincible Reason, and Sevatar ends the novella a prisoner.",
-    "blurbSafe": "The Thramas Crusade has gone badly for the Night Lords and Konrad Curze lies comatose, leaving First Captain Sevatar in charge of a Legion whose surviving captains want revenge. Sevatar has his own ideas about how the VIII survives, and about what is really wrong with their primarch.",
+    "blurbSafe": "As the Thramas Crusade reaches a crisis, Sevatar and the Night Lords struggle to hold their divided Legion together. The First Captain has his own plan for its survival.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -3727,6 +3739,10 @@
         "https://wh40k.lexicanum.com/wiki/Shadows_of_Treachery"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/prince-of-crows-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "legacies-lucius": {
