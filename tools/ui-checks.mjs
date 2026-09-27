@@ -962,6 +962,30 @@ await check('all standalone Primarchs introductions have publisher reviews', asy
     await reader.close();
 });
 
+await check('major novel introductions keep later revelations out of spoiler-free mode', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    for (const [key, spoiler] of [
+        ['legion', 'twins Alpharius and Omegon'],
+        ['deliverance-lost', 'Alpha Legion operatives have infiltrated'],
+        ['angel-exterminatus', 'ascension and sacrifice'],
+        ['the-unremembered-empire', 'establishes Imperium Secundus'],
+        ['old-earth', 'Reborn beneath Mount Deathfire'],
+        ['ruinstorm', 'Imperium Secundus is finished'],
+    ]) {
+        await reader.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await reader.waitForSelector('#modalOverlay.active');
+        const result = await reader.evaluate((workKey) => ({
+            blurb: document.querySelector('#blurb').textContent,
+            expected: bookData[workKey].blurbSafe,
+            cited: document.querySelector('#workResearch').textContent.includes('product description'),
+        }), key);
+        if (!result.blurb.includes(result.expected) || result.blurb.includes(spoiler) || !result.cited) {
+            throw new Error(`${key}: ${JSON.stringify(result)}`);
+        }
+    }
+    await reader.close();
+});
+
 await check('spoiler-free ordering guide hides its event table', async () => {
     await page.uncheck('#showSpoilers');
     await page.click('#orderingGuideBtn');

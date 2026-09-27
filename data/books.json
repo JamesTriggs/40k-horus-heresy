@@ -625,7 +625,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Alpha Legion<br>\n            <strong>Main Characters:</strong> Alpharius, Omegon, John Grammaticus, Hurtado Bronzi, Peto Soneka<br>\n            <strong>Timeline:</strong> 001.M31\n        ",
     "blurb": "The Alpha Legion operates in the shadows of the Great Crusade, their methods questioned by all. When they encounter the Cabal, a xenos organization that claims to see the future, the twins Alpharius and Omegon are presented with a terrible choice: let the Imperium burn to deny Chaos, or fight for humanity's survival. Their decision will shape the course of the Heresy, though none will know which side they truly serve.",
-    "blurbSafe": "The Alpha Legion operates in shadows, their methods questioned by all who witness them. When they encounter the Cabal, a mysterious xenos organization claiming to see the future, the twins Alpharius and Omegon must make a choice that will shape the coming conflict in ways none can predict.",
+    "blurbSafe": "As the Imperium moves towards civil war, the secretive Alpha Legion joins an Imperial Army campaign on a distant world. Their motives remain obscure, and even their allies cannot know which side they will choose.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -635,6 +635,10 @@
         "https://warhammer40k.fandom.com/wiki/Alpha_Legion"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/legion-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "a-thousand-sons": {
@@ -910,7 +914,7 @@
     "legions": [],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Various<br>\n            <strong>Main Characters:</strong> Kai Zulane, Atharva, Severian, Yasu Nagasena<br>\n            <strong>Timeline:</strong> 004.M31\n        ",
     "blurb": "While the Heresy erupts across the galaxy, Terra writhes with its own conflicts. Renegade Space Marines from various Legions are imprisoned deep beneath the Imperial Palace. When astropath Kai Zulane receives a prophetic vision of the Heresy's outcome, he becomes the most hunted man on Terra. The Outcast Dead must fight through the underhives and face the deadly custodians to deliver a message that could change everything.",
-    "blurbSafe": "Deep beneath the Imperial Palace, renegade Space Marines from various Legions are imprisoned. When astropath Kai Zulane receives a prophetic vision about the Heresy, he becomes hunted by every faction on Terra. The Outcast Dead must fight through the underhives to deliver a message that could change everything.",
+    "blurbSafe": "Astropath Kai Zulane learns a secret that could change the war and is forced to flee through Terra's underworld with a band of renegades. He must decide who to trust before the people pursuing him catch up.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -920,7 +924,11 @@
       ],
       "reviewedAt": "2026-08-02"
     },
-    "factionScope": "various"
+    "factionScope": "various",
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/the-outcast-dead-ebook-ebook.html",
+      "reviewedAt": "2026-09-27"
+    }
   },
   "prospero-burns": {
     "number": "XV",
@@ -2100,7 +2108,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Gav Thorpe<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Raven Guard, Alpha Legion<br>\n            <strong>Main Characters:</strong> Corvus Corax, Omegon, Branne Nev, Vincente Sixx<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "Three months after the Drop Site Massacre, Corax is lifted off Isstvan V with a fraction of his Legion and wins from the Emperor the secret gene-stock of the Primarch Project. The first accelerated cadre, the Raptors, is a triumph, but Alpha Legion infiltrators taint the remaining gene-tech with a daemon-touched virus. The next two thousand recruits emerge hideously mutated, Omegon escapes with the stolen primarch DNA, and Corax abandons the shortcut for good.",
-    "blurbSafe": "Decimated at Isstvan V, Corvus Corax seeks to rebuild his Legion using gene-tech from the Emperor's laboratories. But Alpha Legion operatives have infiltrated his ranks, threatening to sabotage the Raven Guard's desperate attempt at salvation.",
+    "blurbSafe": "After the catastrophe at Isstvan V, Corax gathers the survivors of the Raven Guard and seeks a way to rebuild. As they prepare to rejoin the war, hidden enemies threaten the Legion from within.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2109,6 +2117,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/deliverance-lost-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "nemesis": {
@@ -2234,7 +2246,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Chris Wraight<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> White Scars, Alpha Legion, Death Guard, Space Wolves<br>\n            <strong>Main Characters:</strong> Jaghatai Khan, Shiban Khan, Hasik Noyan-Khan, Mortarion, Revuel Arvida<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "Pinned at Chondax by an Alpha Legion blockade and a storm of contradictory astropathic messages, Jaghatai Khan refuses to pick a side until he knows the truth. He breaks out and takes his fleet to Prospero, finds it a burned ruin, and there Mortarion comes to recruit him; the two primarchs duel among the ashes. Meanwhile the Legion's warrior lodges stage a coup for Horus, and the Khan must break his own sons before riding for Terra.",
-    "blurbSafe": "The White Scars, far from Terra prosecuting the Great Crusade, learn of the Heresy late. Jaghatai Khan must decide which side to join as his Legion divides between those loyal to the Emperor and those who would follow Horus. The Khan's choice will define the White Scars forever.",
+    "blurbSafe": "As the Heresy reaches the far-flung White Scars, Jaghatai Khan receives conflicting claims about the war. An unexpected attack forces him to decide where his Legion's loyalties lie.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2243,6 +2255,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/scars-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "age-of-darkness-savage-weapons": {
@@ -3528,7 +3544,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Iron Warriors, Emperor's Children, Iron Hands, Raven Guard<br>\n            <strong>Main Characters:</strong> Perturabo, Fulgrim, Nykona Sharrowkyn, Sabak Wayland<br>\n            <strong>Timeline:</strong> 009.M31\n        ",
     "blurb": "Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo, master of siege warfare but always bitter at being overlooked, seeks ancient weapons to use against the Emperor. But Fulgrim has darker plans—he intends to ascend to daemonhood by sacrificing Perturabo. The Iron Warriors Primarch barely escapes the trap, emerging with his paranoia and bitterness magnified. Fulgrim achieves his goal, becoming a daemon prince of Slaanesh. The alliance between the Legions fractures further.",
-    "blurbSafe": "Fulgrim manipulates Perturabo into a joint expedition to the Eldar Crone World of Iydris. Perturabo seeks ancient weapons, but Fulgrim has darker plans involving ascension and sacrifice. The alliance between the Iron Warriors and Emperor's Children will be tested in ways neither anticipated.",
+    "blurbSafe": "Fulgrim offers Perturabo a chance to seek powerful xenos weaponry on a distant eldar world. The Iron Warriors and Emperor's Children join forces, but neither Legion can be sure what waits in the star maelstrom.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -3537,6 +3553,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/angel-exterminatus-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "vengeful-spirit": {
@@ -3583,7 +3603,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Ultramarines, Dark Angels, Blood Angels, Night Lords, Salamanders<br>\n            <strong>Main Characters:</strong> Roboute Guilliman, Lion El'Jonson, Konrad Curze, Vulkan, Sanguinius, John Grammaticus<br>\n            <strong>Timeline:</strong> 009-010.M31\n        ",
     "blurb": "Believing Terra fallen and the Emperor dead, Guilliman raises Imperium Secundus on Macragge behind the Ruinstorm, navigating by the xenos beacon of the Pharos. Lion El'Jonson arrives suspecting his brother of usurpation, a burned and half-mad Vulkan falls out of the sky, and Konrad Curze stalks the city, coming within a blade's length of killing Guilliman. Curze is finally run down, Grammaticus spears Vulkan with the fulgurite, and Sanguinius arrives to be crowned.",
-    "blurbSafe": "Believing Terra has fallen, Roboute Guilliman establishes Imperium Secundus on Macragge. When Lion El'Jonson and Sanguinius arrive, tensions rise as questions of loyalty and ambition threaten to fracture the alliance. The three Primarchs must decide humanity's future.",
+    "blurbSafe": "Cut off from Terra by warp storms, Guilliman gathers loyalist survivors on Macragge. New arrivals blur the line between friend and foe as he considers how to protect Ultramar and the wider Imperium.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -3593,6 +3613,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/ebook-the-unremembered-empire-eng-2025.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "pharos": {
@@ -4704,7 +4728,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Nick Kyme<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Salamanders, Iron Hands, Raven Guard, Word Bearers, Imperial Fists<br>\n            <strong>Main Characters:</strong> Vulkan, Shadrak Meduson, John Grammaticus, Eldrad Ulthran, Barthusa Narek, Rogal Dorn<br>\n            <strong>Timeline:</strong> 011.M31\n        ",
     "blurb": "Reborn beneath Mount Deathfire with almost no memory of why, Vulkan takes three legionaries as his Draaksward and walks the webway towards Terra. On the way he fights through a fringe realm of Commorragh, finds Shadrak Meduson's Shattered Legions tearing themselves apart over a fraudulent resurrected Ferrus Manus, and kills a Great Unclean One at Calastar. Eldrad Ulthran delivers him to the Imperial Palace, where the Emperor reveals that the talisman Vulkan forged is a dead man's switch, built to destroy Terra rather than let Horus have it.",
-    "blurbSafe": "Reborn beneath Mount Deathfire and haunted by a sense of destiny he cannot yet name, Vulkan gathers a handful of trusted sons and sets out on the last stage of his journey. The road runs past the feuding remnants of the legions shattered at Isstvan V, where rumours of Ferrus Manus's return are spreading, and Vulkan must choose between their war of vengeance and a path of his own.",
+    "blurbSafe": "Vulkan sets out with a small group of trusted Salamanders on a journey towards Terra. As the Legions shattered at Isstvan V struggle to stay united, he must choose between their campaign of vengeance and a path of his own.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4713,6 +4737,10 @@
         "https://warhammer40k.fandom.com/wiki/Old_Earth_(Novel)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/old-earth-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "ruinstorm": {
@@ -4730,7 +4758,7 @@
     ],
     "details": "\n            <strong>Author:</strong> David Annandale<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Ultramarines, Dark Angels, Blood Angels, Word Bearers<br>\n            <strong>Main Characters:</strong> Sanguinius, Roboute Guilliman, Lion El'Jonson, Konrad Curze, Madail<br>\n            <strong>Timeline:</strong> 011.M31\n        ",
     "blurb": "Imperium Secundus stands revealed as a heretical folly, and Guilliman, the Lion and Sanguinius take their Legions into the Ruinstorm, steering by captured traitor Navigators and dragging the chained Konrad Curze along. A vision sends Sanguinius to Davin, the world where Horus fell, and there the daemon Madail offers him the Warmaster's place. He refuses, the Sanguinor takes his place in the portal, and Davin is destroyed. The storm thins, and the three primarchs part ways for Terra.",
-    "blurbSafe": "Imperium Secundus is finished, Terra still stands, and Sanguinius, Guilliman and the Lion mean to reach it whatever the cost. The Ruinstorm hides the Throneworld from them, and something inside the storm is watching every move and working patiently on each primarch's private weakness.",
+    "blurbSafe": "Sanguinius, Guilliman and the Lion lead their Legions into the Ruinstorm, hoping to reach Terra. The warp hides their destination and an unseen enemy seeks to exploit each primarch's doubts.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4739,6 +4767,10 @@
         "https://warhammer40k.fandom.com/wiki/Ruinstorm_(Novel)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/ruinstorm-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "legacies-riven": {
