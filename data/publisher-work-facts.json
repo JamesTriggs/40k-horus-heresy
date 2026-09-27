@@ -366,25 +366,33 @@
       "title": "TALLARN: SIREN",
       "author": "John French",
       "format": "Short Story",
-      "source": "https://www.blacklibrary.com/the-horus-heresy/quick-reads/tallarn-siren-ebook.html"
+      "source": "https://www.blacklibrary.com/the-horus-heresy/quick-reads/tallarn-siren-ebook.html",
+      "reviewedAt": "2026-09-27"
     },
     "tallarn-executioner": {
       "title": "TALLARN: EXECUTIONER",
       "author": "John French",
       "format": "Novella",
-      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-executioner-ebook.html"
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-executioner-ebook.html",
+      "reviewedAt": "2026-09-27"
     },
     "tallarn-ironclad": {
       "title": "TALLARN: IRONCLAD",
       "author": "John French",
       "format": "Novella",
-      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-ironclad-ebook.html"
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-ironclad-ebook.html",
+      "reviewedAt": "2026-09-27",
+      "formatConflict": {
+        "source": "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html",
+        "note": "The collected Tallarn Book 45 calls Ironclad a novel, so its format remains disputed."
+      }
     },
     "tallarn-witness": {
       "title": "TALLARN: WITNESS",
       "author": "John French",
       "format": "Short Story",
-      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-witness-ebook.html"
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-witness-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   }
 }

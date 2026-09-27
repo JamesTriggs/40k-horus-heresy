@@ -13,7 +13,7 @@ const files = [
     'catalogue-data.js', 'reading-order.json', 'daunt-chart.json',
     'favicon.png', 'favicon-32.png', 'apple-touch-icon.png',
     'ORDERING_DECISIONS.md', 'CATALOGUE_AUDIT.md',
-    'CHART_RECONCILIATION.md', 'ROADMAP.md', 'BUILD_LOG.md',
+    'CHART_RECONCILIATION.md', 'RELEASE_WATCH.md', 'ROADMAP.md', 'BUILD_LOG.md',
 ];
 for (const file of files) cpSync(join(repoRoot, file), join(output, file));
 cpSync(join(repoRoot, 'images'), join(output, 'images'), { recursive: true });

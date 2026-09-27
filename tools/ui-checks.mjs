@@ -777,12 +777,16 @@ await check('Tallarn components have distinct links, a four-work collection and 
         title: document.querySelector('#modalTitle')?.textContent,
         premise: document.querySelector('#blurb')?.textContent,
         collection: document.querySelector('#workCollections')?.textContent,
+        research: document.querySelector('#workResearch')?.textContent,
         overflow: document.documentElement.scrollWidth - innerWidth,
     }));
     await p.close();
     if (!result.title?.includes('IRONCLAD') || !result.premise?.includes('armoured battle') ||
         /secret purpose|defeated/i.test(result.premise) ||
-        !result.collection?.includes('4 listed works') || result.overflow > 1) {
+        !result.collection?.includes('4 listed works') ||
+        !result.collection?.includes('2026-09-27') ||
+        !result.research?.includes('checked 2026-09-27') ||
+        !result.research?.includes('format remains disputed') || result.overflow > 1) {
         throw new Error(JSON.stringify(result));
     }
 });

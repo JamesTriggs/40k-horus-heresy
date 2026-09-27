@@ -153,6 +153,7 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── ROADMAP.md                    # Product and editorial roadmap
 ├── BUILD_LOG.md                  # Slice-by-slice implementation record
 ├── CHART_RECONCILIATION.md       # Publisher evidence for chart-only works
+├── RELEASE_WATCH.md              # Publisher listings awaiting inclusion review
 ├── images/                       # Book covers and character portraits
 │   ├── *.jpg                     # 81 cover images shared across 232 entries
 │   ├── character-*.jpg           # 32 character portraits

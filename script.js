@@ -2053,7 +2053,7 @@ function renderWorkCollections(bookKey) {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             link.textContent = 'Black Library';
-            note.append(link, document.createTextNode(` on ${publisherCollectionsData.reviewedAt}.`));
+            note.append(link, document.createTextNode(` on ${publisher.reviewedAt || publisherCollectionsData.reviewedAt}.`));
             host.append(note);
         } else if (publisherCollectionsData.disputed?.[name]) {
             const dispute = publisherCollectionsData.disputed[name];
@@ -2224,7 +2224,7 @@ function renderWorkResearch(bookKey) {
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
         link.textContent = directFacts.sourceLabel || 'Black Library product page';
-        publication.append(link, document.createTextNode(` (checked ${publisherWorkFactsData.reviewedAt}).`));
+        publication.append(link, document.createTextNode(` (checked ${directFacts.reviewedAt || publisherWorkFactsData.reviewedAt}).`));
         host.append(publication);
         if (directFacts.formatSource) {
             const format = document.createElement('p');
@@ -2236,6 +2236,17 @@ function renderWorkResearch(bookKey) {
             formatLink.textContent = 'Black Library’s Garro volume';
             format.append(formatLink, document.createTextNode(` (checked ${publisherWorkFactsData.reviewedAt}).`));
             host.append(format);
+        }
+        if (directFacts.formatConflict) {
+            const conflict = document.createElement('p');
+            conflict.textContent = `${directFacts.formatConflict.note} `;
+            const conflictLink = document.createElement('a');
+            conflictLink.href = directFacts.formatConflict.source;
+            conflictLink.target = '_blank';
+            conflictLink.rel = 'noopener noreferrer';
+            conflictLink.textContent = 'Black Library collection page';
+            conflict.append(conflictLink);
+            host.append(conflict);
         }
     }
 

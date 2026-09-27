@@ -108,9 +108,13 @@ for (const [key, facts] of Object.entries(publisherWorkFacts.directWorks || {}))
     const book = bookData[key];
     if (!book) { fail(`Direct publisher facts have unknown work '${key}'`); continue; }
     if (!isBlackLibraryUrl(facts.source) || (facts.formatSource && !isBlackLibraryUrl(facts.formatSource)) ||
+        (facts.reviewedAt && !/^\d{4}-\d{2}-\d{2}$/.test(facts.reviewedAt)) ||
+        (facts.formatConflict && (!isBlackLibraryUrl(facts.formatConflict.source) ||
+            typeof facts.formatConflict.note !== 'string' || !facts.formatConflict.note.trim() ||
+            Object.keys(facts.formatConflict).some((field) => !['source', 'note'].includes(field)))) ||
         (facts.sourceLabel && facts.sourceLabel !== 'Black Library audio collection') ||
         Object.keys(facts).some((field) =>
-            !['title', 'author', 'format', 'source', 'formatSource', 'sourceLabel'].includes(field))) {
+            !['title', 'author', 'format', 'source', 'formatSource', 'sourceLabel', 'reviewedAt', 'formatConflict'].includes(field))) {
         fail(`Direct publisher facts for '${key}' have invalid fields or source`);
     }
     for (const field of ['title', 'author', 'format']) {
@@ -194,7 +198,8 @@ for (const [name, route] of Object.entries(readingRoutes)) {
 }
 
 for (const [name, record] of Object.entries(publisherCollections.collections)) {
-    if (!isBlackLibraryUrl(record.source)) {
+    if (!isBlackLibraryUrl(record.source) ||
+        (record.reviewedAt && !/^\d{4}-\d{2}-\d{2}$/.test(record.reviewedAt))) {
         fail(`Publisher collection '${name}' needs a Black Library source URL`);
     }
     const expected = new Set(record.entries.map((entry) => entry.key));

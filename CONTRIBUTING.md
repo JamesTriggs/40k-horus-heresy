@@ -43,17 +43,18 @@ Feature suggestions are welcome! Please [open an issue](https://github.com/James
 ### Testing Your Changes
 
 ```bash
+npm ci
+
 # Generate and check catalogue data
 node tools/build-catalogue.mjs
-node tools/build-catalogue.mjs --check
-node tools/reconcile-catalogue.mjs --check
-node tools/validate-data.mjs
+node tools/generate-ordering-doc.mjs
+node tools/reconcile-catalogue.mjs
+npm run build
 
-# Start local server
-python3 -m http.server 8000
+# Start a local server in another terminal
+python3 -m http.server 8000 --directory dist
 
-# Run browser and accessibility checks with npm dependencies installed
-npm ci
+# Run browser and accessibility checks
 BASE_URL=http://localhost:8000/ npm run check:browser
 BASE_URL=http://localhost:8000/ npm run check:accessibility
 BASE_URL=http://localhost:8000/ npm run check:engines
@@ -87,7 +88,6 @@ If adding new books or fixing book information:
 - **Verify publication facts with a primary source**: Prefer Black Library or the publication itself. Record the URL or bibliographic reference, the date checked and any uncertainty.
 - **Edit `data/books.json`**: Include title, author, timeline, legions, details, blurb, blurbSafe and research metadata.
 - **Keep work IDs stable**: Add new works to `data/work-identities.json`. Reprints should share an identity with the existing work, while every legacy entry key remains mapped.
-- **Cover images**: Add only assets whose use has been reviewed and documented. A placeholder is acceptable.
 - **Regenerate derived files**: Run `node tools/build-catalogue.mjs` and `node tools/reconcile-catalogue.mjs`.
 - **Test spoiler toggle**: Ensure both blurb and blurbSafe are present
 
