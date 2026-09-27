@@ -69,6 +69,9 @@ for (const [key, book] of bookEntries) {
         Object.keys(book.safeSummaryReview).some((field) => !['source', 'reviewedAt'].includes(field)))) {
         fail(`Spoiler-free introduction review for '${key}' is incomplete`);
     }
+    if (['Novel', 'Anthology'].includes(book.format) && !book.safeSummaryReview) {
+        fail(`Novel or anthology '${key}' is missing its spoiler-free introduction review`);
+    }
 }
 try {
     const url = new URL(publisherWorkFacts.source);

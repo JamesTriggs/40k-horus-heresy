@@ -986,6 +986,22 @@ await check('major novel introductions keep later revelations out of spoiler-fre
     await reader.close();
 });
 
+await check('every novel and anthology has a sourced spoiler-free introduction', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    await reader.goto(new URL('#work=deathfire', BASE).href, { waitUntil: 'load' });
+    await reader.waitForSelector('#modalOverlay.active');
+    const result = await reader.evaluate(() => ({
+        reviewed: Object.values(bookData).filter((book) => ['Novel', 'Anthology'].includes(book.format))
+            .every((book) => book.safeSummaryReview?.source.startsWith('https://www.blacklibrary.com/')),
+        blurb: document.querySelector('#blurb').textContent,
+        cited: document.querySelector('#workResearch').textContent.includes('product description'),
+    }));
+    if (!result.reviewed || result.blurb.includes("Vulkan's body") || !result.cited) {
+        throw new Error(JSON.stringify(result));
+    }
+    await reader.close();
+});
+
 await check('spoiler-free ordering guide hides its event table', async () => {
     await page.uncheck('#showSpoilers');
     await page.click('#orderingGuideBtn');

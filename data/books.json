@@ -46,6 +46,10 @@
         "https://warhammer40k.fandom.com/wiki/Fallen_Angels_(Novel)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/descent-of-angels-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-vulkan": {
@@ -1142,7 +1146,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Mechanicum<br>\n            <strong>Main Characters:</strong> Dalia Cythera, Koriel Zeth, Kelbor-Hal<br>\n            <strong>Timeline:</strong> 005.M31\n        ",
     "blurb": "As Horus's treachery spreads, Mars tears itself apart. Fabricator General Kelbor-Hal declares for the Warmaster in exchange for the forbidden knowledge sealed away under the Treaty of Mars, loyalist magi such as Koriel Zeth are hunted through their own forge-temples, and Titan fights Titan. Meanwhile the menial Dalia Cythera builds a machine that reads the warp and uncovers the Dragon of Mars, the ancient thing the Emperor buried beneath the Red Planet.",
-    "blurbSafe": "As Horus's rebellion spreads, the forges of Mars become the greatest prize in the galaxy, and the Mechanicum's own factions begin to circle one another. Amid the gathering storm a young menial named Dalia Cythera is brought to the Red Planet to build a device that should not be possible, while whispers speak of something ancient stirring far below.",
+    "blurbSafe": "As Horus's rebellion reaches Mars, agents of the Warmaster try to turn the forges and Titan Legions against each other. Control of the Red Planet could decide who can arm the armies in the coming war.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -1152,6 +1156,10 @@
         "https://warhammer40k.fandom.com/wiki/Schism_of_Mars"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/Mechanicum-eBook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-flight-of-the-eisenstein": {
@@ -1204,6 +1212,10 @@
         "https://en.wikipedia.org/wiki/The_Horus_Heresy"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/fallen-angels-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "fear-to-tread": {
@@ -1229,6 +1241,10 @@
         "https://warhammer40k.fandom.com/wiki/Drop_Site_Massacre"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/fear-to-tread-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "shadows-of-treachery-lightning-tower": {
@@ -1964,6 +1980,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/damnation-of-pythos-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "silent-purge": {
@@ -2136,7 +2156,7 @@
     ],
     "details": "\n            <strong>Author:</strong> James Swallow<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Officio Assassinorum, Word Bearers<br>\n            <strong>Main Characters:</strong> Malcador the Sigillite, Spear, Erebus, Iota<br>\n            <strong>Timeline:</strong> 007-008.M31\n        ",
     "blurb": "Malcador the Sigillite, secret Grand Master of the Assassin clades, authorises the first Execution Force: six killers, one from every clade, sent to Dagonet to murder Horus after eight lone assassins have already failed. Unknown to them, Erebus has loosed a weapon of his own, a daemon-bonded pariah called Spear whose real target is the Emperor. The two hunts collide on Dagonet, and the strike on Horus fails with all but one assassin dead.",
-    "blurbSafe": "In the shadows of the Imperial Palace, powerful figures authorise a desperate gambit: an Execution Force drawn from every Assassin clade, sent to end the war by killing Horus before it can spread further. What they cannot know is that another assassin is already abroad, with his sights set on a very different target.",
+    "blurbSafe": "In the shadows of the Imperial Palace, powerful figures assemble a team of assassins to kill Horus before the rebellion spreads. Their mission could change the course of the war, but the Traitors have plans of their own.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2145,6 +2165,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/Nemesis-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "know-no-fear": {
@@ -2200,6 +2224,10 @@
         "https://wh40k.lexicanum.com/wiki/Chronological_order_of_settings_of_Black_Library_publications"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/battle-for-the-abyss-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "betrayer": {
@@ -3634,7 +3662,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Guy Haley<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Ultramarines, Imperial Fists, Night Lords, Iron Warriors<br>\n            <strong>Main Characters:</strong> Barabas Dantioch, Alexis Polux, Krukesh the Pale, Gendor Skraivok, Oberdeii<br>\n            <strong>Timeline:</strong> 009.M31\n        ",
     "blurb": "On Sotha, the loyalist Iron Warriors warsmith Barabas Dantioch and Imperial Fists captain Alexis Polux tend the Pharos, the xenos beacon that holds Imperium Secundus together. Krukesh the Pale's scattered Night Lords attack not to destroy it but to seize it, hoping to use it to locate Curze's flagship Nightfall and reunite their broken Legion. Dantioch overloads the device to wreck the invasion fleet and dies doing it. The psychic shockwave carries far beyond the galaxy, where the Tyranid hive fleets take notice.",
-    "blurbSafe": "The Pharos is an ancient xenos device on Sotha, the one thing that pierces the Ruinstorm and holds Imperium Secundus together. When a scattered Night Lords fleet moves against it for reasons of their own, a thin garrison of Ultramarines, Imperial Fists and the exiled warsmith who studies the machine must hold the mountain.",
+    "blurbSafe": "As the Night Lords prepare to attack Sotha, a mysterious installation on the world becomes their target. The defenders of Imperium Secundus must hold it while the wider war closes in.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -3644,6 +3672,10 @@
         "https://warhammer40k.fandom.com/wiki/Pharos"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/popular-characters/popular-roboute-guiliman/pharos-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "age-of-darkness-the-last-remembrancer": {
@@ -4247,7 +4279,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Thousand Sons<br>\n            <strong>Main Characters:</strong> Magnus the Red, Ahzek Ahriman, Amon, Yasu Nagasena, Lemuel Gaumon<br>\n            <strong>Timeline:</strong> 010.M31\n        ",
     "blurb": "Exiled to the Planet of the Sorcerers, Magnus is a hollowed-out thing, his soul shattered into shards flung across reality. Ahriman leads a quest to gather them, raiding the black ship prison of Kamiti Sona and returning to Nikaea and the ashes of Prospero, while Malcador sets his own hunters on the Legion's trail. Magnus is largely made whole by the end, but one last shard of him still lies on Terra.",
-    "blurbSafe": "Exiled to the Planet of the Sorcerers within the Eye of Terror, Magnus is a broken soul whose mind and memories are slipping away into the warp. Ahriman leads the Thousand Sons on a desperate quest to make their primarch whole again, returning to the scenes of the Legion's greatest triumphs and tragedies. Malcador, meanwhile, sets his own agents against them.",
+    "blurbSafe": "The Thousand Sons have escaped Prospero, but Magnus is fracturing under the weight of what happened there. His Legion searches for a way to restore him before they lose their primarch.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4256,6 +4288,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/hh-the-crimson-king-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "silent-lost-sons": {
@@ -4298,7 +4334,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Nick Kyme<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Salamanders, Ultramarines, Word Bearers, Death Guard<br>\n            <strong>Main Characters:</strong> Artellus Numeon, Vulkan, Barthusa Narek, Quor Gallek, Aeonid Thiel<br>\n            <strong>Timeline:</strong> 010.M31\n        ",
     "blurb": "Vulkan already lies in state beneath the Fortress of Hera, and Artellus Numeon, once captain of the Pyre Guard, refuses to accept it. Against the wishes of Imperium Secundus he takes his primarch's stasis casket off Macragge aboard the Charybdis, bound for Nocturne and the fires of Mount Deathfire. Word Bearers under Quor Gallek and the renegade vigilator Barthusa Narek hunt the convoy, wanting the body for rites of their own. Numeon's own death on the mountain proves to be the sacrifice that brings Vulkan back.",
-    "blurbSafe": "Many of Vulkan's sons still refuse to believe their primarch is truly dead. Led by Artellus Numeon, they set out to carry his body from Macragge home to Nocturne and the flames of Mount Deathfire, hunted across war-torn space while Numeon wrestles with his own doubts about what waits at the end of the journey.",
+    "blurbSafe": "Artellus Numeon leads Salamanders from Macragge on a perilous journey to Nocturne. He believes their mission offers hope for the Legion, even as doubt and enemies follow them across the galaxy.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4308,6 +4344,10 @@
         "https://warhammer40k.fandom.com/wiki/Artellus_Numeon"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/deathfire-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "tallarn": {
@@ -4336,6 +4376,10 @@
         "https://wh40k.lexicanum.com/wiki/Tallarn:_Ironclad_(Novella)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "praetorian-of-dorn": {
@@ -4676,7 +4720,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Chris Wraight<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> White Scars, Death Guard, Emperor's Children<br>\n            <strong>Main Characters:</strong> Jaghatai Khan, Targutai Yesugei, Shiban Khan, Torghun Khan, Eidolon, Revuel Arvida, Ilya Ravallion<br>\n            <strong>Timeline:</strong> 011.M31\n        ",
     "blurb": "Four years of attritional warfare against the Death Guard and the Emperor's Children have broken the V Legion's spirit, and the Khan's stormseers are hunting a road to Terra rather than a battle. They find it in the Dark Glass, an ancient webway station, and Eidolon's Emperor's Children come for them at Catallus. When a Navis Nobilite agent destroys the station, Targutai Yesugei binds himself to its command throne and burns his own life to force the portal open, sending the White Scars home.",
-    "blurbSafe": "Four years of grinding warfare against the Death Guard and the Emperor's Children have worn the White Scars down, and Jaghatai Khan's stormseers must find a clear route to Terra if the Legion is to reach the final battle at all. Riding with them are the Sagyar Mazan, once-traitors seeking redemption through death.",
+    "blurbSafe": "Years of fighting have worn down the White Scars, and Jaghatai Khan needs a route to Terra before the final battle. His Stormseers seek a way through enemy forces and the dangers of the warp.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4685,6 +4729,10 @@
         "https://warhammer40k.fandom.com/wiki/The_Path_of_Heaven"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/chris-wraight/path-of-heaven-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "angels-of-caliban": {
@@ -4702,7 +4750,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Gav Thorpe<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Dark Angels, Night Lords, Ultramarines, Blood Angels<br>\n            <strong>Main Characters:</strong> Lion El'Jonson, Konrad Curze, Luther, Zahariel, Roboute Guilliman, Sanguinius<br>\n            <strong>Timeline:</strong> 011.M31\n        ",
     "blurb": "As Lord Protector of Ultramar, the Lion hunts Konrad Curze across the worlds of Imperium Secundus, and his methods are brutal enough to push the Triumvirate to the brink of civil war. He runs Curze down at last and breaks his spine rather than kill him. At the public trial that follows, Guilliman snaps the Lion's sword and Sanguinius banishes him, ending the Triumvirate. Far away on Caliban, Luther and Zahariel bend the Legion's homeworld to their own purpose, and the Lion resolves to go back.",
-    "blurbSafe": "The Lion stands as Lord Protector of Ultramar, hunting the Night Haunter across the worlds of Imperium Secundus by means his brother primarchs find hard to stomach. Old rivalries back on Caliban threaten to tear the Dark Angels in half, and not even the Dreadwing can guarantee the Lion victory if he sets himself against his loyal brothers.",
+    "blurbSafe": "Lion El'Jonson leads Dark Angels across Ultramar while tensions rise within his Legion and among his brother primarchs. An attack on Sotha forces choices that could fracture their fragile alliance.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4710,6 +4758,10 @@
         "https://warhammer40k.fandom.com/wiki/Angels_of_Caliban"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/angels-of-caliban-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "old-earth": {
@@ -4866,7 +4918,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Guy Haley<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Space Wolves, Sons of Horus, Mechanicum<br>\n            <strong>Main Characters:</strong> Leman Russ, Bjorn, Belisarius Cawl, Horus Lupercal, Kva<br>\n            <strong>Timeline:</strong> 012.M31\n        ",
     "blurb": "Russ withdraws the Space Wolves from Terra over his brothers' objections, having learned in the Underverse beneath Fenris that the Spear of Russ, which holds a fragment of the Emperor's power, can wound Horus even though it cannot kill him. The Wolves ambush the Vengeful Spirit over Trisolian. Russ lets himself be wounded to open a gap and drives the spear home, burning away the corruption Horus has carried since Molech, but he hesitates at the last instant. The beating that follows leaves him comatose and his fleet shattered.",
-    "blurbSafe": "The time has come for Leman Russ to make good on his vow and try to stop the Warmaster before he breaks through to the Segmentum Solar. Against the opposition of three of his brothers he takes his Legion from Terra, carrying one weapon that might touch a being no mortal blade can harm.",
+    "blurbSafe": "Leman Russ leaves Terra with the Space Wolves to seek Horus before the Warmaster reaches the Solar System. The journey forces him to weigh a desperate promise against his duty to the Imperium.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4876,6 +4928,10 @@
         "https://www.trackofwords.com/2018/05/10/rapid-fire-guy-haley-talks-wolfsbane/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/guy-haley/wolfsbane-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "titandeath": {
@@ -4894,7 +4950,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Guy Haley<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Collegia Titanica, Imperial Army, Blood Angels, White Scars, Sons of Horus<br>\n            <strong>Main Characters:</strong> Esha Ani Mohana, Abhani Lus Mohana, Mohana Mankata Vi, Terent Harrtek, Sanguinius, Jaghatai Khan<br>\n            <strong>Timeline:</strong> 012-013.M31\n        ",
     "blurb": "Beta-Garmon is the only viable road left to the Solar System, so Dorn commits most of his non-Astartes strength and a vast mustering of Titans to hold it, fearing what god-machine warfare would do to Terra itself. The book follows the all-female Legio Solaria, and princeps Esha Ani Mohana in particular, through the slaughter on Beta-Garmon III against Terent Harrtek's Legio Vulpa. Sanguinius and the Khan arrive late and take the loyalist war effort in hand. The Great Mother of the Solaria is killed, and Beta-Garmon falls to Horus.",
-    "blurbSafe": "Beta-Garmon is the most direct and only viable route to the Solar System, and both sides commit Titans in numbers never seen before or since. Among the loyalist god-machines are the Imperial Hunters of Legio Solaria, whose princeps are drawn from a single genetic line and who carry an old grudge against the traitor Legio Vulpa.",
+    "blurbSafe": "Beta-Garmon stands on Horus's route to Terra. Both sides gather huge armies and Titan Legions there for a battle that may determine whether the Warmaster can reach the Throneworld.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -4903,6 +4959,10 @@
         "https://warhammer40k.fandom.com/wiki/Titandeath_(Novel)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/guy-haley/the-horus-heresy-titan-death-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "war-hands-emperor": {
@@ -5334,6 +5394,10 @@
         "https://warhammer40k.fandom.com/wiki/The_Buried_Dagger_(Novel)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/james-swallow/horus-heresy-the-buried-dagger-ebook-cs-2018.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "mark-of-calth-underworld-war": {
