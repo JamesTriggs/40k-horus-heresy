@@ -296,10 +296,10 @@ Code and implementation: MIT License (see LICENSE file)
 
 ## 📝 Data Sources
 
-- Series numbering, titles and authors: inherited catalogue data undergoing primary-source verification
+- Series numbering remains under review. Titles and authors for 227 of 228 entries have been checked against publisher material; the remaining entry has a separate bibliographic source and a publisher-listing discrepancy.
 - In-universe dates for the main novels: largely follow [Adeptus Ars's chronological guide](https://www.adeptusars.com/features/the-horus-heresy-books-in-chronological-order), which is one community source's editorial judgement rather than settled canon, and it differs from other reputable chronologies on roughly a dozen books
 - Dates for The Primarchs series and previously undated stories: researched per entry, with sources and confidence recorded in `tools/proposed-dates.json`
-- Story summaries: research links are recorded per entry in `data/books.json`. Only 30 of 228 entries currently include a Black Library or Warhammer Community URL in summary research. Separately, 13 anthology contents pages covering 143 entries have been checked for title, author and membership. A source link does not independently verify every field. See [Sources and corrections](sources.html).
+- Story summaries: 90 spoiler-free introductions have a dated Black Library description review. Unreviewed short-story and audio-drama introductions are withheld until the reader enables spoilers. The longer synopsis has separate research links in `data/books.json`; only 30 of 228 entries currently include a Black Library or Warhammer Community URL in that research. Thirteen anthology contents pages covering 143 entries have been checked for title, author and membership. A source link does not independently verify every field. See [Sources and corrections](sources.html).
 
 ---
 
