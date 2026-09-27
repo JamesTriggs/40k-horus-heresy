@@ -12,9 +12,9 @@
 
 ## 📖 Overview
 
-An immersive, grimdark-themed web application with **228 catalogue entries representing 226 distinct works** from the Horus Heresy universe, featuring:
+An immersive, grimdark-themed web application with **232 catalogue entries representing 230 distinct works** from the Horus Heresy universe, featuring:
 - 39 main Horus Heresy novels
-- 158 individual anthology stories, novellas and audio dramas, across 15 volumes
+- 165 short stories, novellas and audio dramas
 - 17 standalone Primarchs novels
 - 14 Siege of Terra books, including the three interleaved novellas and the Era of Ruin epilogue anthology
 
@@ -36,7 +36,7 @@ The reading view offers a **Core** path through the 12 novels in [Warhammer Comm
 The expandable next-read guide picks the first unstarted work in the chosen path, explains the order, and offers two following titles. Readers can save a suggestion for later, restore saved choices and switch from Full Fiction to the shorter Core path.
 
 ### 📚 Fiction catalogue
-- **228 entries** with cover images
+- **232 entries** with cover images
 - **Chronological ordering** by in-story timeline (730.M30 → 036.M31), strict, with no series held back as an appendix
 - **Publication order** sorting option
 - **Full book details**: authors, legions, timelines, character lists, synopses
@@ -154,7 +154,7 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── BUILD_LOG.md                  # Slice-by-slice implementation record
 ├── CHART_RECONCILIATION.md       # Publisher evidence for chart-only works
 ├── images/                       # Book covers and character portraits
-│   ├── *.jpg                     # 81 cover images shared across 228 entries
+│   ├── *.jpg                     # 81 cover images shared across 232 entries
 │   ├── character-*.jpg           # 32 character portraits
 │   ├── character-placeholder.svg # Placeholder for minor characters
 │   ├── imperial-aquila.png       # Loyalist symbol
@@ -177,8 +177,8 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 
 The site is a static page with no backend, so progress lives in `localStorage`.
 To carry it between devices, the whole reading log is packed into a short code:
-two bits per book over the alphabetically sorted key list, which is 228 books in
-57 bytes, about 88 characters including the header.
+two bits per book over the alphabetically sorted key list, which is 232 books in
+58 bytes, about 89 characters including the header.
 
 Press the **⇄** button for your cipher, or a vector that carries it. Enter the
 cipher on another dataslate to receive it.
@@ -259,7 +259,7 @@ ordering log and generated browser data, and run the validator. Work IDs in
 
 ## 📊 Statistics
 
-- **228 entries** representing **226 distinct work IDs**
+- **232 entries** representing **230 distinct work IDs**
 - **121 characters** in encyclopedia
 - **48 quotes** with attributions
 - Book and character data in JSON, with a generated static browser bundle
@@ -296,10 +296,10 @@ Code and implementation: MIT License (see LICENSE file)
 
 ## 📝 Data Sources
 
-- Series numbering remains under review. Titles and authors for 227 of 228 entries have been checked against publisher material; the remaining entry has a separate bibliographic source and a publisher-listing discrepancy.
+- Series numbering remains under review. Titles and authors for 231 of 232 entries have been checked against publisher material; the remaining entry has a separate bibliographic source and a publisher-listing discrepancy.
 - In-universe dates for the main novels: largely follow [Adeptus Ars's chronological guide](https://www.adeptusars.com/features/the-horus-heresy-books-in-chronological-order), which is one community source's editorial judgement rather than settled canon, and it differs from other reputable chronologies on roughly a dozen books
 - Dates for The Primarchs series and previously undated stories: researched per entry, with sources and confidence recorded in `tools/proposed-dates.json`
-- Story summaries: 90 spoiler-free introductions have a dated Black Library description review. Unreviewed short-story and audio-drama introductions are withheld until the reader enables spoilers. The longer synopsis has separate research links in `data/books.json`; only 30 of 228 entries currently include a Black Library or Warhammer Community URL in that research. Thirteen anthology contents pages covering 143 entries have been checked for title, author and membership. A source link does not independently verify every field. See [Sources and corrections](sources.html).
+- Story summaries: 92 spoiler-free introductions have a dated Black Library description review. Unreviewed short-story and audio-drama introductions are withheld until the reader enables spoilers. The longer synopsis has separate research links in `data/books.json`; 34 of 232 entries currently include a Black Library or Warhammer Community URL in that research. Fourteen anthology contents pages covering 147 entries have been checked for title, author and membership. A source link does not independently verify every field. See [Sources and corrections](sources.html).
 
 ---
 

@@ -35,6 +35,22 @@ for (const key of bookKeys) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`U
 for (const key of Object.keys(characterData)) if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key)) fail(`Unsafe character key '${key}'`);
 const publisherCollections = JSON.parse(readFileSync(join(root, 'data/publisher-collections.json'), 'utf8'));
 const collectionIdentities = JSON.parse(readFileSync(join(root, 'data/collections.json'), 'utf8'));
+const legacyTransferKeys = JSON.parse(readFileSync(join(root, 'data/transfer-code-legacy-228.json'), 'utf8'));
+if (legacyTransferKeys.keys.length !== 228 || new Set(legacyTransferKeys.keys).size !== 228 ||
+    legacyTransferKeys.keys.some((key, index) => index && key <= legacyTransferKeys.keys[index - 1])) {
+    fail('The 228-entry transfer-code migration snapshot is invalid');
+}
+let legacyHash = 0x811c9dc5;
+for (const character of legacyTransferKeys.keys.join('|')) {
+    legacyHash ^= character.charCodeAt(0);
+    legacyHash = Math.imul(legacyHash, 0x01000193) >>> 0;
+}
+if (legacyTransferKeys.fingerprint !== legacyHash.toString(36).padStart(7, '0').slice(0, 7)) {
+    fail('The transfer-code migration fingerprint does not match its key list');
+}
+for (const key of legacyTransferKeys.keys) {
+    if (!bookData[key]) fail(`Transfer-code migration references missing work '${key}'`);
+}
 const collectionNames = new Set(bookEntries.map(([, book]) => book.anthology).filter(Boolean));
 const collectionIds = new Set();
 const recordedCollections = new Set();

@@ -85,7 +85,7 @@ await check('Core route opens from a fresh URL and Full Fiction restores the cat
     await linked.waitForSelector('.book-card');
     if (await linked.locator('.book-card').count() !== 12) throw new Error('direct Core link failed');
     await linked.click('#fullRoute');
-    if (await linked.locator('.book-card').count() !== 228) throw new Error('Full Fiction did not restore entries');
+    if (await linked.locator('.book-card').count() !== 232) throw new Error('Full Fiction did not restore entries');
     await linked.close();
 });
 await check('Start Here switches from chronology to the curated reading sequence', async () => {
@@ -769,6 +769,24 @@ await check('a collection can be browsed from a story and cleared', async () => 
     if (await page.$eval('#collectionFilter', (e) => e.value)) throw new Error('collection filter not cleared');
 });
 
+await check('Tallarn components have distinct links, a four-work collection and safe premises', async () => {
+    const p = await newPage({ width: 390, height: 844 });
+    await p.goto(new URL('#work=tallarn-ironclad', BASE).href, { waitUntil: 'load' });
+    await p.waitForSelector('#modalOverlay.active');
+    const result = await p.evaluate(() => ({
+        title: document.querySelector('#modalTitle')?.textContent,
+        premise: document.querySelector('#blurb')?.textContent,
+        collection: document.querySelector('#workCollections')?.textContent,
+        overflow: document.documentElement.scrollWidth - innerWidth,
+    }));
+    await p.close();
+    if (!result.title?.includes('IRONCLAD') || !result.premise?.includes('armoured battle') ||
+        /secret purpose|defeated/i.test(result.premise) ||
+        !result.collection?.includes('4 listed works') || result.overflow > 1) {
+        throw new Error(JSON.stringify(result));
+    }
+});
+
 await check('Garro is labelled a novelisation and Mark of Calth stays disputed', async () => {
     const result = await page.evaluate(() => {
         renderWorkCollections('garro-oath-moment');
@@ -1429,7 +1447,7 @@ await check('a legacy reprint status counts once and reaches both entries', asyn
     if (result.original !== 'finished' || result.reprint !== 'finished') {
         throw new Error('a legacy reprint status did not reach both entries');
     }
-    if (result.finished !== 1 || result.total !== 226) {
+    if (result.finished !== 1 || result.total !== 230) {
         throw new Error(`progress counted ${result.finished}/${result.total} works`);
     }
     if (cleared.original || cleared.reprint || cleared.markedCards) {
@@ -1437,7 +1455,7 @@ await check('a legacy reprint status counts once and reaches both entries', asyn
     }
 });
 
-await check('old 228-entry transfer codes still restore reprint progress', async () => {
+await check('current transfer codes restore reprint progress', async () => {
     const p = await newPage({ width: 1200, height: 900 });
     await p.goto(BASE);
     await p.waitForSelector('.book-card');
@@ -1499,6 +1517,30 @@ await check('a code from a different dataset is refused, not misapplied', async 
     // than matching a phrase that flavour changes will keep breaking.
     if (!/revision|version/i.test(r.reason)) throw new Error('unhelpful reason: ' + r.reason);
     if (!/reload/i.test(r.reason)) throw new Error('reason gives no way forward: ' + r.reason);
+});
+
+await check('a 228-entry transfer code restores its statuses after catalogue growth', async () => {
+    const legacy = await import('node:fs').then(({ readFileSync }) =>
+        JSON.parse(readFileSync(new URL('../data/transfer-code-legacy-228.json', import.meta.url), 'utf8')));
+    const oldStatuses = { 'horus-rising': 'finished', 'tallarn': 'reading' };
+    const bytes = new Uint8Array(Math.ceil(legacy.keys.length / 4));
+    legacy.keys.forEach((key, i) => {
+        const state = oldStatuses[key] === 'finished' ? 2 : oldStatuses[key] === 'reading' ? 1 : 0;
+        bytes[i >> 2] |= state << ((i % 4) * 2);
+    });
+    const code = `HH2-${legacy.fingerprint}-${Buffer.from(bytes).toString('base64url')}`;
+    const p = await newPage({ width: 1200, height: 900 });
+    await p.goto(BASE, { waitUntil: 'load' });
+    await p.waitForSelector('.book-card');
+    const result = await p.evaluate((value) => importProgressCode(value), code);
+    const restored = await p.evaluate(() => ({
+        first: readingProgress.getStatus('horus-rising'),
+        second: readingProgress.getStatus('tallarn'),
+    }));
+    await p.close();
+    if (!result.ok || restored.first !== 'finished' || restored.second !== 'reading') {
+        throw new Error(result.reason || JSON.stringify(restored));
+    }
 });
 
 await check('junk input is rejected cleanly', async () => {

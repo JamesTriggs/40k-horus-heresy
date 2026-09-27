@@ -4450,6 +4450,108 @@
       "reviewedAt": "2026-09-27"
     }
   },
+  "tallarn-siren": {
+    "number": "XLV.1",
+    "title": "TALLARN: SIREN",
+    "author": "John French",
+    "format": "Short Story",
+    "timeline": "010-011.M31",
+    "coverImage": "images/tallarn.jpg",
+    "legions": [
+      "Imperial Army"
+    ],
+    "anthology": "Tallarn",
+    "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Short Story<br>\n            <strong>From:</strong> Tallarn (Book 45)<br>\n            <strong>Legion:</strong> Imperial Army<br>\n            <strong>Timeline:</strong> 010-011.M31\n        ",
+    "blurb": "In the immediate aftermath of the Iron Warriors attack, loyalists on Tallarn search for the last surviving astropath so they can call for help.",
+    "blurbSafe": "Tallarn has been attacked, and its defenders need a way to send a distress call.",
+    "research": {
+      "confidence": "high",
+      "sources": [
+        "https://www.blacklibrary.com/the-horus-heresy/quick-reads/tallarn-siren-ebook.html",
+        "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html"
+      ],
+      "reviewedAt": "2026-09-27"
+    }
+  },
+  "tallarn-executioner": {
+    "number": "XLV.2",
+    "title": "TALLARN: EXECUTIONER",
+    "author": "John French",
+    "format": "Novella",
+    "timeline": "010-011.M31",
+    "coverImage": "images/tallarn.jpg",
+    "legions": [
+      "Imperial Army",
+      "Iron Warriors"
+    ],
+    "anthology": "Tallarn",
+    "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Tallarn (Book 45)<br>\n            <strong>Legion:</strong> Imperial Army, Iron Warriors<br>\n            <strong>Timeline:</strong> 010-011.M31\n        ",
+    "blurb": "The Jurnian 701st emerge from their shelters on a poisoned Tallarn as the opening movements of the armoured war begin.",
+    "blurbSafe": "The surviving tank crews of Tallarn emerge into a poisoned world and prepare to defend it.",
+    "research": {
+      "confidence": "high",
+      "sources": [
+        "https://www.blacklibrary.com/authors/john-french/tallarn-executioner-ebook.html",
+        "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html"
+      ],
+      "reviewedAt": "2026-09-27"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-executioner-ebook.html",
+      "reviewedAt": "2026-09-27"
+    }
+  },
+  "tallarn-ironclad": {
+    "number": "XLV.3",
+    "title": "TALLARN: IRONCLAD",
+    "author": "John French",
+    "format": "Novella",
+    "timeline": "010-011.M31",
+    "coverImage": "images/tallarn.jpg",
+    "legions": [
+      "Iron Warriors",
+      "Imperial Army"
+    ],
+    "anthology": "Tallarn",
+    "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>From:</strong> Tallarn (Book 45)<br>\n            <strong>Legion:</strong> Iron Warriors, Imperial Army<br>\n            <strong>Timeline:</strong> 010-011.M31\n        ",
+    "blurb": "The armoured battle for Tallarn rages between the Iron Warriors and the Imperial Army, while the reason for the attack remains hidden.",
+    "blurbSafe": "A vast armoured battle rages across Tallarn as the Iron Warriors press their attack.",
+    "research": {
+      "confidence": "high",
+      "sources": [
+        "https://www.blacklibrary.com/authors/john-french/tallarn-ironclad-ebook.html",
+        "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html"
+      ],
+      "reviewedAt": "2026-09-27"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-ironclad-ebook.html",
+      "reviewedAt": "2026-09-27"
+    }
+  },
+  "tallarn-witness": {
+    "number": "XLV.4",
+    "title": "TALLARN: WITNESS",
+    "author": "John French",
+    "format": "Short Story",
+    "timeline": "010-011.M31",
+    "coverImage": "images/tallarn.jpg",
+    "legions": [
+      "Imperial Army"
+    ],
+    "anthology": "Tallarn",
+    "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Short Story<br>\n            <strong>From:</strong> Tallarn (Book 45)<br>\n            <strong>Legion:</strong> Imperial Army<br>\n            <strong>Timeline:</strong> 010-011.M31\n        ",
+    "blurb": "After the Iron Warriors are defeated, Tallarn’s new governor surveys the wreckage and considers what victory has cost the world.",
+    "blurbSafe": "Tallarn’s new governor surveys the wreckage left by a vast armoured war.",
+    "research": {
+      "confidence": "high",
+      "sources": [
+        "https://www.blacklibrary.com/authors/john-french/tallarn-witness-ebook.html",
+        "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html"
+      ],
+      "reviewedAt": "2026-09-27"
+    }
+  },
   "praetorian-of-dorn": {
     "number": "XXXIX",
     "title": "PRAETORIAN OF DORN",

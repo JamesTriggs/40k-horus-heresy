@@ -1584,6 +1584,34 @@
       "legacyKeys": [
         "primarch-konrad-curze"
       ]
+    },
+    {
+      "id": "tallarn-siren",
+      "title": "TALLARN: SIREN",
+      "legacyKeys": [
+        "tallarn-siren"
+      ]
+    },
+    {
+      "id": "tallarn-executioner",
+      "title": "TALLARN: EXECUTIONER",
+      "legacyKeys": [
+        "tallarn-executioner"
+      ]
+    },
+    {
+      "id": "tallarn-ironclad",
+      "title": "TALLARN: IRONCLAD",
+      "legacyKeys": [
+        "tallarn-ironclad"
+      ]
+    },
+    {
+      "id": "tallarn-witness",
+      "title": "TALLARN: WITNESS",
+      "legacyKeys": [
+        "tallarn-witness"
+      ]
     }
   ]
 }

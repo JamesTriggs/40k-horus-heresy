@@ -75,6 +75,11 @@
       "id": "war-without-end",
       "name": "War Without End",
       "kind": "collection"
+    },
+    {
+      "id": "tallarn",
+      "name": "Tallarn",
+      "kind": "collection"
     }
   ]
 }

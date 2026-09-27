@@ -297,11 +297,12 @@ function importProgressFile(payload) {
 // The site is a static page, so there is nothing to sync through. Instead the
 // whole reading log is packed into a short code you can carry to another
 // device by hand or as a link. Two bits per book over the alphabetically
-// sorted key list gives 228 books in 57 bytes, about 76 base64 characters.
+// sorted key list gives 232 books in 58 bytes, about 78 base64 characters.
 //
 // Sorted alphabetically rather than by the displayed order, so re-sorting the
 // chronology does not invalidate anyone's code. A short fingerprint of the key
-// list is embedded, and a code from a different dataset is refused rather than
+// list is embedded. The previous 228-entry key list remains supported through
+// a frozen migration snapshot. Other fingerprints are refused rather than
 // silently decoded against shifted indices, which would corrupt the log.
 // ---------------------------------------------------------------------------
 
@@ -354,8 +355,10 @@ function importProgressCode(code) {
         return { ok: false, reason: 'That is not a record cipher.' };
     }
 
-    const keys = syncKeyList();
-    if (parts[1] !== syncFingerprint(keys)) {
+    const currentKeys = syncKeyList();
+    const keys = parts[1] === syncFingerprint(currentKeys) ? currentKeys
+        : parts[1] === legacyTransferKeysData.fingerprint ? legacyTransferKeysData.keys : null;
+    if (!keys) {
         return {
             ok: false,
             reason: 'That cipher was struck from a different revision of the archive. ' +
@@ -379,7 +382,9 @@ function importProgressCode(code) {
         if (state) restored[key] = state;
     });
 
-    readingProgress.save(restored);
+    if (!readingProgress.save(restored)) {
+        return { ok: false, reason: 'The record could not be saved in this browser.' };
+    }
     return { ok: true, applied: readingProgress.getCount() };
 }
 

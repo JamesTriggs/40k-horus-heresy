@@ -780,6 +780,31 @@
           "author": "Rob Sanders"
         }
       ]
+    },
+    "Tallarn": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html",
+      "entries": [
+        {
+          "key": "tallarn-siren",
+          "title": "TALLARN: SIREN",
+          "author": "John French"
+        },
+        {
+          "key": "tallarn-executioner",
+          "title": "TALLARN: EXECUTIONER",
+          "author": "John French"
+        },
+        {
+          "key": "tallarn-ironclad",
+          "title": "TALLARN: IRONCLAD",
+          "author": "John French"
+        },
+        {
+          "key": "tallarn-witness",
+          "title": "TALLARN: WITNESS",
+          "author": "John French"
+        }
+      ]
     }
   },
   "disputed": {

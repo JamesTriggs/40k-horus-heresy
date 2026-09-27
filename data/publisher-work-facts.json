@@ -361,6 +361,30 @@
       "format": "Novella",
       "source": "https://www.blacklibrary.com/the-horus-heresy/novels/garro-vow-of-faith-ebook.html",
       "formatSource": "https://www.blacklibrary.com/series/the-horus-heresy/hh-garro-weapon-of-fate-ebook.html"
+    },
+    "tallarn-siren": {
+      "title": "TALLARN: SIREN",
+      "author": "John French",
+      "format": "Short Story",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/quick-reads/tallarn-siren-ebook.html"
+    },
+    "tallarn-executioner": {
+      "title": "TALLARN: EXECUTIONER",
+      "author": "John French",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-executioner-ebook.html"
+    },
+    "tallarn-ironclad": {
+      "title": "TALLARN: IRONCLAD",
+      "author": "John French",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-ironclad-ebook.html"
+    },
+    "tallarn-witness": {
+      "title": "TALLARN: WITNESS",
+      "author": "John French",
+      "format": "Short Story",
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-witness-ebook.html"
     }
   }
 }
