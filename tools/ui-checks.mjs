@@ -870,6 +870,57 @@ await check('spoiler-free book and character details hide outcomes', async () =>
     if (!character.includes('Character details are hidden')) throw new Error('character details were not redacted');
 });
 
+await check('reviewed safe introductions keep major plot turns out of default work details', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    for (const [key, spoiler] of [
+        ['a-thousand-sons', 'Webway Project'],
+        ['fulgrim', 'becomes possessed'],
+        ['vulkan-lives', 'each time Curze kills him'],
+        ['betrayer', 'dark ritual'],
+        ['vengeful-spirit', 'warp gate'],
+        ['slaves-to-darkness', 'beyond anyone’s command'],
+    ]) {
+        await reader.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await reader.waitForSelector('#modalOverlay.active');
+        const result = await reader.evaluate((workKey) => ({
+            summary: document.getElementById('blurb').textContent,
+            expected: bookData[workKey].blurbSafe,
+            citation: document.getElementById('workResearch').textContent,
+            link: [...document.querySelectorAll('#workResearch a')].some((a) =>
+                a.hostname === 'www.blacklibrary.com' && a.textContent.includes('product description')),
+        }), key);
+        if (!result.summary.includes(result.expected) || result.summary.includes(spoiler) ||
+            !result.citation.includes('external page may contain spoilers') || !result.link) {
+            throw new Error(`${key}: ${JSON.stringify(result)}`);
+        }
+    }
+    await reader.close();
+});
+
+await check('all Core introductions have publisher reviews and hide the key reveals', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    await reader.goto(new URL('?route=core', BASE).href, { waitUntil: 'load' });
+    const reviewed = await reader.evaluate(() => CORE_ROUTE.every((key) =>
+        bookData[key].safeSummaryReview?.source.startsWith('https://www.blacklibrary.com/')));
+    if (!reviewed) throw new Error('a Core introduction has no individual publisher review');
+    for (const [key, spoiler] of [
+        ['false-gods', 'Serpent Lodge'],
+        ['galaxy-in-flames', 'loyalists within four Legions'],
+        ['the-first-heretic', 'Eye of Terror'],
+        ['know-no-fear', 'Word Bearers, harboring'],
+        ['praetorian-of-dorn', 'infiltration that has been in place'],
+        ['the-master-of-mankind', 'Webway'],
+    ]) {
+        await reader.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await reader.waitForSelector('#modalOverlay.active');
+        const blurb = await reader.locator('#blurb').innerText();
+        if (!blurb.includes('SPOILER-FREE MODE') || blurb.includes(spoiler)) {
+            throw new Error(`${key}: ${blurb}`);
+        }
+    }
+    await reader.close();
+});
+
 await check('spoiler-free ordering guide hides its event table', async () => {
     await page.uncheck('#showSpoilers');
     await page.click('#orderingGuideBtn');

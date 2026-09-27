@@ -2256,6 +2256,18 @@ function renderWorkResearch(bookKey) {
         host.append(publication);
     }
 
+    if (book.safeSummaryReview) {
+        const review = document.createElement('p');
+        review.textContent = 'Spoiler-free introduction checked against ';
+        const link = document.createElement('a');
+        link.href = book.safeSummaryReview.source;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Black Library’s product description';
+        review.append(link, document.createTextNode(` (reviewed ${book.safeSummaryReview.reviewedAt}). The external page may contain spoilers.`));
+        host.append(review);
+    }
+
     const list = document.createElement('ul');
     for (const value of sources) {
         let url;

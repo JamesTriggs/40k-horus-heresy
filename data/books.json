@@ -278,7 +278,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Aaron Dembski-Bowden<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Word Bearers<br>\n            <strong>Main Characters:</strong> Argel Tal, Lorgar, Erebus, Kor Phaeron, Cyrene Valantion<br>\n            <strong>Timeline:</strong> 959.M30\n        ",
     "blurb": "Lorgar and the Word Bearers are humiliated by the Emperor for worshipping him as a god. Crushed by his father's rebuke, Lorgar seeks meaning in the great pilgrimage to Cadia and the Eye of Terror. There, he finds gods who welcome worship—the Ruinous Powers of Chaos. This is the story of the Legion that fell first, spreading the seeds of corruption throughout the Imperium and orchestrating the Warmaster's fall.",
-    "blurbSafe": "Lorgar and the Word Bearers face the Emperor's wrath for worshipping him as a god. Humiliated and seeking meaning beyond the Imperial Truth, Lorgar embarks on a pilgrimage into the Eye of Terror. What he discovers there will challenge everything the Imperium believes about gods and faith.",
+    "blurbSafe": "Chastised by the Emperor for their faith, Lorgar and the Word Bearers search for a new purpose beyond the Imperial Truth. Their quest will change the Legion’s relationship with the Imperium.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -289,6 +289,10 @@
         "https://warhammer40k.fandom.com/wiki/Anathame"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/First-heretic-the-ebook-2016-updated.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-lorgar": {
@@ -594,7 +598,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Thousand Sons, Space Wolves<br>\n            <strong>Main Characters:</strong> Magnus the Red, Ahzek Ahriman, Lemuel Gaumon, Leman Russ<br>\n            <strong>Timeline:</strong> 001-004.M31\n        ",
     "blurb": "Magnus the Red, master of psychic powers, foresees Horus's betrayal and uses sorcery to warn the Emperor—shattering the Webway Project and dooming Terra. The Emperor, enraged at this catastrophic breach, unleashes Leman Russ and the Space Wolves upon Prospero. The Thousand Sons, devoted scholars and psykers, are betrayed by their own mutations and the machinations of Tzeentch. Magnus's arrogance costs him everything.",
-    "blurbSafe": "Magnus the Red, master of psychic powers, attempts to warn the Emperor of a terrible betrayal—but his methods catastrophically damage the Emperor's secret Webway Project. The Emperor unleashes Leman Russ and the Space Wolves upon Prospero, where the Thousand Sons face annihilation for Magnus's hubris.",
+    "blurbSafe": "After being censured at the Council of Nikaea, Magnus and the Thousand Sons return to Prospero. A warning about Horus draws Magnus back into the Emperor’s affairs, while the Space Wolves move towards a confrontation with their brother Legion.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -604,6 +608,10 @@
         "https://warhammer40k.fandom.com/wiki/Council_of_Nikaea"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/a-thousand-sons-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-primarchs-feat-of-iron": {
@@ -743,7 +751,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Sons of Horus, Luna Wolves<br>\n            <strong>Main Characters:</strong> Garviel Loken, Horus, Tarik Torgaddon, Erebus, Euphrati Keeler<br>\n            <strong>Timeline:</strong> 002-003.M31\n        ",
     "blurb": "The Great Crusade is at its zenith. The Emperor has withdrawn to Terra and left Warmaster Horus in command, and Captain Garviel Loken of the Luna Wolves is raised to the Mournival as the 63rd Expeditionary Fleet fights its way from one compliance to the next, including the killing world of Murder. It ends among the Interex on Xenobia, where diplomacy collapses after Erebus of the Word Bearers steals a Chaos-tainted xenos blade from their Hall of Devices.",
-    "blurbSafe": "The Great Crusade is at its height. The Emperor has returned to Terra, leaving his favoured son Horus as Warmaster in command of the Imperium's armies, and Captain Garviel Loken of the Luna Wolves is elevated to the Warmaster's inner circle. Through Loken's eyes the 63rd Expeditionary Fleet fights its way across the stars in the last golden days before everything changes.",
+    "blurbSafe": "At the height of the Great Crusade, the Emperor returns to Terra and names his favoured son Horus Warmaster. With the Imperium's armies under his command, Horus must lead the campaign while tensions simmer among his brothers.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -755,6 +763,10 @@
         "https://www.trackofwords.com/2017/05/11/horus-rising-dan-abnett/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/horus-rising.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-sanguinius": {
@@ -815,7 +827,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Sons of Horus<br>\n            <strong>Main Characters:</strong> Horus, Garviel Loken, Erebus, Eugan Temba, Tarik Torgaddon<br>\n            <strong>Timeline:</strong> 004.M31\n        ",
     "blurb": "Sent to bring the rebel world of Davin back to compliance, Horus descends alone on the plague moon and fights Eugan Temba, a governor rotted by Nurgle's gift, who cuts him with the anathame Erebus stole from the Interex. Dying of a wound Imperial medicine cannot touch, the Warmaster is carried to the Temple of the Serpent Lodge, where a ritual casts his spirit into the warp. There Erebus shows him a future in which the Emperor ascends to godhood and discards his sons, and Horus chooses rebellion.",
-    "blurbSafe": "Sent to reconquer the rebel world of Davin, the Warmaster is struck down by a xenos blade that no Imperial medicine can heal, and his sons turn in desperation to the Serpent Lodge. In a dark ritual, Horus's spirit walks the warp, where he is shown visions that challenge everything he believes about his father's plans for humanity.",
+    "blurbSafe": "The Great Crusade continues under Horus, but mistrust and resentment trouble the Imperium’s armies. After the Warmaster is wounded on Davin, those closest to him face a choice that could change the course of the war.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -826,6 +838,10 @@
         "https://warhammer40k.fandom.com/wiki/Davin"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/False-Gods-eBook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-outcast-dead": {
@@ -863,7 +879,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Space Wolves, Thousand Sons<br>\n            <strong>Main Characters:</strong> Kasper Hawser, Leman Russ, Magnus the Red<br>\n            <strong>Timeline:</strong> 004-005.M31\n        ",
     "blurb": "The Space Wolves are the Emperor's executioners, and Leman Russ has been given his orders: make Magnus answer for his crime. Through the eyes of the Terran scholar Kasper Hawser, taken into the VI Legion as its skjald, we watch the Wolves fall on Prospero. But Horus has twisted the Emperor's command, and what should have been an arrest becomes annihilation. Russ breaks Magnus over his knee, and Tzeentch takes what is left of the Thousand Sons.",
-    "blurbSafe": "The Emperor is enraged. Magnus the Red has made a terrible mistake that endangers Terra itself, and Leman Russ is charged with bringing his brother to account. Through the eyes of Kasper Hawser, a Terran scholar who becomes the Space Wolves' oral historian, we see the VI Legion as few outsiders ever have, and follow them to the sorcerous world of Prospero.",
+    "blurbSafe": "The Emperor sends Leman Russ and the Space Wolves to Prospero to bring Magnus to account. The mission tests the bonds between brother Legions and the Wolves’ understanding of duty.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -873,6 +889,10 @@
         "https://warhammer40k.fandom.com/wiki/Magnus_the_Red"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/prospero-burns-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "age-of-darkness-rebirth": {
@@ -1029,7 +1049,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Ben Counter<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Sons of Horus, Emperor's Children, Death Guard, World Eaters<br>\n            <strong>Main Characters:</strong> Garviel Loken, Saul Tarvitz, Nathaniel Garro, Horus, Tarik Torgaddon<br>\n            <strong>Timeline:</strong> 005.M31\n        ",
     "blurb": "Horus leads the Imperial fleet against the rebel world of Isstvan III, then turns its guns on his own. Life-eater virus bombs fall on the Choral City to purge the loyalists within the Sons of Horus, Emperor's Children, Death Guard and World Eaters, but Saul Tarvitz's warning saves thousands, and Garviel Loken leads a hopeless resistance in the ruins. Nathaniel Garro, kept from the drop by his wounds, seizes a frigate in orbit and runs for Terra while Horus pounds the city flat.",
-    "blurbSafe": "On the rebel world of Isstvan III, Horus at last shows his hand, and the loyalists within four Legions find themselves the target. Saul Tarvitz, Garviel Loken and Nathaniel Garro each have a part to play in the hours that follow, and the Age of Darkness begins.",
+    "blurbSafe": "Horus leads Imperial forces against the rebel world of Isstvan III after his recovery. What begins as another campaign will force officers and legionaries to decide where their loyalties lie.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -1040,6 +1060,10 @@
         "https://warhammer40k.fandom.com/wiki/Eisenstein"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/galaxy-in-flames-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "mechanicum": {
@@ -1078,7 +1102,7 @@
     ],
     "details": "\n            <strong>Author:</strong> James Swallow<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Death Guard<br>\n            <strong>Main Characters:</strong> Nathaniel Garro, Ignatius Grulgor, Solun Decius<br>\n            <strong>Timeline:</strong> 005.M31\n        ",
     "blurb": "Battle-Captain Nathaniel Garro of the Death Guard seizes the frigate Eisenstein over Isstvan III and runs for Terra with seventy loyal warriors and the news of Horus's betrayal. Traitor ships hunt them, the life-eater virus gets loose aboard and turns Ignatius Grulgor's men into something worse than dead, and the crippled ship is left adrift in the warp until Rogal Dorn's Imperial Fists find it. Garro reaches Terra, where nobody wants to believe him.",
-    "blurbSafe": "Battle-Captain Nathaniel Garro of the Death Guard escapes the Isstvan system aboard the frigate Eisenstein, carrying warning of a betrayal that will tear the Imperium apart. Hunted through the void and stalked by something far worse aboard his own ship, Garro must somehow reach Terra with news that no one on the Throneworld will want to believe.",
+    "blurbSafe": "After the massacre on Isstvan III, Death Guard Captain Nathaniel Garro takes the frigate Eisenstein towards Terra to warn the Emperor of Horus's betrayal. The journey through hostile space will test the loyalty and survival of everyone aboard.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -1089,6 +1113,10 @@
         "https://warhammer40k.fandom.com/wiki/Knights-Errant"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/flight-of-the-eisenstein-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "fallen-angels": {
@@ -1322,7 +1350,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Emperor's Children, Iron Hands<br>\n            <strong>Main Characters:</strong> Fulgrim, Ferrus Manus, Lucius, Eidolon<br>\n            <strong>Timeline:</strong> 005-006.M31\n        ",
     "blurb": "The Emperor's Children conquer the Laer temple-world, and Fulgrim carries away a daemon-possessed blade from its shrine. As Slaanesh's influence spreads, the Legion's pursuit of perfection curdles into excess, and at Isstvan V Fulgrim beheads his closest brother, Ferrus Manus of the Iron Hands. Broken by grief, he lets the sword's daemon take his body outright, and his own soul is sealed inside a portrait aboard the Pride of the Emperor.",
-    "blurbSafe": "The Emperor's Children discover a daemonic blade on a lost world, and Fulgrim becomes possessed by its malevolent spirit. As Slaanesh's corruption spreads through the Legion, their pursuit of perfection twists into depravity and excess, culminating in a tragic confrontation with Ferrus Manus at Isstvan V.",
+    "blurbSafe": "As the Great Crusade draws to a close, Fulgrim and the Emperor’s Children pursue perfection under Horus’s command. On a new campaign, loyalties are tested and darker influences begin to pull at the Legion’s ideals.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -1332,6 +1360,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/fulgrim-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "legacies-hunters-moon": {
@@ -1372,7 +1404,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Nick Kyme<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Salamanders, Night Lords, Word Bearers<br>\n            <strong>Main Characters:</strong> Vulkan, Konrad Curze, Artellus Numeon, John Grammaticus, Barthusa Narek<br>\n            <strong>Timeline:</strong> 006-007.M31\n        ",
     "blurb": "Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan is a Perpetual—he cannot truly die. Each time Curze kills him, he returns, driving the Night Haunter to madness. Vulkan's resilience and inherent nobility stand in stark contrast to Curze's nihilism. His sons search desperately for their lost Primarch while Vulkan himself endures endless death and rebirth, testing the limits of even a Primarch's sanity.",
-    "blurbSafe": "Captured at Isstvan V, Vulkan endures tortures designed by Konrad Curze, the Night Haunter. But Vulkan possesses a unique ability—each time Curze kills him, he returns. This endless cycle tests both Primarchs, as Vulkan's resilience confronts Curze's nihilism.",
+    "blurbSafe": "The Salamanders search for Vulkan after the Isstvan V massacre. Far from his Legion, he is held by Konrad Curze, whose torments test both brothers and threaten to break him.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -1382,6 +1414,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/ebook-vulkan-lives-eng-2025.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "tales-of-heresy-blood-games": {
@@ -2056,7 +2092,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Ultramarines, Word Bearers<br>\n            <strong>Main Characters:</strong> Roboute Guilliman, Lorgar, Kor Phaeron, Remus Ventanus<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines, proud and unprepared for treachery, are devastated by orbital bombardment and brutal ground assaults. Roboute Guilliman survives being sucked into space, his transhuman physiology barely preserving him. Though the Ultramarines eventually repel the invasion, Calth is left a poisoned, irradiated wreck. The Mark of Calth becomes a scar worn by the Ultramarines forever, a reminder that even the most noble can be caught unprepared by treachery.",
-    "blurbSafe": "The Word Bearers, harboring decades of resentment from Lorgar's humiliation, strike at Calth without warning. The Ultramarines face devastating orbital bombardment and brutal ground assaults, unprepared for treachery from those they considered brothers in arms.",
+    "blurbSafe": "Roboute Guilliman gathers the Ultramarines at Calth under orders to prepare for an ork campaign. With the wider Heresy still distant to them, the Legion expects a conventional muster. The day ahead will test what they believe about their allies.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2065,6 +2101,10 @@
         "https://wh40k.lexicanum.com/wiki/Chronological_order_of_settings_of_Black_Library_publications"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/know-no-fear-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "battle-for-the-abyss": {
@@ -2108,7 +2148,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Aaron Dembski-Bowden<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> World Eaters, Word Bearers, Ultramarines<br>\n            <strong>Main Characters:</strong> Angron, Lorgar, Khârn, Roboute Guilliman, Argel Tal<br>\n            <strong>Timeline:</strong> 007.M31\n        ",
     "blurb": "Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's Five Hundred Worlds. Angron, driven by the Butcher's Nails implanted in his brain, is dying. Lorgar performs a dark ritual, elevating Angron to become a Daemon Primarch of Khorne at the cost of countless lives. Captain Khârn of the World Eaters witnesses his Legion's complete fall to madness. Guilliman desperately tries to contain the devastation, but the Ultramarines are being bled white across a hundred battlefields.",
-    "blurbSafe": "Lorgar and Angron lead the Shadow Crusade, carving a bloody path through Ultramar's worlds. Angron, driven by the Butcher's Nails and dying, becomes the focus of a dark ritual. Captain Khârn witnesses his Legion's descent into madness while Guilliman desperately tries to contain the devastation.",
+    "blurbSafe": "While Calth burns, Lorgar’s Word Bearers and Angron’s World Eaters strike across Ultramar. Their alliance is uneasy, and the Ultramarines must find a way to contain the Shadow Crusade.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -2117,6 +2157,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/betrayer-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "scars": {
@@ -3452,7 +3496,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Sons of Horus, Death Guard<br>\n            <strong>Main Characters:</strong> Horus, Garviel Loken, Mortarion, Raeven Devine<br>\n            <strong>Timeline:</strong> 009.M31\n        ",
     "blurb": "Horus returns to Molech, a Knight World he helped bring to compliance beside the Emperor generations earlier, hunting the warp gate his father once used to bargain with the Chaos Gods for power. Titan Legions, Knight houses and a small Ultramarines and Blood Angels garrison make the invasion a slaughterhouse, until House Devine turns traitor. Horus passes through the gate and returns transformed, no longer truly human but a match for the Emperor himself.",
-    "blurbSafe": "Horus returns to Molech, a Knight World where he once fought beside the Emperor. He seeks entry to the same warp gate the Emperor used to bargain with the Chaos Gods. Defended by loyalist forces, Molech becomes a slaughterhouse as Horus pursues ultimate power.",
+    "blurbSafe": "Horus leads the Sons of Horus to the fortified Knight world of Molech. House Devine and the Imperial Army stand against him, but the Warmaster’s reason for choosing this world remains hidden.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -3461,6 +3505,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/vengeful-spirit.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-unremembered-empire": {
@@ -4223,7 +4271,7 @@
     ],
     "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Imperial Fists, Alpha Legion<br>\n            <strong>Main Characters:</strong> Archamus, Rogal Dorn, Alpharius, Kestros, Andromeda-17<br>\n            <strong>Timeline:</strong> 010.M31\n        ",
     "blurb": "Archamus, master of Dorn's Huscarls and last of the First, hunts Alpha Legion sleeper cells through the Solar System while Alpharius mounts the first attack on Sol since the war began. It is a war of deduction as much as firepower, and it leads to Pluto. There Alpharius impales Archamus, and Rogal Dorn deliberately steps into a killing blow to pin his brother in place long enough to cut him down with Storm's Teeth. With the Alpha Legion, of course, nothing is ever quite certain.",
-    "blurbSafe": "The Solar System comes under attack for the first time since the war began, and defences the Imperial Fists thought impregnable are proving anything but. While every eye is fixed on the threat beyond the gates, Archamus, master of Dorn's Huscarls, works inward, unpicking an infiltration that has been in place far longer than anyone realised.",
+    "blurbSafe": "Rogal Dorn and the Imperial Fists have spent years fortifying the Solar System. As its defences face their first great test, threats to Terra may come from beyond its borders or from within.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4232,6 +4280,10 @@
         "https://warhammer40k.fandom.com/wiki/Praetorian_of_Dorn"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/hh-praetorian-of-dorn-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "legacies-bjorn": {
@@ -4514,7 +4566,7 @@
     ],
     "details": "\n            <strong>Author:</strong> Aaron Dembski-Bowden<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Custodian Guard, Sisters of Silence, Mechanicum, Thousand Sons<br>\n            <strong>Main Characters:</strong> The Emperor, Ra Endymion, Diocletian Coros, Arkhan Land, Magnus the Red<br>\n            <strong>Timeline:</strong> 011.M31\n        ",
     "blurb": "Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway, defending humanity's future against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work, a human-controlled path through the Webway that would free humanity from warp travel. As the Emperor battles alongside the Custodians, the Sisters of Silence and Fabricator-General Kane's Mechanicum against endless daemon hordes, His dream of apotheosis for humanity crumbles. He cannot leave to face Horus, for if the Webway breach is not contained, Terra itself will fall to Chaos.",
-    "blurbSafe": "Beneath the Imperial Palace, the Emperor wages a desperate war in the Webway against daemonic incursions. Magnus's psychic warning shattered the Emperor's greatest work, a human-controlled path that would free humanity from warp travel. As daemon hordes assault the breach, the Emperor cannot leave His post, even as Horus marches on Terra.",
+    "blurbSafe": "As Horus’s rebellion spreads across the galaxy, the Emperor remains beneath His Palace on Terra, consumed by a secret project now under threat. The Custodians, Sisters of Silence and Mechanicum fight a hidden war while humanity’s enemies draw closer.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -4524,6 +4576,10 @@
         "https://warhammer40k.fandom.com/wiki/The_Master_of_Mankind_(Novel)"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/the-master-of-mankind-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-path-of-heaven": {
@@ -5151,7 +5207,7 @@
     ],
     "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Sons of Horus, All Traitor Legions<br>\n            <strong>Main Characters:</strong> Horus Lupercal, Maloghurst, Lorgar, Perturabo, Fulgrim, Angron, Mortarion<br>\n            <strong>Timeline:</strong> 013.M31\n        ",
     "blurb": "Horus lies close to death from the Spear of Russ, which tore away the power that had been carrying him, and the traitor alliance starts to come apart. Lorgar and Perturabo must marshal Fulgrim and Angron, now daemon primarchs answerable to nobody, while Mortarion is sent ahead as vanguard. It falls to Maloghurst to hold the fractious Legion together. He finally walks into the immaterium himself, spending his life to persuade the last resisting fragment of Horus's soul to take the rebellion up again.",
-    "blurbSafe": "With Guilliman and the Lion returning at speed, the traitors have very little time left in which to strike at Terra, and the Warmaster's scattered hosts must be united before they can move. Horus lies wounded, Fulgrim and Angron have become things beyond anyone's command, and it falls to Maloghurst to hold the Sons of Horus together.",
+    "blurbSafe": "With the traitor fleet closing on Terra, rival ambitions threaten to fracture the Warmaster’s hosts. Maloghurst must bring them together before the attack can begin.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5161,7 +5217,11 @@
       ],
       "reviewedAt": "2026-08-02"
     },
-    "factionScope": "all-traitor"
+    "factionScope": "all-traitor",
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/eb-horus-heresy-slaves-to-darkness.html",
+      "reviewedAt": "2026-09-27"
+    }
   },
   "the-buried-dagger": {
     "number": "LIV",

@@ -63,6 +63,12 @@ for (const [key, book] of bookEntries) {
     if (book.series === 'primarchs' && book.format !== primarchFormatReview.format) {
         fail(`Primarchs novel '${key}' has incorrect format '${book.format}'`);
     }
+    if (book.safeSummaryReview && (!book.blurbSafe ||
+        !isBlackLibraryUrl(book.safeSummaryReview.source) ||
+        !/^\d{4}-\d{2}-\d{2}$/.test(book.safeSummaryReview.reviewedAt || '') ||
+        Object.keys(book.safeSummaryReview).some((field) => !['source', 'reviewedAt'].includes(field)))) {
+        fail(`Spoiler-free introduction review for '${key}' is incomplete`);
+    }
 }
 try {
     const url = new URL(publisherWorkFacts.source);
