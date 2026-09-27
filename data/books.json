@@ -5298,6 +5298,10 @@
         "https://warhammer40k.fandom.com/wiki/Horus_Heresy_Chronology"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/john-french/the-solar-war-ebook-2019.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-sons-of-selenar": {
@@ -5326,6 +5330,10 @@
         "https://www.trackofwords.com/2020/06/23/sons-of-the-selenar-graham-mcneill/"
       ],
       "reviewedAt": null
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/sons-of-the-selenar-ebook-2020.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-lost-and-damned": {
@@ -5341,7 +5349,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Guy Haley<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Imperial Fists, All Traitor Legions<br>\n            <strong>Main Characters:</strong> Katsuhiro, Rogal Dorn, Sanguinius, Jaghatai Khan, Mortarion, Angron, Zardu Layak<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "On the thirteenth day of Secundus the bombardment of Terra begins, and the first barrier Horus must break is not a wall but the Imperial Palace's aegis shield. Guy Haley tells the ground war largely through Katsuhiro, a conscript shovelled into the outer redoubts, while Mortarion's plague weapons and Angron's fury are unleashed and the traitor primarchs bicker over precedence. The outer defences hold, but every inch is paid for in the lives of billions.",
-    "blurbSafe": "The bombardment of Terra begins and Horus's ground assault falls on the outer redoubts of the Imperial Palace. Told largely through the eyes of a terrified conscript, this is the Siege at its most human, as ordinary people are fed into a war fought between demigods.",
+    "blurbSafe": "With the Solar War over, Horus begins his assault on Terra. Bombardment and ground fighting put the Palace's outer defences under enormous strain as its defenders face the forces of Angron and Mortarion.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5350,7 +5358,11 @@
       ],
       "reviewedAt": "2026-08-02"
     },
-    "factionScope": "all-traitor"
+    "factionScope": "all-traitor",
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/series-sot/the-lost-and-the-damned-ebook-2019.html",
+      "reviewedAt": "2026-09-27"
+    }
   },
   "sot-first-wall": {
     "number": "SoT 3",
@@ -5366,7 +5378,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Gav Thorpe<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Imperial Fists, Iron Warriors<br>\n            <strong>Main Characters:</strong> Perturabo, Kroeger, Forrix, Fafnir Rann, Amon Tauromachian, Zenobi Adedeji<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "Determined to humble Dorn, Perturabo sets Warsmith Kroeger to take the Lion's Gate space port, the one prize that would let Horus land his heavy forces at will. Iron Warriors and Imperial Fists grind against each other in their thousands, with Fafnir Rann making the traitors pay for every level gained. Away from the walls a Custodian probes the spreading Lectitio Divinitatus, and a conscript regiment from Afrik marches towards the Palace for reasons of its own.",
-    "blurbSafe": "Perturabo turns the Iron Warriors on the Lion's Gate space port, the prize that would let Horus land his heavy forces at will, and Dorn's sons must hold it. Away from the walls, a Custodian probes the spreading cult of the Emperor while a conscript regiment from Afrik marches on the Palace for reasons of its own.",
+    "blurbSafe": "The outer defences have fallen, and Horus's armies advance on the Palace. Perturabo and his Iron Warriors must take the Lion's Gate space port to bring their heaviest weapons to Terra, while Rogal Dorn tries to hold the walls.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5375,6 +5387,10 @@
         "https://www.trackofwords.com/2020/04/05/saturnine-dan-abnett/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/the-first-wall-mp3-2020.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-saturnine": {
@@ -5392,7 +5408,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Imperial Fists, Sons of Horus, Alpha Legion<br>\n            <strong>Main Characters:</strong> Rogal Dorn, Perturabo, Sigismund, Ezekyle Abaddon, Garviel Loken, Sanguinius<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "The Lion's Gate space port has fallen, and the traitor host now drives at the Lion's Gate fortifications and the Eternity Wall space port at once. Stretched past breaking, Rogal Dorn accepts that he cannot defend everything and stakes a gambit at the Saturnine Gate, surrendering ground he cannot hold to buy one chance to strike back at Perturabo. It is the hinge of the whole Siege, and big names do not survive it.",
-    "blurbSafe": "With the Lion's Gate space port lost and the traitors driving at two fronts at once, Rogal Dorn is forced to admit he can no longer defend everything. His answer is a gambit at the Saturnine Gate, trading ground he cannot hold for a single chance to turn his battle of wits with Perturabo.",
+    "blurbSafe": "As Horus's forces tighten their grip on the Palace, Rogal Dorn must decide where to commit defenders he cannot afford to lose. A single tactical choice may change the course of the Siege.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5402,6 +5418,10 @@
         "https://warhammer40k.fandom.com/wiki/Horus_Heresy_Chronology"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/series-sot/saturnine-ebook-2020.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-fury-of-magnus": {
@@ -5420,7 +5440,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>Legion:</strong> Thousand Sons, Space Wolves, Salamanders, Iron Warriors<br>\n            <strong>Main Characters:</strong> Magnus the Red, Ahzek Ahriman, Bodvar Bjarki, Vulkan, Malcador the Sigillite, Alivia Sureka<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "Magnus the Red comes to Terra with the Warmaster's besieging armies, but revenge is not the only thing that draws him. Shattered to his very elements, the Crimson King seeks the missing fragment of himself, and it lies inside the inner sanctum of the Imperial Palace. McNeill surrounds that infiltration with Ahriman's sorcerers, Bodvar Bjarki's Space Wolves, Vulkan and his Draaksward, Perturabo, Malcador and the perpetual Alivia Sureka, while Magnus fights an inner battle of his own.",
-    "blurbSafe": "Of all the Emperor's sons who fell to Chaos, Magnus the Red's tale is perhaps the most tragic. He comes to Terra with the besieging armies seeking not vengeance but a fragment of himself, locked away inside the most impregnable place on the planet. To be whole once more he must first overcome the fiercest defences in the Imperium.",
+    "blurbSafe": "Amid the Siege, Magnus the Red seeks something deeply personal within the Imperial Palace. Reaching it will bring him into conflict with Terra's defenders and with the Emperor.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5430,6 +5450,10 @@
         "https://www.trackofwords.com/2020/09/13/rapid-fire-graham-mcneill-talks-fury-of-magnus/"
       ],
       "reviewedAt": null
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/fury-of-magnus-ebook-2020.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-mortis": {
@@ -5446,7 +5470,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> John French<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Collegia Titanica, Death Guard<br>\n            <strong>Main Characters:</strong> Horus<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "Horus turns the god-engines loose. Legio Mortis is ordered to breach the Mercury Wall, and only Legio Ignatum, their ancient rivals from Mars, stands in the way. Around that Titan duel John French tracks the metaphysical siege as well, with the defenders' waking hours filled with despair and their dreams luring them towards a false paradise, while lost warriors cross the wastelands and warp-grown gardens of a dying Terra.",
-    "blurbSafe": "Horus orders Legio Mortis to breach the Mercury Wall, where their ancient Martian rivals of Legio Ignatum stand against them and the god-engines of both Legios meet in battle. Running alongside the Titan war is a stranger one, as the power of Chaos waxes and the defenders' despair and dreams become weapons turned against them.",
+    "blurbSafe": "As Horus's assault intensifies, Traitor Titans of Legio Mortis advance on the Mercury Wall. Legio Ignatum stands against them while the growing influence of the warp threatens the defenders behind the walls.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -5455,6 +5479,10 @@
         "https://www.trackofwords.com/black-library/black-library-reviews/black-library-the-horus-heresy-series/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-sot/siege-of-terra-mortis-ebook-2021.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-warhawk": {
@@ -5471,7 +5499,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Chris Wraight<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> White Scars, Death Guard<br>\n            <strong>Main Characters:</strong> Jaghatai Khan, Mortarion, Sigismund, Ilya Ravallion, Shiban Khan<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "The Inner Walls are breached and traitor vanguards are tearing towards the heart of the Palace. Jaghatai Khan answers with the most audacious stroke of the whole Siege, an unsupported counter-offensive to liberate the Lion's Gate space port, launched against an old enemy who has been made far greater than he ever was. Elsewhere a black sword is forged from spite, and both an unwilling saint and an enthusiastic sinner are loosed into the ruins.",
-    "blurbSafe": "With the Inner Walls breached, Jaghatai Khan stakes everything on the boldest stroke of the Siege: an unsupported counter-offensive to liberate the Lion's Gate space port. He launches it cut off from any help, against an old enemy who has been made far greater than he ever was, knowing that defeat dooms not only the White Scars but Terra itself.",
+    "blurbSafe": "Jaghatai Khan and the White Scars face a desperate choice as Horus's armies close on the heart of the Palace. The Khan prepares a bold strike at a vital space port, with the Death Guard standing in his path.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5479,6 +5507,10 @@
         "https://www.trackofwords.com/2022/10/13/short-and-sweet-october-2022/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-sot/warhawk-ebook-2021.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-echoes-of-eternity": {
@@ -5495,7 +5527,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Aaron Dembski-Bowden<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Blood Angels, World Eaters<br>\n            <strong>Main Characters:</strong> Sanguinius, Angron, Zephon, Amit, Lotara Sarrin, Kargos Bloodspitter, Arkhan Land<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "The walls are down and the Inner Palace is rubble. With the Khan on the edge of death, Dorn encircled at Bhab Bastion and Guilliman too far out to arrive in time, Sanguinius rallies a broken band of defenders and refugees on the last battlements before the Emperor's sanctum. Dembski-Bowden narrows the focus to two Legions and their people, from Zephon and Amit to Lotara Sarrin and Kargos, as Angron leads the armies of the damned against the Eternity Gate. The Gate holds, and the Angel pays for it.",
-    "blurbSafe": "The walls have fallen, the Inner Palace lies in ruins and the loyalists are forced back to the last battlements before the Emperor's sanctum. Angron leads the armies of the damned forward in a wrathful tide, and with his brothers stricken, encircled or too far away, it falls to Sanguinius to rally a desperate band of defenders and refugees for one last stand.",
+    "blurbSafe": "The Siege reaches the walls around the Emperor's sanctum. With the defenders under immense pressure, Sanguinius gathers those who can still fight for a final stand against the Warmaster's advancing forces.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -5505,6 +5537,10 @@
         "https://warhammer40k.fandom.com/wiki/Zephon"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-sot/ebook-echoes-of-eternity-eng-2022.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-garro-knight-of-grey": {
@@ -5521,7 +5557,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> James Swallow<br>\n            <strong>Type:</strong> Novella<br>\n            <strong>Legion:</strong> Knights-Errant, Death Guard<br>\n            <strong>Main Characters:</strong> Nathaniel Garro, Euphrati Keeler, Helig Gallor, Mortarion, Typhus<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "Nathaniel Garro's long road, from the betrayal at Isstvan III and the flight of the Eisenstein to his missions as Malcador's Agentia Primus, ends in the ash and fire of the embattled Imperial Palace. Guarding Euphrati Keeler at Marmax Bastion, he is caught when Mortarion and Typhus lead the Death Guard against it, and he walks out alone to parley with his gene-father so that Keeler can escape. The parley becomes a duel.",
-    "blurbSafe": "As the battle for Terra rages, the former Knight-Errant Nathaniel Garro fights among the ashes of the embattled Imperial Palace, struggling to shield Euphrati Keeler, first saint of the Imperial Cult, from the horrors of the war. Everything since Isstvan has drawn him towards his gene-father Mortarion and a destiny that can only end in bloodshed.",
+    "blurbSafe": "Nathaniel Garro fights through the embattled Palace as Horus's forces close in. While trying to protect Euphrati Keeler, he must confront a painful legacy of his break with the Death Guard.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5531,6 +5567,10 @@
         "https://www.warhammer-community.com/2022/07/13/nathaniel-garro-strikes-back-against-mortarion-in-a-new-siege-of-terra-novella/"
       ],
       "reviewedAt": null
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/featured/ebook-garro-knight-of-grey-eng-2023.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "sot-end-and-death-vol-1": {
@@ -5554,7 +5594,11 @@
       ],
       "reviewedAt": "2026-08-02"
     },
-    "factionScope": "all"
+    "factionScope": "all",
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/featured/ebook-the-end-and-the-death-volume-i-eng-2023.html",
+      "reviewedAt": "2026-09-27"
+    }
   },
   "sot-end-and-death-vol-2": {
     "number": "SoT 8b",
@@ -5567,7 +5611,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> All Legions<br>\n            <strong>Main Characters:</strong> Sanguinius, Horus, Garviel Loken, Rogal Dorn, Sigismund, Ezekyle Abaddon, Oll Persson, Euphrati Keeler<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "Sanguinius braves the Vengeful Spirit with one purpose, to reach Horus and decapitate the Heresy at a stroke. Loken stalks the same corridors, Oll Persson's long road converges on the ship, and below on Terra Dorn, Sigismund, Rann, Abaddon and Keeler fight their own endings. The Angel gets his duel and wounds the Warmaster, and Horus kills him.",
-    "blurbSafe": "Sanguinius braves the horrors of the Warmaster's flagship with a single purpose: to reach his brother Horus and end the Heresy at its head. The Dark Gods will not make that easy, and as the war edges towards its conclusion, events unfold that could save humanity or plunge it into an eternity of darkness.",
+    "blurbSafe": "The Siege nears its end as the fighting moves aboard the Warmaster's flagship. Sanguinius faces a perilous mission while Terra's defenders struggle to hold out below.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5577,7 +5621,11 @@
       ],
       "reviewedAt": "2026-08-02"
     },
-    "factionScope": "all"
+    "factionScope": "all",
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/mp3-the-end-and-the-death-volume-2-eng-2023.html",
+      "reviewedAt": "2026-09-27"
+    }
   },
   "sot-end-and-death-vol-3": {
     "number": "SoT 8c",
@@ -5590,7 +5638,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Dan Abnett<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> All Legions<br>\n            <strong>Main Characters:</strong> The Emperor of Mankind, Horus, Malcador the Sigillite, Rogal Dorn, Roboute Guilliman, Typhus, Euphrati Keeler<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "Terra burns and reality itself unravels. Malcador sits ablaze on the Golden Throne buying his master a little more time, the Dark Angels hold the Hollow Mountain and Keeler's pilgrims against Typhus, and Guilliman races across the stars not knowing what he will find. Aboard the Vengeful Spirit the Emperor destroys Horus utterly, soul and all, and pays for it with His body and ten thousand years interred in the Golden Throne.",
-    "blurbSafe": "Terra burns and reality itself is coming apart. Malcador sits ablaze on the Golden Throne to buy his master a little more time, the last redoubts hold out against the traitor hordes, and Guilliman races for the Throneworld not knowing what he will find there. Aboard the Vengeful Spirit, father and son meet at last.",
+    "blurbSafe": "Terra's last defences are failing as the war reaches its final confrontation. Across the Throneworld and aboard the Vengeful Spirit, the survivors struggle to shape what comes after the Siege.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -5600,7 +5648,11 @@
       ],
       "reviewedAt": "2026-08-02"
     },
-    "factionScope": "all"
+    "factionScope": "all",
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/ebook-the-end-and-the-death-volume-iii-eng-2024.html",
+      "reviewedAt": "2026-09-27"
+    }
   },
   "sot-era-of-ruin": {
     "number": "SoT 9",
@@ -5618,7 +5670,7 @@
     "series": "siege-of-terra",
     "details": "\n            <strong>Author:</strong> Various, introduction by Jacob Youngs<br>\n            <strong>Type:</strong> Anthology<br>\n            <strong>Legion:</strong> White Scars, Thousand Sons, Custodian Guard, Imperial Army<br>\n            <strong>Main Characters:</strong> Ilya Ravallion, Ahzek Ahriman<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "The epilogue to the whole saga: eight new stories from the writers of the Siege of Terra, set both during the battle for the Throneworld and in the wreckage afterwards. Horus is dead and his Heresy is over, but the scars will never fully heal. Chris Wraight's Homebound leaves Ilya Ravallion choosing between the decimated White Scars and a quiet retirement, while John French's Ex Libris has Ahriman racing to learn what he can of the Warp before its gates close to him forever.",
-    "blurbSafe": "The closing volume of the Siege of Terra sequence is not a novel but an anthology, eight new stories from the writers of the series set during the battle for the Throneworld and in the years that follow. Custodians, scheming sorcerers and the lowly footsoldiers of the Imperial Army must all live with what this war has made of them.",
+    "blurbSafe": "A Siege of Terra anthology of eight stories about those who lived through the war and its aftermath. From Custodians and sorcerers to soldiers of the Imperial Army, its perspectives look beyond the battle for the Throneworld.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -5629,6 +5681,10 @@
         "https://www.goodreads.com/book/show/229201702-era-of-ruin"
       ],
       "reviewedAt": null
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/series-sot/ebook-siege-of-terra-era-of-ruin-eng-2025.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-rogal-dorn": {

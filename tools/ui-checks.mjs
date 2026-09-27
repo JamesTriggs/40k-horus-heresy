@@ -921,6 +921,30 @@ await check('all Core introductions have publisher reviews and hide the key reve
     await reader.close();
 });
 
+await check('Siege introductions have publisher reviews and avoid earlier volume outcomes', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    await reader.goto(BASE, { waitUntil: 'load' });
+    const reviewed = await reader.evaluate(() => Object.entries(bookData)
+        .filter(([key]) => key.startsWith('sot-'))
+        .every(([, book]) => book.safeSummaryReview?.source.startsWith('https://www.blacklibrary.com/')));
+    if (!reviewed) throw new Error('a Siege introduction has no individual publisher review');
+    for (const [key, spoiler] of [
+        ['sot-first-wall', 'conscript regiment'],
+        ['sot-saturnine', "Lion's Gate space port lost"],
+        ['sot-warhawk', 'Inner Walls breached'],
+        ['sot-echoes-of-eternity', 'brothers stricken'],
+        ['sot-end-and-death-vol-3', 'Malcador sits'],
+    ]) {
+        await reader.goto(new URL(`#work=${key}`, BASE).href, { waitUntil: 'load' });
+        await reader.waitForSelector('#modalOverlay.active');
+        const blurb = await reader.locator('#blurb').innerText();
+        if (!blurb.includes('SPOILER-FREE MODE') || blurb.includes(spoiler)) {
+            throw new Error(`${key}: ${blurb}`);
+        }
+    }
+    await reader.close();
+});
+
 await check('spoiler-free ordering guide hides its event table', async () => {
     await page.uncheck('#showSpoilers');
     await page.click('#orderingGuideBtn');

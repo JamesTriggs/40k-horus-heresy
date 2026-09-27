@@ -1294,7 +1294,7 @@ body.traitor-theme .ordering-guide-float-btn:hover {
     font-size: 1rem;
     line-height: 1.8;
     color: var(--parchment);
-    text-align: justify;
+    text-align: left;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(212, 175, 55, 0.2);
