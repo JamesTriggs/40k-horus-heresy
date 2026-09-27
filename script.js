@@ -2168,7 +2168,7 @@ function renderWorkResearch(bookKey) {
     host.append(heading);
 
     const note = document.createElement('p');
-    note.textContent = 'These links document research for the summary. Publication details and chronology have not all been checked against a primary source.';
+    note.textContent = 'These links document research for the summary. Publication details and chronology have not all been checked against a primary source. External pages may contain spoilers.';
     host.append(note);
 
     if (coreRouteRank.has(bookKey)) {

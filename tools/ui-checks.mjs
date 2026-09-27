@@ -877,10 +877,12 @@ await check('unreviewed introductions stay out of work details, search and metad
     const result = await reader.evaluate(() => ({
         blurb: document.querySelector('#blurb').textContent,
         description: document.querySelector('meta[name="description"]').content,
+        research: document.querySelector('#workResearch').textContent,
     }));
     if (!result.blurb.includes('Introduction pending spoiler review') ||
         result.blurb.includes('sole surviving church') ||
-        result.description.includes('sole surviving church')) {
+        result.description.includes('sole surviving church') ||
+        !result.research.includes('External pages may contain spoilers')) {
         throw new Error(JSON.stringify(result));
     }
     await reader.evaluate(() => closeModal({ updateHistory: false }));
