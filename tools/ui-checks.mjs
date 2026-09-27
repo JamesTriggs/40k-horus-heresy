@@ -945,6 +945,23 @@ await check('Siege introductions have publisher reviews and avoid earlier volume
     await reader.close();
 });
 
+await check('all standalone Primarchs introductions have publisher reviews', async () => {
+    const reader = await newPage({ width: 390, height: 844 });
+    await reader.goto(new URL('#work=primarch-fulgrim', BASE).href, { waitUntil: 'load' });
+    await reader.waitForSelector('#modalOverlay.active');
+    const result = await reader.evaluate(() => ({
+        reviewed: Object.values(bookData).filter((book) => book.series === 'primarchs')
+            .every((book) => book.safeSummaryReview?.source.startsWith('https://www.blacklibrary.com/')),
+        blurb: document.querySelector('#blurb').textContent,
+        citation: document.querySelector('#workResearch').textContent,
+    }));
+    if (!result.reviewed || result.blurb.includes('world of Byzas') ||
+        !result.blurb.includes('just seven') || !result.citation.includes('product description')) {
+        throw new Error(JSON.stringify(result));
+    }
+    await reader.close();
+});
+
 await check('spoiler-free ordering guide hides its event table', async () => {
     await page.uncheck('#showSpoilers');
     await page.click('#orderingGuideBtn');

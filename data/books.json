@@ -70,6 +70,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/primarchs_/primarchs-vulkan-lord-of-drakes.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-fulgrim": {
@@ -85,7 +89,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Josh Reynolds<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Emperor's Children<br>\n            <strong>Main Characters:</strong> Fulgrim, Fabius, Abdemon<br>\n            <strong>Timeline:</strong> 850-868.M30\n        ",
     "blurb": "Breaking away from Horus to take the 28th Expedition, Fulgrim brings only seven Emperor's Children with him to Byzas, a world whose byzantine aristocracy plays to his strengths. What follows is largely negotiation, intrigue and ham-fisted assassination attempts rather than open war, though plenty of blood is spilled by the end. With the III Legion still small and its confidence only recently rebuilt, this is Fulgrim proving his methods work. A young apothecary named Fabius is among the seven.",
-    "blurbSafe": "Determined to prove himself to his brothers, Fulgrim takes just seven of his finest warriors to bring the world of Byzas into compliance by persuasion rather than annihilation. A story of intrigue, diplomacy and sharply pointed conversation more than battle, it studies the Phoenician's pride, charm and hunger to be recognised, and the price of even a bloodless triumph.",
+    "blurbSafe": "Fulgrim sets out with just seven Emperor's Children to bring a rebellious world into the Imperium. He wants a victory worthy of his place in the Great Crusade, but a small expedition can carry a great cost.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -94,6 +98,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/fulgrim-the-palatine-phoenix-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-magnus": {
@@ -110,7 +118,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Graham McNeill<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Thousand Sons, Iron Warriors<br>\n            <strong>Main Characters:</strong> Magnus the Red, Perturabo, Ahriman, Atharva, Forrix<br>\n            <strong>Timeline:</strong> 853.M30\n        ",
     "blurb": "In the 55th year of the Great Crusade the world of Morningstar is tearing itself apart, and Magnus and Perturabo bring the Thousand Sons and Iron Warriors together to evacuate it. Perturabo handles the logistics while Magnus hunts for the cause, and the heart of the book is the genuine affection between the two brothers and the friendship growing between Ahriman and Forrix. A prologue and epilogue show Magnus brooding on the Planet of the Sorcerers long afterwards.",
-    "blurbSafe": "On the doomed world of Morningstar, Magnus and his brother Perturabo bring their Legions together for a rescue rather than a conquest. Seen through his own eyes and those of his sons, it catches the Crimson King at a hopeful moment, a complicated man of good intentions, restless curiosity and no small hubris.",
+    "blurbSafe": "During the Great Crusade, Magnus the Red fights alongside Perturabo while the Thousand Sons pursue forbidden knowledge. A vision forces Magnus to choose between their shared mission and his own search for mastery of the warp.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -119,6 +127,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/magnus-the-red.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-ferrus-manus": {
@@ -135,7 +147,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> David Guymer<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Iron Hands, Emperor's Children<br>\n            <strong>Main Characters:</strong> Ferrus Manus<br>\n            <strong>Timeline:</strong> 869.M30\n        ",
     "blurb": "In 869.M30, with rumours spreading that the Emperor means to step back and raise one of his sons to lead the Crusade, Ferrus Manus learns that the 413th Expedition has stalled against the stubborn human empire of Gardinaal. Rather than wait for reinforcements he takes the war himself, commanding a leaderless host of Iron Hands, Emperor's Children, Ultramarines and Thousand Sons to make an example his father cannot ignore. A rare long look at the Gorgon, and at Terran-versus-Medusan tension inside the X Legion.",
-    "blurbSafe": "With rumours spreading that the Emperor will hand the Great Crusade to one of his sons, Ferrus Manus seizes a stalled campaign against the human empire of Gardinaal to make a statement his father cannot ignore. A rare extended study of the Gorgon, of his Legion's rivalry with the Emperor's Children, and of the divisions growing within the Iron Hands.",
+    "blurbSafe": "Rumours that the Emperor will choose a Warmaster reach Ferrus Manus as a campaign against Gardinaal falters. He takes command of a mixed Imperial force, determined to make an example that cannot be ignored.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -144,6 +156,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/ferrus-manus-gorgon-of-medusa-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "tales-of-heresy-after-deshea": {
@@ -182,7 +198,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Ian St. Martin<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> World Eaters<br>\n            <strong>Main Characters:</strong> Angron, Mago, Kharn, Lhorke<br>\n            <strong>Timeline:</strong> 900-905.M30\n        ",
     "blurb": "A Great Crusade novel, set at the compliance of Ghenna soon after Angron is given command of the XII Legion. Contemptuous of sons who cannot match the gladiators he lost, he demands they remake themselves in his image by taking the Butcher's Nails. The present-day thread follows Mago, a centurion who embodies everything honourable about the old War Hounds, while flashbacks show Angron enslaved in Nuceria's fighting pits. It is the story of the World Eaters becoming what they became.",
-    "blurbSafe": "Placed in command of a Legion he never wanted, in service to a father he cannot forgive, Angron gives his sons an ultimatum that will set them on a path they can never leave. Interleaved with his youth in the fighting pits of Nuceria, it is the tragedy of a primarch broken long before the Emperor found him, and of warriors desperate to earn his regard.",
+    "blurbSafe": "Newly reunited with the Legion once known as the War Hounds, Angron gives his sons an ultimatum. They must decide whether following their primarch means taking on his deepest wounds.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -191,6 +207,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/angron-slave-of-nuceria-ebook-2019.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-mortarion": {
@@ -206,7 +226,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> David Annandale<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Death Guard<br>\n            <strong>Main Characters:</strong> Mortarion<br>\n            <strong>Timeline:</strong> 930-939.M30\n        ",
     "blurb": "Newly raised to command of the Death Guard, Mortarion volunteers to break the Galaspar system, whose ruling Order he sees as a version of the tyrants who enslaved Barbarus. He drives his barque the Fourth Horseman into Galaspar's hive spires and the primary hive falls in a night and a day, at a cost that appals the Imperium. Two of his brother primarchs then summon him to answer for the slaughter, and the Pale King brooks no challenge to his methods.",
-    "blurbSafe": "Newly raised to command of the Death Guard, Mortarion answers the tyranny of the Galaspar system with a campaign of shocking speed and ferocity. Its cost appals even the Imperium, and two of his brother primarchs come to make him account for his methods. A study of a primarch whose hatred of tyrants shapes every judgement he makes.",
+    "blurbSafe": "Mortarion leads the Death Guard against the tyrants of Galaspar. The brutality of his campaign appals even the Imperium, and two fellow primarchs come to question his methods.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -215,6 +235,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/primarchs_/ebook-mortarion-the-pale-king-eng-2022.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "tales-of-heresy-wolf-at-the-door": {
@@ -255,7 +279,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Guy Haley<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Raven Guard<br>\n            <strong>Main Characters:</strong> Corvus Corax, Caius Valerius, Agapito<br>\n            <strong>Timeline:</strong> 954.M30\n        ",
     "blurb": "Not an origin story. The 27th Expedition has stalled trying to bring the Carinae Sodality's thousand void-cities to compliance, and Corax answers the call rather than let the Night Lords take the job. Stubborn resistance, and an ancient bio-weapon unleashed at the void-city of Zenith, force him into escalating brutality. A parallel thread on Kiavahr and an exploration of the Raven Guard's genetic 'Sable Brand' probe the darkness in the Legion, with several fine conversations between Corax and Guilliman.",
-    "blurbSafe": "Corax takes on a stalled compliance against the vast void-cities of the Carinae Sodality, determined to succeed without resorting to terror. Their defenders are well armed and utterly without remorse, and the campaign pushes him steadily further than he wishes to go. A study of the line between justice and vengeance, and of the darkness the Raven Guard carry within them.",
+    "blurbSafe": "Corax and the Raven Guard are sent against the fortified void-cities of Carinae. When an ancient bio-weapon devastates the Imperial force, Corax must weigh swift victory against his desire for vengeance.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -264,6 +288,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/primarchs-corax-ebook-cs-2018.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "the-first-heretic": {
@@ -308,7 +336,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Gav Thorpe<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Word Bearers<br>\n            <strong>Main Characters:</strong> Lorgar, Kor Phaeron, Nairo<br>\n            <strong>Timeline:</strong> 959-964.M30\n        ",
     "blurb": "Almost all of this takes place on Colchis, long before the Emperor arrives. The disgraced priest Kor Phaeron finds a strange infant among desert nomads and raises him as a weapon for his own ambitions, and the book follows that abusive father-and-son relationship through the religious war that unites the planet under one faith. It is told through Kor Phaeron and the slave Nairo rather than Lorgar himself, and structured in short chapter-and-verse sections. Brief interludes jump forward to the Word Bearers after Monarchia.",
-    "blurbSafe": "On Colchis, mighty religions rule a decaying society in the name of absent gods until Kor Phaeron finds an extraordinary child among the nomads and raises him to serve his own ends. Seen almost entirely through other people's eyes, this is a character study of Lorgar's upbringing and the religious war that made him, rather than a Legion war story.",
+    "blurbSafe": "On Colchis, Kor Phaeron raises the young Lorgar amid rival faiths and political ambition. As religious war spreads, Lorgar must decide how to meet his adopted father's expectations and the future he sees for himself.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -317,6 +345,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/gav-thorpe/lorgar-bearer-of-the-word-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "tales-of-heresy-call-of-the-lion": {
@@ -381,7 +413,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> David Annandale<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Ultramarines<br>\n            <strong>Main Characters:</strong> Roboute Guilliman, Marius Gage<br>\n            <strong>Timeline:</strong> 964-970.M30\n        ",
     "blurb": "Deliberately not an origin story. Guilliman leads the XIII Legion against the last remnants of an ork empire on Thoas, determined to honour the vanished human civilisation that built the world, while quietly reshuffling parts of his own Legion. The war refuses to behave, testing his doctrine that precision and adaptability beat brute force. Each chapter opens with an excerpt from Guilliman's own treatises on war and culture.",
-    "blurbSafe": "Guilliman takes the XIII Legion to the ork-held world of Thoas, set on honouring the civilisation that once lived there. It is a study of the Master of Ultramar as both planner and warrior, his doctrine of precision and adaptability tested by a war that will not go to plan.",
+    "blurbSafe": "Guilliman leads the Ultramarines against a rival empire on the ork-held world of Thoas. He must choose how to fight without losing sight of the future he hopes to build.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -390,6 +422,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/roboute-guilliman-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "war-divine-adoratrice": {
@@ -437,6 +473,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/alpharius-head-of-the-hydra-ebook-2021.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "shadows-of-treachery-dark-king": {
@@ -486,6 +526,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/lion-eljonson-lord-of-the-first-ebook-2020.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "eye-wolf-ash-fire": {
@@ -526,7 +570,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Guy Haley<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Iron Warriors<br>\n            <strong>Main Characters:</strong> Perturabo, Dantioch, Fortreidon<br>\n            <strong>Timeline:</strong> 999.M30\n        ",
     "blurb": "Two interleaved threads: Perturabo's boyhood and rise among the fractious city states of Olympia, and the Iron Warriors' grinding late-Crusade campaign against the time-warping hrud, seen through Warsmith Dantioch and a newly inducted legionary. When word reaches him of turmoil on his adoptive home world, Perturabo abandons the xenos war to deal with it himself. A bleak, honest study of how a prodigy's resentment and self-pity took root, and what that cost his Legion.",
-    "blurbSafe": "Cutting between Perturabo's prodigious youth on Olympia and the Iron Warriors' brutal campaign against the xenos hrud, this is the origin story of the most bitter of the Emperor's sons. When trouble stirs on his adoptive home world, he turns his Legion around to answer it. A bleak look at how a genius came to feel so thanklessly used.",
+    "blurbSafe": "As the Iron Warriors fight a difficult campaign against the hrud, Perturabo learns of unrest on Olympia, the world where he was raised. He turns his Legion towards home as the pressures of the Great Crusade mount.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -535,6 +579,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/perturabo-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-jaghatai-khan": {
@@ -559,6 +607,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/authors/chris-wraight/primarchs-jaghatai-khan-warhawk-of-chogoris-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "legion": {
@@ -790,6 +842,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/ebook-sanguinius-the-great-angel-eng-2022.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "shadows-of-treachery-kaban-project": {
@@ -5703,7 +5759,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Gav Thorpe<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Imperial Fists, Luna Wolves, Emperor's Children, Dark Angels<br>\n            <strong>Main Characters:</strong> Rogal Dorn, Sigismund, Fafnir Rann<br>\n            <strong>Timeline:</strong> 014.M31\n        ",
     "blurb": "As the Great Crusade enters its sixth decade, the Emperor sends four primarchs into the Occluda Noctis, hundreds of systems hidden behind a warp storm that blinds even his psychic sight. Dorn leads the Imperial Fists into that darkness against a foe nobody has met before, alongside Horus, Fulgrim and the Lion. Told in short, snappy sections through his Legion and the Remembrancer Order, it studies Dorn almost entirely from the outside, and is framed by scenes on Terra shortly before Horus's armada reaches Sol.",
-    "blurbSafe": "As the Great Crusade enters its sixth decade, the Emperor sends four primarchs beyond a vast warp storm into the Occluda Noctis, a region his psychic sight cannot pierce. Dorn takes the Imperial Fists into that darkness against an enemy unlike any encountered before. Told in quick, snappy sections and largely from other people's perspectives, it is a patient study of who Dorn is and why.",
+    "blurbSafe": "Six decades into the Great Crusade, Rogal Dorn is one of four primarchs tasked with securing worlds beyond a vast warp storm. Isolated in the Occluda Noctis, he leads the Imperial Fists against an unfamiliar enemy.",
     "research": {
       "confidence": "medium",
       "sources": [
@@ -5711,6 +5767,10 @@
         "https://www.trackofwords.com/2022/11/08/short-and-sweet-november-2022/"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/series/primarchs_/ebook-rogal-dorn-the-emperors-crusader-eng-2022.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-leman-russ": {
@@ -5727,7 +5787,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Chris Wraight<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Space Wolves, Dark Angels<br>\n            <strong>Main Characters:</strong> Leman Russ, Lion El'Jonson, Jorin Bloodhowl<br>\n            <strong>Timeline:</strong> 015-021.M31\n        ",
     "blurb": "At the height of the Great Crusade the VI Legion grinds the technologically capable human empire of Dulan towards compliance, with Russ sworn to kill the tyrant Durath himself and the Lion counselling caution. Much of the book follows Jorin Bloodhowl, Jarl of the 13th Company, and a secret the Wolves are hiding from the Dark Angels. Wraight bookends it with post-Heresy scenes on Fenris, where Russ recounts the campaign to a young Blood Claw.",
-    "blurbSafe": "The VI Legion fight to bring the defiant human empire of Dulan to compliance, with the Dark Angels alongside them and Russ pledged to strike down the tyrant Durath personally. This is the origin of the famous rivalry between the Wolf and the Lion, and a look at the secrets, honour and brotherhood beneath the Space Wolves' barbarian reputation.",
+    "blurbSafe": "The Space Wolves and Dark Angels fight together to bring Dulan into compliance, but Russ and Lion El'Jonson disagree over how to deal with its ruler. The tension between brothers threatens their campaign.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5736,6 +5796,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/all-products/leman-russ-ebook.html",
+      "reviewedAt": "2026-09-27"
     }
   },
   "primarch-konrad-curze": {
@@ -5751,7 +5815,7 @@
     "series": "primarchs",
     "details": "\n            <strong>Author:</strong> Guy Haley<br>\n            <strong>Type:</strong> Novel<br>\n            <strong>Legion:</strong> Night Lords<br>\n            <strong>Main Characters:</strong> Konrad Curze<br>\n            <strong>Timeline:</strong> 036.M31\n        ",
     "blurb": "The narrative present is Curze alone in his palace on Tsagualsa, long after the Heresy has ended, spending his final hours justifying himself to a distant and contemptuous father. Around that frame Haley assembles vignettes from across his life: Nostramo before his rediscovery, his reading of his role in the Great Crusade, the changes in his Legion, the destruction of his home world and how he came to Tsagualsa. Fractured by design, and narrated by the least reliable voice imaginable.",
-    "blurbSafe": "Born in the shadows of Nostramo, a world of murderers and worse, Konrad Curze became the figure of dread known as the Night Haunter. Told in fractured vignettes by a deeply unreliable narrator, it pieces together how he saw himself, his Legion and the Imperium. It offers no verdict, and leaves you to decide how far to sympathise.",
+    "blurbSafe": "From his childhood on Nostramo to his command of the Night Lords, Konrad Curze becomes the feared Night Haunter. This novel follows the making of a primarch whose visions of the future haunt his choices.",
     "research": {
       "confidence": "high",
       "sources": [
@@ -5760,6 +5824,10 @@
         "https://sites.google.com/site/tymellsheresy/horus-heresy-timeline-notes-potential-spoilers"
       ],
       "reviewedAt": "2026-08-02"
+    },
+    "safeSummaryReview": {
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/konrad-curze-the-night-haunter-mp3-2019.html",
+      "reviewedAt": "2026-09-27"
     }
   }
 }
