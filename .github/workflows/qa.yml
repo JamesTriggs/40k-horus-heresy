@@ -18,9 +18,15 @@ jobs:
       - run: npm ci
       - run: npm run check:data
       - run: npm run build
+      - name: Check committed GitHub Pages output
+        run: |
+          git diff --exit-code -- works.html work/
+          test -z "$(git ls-files --others --exclude-standard -- works.html work/)"
       - name: Check deployment bundle
         run: |
           test -f dist/index.html
+          test -f dist/works.html
+          test -f dist/work/horus-rising/index.html
           test -f dist/catalogue-data.js
           test ! -e dist/data
           test ! -e dist/tools
@@ -43,5 +49,8 @@ jobs:
         env:
           BASE_URL: http://127.0.0.1:8899/
       - run: npm run check:engines
+        env:
+          BASE_URL: http://127.0.0.1:8899/
+      - run: npm run check:catalogue
         env:
           BASE_URL: http://127.0.0.1:8899/

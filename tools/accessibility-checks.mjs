@@ -67,11 +67,20 @@ for (const viewport of [{ width: 1280, height: 800 }, { width: 390, height: 844 
         await page.waitForSelector('#characterModalOverlay.active');
     });
 }
+await audit('direct character URL', { width: 390, height: 844 }, async (page) => {
+    await page.goto(new URL('#character=garviel-loken', base).href);
+    await page.waitForSelector('#characterModalOverlay.active');
+});
 await audit('storyline chart', { width: 1280, height: 800 }, async (page) => {
     await page.click('#viewChart');
     await page.waitForSelector('#chartSvg');
 });
 await audit('sources page', { width: 390, height: 844 }, (page) => page.goto(new URL('sources.html', base).href));
+await audit('work index', { width: 390, height: 844 }, (page) => page.goto(new URL('works.html', base).href));
+await audit('reviewed standalone work', { width: 390, height: 844 },
+    (page) => page.goto(new URL('work/horus-rising/', base).href));
+await audit('pending-review standalone work', { width: 1280, height: 800 },
+    (page) => page.goto(new URL('work/tallarn-siren/', base).href));
 for (const viewport of [{ width: 1280, height: 800 }, { width: 390, height: 844 }]) {
     await audit(`event atlas ${viewport.width}px`, viewport,
         (page) => page.goto(new URL('events.html', base).href));

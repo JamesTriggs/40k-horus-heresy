@@ -1013,6 +1013,17 @@ body.traitor-theme .allegiance-toggle:hover {
 .source-page h2 { margin-top: 2rem; }
 .source-page li { margin-bottom: 0.6rem; }
 
+.work-index ol { padding-left: 1.5rem; }
+.work-index li { padding-left: 0.4rem; }
+.work-index li span { color: var(--parchment); font-size: 0.85rem; }
+.work-landing-content { display: grid; grid-template-columns: minmax(120px, 220px) 1fr; gap: 1.5rem; align-items: start; }
+.work-landing-content img { display: block; width: 100%; height: auto; border: 2px solid var(--imperial-gold); }
+.work-landing-content p:first-child { margin-top: 0; }
+@media (max-width: 560px) {
+    .work-landing-content { grid-template-columns: 1fr; }
+    .work-landing-content img { max-width: 180px; }
+}
+
 .event-navigation { margin: 1.5rem 0; }
 .event-navigation summary { color: var(--imperial-gold); cursor: pointer; }
 .event-navigation summary:focus-visible { outline: 2px solid var(--imperial-gold); outline-offset: 3px; }
@@ -1474,6 +1485,18 @@ body.traitor-theme .ordering-guide-float-btn:hover {
     margin-bottom: 0.5rem;
 }
 
+#characterPermalink {
+    display: inline-block;
+    color: var(--imperial-gold);
+    margin-bottom: 0.5rem;
+    text-underline-offset: 0.2em;
+}
+
+#characterPermalink:focus-visible {
+    outline: 2px solid var(--warning-amber);
+    outline-offset: 3px;
+}
+
 .character-role {
     color: var(--imperial-gold);
     font-size: 0.95rem;
@@ -1500,7 +1523,7 @@ body.traitor-theme .ordering-guide-float-btn:hover {
     font-size: 0.95rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .appears-in-label {

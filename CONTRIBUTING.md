@@ -58,6 +58,7 @@ python3 -m http.server 8000 --directory dist
 BASE_URL=http://localhost:8000/ npm run check:browser
 BASE_URL=http://localhost:8000/ npm run check:accessibility
 BASE_URL=http://localhost:8000/ npm run check:engines
+BASE_URL=http://localhost:8000/ npm run check:catalogue
 
 # Test in multiple browsers
 # - Chrome/Edge
@@ -89,6 +90,7 @@ If adding new books or fixing book information:
 - **Edit `data/books.json`**: Include title, author, timeline, legions, details, blurb, blurbSafe and research metadata.
 - **Keep work IDs stable**: Add new works to `data/work-identities.json`. Reprints should share an identity with the existing work, while every legacy entry key remains mapped.
 - **Regenerate derived files**: Run `node tools/build-catalogue.mjs` and `node tools/reconcile-catalogue.mjs`.
+- **Commit generated work pages**: `npm run build` updates `works.html` and `work/` for GitHub Pages as well as `dist/` for Netlify. CI checks that the committed pages match the source data.
 - **Test spoiler toggle**: Ensure both blurb and blurbSafe are present
 
 ## 👤 Adding Character Data

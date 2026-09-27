@@ -35,6 +35,8 @@ For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 The reading view offers a **Core** path through the 12 novels in [Warhammer Community's curated Horus Heresy Saga](https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/), **Full Fiction** for the whole archive, and a shortcut to the Legion filter. Path choice is linkable and does not change saved progress.
 The expandable next-read guide picks the first unstarted work in the chosen path, explains the order, and offers two following titles. Readers can save a suggestion for later, restore saved choices and switch from Full Fiction to the shorter Core path.
 
+The generated work index and 230 standalone work pages give search engines and readers a direct, spoiler-safe answer for each represented work. Each page links back to the interactive Archive for progress tracking and connections. `npm run build` generates them from the structured records in both the repository root for the current GitHub Pages setup and `dist/` for Netlify. Commit the generated root pages with catalogue changes.
+
 ### 📚 Fiction catalogue
 - **232 entries** with cover images
 - **Chronological ordering** by in-story timeline (730.M30 → 036.M31), strict, with no series held back as an appendix
@@ -148,12 +150,15 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── data/primarch-format-review.json # Publisher evidence for Primarchs novel formats
 ├── data/events.json              # Sourced event and viewpoint relationships
 ├── sources.html                  # Research and correction information
+├── works.html                    # Generated alphabetical work index for GitHub Pages
+├── work/                         # Generated standalone work pages for GitHub Pages
 ├── events.html                   # Event atlas
 ├── events.js                     # Event atlas rendering
 ├── ROADMAP.md                    # Product and editorial roadmap
 ├── BUILD_LOG.md                  # Slice-by-slice implementation record
 ├── CHART_RECONCILIATION.md       # Publisher evidence for chart-only works
 ├── RELEASE_WATCH.md              # Publisher listings awaiting inclusion review
+├── tools/build-work-pages.mjs     # Generates the standalone work pages in dist/
 ├── images/                       # Book covers and character portraits
 │   ├── *.jpg                     # 81 cover images shared across 232 entries
 │   ├── character-*.jpg           # 32 character portraits

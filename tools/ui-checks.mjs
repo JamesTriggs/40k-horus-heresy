@@ -521,6 +521,34 @@ await check('a character work link replaces the parent detail without stacking m
     }
 });
 
+await check('a character URL opens directly and Back and Forward restore the dossier', async () => {
+    const p = await newPage({ width: 390, height: 844 });
+    await p.goto(new URL('#character=garviel-loken', BASE).href, { waitUntil: 'load' });
+    await p.waitForSelector('#characterModalOverlay.active');
+    const direct = await p.evaluate(() => ({
+        name: document.getElementById('characterName').textContent,
+        title: document.title,
+        permalink: document.getElementById('characterPermalink')?.getAttribute('href'),
+        welcome: document.getElementById('welcomeOverlay').classList.contains('active'),
+        overflow: document.documentElement.scrollWidth - innerWidth,
+    }));
+    await p.click('#closeCharacterModal');
+    await p.waitForFunction(() => !document.getElementById('characterModalOverlay').classList.contains('active'));
+    const closed = new URL(p.url()).hash;
+    await p.evaluate(() => showCharacterModal('garviel-loken'));
+    await p.goBack();
+    await p.waitForFunction(() => !document.getElementById('characterModalOverlay').classList.contains('active'));
+    await p.goForward();
+    await p.waitForSelector('#characterModalOverlay.active');
+    const returned = await p.locator('#characterName').textContent();
+    await p.close();
+    if (direct.name !== 'Garviel Loken' || !direct.title.includes('Garviel Loken') ||
+        direct.permalink !== '#character=garviel-loken' || direct.welcome ||
+        direct.overflow > 1 || closed || returned !== 'Garviel Loken') {
+        throw new Error(JSON.stringify({ direct, closed, returned }));
+    }
+});
+
 await check('the ordering guide renders the generated document', async () => {
     await page.click('#orderingGuideBtn');
     await page.waitForFunction(

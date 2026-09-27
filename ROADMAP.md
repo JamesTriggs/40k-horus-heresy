@@ -4,6 +4,12 @@
 **Horizon:** roughly six to nine months of focused work, then ongoing editorial maintenance
 **Aim:** become the most useful independent place to decide what to read, find where a story appears, understand how works connect, and keep a reliable reading record.
 
+## Release candidate scope, 27 September 2026
+
+The current pull request is a deployable increment of this longer roadmap. It represents 230 distinct works with stable IDs, sourced publication checks for 231 of 232 catalogue entries, a reviewed spoiler-free premise for all novels, anthologies and novellas, and a safe fallback for shorter works awaiting review. It adds reader routes, collection tracking, an event atlas, direct work and character links, and generated standalone work pages. Automated data, browser, accessibility, cross-engine and whole-catalogue checks are the release gate.
+
+The stages below remain the long-term editorial and product plan. The [chart reconciliation](CHART_RECONCILIATION.md) and [release watch](RELEASE_WATCH.md) list known candidate works beyond this scoped catalogue. The shorter-work editorial audit, wider chronology and synopsis verification, moderated reader sessions and independent expert review remain open. The PR can be merged as this scoped release without claiming those acceptance targets have been met.
+
 ## Product promise
 
 A reader should be able to answer four questions without leaving the Archive:

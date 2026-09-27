@@ -40,6 +40,11 @@ function linkedWorkKey() {
     return id ? workKeysById.get(id)?.[0] : null;
 }
 
+function linkedCharacterKey() {
+    const id = new URLSearchParams(location.hash.slice(1)).get('character');
+    return id && characterData[id] ? id : null;
+}
+
 // Three views, because chronological order and reading order are different
 // things and the site used to conflate them.
 //
@@ -1663,7 +1668,8 @@ function initializeWelcome() {
     // an introduction, so stay out of the way.
     const hasProgress = Object.values(readingProgress.load()).some(Boolean);
 
-    if (!flag.get(WELCOME_KEY) && !ARRIVED_WITH_SYNC_CODE && !linkedWorkKey() && !hasProgress) {
+    if (!flag.get(WELCOME_KEY) && !ARRIVED_WITH_SYNC_CODE &&
+        !linkedWorkKey() && !linkedCharacterKey() && !hasProgress) {
         overlay.classList.add('active');
         scrollLock.acquire();
         focusManager.trap(overlay);
@@ -2343,13 +2349,25 @@ function closeModal({ updateHistory = true } = {}) {
 }
 
 window.addEventListener('popstate', () => {
-    const key = linkedWorkKey();
-    if (key) {
-        if (!modalOverlay.classList.contains('active') || modalOverlay.dataset.currentBook !== key) {
-            showModal(key, { updateUrl: false });
+    const characterKey = linkedCharacterKey();
+    const characterOverlay = document.getElementById('characterModalOverlay');
+    if (characterKey) {
+        if (modalOverlay.classList.contains('active')) closeModal({ updateHistory: false });
+        if (!characterOverlay.classList.contains('active') ||
+            characterOverlay.dataset.currentCharacter !== characterKey) {
+            if (characterOverlay.classList.contains('active')) closeCharacterModal({ updateHistory: false });
+            showCharacterModal(characterKey, { updateUrl: false });
+        }
+        return;
+    }
+    if (characterOverlay.classList.contains('active')) closeCharacterModal({ updateHistory: false });
+    const workKey = linkedWorkKey();
+    if (workKey) {
+        if (!modalOverlay.classList.contains('active') || modalOverlay.dataset.currentBook !== workKey) {
+            showModal(workKey, { updateUrl: false });
         }
     } else if (modalOverlay.classList.contains('active')) {
-        closeModal();
+        closeModal({ updateHistory: false });
     }
 });
 
@@ -2430,7 +2448,7 @@ function makeCharactersClickable(content, containsMarkup = true) {
 }
 
 // Show character modal
-function showCharacterModal(characterKey) {
+function showCharacterModal(characterKey, { updateUrl = true } = {}) {
     const char = characterData[characterKey];
 
     if (!char) {
@@ -2438,12 +2456,20 @@ function showCharacterModal(characterKey) {
         return;
     }
 
+    if (updateUrl && linkedCharacterKey() !== characterKey) {
+        history.pushState({ characterModal: true }, '', `#character=${encodeURIComponent(characterKey)}`);
+    }
+    document.title = `${char.name} | Horus Heresy Archive`;
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.content = BASE_DESCRIPTION;
+
     // Populate character modal
     document.getElementById('characterImage').src = optimisedImage(char.image);
     document.getElementById('characterImage').alt = char.name
         ? `Portrait of ${char.name}` : '';
     document.getElementById('characterImage').decoding = 'async';
     document.getElementById('characterName').textContent = char.name;
+    document.getElementById('characterPermalink').href = `#character=${encodeURIComponent(characterKey)}`;
     const showSpoilers = document.getElementById('showSpoilers')?.checked ?? false;
     document.getElementById('characterRole').textContent = showSpoilers ? char.role : '';
     document.getElementById('characterLegion').textContent = showSpoilers ? char.legion : '';
@@ -2453,9 +2479,13 @@ function showCharacterModal(characterKey) {
     if (!showSpoilers) {
         document.getElementById('characterBooks').textContent = '';
         const charOverlay = document.getElementById('characterModalOverlay');
+        const wasOpen = charOverlay.classList.contains('active');
         charOverlay.classList.add('active');
-        focusManager.trap(charOverlay);
-        scrollLock.acquire();
+        charOverlay.dataset.currentCharacter = characterKey;
+        if (!wasOpen) {
+            focusManager.trap(charOverlay);
+            scrollLock.acquire();
+        }
         return;
     }
 
@@ -2478,8 +2508,16 @@ function showCharacterModal(characterKey) {
             item.className = 'character-book-item';
             item.textContent = `${book.number} - ${book.title}`;
             item.addEventListener('click', () => {
-                closeCharacterModal();
-                showModal(key);
+                const parentKey = modalOverlay.classList.contains('active')
+                    ? modalOverlay.dataset.currentBook : null;
+                closeCharacterModal({ updateHistory: false });
+                if (parentKey && linkedCharacterKey()) {
+                    const id = workIdentityByKey.get(key) || key;
+                    history.replaceState({ workModal: true }, '', `#work=${encodeURIComponent(id)}`);
+                    showModal(key, { updateUrl: false });
+                } else {
+                    showModal(key);
+                }
             });
             bookList.append(item);
         }
@@ -2487,16 +2525,31 @@ function showCharacterModal(characterKey) {
 
     // Show modal
     const charOverlay = document.getElementById('characterModalOverlay');
+    const wasOpen = charOverlay.classList.contains('active');
     charOverlay.classList.add('active');
-    focusManager.trap(charOverlay);
-    scrollLock.acquire();
+    charOverlay.dataset.currentCharacter = characterKey;
+    if (!wasOpen) {
+        focusManager.trap(charOverlay);
+        scrollLock.acquire();
+    }
 }
 
 // Close character modal
-function closeCharacterModal() {
-    document.getElementById('characterModalOverlay').classList.remove('active');
-    focusManager.release(document.getElementById('characterModalOverlay'));
+function closeCharacterModal({ updateHistory = true } = {}) {
+    const overlay = document.getElementById('characterModalOverlay');
+    if (!overlay.classList.contains('active')) return;
+    overlay.classList.remove('active');
+    focusManager.release(overlay);
     scrollLock.release();
+    const parentKey = modalOverlay.classList.contains('active') ? modalOverlay.dataset.currentBook : null;
+    document.title = parentKey ? `${bookData[parentKey].title} | Horus Heresy Archive` : BASE_TITLE;
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.content = parentKey && bookData[parentKey].safeSummaryReview
+        ? bookData[parentKey].blurbSafe : BASE_DESCRIPTION;
+    if (updateHistory && linkedCharacterKey()) {
+        if (history.state?.characterModal) history.back();
+        else history.replaceState(null, '', location.pathname + location.search);
+    }
 }
 
 // Define loyalist vs traitor legions
@@ -3106,6 +3159,8 @@ window.addEventListener('load', async () => {
     setView(loadView(), { persist: false });
     const directWork = linkedWorkKey();
     if (directWork) showModal(directWork, { updateUrl: false });
+    const directCharacter = linkedCharacterKey();
+    if (directCharacter) showCharacterModal(directCharacter, { updateUrl: false });
 
     const mainTitle = document.querySelector('.main-title');
     let glitchCount = 0;
