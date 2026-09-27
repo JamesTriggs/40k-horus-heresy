@@ -54,7 +54,8 @@ export function loadFromScript(names, { cutMarker = 'const modalOverlay' } = {})
 
     const context = createContext(browserStub());
     const exportLine = names.map((n) => `${n}: typeof ${n} !== 'undefined' ? ${n} : undefined`).join(', ');
-    runInContext(source.slice(0, cut) + `\n;globalThis.__exports = { ${exportLine} };`, context);
+    const data = readFileSync(join(repoRoot, 'catalogue-data.js'), 'utf8');
+    runInContext(data + '\n' + source.slice(0, cut) + `\n;globalThis.__exports = { ${exportLine} };`, context);
 
     const exported = context.__exports;
     for (const name of names) {

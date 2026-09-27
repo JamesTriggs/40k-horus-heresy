@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**A comprehensive, interactive archive of the complete Horus Heresy saga**
+**An independent, interactive guide to Horus Heresy fiction**
 
 [Live Demo](https://jamestriggs.github.io/40k-horus-heresy/) | [Report Issue](https://github.com/JamesTriggs/40k-horus-heresy/issues)
 
@@ -12,10 +12,10 @@
 
 ## 📖 Overview
 
-An immersive, grimdark-themed web application showcasing all **228 entries** from the Horus Heresy universe, featuring:
+An immersive, grimdark-themed web application with **232 catalogue entries representing 230 distinct works** from the Horus Heresy universe, featuring:
 - 39 main Horus Heresy novels
-- 158 individual anthology stories, novellas and audio dramas, across 15 volumes
-- 17 The Primarchs novellas
+- 165 short stories, novellas and audio dramas
+- 17 standalone Primarchs novels
 - 14 Siege of Terra books, including the three interleaved novellas and the Era of Ruin epilogue anthology
 
 Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate aesthetic with full character encyclopedia, reading tracker, and dual Loyalist/Traitor themes.
@@ -32,16 +32,26 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 
 For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 
-### 📚 Complete Book Collection
-- **228 entries** with official Black Library cover artwork
+The reading view offers a **Core** path through the 12 novels in [Warhammer Community's curated Horus Heresy Saga](https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/), **Full Fiction** for the whole archive, and a shortcut to the Legion filter. Path choice is linkable and does not change saved progress.
+The expandable next-read guide picks the first unstarted work in the chosen path, explains the order, and offers two following titles. Readers can save a suggestion for later, restore saved choices and switch from Full Fiction to the shorter Core path.
+
+The generated work index and 230 standalone work pages give search engines and readers a direct, spoiler-safe answer for each represented work. Each page links back to the interactive Archive for progress tracking and connections. `npm run build` generates them from the structured records in both the repository root for the current GitHub Pages setup and `dist/` for Netlify. Commit the generated root pages with catalogue changes.
+
+### 📚 Fiction catalogue
+- **232 entries** with cover images
 - **Chronological ordering** by in-story timeline (730.M30 → 036.M31), strict, with no series held back as an appendix
 - **Publication order** sorting option
 - **Full book details**: authors, legions, timelines, character lists, synopses
-- **Spoiler toggle**: Switch between spoiler-free and full summaries
+- **Work links**: opening a book gives it a shareable `#work=` URL, and browser Back returns to the catalogue
+- **Chart relationships**: spoiler-controlled work details show Daunt's read-first and follow-up arrows with a source link, separate from the Archive's chosen reading order
+- **Browse links and layouts**: filters, search and view choices are reflected in the URL, and readers can switch between cover grid and a compact list
+- **Spoiler toggle**: Spoilers start hidden. Enabling them reveals full summaries, character details and the chronological event log
+- **Event atlas**: Fifteen sourced turning points connect distinct viewpoints to the works that cover them. Work details reveal related events when spoilers are enabled
 
 ### 🔍 Search & Filter
 - **Real-time search** by title, author, or character name
 - **Legion filters**: Filter by specific legion or all Loyalist/Traitor books
+- **Collection and format filters**: Browse a named anthology or choose novels, novellas, short stories, audio dramas or anthology containers
 - **Sort options**: Chronological, Publication, Title A-Z, Author A-Z
 - **Series toggles**: Show/hide Primarchs and Siege of Terra series
 - **Numerals**: switch book numbering between High Gothic (`XVI`) and Low Gothic (`16`). Series prefixes such as `P9` and `SoT 8a` are already Low Gothic and pass through untouched
@@ -51,12 +61,14 @@ For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 - **Visual indicators**: themed badges per allegiance, with the cover art dimmed on finished books while the title and badge stay legible
 - **Progress counter**: Shows breakdown across all series
 - **Persistent storage**: Progress saved in browser localStorage
+- **Portable backup**: compact transfer codes or a readable JSON file keyed by stable work ID
+- **Collection ownership**: mark a represented volume as owned without changing its stories' reading statuses. The JSON backup includes owned volume IDs
 
 ### 👤 Character Encyclopedia
-- **123 characters** with clickable encyclopedia entries
-- **32 with Lexicanum artwork**, 91 with themed placeholders
+- **121 characters** with clickable encyclopedia entries
+- **32 with portrait images**, 89 with themed placeholders
 - **Full bios** from Warhammer 40K lore
-- **"Appears In"** section listing all books featuring each character
+- **Catalogue listings** for 85 characters, drawn from explicit names in the inherited Main Characters fields. These links are incomplete and still need editorial review
 - Click any character name in book descriptions to view their entry
 
 ### 🎨 Dual Theme System
@@ -78,8 +90,8 @@ For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 
 ## 🚀 Quick Start
 
-### Option 1: GitHub Pages (Easiest)
-Visit the live site: **[https://jamestriggs.github.io/40k-horus-heresy/](https://jamestriggs.github.io/40k-horus-heresy/)**
+### Option 1: Published site
+Visit **[https://jamestriggs.github.io/40k-horus-heresy/](https://jamestriggs.github.io/40k-horus-heresy/)**. Features on an open pull request appear there only after deployment.
 
 ### Option 2: Local Development
 ```bash
@@ -87,7 +99,10 @@ Visit the live site: **[https://jamestriggs.github.io/40k-horus-heresy/](https:/
 git clone https://github.com/JamesTriggs/40k-horus-heresy.git
 cd 40k-horus-heresy
 
-# Start a local server
+# Build and serve the same files used for deployment
+npm ci
+npm run build
+cd dist
 python3 -m http.server 8000
 
 # Open in browser
@@ -95,10 +110,7 @@ open http://localhost:8000
 ```
 
 ### Option 3: Deploy Your Own
-Deploy to any static hosting service:
-- **Netlify**: Drag and drop the folder
-- **Vercel**: One-click deployment
-- **GitHub Pages**: Fork this repo and enable Pages
+Run `npm ci && npm run build`, then publish the generated `dist/` directory on a static host. The included Netlify configuration already uses this build and publish directory.
 
 ## 🎮 How to Use
 
@@ -124,9 +136,31 @@ Deploy to any static hosting service:
 40k-horus-heresy/
 ├── index.html                    # Main application
 ├── styles.css                    # All styling and themes
-├── script.js                     # Data and application logic
+├── script.js                     # Application logic
+├── tools/build-site.mjs          # Copies only deployable files into dist/
+├── catalogue-data.js             # Generated browser data
+├── data/books.json               # Reviewable book records
+├── data/characters.json          # Reviewable character records
+├── data/character-appearances.json # Explicit links from the Main Characters field
+├── data/work-identities.json     # Stable work IDs and legacy key map
+├── data/collections.json         # Stable IDs for represented volumes
+├── data/publisher-collections.json # Checked anthology contents and disputes
+├── data/reading-routes.json      # Sourced Core route
+├── data/publisher-work-facts.json # Publisher facts for 18 overview works and 47 Black Library listings
+├── data/primarch-format-review.json # Publisher evidence for Primarchs novel formats
+├── data/events.json              # Sourced event and viewpoint relationships
+├── sources.html                  # Research and correction information
+├── works.html                    # Generated alphabetical work index for GitHub Pages
+├── work/                         # Generated standalone work pages for GitHub Pages
+├── events.html                   # Event atlas
+├── events.js                     # Event atlas rendering
+├── ROADMAP.md                    # Product and editorial roadmap
+├── BUILD_LOG.md                  # Slice-by-slice implementation record
+├── CHART_RECONCILIATION.md       # Publisher evidence for chart-only works
+├── RELEASE_WATCH.md              # Publisher listings awaiting inclusion review
+├── tools/build-work-pages.mjs     # Generates the standalone work pages in dist/
 ├── images/                       # Book covers and character portraits
-│   ├── *.jpg                     # 81 cover images shared across 228 entries
+│   ├── *.jpg                     # 81 cover images shared across 232 entries
 │   ├── character-*.jpg           # 32 character portraits
 │   ├── character-placeholder.svg # Placeholder for minor characters
 │   ├── imperial-aquila.png       # Loyalist symbol
@@ -149,11 +183,12 @@ Deploy to any static hosting service:
 
 The site is a static page with no backend, so progress lives in `localStorage`.
 To carry it between devices, the whole reading log is packed into a short code:
-two bits per book over the alphabetically sorted key list, which is 228 books in
-57 bytes, about 88 characters including the header.
+two bits per book over the alphabetically sorted key list, which is 232 books in
+58 bytes, about 89 characters including the header.
 
 Press the **⇄** button for your cipher, or a vector that carries it. Enter the
 cipher on another dataslate to receive it.
+The same panel can download a readable JSON backup or restore one after validating its work IDs, statuses and owned collection IDs. The compact transfer code carries reading statuses only.
 
 The wording throughout is framed in the setting: a **dataslate transfer** issues
 a **record cipher** that you **transmit** to another dataslate. One deliberate
@@ -172,13 +207,17 @@ suite asserts both halves of that rule, so flavour cannot creep into a warning.
 
 ## 🧪 Checks
 
-Two gates, neither of which needs a build step.
+Catalogue data is generated from JSON. Run these checks after editing it:
 
 ```bash
 # Data integrity. Catches duplicated properties inside an entry, sort-key
 # collisions, unparseable series numbers, missing images, and asserts the
 # rendered order matches ORDERING_DECISIONS.md position by position.
 node tools/validate-data.mjs
+node tools/build-catalogue.mjs
+node tools/build-catalogue.mjs --check
+node tools/reconcile-catalogue.mjs
+node tools/reconcile-catalogue.mjs --check
 
 # Regenerate the ordering log after changing the order of keys in bookData.
 node tools/generate-ordering-doc.mjs
@@ -186,17 +225,23 @@ node tools/generate-ordering-doc.mjs
 # Rebuild the recommended reading order after changing dates or the chart.
 node tools/build-reading-order.mjs
 
-# 73 browser checks: the three views, ordering, modals, scroll lock, contrast in
+# Build the deployable static site. Netlify publishes dist/, not the repo root.
+npm run build
+
+# 118 browser checks: the three views, routes, events, ordering, modals, scroll lock, contrast in
 # both themes, keyboard access, progress sync, mobile layout.
-# Needs Playwright and a local server.
-npm i -D playwright && npx playwright install chromium-headless-shell
+# Needs the checked-in npm dependencies and a local server.
+npm ci && npx playwright install chromium-headless-shell firefox webkit
 python3 -m http.server 8899 &
-node tools/ui-checks.mjs
+npm run check:browser
+npm run check:accessibility
+npm run check:engines
 ```
 
-**Chronological order comes from the order of the keys in `bookData`.** There is
+**Chronological order comes from the order of the keys in `data/books.json`.** There is
 no per-entry sort field. To move a book, move its entry, then regenerate the
-ordering log and run the validator.
+ordering log and generated browser data, and run the validator. Work IDs in
+`data/work-identities.json` remain stable when display titles change.
 
 ## 🎨 Design Features
 
@@ -220,22 +265,16 @@ ordering log and run the validator.
 
 ## 📊 Statistics
 
-- **228 entries** across 4 series groupings
-- **123 characters** in encyclopedia
+- **232 entries** representing **230 distinct work IDs**
+- **121 characters** in encyclopedia
 - **48 quotes** with attributions
-- **5,174 lines** of JavaScript, of which roughly 86% is data
-- **1,938 lines** of CSS
-- **143 lines** of HTML
-- **All images** from official Lexicanum sources
+- Book and character data in JSON, with a generated static browser bundle
 
 ## 🔒 Security
 
-- ✅ No user input vulnerabilities
-- ✅ No eval() or unsafe code execution
-- ✅ Client-side only (no backend/database)
-- ✅ External resources from trusted sources only
-- ✅ localStorage usage is safe
-- ✅ No inline event handlers
+- Static site with no account or backend
+- Reading status stays in browser storage unless a reader shares a transfer code
+- External research links are restricted to HTTPS when rendered
 
 ## 🤝 Contributing
 
@@ -252,8 +291,6 @@ This project displays content and imagery from Warhammer 40,000, which is owned 
 
 **All Warhammer 40K content is © Games Workshop.**
 
-Book covers and character artwork sourced from [Warhammer 40k Lexicanum](https://wh40k.lexicanum.com/) under fair use for educational/fan purposes.
-
 Code and implementation: MIT License (see LICENSE file)
 
 ## 🙏 Acknowledgments
@@ -265,11 +302,10 @@ Code and implementation: MIT License (see LICENSE file)
 
 ## 📝 Data Sources
 
-- Cover artwork and character images: Warhammer 40k Lexicanum
-- Series numbering, titles and authors: Black Library
+- Series numbering remains under review. Titles and authors for 231 of 232 entries have been checked against publisher material; the remaining entry has a separate bibliographic source and a publisher-listing discrepancy.
 - In-universe dates for the main novels: largely follow [Adeptus Ars's chronological guide](https://www.adeptusars.com/features/the-horus-heresy-books-in-chronological-order), which is one community source's editorial judgement rather than settled canon, and it differs from other reputable chronologies on roughly a dozen books
 - Dates for The Primarchs series and previously undated stories: researched per entry, with sources and confidence recorded in `tools/proposed-dates.json`
-- Anthology story summaries and legion tags: **currently unreliable and being rewritten from primary sources**, see the review notes
+- Story summaries: 92 spoiler-free introductions have a dated Black Library description review. Unreviewed short-story and audio-drama introductions are withheld until the reader enables spoilers. The longer synopsis has separate research links in `data/books.json`; 34 of 232 entries currently include a Black Library or Warhammer Community URL in that research. Fourteen anthology contents pages covering 147 entries have been checked for title, author and membership. A source link does not independently verify every field. See [Sources and corrections](sources.html).
 
 ---
 

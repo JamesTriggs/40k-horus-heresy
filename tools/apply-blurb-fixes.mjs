@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Applies researched corrections from tools/blurb-fixes/*.json into script.js.
+// Applies researched corrections from tools/blurb-fixes/*.json into data/books.json.
 //
 // Run:  node tools/apply-blurb-fixes.mjs --dry-run
-//       node tools/apply-blurb-fixes.mjs
+//       node tools/apply-blurb-fixes.mjs --replace-prose
 //
-// Research agents write JSON only, never script.js, so corrections are
+// Research files stay separate from data/books.json, so corrections are
 // reviewable, re-runnable and cannot half-apply. Every change is checked
 // against the rules below before anything is written.
 //
@@ -17,6 +17,7 @@ import { loadFromScript, repoRoot as root } from './load-data.mjs';
 
 const fixesDir = join(root, 'tools', 'blurb-fixes');
 const dryRun = process.argv.includes('--dry-run');
+const replaceProse = process.argv.includes('--replace-prose');
 
 // 'Anthology' covers collected volumes that the dataset holds as a single
 // entry rather than as component stories, such as TALLARN.
@@ -39,15 +40,11 @@ const SPOILER_PHRASES = [
 const findSpoilers = (text) => SPOILER_PHRASES.filter((phrase) =>
     new RegExp(`\\b${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(text));
 
-const escapeTemplate = (s) => String(s).replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
-const escapeSingle = (s) => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-
 if (!existsSync(fixesDir)) {
     console.error('No tools/blurb-fixes directory. Nothing to apply.');
     process.exit(1);
 }
 
-const source = readFileSync(join(root, 'script.js'), 'utf8');
 const { bookData } = loadFromScript(['bookData']);
 
 // ---------------------------------------------------------------------------
@@ -198,117 +195,36 @@ if (errors.length) {
 }
 
 // ---------------------------------------------------------------------------
-// Rebuild the details block from structured fields.
-// This also drops the "Status:" line, which appeared on 66 entries and leaked
-// the outcome straight through spoiler-free mode.
+// This is a historical prose research pipeline. Publication metadata and the
+// display details have since received separate publisher review, so never
+// rebuild them from older research files.
 // ---------------------------------------------------------------------------
 
-function buildDetails(entry, book) {
-    const rows = [
-        ['Author', entry.author || book.author],
-        ['Type', entry.type],
-    ];
-    if (book.anthology) rows.push(['From', `${book.anthology} Anthology`]);
-    rows.push(['Legion', entry.legions.join(', ')]);
-    if (entry.mainCharacters && entry.mainCharacters.length) {
-        rows.push(['Main Characters', entry.mainCharacters.join(', ')]);
-    }
-    rows.push(['Timeline', entry.timeline]);
-
-    return '\n' + rows
-        .map(([k, v]) => `            <strong>${k}:</strong> ${v}<br>`)
-        .join('\n')
-        .replace(/<br>$/, '') + '\n        ';
-}
-
 // ---------------------------------------------------------------------------
-// Rewrite each entry block in place
+// Update the structured catalogue source. Generated browser data is rebuilt
+// after the source write, so contributors never edit a JavaScript literal.
 // ---------------------------------------------------------------------------
-let out = source;
+const out = JSON.parse(JSON.stringify(bookData));
 let applied = 0;
-const changeLog = [];
 
 for (const entry of applicable) {
-    const book = bookData[entry.bookKey];
-
-    // Isolate this entry's literal block, searching only inside the bookData
-    // literal. characterData is defined earlier in the file and shares at least
-    // one key with bookData ('fulgrim'), so an unscoped indexOf silently edits
-    // the wrong object. That went unnoticed because character entries have no
-    // title or blurb field for the replacements to match.
-    const bookDataStart = out.indexOf('const bookData = {');
-    const bookDataEnd = out.indexOf('const UNKNOWN_NUMBER');
-    if (bookDataStart === -1 || bookDataEnd === -1 || bookDataEnd < bookDataStart) {
-        errors.push('Could not locate the bookData literal bounds in script.js');
-        break;
-    }
-
-    const startMarker = `    '${entry.bookKey}': {`;
-    const relative = out.slice(bookDataStart, bookDataEnd).indexOf(startMarker);
-    const startIndex = relative === -1 ? -1 : bookDataStart + relative;
-    if (startIndex === -1) {
-        errors.push(`${entry.bookKey}: could not locate its block in script.js`);
-        continue;
-    }
-    let depth = 0, i = out.indexOf('{', startIndex), inStr = null;
-    while (i < out.length) {
-        const c = out[i];
-        if (inStr) {
-            if (c === '\\') { i += 2; continue; }
-            if (c === inStr) inStr = null;
-        } else if (c === '"' || c === "'" || c === '`') inStr = c;
-        else if (c === '{') depth++;
-        else if (c === '}') { depth--; if (depth === 0) break; }
-        i++;
-    }
-    let block = out.slice(startIndex, i + 1);
-    const original = block;
-
-    const replaceField = (name, valueLiteral) => {
-        const re = new RegExp(`(\\n\\s*${name}:\\s*)(\`[\\s\\S]*?\`|'(?:[^'\\\\]|\\\\.)*'|\\[[^\\]]*\\])(,?)`);
-        if (!re.test(block)) return false;
-        block = block.replace(re, `$1${valueLiteral}$3`);
-        return true;
-    };
-
+    const book = out[entry.bookKey];
     const changes = [];
-    if (entry.title && entry.title !== book.title) {
-        if (replaceField('title', `'${escapeSingle(entry.title)}'`)) changes.push('title');
+    const fields = {
+        blurb: entry.blurb.trim(),
+        blurbSafe: entry.blurbSafe.trim(),
+    };
+    for (const [field, value] of Object.entries(fields)) {
+        if (JSON.stringify(book[field]) !== JSON.stringify(value)) {
+            changes.push(field);
+            if (replaceProse) book[field] = value;
+        }
     }
-    if (entry.author && entry.author !== book.author) {
-        if (replaceField('author', `'${escapeSingle(entry.author)}'`)) changes.push('author');
-    }
-    if (entry.timeline !== book.timeline) {
-        if (replaceField('timeline', `'${escapeSingle(entry.timeline)}'`)) changes.push('timeline');
-    }
-    // Build the array literal by escaping each value, not by swapping quote
-    // characters wholesale. "Emperor's Children" contains an apostrophe.
-    const newLegions = '[' + entry.legions.map((l) => `'${escapeSingle(l)}'`).join(', ') + ']';
-    if (JSON.stringify(entry.legions) !== JSON.stringify(book.legions)) {
-        if (replaceField('legions', newLegions)) changes.push('legions');
-    }
-    if (entry.blurb.trim() !== String(book.blurb).trim()) {
-        if (replaceField('blurb', '`' + escapeTemplate(entry.blurb.trim()) + '`')) changes.push('blurb');
-    }
-    if (entry.blurbSafe.trim() !== String(book.blurbSafe).trim()) {
-        if (replaceField('blurbSafe', '`' + escapeTemplate(entry.blurbSafe.trim()) + '`')) changes.push('blurbSafe');
-    }
-    const details = buildDetails(entry, book);
-    if (details.trim() !== String(book.details).trim()) {
-        if (replaceField('details', '`' + escapeTemplate(details) + '`')) changes.push('details');
-    }
-
-    if (block !== original) {
-        out = out.slice(0, startIndex) + block + out.slice(i + 1);
+    if (changes.length && replaceProse) {
         applied++;
-        changeLog.push({ bookKey: entry.bookKey, title: entry.title, changes, confidence: entry.confidence });
+    } else if (changes.length) {
+        warnings.push(`${entry.bookKey}: researched ${changes.join(', ')} differs from the live catalogue; use --replace-prose only after reviewing the change`);
     }
-}
-
-if (errors.length) {
-    console.log(`\n${errors.length} error(s) during rewrite, nothing written:\n`);
-    errors.forEach((e) => console.log('  x ' + e));
-    process.exit(1);
 }
 
 // ---------------------------------------------------------------------------
@@ -339,11 +255,16 @@ if (untouched.length) {
 }
 
 if (dryRun) {
-    console.log('\nDry run, script.js untouched.\n');
+    console.log('\nDry run, data/books.json untouched.\n');
     process.exit(0);
 }
 
-writeFileSync(join(root, 'script.js'), out);
+if (!replaceProse) {
+    console.log('\nNo catalogue changes. Pass --replace-prose to apply reviewed prose updates.\n');
+    process.exit(0);
+}
+
+writeFileSync(join(root, 'data', 'books.json'), JSON.stringify(out, null, 2) + '\n');
 
 // Provenance so every corrected entry can be traced back to its sources.
 writeFileSync(join(root, 'tools', 'blurb-provenance.json'), JSON.stringify({
@@ -362,4 +283,4 @@ writeFileSync(join(root, 'tools', 'blurb-provenance.json'), JSON.stringify({
     unresolved: unresolved.map((u) => ({ bookKey: u.bookKey, notes: u.notes || null })),
 }, null, 1) + '\n');
 
-console.log(`\nWritten. Run node tools/validate-data.mjs next.\n`);
+console.log(`\nWritten. Run node tools/build-catalogue.mjs and node tools/validate-data.mjs next.\n`);

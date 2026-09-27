@@ -1,0 +1,398 @@
+{
+  "source": "https://www.warhammer-community.com/en-gb/articles/dN1U9Do2/how-many-threads-are-combined-to-weave-the-incredible-tapestry-of-the-horus-heresy-series/",
+  "reviewedAt": "2026-09-26",
+  "works": {
+    "a-thousand-sons": {
+      "title": "A THOUSAND SONS",
+      "author": "Graham McNeill"
+    },
+    "deliverance-lost": {
+      "title": "DELIVERANCE LOST",
+      "author": "Gav Thorpe"
+    },
+    "vulkan-lives": {
+      "title": "VULKAN LIVES",
+      "author": "Nick Kyme"
+    },
+    "fallen-angels": {
+      "title": "FALLEN ANGELS",
+      "author": "Mike Lee"
+    },
+    "angel-exterminatus": {
+      "title": "ANGEL EXTERMINATUS",
+      "author": "Graham McNeill"
+    },
+    "fear-to-tread": {
+      "title": "FEAR TO TREAD",
+      "author": "James Swallow"
+    },
+    "the-unremembered-empire": {
+      "title": "THE UNREMEMBERED EMPIRE",
+      "author": "Dan Abnett"
+    },
+    "titandeath": {
+      "title": "TITANDEATH",
+      "author": "Guy Haley"
+    },
+    "sot-solar-war": {
+      "title": "THE SOLAR WAR",
+      "author": "John French"
+    },
+    "sot-lost-and-damned": {
+      "title": "THE LOST AND THE DAMNED",
+      "author": "Guy Haley"
+    },
+    "sot-first-wall": {
+      "title": "THE FIRST WALL",
+      "author": "Gav Thorpe"
+    },
+    "sot-saturnine": {
+      "title": "SATURNINE",
+      "author": "Dan Abnett"
+    },
+    "sot-mortis": {
+      "title": "MORTIS",
+      "author": "John French"
+    },
+    "sot-warhawk": {
+      "title": "WARHAWK",
+      "author": "Chris Wraight"
+    },
+    "sot-echoes-of-eternity": {
+      "title": "ECHOES OF ETERNITY",
+      "author": "Aaron Dembski-Bowden"
+    },
+    "sot-end-and-death-vol-1": {
+      "title": "THE END AND THE DEATH: VOLUME I",
+      "author": "Dan Abnett"
+    },
+    "sot-end-and-death-vol-2": {
+      "title": "THE END AND THE DEATH: VOLUME II",
+      "author": "Dan Abnett"
+    },
+    "sot-fury-of-magnus": {
+      "title": "FURY OF MAGNUS",
+      "author": "Graham McNeill",
+      "format": "Novella"
+    }
+  },
+  "directWorks": {
+    "descent-of-angels": {
+      "title": "DESCENT OF ANGELS",
+      "author": "Mitchel Scanlon",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/descent-of-angels-ebook.html"
+    },
+    "legion": {
+      "title": "LEGION",
+      "author": "Dan Abnett",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/legion-ebook.html"
+    },
+    "mechanicum": {
+      "title": "MECHANICUM",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/Mechanicum-eBook.html"
+    },
+    "nemesis": {
+      "title": "NEMESIS",
+      "author": "James Swallow",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/Nemesis-ebook.html"
+    },
+    "battle-for-the-abyss": {
+      "title": "BATTLE FOR THE ABYSS",
+      "author": "Ben Counter",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/battle-for-the-abyss-ebook.html"
+    },
+    "scars": {
+      "title": "SCARS",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/scars-ebook.html"
+    },
+    "vengeful-spirit": {
+      "title": "VENGEFUL SPIRIT",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/vengeful-spirit.html"
+    },
+    "pharos": {
+      "title": "PHAROS",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/popular-characters/popular-roboute-guiliman/pharos-ebook.html"
+    },
+    "the-crimson-king": {
+      "title": "THE CRIMSON KING",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/hh-the-crimson-king-ebook.html"
+    },
+    "the-path-of-heaven": {
+      "title": "THE PATH OF HEAVEN",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/chris-wraight/path-of-heaven-ebook.html"
+    },
+    "the-outcast-dead": {
+      "title": "THE OUTCAST DEAD",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/the-outcast-dead-ebook-ebook.html"
+    },
+    "the-damnation-of-pythos": {
+      "title": "THE DAMNATION OF PYTHOS",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/damnation-of-pythos-ebook.html"
+    },
+    "primarch-vulkan": {
+      "title": "VULKAN: LORD OF DRAKES",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/primarchs_/primarchs-vulkan-lord-of-drakes.html"
+    },
+    "primarch-fulgrim": {
+      "title": "FULGRIM: THE PALATINE PHOENIX",
+      "author": "Josh Reynolds",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/fulgrim-the-palatine-phoenix-ebook.html"
+    },
+    "primarch-magnus": {
+      "title": "MAGNUS THE RED: MASTER OF PROSPERO",
+      "author": "Graham McNeill",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/magnus-the-red.html"
+    },
+    "primarch-ferrus-manus": {
+      "title": "FERRUS MANUS: GORGON OF MEDUSA",
+      "author": "David Guymer",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/ferrus-manus-gorgon-of-medusa-ebook.html"
+    },
+    "primarch-angron": {
+      "title": "ANGRON: SLAVE OF NUCERIA",
+      "author": "Ian St. Martin",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/angron-slave-of-nuceria-ebook-2019.html"
+    },
+    "primarch-mortarion": {
+      "title": "MORTARION: THE PALE KING",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/primarchs_/ebook-mortarion-the-pale-king-eng-2022.html"
+    },
+    "primarch-corax": {
+      "title": "CORAX: LORD OF SHADOWS",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/primarchs-corax-ebook-cs-2018.html"
+    },
+    "primarch-lorgar": {
+      "title": "LORGAR: BEARER OF THE WORD",
+      "author": "Gav Thorpe",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/gav-thorpe/lorgar-bearer-of-the-word-ebook.html"
+    },
+    "primarch-roboute-guilliman": {
+      "title": "ROBOUTE GUILLIMAN: LORD OF ULTRAMAR",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/david-annandale/roboute-guilliman-ebook.html"
+    },
+    "primarch-alpharius": {
+      "title": "ALPHARIUS: HEAD OF THE HYDRA",
+      "author": "Mike Brooks",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/top-10/alpharius-head-of-the-hydra-ebook-2021.html"
+    },
+    "primarch-lion-eljonson": {
+      "title": "LION EL'JONSON: LORD OF THE FIRST",
+      "author": "David Guymer",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/hh-prim/lion-eljonson-lord-of-the-first-ebook-2020.html"
+    },
+    "primarch-perturabo": {
+      "title": "PERTURABO: THE HAMMER OF OLYMPIA",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/perturabo-ebook.html"
+    },
+    "primarch-jaghatai-khan": {
+      "title": "JAGHATAI KHAN: WARHAWK OF CHOGORIS",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/chris-wraight/primarchs-jaghatai-khan-warhawk-of-chogoris-ebook.html"
+    },
+    "primarch-sanguinius": {
+      "title": "SANGUINIUS: THE GREAT ANGEL",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/ebook-sanguinius-the-great-angel-eng-2022.html"
+    },
+    "primarch-rogal-dorn": {
+      "title": "ROGAL DORN: THE EMPEROR'S CRUSADER",
+      "author": "Gav Thorpe",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/primarchs_/ebook-rogal-dorn-the-emperors-crusader-eng-2022.html"
+    },
+    "primarch-leman-russ": {
+      "title": "LEMAN RUSS: THE GREAT WOLF",
+      "author": "Chris Wraight",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/leman-russ-ebook.html"
+    },
+    "primarch-konrad-curze": {
+      "title": "KONRAD CURZE: THE NIGHT HAUNTER",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/konrad-curze-the-night-haunter-mp3-2019.html"
+    },
+    "deathfire": {
+      "title": "DEATHFIRE",
+      "author": "Nick Kyme",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/deathfire-ebook.html"
+    },
+    "tallarn": {
+      "title": "TALLARN",
+      "author": "John French",
+      "format": "Anthology",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html"
+    },
+    "angels-of-caliban": {
+      "title": "ANGELS OF CALIBAN",
+      "author": "Gav Thorpe",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/angels-of-caliban-ebook.html"
+    },
+    "old-earth": {
+      "title": "OLD EARTH",
+      "author": "Nick Kyme",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/HH-Novel-Series/old-earth-ebook.html"
+    },
+    "ruinstorm": {
+      "title": "RUINSTORM",
+      "author": "David Annandale",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/series/the-horus-heresy/ruinstorm-ebook.html"
+    },
+    "wolfsbane": {
+      "title": "WOLFSBANE",
+      "author": "Guy Haley",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/guy-haley/wolfsbane-ebook.html"
+    },
+    "the-buried-dagger": {
+      "title": "THE BURIED DAGGER",
+      "author": "James Swallow",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/authors/james-swallow/horus-heresy-the-buried-dagger-ebook-cs-2018.html"
+    },
+    "sot-sons-of-selenar": {
+      "title": "SONS OF THE SELENAR",
+      "author": "Graham McNeill",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/all-products/sons-of-the-selenar-ebook-2020.html"
+    },
+    "sot-garro-knight-of-grey": {
+      "title": "GARRO: KNIGHT OF GREY",
+      "author": "James Swallow",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/featured/ebook-garro-knight-of-grey-eng-2023.html"
+    },
+    "sot-end-and-death-vol-3": {
+      "title": "THE END AND THE DEATH: VOLUME III",
+      "author": "Dan Abnett",
+      "format": "Novel",
+      "source": "https://www.blacklibrary.com/all-products/ebook-the-end-and-the-death-volume-iii-eng-2024.html"
+    },
+    "sot-era-of-ruin": {
+      "title": "ERA OF RUIN",
+      "author": "Various, introduction by Jacob Youngs",
+      "format": "Anthology",
+      "source": "https://www.blacklibrary.com/series/series-sot/ebook-siege-of-terra-era-of-ruin-eng-2025.html"
+    },
+    "garro-oath-moment": {
+      "title": "GARRO: OATH OF MOMENT",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/authors/james-swallow/Garro-oath-of-moment-mp3.html"
+    },
+    "garro-sword-truth": {
+      "title": "GARRO: SWORD OF TRUTH",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-sword-of-truth-mp3.html"
+    },
+    "garro-legion-one": {
+      "title": "GARRO: LEGION OF ONE",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/garro-legion-of-one-mp3.html"
+    },
+    "garro-shield-lies": {
+      "title": "GARRO: SHIELD OF LIES",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/bundles/audio-bundle-errant-knights-2021.html",
+      "sourceLabel": "Black Library audio collection",
+      "formatSource": "https://www.blacklibrary.com/series/the-horus-heresy/hh-garro-weapon-of-fate-ebook.html"
+    },
+    "garro-burden-duty": {
+      "title": "GARRO: BURDEN OF DUTY",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/audio/the-horus-heresy-audiobooks/burden-of-duty-mp3.html"
+    },
+    "garro-ashes-fealty": {
+      "title": "GARRO: ASHES OF FEALTY",
+      "author": "James Swallow",
+      "format": "Audio Drama",
+      "source": "https://www.blacklibrary.com/authors/james-swallow/garro-ashes-of-fealty-mp3.html"
+    },
+    "garro-vow-faith": {
+      "title": "GARRO: VOW OF FAITH",
+      "author": "James Swallow",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/novels/garro-vow-of-faith-ebook.html",
+      "formatSource": "https://www.blacklibrary.com/series/the-horus-heresy/hh-garro-weapon-of-fate-ebook.html"
+    },
+    "tallarn-siren": {
+      "title": "TALLARN: SIREN",
+      "author": "John French",
+      "format": "Short Story",
+      "source": "https://www.blacklibrary.com/the-horus-heresy/quick-reads/tallarn-siren-ebook.html",
+      "reviewedAt": "2026-09-27"
+    },
+    "tallarn-executioner": {
+      "title": "TALLARN: EXECUTIONER",
+      "author": "John French",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-executioner-ebook.html",
+      "reviewedAt": "2026-09-27"
+    },
+    "tallarn-ironclad": {
+      "title": "TALLARN: IRONCLAD",
+      "author": "John French",
+      "format": "Novella",
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-ironclad-ebook.html",
+      "reviewedAt": "2026-09-27",
+      "formatConflict": {
+        "source": "https://www.blacklibrary.com/series/the-horus-heresy/tallarn-ebook.html",
+        "note": "The collected Tallarn Book 45 calls Ironclad a novel, so its format remains disputed."
+      }
+    },
+    "tallarn-witness": {
+      "title": "TALLARN: WITNESS",
+      "author": "John French",
+      "format": "Short Story",
+      "source": "https://www.blacklibrary.com/authors/john-french/tallarn-witness-ebook.html",
+      "reviewedAt": "2026-09-27"
+    }
+  }
+}

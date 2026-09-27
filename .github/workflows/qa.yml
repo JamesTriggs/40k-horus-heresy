@@ -1,0 +1,56 @@
+name: QA
+
+on:
+  pull_request:
+  push:
+    branches: [main, 'feat/**']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run check:data
+      - run: npm run build
+      - name: Check committed GitHub Pages output
+        run: |
+          git diff --exit-code -- works.html work/
+          test -z "$(git ls-files --others --exclude-standard -- works.html work/)"
+      - name: Check deployment bundle
+        run: |
+          test -f dist/index.html
+          test -f dist/works.html
+          test -f dist/work/horus-rising/index.html
+          test -f dist/catalogue-data.js
+          test ! -e dist/data
+          test ! -e dist/tools
+          test ! -e dist/node_modules
+      - run: npx playwright install --with-deps chromium-headless-shell firefox webkit
+      - name: Start static server
+        run: python3 -m http.server 8899 --bind 127.0.0.1 --directory dist > /tmp/horus-http.log 2>&1 &
+      - name: Wait for static server
+        run: |
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            if curl --fail --silent http://127.0.0.1:8899/ > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/horus-http.log
+          exit 1
+      - run: npm run check:browser
+        env:
+          BASE_URL: http://127.0.0.1:8899/
+      - run: npm run check:accessibility
+        env:
+          BASE_URL: http://127.0.0.1:8899/
+      - run: npm run check:engines
+        env:
+          BASE_URL: http://127.0.0.1:8899/
+      - run: npm run check:catalogue
+        env:
+          BASE_URL: http://127.0.0.1:8899/

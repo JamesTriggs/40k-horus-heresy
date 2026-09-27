@@ -1,0 +1,25 @@
+name: Missing work
+description: Suggest a work or edition absent from the catalogue
+title: "Missing work: "
+labels: [enhancement]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title and author
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is missing?
+      options: ["Distinct story", "New edition or reprint", "Collection", "Unsure"]
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Publisher or bibliographic source
+      description: Include a link or a precise publication reference.
+    validations:
+      required: true

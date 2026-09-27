@@ -1,7 +1,8 @@
 # Netlify configuration for Horus Heresy Dataslate
 
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
 # No SPA catch-all. This is a multi-asset static site with no client-side
 # router, so a `from = "/*" to = "/index.html" status = 200` rule bought nothing
@@ -29,6 +30,11 @@
     Cache-Control = "public, max-age=604800"
 
 # Code and data change together and are not fingerprinted, so revalidate.
+[[headers]]
+  for = "/catalogue-data.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 [[headers]]
   for = "/script.js"
   [headers.values]

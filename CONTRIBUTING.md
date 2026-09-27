@@ -43,8 +43,22 @@ Feature suggestions are welcome! Please [open an issue](https://github.com/James
 ### Testing Your Changes
 
 ```bash
-# Start local server
-python3 -m http.server 8000
+npm ci
+
+# Generate and check catalogue data
+node tools/build-catalogue.mjs
+node tools/generate-ordering-doc.mjs
+node tools/reconcile-catalogue.mjs
+npm run build
+
+# Start a local server in another terminal
+python3 -m http.server 8000 --directory dist
+
+# Run browser and accessibility checks
+BASE_URL=http://localhost:8000/ npm run check:browser
+BASE_URL=http://localhost:8000/ npm run check:accessibility
+BASE_URL=http://localhost:8000/ npm run check:engines
+BASE_URL=http://localhost:8000/ npm run check:catalogue
 
 # Test in multiple browsers
 # - Chrome/Edge
@@ -72,17 +86,18 @@ python3 -m http.server 8000
 
 If adding new books or fixing book information:
 
-- **Verify with Lexicanum**: Cross-reference with [Warhammer 40k Lexicanum](https://wh40k.lexicanum.com/)
-- **Include all fields**: title, author, timeline, legion(s), characters, blurb, blurbSafe
-- **Add cover image**: Download from Lexicanum to `images/` folder
-- **Maintain formatting**: Match existing book entry structure
+- **Verify publication facts with a primary source**: Prefer Black Library or the publication itself. Record the URL or bibliographic reference, the date checked and any uncertainty.
+- **Edit `data/books.json`**: Include title, author, timeline, legions, details, blurb, blurbSafe and research metadata.
+- **Keep work IDs stable**: Add new works to `data/work-identities.json`. Reprints should share an identity with the existing work, while every legacy entry key remains mapped.
+- **Regenerate derived files**: Run `node tools/build-catalogue.mjs` and `node tools/reconcile-catalogue.mjs`.
+- **Commit generated work pages**: `npm run build` updates `works.html` and `work/` for GitHub Pages as well as `dist/` for Netlify. CI checks that the committed pages match the source data.
 - **Test spoiler toggle**: Ensure both blurb and blurbSafe are present
 
 ## 👤 Adding Character Data
 
 If adding or updating character information:
 
-- **Source from Lexicanum**: Verify character details
+- **Cite sources**: Verify character details against published material where possible
 - **Include image**: Character portrait (or use placeholder)
 - **Full bio**: 2-3 sentences about the character
 - **Check appearances**: Verify character appears in listed books
@@ -108,7 +123,6 @@ If proposing design changes:
 By contributing, you agree that:
 
 - Your code will be under MIT License
-- You're not adding copyrighted content you don't have rights to
 - Warhammer 40K content remains © Games Workshop
 
 ## Questions?
