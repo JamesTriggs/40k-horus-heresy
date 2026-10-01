@@ -200,6 +200,9 @@ body {
        prose, which fails WCAG 1.4.4. */
 }
 
+/* Form controls and buttons otherwise fall back to the browser UI font. */
+button, input, select, textarea { font-family: inherit; }
+
 body::before {
     content: '';
     position: fixed;
@@ -1008,7 +1011,7 @@ body.traitor-theme .allegiance-toggle:hover {
 }
 
 .source-page h1,
-.source-page h2 { color: var(--imperial-gold); }
+.source-page h2 { color: var(--imperial-gold); font-family: 'Cinzel', serif; }
 .source-page h1 { line-height: 1.2; }
 .source-page h2 { margin-top: 2rem; }
 .source-page li { margin-bottom: 0.6rem; }
@@ -1080,7 +1083,7 @@ body.traitor-theme .allegiance-toggle:hover {
     padding: 0.35rem 0.55rem;
     border: 1px solid rgba(212, 175, 55, 0.4);
     color: var(--parchment);
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     text-decoration: none;
     transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -1092,13 +1095,13 @@ body.traitor-theme .allegiance-toggle:hover {
     background: linear-gradient(145deg, rgba(212, 175, 55, 0.09), rgba(0, 0, 0, 0.35) 36%);
     animation: factionReveal 0.35s ease-out both;
 }
-.faction-kicker { margin-bottom: 0.3rem; color: var(--imperial-gold); font-size: 0.67rem; letter-spacing: 0.16rem; }
+.faction-kicker { margin-bottom: 0.3rem; color: var(--imperial-gold); font-size: 0.75rem; letter-spacing: 0.12rem; }
 .faction-detail h2 { margin: 0.3rem 0 0.7rem; }
 .faction-detail h3 { margin-top: 1.5rem; color: var(--imperial-gold); }
 .faction-browse { display: inline-block; padding: 0.5rem 0.75rem; border: 1px solid var(--imperial-gold); }
 .faction-works { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 0.55rem; padding: 0; list-style: none; }
 .faction-works li { padding: 0.65rem; border-left: 2px solid var(--imperial-gold); background: rgba(0, 0, 0, 0.32); }
-.faction-works span { display: block; margin-top: 0.2rem; font-size: 0.72rem; opacity: 0.75; }
+.faction-works span { display: block; margin-top: 0.2rem; font-size: 0.78rem; opacity: 0.8; }
 .faction-note { margin-top: 1.5rem; font-size: 0.78rem; }
 .work-factions { margin: 1rem 0; }
 .work-factions h3 { margin-bottom: 0.5rem; }
@@ -1112,6 +1115,11 @@ body.traitor-theme .allegiance-toggle:hover {
 @media (max-width: 700px) {
     .source-page { margin: 1rem; padding: 1.25rem; }
     .faction-index { display: none; }
+}
+
+@media (max-width: 360px) {
+    .faction-kicker { letter-spacing: 0.06rem; }
+    .faction-detail h2 { font-size: 1.3rem; }
 }
 
 .servo-skull {
@@ -2344,13 +2352,14 @@ body.traitor-theme #orderingModalBody strong {
     border-radius: 3px;
     background: rgba(0, 0, 0, 0.45);
     color: var(--parchment);
+    font-family: 'Share Tech Mono', monospace;
     cursor: pointer;
     text-align: left;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .route-choice strong { color: var(--imperial-gold); font: 700 0.78rem 'Cinzel', serif; }
-.route-choice span { font-size: 0.72rem; line-height: 1.3; }
+.route-choice span { font-size: 0.75rem; line-height: 1.35; }
 .route-choice:hover,
 .route-choice[aria-pressed="true"] { border-color: var(--imperial-gold); background: rgba(212, 175, 55, 0.13); }
 .route-choice:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); }
@@ -2373,6 +2382,7 @@ body.traitor-theme #orderingModalBody strong {
     border: 1px solid rgba(212, 175, 55, 0.4);
     background: rgba(0, 0, 0, 0.35);
 }
+.next-read-guide[open] { border-color: var(--imperial-gold); }
 .find-story {
     min-height: 44px;
     padding: 0.65rem 1rem;
@@ -2396,13 +2406,13 @@ body.traitor-theme #orderingModalBody strong {
 }
 .next-read-guide summary:focus-visible { outline: 3px solid var(--imperial-gold); outline-offset: 2px; }
 .next-read-content { padding: 0 1rem 1rem; }
-.next-read-content p { margin: 0 0 0.75rem; font-size: 0.78rem; line-height: 1.5; }
+.next-read-content p { margin: 0 0 0.75rem; font-size: 0.84rem; line-height: 1.5; }
 .next-read-preference { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin: 0.1rem 0 0.5rem; }
 .next-read-preference label { color: var(--imperial-gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08rem; }
 .next-read-preference select { min-height: 44px; padding: 0.5rem; border: 1px solid var(--imperial-gold); background: #171717; color: var(--parchment); font: inherit; }
 .next-read-preference select:disabled { opacity: 0.6; }
 .next-read-preference select:focus-visible { outline: 3px solid var(--imperial-gold); outline-offset: 2px; }
-.next-read-content .next-read-preference-note { font-size: 0.68rem; opacity: 0.8; }
+.next-read-content .next-read-preference-note { font-size: 0.75rem; opacity: 0.85; }
 .next-read-content button {
     min-height: 44px;
     padding: 0.55rem 0.7rem;
@@ -2415,7 +2425,7 @@ body.traitor-theme #orderingModalBody strong {
 }
 .next-read-content button:hover,
 .next-read-content button:focus-visible { background: rgba(212, 175, 55, 0.2); outline-color: var(--imperial-gold); }
-.next-read-primary { display: block; width: 100%; font-weight: bold !important; }
+.next-read-content .next-read-primary { display: block; width: 100%; border-color: var(--imperial-gold); border-left-width: 3px; background: rgba(212, 175, 55, 0.15); font-weight: bold; }
 .next-read-alternatives,
 .next-read-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
 .next-read-alternatives button { flex: 1 1 12rem; }
@@ -2427,17 +2437,18 @@ body.traitor-theme #orderingModalBody strong {
     .route-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.3rem; margin-bottom: 0.4rem; }
     .route-choices .route-heading { display: none; }
     .route-choice { justify-content: center; min-height: 3rem; padding: 0.35rem; text-align: center; }
-    .route-choice strong { font-size: 0.61rem; }
+    .route-choice strong { font-size: 0.75rem; line-height: 1.25; }
     .route-choice span { display: none; }
     .discovery-row { margin: 0 1rem 0.5rem; gap: 0.3rem; }
     .discovery-row:has(.next-read-guide[open]) { grid-template-columns: 1fr; }
-    .next-read-guide summary { font-size: 0.65rem; padding: 0.6rem; }
-    .find-story { padding: 0.45rem; font-size: 0.65rem; }
+    .next-read-guide summary { font-size: 0.75rem; padding: 0.6rem; }
+    .find-story { padding: 0.45rem; font-size: 0.75rem; }
 }
 
 @media (max-width: 360px) {
     .view-label-full { display: none; }
     .view-label-short { display: inline; }
+    .discovery-row { grid-template-columns: 1fr; }
 }
 
 /* ==========================================================================
