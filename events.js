@@ -26,7 +26,14 @@ for (const event of eventData.events) {
     if (event.factions.length) {
         const factions = document.createElement('p');
         factions.className = 'event-factions';
-        factions.textContent = `Related factions: ${event.factions.join(', ')}`;
+        factions.append(document.createTextNode('Related factions: '));
+        event.factions.forEach((name, index) => {
+            if (index) factions.append(document.createTextNode(', '));
+            const link = document.createElement('a');
+            link.href = `factions.html?legion=${encodeURIComponent(name)}`;
+            link.textContent = name;
+            factions.append(link);
+        });
         article.append(factions);
     }
 

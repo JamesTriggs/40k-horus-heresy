@@ -11,6 +11,7 @@ const VIEW_KEY = 'horusHeresyView';
 const LAYOUT_KEY = 'horusHeresyLayout';
 const ROUTE_KEY = 'horusHeresyRoute';
 const SKIPPED_KEY = 'horusHeresySavedForLater';
+const RECOMMEND_FORMAT_KEY = 'horusHeresyRecommendFormat';
 const OWNED_COLLECTIONS_KEY = 'horusHeresyOwnedCollections';
 const BASE_TITLE = document.title;
 const BASE_DESCRIPTION = document.querySelector('meta[name="description"]')?.content || '';
@@ -99,10 +100,10 @@ function saveView(view) {
 function syncBrowseUrl() {
     const params = new URLSearchParams();
     if (currentView !== 'reading') params.set('view', currentView);
-    if (currentRoute === 'core') params.set('route', 'core');
+    if (currentRoute !== 'full') params.set('route', currentRoute);
     const fields = [
         ['q', 'searchInput'], ['legion', 'legionFilter'],
-        ['collection', 'collectionFilter'], ['format', 'formatFilter'],
+        ['collection', 'collectionFilter'], ['format', 'formatFilter'], ['status', 'statusFilter'],
         ['sort', 'sortOrder'],
     ];
     for (const [name, id] of fields) {
@@ -119,14 +120,14 @@ function syncBrowseUrl() {
 function restoreBrowseUrl() {
     const params = new URLSearchParams(location.search);
     const route = params.get('route');
-    if (route === 'core' || route === 'full') currentRoute = route;
+    if (['core', 'full', 'novels'].includes(route)) currentRoute = route;
     else {
-        try { currentRoute = localStorage.getItem(ROUTE_KEY) === 'core' ? 'core' : 'full'; }
+        try { currentRoute = ['core', 'novels'].includes(localStorage.getItem(ROUTE_KEY)) ? localStorage.getItem(ROUTE_KEY) : 'full'; }
         catch { currentRoute = 'full'; }
     }
     const fields = [
         ['q', 'searchInput'], ['legion', 'legionFilter'],
-        ['collection', 'collectionFilter'], ['format', 'formatFilter'],
+        ['collection', 'collectionFilter'], ['format', 'formatFilter'], ['status', 'statusFilter'],
         ['sort', 'sortOrder'],
     ];
     for (const [name, id] of fields) {
@@ -645,6 +646,7 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
     const sortOrder = document.getElementById('sortOrder')?.value || 'chronological';
     const collection = document.getElementById('collectionFilter')?.value || '';
     const format = document.getElementById('formatFilter')?.value || '';
+    const statusFilter = document.getElementById('statusFilter')?.value || '';
 
     const sortedKeys = getSortedBookKeys(sortOrder);
 
@@ -664,6 +666,8 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
         const status = readingProgress.getStatus(bookKey);
 
         if (currentRoute === 'core' && !coreRouteRank.has(bookKey)) return;
+        if (currentRoute === 'novels' && book.format !== 'Novel') return;
+        if (statusFilter && (statusFilter === 'unread' ? !!status : status !== statusFilter)) return;
 
         // Filter out Primarchs series if checkbox unchecked
         if (!includePrimarchs && book.series === 'primarchs') {
@@ -784,7 +788,7 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
     updateCollectionOwnedButton();
 
     // Show filter/search result info
-    if (filterLegion || query || collection || format) {
+    if (filterLegion || query || collection || format || statusFilter) {
         const filterInfo = document.createElement('div');
         filterInfo.className = 'filter-info';
         let infoText = `Showing ${displayedCount} book${displayedCount !== 1 ? 's' : ''}`;
@@ -805,6 +809,7 @@ function generateBookCards(filterLegion = '', searchQuery = '') {
         }
         if (collection) infoText += ` in ${collection}`;
         if (format) infoText += ` · ${format}`;
+        if (statusFilter) infoText += ` · ${statusFilter === 'unread' ? 'not started' : statusFilter}`;
 
         filterInfo.textContent = infoText;
         bookDisplay.insertBefore(filterInfo, bookDisplay.firstChild);
@@ -865,6 +870,8 @@ function setView(view, { persist = true } = {}) {
             text = 'Reading order data could not be loaded, so this is showing chronological order. Serve the site over HTTP rather than opening the file directly.';
         } else if (view === 'reading' && currentRoute === 'core') {
             text = 'A short publisher-curated route through 12 pivotal novels. Full Fiction restores the wider archive. Your reading record is shared between paths.';
+        } else if (view === 'reading' && currentRoute === 'novels') {
+            text = 'All 65 catalogue novels in Archive reading order. Short works are omitted from this route, but the next-read guide flags unfinished chart prerequisites. Your reading record is shared between paths.';
         }
         note.textContent = text;
     }
@@ -874,6 +881,7 @@ function setView(view, { persist = true } = {}) {
     const filters = document.querySelector('.filter-section');
     const routes = document.querySelector('.route-choices');
     const nextReadGuide = document.getElementById('nextReadGuide');
+    const discoveryRow = document.getElementById('discoveryRow');
     // The mobile disclosure button lives outside .filter-section, so it needs
     // hiding separately or it sits there controlling nothing.
     const filterToggle = document.getElementById('filterDisclosure');
@@ -881,6 +889,7 @@ function setView(view, { persist = true } = {}) {
     if (view === 'chart') {
         if (routes) routes.hidden = true;
         if (nextReadGuide) nextReadGuide.hidden = true;
+        if (discoveryRow) discoveryRow.hidden = true;
         if (grid) grid.hidden = true;
         if (filters) filters.hidden = true;
         if (filterToggle) filterToggle.hidden = true;
@@ -889,6 +898,7 @@ function setView(view, { persist = true } = {}) {
     } else {
         if (routes) routes.hidden = false;
         if (nextReadGuide) nextReadGuide.hidden = false;
+        if (discoveryRow) discoveryRow.hidden = false;
         if (chartHost) chartHost.hidden = true;
         if (grid) grid.hidden = false;
         if (filters) filters.hidden = false;
@@ -901,9 +911,9 @@ function setView(view, { persist = true } = {}) {
 }
 
 function setRoute(route) {
-    if (route !== 'core' && route !== 'full') return;
+    if (!['core', 'full', 'novels'].includes(route)) return;
     currentRoute = route;
-    if (route === 'core') {
+    if (route === 'core' || route === 'novels') {
         for (const id of ['searchInput', 'legionFilter', 'collectionFilter', 'formatFilter']) {
             document.getElementById(id).value = '';
         }
@@ -912,9 +922,10 @@ function setRoute(route) {
     try { localStorage.setItem(ROUTE_KEY, route); } catch { /* private browsing */ }
     document.getElementById('coreRoute').setAttribute('aria-pressed', String(route === 'core'));
     document.getElementById('fullRoute').setAttribute('aria-pressed', String(route === 'full'));
+    document.getElementById('novelsRoute').setAttribute('aria-pressed', String(route === 'novels'));
     document.getElementById('routeSource').hidden = route !== 'core';
     syncBrowseUrl();
-    if (route === 'core' || currentView === 'chart') setView('reading');
+    if (route !== 'full' || currentView === 'chart') setView('reading');
     else setView(currentView, { persist: false });
 }
 
@@ -922,16 +933,25 @@ function initializeRoutes() {
     document.querySelector('#routeSource a').href = readingRoutesData.core.source;
     document.getElementById('coreRoute').addEventListener('click', () => setRoute('core'));
     document.getElementById('fullRoute').addEventListener('click', () => setRoute('full'));
-    document.getElementById('legionRoute').addEventListener('click', () => {
+    document.getElementById('novelsRoute').addEventListener('click', () => setRoute('novels'));
+    document.getElementById('findStory').addEventListener('click', () => {
+        for (const id of ['legionFilter', 'collectionFilter', 'formatFilter', 'statusFilter']) {
+            document.getElementById(id).value = '';
+        }
+        document.getElementById('includePrimarchs').checked = true;
+        document.getElementById('includeSiegeOfTerra').checked = true;
+        document.getElementById('sortOrder').value = 'view';
         setRoute('full');
-        const filter = document.getElementById('legionFilter');
         const disclosure = document.getElementById('filterDisclosure');
         if (getComputedStyle(disclosure).display !== 'none' && disclosure.getAttribute('aria-expanded') === 'false') disclosure.click();
-        filter.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        filter.focus({ preventScroll: true });
+        const search = document.getElementById('searchInput');
+        search.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+        search.focus({ preventScroll: true });
+        search.select();
     });
     document.getElementById('coreRoute').setAttribute('aria-pressed', String(currentRoute === 'core'));
     document.getElementById('fullRoute').setAttribute('aria-pressed', String(currentRoute === 'full'));
+    document.getElementById('novelsRoute').setAttribute('aria-pressed', String(currentRoute === 'novels'));
     document.getElementById('routeSource').hidden = currentRoute !== 'core';
 }
 
@@ -950,6 +970,7 @@ function saveForLater(ids) {
 function recommendationKeys() {
     if (!readingOrder) return [];
     const legion = currentRoute === 'full' ? document.getElementById('legionFilter')?.value : '';
+    const preferredFormat = currentRoute === 'full' ? document.getElementById('nextReadFormat')?.value : '';
     const keys = currentRoute === 'core' ? CORE_ROUTE : getSortedBookKeys('reading');
     const seen = new Set();
     return keys.filter((key) => {
@@ -957,6 +978,8 @@ function recommendationKeys() {
         if (seen.has(id)) return false;
         seen.add(id);
         if (legion && !legion.startsWith('__') && !bookData[key].legions.includes(legion)) return false;
+        if (currentRoute === 'novels' && bookData[key].format !== 'Novel') return false;
+        if (preferredFormat && bookData[key].format !== preferredFormat) return false;
         return !readingProgress.getStatus(key);
     });
 }
@@ -981,16 +1004,20 @@ function renderNextReadGuide() {
     const skip = document.getElementById('nextReadSkip');
     const reset = document.getElementById('nextReadReset');
     const shorter = document.getElementById('nextReadShorter');
+    const preference = document.getElementById('nextReadFormat');
+    preference.disabled = currentRoute !== 'full';
+    const preferredFormat = !preference.disabled ? preference.value : '';
     const legion = currentRoute === 'full' ? document.getElementById('legionFilter')?.value : '';
     const faction = legion && !legion.startsWith('__') ? ` for ${legion}` : '';
-    const path = currentRoute === 'core' ? 'the publisher-curated Core path' : `the Archive reading order${faction}`;
+    const path = currentRoute === 'core' ? 'the publisher-curated Core path'
+        : currentRoute === 'novels' ? 'the Novels route' : `the Archive reading order${faction}`;
     explanation.textContent = primary
-        ? `The first work you have not started in ${path}. The two options below follow it in the same order. Your saved-for-later choices stay out of this suggestion.`
-        : `No unstarted works remain in ${path} after your saved-for-later choices.`;
+        ? `First unstarted ${preferredFormat || 'work'} in ${path}. Alternatives follow in the same order. Saved-for-later and started works stay out of suggestions.`
+        : `No unstarted ${preferredFormat || 'works'} remain in ${path} after your saved-for-later choices.${preferredFormat ? ' Choose Any work to widen the guide.' : ''}`;
     button.hidden = !primary;
     button.dataset.workKey = primary || '';
-    if (primary) button.textContent = `NEXT: ${bookData[primary].title}`;
-    const chartFirst = currentRoute === 'full' && primary ? unfinishedChartPrerequisites(primary) : [];
+    if (primary) button.textContent = `NEXT: ${bookData[primary].title} · ${bookData[primary].format}`;
+    const chartFirst = currentRoute !== 'core' && primary ? unfinishedChartPrerequisites(primary) : [];
     chartNote.hidden = chartFirst.length === 0;
     if (chartFirst.length) {
         const count = chartFirst.length;
@@ -1000,16 +1027,34 @@ function renderNextReadGuide() {
     for (const key of choices.slice(1, 3)) {
         const option = document.createElement('button');
         option.type = 'button';
-        option.textContent = bookData[key].title;
+        option.textContent = `${bookData[key].title} · ${bookData[key].format}`;
         option.addEventListener('click', () => showModal(key));
         alternatives.append(option);
     }
     skip.hidden = !primary;
     reset.hidden = skipped.size === 0;
     shorter.hidden = currentRoute === 'core';
+    if (host.dataset.primaryKey && host.dataset.primaryKey !== primary && host.open &&
+        !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.getElementById('nextReadContent').animate([
+            { opacity: 0.6, transform: 'translateY(5px)' },
+            { opacity: 1, transform: 'translateY(0)' },
+        ], { duration: 240, easing: 'ease-out' });
+    }
+    host.dataset.primaryKey = primary || '';
 }
 
 function initializeNextReadGuide() {
+    const preference = document.getElementById('nextReadFormat');
+    try {
+        const saved = localStorage.getItem(RECOMMEND_FORMAT_KEY);
+        if ([...preference.options].some((option) => option.value === saved)) preference.value = saved;
+    } catch { /* Private browsing may disable storage. */ }
+    preference.addEventListener('change', () => {
+        try { localStorage.setItem(RECOMMEND_FORMAT_KEY, preference.value); }
+        catch { /* Private browsing may disable storage. */ }
+        renderNextReadGuide();
+    });
     document.getElementById('nextReadPrimary').addEventListener('click', (event) => {
         const key = event.currentTarget.dataset.workKey;
         if (key) showModal(key);
@@ -1945,6 +1990,7 @@ function showModal(bookKey, { updateUrl = true } = {}) {
 
     const spoilerWarning = !showSpoilers ? '<div class="spoiler-notice">📖 SPOILER-FREE MODE - Major plot points hidden</div>' : '';
     blurb.innerHTML = spoilerWarning + `<p>${clickableBlurb}</p>`;
+    renderWorkFactions(bookKey);
     renderWorkCollections(bookKey);
     renderWorkEvents(bookKey);
     renderWorkRelationships(bookKey);
@@ -1972,9 +2018,16 @@ function showModal(bookKey, { updateUrl = true } = {}) {
         markReadBtn.textContent = newText;
         markReadBtn.className = 'mark-read-btn ' + newClass;
 
-        // Update just this card. Rebuilding all 224 reset the scroll position,
-        // so marking book 90 as finished sent you back to book 1.
-        updateBookCardStatus(bookKey, newStatus);
+        // An active status filter changes membership when the work changes
+        // state. Refresh on dialog close, after focus has left the modal, so
+        // the result count and cards agree without disturbing the reader here.
+        if (document.getElementById('statusFilter').value) {
+            modalOverlay.dataset.refreshStatusFilter = '1';
+        } else {
+            // Rebuilding all 232 entries resets scroll for an ordinary status
+            // change, so update the visible card in place when no filter moves it.
+            updateBookCardStatus(bookKey, newStatus);
+        }
         updateProgressCounter();
         if (newStatus) maybeShowSaveHint();
     });
@@ -2001,6 +2054,27 @@ function showModal(bookKey, { updateUrl = true } = {}) {
         focusManager.trap(modalOverlay);
         scrollLock.acquire();
     }
+}
+
+function renderWorkFactions(bookKey) {
+    const host = document.getElementById('workFactions');
+    const factions = [...new Set(bookData[bookKey].legions)].filter((name) =>
+        name && !name.startsWith('__') && name !== 'Various' && name !== 'All Legions' && name !== 'All Traitor Legions');
+    host.replaceChildren();
+    host.hidden = factions.length === 0;
+    if (!factions.length) return;
+    const heading = document.createElement('h3');
+    heading.textContent = 'Faction threads';
+    host.append(heading);
+    const links = document.createElement('div');
+    links.className = 'work-faction-links';
+    for (const name of factions) {
+        const link = document.createElement('a');
+        link.href = `factions.html?legion=${encodeURIComponent(name)}`;
+        link.textContent = name;
+        links.append(link);
+    }
+    host.append(links);
 }
 
 function renderWorkCollections(bookKey) {
@@ -2336,12 +2410,34 @@ function renderWorkResearch(bookKey) {
 // Close modal function
 function closeModal({ updateHistory = true } = {}) {
     if (!modalOverlay.classList.contains('active')) return;
+    const refreshStatusFilter = modalOverlay.dataset.refreshStatusFilter === '1' && currentView !== 'chart';
+    delete modalOverlay.dataset.refreshStatusFilter;
+    const cardsBefore = refreshStatusFilter ? [...document.querySelectorAll('.book-card')] : [];
+    const trigger = focusManager._stack.at(-1)?.returnTo;
+    const triggerIndex = cardsBefore.indexOf(trigger);
     modalOverlay.classList.remove('active');
     document.title = BASE_TITLE;
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = BASE_DESCRIPTION;
     focusManager.release(modalOverlay);
     scrollLock.release();
+    if (refreshStatusFilter) {
+        const scrollTop = window.scrollY;
+        generateBookCards(document.getElementById('legionFilter').value,
+            document.getElementById('searchInput').value);
+        const cardsAfter = [...document.querySelectorAll('.book-card')];
+        const sameCard = trigger?.dataset?.book
+            ? cardsAfter.find((card) => card.dataset.book === trigger.dataset.book) : null;
+        const fallback = cardsAfter[Math.min(Math.max(triggerIndex, 0), cardsAfter.length - 1)];
+        const result = document.querySelector('.filter-info');
+        if (result) result.tabIndex = -1;
+        const unchangedTrigger = triggerIndex < 0 && trigger?.isConnected && trigger.offsetParent !== null
+            ? trigger : null;
+        const nextFocus = sameCard || unchangedTrigger
+            || fallback || result || document.getElementById('findStory');
+        nextFocus?.focus({ preventScroll: true });
+        window.scrollTo(0, scrollTop);
+    }
     if (updateHistory && linkedWorkKey()) {
         if (history.state?.workModal) history.back();
         else history.replaceState(null, '', location.pathname + location.search);
@@ -2729,6 +2825,7 @@ function setupFilterListeners() {
     const collectionBulk = document.getElementById('collectionBulk');
     const collectionOwned = document.getElementById('collectionOwned');
     const formatSelect = document.getElementById('formatFilter');
+    const statusSelect = document.getElementById('statusFilter');
     const searchInput = document.getElementById('searchInput');
     const clearSearchBtn = document.getElementById('clearSearch');
     const clearAllBtn = document.getElementById('clearAllFilters');
@@ -2781,6 +2878,7 @@ function setupFilterListeners() {
         if (saveOwnedCollections(owned)) updateCollectionOwnedButton();
     });
     formatSelect.addEventListener('change', applyFilters);
+    statusSelect.addEventListener('change', applyFilters);
 
     // Sort order change
     sortSelect.addEventListener('change', applyFilters);
@@ -2841,6 +2939,7 @@ function setupFilterListeners() {
         filterSelect.value = '';
         collectionSelect.value = '';
         formatSelect.value = '';
+        statusSelect.value = '';
         searchInput.value = '';
         primarchsCheckbox.checked = true;
         siegeCheckbox.checked = true;

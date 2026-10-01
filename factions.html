@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faction atlas | Horus Heresy Archive</title>
+    <meta name="description" content="Find Horus Heresy works and source-backed events by faction, with direct links to each reading path.">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="source-page faction-atlas">
+        <a class="source-back" href="index.html">← Back to the Archive</a>
+        <h1>Faction atlas</h1>
+        <p>Explore the Archive's faction tags, then follow a work or a source-backed event. A tag means a work features a faction in the catalogue. It does not by itself establish a character's allegiance or the date of an event.</p>
+        <div class="faction-picker-row">
+            <label for="factionPicker">CHOOSE A FACTION</label>
+            <select id="factionPicker"></select>
+        </div>
+        <nav class="faction-index" id="factionIndex" aria-label="Factions"></nav>
+        <section class="faction-detail" id="factionDetail">
+            <p class="faction-kicker">SELECTED ARCHIVE THREAD</p>
+            <h2 id="factionTitle"></h2>
+            <p id="factionSummary"></p>
+            <a class="faction-browse" id="browseFaction" href="index.html">Browse every tagged work in the Archive →</a>
+            <h3>Events and viewpoints</h3>
+            <ul id="factionEvents"></ul>
+            <h3>Works in this thread</h3>
+            <ul class="faction-works" id="factionWorks"></ul>
+        </section>
+        <p class="faction-note">Event descriptions and viewpoint labels come from the cited publisher overview linked on each event page. Work tags and appearances are still under editorial review. Spoilers remain hidden in the interactive Archive until you enable them.</p>
+    </main>
+    <script src="catalogue-data.js"></script>
+    <script src="factions.js"></script>
+</body>
+</html>

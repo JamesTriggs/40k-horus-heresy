@@ -32,7 +32,8 @@ Built with pure vanilla JavaScript, featuring a Warhammer 40K Imperial dataslate
 
 For scale, *Horus Rising* is **1st** to read and **32nd** chronologically.
 
-The reading view offers a **Core** path through the 12 novels in [Warhammer Community's curated Horus Heresy Saga](https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/), **Full Fiction** for the whole archive, and a shortcut to the Legion filter. Path choice is linkable and does not change saved progress.
+The reading view offers a **Core** path through the 12 novels in [Warhammer Community's curated Horus Heresy Saga](https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/), **Full Fiction** for the whole archive, and a route to the faction atlas. Path choice is linkable and does not change saved progress.
+The **Novels only** path keeps all 65 catalogue novels in Archive reading order, while the next-read guide flags unfinished chart prerequisites from shorter works. A **Find a story** action opens search on desktop and phone. Reading status can be filtered and shared in the URL.
 The expandable next-read guide picks the first unstarted work in the chosen path, explains the order, and offers two following titles. Readers can save a suggestion for later, restore saved choices and switch from Full Fiction to the shorter Core path.
 
 The generated work index and 230 standalone work pages give search engines and readers a direct, spoiler-safe answer for each represented work. Each page links back to the interactive Archive for progress tracking and connections. `npm run build` generates them from the structured records in both the repository root for the current GitHub Pages setup and `dist/` for Netlify. Commit the generated root pages with catalogue changes.
@@ -47,6 +48,7 @@ The generated work index and 230 standalone work pages give search engines and r
 - **Browse links and layouts**: filters, search and view choices are reflected in the URL, and readers can switch between cover grid and a compact list
 - **Spoiler toggle**: Spoilers start hidden. Enabling them reveals full summaries, character details and the chronological event log
 - **Event atlas**: Fifteen sourced turning points connect distinct viewpoints to the works that cover them. Work details reveal related events when spoilers are enabled
+- **Faction atlas**: Direct links for faction-tagged works and source-backed event viewpoints, with paths back to the Archive filter
 
 ### 🔍 Search & Filter
 - **Real-time search** by title, author, or character name
@@ -63,6 +65,7 @@ The generated work index and 230 standalone work pages give search engines and r
 - **Persistent storage**: Progress saved in browser localStorage
 - **Portable backup**: compact transfer codes or a readable JSON file keyed by stable work ID
 - **Collection ownership**: mark a represented volume as owned without changing its stories' reading statuses. The JSON backup includes owned volume IDs
+- **Reading guidance**: optionally prefer novels, novellas, short stories or audio dramas in Full Fiction suggestions. The preference filters work types, not available editions, and does not change Core or Novels routes
 
 ### 👤 Character Encyclopedia
 - **121 characters** with clickable encyclopedia entries
@@ -154,7 +157,10 @@ Run `npm ci && npm run build`, then publish the generated `dist/` directory on a
 ├── work/                         # Generated standalone work pages for GitHub Pages
 ├── events.html                   # Event atlas
 ├── events.js                     # Event atlas rendering
+├── factions.html                 # Faction and group atlas
+├── factions.js                   # Faction navigation over structured data
 ├── ROADMAP.md                    # Product and editorial roadmap
+├── STAGES_1_3_PLAN.md            # Current experience pass and acceptance boundary
 ├── BUILD_LOG.md                  # Slice-by-slice implementation record
 ├── CHART_RECONCILIATION.md       # Publisher evidence for chart-only works
 ├── RELEASE_WATCH.md              # Publisher listings awaiting inclusion review
@@ -234,6 +240,7 @@ npm run build
 npm ci && npx playwright install chromium-headless-shell firefox webkit
 python3 -m http.server 8899 &
 npm run check:browser
+npm run check:experience
 npm run check:accessibility
 npm run check:engines
 ```
