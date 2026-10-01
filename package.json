@@ -5,6 +5,7 @@
     "build": "npm run check:data && node tools/build-site.mjs",
     "check:data": "node tools/build-catalogue.mjs --check && node tools/reconcile-catalogue.mjs --check && node tools/validate-data.mjs",
     "check:browser": "node tools/ui-checks.mjs",
+    "check:experience": "node tools/experience-checks.mjs",
     "check:accessibility": "node tools/accessibility-checks.mjs",
     "check:engines": "node tools/cross-browser-smoke.mjs",
     "check:catalogue": "node tools/catalogue-browser-audit.mjs"

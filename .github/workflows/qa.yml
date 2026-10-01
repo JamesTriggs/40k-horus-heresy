@@ -45,6 +45,9 @@ jobs:
       - run: npm run check:browser
         env:
           BASE_URL: http://127.0.0.1:8899/
+      - run: npm run check:experience
+        env:
+          BASE_URL: http://127.0.0.1:8899/
       - run: npm run check:accessibility
         env:
           BASE_URL: http://127.0.0.1:8899/

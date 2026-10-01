@@ -1053,8 +1053,65 @@ body.traitor-theme .allegiance-toggle:hover {
 .event-works li { padding-left: 0.3rem; }
 .event-works span { color: var(--parchment); opacity: 0.75; font-size: 0.78rem; }
 
+.faction-picker-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--imperial-gold);
+    font: 700 0.8rem 'Share Tech Mono', monospace;
+    letter-spacing: 0.08rem;
+}
+.faction-picker-row select {
+    min-height: 44px;
+    max-width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--imperial-gold);
+    background: #171717;
+    color: var(--parchment);
+    font: inherit;
+}
+.faction-picker-row select:focus-visible,
+.faction-index a:focus-visible,
+.faction-browse:focus-visible { outline: 3px solid var(--imperial-gold); outline-offset: 2px; }
+.faction-index { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.5rem; }
+.faction-index a {
+    padding: 0.35rem 0.55rem;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--parchment);
+    font-size: 0.72rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.faction-index a:hover { transform: translateY(-2px); background: rgba(212, 175, 55, 0.12); }
+.faction-index a[aria-current] { border-color: var(--imperial-gold); background: rgba(212, 175, 55, 0.17); color: var(--imperial-gold); }
+.faction-detail {
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    background: linear-gradient(145deg, rgba(212, 175, 55, 0.09), rgba(0, 0, 0, 0.35) 36%);
+    animation: factionReveal 0.35s ease-out both;
+}
+.faction-kicker { margin-bottom: 0.3rem; color: var(--imperial-gold); font-size: 0.67rem; letter-spacing: 0.16rem; }
+.faction-detail h2 { margin: 0.3rem 0 0.7rem; }
+.faction-detail h3 { margin-top: 1.5rem; color: var(--imperial-gold); }
+.faction-browse { display: inline-block; padding: 0.5rem 0.75rem; border: 1px solid var(--imperial-gold); }
+.faction-works { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 0.55rem; padding: 0; list-style: none; }
+.faction-works li { padding: 0.65rem; border-left: 2px solid var(--imperial-gold); background: rgba(0, 0, 0, 0.32); }
+.faction-works span { display: block; margin-top: 0.2rem; font-size: 0.72rem; opacity: 0.75; }
+.faction-note { margin-top: 1.5rem; font-size: 0.78rem; }
+.work-factions { margin: 1rem 0; }
+.work-factions h3 { margin-bottom: 0.5rem; }
+.work-faction-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.work-faction-links a { padding: 0.3rem 0.5rem; border: 1px solid rgba(212, 175, 55, 0.5); color: var(--imperial-gold); font-size: 0.75rem; }
+.work-faction-links a:focus-visible { outline: 2px solid var(--imperial-gold); outline-offset: 2px; }
+@keyframes factionReveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.event-card:target { animation: eventArrival 0.8s ease-out; }
+@keyframes eventArrival { 0%, 60% { box-shadow: 0 0 0 2px var(--imperial-gold); } 100% { box-shadow: none; } }
+
 @media (max-width: 700px) {
     .source-page { margin: 1rem; padding: 1.25rem; }
+    .faction-index { display: none; }
 }
 
 .servo-skull {
@@ -1760,7 +1817,7 @@ body.traitor-theme #orderingModalBody strong {
        viewport, so not one book card was above the fold on a 390px phone. */
     .dataslate-header {
         margin-bottom: 1rem;
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 1.35rem 1rem 0.8rem 1rem;
         background-position: center 30%;
     }
 
@@ -1795,7 +1852,7 @@ body.traitor-theme #orderingModalBody strong {
         font-size: 1.5rem;
         letter-spacing: 0.15rem;
         margin-bottom: 0.5rem;
-        padding-top: 2.5rem;
+        padding-top: 1.75rem;
     }
 
     .subtitle {
@@ -1811,8 +1868,8 @@ body.traitor-theme #orderingModalBody strong {
     .book-display {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 1rem;
-        padding: 1rem;
-        margin: 1rem 0;
+        padding: 0.65rem;
+        margin: 0.65rem 0;
     }
 
     .book-card {
@@ -2258,7 +2315,7 @@ body.traitor-theme #orderingModalBody strong {
 
 .route-choices {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.55rem;
     max-width: 970px;
     margin: 0 auto 0.45rem;
@@ -2289,23 +2346,46 @@ body.traitor-theme #orderingModalBody strong {
     color: var(--parchment);
     cursor: pointer;
     text-align: left;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .route-choice strong { color: var(--imperial-gold); font: 700 0.78rem 'Cinzel', serif; }
 .route-choice span { font-size: 0.72rem; line-height: 1.3; }
 .route-choice:hover,
 .route-choice[aria-pressed="true"] { border-color: var(--imperial-gold); background: rgba(212, 175, 55, 0.13); }
+.route-choice:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); }
 .route-choice:focus-visible { outline: 3px solid var(--imperial-gold); outline-offset: 2px; }
 .route-source { margin: 0; font-size: 0.72rem; line-height: 1.5; }
 .route-source[hidden] { display: none; }
 .route-source a { color: var(--imperial-gold); }
 
-.next-read-guide {
+.discovery-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 0.55rem;
     max-width: 938px;
     margin: 0 auto 0.6rem;
+}
+.discovery-row[hidden] { display: none; }
+.next-read-guide {
+    min-width: 0;
     border: 1px solid rgba(212, 175, 55, 0.4);
     background: rgba(0, 0, 0, 0.35);
 }
+.find-story {
+    min-height: 44px;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--imperial-gold);
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--imperial-gold);
+    font: 700 0.78rem 'Cinzel', serif;
+    letter-spacing: 0.06rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.find-story:hover { transform: translateY(-2px); background: rgba(212, 175, 55, 0.2); }
+.find-story:focus-visible { outline: 3px solid var(--imperial-gold); outline-offset: 2px; }
 .next-read-guide summary {
     min-height: 44px;
     padding: 0.7rem 1rem;
@@ -2317,6 +2397,12 @@ body.traitor-theme #orderingModalBody strong {
 .next-read-guide summary:focus-visible { outline: 3px solid var(--imperial-gold); outline-offset: 2px; }
 .next-read-content { padding: 0 1rem 1rem; }
 .next-read-content p { margin: 0 0 0.75rem; font-size: 0.78rem; line-height: 1.5; }
+.next-read-preference { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin: 0.1rem 0 0.5rem; }
+.next-read-preference label { color: var(--imperial-gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08rem; }
+.next-read-preference select { min-height: 44px; padding: 0.5rem; border: 1px solid var(--imperial-gold); background: #171717; color: var(--parchment); font: inherit; }
+.next-read-preference select:disabled { opacity: 0.6; }
+.next-read-preference select:focus-visible { outline: 3px solid var(--imperial-gold); outline-offset: 2px; }
+.next-read-content .next-read-preference-note { font-size: 0.68rem; opacity: 0.8; }
 .next-read-content button {
     min-height: 44px;
     padding: 0.55rem 0.7rem;
@@ -2338,12 +2424,15 @@ body.traitor-theme #orderingModalBody strong {
 @media (max-width: 600px) {
     .view-switcher { flex-wrap: nowrap; }
     .view-note { margin-bottom: 0.5rem; }
-    .route-choices { gap: 0.3rem; margin-bottom: 0.4rem; }
+    .route-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.3rem; margin-bottom: 0.4rem; }
     .route-choices .route-heading { display: none; }
     .route-choice { justify-content: center; min-height: 3rem; padding: 0.35rem; text-align: center; }
     .route-choice strong { font-size: 0.61rem; }
     .route-choice span { display: none; }
-    .next-read-guide { margin: 0 1rem 0.5rem; }
+    .discovery-row { margin: 0 1rem 0.5rem; gap: 0.3rem; }
+    .discovery-row:has(.next-read-guide[open]) { grid-template-columns: 1fr; }
+    .next-read-guide summary { font-size: 0.65rem; padding: 0.6rem; }
+    .find-story { padding: 0.45rem; font-size: 0.65rem; }
 }
 
 @media (max-width: 360px) {

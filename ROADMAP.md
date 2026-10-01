@@ -6,9 +6,13 @@
 
 ## Release candidate scope, 27 September 2026
 
-The current pull request is a deployable increment of this longer roadmap. It represents 230 distinct works with stable IDs, sourced publication checks for 231 of 232 catalogue entries, a reviewed spoiler-free premise for all novels, anthologies and novellas, and a safe fallback for shorter works awaiting review. It adds reader routes, collection tracking, an event atlas, direct work and character links, and generated standalone work pages. Automated data, browser, accessibility, cross-engine and whole-catalogue checks are the release gate.
+The September release was a deployable increment of this longer roadmap. It represents 230 distinct works with stable IDs, sourced publication checks for 231 of 232 catalogue entries, a reviewed spoiler-free premise for all novels, anthologies and novellas, and a safe fallback for shorter works awaiting review. It added reader routes, collection tracking, an event atlas, direct work and character links, and generated standalone work pages. Automated data, browser, accessibility, cross-engine and whole-catalogue checks were its release gate.
 
-The stages below remain the long-term editorial and product plan. The [chart reconciliation](CHART_RECONCILIATION.md) and [release watch](RELEASE_WATCH.md) list known candidate works beyond this scoped catalogue. The shorter-work editorial audit, wider chronology and synopsis verification, moderated reader sessions and independent expert review remain open. The PR can be merged as this scoped release without claiming those acceptance targets have been met.
+The stages below remain the long-term editorial and product plan. The [chart reconciliation](CHART_RECONCILIATION.md) and [release watch](RELEASE_WATCH.md) list known candidate works beyond this scoped catalogue. The shorter-work editorial audit, wider chronology and synopsis verification, moderated reader sessions and independent expert review remain open. That release did not claim those acceptance targets had been met.
+
+## Stages 1–3 experience pass, 1 October 2026
+
+[STAGES_1_3_PLAN.md](STAGES_1_3_PLAN.md) records the current implementation slices and their checks. The pass adds a linkable Novels route, reading-status filter, direct story search, a faction atlas connected to works and reviewed events, and a saved work-type preference for Full Fiction suggestions. Motion guides route choices, event arrival and recommendation changes, with reduced-motion support. These are product improvements over the September release. Reader-session and expert acceptance targets below still require real people and editorial review.
 
 ## Product promise
 
@@ -185,11 +189,11 @@ Effort is a planning estimate for one focused contributor, not a release promise
 - **User accounts and social features.** The current local record solves the basic tracking problem with little operational burden. Prove unmet demand before adding a backend.
 - **Adding every adjacent title to the main count.** *The Scouring* and game books deserve links and later routes, but should not blur what “Horus Heresy fiction” means.
 
-## Immediate next three pieces of work
+## Next validation and editorial work
 
-1. **Finish and review the spoiler branch.** Audit the safe summaries themselves, then ship the current leak fixes. The roadmap assumes a reader can trust the spoiler switch.
-2. **Produce a catalogue reconciliation table.** Start with the 228 entries, chart-only nodes, anthology parents and reprints. Define stable work IDs and the scope statement before changing UI counts.
-3. **Prototype the Start here and Find a story journeys.** Use the existing data for a small clickable prototype, then observe the first reader tasks before committing to a larger redesign.
+1. **Observe readers.** Test Start here, Find a story, faction exploration and next-read guidance with novices, faction readers and completionists. Record completion, time and rejection reasons against the Stage 1 and 3 targets.
+2. **Review reference connections.** Ask knowledgeable readers to inspect a sample of work, faction and event paths, especially chronology, character appearances and disputed relationships.
+3. **Finish shorter-work spoiler reviews.** Review the introductions still withheld in spoiler-free mode before exposing them.
 
 ## Decision record
 

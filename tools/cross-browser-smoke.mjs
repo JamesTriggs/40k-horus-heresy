@@ -16,6 +16,12 @@ for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
             await page.waitForSelector('.book-card');
             const first = await page.locator('.book-card').first().getAttribute('aria-label');
             if (!first?.includes('HORUS RISING')) throw new Error(`${name}: wrong starting book: ${first}`);
+            await page.locator('#nextReadGuide summary').click();
+            await page.selectOption('#nextReadFormat', 'Audio Drama');
+            if (!await page.locator('#nextReadPrimary').textContent().then((value) => value.includes('Audio Drama'))) {
+                throw new Error(`${name}: work-type preference did not change the suggestion`);
+            }
+            await page.locator('#nextReadGuide summary').click();
             await page.click('#coreRoute');
             await page.waitForFunction(() => document.querySelectorAll('.book-card').length === 12);
             if (await page.locator('.book-card').count() !== 12) throw new Error(`${name}: Core route count changed`);
@@ -42,6 +48,13 @@ for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
             if (await page.locator('.event-card').count() !== 15) throw new Error(`${name}: event atlas count changed`);
             const atlasWidth = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
             if (atlasWidth > 1) throw new Error(`${name}: event atlas overflows by ${atlasWidth}px`);
+            await page.goto(new URL('factions.html?legion=Thousand+Sons', base).href, { waitUntil: 'load' });
+            if (await page.locator('#factionTitle').textContent() !== 'Thousand Sons' ||
+                !await page.locator('#factionEvents a[href="events.html#prospero"]').count()) {
+                throw new Error(`${name}: faction atlas direct link failed`);
+            }
+            const factionWidth = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+            if (factionWidth > 1) throw new Error(`${name}: faction atlas overflows by ${factionWidth}px`);
             if (errors.length) throw new Error(`${name}: ${errors.join('; ')}`);
             console.log(`PASS ${name} ${viewport.width}px`);
             await context.close();

@@ -77,6 +77,10 @@ await audit('storyline chart', { width: 1280, height: 800 }, async (page) => {
 });
 await audit('sources page', { width: 390, height: 844 }, (page) => page.goto(new URL('sources.html', base).href));
 await audit('work index', { width: 390, height: 844 }, (page) => page.goto(new URL('works.html', base).href));
+for (const viewport of [{ width: 1280, height: 800 }, { width: 390, height: 844 }]) {
+    await audit(`faction atlas ${viewport.width}px`, viewport,
+        (page) => page.goto(new URL('factions.html?legion=Thousand+Sons', base).href));
+}
 await audit('reviewed standalone work', { width: 390, height: 844 },
     (page) => page.goto(new URL('work/horus-rising/', base).href));
 await audit('pending-review standalone work', { width: 1280, height: 800 },

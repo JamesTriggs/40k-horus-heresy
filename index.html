@@ -62,15 +62,30 @@
             <button type="button" class="route-choice" id="fullRoute" aria-pressed="true">
                 <strong>FULL FICTION</strong><span>All 230 distinct works in this archive</span>
             </button>
-            <button type="button" class="route-choice" id="legionRoute">
-                <strong>EXPLORE A LEGION</strong><span>Choose a faction in the catalogue filter</span>
+            <button type="button" class="route-choice" id="novelsRoute" aria-pressed="false">
+                <strong>NOVELS ONLY</strong><span>65 novels in Archive reading order; chart links still flag shorter prerequisites</span>
             </button>
+            <a class="route-choice" id="legionRoute" href="factions.html">
+                <strong>EXPLORE A FACTION</strong><span>Find tagged works and connected events</span>
+            </a>
             <p class="route-source" id="routeSource" hidden>Core follows <a href="https://www.warhammer-community.com/en-gb/articles/17oswfuf/world-championships-preview-experience-the-greatest-hits-of-the-horus-heresy-saga-in-a-new-curated-series/" target="_blank" rel="noopener noreferrer">Warhammer Community’s 12-novel Horus Heresy Saga selection</a>. It is a short publisher-curated route, not the only valid reading order. Short works and other novels remain in Full Fiction.</p>
         </nav>
 
+        <div class="discovery-row" id="discoveryRow">
         <details class="next-read-guide" id="nextReadGuide">
             <summary>WHAT SHOULD I READ NEXT?</summary>
             <div class="next-read-content" id="nextReadContent">
+                <div class="next-read-preference">
+                    <label for="nextReadFormat">PREFER A WORK TYPE</label>
+                    <select id="nextReadFormat">
+                        <option value="">ANY WORK</option>
+                        <option value="Novel">NOVELS</option>
+                        <option value="Novella">NOVELLAS</option>
+                        <option value="Short Story">SHORT STORIES</option>
+                        <option value="Audio Drama">AUDIO DRAMAS</option>
+                    </select>
+                </div>
+                <p class="next-read-preference-note">Filters suggestions in Full Fiction only. It does not claim a print, ebook or audio edition is available.</p>
                 <p id="nextReadExplanation"></p>
                 <button type="button" id="nextReadPrimary" class="next-read-primary"></button>
                 <p id="nextReadChartNote" hidden></p>
@@ -82,6 +97,8 @@
                 </div>
             </div>
         </details>
+        <button type="button" class="find-story" id="findStory">FIND A STORY <span aria-hidden="true">⌕</span></button>
+        </div>
 
         <!-- Mobile only. The stacked filter bar is 358px tall on a phone, which
              pushed the catalogue below the fold on its own. -->
@@ -119,6 +136,15 @@
                     <option value="Short Story">SHORT STORIES</option>
                     <option value="Audio Drama">AUDIO DRAMAS</option>
                     <option value="Anthology">ANTHOLOGIES</option>
+                </select>
+            </div>
+            <div class="status-container">
+                <label for="statusFilter" class="filter-label">READING STATUS:</label>
+                <select id="statusFilter" class="legion-filter">
+                    <option value="">ALL WORKS</option>
+                    <option value="unread">NOT STARTED</option>
+                    <option value="reading">READING</option>
+                    <option value="finished">FINISHED</option>
                 </select>
             </div>
             <div class="sort-container">
@@ -164,6 +190,7 @@
 
         <footer class="dataslate-footer">
             <a href="works.html">Work index</a>
+            <a href="factions.html">Faction atlas</a>
             <a href="events.html">Event atlas</a>
             <a href="sources.html">Sources and corrections</a>
             <div class="servo-skull">⚡</div>
@@ -309,6 +336,7 @@
                 <div class="key-details" id="keyDetails"></div>
                 <div class="divider"></div>
                 <div class="blurb" id="blurb"></div>
+                <section class="work-factions" id="workFactions" aria-label="Tagged factions" hidden></section>
                 <section class="work-collections" id="workCollections" aria-label="Collections containing this work" hidden></section>
                 <section class="work-events" id="workEvents" aria-label="Related events" hidden></section>
                 <section class="work-relationships" id="workRelationships" aria-label="Chart reading relationships" hidden></section>
