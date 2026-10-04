@@ -161,7 +161,12 @@ function answerQuestion(value) {
         : correct ? 'Correct' : `The answer: ${question.answer}`;
     $('quizFeedbackText').textContent = question.explanation;
     $('quizSource').href = question.source;
-    $('quizSource').textContent = question.source.startsWith('https://') ? 'Black Library source ↗' : 'Archive work record ↗';
+    const sourceHost = question.source.startsWith('https://') ? new URL(question.source).hostname : '';
+    $('quizSource').textContent = sourceHost === 'www.blacklibrary.com'
+        ? 'Black Library source ↗'
+        : sourceHost === 'www.warhammer-community.com'
+            ? 'Warhammer Community source ↗'
+            : 'Archive work record ↗';
     $('quizFeedback').hidden = false;
     $('quizNext').textContent = index === questions.length - 1 ? 'SEE RESULTS →' : 'NEXT QUESTION →';
     $('quizNext').hidden = false;

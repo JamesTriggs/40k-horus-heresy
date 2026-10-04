@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 import { chromium } from 'playwright';
+import { readFileSync } from 'node:fs';
 
 const base = process.env.BASE_URL || 'http://127.0.0.1:8899/';
+const quizData = JSON.parse(readFileSync(new URL('../quiz-data.json', import.meta.url), 'utf8'));
+const horusAnswers = quizData.works['horus-rising'].questions.map((question) => question.answer);
 const browser = await chromium.launch();
 const errors = [];
 
@@ -30,7 +33,7 @@ try {
     await page.locator('#startQuiz').click();
     for (let index = 0; index < 3; index++) {
         await page.locator('#quizAnswers button').first().waitFor();
-        const wrong = page.locator('#quizAnswers button').filter({ hasNotText: ['Horus', 'Terra', 'The Great Crusade'][index] }).first();
+        const wrong = page.locator('#quizAnswers button').filter({ hasNotText: horusAnswers[index] }).first();
         await wrong.click();
         assert(await page.locator('#quizFeedback').isVisible(), 'answer feedback missing');
         await page.locator('#quizNext').click();
