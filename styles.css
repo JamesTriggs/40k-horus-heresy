@@ -1963,6 +1963,11 @@ body.traitor-theme #orderingModalBody strong {
         width: 100%;
     }
 
+    .key-details strong {
+        min-width: 0;
+        margin-right: 0.5rem;
+    }
+
     .progress-counter {
         font-size: 0.65rem;
         letter-spacing: 0.1rem;

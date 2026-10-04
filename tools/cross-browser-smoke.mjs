@@ -6,7 +6,7 @@ const base = process.env.BASE_URL || 'http://localhost:8899/';
 for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
     const browser = await engine.launch();
     try {
-        for (const viewport of [{ width: 1280, height: 850 }, { width: 390, height: 844 }]) {
+        for (const viewport of [{ width: 1280, height: 850 }, { width: 390, height: 844 }, { width: 320, height: 844 }]) {
             const context = await browser.newContext({ viewport });
             await context.addInitScript(() => localStorage.setItem('horusHeresySeenWelcome', '1'));
             const page = await context.newPage();
@@ -30,6 +30,15 @@ for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
             await page.waitForSelector('#modalOverlay.active');
             if (!await page.title().then((title) => title.includes('HORUS RISING'))) {
                 throw new Error(`${name}: work title missing`);
+            }
+            if (viewport.width === 320) {
+                const authorLines = await page.evaluate(() => {
+                    const author = document.querySelector('.work-safe-facts strong')?.nextSibling;
+                    const range = document.createRange();
+                    range.selectNodeContents(author);
+                    return range.getClientRects().length;
+                });
+                if (authorLines !== 1) throw new Error(`${name}: work author wraps awkwardly at 320px`);
             }
             await page.click('#closeModal');
             if (viewport.width < 769) await page.click('#filterDisclosure');
