@@ -55,6 +55,14 @@ for (const [name, engine] of [['Firefox', firefox], ['WebKit', webkit]]) {
             }
             const factionWidth = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
             if (factionWidth > 1) throw new Error(`${name}: faction atlas overflows by ${factionWidth}px`);
+            await page.goto(new URL('quiz.html?work=horus-rising', base).href, { waitUntil: 'load' });
+            await page.locator('#quizIntro').waitFor({ state: 'visible' });
+            await page.locator('#startQuiz').click();
+            if (await page.locator('#quizAnswers button').count() !== 4) throw new Error(`${name}: book quiz choices missing`);
+            await page.locator('#quizAnswers button').first().click();
+            if (!await page.locator('#quizFeedback').isVisible()) throw new Error(`${name}: book quiz feedback missing`);
+            const quizWidth = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+            if (quizWidth > 1) throw new Error(`${name}: quiz overflows by ${quizWidth}px`);
             if (errors.length) throw new Error(`${name}: ${errors.join('; ')}`);
             console.log(`PASS ${name} ${viewport.width}px`);
             await context.close();

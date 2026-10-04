@@ -1990,6 +1990,7 @@ function showModal(bookKey, { updateUrl = true } = {}) {
 
     const spoilerWarning = !showSpoilers ? '<div class="spoiler-notice">📖 SPOILER-FREE MODE - Major plot points hidden</div>' : '';
     blurb.innerHTML = spoilerWarning + `<p>${clickableBlurb}</p>`;
+    document.getElementById('workQuizLink').href = `quiz.html?work=${encodeURIComponent(workIdentityByKey.get(bookKey) || bookKey)}`;
     renderWorkFactions(bookKey);
     renderWorkCollections(bookKey);
     renderWorkEvents(bookKey);

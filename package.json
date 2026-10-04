@@ -3,12 +3,13 @@
   "private": true,
   "scripts": {
     "build": "npm run check:data && node tools/build-site.mjs",
-    "check:data": "node tools/build-catalogue.mjs --check && node tools/reconcile-catalogue.mjs --check && node tools/validate-data.mjs",
+    "check:data": "node tools/build-catalogue.mjs --check && node tools/build-quiz-data.mjs --check && node tools/reconcile-catalogue.mjs --check && node tools/validate-data.mjs",
     "check:browser": "node tools/ui-checks.mjs",
     "check:experience": "node tools/experience-checks.mjs",
     "check:accessibility": "node tools/accessibility-checks.mjs",
     "check:engines": "node tools/cross-browser-smoke.mjs",
-    "check:catalogue": "node tools/catalogue-browser-audit.mjs"
+    "check:catalogue": "node tools/catalogue-browser-audit.mjs",
+    "check:quiz": "node --test tools/quiz-engine.test.mjs && node tools/quiz-browser-checks.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

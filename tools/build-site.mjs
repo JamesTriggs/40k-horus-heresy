@@ -15,7 +15,7 @@ rmSync(join(repoRoot, 'work'), { recursive: true, force: true });
 const workCount = buildWorkPages(repoRoot);
 
 const files = [
-    'index.html', 'sources.html', 'events.html', 'events.js', 'factions.html', 'factions.js', 'styles.css', 'script.js',
+    'index.html', 'sources.html', 'events.html', 'events.js', 'factions.html', 'factions.js', 'quiz.html', 'quiz.js', 'quiz-engine.mjs', 'quiz-data.json', 'styles.css', 'script.js',
     'catalogue-data.js', 'reading-order.json', 'daunt-chart.json',
     'favicon.png', 'favicon-32.png', 'apple-touch-icon.png',
     'ORDERING_DECISIONS.md', 'CATALOGUE_AUDIT.md',

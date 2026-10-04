@@ -82,7 +82,8 @@ export function buildWorkPages(output) {
 <div class="work-landing-content"><img src="../../${escapeHtml(book.coverImage)}" alt="Cover associated with ${escapeHtml(book.title)}" width="315" height="508">
 <div><p><strong>Author:</strong> ${escapeHtml(book.author)}<br><strong>Format:</strong> ${escapeHtml(book.format)}</p>
 <p>${escapeHtml(premise)}</p>${collections}${source}${publicationNote}${formatConflict}
-<p><a href="../../index.html#work=${encodeURIComponent(identity.id)}">Open this work in the interactive Archive</a> to track reading progress and explore related works.</p></div></div>
+<p><a href="../../index.html#work=${encodeURIComponent(identity.id)}">Open this work in the interactive Archive</a> to track reading progress and explore related works.</p>
+<p><a href="../../quiz.html?work=${encodeURIComponent(identity.id)}">Take the three-question memory check</a> for this work. The quiz contains story spoilers.</p></div></div>
 </main></body></html>\n`);
     }
     return entries.length;
