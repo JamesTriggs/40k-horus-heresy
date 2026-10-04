@@ -89,6 +89,40 @@ for (const viewport of [{ width: 1280, height: 800 }, { width: 390, height: 844 
     await audit(`event atlas ${viewport.width}px`, viewport,
         (page) => page.goto(new URL('events.html', base).href));
 }
+await audit('quiz home 390px', { width: 390, height: 844 }, async (page) => {
+    await page.goto(new URL('quiz.html', base).href);
+    await page.locator('#quizHome').waitFor({ state: 'visible' });
+});
+await audit('quiz intro 320px', { width: 320, height: 844 }, async (page) => {
+    await page.goto(new URL('quiz.html?work=horus-rising', base).href);
+    await page.locator('#quizIntro').waitFor({ state: 'visible' });
+});
+await audit('quiz question 390px', { width: 390, height: 844 }, async (page) => {
+    await page.goto(new URL('quiz.html?work=horus-rising', base).href);
+    await page.locator('#startQuiz').click();
+    await page.locator('#quizAnswers button').first().waitFor();
+});
+await audit('quiz feedback 390px', { width: 390, height: 844 }, async (page) => {
+    await page.goto(new URL('quiz.html?work=horus-rising', base).href);
+    await page.locator('#startQuiz').click();
+    await page.locator('#quizAnswers button').first().click();
+    await page.locator('#quizFeedback').waitFor({ state: 'visible' });
+});
+await audit('quiz results 320px', { width: 320, height: 844 }, async (page) => {
+    await page.goto(new URL('quiz.html?work=horus-rising', base).href);
+    await page.locator('#startQuiz').click();
+    for (let index = 0; index < 3; index += 1) {
+        await page.locator('#quizAnswers button').first().click();
+        await page.locator('#quizNext').click();
+    }
+    await page.locator('#quizResult').waitFor({ state: 'visible' });
+});
+await audit('quiz recall 320px', { width: 320, height: 844 }, async (page) => {
+    await page.goto(new URL('quiz.html?work=tales-of-heresy-the-last-church', base).href);
+    await page.locator('#startQuiz').click();
+    await page.locator('#quizReveal').click();
+    await page.locator('#quizRecallAnswer').waitFor({ state: 'visible' });
+});
 
 await browser.close();
 if (failed) process.exitCode = 1;

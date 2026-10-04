@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your memory of the Horus Heresy with a series refresher or a short quiz for any work in the Archive.">
+    <title>Horus Heresy quiz | Horus Heresy Archive</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="quiz-shell">
+        <header class="quiz-header">
+            <a class="source-back" href="index.html">← Back to the Archive</a>
+            <span class="quiz-sigil" aria-hidden="true">✦</span>
+            <p class="quiz-kicker">REMEMBRANCER ARCHIVE · MEMORY TRIAL</p>
+            <h1>What do you remember?</h1>
+            <p class="quiz-lede">Return to the stories you have read. Each answer brings a fragment back into focus.</p>
+        </header>
+
+        <div id="quizError" class="quiz-error" role="alert" hidden></div>
+
+        <section id="quizHome" class="quiz-home" aria-labelledby="quizHomeTitle" hidden>
+            <h2 id="quizHomeTitle">Choose a challenge</h2>
+            <div class="quiz-mode-grid">
+                <article class="quiz-mode-card">
+                    <span class="quiz-card-number">01 / YOUR RECORD</span>
+                    <h3>Completed works</h3>
+                    <p id="completedDescription"></p>
+                    <button id="startCompleted" type="button" class="quiz-cta">TEST MY MEMORY →</button>
+                </article>
+                <article class="quiz-mode-card">
+                    <span class="quiz-card-number">02 / THE CORE SAGA</span>
+                    <h3>Twelve novel challenge</h3>
+                    <p>One question from each Core novel. This challenge contains spoilers for all twelve, whatever your reading record says.</p>
+                    <button id="startCore" type="button" class="quiz-cta">TAKE THE CHALLENGE →</button>
+                </article>
+            </div>
+            <section class="quiz-finder" aria-labelledby="quizFindTitle">
+                <span class="quiz-card-number">03 / A SINGLE WORK</span>
+                <h2 id="quizFindTitle">Choose a book or story</h2>
+                <p>Every distinct work has a three-question memory check. The Core novels have hand-written questions. Other checks pair a story recall prompt with catalogue facts.</p>
+                <label for="quizBookSearch">SEARCH BY TITLE OR AUTHOR</label>
+                <input id="quizBookSearch" type="search" autocomplete="off">
+                <p id="quizSearchCount" class="quiz-search-count" role="status"></p>
+                <ul id="quizBookResults" class="quiz-book-results"></ul>
+            </section>
+        </section>
+
+        <section id="quizIntro" class="quiz-intro" aria-labelledby="quizIntroTitle" hidden>
+            <div class="quiz-intro-art" id="quizIntroArt" hidden><img id="quizCover" alt="" width="160" height="258"></div>
+            <div>
+                <span class="quiz-card-number" id="quizIntroKicker"></span>
+                <h2 id="quizIntroTitle"></h2>
+                <p id="quizIntroDescription"></p>
+                <p class="quiz-spoiler-note"><strong>Story spoilers ahead.</strong> Questions and feedback may reveal events from the selected works. Your reading status will not change.</p>
+                <button id="startQuiz" type="button" class="quiz-cta">BEGIN QUIZ →</button>
+                <a id="quizIntroBack" class="quiz-secondary-link" href="quiz.html">Choose another challenge</a>
+            </div>
+        </section>
+
+        <section id="quizStage" class="quiz-stage" aria-labelledby="quizQuestion" hidden>
+            <div class="quiz-progress-head"><span id="quizProgressText"></span><span id="quizWorkTitle"></span></div>
+            <div class="quiz-progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="quizProgressFill"></span></div>
+            <div class="quiz-question-card" id="quizQuestionCard">
+                <span class="quiz-card-number" id="quizQuestionKind"></span>
+                <h2 id="quizQuestion" tabindex="-1"></h2>
+                <div id="quizAnswers" class="quiz-answers" role="group" aria-label="Answer choices"></div>
+                <button id="quizReveal" class="quiz-reveal" type="button" hidden>REVEAL THE ARCHIVE RECAP</button>
+                <div id="quizRecallAnswer" class="quiz-recall-answer" hidden>
+                    <p id="quizRevealText"></p>
+                    <p>Did you remember the main thread?</p>
+                    <div class="quiz-rating-actions">
+                        <button type="button" data-rating="yes">I remembered it</button>
+                        <button type="button" data-rating="no">I missed it</button>
+                    </div>
+                </div>
+                <div id="quizFeedback" class="quiz-feedback" role="status" aria-live="polite" hidden>
+                    <strong id="quizFeedbackTitle"></strong>
+                    <p id="quizFeedbackText"></p>
+                    <a id="quizSource" target="_blank" rel="noopener noreferrer">Check the source ↗</a>
+                </div>
+                <button id="quizNext" type="button" class="quiz-cta" hidden>NEXT QUESTION →</button>
+            </div>
+        </section>
+
+        <section id="quizResult" class="quiz-result" aria-labelledby="quizResultTitle" hidden>
+            <span class="quiz-card-number">TRIAL COMPLETE</span>
+            <h2 id="quizResultTitle" tabindex="-1"></h2>
+            <div class="quiz-score" id="quizScore" aria-live="polite"></div>
+            <p id="quizResultMessage"></p>
+            <div class="quiz-result-actions">
+                <button id="quizRetry" type="button" class="quiz-cta">TRY AGAIN ↻</button>
+                <a href="quiz.html" class="quiz-secondary-link">Choose another challenge</a>
+            </div>
+            <section id="quizMissedSection" class="quiz-missed" aria-labelledby="quizMissedTitle" hidden>
+                <h3 id="quizMissedTitle">Worth revisiting</h3>
+                <ul id="quizMissedList"></ul>
+            </section>
+        </section>
+
+        <footer class="quiz-footer"><a href="index.html">Archive</a><a href="works.html">Work index</a><a href="sources.html">Sources and corrections</a></footer>
+    </main>
+    <script type="module" src="quiz.js"></script>
+</body>
+</html>
